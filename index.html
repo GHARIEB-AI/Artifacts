@@ -29,9 +29,9 @@
         }
         .header {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            padding: 15px 25px;
+            padding: 20px 25px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             border: 1px solid rgba(247, 148, 29, 0.3);
@@ -40,15 +40,17 @@
         }
         .header-logo {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 15px;
+            gap: 10px;
+            margin-bottom: 15px;
         }
         .header-logo img {
             height: 45px;
             width: auto;
         }
         .header h1 { font-size: 24px; color: var(--aircairo-orange); }
-        .header-info { text-align: right; }
+        .header-info { text-align: center; }
         .live-indicator {
             display: inline-flex;
             align-items: center;
@@ -437,6 +439,12 @@
                 border-radius: 10px;
             }
             .header h1 { font-size: 16px; }
+            .header-logo > div:first-child {
+                font-size: 32px !important;
+            }
+            .header-logo > div:first-child span:last-child {
+                font-size: 36px !important;
+            }
             .progress-section {
                 grid-template-columns: 1fr 1fr;
                 gap: 10px;
@@ -506,6 +514,12 @@
         @media (max-width: 480px) {
             body { padding: 5px; }
             .header h1 { font-size: 14px; }
+            .header-logo > div:first-child {
+                font-size: 26px !important;
+            }
+            .header-logo > div:first-child span:last-child {
+                font-size: 30px !important;
+            }
             .live-indicator {
                 padding: 4px 10px;
                 font-size: 10px;
@@ -594,12 +608,12 @@
 <body>
     <div class="header">
         <div class="header-logo">
-            <div style="display:flex;align-items:center;gap:8px;font-family:'Arial Black',Arial,sans-serif;font-weight:900;font-size:28px;letter-spacing:-1px">
-                <span style="color:#462B73">AIR</span><span style="color:#462B73">CAIR</span><span style="color:#F7941D;font-size:32px">O</span>
+            <div style="display:flex;align-items:center;gap:3px;font-family:'Arial Black',Arial,sans-serif;font-weight:900;font-size:42px;letter-spacing:-1px;text-shadow:0 4px 8px rgba(0,0,0,0.3)">
+                <span style="color:#FFFFFF">AIR</span><span style="color:#FFFFFF">CAIR</span><span style="color:#F7941D;font-size:48px">O</span>
             </div>
-            <div style="border-left:2px solid rgba(247,148,29,0.5);padding-left:15px;margin-left:5px">
-                <h1>Market Insights</h1>
-                <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:2px">Real-time Flight Data Analysis</div>
+            <div style="text-align:center">
+                <h1 style="font-size:20px;margin-top:5px">Market Insights Dashboard</h1>
+                <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:3px">Real-time Flight Data Analysis</div>
             </div>
         </div>
         <div class="header-info">
