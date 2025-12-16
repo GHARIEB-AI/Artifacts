@@ -5,12 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>Market Insights - Live Dashboard</title>
+    <title>Air Cairo - Market Insights Dashboard</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* Air Cairo Brand Colors */
+        :root {
+            --aircairo-purple: #462B73;
+            --aircairo-purple-light: #6B4E92;
+            --aircairo-purple-dark: #2E1B4E;
+            --aircairo-orange: #F7941D;
+            --aircairo-orange-light: #FFB54D;
+            --aircairo-white: #FFFFFF;
+            --aircairo-gray: #F5F5F5;
+        }
+
         body {
             font-family: 'Segoe UI', 'Consolas', monospace;
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 100%);
+            background: linear-gradient(135deg, var(--aircairo-purple-dark) 0%, var(--aircairo-purple) 50%, var(--aircairo-purple-light) 100%);
             color: #fff;
             min-height: 100vh;
             padding: 15px;
@@ -20,21 +32,32 @@
             justify-content: space-between;
             align-items: center;
             padding: 15px 25px;
-            background: rgba(102, 126, 234, 0.2);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
-            border: 1px solid rgba(102, 126, 234, 0.3);
+            border: 1px solid rgba(247, 148, 29, 0.3);
             margin-bottom: 20px;
+            backdrop-filter: blur(10px);
         }
-        .header h1 { font-size: 24px; color: #667eea; }
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .header-logo img {
+            height: 45px;
+            width: auto;
+        }
+        .header h1 { font-size: 24px; color: var(--aircairo-orange); }
         .header-info { text-align: right; }
         .live-indicator {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: #065f46;
+            background: var(--aircairo-purple-dark);
             padding: 5px 15px;
             border-radius: 20px;
             font-size: 12px;
+            border: 1px solid var(--aircairo-orange);
         }
         .status-badge {
             display: inline-block;
@@ -44,12 +67,12 @@
             font-size: 14px;
             margin-left: 15px;
         }
-        .status-badge.running { background: #065f46; color: #4ade80; }
-        .status-badge.idle { background: #78350f; color: #fbbf24; }
-        .status-badge.completing { background: #1e3a8a; color: #60a5fa; }
+        .status-badge.running { background: rgba(247, 148, 29, 0.2); color: var(--aircairo-orange); border: 1px solid var(--aircairo-orange); }
+        .status-badge.idle { background: rgba(255, 255, 255, 0.1); color: #fff; }
+        .status-badge.completing { background: var(--aircairo-purple-light); color: #fff; }
         .live-dot {
             width: 10px; height: 10px;
-            background: #4ade80;
+            background: var(--aircairo-orange);
             border-radius: 50%;
             animation: blink 1s infinite;
         }
@@ -64,16 +87,17 @@
             margin-bottom: 20px;
         }
         .progress-card {
-            background: rgba(30, 41, 59, 0.8);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 12px;
             padding: 20px;
             text-align: center;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(247, 148, 29, 0.2);
+            backdrop-filter: blur(5px);
         }
         .progress-card h3 {
             font-size: 12px;
             text-transform: uppercase;
-            color: #888;
+            color: rgba(255,255,255,0.7);
             margin-bottom: 10px;
         }
         .progress-value {
@@ -82,12 +106,12 @@
             margin-bottom: 10px;
         }
         .progress-value.lf { color: #4ade80; }
-        .progress-value.oal { color: #60a5fa; }
-        .progress-value.excel { color: #f59e0b; }
-        .progress-value.overall { color: #a78bfa; }
+        .progress-value.oal { color: var(--aircairo-orange-light); }
+        .progress-value.excel { color: var(--aircairo-orange); }
+        .progress-value.overall { color: #fff; }
         .progress-bar {
             height: 8px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.2);
             border-radius: 4px;
             overflow: hidden;
         }
@@ -97,9 +121,9 @@
             transition: width 0.5s ease;
         }
         .progress-fill.lf { background: linear-gradient(90deg, #22c55e, #4ade80); }
-        .progress-fill.oal { background: linear-gradient(90deg, #3b82f6, #60a5fa); }
-        .progress-fill.excel { background: linear-gradient(90deg, #d97706, #f59e0b); }
-        .progress-fill.overall { background: linear-gradient(90deg, #7c3aed, #a78bfa); }
+        .progress-fill.oal { background: linear-gradient(90deg, var(--aircairo-orange), var(--aircairo-orange-light)); }
+        .progress-fill.excel { background: linear-gradient(90deg, #d97706, var(--aircairo-orange)); }
+        .progress-fill.overall { background: linear-gradient(90deg, var(--aircairo-purple-light), #fff); }
 
         /* Stats Row */
         .stats-row {
@@ -109,16 +133,16 @@
             margin-bottom: 20px;
         }
         .stat-card {
-            background: rgba(30, 41, 59, 0.6);
+            background: rgba(255, 255, 255, 0.08);
             border-radius: 10px;
             padding: 15px;
             text-align: center;
-            border: 1px solid rgba(255,255,255,0.05);
+            border: 1px solid rgba(247, 148, 29, 0.15);
         }
-        .stat-label { font-size: 11px; color: #666; text-transform: uppercase; }
+        .stat-label { font-size: 11px; color: rgba(255,255,255,0.6); text-transform: uppercase; }
         .stat-value { font-size: 24px; font-weight: bold; margin-top: 5px; }
         .stat-value.success { color: #4ade80; }
-        .stat-value.warning { color: #fbbf24; }
+        .stat-value.warning { color: var(--aircairo-orange); }
         .stat-value.error { color: #f87171; }
 
         /* Main Grid */
@@ -128,18 +152,19 @@
             gap: 20px;
         }
         .card {
-            background: rgba(30, 41, 59, 0.7);
+            background: rgba(255, 255, 255, 0.08);
             border-radius: 12px;
             padding: 20px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(247, 148, 29, 0.15);
+            backdrop-filter: blur(5px);
         }
         .card h2 {
             font-size: 14px;
             text-transform: uppercase;
-            color: #667eea;
+            color: var(--aircairo-orange);
             margin-bottom: 15px;
             padding-bottom: 10px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(247, 148, 29, 0.2);
         }
 
         /* Workers Grid */
@@ -149,7 +174,7 @@
             gap: 10px;
         }
         .worker-card {
-            background: rgba(0,0,0,0.3);
+            background: rgba(0,0,0,0.2);
             border-radius: 8px;
             padding: 12px;
             text-align: center;
@@ -157,15 +182,15 @@
             transition: all 0.3s;
         }
         .worker-card.working {
-            border-color: #4ade80;
-            background: rgba(74, 222, 128, 0.1);
+            border-color: var(--aircairo-orange);
+            background: rgba(247, 148, 29, 0.15);
         }
         .worker-card.idle {
-            border-color: #fbbf24;
-            background: rgba(251, 191, 36, 0.1);
+            border-color: rgba(255,255,255,0.3);
+            background: rgba(255, 255, 255, 0.05);
         }
         .worker-card.inactive {
-            border-color: #666;
+            border-color: rgba(255,255,255,0.1);
             opacity: 0.5;
         }
         .worker-port {
@@ -175,7 +200,7 @@
         }
         .worker-route {
             font-size: 11px;
-            color: #4ade80;
+            color: var(--aircairo-orange);
             margin-top: 5px;
             font-weight: bold;
         }
@@ -200,7 +225,7 @@
             border-radius: 6px;
             margin-bottom: 6px;
         }
-        .route-name { font-weight: bold; color: #60a5fa; }
+        .route-name { font-weight: bold; color: var(--aircairo-orange-light); }
         .route-stats { font-size: 12px; color: #888; }
         .route-stats span { margin-left: 10px; }
 
@@ -292,7 +317,7 @@
         }
         .date-chunk-id {
             font-weight: bold;
-            color: #60a5fa;
+            color: var(--aircairo-orange);
             font-size: 14px;
         }
         .date-chunk-range { color: #888; margin-top: 3px; }
@@ -333,7 +358,7 @@
         }
         .route-dates-header {
             font-weight: bold;
-            color: #60a5fa;
+            color: var(--aircairo-orange-light);
             font-size: 14px;
             margin-bottom: 8px;
             display: flex;
@@ -361,7 +386,7 @@
         /* Scrollbar */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); border-radius: 3px; }
-        ::-webkit-scrollbar-thumb { background: #667eea; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb { background: var(--aircairo-orange); border-radius: 3px; }
 
         /* =====================================================
            RESPONSIVE STYLES - Mobile & Tablet
@@ -568,11 +593,20 @@
 </head>
 <body>
     <div class="header">
-        <div>
-            <h1>MARKET INSIGHTS DASHBOARD</h1>
+        <div class="header-logo">
+            <svg viewBox="0 0 200 50" width="150" height="40" xmlns="http://www.w3.org/2000/svg">
+                <!-- Air Cairo Logo SVG -->
+                <text x="0" y="35" font-family="Arial Black, sans-serif" font-size="32" font-weight="900">
+                    <tspan fill="#462B73">AIR</tspan><tspan fill="#462B73">CAIR</tspan><tspan fill="#F7941D">O</tspan>
+                </text>
+            </svg>
+            <div>
+                <h1>Market Insights Dashboard</h1>
+                <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:2px">Real-time Flight Data Analysis</div>
+            </div>
         </div>
         <div class="header-info">
-            <button id="refresh-btn" onclick="fetchStatus()" style="background:#667eea;color:#fff;border:none;padding:8px 20px;border-radius:20px;cursor:pointer;font-weight:bold;margin-right:15px">
+            <button id="refresh-btn" onclick="fetchStatus()" style="background:var(--aircairo-orange);color:#fff;border:none;padding:8px 20px;border-radius:20px;cursor:pointer;font-weight:bold;margin-right:15px;transition:all 0.3s">
                 REFRESH
             </button>
             <div class="live-indicator">
@@ -707,7 +741,7 @@
     <!-- Smart Queue Section -->
     <div class="pending-routes-dates">
         <!-- Summary Bar -->
-        <div class="card" style="margin-top:20px;background:linear-gradient(135deg,rgba(102,126,234,0.2),rgba(118,75,162,0.2))">
+        <div class="card" style="margin-top:20px;background:linear-gradient(135deg,rgba(70,43,115,0.4),rgba(247,148,29,0.2))">
             <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px">
                 <div>
                     <h2 style="margin:0;border:0;padding:0;font-size:18px">Queue Status</h2>
@@ -715,15 +749,15 @@
                 </div>
                 <div style="display:flex;gap:20px">
                     <div style="text-align:center">
-                        <div id="active-routes-count" style="font-size:24px;font-weight:bold;color:#4ade80">0</div>
+                        <div id="active-routes-count" style="font-size:24px;font-weight:bold;color:var(--aircairo-orange)">0</div>
                         <div style="font-size:10px;color:#888">ACTIVE</div>
                     </div>
                     <div style="text-align:center">
-                        <div id="pending-routes-count" style="font-size:24px;font-weight:bold;color:#fbbf24">0</div>
+                        <div id="pending-routes-count" style="font-size:24px;font-weight:bold;color:#fff">0</div>
                         <div style="font-size:10px;color:#888">PENDING</div>
                     </div>
                     <div style="text-align:center">
-                        <div id="completed-routes-count" style="font-size:24px;font-weight:bold;color:#60a5fa">0</div>
+                        <div id="completed-routes-count" style="font-size:24px;font-weight:bold;color:#4ade80">0</div>
                         <div style="font-size:10px;color:#888">DONE</div>
                     </div>
                 </div>
@@ -754,8 +788,8 @@
             font-size: 12px;
             transition: all 0.3s;
         }
-        .tab-btn:hover { background: rgba(255,255,255,0.2); }
-        .tab-btn.active { background: #667eea; color: #fff; }
+        .tab-btn:hover { background: rgba(247, 148, 29, 0.3); }
+        .tab-btn.active { background: var(--aircairo-orange); color: #fff; }
     </style>
 
     <script>
