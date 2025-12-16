@@ -999,7 +999,7 @@
         async function fetchStatus() {
             try {
                 const response = await fetch(API_BASE + '/status', {
-                    headers: { 'bypass-tunnel-reminder': 'true' }
+                    headers: { 'ngrok-skip-browser-warning': 'true' }
                 });
                 const data = await response.json();
                 updateDashboard(data);
