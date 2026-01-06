@@ -1,0 +1,2570 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>AJF-ATZ - Threat Alert</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f3f9 0%, #ebe7f3 100%);
+            color: #462B73;
+            min-height: 100vh;
+            padding-bottom: 80px;
+        }
+
+        body.en {
+            direction: ltr;
+        }
+
+        .ar-text { display: inline; }
+        .en-text { display: none; }
+        body.en .ar-text { display: none; }
+        body.en .en-text { display: inline; }
+
+        /* Hidden class for filtering */
+        .hidden { display: none !important; }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+            padding: 20px 15px;
+            text-align: center;
+            
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .header h1 {
+            font-size: 1.3em;
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        .header .subtitle {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.85em;
+            opacity: 0.8;
+        }
+
+        /* Language Toggle */
+        .lang-toggle {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            cursor: pointer;
+        }
+
+        body.en .lang-toggle {
+            left: auto;
+            right: 15px;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 10px;
+            background: rgba(70, 43, 115, 0.2);
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            min-width: 80px;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+            color: #462B73;
+        }
+
+        .stat-item:active {
+            transform: scale(0.95);
+        }
+
+        .stat-item.active {
+            background: rgba(70, 43, 115, 0.15);
+        }
+
+        .stat-item.high { border-bottom: 3px solid #e74c3c; }
+        .stat-item.medium { border-bottom: 3px solid #F7941D; }
+        .stat-item.low { border-bottom: 3px solid #8b7ba0; }  /* Purple-gray, not green */
+
+        /* LAST UPDATED BANNER - VERY PROMINENT */
+        .last-updated-banner {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #F7941D;
+            text-align: center;
+            padding: 12px 15px;
+            font-size: 1.1em;
+            font-weight: 700;
+            border-bottom: 3px solid #F7941D;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .last-updated-banner .update-icon {
+            font-size: 1.2em;
+            margin-right: 8px;
+        }
+
+        body.en .last-updated-banner .update-icon {
+            margin-right: 0;
+            margin-left: 8px;
+        }
+
+        .last-updated-banner .update-time {
+            color: white;
+            font-weight: 800;
+            font-size: 1.1em;
+        }
+
+        .stat-count {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #462B73;
+        }
+
+        .stat-label {
+            font-size: 0.65em;
+            opacity: 0.9;
+            margin-top: 3px;
+            color: #462B73;
+            line-height: 1.3;
+            max-width: 100px;
+        }
+
+        /* Filter Pills */
+        .filter-section {
+            padding: 15px;
+            background: rgba(70, 43, 115, 0.08);
+        }
+
+        .filter-row {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 10px;
+        }
+
+        .filter-btn {
+            flex: 1;
+            padding: 12px 15px;
+            border-radius: 25px;
+            border: 2px solid rgba(70, 43, 115, 0.3);
+            background: white;
+            color: #462B73;
+            font-size: 0.9em;
+            text-align: center;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .filter-btn.active {
+            background: rgba(70, 43, 115, 0.15);
+            border-color: #462B73;
+        }
+
+        .filter-btn .count {
+            background: #F7941D;
+            color: white;
+            font-size: 0.75em;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-weight: 700;
+        }
+
+        /* Multi-Select Filter Modal */
+        .filter-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            justify-content: center;
+            align-items: flex-end;
+            z-index: 200;
+        }
+
+        .filter-modal.show {
+            display: flex;
+        }
+
+        .filter-modal-content {
+            background: white;
+            border-radius: 20px 20px 0 0;
+            width: 100%;
+            max-height: 70vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-modal-header {
+            padding: 15px 20px;
+            border-bottom: 1px solid rgba(70, 43, 115, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .filter-modal-title {
+            font-size: 1.1em;
+            font-weight: 700;
+            color: #462B73;
+        }
+
+        .filter-modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            color: #462B73;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .filter-modal-actions {
+            padding: 10px 20px;
+            display: flex;
+            gap: 30px;
+            border-bottom: 1px solid rgba(70, 43, 115, 0.1);
+        }
+
+        .filter-action-btn {
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 1px solid rgba(70, 43, 115, 0.3);
+            background: white;
+            color: #462B73;
+            font-size: 0.85em;
+            cursor: pointer;
+        }
+
+        .filter-action-btn.primary {
+            background: #462B73;
+            color: white;
+            border-color: #462B73;
+        }
+
+        .filter-modal-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px 0;
+        }
+
+        .filter-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+
+        .filter-item:active {
+            background: rgba(70, 43, 115, 0.2);
+        }
+
+        .filter-checkbox {
+            width: 22px;
+            height: 22px;
+            border: 2px solid rgba(70, 43, 115, 0.4);
+            border-radius: 4px;
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .filter-item.selected .filter-checkbox {
+            background: #462B73;
+            border-color: #462B73;
+        }
+
+        .filter-item.selected .filter-checkbox::after {
+            content: '✓';
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .filter-item-label {
+            flex: 1;
+            color: #462B73;
+            font-size: 0.95em;
+        }
+
+        .filter-item.select-all {
+            border-bottom: 1px solid rgba(70, 43, 115, 0.15);
+            font-weight: 600;
+        }
+
+        .filter-modal-apply {
+            padding: 15px 20px;
+            border-top: 1px solid rgba(70, 43, 115, 0.2);
+        }
+
+        .filter-apply-btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+            color: white;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* Date grouping in filter - Hierarchical */
+        .filter-group {
+            border-bottom: 1px solid rgba(70, 43, 115, 0.1);
+        }
+
+        .filter-group-header {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+
+        .filter-group-header:active {
+            background: rgba(70, 43, 115, 0.2);
+        }
+
+        .filter-group-checkbox {
+            width: 22px;
+            height: 22px;
+            border: 2px solid rgba(70, 43, 115, 0.4);
+            border-radius: 4px;
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .filter-group-header.selected .filter-group-checkbox {
+            background: #462B73;
+            border-color: #462B73;
+        }
+
+        .filter-group-header.selected .filter-group-checkbox::after {
+            content: '✓';
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .filter-group-header.partial .filter-group-checkbox {
+            background: rgba(70, 43, 115, 0.15);
+            border-color: #462B73;
+        }
+
+        .filter-group-header.partial .filter-group-checkbox::after {
+            content: '−';
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .filter-group-label {
+            flex: 1;
+            color: #462B73;
+            font-size: 0.95em;
+            font-weight: 600;
+        }
+
+        .filter-group-arrow {
+            color: rgba(70, 43, 115, 0.5);
+            font-size: 12px;
+            transition: transform 0.2s;
+        }
+
+        .filter-group.expanded .filter-group-arrow {
+            transform: rotate(90deg);
+        }
+
+        .filter-group-items {
+            display: none;
+            padding-left: 20px;
+            background: rgba(70, 43, 115, 0.03);
+        }
+
+        .filter-group.expanded .filter-group-items {
+            display: block;
+        }
+
+        .filter-group-items .filter-item {
+            padding: 10px 20px;
+        }
+
+        /* Year header style */
+        .filter-year-group > .filter-group-header {
+            background: rgba(70, 43, 115, 0.08);
+            font-weight: 700;
+        }
+
+        .filter-year-group > .filter-group-header .filter-group-label {
+            font-size: 1em;
+        }
+
+        /* Month header style */
+        .filter-month-group > .filter-group-header {
+            padding-left: 30px;
+        }
+
+        .filter-month-group > .filter-group-items {
+            padding-left: 30px;
+        }
+
+        /* Content Area */
+        .content {
+            padding: 15px;
+        }
+
+        /* Flight Card */
+        .flight-card {
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+            border-radius: 15px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .flight-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: rgba(0,0,0,0.2);
+        }
+
+        .flight-name {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #F7941D;
+        }
+
+        .lf-badge {
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9em;
+            color: white;
+        }
+
+        .lf-high { background: linear-gradient(135deg, #462B73, #5a3d8a); }  /* Purple, not green */
+        .lf-medium { background: linear-gradient(135deg, #f39c12, #e67e22); }
+        .lf-low { background: linear-gradient(135deg, #e74c3c, #c0392b); }
+
+        /* LF Details Grid */
+        .lf-details {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            padding: 12px;
+            background: rgba(0,0,0,0.15);
+            color: white;
+        }
+
+        .lf-item {
+            text-align: center;
+            padding: 8px 5px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+        }
+
+        .lf-item-label {
+            font-size: 0.65em;
+            opacity: 0.8;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        .lf-item-value {
+            font-size: 0.95em;
+            font-weight: 600;
+            margin-top: 3px;
+            color: white;
+        }
+
+        /* Threat Cards - Air Cairo Brand Design */
+        .threats-container {
+            padding: 10px;
+        }
+
+        .threat-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f6fc 100%);
+            border: 2px solid #462B73;
+            border-radius: 20px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 8px 20px rgba(70, 43, 115, 0.2);
+        }
+
+        .threat-card.high {
+            border-color: #e74c3c;
+            box-shadow: 0 8px 20px rgba(231, 76, 60, 0.25);
+            background: linear-gradient(135deg, #fff5f5 0%, #ffebeb 100%);
+        }
+        .threat-card.medium {
+            border-color: #F7941D;
+            box-shadow: 0 8px 20px rgba(247, 148, 29, 0.25);
+            background: linear-gradient(135deg, #fffbf5 0%, #fff5e6 100%);
+        }
+        .threat-card.low {
+            border-color: #462B73;
+            box-shadow: 0 8px 20px rgba(70, 43, 115, 0.2);
+            background: linear-gradient(135deg, #f8f5ff 0%, #f0ebff 100%);
+        }
+
+        /* Alternative route styles */
+        .threat-card.alternative {
+            background: linear-gradient(135deg, #f8f5ff 0%, #f0ebff 100%);
+            border-color: #462B73;
+        }
+
+        .alt-badge {
+            display: inline-block;
+            background: #462B73;
+            color: white;
+            font-size: 0.65em;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+
+        /* Card Date Header - Air Cairo Orange */
+        .card-date-header {
+            color: #462B73;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 12px;
+            border-bottom: 2px solid rgba(70, 43, 115, 0.2);
+            padding-bottom: 10px;
+        }
+
+        /* Flight Section Block - Air Cairo Purple */
+        .flight-block {
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+            border: none;
+            border-radius: 15px;
+            padding: 12px;
+            margin-bottom: 0;
+        }
+
+        .flight-block-title {
+            color: #F7941D;
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2px;
+        }
+
+        .flight-dep-time {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 13px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .flight-block-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .flight-detail-col {
+            flex: 1;
+            text-align: center;
+        }
+
+        .flight-detail-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 11px;
+            font-weight: 500;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+
+        .flight-detail-value {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .flight-detail-separator {
+            width: 1px;
+            background: rgba(255, 255, 255, 0.3);
+            height: 35px;
+            align-self: center;
+            margin: 0 8px;
+        }
+
+        /* VS Badge Between Blocks - Air Cairo Orange */
+        .vs-between {
+            display: flex;
+            justify-content: center;
+            margin: -8px 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .vs-pill {
+            background: #F7941D;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 6px 18px;
+            border-radius: 20px;
+            box-shadow: 0 3px 10px rgba(247, 148, 29, 0.4);
+        }
+
+        .blocks-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        /* Summary Box */
+        .comparison-summary {
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+            border-radius: 12px;
+            padding: 12px;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .comparison-summary.negative {
+            /* Same purple as flight blocks - only LOW THREAT should stand out */
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+        }
+
+        /* All variants use same purple to blend with flight blocks */
+        .comparison-summary.threat {
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+        }
+
+        .comparison-summary.positive {
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+        }
+
+        .advantage-text {
+            color: white;
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .summary-details {
+            color: rgba(255,255,255,0.9);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* Alert Banner - PROMINENT THREAT INDICATOR */
+        .alert-banner {
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+            color: white;
+            text-align: center;
+            padding: 18px 15px;
+            border-radius: 15px;
+            margin-top: 12px;
+            box-shadow: 0 6px 20px rgba(70, 43, 115, 0.4);
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .alert-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .alert-banner.high {
+            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.5);
+            border-color: #ff6b6b;
+            animation: pulse-high 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse-high {
+            0%, 100% { box-shadow: 0 8px 25px rgba(231, 76, 60, 0.5); }
+            50% { box-shadow: 0 8px 35px rgba(231, 76, 60, 0.8); }
+        }
+
+        .alert-banner.medium {
+            background: linear-gradient(135deg, #F7941D 0%, #f5a623 100%);
+            box-shadow: 0 8px 25px rgba(247, 148, 29, 0.5);
+            border-color: #ffc107;
+        }
+
+        .alert-banner.low {
+            background: linear-gradient(135deg, #6b5b7a 0%, #8a7b9a 100%);
+            box-shadow: 0 6px 20px rgba(107, 91, 122, 0.4);
+            border-color: #a99ebb;
+        }
+
+        .alert-text {
+            font-size: 18px;
+            font-weight: 800;
+            margin: 2px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .alert-banner.high .alert-text {
+            font-size: 20px;
+        }
+
+
+        /* Date Header - Dark blue/navy (different from threat colors) */
+        .date-header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            padding: 12px 15px;
+            border-radius: 10px;
+            margin: 15px 0 10px 0;
+            text-align: center;
+            font-weight: 600;
+            color: white;
+        }
+
+        /* Route Header */
+        .route-header {
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            text-align: center;
+            color: white;
+        }
+
+        .route-name {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #F7941D;
+        }
+
+        .route-flights {
+            font-size: 0.85em;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        /* Bottom Navigation */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0 20px 0;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+            z-index: 100;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 10px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .nav-item.active {
+            color: white;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .nav-icon {
+            font-size: 1.3em;
+            margin-bottom: 3px;
+        }
+
+        .nav-label {
+            font-size: 0.7em;
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 50px 20px;
+            opacity: 0.7;
+        }
+
+        .empty-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .flight-card, .threat-card {
+            animation: fadeIn 0.3s ease;
+        }
+
+        /* Hide sections based on filter */
+        .flight-card.hidden,
+        .threat-card.hidden,
+        [data-route].hidden,
+        [data-date].hidden {
+            display: none;
+        }
+
+        /* Desktop link */
+        /* Pages Navigation Bar */
+        .pages-nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 15px;
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+            flex-wrap: wrap;
+        }
+        .pages-nav a {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 8px 15px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            transition: background 0.2s;
+        }
+        .pages-nav a:active {
+            background: rgba(255,255,255,0.25);
+        }
+        .pages-nav a.active {
+            background: #F7941D;
+        }
+        .pages-nav .nav-icon {
+            font-size: 14px;
+        }
+
+        .desktop-link {
+            display: none;
+        }
+
+        /* Download Modal */
+        .download-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 200;
+        }
+
+        .download-modal.show {
+            display: flex;
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+            border-radius: 20px;
+            padding: 25px;
+            width: 90%;
+            max-width: 350px;
+            text-align: center;
+        }
+
+        .modal-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .modal-select {
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+
+        .modal-select option {
+            background: #462B73;
+            color: white;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 30px;
+        }
+
+        .modal-btn {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .modal-btn.download {
+            background: linear-gradient(135deg, #F7941D, #e8850a);  /* Orange, not green */
+            color: white;
+        }
+
+        .modal-btn.cancel {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .modal-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Scroll Navigation Buttons (Top/Bottom only) */
+        .scroll-nav {
+            position: fixed;
+            right: 15px;
+            bottom: 140px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            z-index: 99;
+        }
+
+        .scroll-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid rgba(247, 148, 29, 0.15);
+            background: rgba(70, 43, 115, 0.15);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+        }
+
+        .scroll-btn svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        .scroll-btn:active, .scroll-btn.pressed {
+            background: rgba(70, 43, 115, 0.8);
+            border-color: rgba(247, 148, 29, 0.8);
+            color: rgba(255, 255, 255, 1);
+            transform: scale(0.95);
+        }
+
+        
+            width: 22px;
+            height: 22px;
+
+        /* Bottom Navigation Bar */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0 max(10px, env(safe-area-inset-bottom));
+            z-index: 100;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+        }
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 10px;
+            padding: 5px 15px;
+            transition: color 0.2s;
+        }
+        .nav-item.active {
+            color: #F7941D;
+        }
+        .nav-item:active {
+            transform: scale(0.95);
+        }
+        .nav-icon {
+            font-size: 20px;
+            margin-bottom: 3px;
+        }
+
+        /* Loading Screen */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #f5f3f9 0%, #ebe7f3 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-overlay.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(70, 43, 115, 0.2);
+            border-top-color: #F7941D;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #462B73;
+            text-align: center;
+        }
+
+        .loading-subtext {
+            margin-top: 8px;
+            font-size: 0.85em;
+            color: rgba(70, 43, 115, 0.6);
+        }
+
+        .loading-plane {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            animation: bounce 1.5s ease infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    
+        /* Additional styles for route pages */
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .header-main {
+            padding: 15px;
+            text-align: center;
+        }
+        .route-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+        .route-title::before { content: "✈️"; }
+        .header-stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 5px 0 10px;
+        }
+        .header-stat {
+            color: white;
+            font-size: 0.85em;
+        }
+        .header-stat.high { color: #fca5a5; }
+        .header-stat.medium { color: #fcd34d; }
+        .header-stat.low { color: #a78bfa; }
+        .nav-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+            background: rgba(0,0,0,0.2);
+        }
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 5px;
+            padding: 8px 15px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 0.8em;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .nav-btn:hover { background: rgba(255,255,255,0.3); }
+        .nav-btn.download { background: linear-gradient(135deg, #F7941D 0%, #ff6b00 100%); }
+        .route-selector {
+            position: relative;
+        }
+        .route-selector select {
+            appearance: none;
+            padding: 8px 30px 8px 15px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 0.85em;
+            cursor: pointer;
+        }
+        .route-selector::after {
+            content: "▼";
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 0.7em;
+            pointer-events: none;
+        }
+        .route-selector select option {
+            background: #462B73;
+            color: white;
+        }
+        .scroll-controls {
+            position: fixed;
+            right: 15px;
+            bottom: 140px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            z-index: 90;
+        }
+        .position-indicator {
+            position: fixed;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 100px;
+            background: rgba(70, 43, 115, 0.2);
+            border-radius: 2px;
+            z-index: 80;
+        }
+        .position-bar {
+            width: 100%;
+            background: #462B73;
+            border-radius: 2px;
+            transition: height 0.1s, top 0.1s;
+            position: absolute;
+        }
+    
+        /* HOME Button */
+        .home-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            text-align: center;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9em;
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+            z-index: 101;
+        }
+        body.en .home-btn {
+            right: auto;
+            left: 10px;
+        }
+
+        /* Language Toggle Button */
+        .lang-btn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 20px;
+            font-size: 0.85em;
+            cursor: pointer;
+            z-index: 101;
+        }
+        body.en .lang-btn {
+            left: auto;
+            right: 10px;
+        }
+
+        /* Date Filter Button */
+        .date-filter-btn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            text-align: center;
+            background: linear-gradient(135deg, #F7941D 0%, #ff6b00 100%);
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.2em;
+            cursor: pointer;
+            z-index: 102;
+            box-shadow: 0 3px 10px rgba(247, 148, 29, 0.5);
+        }
+        body.en .date-filter-btn {
+            left: auto;
+            right: 10px;
+        }
+
+        /* Date Filter Modal */
+        .date-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 300;
+        }
+        .date-modal.show { display: flex; }
+        .date-modal-content {
+            background: white;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 350px;
+            padding: 20px;
+        }
+        .date-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(70, 43, 115, 0.2);
+        }
+        .date-modal-title {
+            font-size: 1.1em;
+            font-weight: 700;
+            color: #462B73;
+        }
+        .date-modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            color: #462B73;
+            cursor: pointer;
+        }
+        .date-quick-btns {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 15px;
+        }
+        .date-quick-btn {
+            padding: 10px;
+            border: 2px solid rgba(70, 43, 115, 0.3);
+            background: white;
+            color: #462B73;
+            border-radius: 10px;
+            font-size: 0.85em;
+            cursor: pointer;
+            text-align: center;
+        }
+        .date-quick-btn.active {
+            background: #462B73;
+            color: white;
+            border-color: #462B73;
+        }
+        .date-range-inputs {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 15px;
+        }
+        .date-range-inputs input {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid rgba(70, 43, 115, 0.3);
+            border-radius: 10px;
+            font-size: 0.9em;
+        }
+        .date-apply-btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .date-clear-btn {
+            width: 100%;
+            padding: 10px;
+            background: transparent;
+            color: #462B73;
+            border: 2px solid rgba(70, 43, 115, 0.3);
+            border-radius: 25px;
+            font-size: 0.9em;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+    
+        /* Threat Level Color Overlay */
+        .threat-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .threat-overlay.active {
+            opacity: 1;
+        }
+        .threat-overlay.high {
+            background: radial-gradient(ellipse at center, rgba(220, 53, 69, 0.15) 0%, rgba(220, 53, 69, 0.05) 70%, transparent 100%);
+        }
+        .threat-overlay.medium {
+            background: radial-gradient(ellipse at center, rgba(255, 193, 7, 0.15) 0%, rgba(255, 193, 7, 0.05) 70%, transparent 100%);
+        }
+        .threat-overlay.low {
+            background: radial-gradient(ellipse at center, rgba(40, 167, 69, 0.15) 0%, rgba(40, 167, 69, 0.05) 70%, transparent 100%);
+        }
+
+    
+        
+
+    
+        /* FREEZE PANES Container - header + filter sticky together */
+        .freeze-panes {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        /* Filter Section - part of freeze panes */
+        .filter-section {
+            padding: 12px 15px;
+            background: linear-gradient(135deg, rgba(70, 43, 115, 0.95) 0%, rgba(90, 61, 138, 0.95) 100%);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .filter-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .filter-btn {
+            flex: 1;
+            padding: 10px 12px;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            font-size: 0.85em;
+            text-align: center;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .filter-btn.active {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: white;
+        }
+
+        .filter-btn .count {
+            background: #F7941D;
+            color: white;
+            font-size: 0.7em;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-weight: 700;
+        }
+
+        /* Route Selector Dropdown */
+        .route-selector {
+            flex: 1;
+            padding: 10px 12px;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            font-size: 0.85em;
+            font-weight: 600;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='white' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            padding-right: 30px;
+        }
+
+        .route-selector option {
+            background: #462B73;
+            color: white;
+        }
+
+        body.ar .route-selector {
+            background-position: left 12px center;
+            padding-right: 12px;
+            padding-left: 30px;
+        }
+
+        .route-selector:focus {
+            outline: none;
+            border-color: white;
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        /* Filter Modal */
+        .filter-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            justify-content: center;
+            align-items: flex-end;
+            z-index: 200;
+        }
+
+        .filter-modal.show {
+            display: flex;
+        }
+
+        .filter-modal-content {
+            background: white;
+            border-radius: 20px 20px 0 0;
+            width: 100%;
+            max-height: 70vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-modal-header {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .filter-modal-title {
+            font-weight: 700;
+            color: #462B73;
+            font-size: 1.1em;
+        }
+
+        .filter-modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            color: #888;
+            cursor: pointer;
+        }
+
+        .filter-modal-actions {
+            display: flex;
+            gap: 10px;
+            padding: 10px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .filter-action-btn {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #462B73;
+            border-radius: 20px;
+            background: white;
+            color: #462B73;
+            font-size: 0.85em;
+            cursor: pointer;
+        }
+
+        .filter-modal-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px 20px;
+        }
+
+        .filter-modal-apply {
+            padding: 15px 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .filter-apply-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+            color: white;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* Tree Structure */
+        .filter-tree {
+            padding: 5px 0;
+        }
+
+        .filter-tree-node {
+            margin-bottom: 2px;
+        }
+
+        .filter-tree-header {
+            display: flex;
+            align-items: center;
+            padding: 8px 5px;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        .filter-tree-header:hover {
+            background: rgba(70, 43, 115, 0.05);
+        }
+
+        .filter-tree-toggle {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #462B73;
+            font-size: 12px;
+            transition: transform 0.2s;
+        }
+
+        .filter-tree-toggle.collapsed {
+            transform: rotate(-90deg);
+        }
+
+        body.ar .filter-tree-toggle.collapsed {
+            transform: rotate(90deg);
+        }
+
+        .filter-tree-checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #462B73;
+            border-radius: 3px;
+            margin: 0 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            background: white;
+        }
+
+        .filter-tree-checkbox.checked {
+            background: #462B73;
+            color: white;
+        }
+
+        .filter-tree-checkbox.partial {
+            background: rgba(70, 43, 115, 0.5);
+            color: white;
+        }
+
+        .filter-tree-label {
+            flex: 1;
+            font-size: 0.95em;
+            color: #333;
+        }
+
+        .filter-tree-children {
+            margin-left: 25px;
+            border-left: 1px solid #e0e0e0;
+            padding-left: 10px;
+            display: block;
+        }
+
+        body.ar .filter-tree-children {
+            margin-left: 0;
+            margin-right: 25px;
+            border-left: none;
+            border-right: 1px solid #e0e0e0;
+            padding-left: 0;
+            padding-right: 10px;
+        }
+
+        .filter-tree-children.collapsed {
+            display: none;
+        }
+
+        .filter-tree-day {
+            display: flex;
+            align-items: center;
+            padding: 6px 5px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .filter-tree-day:hover {
+            background: rgba(70, 43, 115, 0.05);
+        }
+
+    </style>
+</head>
+<body class="en">
+    <div id="threatOverlay" class="threat-overlay"></div>
+    <div class="sticky-header">
+        <a href="../online_mob_report.html" class="home-btn">HOME</a>
+        <button class="date-filter-btn" onclick="openDateModal()">📅</button>
+        <button class="lang-btn" onclick="toggleLang()">
+            <span class="ar-text">EN</span>
+            <span class="en-text">عربي</span>
+        </button>
+
+        <div class="header-main">
+            <div class="route-title">AJF-ATZ</div>
+            <div class="header-stats">
+                <span class="header-stat high" onclick="filterFromHeader('high', this)">🔴 0 High</span>
+                <span class="header-stat medium" onclick="filterFromHeader('medium', this)">🟡 0 Medium</span>
+                <span class="header-stat low" onclick="filterFromHeader('low', this)">🟣 2 Low</span>
+            </div>
+        </div>
+        <div class="nav-row">
+            <a href="../online_mobile_dashboard.html" class="nav-btn">🌐 Dashboard</a>
+            <div class="route-selector">
+                <select onchange="if(this.value) window.location.href=this.value">
+                    <option value="">Change Route...</option>
+                    <option value="AHB-ATZ.html" >AHB-ATZ</option>
+<option value="AHB-CAI.html" >AHB-CAI</option>
+<option value="AJF-ATZ.html" selected>AJF-ATZ</option>
+<option value="AJF-CAI.html" >AJF-CAI</option>
+<option value="ATZ-DMM.html" >ATZ-DMM</option>
+<option value="ATZ-ELQ.html" >ATZ-ELQ</option>
+<option value="ATZ-JED.html" >ATZ-JED</option>
+<option value="ATZ-MED.html" >ATZ-MED</option>
+<option value="ATZ-RUH.html" >ATZ-RUH</option>
+<option value="ATZ-TUU.html" >ATZ-TUU</option>
+<option value="CAI-AHB.html" >CAI-AHB</option>
+<option value="CAI-AJF.html" >CAI-AJF</option>
+<option value="CAI-DMM.html" >CAI-DMM</option>
+<option value="CAI-ELQ.html" >CAI-ELQ</option>
+<option value="CAI-GIZ.html" >CAI-GIZ</option>
+<option value="CAI-JED.html" >CAI-JED</option>
+<option value="CAI-MED.html" >CAI-MED</option>
+<option value="CAI-RUH.html" >CAI-RUH</option>
+<option value="CAI-TUU.html" >CAI-TUU</option>
+<option value="CAI-YNB.html" >CAI-YNB</option>
+<option value="DMM-ATZ.html" >DMM-ATZ</option>
+<option value="DMM-CAI.html" >DMM-CAI</option>
+<option value="ELQ-ATZ.html" >ELQ-ATZ</option>
+<option value="ELQ-CAI.html" >ELQ-CAI</option>
+<option value="GIZ-CAI.html" >GIZ-CAI</option>
+<option value="HBE-JED.html" >HBE-JED</option>
+<option value="HBE-MED.html" >HBE-MED</option>
+<option value="JED-ATZ.html" >JED-ATZ</option>
+<option value="JED-CAI.html" >JED-CAI</option>
+<option value="JED-HBE.html" >JED-HBE</option>
+<option value="MED-ATZ.html" >MED-ATZ</option>
+<option value="MED-CAI.html" >MED-CAI</option>
+<option value="MED-HBE.html" >MED-HBE</option>
+<option value="RUH-ATZ.html" >RUH-ATZ</option>
+<option value="RUH-CAI.html" >RUH-CAI</option>
+<option value="TUU-ATZ.html" >TUU-ATZ</option>
+<option value="TUU-CAI.html" >TUU-CAI</option>
+<option value="YNB-CAI.html" >YNB-CAI</option>
+                </select>
+            </div>
+            <a href="https://flyaircairo-my.sharepoint.com/:f:/g/personal/dammam_to_aircairo_com/IgDvjscVb3zPQ63E6oVxGyViAencC8ryBmR137Me_icPPRs?e=oNiSIH" target="_blank" class="nav-btn download">📥 Download</a>
+        </div>
+    </div>
+
+    <div class="stats-bar">
+        <div class="stat-item high">
+            <div class="count">0</div>
+            <div class="label">HIGH</div>
+        </div>
+        <div class="stat-item medium">
+            <div class="count">0</div>
+            <div class="label">MEDIUM</div>
+        </div>
+        <div class="stat-item low">
+            <div class="count">2</div>
+            <div class="label">LOW</div>
+        </div>
+    </div>
+
+    <div class="content">
+        
+    <div class="route-header" data-route="AJF-ATZ">
+        <div class="route-name">AJF-ATZ</div>
+        <div class="route-flights">SM-324</div>
+    </div>
+    <div data-date="2026-03-13">
+    <div class="date-header">
+        13 MARCH 2026 FRIDAY
+    </div>
+    
+    <div class="flight-card">
+        <div class="flight-header">
+            <span class="flight-name">SM-324</span>
+            <span class="lf-badge lf-low">LF: 1%</span>
+        </div>
+        <div class="lf-details"><div class="lf-item"><div class="lf-item-label">SOLD</div><div class="lf-item-value">1</div></div><div class="lf-item"><div class="lf-item-label">CAP</div><div class="lf-item-value">167</div></div><div class="lf-item"><div class="lf-item-label">WKLY</div><div class="lf-item-value">1</div></div><div class="lf-item"><div class="lf-item-label">LST</div><div class="lf-item-value">29Dec</div></div><div class="lf-item"><div class="lf-item-label">TODAY</div><div class="lf-item-value">0</div></div><div class="lf-item"><div class="lf-item-label">YDAY</div><div class="lf-item-value">0</div></div><div class="lf-item"><div class="lf-item-label">DEP</div><div class="lf-item-value">15:15</div></div><div class="lf-item"><div class="lf-item-label">AVAIL</div><div class="lf-item-value">M9</div></div></div>
+        <div class="threats-container">
+            
+    <div class="threat-card low alternative">
+        <div class="card-date-header">
+            <span class="ar-text">13MAR &nbsp;•&nbsp; AJF-ATZ</span>
+            <span class="en-text">13MAR &nbsp;•&nbsp; AJF-ATZ</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-324</div>
+                <div class="flight-dep-time">15:15</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">1338 SAR</div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">طيران النيل NP-110 (بديل) AJF-CAI</span>
+                    <span class="en-text">Nile Air NP-110 (ALTERNATIVE) AJF-CAI</span>
+                </div>
+                <div class="flight-dep-time">11:00</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">950 SAR</div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح طيران النيل</span>
+                <span class="en-text">Nile Air leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">طيران النيل أرخص بـ 388 ريال بنفس الوزن</span>
+                <span class="en-text">Nile Air cheaper by 388 SAR, same baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+        </div>
+    </div>
+    </div><div data-date="2026-03-20">
+    <div class="date-header">
+        20 MARCH 2026 FRIDAY
+    </div>
+    
+    <div class="flight-card">
+        <div class="flight-header">
+            <span class="flight-name">SM-324</span>
+            <span class="lf-badge lf-low">LF: 0%</span>
+        </div>
+        <div class="lf-details"><div class="lf-item"><div class="lf-item-label">SOLD</div><div class="lf-item-value">0</div></div><div class="lf-item"><div class="lf-item-label">CAP</div><div class="lf-item-value">175</div></div><div class="lf-item"><div class="lf-item-label">WKLY</div><div class="lf-item-value">0</div></div><div class="lf-item"><div class="lf-item-label">TODAY</div><div class="lf-item-value">0</div></div><div class="lf-item"><div class="lf-item-label">YDAY</div><div class="lf-item-value">0</div></div><div class="lf-item"><div class="lf-item-label">DEP</div><div class="lf-item-value">15:15</div></div><div class="lf-item"><div class="lf-item-label">AVAIL</div><div class="lf-item-value">M9</div></div></div>
+        <div class="threats-container">
+            
+    <div class="threat-card low alternative">
+        <div class="card-date-header">
+            <span class="ar-text">20MAR &nbsp;•&nbsp; AJF-ATZ</span>
+            <span class="en-text">20MAR &nbsp;•&nbsp; AJF-ATZ</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-324</div>
+                <div class="flight-dep-time">15:15</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">1338 SAR</div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">طيران النيل NP-110 (بديل) AJF-CAI</span>
+                    <span class="en-text">Nile Air NP-110 (ALTERNATIVE) AJF-CAI</span>
+                </div>
+                <div class="flight-dep-time">11:00</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">950 SAR</div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح طيران النيل</span>
+                <span class="en-text">Nile Air leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">طيران النيل أرخص بـ 388 ريال بنفس الوزن</span>
+                <span class="en-text">Nile Air cheaper by 388 SAR, same baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+        </div>
+    </div>
+    </div></div>
+    </div>
+
+    
+    <!-- Date Filter Modal -->
+    <div class="date-modal" id="dateModal">
+        <div class="date-modal-content">
+            <div class="date-modal-header">
+                <span class="date-modal-title">
+                    <span class="ar-text">📅 فلتر التاريخ</span>
+                    <span class="en-text">📅 Date Filter</span>
+                </span>
+                <button class="date-modal-close" onclick="closeDateModal()">×</button>
+            </div>
+            <div class="date-quick-btns">
+                <button class="date-quick-btn" onclick="filterDays(7)">
+                    <span class="ar-text">7 أيام</span>
+                    <span class="en-text">7 Days</span>
+                </button>
+                <button class="date-quick-btn" onclick="filterDays(14)">
+                    <span class="ar-text">14 يوم</span>
+                    <span class="en-text">14 Days</span>
+                </button>
+                <button class="date-quick-btn" onclick="filterDays(30)">
+                    <span class="ar-text">30 يوم</span>
+                    <span class="en-text">30 Days</span>
+                </button>
+                <button class="date-quick-btn" onclick="filterMonth('JAN')">JAN</button>
+                <button class="date-quick-btn" onclick="filterMonth('FEB')">FEB</button>
+                <button class="date-quick-btn" onclick="filterMonth('MAR')">MAR</button>
+            </div>
+            <div class="date-range-inputs">
+                <input type="date" id="dateFrom" placeholder="From">
+                <input type="date" id="dateTo" placeholder="To">
+            </div>
+            <button class="date-apply-btn" onclick="applyDateRange()">
+                <span class="ar-text">تطبيق</span>
+                <span class="en-text">Apply</span>
+            </button>
+            <button class="date-clear-btn" onclick="clearDateFilter()">
+                <span class="ar-text">مسح الفلتر</span>
+                <span class="en-text">Clear Filter</span>
+            </button>
+        </div>
+    </div>
+
+<!-- Scroll Controls -->
+    <div class="scroll-controls">
+        <button class="scroll-btn" id="scrollUp"><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" transform="rotate(0 12 12)"/></svg></button>
+        <button class="scroll-btn" id="scrollDown"><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" transform="rotate(180 12 12)"/></svg></button>
+    </div>
+
+    <!-- Position Indicator -->
+    <div class="position-indicator">
+        <div class="position-bar" id="positionBar"></div>
+    </div>
+
+    <script>
+        // ==================== SCROLL BUTTONS ====================
+        // Tap = jump to top/bottom, Hold = slow scroll
+        (function() {
+            let holdTimer = null;
+            let scrollInterval = null;
+            let isHolding = false;
+
+            function setupScrollButton(btnId, direction) {
+                const btn = document.getElementById(btnId);
+                if (!btn) return;
+
+                const jumpTo = direction === 'up' ? 0 : document.documentElement.scrollHeight;
+                const scrollAmount = direction === 'up' ? -150 : 150;
+
+                function startPress(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    isHolding = false;
+
+                    holdTimer = setTimeout(function() {
+                        isHolding = true;
+                        scrollInterval = setInterval(function() {
+                            window.scrollBy(0, scrollAmount);
+                        }, 80);
+                    }, 300);
+                }
+
+                function endPress(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    if (holdTimer) {
+                        clearTimeout(holdTimer);
+                        holdTimer = null;
+                    }
+
+                    if (scrollInterval) {
+                        clearInterval(scrollInterval);
+                        scrollInterval = null;
+                    }
+
+                    // If NOT holding (quick tap), jump to top/bottom
+                    if (!isHolding) {
+                        window.scrollTo({ top: jumpTo, behavior: 'smooth' });
+                    }
+                    isHolding = false;
+                }
+
+                // Touch events
+                btn.addEventListener('touchstart', startPress, { passive: false });
+                btn.addEventListener('touchend', endPress, { passive: false });
+                btn.addEventListener('touchcancel', endPress, { passive: false });
+
+                // Mouse events (for desktop testing)
+                btn.addEventListener('mousedown', startPress);
+                btn.addEventListener('mouseup', endPress);
+                btn.addEventListener('mouseleave', function() {
+                    if (holdTimer) clearTimeout(holdTimer);
+                    if (scrollInterval) clearInterval(scrollInterval);
+                    holdTimer = null;
+                    scrollInterval = null;
+                    isHolding = false;
+                });
+            }
+
+            // Initialize when DOM is ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', function() {
+                    setupScrollButton('scrollUp', 'up');
+                    setupScrollButton('scrollDown', 'down');
+                });
+            } else {
+                setupScrollButton('scrollUp', 'up');
+                setupScrollButton('scrollDown', 'down');
+            }
+        })();
+
+        // ==================== POSITION INDICATOR ====================
+        let ticking = false;
+        function updatePositionIndicator() {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    const scrollTop = window.scrollY;
+                    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) : 0;
+                    const bar = document.getElementById('positionBar');
+                    if (bar) {
+                        const barHeight = 20;
+                        const maxTop = 100 - barHeight;
+                        bar.style.height = barHeight + 'px';
+                        bar.style.top = (scrollPercent * maxTop) + 'px';
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+        window.addEventListener('scroll', updatePositionIndicator, { passive: true });
+        updatePositionIndicator();
+
+        // ==================== LANGUAGE TOGGLE ====================
+        function toggleLang() {
+            document.body.classList.toggle('en');
+            localStorage.setItem('airCairoLang', document.body.classList.contains('en') ? 'en' : 'ar');
+        }
+
+        // Load saved language on page load
+        if (localStorage.getItem('airCairoLang') === 'en') {
+            document.body.classList.add('en');
+        }
+
+        // ==================== DATE FILTER ====================
+        function openDateModal() {
+            const modal = document.getElementById('dateModal');
+            if (modal) modal.classList.add('show');
+        }
+
+        function closeDateModal() {
+            const modal = document.getElementById('dateModal');
+            if (modal) modal.classList.remove('show');
+        }
+
+        function filterDays(days) {
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            // Get all date sections (divs with data-date)
+            const dateSections = document.querySelectorAll('[data-date]');
+
+            dateSections.forEach(section => {
+                const dateStr = section.dataset.date;
+                const sectionDate = new Date(dateStr);
+                sectionDate.setHours(0, 0, 0, 0);
+
+                const diffDays = Math.ceil((sectionDate - today) / (1000 * 60 * 60 * 24));
+                const shouldHide = diffDays < 0 || diffDays > days;
+
+                section.classList.toggle('hidden', shouldHide);
+            });
+
+            closeDateModal();
+            updateFilteredStats();
+            highlightActiveDateBtn(days + ' days');
+        }
+
+        function filterMonth(month) {
+            const monthMap = {
+                'JAN': '01', 'FEB': '02', 'MAR': '03', 'APR': '04',
+                'MAY': '05', 'JUN': '06', 'JUL': '07', 'AUG': '08',
+                'SEP': '09', 'OCT': '10', 'NOV': '11', 'DEC': '12'
+            };
+            const monthNum = monthMap[month];
+
+            const dateSections = document.querySelectorAll('[data-date]');
+
+            dateSections.forEach(section => {
+                const dateStr = section.dataset.date;
+                // dateStr format: "2026-01-02"
+                const parts = dateStr.split('-');
+                const sectionMonth = parts[1];
+
+                section.classList.toggle('hidden', sectionMonth !== monthNum);
+            });
+
+            closeDateModal();
+            updateFilteredStats();
+            highlightActiveDateBtn(month);
+        }
+
+        function applyDateRange() {
+            const fromInput = document.getElementById('dateFrom');
+            const toInput = document.getElementById('dateTo');
+            if (!fromInput || !toInput) return;
+
+            const from = fromInput.value;
+            const to = toInput.value;
+            if (!from || !to) {
+                alert('Please select both From and To dates');
+                return;
+            }
+
+            const fromDate = new Date(from);
+            const toDate = new Date(to);
+            fromDate.setHours(0, 0, 0, 0);
+            toDate.setHours(23, 59, 59, 999);
+
+            const dateSections = document.querySelectorAll('[data-date]');
+
+            dateSections.forEach(section => {
+                const sectionDate = new Date(section.dataset.date);
+                const shouldHide = sectionDate < fromDate || sectionDate > toDate;
+                section.classList.toggle('hidden', shouldHide);
+            });
+
+            closeDateModal();
+            updateFilteredStats();
+            highlightActiveDateBtn('custom');
+        }
+
+        function clearDateFilter() {
+            document.querySelectorAll('[data-date]').forEach(section => {
+                section.classList.remove('hidden');
+            });
+
+            const fromInput = document.getElementById('dateFrom');
+            const toInput = document.getElementById('dateTo');
+            if (fromInput) fromInput.value = '';
+            if (toInput) toInput.value = '';
+
+            closeDateModal();
+            updateFilteredStats();
+
+            // Clear all active states
+            document.querySelectorAll('.date-quick-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+        }
+
+        function highlightActiveDateBtn(filter) {
+            document.querySelectorAll('.date-quick-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent.toLowerCase().includes(filter.toLowerCase())) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+
+        // ==================== HEADER STAT FILTERS ====================
+        function filterFromHeader(level, el) {
+            // Toggle: if already active, show all
+            const isActive = el.classList.contains('active');
+
+            // Remove active from all header stats
+            document.querySelectorAll('.header-stat').forEach(s => s.classList.remove('active'));
+
+            if (isActive) {
+                // Was active, now show all
+                filterByColor('all');
+            } else {
+                // Activate this one
+                el.classList.add('active');
+                filterByColor(level);
+            }
+        }
+
+        // ==================== COLOR/THREAT LEVEL FILTER ====================
+        let activeColorFilter = 'all';
+
+        function filterByColor(level) {
+            activeColorFilter = level;
+            const dateSections = document.querySelectorAll('[data-date]');
+
+            dateSections.forEach(section => {
+                const cards = section.querySelectorAll('.threat-card');
+                let hasVisibleCard = false;
+
+                cards.forEach(card => {
+                    if (level === 'all') {
+                        card.classList.remove('hidden');
+                        hasVisibleCard = true;
+                    } else {
+                        const isMatch = card.classList.contains(level);
+                        card.classList.toggle('hidden', !isMatch);
+                        if (isMatch) hasVisibleCard = true;
+                    }
+                });
+
+                // Hide entire date section if no visible cards
+                if (level !== 'all') {
+                    section.classList.toggle('hidden', !hasVisibleCard);
+                }
+            });
+
+            // Change page background color based on filter
+            const bgColors = {
+                'all': 'linear-gradient(135deg, #f5f3f9 0%, #ebe7f3 100%)',
+                'high': 'linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%)',
+                'medium': 'linear-gradient(135deg, #fffbf0 0%, #fff3e0 100%)',
+                'low': 'linear-gradient(135deg, #f5f0ff 0%, #ede8f5 100%)'
+            };
+            document.body.style.background = bgColors[level] || bgColors['all'];
+
+            updateFilteredStats();
+            highlightActiveColorBtn(level);
+        }
+
+        function highlightActiveColorBtn(level) {
+            document.querySelectorAll('.stat-item').forEach(item => {
+                item.classList.remove('active');
+                if (level === 'all') return;
+                if (item.classList.contains(level)) {
+                    item.classList.add('active');
+                }
+            });
+        }
+
+        // ==================== STATS UPDATE ====================
+        function updateFilteredStats() {
+            const visibleCards = document.querySelectorAll('.threat-card:not(.hidden)');
+            const visibleSections = document.querySelectorAll('[data-date]:not(.hidden)');
+
+            let highCount = 0, mediumCount = 0, lowCount = 0;
+
+            visibleCards.forEach(card => {
+                if (card.classList.contains('high')) highCount++;
+                else if (card.classList.contains('medium')) mediumCount++;
+                else if (card.classList.contains('low')) lowCount++;
+            });
+
+            // Update header stats if they exist
+            const headerStats = document.querySelector('.header-stats');
+            if (headerStats) {
+                const highStat = headerStats.querySelector('.high');
+                const mediumStat = headerStats.querySelector('.medium');
+                const lowStat = headerStats.querySelector('.low');
+
+                if (highStat) highStat.innerHTML = '🔴 ' + highCount + ' High';
+                if (mediumStat) mediumStat.innerHTML = '🟡 ' + mediumCount + ' Medium';
+                if (lowStat) lowStat.innerHTML = '🟣 ' + lowCount + ' Low';
+            }
+        }
+
+        // ==================== STATS BAR CLICK FILTERS ====================
+        document.querySelectorAll('.stat-item').forEach(item => {
+            item.style.cursor = 'pointer';
+            item.addEventListener('click', function() {
+                if (this.classList.contains('high')) {
+                    filterByColor(activeColorFilter === 'high' ? 'all' : 'high');
+                } else if (this.classList.contains('medium')) {
+                    filterByColor(activeColorFilter === 'medium' ? 'all' : 'medium');
+                } else if (this.classList.contains('low')) {
+                    filterByColor(activeColorFilter === 'low' ? 'all' : 'low');
+                }
+            });
+        });
+
+        // ==================== CLOSE MODAL ON OUTSIDE CLICK ====================
+        document.addEventListener('click', function(e) {
+            const modal = document.getElementById('dateModal');
+            if (modal && e.target === modal) {
+                closeDateModal();
+            }
+        });
+
+        // ==================== KEYBOARD SHORTCUTS ====================
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeDateModal();
+            }
+        });
+    
+        // Date Filter State
+        let selectedDates = new Set();
+
+        // Initialize: select all dates
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('#dateFilterList .filter-tree-day[data-date]').forEach(item => {
+                selectedDates.add(item.dataset.date);
+            });
+            updateAllCheckboxes();
+        });
+
+        function openFilterModal(type) {
+            const modal = document.getElementById(type + 'FilterModal');
+            if (modal) modal.classList.add('show');
+        }
+
+        function closeFilterModal(type) {
+            const modal = document.getElementById(type + 'FilterModal');
+            if (modal) modal.classList.remove('show');
+        }
+
+        function toggleTreeNode(element) {
+            const node = element.closest('.filter-tree-node');
+            const toggle = node.querySelector('.filter-tree-toggle');
+            const children = node.querySelector('.filter-tree-children');
+            if (toggle && children) {
+                toggle.classList.toggle('collapsed');
+                children.classList.toggle('collapsed');
+            }
+        }
+
+        function toggleYearMonth(element, level) {
+            const node = element.closest('.filter-tree-node');
+            const checkbox = node.querySelector(':scope > .filter-tree-header .filter-tree-checkbox');
+            const isChecked = checkbox.classList.contains('checked');
+
+            const dayItems = node.querySelectorAll('.filter-tree-day');
+            dayItems.forEach(day => {
+                const dayCheckbox = day.querySelector('.filter-tree-checkbox');
+                const dateValue = day.dataset.date;
+                if (isChecked) {
+                    dayCheckbox.classList.remove('checked');
+                    selectedDates.delete(dateValue);
+                } else {
+                    dayCheckbox.classList.add('checked');
+                    selectedDates.add(dateValue);
+                }
+            });
+
+            updateAllCheckboxes();
+        }
+
+        function toggleDay(element) {
+            const checkbox = element.querySelector('.filter-tree-checkbox');
+            const dateValue = element.dataset.date;
+
+            if (checkbox.classList.contains('checked')) {
+                checkbox.classList.remove('checked');
+                selectedDates.delete(dateValue);
+            } else {
+                checkbox.classList.add('checked');
+                selectedDates.add(dateValue);
+            }
+
+            updateAllCheckboxes();
+        }
+
+        function updateAllCheckboxes() {
+            // Update month checkboxes
+            document.querySelectorAll('.filter-tree-node[data-level="month"]').forEach(monthNode => {
+                const dayItems = monthNode.querySelectorAll('.filter-tree-day');
+                const checkedDays = monthNode.querySelectorAll('.filter-tree-day .filter-tree-checkbox.checked');
+                const monthCheckbox = monthNode.querySelector(':scope > .filter-tree-header .filter-tree-checkbox');
+
+                monthCheckbox.classList.remove('checked', 'partial');
+                monthCheckbox.textContent = '';
+
+                if (checkedDays.length === dayItems.length) {
+                    monthCheckbox.classList.add('checked');
+                    monthCheckbox.textContent = '✓';
+                } else if (checkedDays.length > 0) {
+                    monthCheckbox.classList.add('partial');
+                    monthCheckbox.textContent = '–';
+                }
+            });
+
+            // Update year checkboxes
+            document.querySelectorAll('.filter-tree-node[data-level="year"]').forEach(yearNode => {
+                const monthNodes = yearNode.querySelectorAll('.filter-tree-node[data-level="month"]');
+                let allChecked = true;
+                let anyChecked = false;
+
+                monthNodes.forEach(monthNode => {
+                    const monthCheckbox = monthNode.querySelector(':scope > .filter-tree-header .filter-tree-checkbox');
+                    if (monthCheckbox.classList.contains('checked')) {
+                        anyChecked = true;
+                    } else {
+                        allChecked = false;
+                        if (monthCheckbox.classList.contains('partial')) {
+                            anyChecked = true;
+                        }
+                    }
+                });
+
+                const yearCheckbox = yearNode.querySelector(':scope > .filter-tree-header .filter-tree-checkbox');
+                yearCheckbox.classList.remove('checked', 'partial');
+                yearCheckbox.textContent = '';
+
+                if (allChecked) {
+                    yearCheckbox.classList.add('checked');
+                    yearCheckbox.textContent = '✓';
+                } else if (anyChecked) {
+                    yearCheckbox.classList.add('partial');
+                    yearCheckbox.textContent = '–';
+                }
+            });
+        }
+
+        function selectAllDates() {
+            document.querySelectorAll('#dateFilterList .filter-tree-day').forEach(day => {
+                const checkbox = day.querySelector('.filter-tree-checkbox');
+                checkbox.classList.add('checked');
+                checkbox.textContent = '✓';
+                selectedDates.add(day.dataset.date);
+            });
+            updateAllCheckboxes();
+        }
+
+        function clearAllDates() {
+            document.querySelectorAll('#dateFilterList .filter-tree-day').forEach(day => {
+                const checkbox = day.querySelector('.filter-tree-checkbox');
+                checkbox.classList.remove('checked');
+                checkbox.textContent = '';
+                selectedDates.delete(day.dataset.date);
+            });
+            updateAllCheckboxes();
+        }
+
+        function applyDateFilter() {
+            closeFilterModal('date');
+
+            // Update button count
+            const allDays = document.querySelectorAll('#dateFilterList .filter-tree-day').length;
+            const dateBtn = document.querySelector('#dateFilterBtn .count');
+            if (selectedDates.size === allDays || selectedDates.size === 0) {
+                dateBtn.textContent = 'All';
+                document.getElementById('dateFilterBtn').classList.remove('active');
+            } else {
+                dateBtn.textContent = selectedDates.size.toString();
+                document.getElementById('dateFilterBtn').classList.add('active');
+            }
+
+            // Show/hide date sections
+            document.querySelectorAll('.date-section, [data-date]').forEach(section => {
+                const date = section.dataset.date;
+                if (!date) return;
+
+                if (selectedDates.size === 0 || selectedDates.has(date)) {
+                    section.classList.remove('hidden');
+                } else {
+                    section.classList.add('hidden');
+                }
+            });
+        }
+
+    </script>
+</body>
+</html>
