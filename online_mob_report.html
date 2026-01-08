@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0083)CORRECT_MOBILE_TEMPLATE.html -->
+<html lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -172,12 +172,45 @@
             color: #666;
         }
 
-        .stat-sphere.active-filter {
-            transform: scale(1.1);
+        /* Dramatic fire/lamp glowing animation for index page spheres */
+        @keyframes index-fire-high {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(231, 76, 60, 0.8), 0 0 40px rgba(231, 76, 60, 0.6), 0 0 60px rgba(231, 76, 60, 0.4), inset 0 0 15px rgba(255, 200, 100, 0.5);
+            }
+            50% {
+                transform: scale(1.15);
+                box-shadow: 0 0 35px rgba(231, 76, 60, 1), 0 0 70px rgba(231, 76, 60, 0.8), 0 0 100px rgba(231, 76, 60, 0.5), inset 0 0 25px rgba(255, 255, 150, 0.8);
+            }
         }
-
-        .stat-sphere.active-filter .sphere {
-            box-shadow: 0 0 0 2px rgba(70, 43, 115, 0.3), 0 3px 8px rgba(0,0,0,0.25);
+        @keyframes index-fire-medium {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(241, 196, 15, 0.8), 0 0 40px rgba(241, 196, 15, 0.6), 0 0 60px rgba(241, 196, 15, 0.4), inset 0 0 15px rgba(255, 255, 200, 0.5);
+            }
+            50% {
+                transform: scale(1.15);
+                box-shadow: 0 0 35px rgba(241, 196, 15, 1), 0 0 70px rgba(241, 196, 15, 0.8), 0 0 100px rgba(241, 196, 15, 0.5), inset 0 0 25px rgba(255, 255, 255, 0.8);
+            }
+        }
+        @keyframes index-fire-low {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(65, 105, 225, 0.8), 0 0 40px rgba(65, 105, 225, 0.6), 0 0 60px rgba(65, 105, 225, 0.4), inset 0 0 15px rgba(150, 200, 255, 0.5);
+            }
+            50% {
+                transform: scale(1.15);
+                box-shadow: 0 0 35px rgba(65, 105, 225, 1), 0 0 70px rgba(65, 105, 225, 0.8), 0 0 100px rgba(65, 105, 225, 0.5), inset 0 0 25px rgba(200, 230, 255, 0.8);
+            }
+        }
+        .stat-sphere.high.active-filter .sphere {
+            animation: index-fire-high 0.8s ease-in-out infinite;
+        }
+        .stat-sphere.medium.active-filter .sphere {
+            animation: index-fire-medium 0.8s ease-in-out infinite;
+        }
+        .stat-sphere.low.active-filter .sphere {
+            animation: index-fire-low 0.8s ease-in-out infinite;
         }
 
         /* Search Bar */
@@ -333,7 +366,7 @@
         }
 
         .mini-sphere.low {
-            background: linear-gradient(135deg, #4169E1 0%, #0000E6 100%);
+            background: linear-gradient(135deg, #9b59b6 0%, #6c3483 100%);
         }
 
         .mini-sphere.medium {
@@ -351,7 +384,7 @@
             letter-spacing: 0.5px;
         }
 
-        .mini-stat.low .mini-stat-label { color: #4169E1; }
+        .mini-stat.low .mini-stat-label { color: #9b59b6; }
         .mini-stat.medium .mini-stat-label { color: #d4ac0d; }
         .mini-stat.high .mini-stat-label { color: #e74c3c; }
 
@@ -367,7 +400,7 @@
             color: #462B73;
         }
 
-        /* Bottom Navigation */
+        /* Bottom Navigation - Modern Floating Style */
         .pages-nav {
             position: fixed;
             bottom: 16px;
@@ -418,7 +451,12 @@
         }
 
         .pages-nav .nav-icon {
-            font-size: 16px;
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        .pages-nav .nav-text {
+            white-space: nowrap;
         }
 
         /* Hidden class */
@@ -433,8 +471,8 @@
         <div class="header-text">
             <h1><span class="ar-text">رصد حركة الاسعار ✈️</span><span class="en-text">Threat Alert Report ✈️</span></h1>
             <div class="header-meta">
-                <div class="subtitle"><span class="ar-text">الفترة: 05JAN26 - 31MAR26</span><span class="en-text">Range: 05JAN26 - 31MAR26</span></div>
-                <div class="generated"><span class="ar-text">تم الإنشاء:</span><span class="en-text">Generated:</span> 2026-01-05 18:45</div>
+                <div class="subtitle"><span class="ar-text">الفترة: من 05JAN26 إلى 31MAR26</span><span class="en-text">Range: FROM 05JAN26 TO 31MAR26</span></div>
+                <div class="generated"><span class="ar-text">تم الإنشاء:</span><span class="en-text">Generated:</span> 05JAN26 AT 18:45</div>
             </div>
         </div>
     </header>
@@ -443,32 +481,29 @@
         <span class="ar-text">الأسعار التنافسية</span>
         <span class="en-text">THREAT ALERT</span>
     </div>
-    <div class="stats-section" id="statsSection"
-         data-all-low="4299" data-all-medium="1511" data-all-high="2313"
-         data-egy-low="2028" data-egy-medium="686" data-egy-high="1407"
-         data-ksa-low="2271" data-ksa-medium="825" data-ksa-high="906">
-        <div class="stat-sphere low" onclick="filterByThreat('LOW')">
+    <div class="stats-section" id="statsSection" data-all-low="4299" data-all-medium="1511" data-all-high="2313" data-egy-low="2028" data-egy-medium="686" data-egy-high="1407" data-ksa-low="2271" data-ksa-medium="825" data-ksa-high="906">
+        <div class="stat-sphere low" onclick="filterByThreat(&#39;LOW&#39;)">
             <div class="sphere low"></div>
             <div class="count" id="lowCount">4299</div>
-            <div class="label"><span class="ar-text">منخفض</span><span class="en-text">LOW</span></div>
+            <div class="label"><span class="ar-text">تهديد منخفض</span><span class="en-text">LOW THREAT</span></div>
         </div>
-        <div class="stat-sphere medium" onclick="filterByThreat('MEDIUM')">
+        <div class="stat-sphere medium" onclick="filterByThreat(&#39;MEDIUM&#39;)">
             <div class="sphere medium"></div>
             <div class="count" id="mediumCount">1511</div>
-            <div class="label"><span class="ar-text">متوسط</span><span class="en-text">MEDIUM</span></div>
+            <div class="label"><span class="ar-text">تهديد متوسط</span><span class="en-text">MEDIUM THREAT</span></div>
         </div>
-        <div class="stat-sphere high" onclick="filterByThreat('HIGH')">
+        <div class="stat-sphere high" onclick="filterByThreat(&#39;HIGH&#39;)">
             <div class="sphere high"></div>
             <div class="count" id="highCount">2313</div>
-            <div class="label"><span class="ar-text">عالي</span><span class="en-text">HIGH</span></div>
+            <div class="label"><span class="ar-text">تهديد عالي</span><span class="en-text">HIGH THREAT</span></div>
         </div>
     </div>
 
     <div class="filter-section">
         <div class="filter-group">
-            <button class="filter-btn active" id="filterAll" onclick="setFilter('all')"><span class="ar-text">الكل</span><span class="en-text">All</span></button>
-            <button class="filter-btn" id="filterEgy" onclick="setFilter('egy')"><span class="ar-text">مصر→السعودية</span><span class="en-text">EGY→KSA</span></button>
-            <button class="filter-btn" id="filterKsa" onclick="setFilter('ksa')"><span class="ar-text">السعودية→مصر</span><span class="en-text">KSA→EGY</span></button>
+            <button class="filter-btn active" id="filterAll" onclick="setFilter(&#39;all&#39;)"><span class="ar-text">الكل</span><span class="en-text">All</span></button>
+            <button class="filter-btn" id="filterEgy" onclick="setFilter(&#39;egy&#39;)"><span class="ar-text">مصر→السعودية</span><span class="en-text">EGY→KSA</span></button>
+            <button class="filter-btn" id="filterKsa" onclick="setFilter(&#39;ksa&#39;)"><span class="ar-text">السعودية→مصر</span><span class="en-text">KSA→EGY</span></button>
         </div>
     </div>
 
@@ -489,15 +524,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">0</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">0</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">1</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -515,15 +550,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">1</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">1</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">23</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -541,15 +576,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">0</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">0</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">2</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -567,15 +602,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">89</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">41</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">113</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -593,15 +628,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">33</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">33</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">68</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -619,15 +654,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">38</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">10</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">79</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -645,15 +680,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">0</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">0</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">9</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -671,15 +706,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">1</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">1</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">7</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -697,15 +732,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">0</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">0</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">3</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -723,15 +758,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">10</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">8</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">67</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -749,15 +784,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">1</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">4</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">25</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -775,15 +810,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">0</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">1</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">6</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -801,15 +836,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">918</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">356</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">562</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -827,15 +862,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">39</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">7</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">100</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -853,15 +888,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">45</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">113</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">412</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -879,15 +914,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">0</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">13</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">48</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -905,15 +940,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">4</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">1</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">7</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -931,15 +966,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">0</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">0</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">3</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -957,15 +992,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">36</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">25</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">125</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -983,15 +1018,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">0</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">0</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">7</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -1009,15 +1044,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">12</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">9</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">36</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -1035,15 +1070,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">0</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">2</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">7</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -1061,15 +1096,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">207</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">57</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">443</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -1087,15 +1122,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">22</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">41</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">79</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -1113,15 +1148,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">158</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">23</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">94</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -1139,15 +1174,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">284</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">191</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">795</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -1165,15 +1200,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">99</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">55</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">84</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -1191,15 +1226,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">27</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">2</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">28</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -1217,15 +1252,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">38</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">55</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">101</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -1243,15 +1278,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">13</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">8</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">36</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -1269,15 +1304,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">60</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">163</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">220</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -1295,15 +1330,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">162</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">271</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">652</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -1321,15 +1356,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">3</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">2</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">8</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -1347,15 +1382,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">8</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">12</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">27</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -1373,15 +1408,15 @@
         <div class="route-stats-row">
             <div class="mini-stat high">
                 <div class="mini-sphere high">5</div>
-                <span class="mini-stat-label">عالي</span>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
             </div>
             <div class="mini-stat medium">
                 <div class="mini-sphere medium">6</div>
-                <span class="mini-stat-label">متوسط</span>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
             </div>
             <div class="mini-stat low">
                 <div class="mini-sphere low">22</div>
-                <span class="mini-stat-label">منخفض</span>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
             </div>
         </div>
         <div class="route-total">
@@ -1393,20 +1428,20 @@
     
     </div>
 
-    <div class="pages-nav">
+    <nav class="pages-nav">
         <a href="online_mobile_dashboard.html">
-            <span class="nav-icon">🌐</span>
-            <span><span class="ar-text">لوحة التحكم</span><span class="en-text">Dashboard</span></span>
+            <span class="nav-icon">📊</span>
+            <span class="nav-text"><span class="ar-text">لوحة التحكم</span><span class="en-text">Dashboard</span></span>
         </a>
-        <a href="https://flyaircairo-my.sharepoint.com/:f:/g/personal/dammam_to_aircairo_com/IgDvjscVb3zPQ63E6oVxGyViAencC8ryBmR137Me_icPPRs?e=oNiSIH" target="_blank" style="background: #0078D4;">
-            <span class="nav-icon">📥</span>
-            <span><span class="ar-text">تحميل</span><span class="en-text">Download</span></span>
+        <a href="https://flyaircairo-my.sharepoint.com/:f:/g/personal/dammam_to_aircairo_com/IgDvjscVb3zPQ63E6oVxGyViAencC8ryBmR137Me_icPPRs?e=oNiSIH" target="_blank" class="nav-download">
+            <span class="nav-icon">⬇️</span>
+            <span class="nav-text"><span class="ar-text">تحميل</span><span class="en-text">Download</span></span>
         </a>
         <a href="archive/">
-            <span class="nav-icon">📁</span>
-            <span><span class="ar-text">الأرشيف</span><span class="en-text">Archive</span></span>
+            <span class="nav-icon">📂</span>
+            <span class="nav-text"><span class="ar-text">الأرشيف</span><span class="en-text">Archive</span></span>
         </a>
-    </div>
+    </nav>
 
     <script>
         let currentThreatFilter = null;
@@ -1518,10 +1553,10 @@
     </script>
 
     <!-- Freshness Check - Warns if report is older than 24 hours -->
-    <div id="freshnessWarning" style="display:none; position:fixed; top:0; left:0; right:0; background:linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color:white; padding:10px 15px; text-align:center; z-index:9999; font-weight:600; font-size:0.85em; box-shadow:0 2px 10px rgba(0,0,0,0.3);">
+    <div id="freshnessWarning" style="display: block; position: fixed; top: 0px; left: 0px; right: 0px; background: linear-gradient(135deg, rgb(231, 76, 60) 0%, rgb(192, 57, 43) 100%); color: white; padding: 10px 15px; text-align: center; z-index: 9999; font-weight: 600; font-size: 0.85em; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 10px;">
         <span class="ar-text">⚠️ تقرير قديم (أكثر من 24 ساعة) - <a href="javascript:location.reload(true)" style="color:#fff;text-decoration:underline;">تحديث</a></span>
         <span class="en-text">⚠️ Stale report (older than 24h) - <a href="javascript:location.reload(true)" style="color:#fff;text-decoration:underline;">Refresh</a></span>
-        <button onclick="this.parentElement.style.display='none'" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:white;font-size:1.2em;cursor:pointer;">×</button>
+        <button onclick="this.parentElement.style.display=&#39;none&#39;" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:white;font-size:1.2em;cursor:pointer;">×</button>
     </div>
     <script>
     (function() {
@@ -1536,5 +1571,6 @@
         }
     })();
     </script>
-</body>
-</html>
+
+
+</body></html>
