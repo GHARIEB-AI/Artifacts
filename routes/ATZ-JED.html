@@ -46,26 +46,11 @@
 
         .header {
             background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
-            padding: 10px 15px;
+            padding: 10px 15px 10px 55px;
             display: flex;
             align-items: center;
             gap: 12px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-        }
-
-        .home-btn {
-            background: rgba(255,255,255,0.2);
-            border: none;
-            color: white;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            font-size: 1.1em;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
         }
 
         .header-content {
@@ -1010,10 +995,12 @@
     <!-- Threat Overlay (visual effect for threat level filtering) -->
     <div id="threatOverlay" class="threat-overlay"></div>
 
+    <!-- HOME Button - Always visible -->
+    <a href="../online_mob_report.html" class="home-btn-fixed">🏠</a>
+
     <!-- FREEZE PANES: Header + Filter Section stay sticky together -->
     <div class="freeze-panes">
         <header class="header">
-            <a href="../online_mob_report.html" class="home-btn">🏠</a>
             <div class="header-content">
                 <h1>ATZ-JED</h1>
             </div>
@@ -1074,24 +1061,24 @@
             <div class="stat-sphere"></div>
             <div class="stat-count">89</div>
             <div class="stat-label">
-                <span class="ar-text">عالي</span>
-                <span class="en-text">HIGH</span>
+                <span class="ar-text">تهديد عالي</span>
+                <span class="en-text">HIGH THREAT</span>
             </div>
         </div>
         <div class="stat-item medium" data-level="medium" onclick="filterByLevel('medium')">
             <div class="stat-sphere"></div>
             <div class="stat-count">41</div>
             <div class="stat-label">
-                <span class="ar-text">متوسط</span>
-                <span class="en-text">MEDIUM</span>
+                <span class="ar-text">تهديد متوسط</span>
+                <span class="en-text">MEDIUM THREAT</span>
             </div>
         </div>
         <div class="stat-item low" data-level="low" onclick="filterByLevel('low')">
             <div class="stat-sphere"></div>
             <div class="stat-count">113</div>
             <div class="stat-label">
-                <span class="ar-text">منخفض</span>
-                <span class="en-text">LOW</span>
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
             </div>
         </div>
     </div>
