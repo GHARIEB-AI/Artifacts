@@ -1456,13 +1456,28 @@
                 body.classList.add('ar');
                 body.dir = 'rtl';
                 btn.textContent = 'EN';
+                localStorage.setItem('aircairo_lang', 'ar');
             } else {
                 body.classList.remove('ar');
                 body.classList.add('en');
                 body.dir = 'ltr';
                 btn.textContent = 'عربي';
+                localStorage.setItem('aircairo_lang', 'en');
             }
         }
+
+        // Load saved language on page load
+        (function() {
+            const savedLang = localStorage.getItem('aircairo_lang');
+            if (savedLang === 'ar') {
+                const body = document.body;
+                const btn = document.querySelector('.lang-toggle');
+                body.classList.remove('en');
+                body.classList.add('ar');
+                body.dir = 'rtl';
+                if (btn) btn.textContent = 'EN';
+            }
+        })();
 
         function filterByThreat(level) {
             const spheres = document.querySelectorAll('.stat-sphere');
