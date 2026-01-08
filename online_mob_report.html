@@ -1488,6 +1488,38 @@
     <script>
         let currentThreatFilter = null;
         let currentDirectionFilter = 'all';
+        let originalCardOrder = [];
+
+        // Store original card order on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.routes-grid');
+            if (container) {
+                originalCardOrder = Array.from(container.querySelectorAll('.route-card'));
+            }
+        });
+
+        function sortCardsByThreat(level) {
+            const container = document.querySelector('.routes-grid');
+            if (!container) return;
+
+            const cards = Array.from(container.querySelectorAll('.route-card'));
+
+            if (!level) {
+                // Restore original order
+                originalCardOrder.forEach(card => container.appendChild(card));
+                return;
+            }
+
+            // Sort by the selected threat level count (descending)
+            cards.sort((a, b) => {
+                const aCount = parseInt(a.querySelector(`.mini-sphere.${level.toLowerCase()}`).textContent) || 0;
+                const bCount = parseInt(b.querySelector(`.mini-sphere.${level.toLowerCase()}`).textContent) || 0;
+                return bCount - aCount;
+            });
+
+            // Reorder cards in DOM
+            cards.forEach(card => container.appendChild(card));
+        }
 
         function toggleLanguage() {
             const body = document.body;
@@ -1528,12 +1560,16 @@
 
             if (currentThreatFilter === level) {
                 currentThreatFilter = null;
+                // Restore original order when filter is removed
+                sortCardsByThreat(null);
             } else {
                 currentThreatFilter = level;
                 const sphere = document.querySelector(`.stat-sphere.${level.toLowerCase()}`);
                 if (sphere) sphere.classList.add('active-filter');
                 // Add filter class to body for mini-sphere animation
                 document.body.classList.add(`filter-${level.toLowerCase()}`);
+                // Sort cards by selected threat level
+                sortCardsByThreat(level);
             }
             applyFilters();
         }
