@@ -856,46 +856,80 @@
             height: 24px;
         }
 
+        /* Bottom Navigation - Full Width with Glow Effects */
         .bottom-nav {
             position: fixed;
-            bottom: 16px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
             display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 12px;
+            justify-content: space-around;
+            padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
             z-index: 99;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.15);
-            border-radius: 50px;
-            border: 1px solid rgba(255,255,255,0.8);
         }
 
         .nav-item {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 6px;
-            padding: 10px 16px;
-            color: #555;
-            font-size: 12px;
-            font-weight: 500;
-            border-radius: 25px;
+            padding: 5px 15px;
+            color: #888;
+            font-size: 10px;
             cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .nav-item:hover {
-            background: rgba(70, 43, 115, 0.1);
-            color: #462B73;
         }
 
         .nav-item.active {
-            background: linear-gradient(135deg, #462B73 0%, #6B4A9E 100%);
-            color: white;
-            box-shadow: 0 4px 15px rgba(70, 43, 115, 0.4);
+            color: #462B73;
+        }
+
+        .nav-icon {
+            font-size: 20px;
+            transition: transform 0.2s;
+        }
+
+        /* Soft glow animation for bottom nav - RED for high */
+        @keyframes nav-glow-red {
+            0%, 100% {
+                transform: scale(1);
+                text-shadow: 0 0 8px rgba(231, 76, 60, 0.6), 0 0 15px rgba(231, 76, 60, 0.4);
+            }
+            50% {
+                transform: scale(1.2);
+                text-shadow: 0 0 12px rgba(231, 76, 60, 0.8), 0 0 25px rgba(231, 76, 60, 0.6), 0 0 35px rgba(231, 76, 60, 0.3);
+            }
+        }
+        /* Soft glow animation - YELLOW for medium */
+        @keyframes nav-glow-yellow {
+            0%, 100% {
+                transform: scale(1);
+                text-shadow: 0 0 8px rgba(241, 196, 15, 0.6), 0 0 15px rgba(241, 196, 15, 0.4);
+            }
+            50% {
+                transform: scale(1.2);
+                text-shadow: 0 0 12px rgba(241, 196, 15, 0.8), 0 0 25px rgba(241, 196, 15, 0.6), 0 0 35px rgba(241, 196, 15, 0.3);
+            }
+        }
+        /* Soft glow animation - BLUE for low */
+        @keyframes nav-glow-blue {
+            0%, 100% {
+                transform: scale(1);
+                text-shadow: 0 0 8px rgba(65, 105, 225, 0.6), 0 0 15px rgba(65, 105, 225, 0.4);
+            }
+            50% {
+                transform: scale(1.2);
+                text-shadow: 0 0 12px rgba(65, 105, 225, 0.8), 0 0 25px rgba(65, 105, 225, 0.6), 0 0 35px rgba(65, 105, 225, 0.3);
+            }
+        }
+        .nav-item:nth-child(1).filtering .nav-icon {
+            animation: nav-glow-red 1.5s ease-in-out infinite;
+        }
+        .nav-item:nth-child(2).filtering .nav-icon {
+            animation: nav-glow-yellow 1.5s ease-in-out infinite;
+        }
+        .nav-item:nth-child(3).filtering .nav-icon {
+            animation: nav-glow-blue 1.5s ease-in-out infinite;
         }
 
         .position-indicator {
@@ -60914,14 +60948,7 @@
     </div>
     <div class="position-percent" id="positionPercent">0%</div>
 
-    <nav class="bottom-nav">
-        <div class="nav-item active" onclick="showAll()">
-            <span class="nav-icon">📊</span>
-            <span>
-                <span class="ar-text">الكل</span>
-                <span class="en-text">All</span>
-            </span>
-        </div>
+        <nav class="bottom-nav">
         <div class="nav-item" onclick="filterByLevel('high')">
             <span class="nav-icon">🔴</span>
             <span>
@@ -60934,6 +60961,13 @@
             <span>
                 <span class="ar-text">متوسط</span>
                 <span class="en-text">Medium</span>
+            </span>
+        </div>
+        <div class="nav-item" onclick="filterByLevel('low')">
+            <span class="nav-icon">🔵</span>
+            <span>
+                <span class="ar-text">منخفض</span>
+                <span class="en-text">Low</span>
             </span>
         </div>
     </nav>
@@ -61151,10 +61185,11 @@
 
         // Filter by threat level
         let activeLevel = null;
-        function filterByLevel(level) {
+                function filterByLevel(level) {
             const navItems = document.querySelectorAll('.nav-item');
             const statItems = document.querySelectorAll('.stat-item');
 
+            // Toggle off if same level clicked again
             if (activeLevel === level) {
                 showAll();
                 return;
@@ -61163,14 +61198,20 @@
             activeLevel = level;
             setThreatOverlay(level);
 
-            // Update nav
-            navItems.forEach(item => item.classList.remove('active'));
-            const navIndex = level === 'high' ? 1 : (level === 'medium' ? 2 : 0);
+            // Update nav (0=high, 1=medium, 2=low) - add filtering class for pulse animation
+            navItems.forEach((item, i) => {
+                item.classList.remove('active');
+                item.classList.remove('filtering');
+            });
+            const navIndex = level === 'high' ? 0 : (level === 'medium' ? 1 : 2);
             navItems[navIndex].classList.add('active');
+            navItems[navIndex].classList.add('filtering');
 
-            // Update stats
+            // Update stats - add filtering class for pulse animation
             statItems.forEach(item => {
-                item.classList.toggle('active', item.dataset.level === level);
+                const isActive = item.dataset.level === level;
+                item.classList.toggle('active', isActive);
+                item.classList.toggle('filtering', isActive);
             });
 
             // Hide non-matching threat cards
@@ -61190,10 +61231,14 @@
             setThreatOverlay(null);
             document.querySelectorAll('.threat-card').forEach(card => card.classList.remove('hidden'));
             document.querySelectorAll('[data-date]').forEach(section => section.classList.remove('hidden'));
-            document.querySelectorAll('.nav-item').forEach((item, i) => {
-                item.classList.toggle('active', i === 0);
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+                item.classList.remove('filtering');
             });
-            document.querySelectorAll('.stat-item').forEach(item => item.classList.remove('active'));
+            document.querySelectorAll('.stat-item').forEach(item => {
+                item.classList.remove('active');
+                item.classList.remove('filtering');
+            });
         }
 
         // Scroll Navigation with dual functionality
