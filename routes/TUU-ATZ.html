@@ -823,34 +823,40 @@
         }
 
         .scroll-btn {
-            width: 50px;
-            height: 50px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
-            border: 2px solid rgba(247, 148, 29, 0.15);
-            background: rgba(70, 43, 115, 0.15);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            color: rgba(255, 255, 255, 0.5);
+            border: none;
+            background: url('assets/img/scroll_button.png') center/contain no-repeat;
+            color: transparent;
             font-size: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            /* Ghost effect: transparent with visible edges */
+            opacity: 0.25;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
             transition: all 0.2s ease;
+            /* 3D effect */
+            transform: perspective(500px) rotateX(0deg);
+        }
+
+        .scroll-btn:hover {
+            opacity: 0.5;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
         }
 
         .scroll-btn:active, .scroll-btn.pressed {
-            background: rgba(70, 43, 115, 0.8);
-            border-color: rgba(247, 148, 29, 0.8);
-            color: rgba(255, 255, 255, 1);
-            transform: scale(0.95);
+            /* Full visibility on press */
+            opacity: 1;
+            filter: drop-shadow(0 6px 12px rgba(0,0,0,0.4));
+            /* 3D press effect */
+            transform: perspective(500px) rotateX(10deg) scale(0.95);
         }
 
         .scroll-btn svg {
-            width: 24px;
-            opacity: 0.2;
-            height: 24px;
+            display: none; /* Hide SVG, using image background */
         }
 
         .bottom-nav {
