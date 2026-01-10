@@ -2469,15 +2469,25 @@
                 });
                 if (response.ok) {
                     lastRunData = await response.json();
-                    console.log('[Dashboard] Loaded cached data from last run');
+                    console.log('[Dashboard] Loaded cached data:', lastRunData.status);
 
-                    // If we're offline and have cached data, use it
-                    if (!isOnline && lastRunData) {
+                    // On GitHub Pages, always use cached data immediately
+                    if (IS_GITHUB_PAGES && lastRunData) {
                         lastData = lastRunData;
                         updateDashboard(lastRunData);
                         updateRealFlights();
-
-                        // Update status badge to show it's from cached data
+                        const statusBadge = document.getElementById('status-badge');
+                        if (statusBadge) {
+                            statusBadge.textContent = 'LAST RUN';
+                            statusBadge.className = 'status-badge completed';
+                        }
+                        console.log('[Dashboard] GitHub Pages mode - showing cached data');
+                    }
+                    // For local/server mode, wait for fetchStatus to determine online/offline
+                    else if (!isOnline && lastRunData) {
+                        lastData = lastRunData;
+                        updateDashboard(lastRunData);
+                        updateRealFlights();
                         const statusBadge = document.getElementById('status-badge');
                         if (statusBadge) {
                             statusBadge.textContent = 'LAST RUN';
@@ -2486,7 +2496,7 @@
                     }
                 }
             } catch (e) {
-                console.log('[Dashboard] No cached data available');
+                console.log('[Dashboard] No cached data available:', e);
             }
         }
 
