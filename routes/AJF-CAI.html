@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="report-generated" content="2026-01-11T01:17:00">
-    <meta name="report-version" content="20260111011700">
+    <meta name="report-generated" content="2026-01-05T18:45:38">
+    <meta name="report-version" content="20260105184538">
     <title>AJF-CAI - Threat Report</title>
     <style>
         * {
@@ -31,6 +31,7 @@
         body.en .en-text { display: inline; }
         .hidden { display: none !important; }
 
+        /* FREEZE PANES - header + filter together as one sticky unit */
         .freeze-panes {
             position: sticky;
             top: 0;
@@ -116,25 +117,25 @@
         }
 
         .stat-item:active { transform: scale(0.95); }
-        .stat-item.active .stat-sphere { box-shadow: 0 0 0 3px rgba(70, 43, 115, 0.3), 0 4px 12px rgba(0,0,0,0.25); }
 
         .stat-sphere {
-            width: 63px;
-            height: 63px;
-            margin-bottom: 6px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
-            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
         .stat-sphere img {
             width: 100%;
             height: 100%;
+            border-radius: 50%;
             object-fit: cover;
         }
-
-        .stat-item.low .stat-sphere img {
-            transform: scale(1.4);
-        }
+        .stat-item.low .stat-sphere img { transform: scale(1.4); }
 
         .stat-count {
             font-size: 1.1em;
@@ -145,6 +146,47 @@
         .stat-item.medium .stat-count { color: #d4ac0d; }
         .stat-item.low .stat-count { color: #4169E1; }
 
+        /* Dramatic fire/lamp glowing animation for active filter */
+        @keyframes fire-pulse-high {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(231, 76, 60, 0.8), 0 0 40px rgba(231, 76, 60, 0.6), 0 0 60px rgba(231, 76, 60, 0.4), inset 0 0 20px rgba(255, 200, 100, 0.5);
+            }
+            50% {
+                transform: scale(1.15);
+                box-shadow: 0 0 35px rgba(231, 76, 60, 1), 0 0 70px rgba(231, 76, 60, 0.8), 0 0 100px rgba(231, 76, 60, 0.5), inset 0 0 25px rgba(255, 255, 150, 0.8);
+            }
+        }
+        @keyframes fire-pulse-medium {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(241, 196, 15, 0.8), 0 0 40px rgba(241, 196, 15, 0.6), 0 0 60px rgba(241, 196, 15, 0.4), inset 0 0 20px rgba(255, 255, 200, 0.5);
+            }
+            50% {
+                transform: scale(1.15);
+                box-shadow: 0 0 35px rgba(241, 196, 15, 1), 0 0 70px rgba(241, 196, 15, 0.8), 0 0 100px rgba(241, 196, 15, 0.5), inset 0 0 25px rgba(255, 255, 255, 0.8);
+            }
+        }
+        @keyframes fire-pulse-low {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(65, 105, 225, 0.8), 0 0 40px rgba(65, 105, 225, 0.6), 0 0 60px rgba(65, 105, 225, 0.4), inset 0 0 20px rgba(150, 200, 255, 0.5);
+            }
+            50% {
+                transform: scale(1.15);
+                box-shadow: 0 0 35px rgba(65, 105, 225, 1), 0 0 70px rgba(65, 105, 225, 0.8), 0 0 100px rgba(65, 105, 225, 0.5), inset 0 0 25px rgba(200, 230, 255, 0.8);
+            }
+        }
+        .stat-item.high.filtering .stat-sphere {
+            animation: fire-pulse-high 0.8s ease-in-out infinite;
+        }
+        .stat-item.medium.filtering .stat-sphere {
+            animation: fire-pulse-medium 0.8s ease-in-out infinite;
+        }
+        .stat-item.low.filtering .stat-sphere {
+            animation: fire-pulse-low 0.8s ease-in-out infinite;
+        }
+
         .stat-label {
             font-size: 0.6em;
             font-weight: 600;
@@ -153,120 +195,757 @@
             color: #666;
         }
 
+        /* Filter Section - part of freeze panes container */
+        .filter-section {
+            padding: 12px 15px;
+            background: linear-gradient(135deg, rgba(70, 43, 115, 0.95) 0%, rgba(90, 61, 138, 0.95) 100%);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .filter-row {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            flex: 1;
+            padding: 10px 12px;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            font-size: 0.85em;
+            text-align: center;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .filter-btn.active {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: white;
+        }
+
+        .filter-btn .count {
+            background: #F7941D;
+            color: white;
+            font-size: 0.7em;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-weight: 700;
+        }
+
+        /* Route Selector Dropdown */
+        .route-selector {
+            flex: 1;
+            padding: 10px 12px;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            font-size: 0.85em;
+            font-weight: 600;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='white' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            padding-right: 30px;
+            text-align: center;
+        }
+
+        .route-selector option {
+            background: #462B73;
+            color: white;
+        }
+
+        body.ar .route-selector {
+            background-position: left 12px center;
+            padding-right: 12px;
+            padding-left: 30px;
+        }
+
+        .route-selector:focus {
+            outline: none;
+            border-color: white;
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        /* Filter Modal */
+        .filter-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            justify-content: center;
+            align-items: flex-end;
+            z-index: 200;
+        }
+
+        .filter-modal.show {
+            display: flex;
+        }
+
+        .filter-modal-content {
+            background: white;
+            border-radius: 20px 20px 0 0;
+            width: 100%;
+            max-height: 70vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-modal-header {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .filter-modal-title {
+            font-weight: 700;
+            color: #462B73;
+            font-size: 1.1em;
+        }
+
+        .filter-modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            color: #888;
+            cursor: pointer;
+        }
+
+        .filter-modal-actions {
+            display: flex;
+            gap: 10px;
+            padding: 10px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .filter-action-btn {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #462B73;
+            border-radius: 20px;
+            background: white;
+            color: #462B73;
+            font-size: 0.85em;
+            cursor: pointer;
+        }
+
+        .filter-modal-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px 20px;
+        }
+
+        .filter-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            cursor: pointer;
+        }
+
+        .filter-checkbox {
+            width: 22px;
+            height: 22px;
+            border: 2px solid #462B73;
+            border-radius: 4px;
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+
+        body.ar .filter-checkbox {
+            margin-right: 0;
+            margin-left: 12px;
+        }
+
+        .filter-checkbox.checked {
+            background: #462B73;
+        }
+
+        .filter-checkbox.checked::after {
+            content: '✓';
+            color: white;
+            font-size: 14px;
+        }
+
+        .filter-item-text {
+            flex: 1;
+            color: #462B73;
+        }
+
+        /* Tree Structure for Excel-like filter */
+        .filter-tree {
+            padding: 5px 0;
+        }
+
+        .filter-tree-node {
+            margin-bottom: 2px;
+        }
+
+        .filter-tree-header {
+            display: flex;
+            align-items: center;
+            padding: 8px 5px;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        .filter-tree-header:hover {
+            background: rgba(70, 43, 115, 0.05);
+        }
+
+        .filter-tree-toggle {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #462B73;
+            font-size: 12px;
+            transition: transform 0.2s;
+        }
+
+        .filter-tree-toggle.collapsed {
+            transform: rotate(-90deg);
+        }
+
+        body.ar .filter-tree-toggle.collapsed {
+            transform: rotate(90deg);
+        }
+
+        .filter-tree-checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #462B73;
+            border-radius: 3px;
+            margin: 0 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            background: white;
+        }
+
+        .filter-tree-checkbox.checked {
+            background: #462B73;
+            color: white;
+        }
+
+        .filter-tree-checkbox.partial {
+            background: rgba(70, 43, 115, 0.5);
+            color: white;
+        }
+
+        .filter-tree-label {
+            flex: 1;
+            font-size: 0.95em;
+            color: #333;
+        }
+
+        .filter-tree-children {
+            margin-left: 25px;
+            border-left: 1px solid #e0e0e0;
+            padding-left: 10px;
+            display: block;
+        }
+
+        body.ar .filter-tree-children {
+            margin-left: 0;
+            margin-right: 25px;
+            border-left: none;
+            border-right: 1px solid #e0e0e0;
+            padding-left: 0;
+            padding-right: 10px;
+        }
+
+        .filter-tree-children.collapsed {
+            display: none;
+        }
+
+        .filter-tree-day {
+            display: flex;
+            align-items: center;
+            padding: 6px 5px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .filter-tree-day:hover {
+            background: rgba(70, 43, 115, 0.05);
+        }
+
+        .filter-modal-apply {
+            padding: 15px 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .filter-apply-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+            color: white;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
         .content {
             padding: 10px;
         }
 
-        .threat-card {
-            background: white;
-            border-radius: 12px;
-            margin-bottom: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .threat-card.high { border-left: 4px solid #e74c3c; }
-        .threat-card.medium { border-left: 4px solid #f1c40f; }
-        .threat-card.low { border-left: 4px solid #4169E1; }
-
-        .card-header {
+        .date-header {
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+            color: white;
             padding: 12px 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .date-badge {
-            font-size: 0.85em;
             font-weight: 600;
-            color: #462B73;
-        }
-
-        .threat-badge {
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 0.7em;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .threat-badge.high { background: #fde8e8; color: #e74c3c; }
-        .threat-badge.medium { background: #fef3cd; color: #d4ac0d; }
-        .threat-badge.low { background: #e8f4fd; color: #4169E1; }
-
-        .card-body {
-            padding: 15px;
-        }
-
-        .flight-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 8px 0;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .flight-info {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .airline-logo {
-            width: 24px;
-            height: 24px;
-            border-radius: 4px;
-        }
-
-        .flight-number {
-            font-weight: 600;
+            margin: 15px 0 10px 0;
+            border-radius: 8px;
             font-size: 0.9em;
         }
 
-        .flight-time {
-            font-size: 0.8em;
-            color: #666;
+        /* Flight LF Header (outside cards) - Two Row Layout */
+        .flight-lf-header {
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+            border-radius: 12px;
+            padding: 10px 12px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 12px rgba(70, 43, 115, 0.3);
         }
 
-        .price {
-            font-weight: 700;
-            font-size: 1em;
+        .flight-lf-title-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
         }
 
-        .price.competitor { color: #e74c3c; }
-        .price.aircairo { color: #10b981; }
+        .flight-lf-number {
+            font-size: 1.2em;
+            font-weight: 800;
+            color: white;
+            letter-spacing: 1px;
+        }
 
-        .price-diff {
-            font-size: 0.75em;
-            padding: 2px 6px;
+        .sold-box {
+            background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
             border-radius: 8px;
-            margin-top: 4px;
+            padding: 6px 14px;
+            text-align: center;
         }
 
-        .price-diff.negative { background: #fde8e8; color: #e74c3c; }
-        .price-diff.positive { background: #d1fae5; color: #10b981; }
+        .sold-value {
+            display: block;
+            font-size: 1.1em;
+            font-weight: 800;
+            color: white;
+        }
 
-        .scroll-controls {
-            position: fixed;
-            right: 15px;
-            bottom: 100px;
+        .sold-label {
+            display: block;
+            font-size: 0.55em;
+            font-weight: 600;
+            color: rgba(255,255,255,0.9);
+            text-transform: uppercase;
+        }
+
+        .flight-lf-time {
+            font-size: 0.95em;
+            font-weight: 600;
+            color: rgba(255,255,255,0.9);
+            background: rgba(255,255,255,0.15);
+            padding: 6px 12px;
+            border-radius: 6px;
+        }
+
+        .lf-boxes-row {
+            display: flex;
+            gap: 5px;
+            justify-content: space-between;
+        }
+
+        .lf-box {
+            flex: 1;
+            background: rgba(255,255,255,0.15);
+            border-radius: 6px;
+            padding: 5px 4px;
+            text-align: center;
+        }
+
+        .lf-box.lf-main {
+            background: linear-gradient(135deg, #F7941D 0%, #e8850a 100%);
+        }
+
+        .lf-box-value {
+            display: block;
+            font-size: 0.85em;
+            font-weight: 700;
+            color: white;
+        }
+
+        .lf-box-label {
+            display: block;
+            font-size: 0.5em;
+            font-weight: 600;
+            color: rgba(255,255,255,0.7);
+            text-transform: uppercase;
+        }
+
+        .lf-box.lf-main .lf-box-label {
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* Threat Cards - Air Cairo Brand Design */
+        .threat-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f6fc 100%);
+            border: 3px solid #462B73;
+            border-radius: 16px;
+            padding: 12px;
+            margin-bottom: 12px;
+            box-shadow: 0 6px 16px rgba(70, 43, 115, 0.2);
+        }
+
+        .threat-card.high {
+            border-color: #e74c3c;
+            border-width: 3px;
+            box-shadow: 0 6px 16px rgba(231, 76, 60, 0.25);
+            background: linear-gradient(135deg, #fff5f5 0%, #ffebeb 100%);
+        }
+        .threat-card.medium {
+            border-color: #F7941D;
+            border-width: 3px;
+            box-shadow: 0 6px 16px rgba(247, 148, 29, 0.25);
+            background: linear-gradient(135deg, #fffbf5 0%, #fff5e6 100%);
+        }
+        .threat-card.low {
+            border-color: #0000E6;
+            border-width: 3px;
+            box-shadow: 0 6px 16px rgba(0, 0, 230, 0.2);
+            background: linear-gradient(135deg, #f0f0ff 0%, #e6e6ff 100%);
+        }
+        .threat-card.alternative { opacity: 0.85; }
+
+        .card-date-header {
+            font-size: 0.8em;
+            font-weight: 700;
+            color: #462B73;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+        .date-route {
+            letter-spacing: 1px;
+        }
+
+        .blocks-wrapper {
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            z-index: 90;
+            gap: 8px;
         }
 
-        .scroll-btn {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
+        .flight-block {
+            background: white;
+            border-radius: 10px;
+            padding: 10px 12px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+
+        .flight-block.our-flight {
+            border-left: 4px solid #462B73;
+        }
+        .flight-block.comp-flight {
+            border-left: 4px solid #e74c3c;
+        }
+
+        .flight-block-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .flight-number {
+            font-weight: 800;
+            font-size: 1.1em;
+            color: #462B73;
+        }
+
+        .flight-time {
+            font-size: 0.9em;
+            font-weight: 600;
+            color: #888;
+            background: #f5f5f5;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .time-label {
+            font-size: 0.7em;
+            font-weight: 700;
+            color: #462B73;
+            margin-right: 3px;
+        }
+
+        .lf-badges-row {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .lf-badge {
+            background: #f0eef5;
+            color: #462B73;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .lf-badge.lf-main {
             background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
             color: white;
+        }
+
+        .lf-badge-label {
+            font-size: 0.75em;
+            opacity: 0.8;
+        }
+
+        .flight-block-details {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            padding: 8px 0;
+        }
+
+        .flight-detail-col {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        .flight-detail-label {
+            font-size: 0.7em;
+            color: #888;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .flight-detail-value {
+            font-size: 1.4em;
+            font-weight: 800;
+            color: #462B73;
+        }
+
+        .flight-detail-separator {
+            display: none;
+        }
+
+        .recommendation-section {
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+            border-radius: 12px;
+            padding: 12px 15px;
+            text-align: center;
+            border: 2px solid #F7941D;
+            box-shadow: 0 3px 10px rgba(247, 148, 29, 0.2);
+            position: relative;
+        }
+
+        .recommendation-title {
+            font-size: 0.95em;
+            font-weight: 800;
+            color: #E65100;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .recommendation-details {
+            font-size: 0.8em;
+            color: #5D4037;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        .alert-banner {
+            margin-top: 10px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.85em;
+        }
+
+        .alert-banner.high {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+        }
+
+        .alert-banner.medium {
+            background: linear-gradient(135deg, #F7941D 0%, #e8850a 100%);
+            color: white;
+        }
+
+        .alert-banner.low {
+            background: linear-gradient(135deg, #0000E6 0%, #3333FF 100%);
+            color: white;
+        }
+
+        .scroll-nav {
+            position: fixed;
+            right: 15px;
+            bottom: 90px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            z-index: 99;
+        }                .scroll-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
             border: none;
-            font-size: 1.2em;
+            background: url('assets/img/scroll_button.png') center/contain no-repeat;
+            color: transparent;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            /* Ghost effect: more transparent inner, visible edges */
+            opacity: 0.12;
+            filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5)) contrast(1.3);
+            transition: all 0.2s ease;
+        }
+
+        /* Top button: airplane pointing UP */
+        #scrollTop {
+            transform: rotate(0deg);
+        }
+
+        /* Bottom button: airplane pointing DOWN (tail to tail) */
+        #scrollBottom {
+            transform: rotate(180deg);
+        }
+
+        .scroll-btn:hover {
+            opacity: 0.35;
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.6)) contrast(1.4);
+        }
+
+        .scroll-btn:active, .scroll-btn.pressed {
+            /* Full visibility on press */
+            opacity: 1;
+            filter: drop-shadow(0 6px 12px rgba(0,0,0,0.4));
+            /* 3D press effect */
+            transform: perspective(500px) rotateX(10deg) scale(0.95);
+        }
+
+        .scroll-btn svg {
+            display: none; /* Hide SVG, using image background */
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-around;
+            padding: 4px 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.8);
+            z-index: 100;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5px 15px;
+            color: #888;
+            font-size: 10px;
+            cursor: pointer;
+        }
+
+        .nav-item.active {
+            color: #462B73;
+        }
+
+        .nav-icon {
+            font-size: 20px;
+            transition: transform 0.2s;
+        }
+
+        /* Soft glow animation for bottom nav - RED for high */
+        @keyframes nav-glow-red {
+            0%, 100% {
+                transform: scale(1);
+                text-shadow: 0 0 8px rgba(231, 76, 60, 0.6), 0 0 15px rgba(231, 76, 60, 0.4);
+            }
+            50% {
+                transform: scale(1.2);
+                text-shadow: 0 0 12px rgba(231, 76, 60, 0.8), 0 0 25px rgba(231, 76, 60, 0.6), 0 0 35px rgba(231, 76, 60, 0.3);
+            }
+        }
+        /* Soft glow animation - YELLOW for medium */
+        @keyframes nav-glow-yellow {
+            0%, 100% {
+                transform: scale(1);
+                text-shadow: 0 0 8px rgba(241, 196, 15, 0.6), 0 0 15px rgba(241, 196, 15, 0.4);
+            }
+            50% {
+                transform: scale(1.2);
+                text-shadow: 0 0 12px rgba(241, 196, 15, 0.8), 0 0 25px rgba(241, 196, 15, 0.6), 0 0 35px rgba(241, 196, 15, 0.3);
+            }
+        }
+        /* Soft glow animation - BLUE for low */
+        @keyframes nav-glow-blue {
+            0%, 100% {
+                transform: scale(1);
+                text-shadow: 0 0 8px rgba(65, 105, 225, 0.6), 0 0 15px rgba(65, 105, 225, 0.4);
+            }
+            50% {
+                transform: scale(1.2);
+                text-shadow: 0 0 12px rgba(65, 105, 225, 0.8), 0 0 25px rgba(65, 105, 225, 0.6), 0 0 35px rgba(65, 105, 225, 0.3);
+            }
+        }
+        .nav-item:nth-child(1).filtering .nav-icon {
+            animation: nav-glow-red 1.5s ease-in-out infinite;
+        }
+        .nav-item:nth-child(2).filtering .nav-icon {
+            animation: nav-glow-yellow 1.5s ease-in-out infinite;
+        }
+        .nav-item:nth-child(3).filtering .nav-icon {
+            animation: nav-glow-blue 1.5s ease-in-out infinite;
         }
 
         .position-indicator {
@@ -276,35 +955,72 @@
             transform: translateY(-50%);
             width: 4px;
             height: 100px;
-            background: rgba(70, 43, 115, 0.2);
+            background: rgba(70, 43, 115, 0.1);
             border-radius: 2px;
-            z-index: 80;
+            z-index: 98;
         }
 
-        .position-bar {
-            width: 100%;
-            background: #462B73;
-            border-radius: 2px;
-            transition: height 0.1s, top 0.1s;
+        .position-marker {
             position: absolute;
+            width: 4px;
+            height: 20px;
+            background: #F7941D;
+            border-radius: 2px;
+            transition: top 0.1s;
         }
 
-        #freshnessWarning {
-            display: none;
+        .position-percent {
+            position: fixed;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%) translateX(30px);
+            background: rgba(70, 43, 115, 0.9);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.7em;
+            font-weight: 600;
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+            z-index: 98;
+        }
+
+        .position-percent.visible {
+            opacity: 1;
+            transform: translateY(-50%) translateX(0);
+        }
+
+        /* Lazy loading trigger */
+        .lazy-trigger {
+            height: 1px;
+            margin-top: -1px;
+        }
+
+        /* Threat Overlay - Visual effect when filtering by threat level */
+        .threat-overlay {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-            color: white;
-            padding: 10px 15px;
-            text-align: center;
-            z-index: 9999;
-            font-weight: 600;
-            font-size: 0.85em;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            bottom: 0;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
-
+        .threat-overlay.active {
+            opacity: 1;
+        }
+        .threat-overlay.high {
+            background: radial-gradient(ellipse at center, rgba(220, 53, 69, 0.15) 0%, rgba(220, 53, 69, 0.05) 70%, transparent 100%);
+        }
+        .threat-overlay.medium {
+            background: radial-gradient(ellipse at center, rgba(255, 193, 7, 0.15) 0%, rgba(255, 193, 7, 0.05) 70%, transparent 100%);
+        }
+        .threat-overlay.low {
+            background: radial-gradient(ellipse at center, rgba(40, 167, 69, 0.15) 0%, rgba(40, 167, 69, 0.05) 70%, transparent 100%);
+        }
+    
         /* ===== PAGE LOADER ===== */
         #page-loader {
             position: fixed;
@@ -312,7 +1028,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(255, 255, 255, 0.98);
+            background: #fcfcfc;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -356,6 +1072,7 @@
             40% { transform: scale(1.2); opacity: 1; }
         }
         /* ===== END PAGE LOADER ===== */
+
     </style>
 </head>
 <body class="en">
@@ -366,190 +1083,919 @@
         <div class="loader-dots"><span></span><span></span><span></span></div>
     </div>
 
+    <!-- Threat Overlay (visual effect for threat level filtering) -->
+    <div id="threatOverlay" class="threat-overlay"></div>
+
+    <!-- HOME Button - Always visible -->
     <a href="../online_mob_report.html" class="home-btn-fixed">🏠</a>
 
+    <!-- FREEZE PANES: Header + Filter Section stay sticky together -->
     <div class="freeze-panes">
-        <div class="header">
+        <header class="header">
             <div class="header-content">
                 <h1>AJF-CAI</h1>
             </div>
-            <button class="lang-toggle" onclick="toggleLang()">
-                <span class="ar-text">EN</span>
-                <span class="en-text">AR</span>
-            </button>
-        </div>
+            <button class="lang-toggle" onclick="toggleLanguage()">AR</button>
+        </header>
 
-        <div class="stats-bar">
-            <div class="stat-item high" onclick="filterByLevel('high')">
-                <div class="stat-sphere"><img src="web_red.png" alt="High"></div>
-                <span class="stat-count">0</span>
-                <span class="stat-label">
-                    <span class="ar-text">عالي</span>
-                    <span class="en-text">HIGH THREAT</span>
-                </span>
-            </div>
-            <div class="stat-item medium" onclick="filterByLevel('medium')">
-                <div class="stat-sphere"><img src="web_yello.png" alt="Medium"></div>
-                <span class="stat-count">0</span>
-                <span class="stat-label">
-                    <span class="ar-text">متوسط</span>
-                    <span class="en-text">MEDIUM THREAT</span>
-                </span>
-            </div>
-            <div class="stat-item low" onclick="filterByLevel('low')">
-                <div class="stat-sphere"><img src="web_blue.png" alt="Low"></div>
-                <span class="stat-count">1</span>
-                <span class="stat-label">
-                    <span class="ar-text">منخفض</span>
-                    <span class="en-text">LOW THREAT</span>
-                </span>
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <div class="filter-row">
+                <select class="route-selector" id="routeSelector" onchange="navigateToRoute(this.value)">
+                    <option value="AHB-ATZ">AHB-ATZ</option>
+<option value="AHB-CAI">AHB-CAI</option>
+<option value="AJF-CAI" selected>AJF-CAI</option>
+<option value="ATZ-JED">ATZ-JED</option>
+<option value="ATZ-MED">ATZ-MED</option>
+<option value="ATZ-RUH">ATZ-RUH</option>
+<option value="ATZ-TUU">ATZ-TUU</option>
+<option value="CAI-AHB">CAI-AHB</option>
+<option value="CAI-AJF">CAI-AJF</option>
+<option value="CAI-DMM">CAI-DMM</option>
+<option value="CAI-ELQ">CAI-ELQ</option>
+<option value="CAI-GIZ">CAI-GIZ</option>
+<option value="CAI-JED">CAI-JED</option>
+<option value="CAI-MED">CAI-MED</option>
+<option value="CAI-RUH">CAI-RUH</option>
+<option value="CAI-TUU">CAI-TUU</option>
+<option value="CAI-YNB">CAI-YNB</option>
+<option value="DMM-ATZ">DMM-ATZ</option>
+<option value="DMM-CAI">DMM-CAI</option>
+<option value="ELQ-ATZ">ELQ-ATZ</option>
+<option value="ELQ-CAI">ELQ-CAI</option>
+<option value="GIZ-CAI">GIZ-CAI</option>
+<option value="HBE-JED">HBE-JED</option>
+<option value="HBE-MED">HBE-MED</option>
+<option value="JED-ATZ">JED-ATZ</option>
+<option value="JED-CAI">JED-CAI</option>
+<option value="JED-HBE">JED-HBE</option>
+<option value="MED-ATZ">MED-ATZ</option>
+<option value="MED-CAI">MED-CAI</option>
+<option value="MED-HBE">MED-HBE</option>
+<option value="RUH-ATZ">RUH-ATZ</option>
+<option value="RUH-CAI">RUH-CAI</option>
+<option value="TUU-ATZ">TUU-ATZ</option>
+<option value="TUU-CAI">TUU-CAI</option>
+<option value="YNB-CAI">YNB-CAI</option>
+                </select>
+                <button class="filter-btn" id="dateFilterBtn" onclick="openFilterModal('date')">
+                    <span class="ar-text">📅 التواريخ</span>
+                    <span class="en-text">📅 Dates</span>
+                    <span class="count" id="dateFilterCount">All</span>
+                </button>
             </div>
         </div>
     </div>
 
-    <div id="freshnessWarning">
-        <span class="ar-text">تقرير قديم (اكثر من 24 ساعة) - <a href="javascript:location.reload(true)" style="color:#fff;text-decoration:underline;">تحديث</a></span>
-        <span class="en-text">Stale report (older than 24h) - <a href="javascript:location.reload(true)" style="color:#fff;text-decoration:underline;">Refresh</a></span>
-        <button onclick="this.parentElement.style.display='none'" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:white;font-size:1.2em;cursor:pointer;">x</button>
+    <div class="stats-bar">
+        <div class="stat-item high" data-level="high" onclick="filterByLevel('high')">
+            <div class="stat-sphere"><img src="web_red.png" alt="High"></div>
+            <div class="stat-count">0</div>
+            <div class="stat-label">
+                <span class="ar-text">تهديد عالي</span>
+                <span class="en-text">HIGH THREAT</span>
+            </div>
+        </div>
+        <div class="stat-item medium" data-level="medium" onclick="filterByLevel('medium')">
+            <div class="stat-sphere"><img src="web_yello.png" alt="Medium"></div>
+            <div class="stat-count">0</div>
+            <div class="stat-label">
+                <span class="ar-text">تهديد متوسط</span>
+                <span class="en-text">MEDIUM THREAT</span>
+            </div>
+        </div>
+        <div class="stat-item low" data-level="low" onclick="filterByLevel('low')">
+            <div class="stat-sphere"><img src="web_blue.png" alt="Low"></div>
+            <div class="stat-count">2</div>
+            <div class="stat-label">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
     </div>
 
-    <div class="content">
+    <!-- Date Filter Modal (Excel-style hierarchy) -->
+    <div class="filter-modal" id="dateFilterModal" onclick="closeFilterModal('date')">
+        <div class="filter-modal-content" onclick="event.stopPropagation()">
+            <div class="filter-modal-header">
+                <span class="filter-modal-title">
+                    <span class="ar-text">اختر التواريخ</span>
+                    <span class="en-text">Select Dates</span>
+                </span>
+                <button class="filter-modal-close" onclick="closeFilterModal('date')">×</button>
+            </div>
+            <div class="filter-modal-actions">
+                <button class="filter-action-btn" onclick="selectAllDates()">
+                    <span class="ar-text">تحديد الكل</span>
+                    <span class="en-text">Select All</span>
+                </button>
+                <button class="filter-action-btn" onclick="clearAllDates()">
+                    <span class="ar-text">إلغاء الكل</span>
+                    <span class="en-text">Clear All</span>
+                </button>
+            </div>
+            <div class="filter-modal-list" id="dateFilterList">
+                <div class="filter-tree">
+<div class="filter-tree-node" data-level="year"><div class="filter-tree-header" onclick="toggleTreeNode(this)"><span class="filter-tree-toggle">▼</span><div class="filter-tree-checkbox checked" onclick="event.stopPropagation(); toggleYearMonth(this, 'year')">✓</div><span class="filter-tree-label">2026</span></div><div class="filter-tree-children">
+<div class="filter-tree-node" data-level="month"><div class="filter-tree-header" onclick="toggleTreeNode(this)"><span class="filter-tree-toggle collapsed">▼</span><div class="filter-tree-checkbox checked" onclick="event.stopPropagation(); toggleYearMonth(this, 'month')">✓</div><span class="filter-tree-label">January</span></div><div class="filter-tree-children collapsed">
+<div class="filter-tree-day" data-date="2026-01-08" onclick="toggleDay(this)"><div class="filter-tree-checkbox checked">✓</div><span class="filter-tree-label">08</span></div>
+</div></div>
+<div class="filter-tree-node" data-level="month"><div class="filter-tree-header" onclick="toggleTreeNode(this)"><span class="filter-tree-toggle collapsed">▼</span><div class="filter-tree-checkbox checked" onclick="event.stopPropagation(); toggleYearMonth(this, 'month')">✓</div><span class="filter-tree-label">March</span></div><div class="filter-tree-children collapsed">
+<div class="filter-tree-day" data-date="2026-03-05" onclick="toggleDay(this)"><div class="filter-tree-checkbox checked">✓</div><span class="filter-tree-label">05</span></div>
+</div></div>
+</div></div>
+</div>
+            </div>
+            <div class="filter-modal-apply">
+                <button class="filter-apply-btn" onclick="applyDateFilter()">
+                    <span class="ar-text">تطبيق</span>
+                    <span class="en-text">Apply Filter</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" id="content">
         
-        <div class="threat-card low">
-            <div class="card-header">
-                <span class="date-badge">2026-01-15</span>
-                <span class="threat-badge low">LOW</span>
+            <div class="date-section" data-date="2026-01-08">
+                <div class="date-header">
+                    <span class="ar-text">08 يناير 2026 الخميس</span>
+                    <span class="en-text">08 JANUARY 2026 THURSDAY</span>
+                </div>
+            
+    <div class="flight-lf-header">
+        <div class="flight-lf-title-row">
+            <span class="flight-lf-number">SM-322</span>
+            <div class="sold-box">
+                <span class="sold-value">156</span>
+                <span class="sold-label">SOLD</span>
             </div>
-            <div class="card-body">
-                <div class="flight-row">
-                    <div class="flight-info">
-                        <span class="flight-number">Nile Air NP-120</span>
-                        <span class="flight-time">23:25</span>
+            <span class="flight-lf-time">21:55</span>
+        </div>
+        <div class="lf-boxes-row">
+            <div class="lf-box lf-main">
+                <span class="lf-box-value">89%</span>
+                <span class="lf-box-label">LF</span>
+            </div>
+            <div class="lf-box">
+                <span class="lf-box-value">05Jan</span>
+                <span class="lf-box-label">LST-SLD</span>
+            </div>
+            <div class="lf-box">
+                <span class="lf-box-value">175</span>
+                <span class="lf-box-label">CAP</span>
+            </div>
+            <div class="lf-box">
+                <span class="lf-box-value">72</span>
+                <span class="lf-box-label">WKLY</span>
+            </div>
+            <div class="lf-box">
+                <span class="lf-box-value">5</span>
+                <span class="lf-box-label">TDY</span>
+            </div>
+            <div class="lf-box">
+                <span class="lf-box-value">11</span>
+                <span class="lf-box-label">YDY</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card low">
+        <div class="card-date-header">
+            <span class="date-route">08JAN26 &nbsp;-&nbsp; AJF-CAI</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block our-flight">
+                <div class="flight-block-header">
+                    <span class="flight-number">SM-322</span>
+                    <span class="flight-time"><span class="time-label">DEP</span> 21:55</span>
+                </div>
+                <div class="lf-badges-row">
+                    <span class="lf-badge lf-main"><span class="lf-badge-label">LST-SLD</span> 05Jan</span>
+                    <span class="lf-badge"><span class="lf-badge-label">WKLY</span> 72</span>
+                    <span class="lf-badge"><span class="lf-badge-label">TDY</span> 5</span>
+                    <span class="lf-badge"><span class="lf-badge-label">YDY</span> 11</span>
+                </div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">668 ريال سعودي</span>
+                            <span class="en-text">668 SAR</span>
+                        </div>
                     </div>
-                    <div>
-                        <div class="price competitor">421 SAR</div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
                     </div>
                 </div>
-                <div class="flight-row">
-                    <div class="flight-info">
-                        <span class="flight-number">SM SM-322</span>
-                        <span class="flight-time">21:55</span>
+            </div>
+
+            <div class="recommendation-section">
+                <div class="recommendation-title">
+                    <span class="ar-text">طيران النيل أرخص بـ 68 ريال سعودي بنفس الوزن</span>
+                    <span class="en-text">Nile Air cheaper by 68 SAR, same baggage</span>
+                </div>
+                <div class="recommendation-details">
+                    <span class="ar-text">فرص البيع الأفضل لصالح طيران النيل 💡</span>
+                    <span class="en-text">Nile Air more attractive overall 💡</span>
+                </div>
+            </div>
+
+            <div class="flight-block comp-flight">
+                <div class="flight-block-header">
+                    <span class="flight-number">
+                        <span class="ar-text">NP-120</span>
+                        <span class="en-text">NP-120</span>
+                    </span>
+                    <span class="flight-time"><span class="time-label">DEP</span> 23:25</span>
+                </div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">600 ريال سعودي</span>
+                            <span class="en-text">600 SAR</span>
+                        </div>
                     </div>
-                    <div>
-                        <div class="price aircairo">458 SAR</div>
-                        <div class="price-diff positive">
-                            -37
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    </div>
+            <div class="date-section" data-date="2026-03-05">
+                <div class="date-header">
+                    <span class="ar-text">05 مارس 2026 الخميس</span>
+                    <span class="en-text">05 MARCH 2026 THURSDAY</span>
+                </div>
+            
+    <div class="flight-lf-header">
+        <div class="flight-lf-title-row">
+            <span class="flight-lf-number">SM-322</span>
+            <div class="sold-box">
+                <span class="sold-value">35</span>
+                <span class="sold-label">SOLD</span>
+            </div>
+            <span class="flight-lf-time">21:55</span>
+        </div>
+        <div class="lf-boxes-row">
+            <div class="lf-box lf-main">
+                <span class="lf-box-value">21%</span>
+                <span class="lf-box-label">LF</span>
+            </div>
+            <div class="lf-box">
+                <span class="lf-box-value">05Jan</span>
+                <span class="lf-box-label">LST-SLD</span>
+            </div>
+            <div class="lf-box">
+                <span class="lf-box-value">167</span>
+                <span class="lf-box-label">CAP</span>
+            </div>
+            <div class="lf-box">
+                <span class="lf-box-value">3</span>
+                <span class="lf-box-label">WKLY</span>
+            </div>
+            <div class="lf-box">
+                <span class="lf-box-value">1</span>
+                <span class="lf-box-label">TDY</span>
+            </div>
+            <div class="lf-box">
+                <span class="lf-box-value">0</span>
+                <span class="lf-box-label">YDY</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card low">
+        <div class="card-date-header">
+            <span class="date-route">05MAR26 &nbsp;-&nbsp; AJF-CAI</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block our-flight">
+                <div class="flight-block-header">
+                    <span class="flight-number">SM-322</span>
+                    <span class="flight-time"><span class="time-label">DEP</span> 21:55</span>
+                </div>
+                <div class="lf-badges-row">
+                    <span class="lf-badge lf-main"><span class="lf-badge-label">LST-SLD</span> 05Jan</span>
+                    <span class="lf-badge"><span class="lf-badge-label">WKLY</span> 3</span>
+                    <span class="lf-badge"><span class="lf-badge-label">TDY</span> 1</span>
+                    <span class="lf-badge"><span class="lf-badge-label">YDY</span> 0</span>
+                </div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">998 ريال سعودي</span>
+                            <span class="en-text">998 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommendation-section">
+                <div class="recommendation-title">
+                    <span class="ar-text">طيران النيل أرخص بـ 48 ريال سعودي بنفس الوزن</span>
+                    <span class="en-text">Nile Air cheaper by 48 SAR, same baggage</span>
+                </div>
+                <div class="recommendation-details">
+                    <span class="ar-text">التصدر في العرض لصالح طيران النيل 💡</span>
+                    <span class="en-text">Nile Air overall winning chance 💡</span>
+                </div>
+            </div>
+
+            <div class="flight-block comp-flight">
+                <div class="flight-block-header">
+                    <span class="flight-number">
+                        <span class="ar-text">NP-120</span>
+                        <span class="en-text">NP-120</span>
+                    </span>
+                    <span class="flight-time"><span class="time-label">DEP</span> 20:25</span>
+                </div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">950 ريال سعودي</span>
+                            <span class="en-text">950 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    </div>
     </div>
 
-    <div class="scroll-controls">
-        <button class="scroll-btn" id="scrollUp">&#9650;</button>
-        <button class="scroll-btn" id="scrollDown">&#9660;</button>
+    <div class="lazy-trigger" id="lazyTrigger"></div>
+
+    <div class="scroll-nav">
+        <button class="scroll-btn" id="scrollTop"><svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" transform="rotate(0 12 12)"/></svg></button>
+        <button class="scroll-btn" id="scrollBottom"><svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" transform="rotate(180 12 12)"/></svg></button>
     </div>
 
     <div class="position-indicator">
-        <div class="position-bar" id="positionBar"></div>
+        <div class="position-marker" id="positionMarker"></div>
     </div>
+    <div class="position-percent" id="positionPercent">0%</div>
+
+    <nav class="bottom-nav">
+        <div class="nav-item" onclick="filterByLevel('high')">
+            <span class="nav-icon">🔴</span>
+            <span>
+                <span class="ar-text">عالي</span>
+                <span class="en-text">High</span>
+            </span>
+        </div>
+        <div class="nav-item" onclick="filterByLevel('medium')">
+            <span class="nav-icon">🟡</span>
+            <span>
+                <span class="ar-text">متوسط</span>
+                <span class="en-text">Medium</span>
+            </span>
+        </div>
+        <div class="nav-item" onclick="filterByLevel('low')">
+            <span class="nav-icon">🔵</span>
+            <span>
+                <span class="ar-text">منخفض</span>
+                <span class="en-text">Low</span>
+            </span>
+        </div>
+    </nav>
 
     <script>
-        function toggleLang() {
-            document.body.classList.toggle('en');
-        }
-
-        var currentFilter = null;
-        function filterByLevel(level) {
-            var items = document.querySelectorAll('.stat-item');
-            var cards = document.querySelectorAll('.threat-card');
-
-            if (currentFilter === level) {
-                currentFilter = null;
-                items.forEach(i => i.classList.remove('active'));
-                cards.forEach(c => c.style.display = 'block');
+        // Language Toggle
+        function toggleLanguage() {
+            const body = document.body;
+            const btn = document.querySelector('.lang-toggle');
+            if (body.classList.contains('en')) {
+                body.classList.remove('en');
+                body.classList.add('ar');
+                body.dir = 'rtl';
+                btn.textContent = 'EN';
             } else {
-                currentFilter = level;
-                items.forEach(i => i.classList.remove('active'));
-                event.currentTarget.classList.add('active');
-                cards.forEach(c => {
-                    c.style.display = c.classList.contains(level) ? 'block' : 'none';
-                });
+                body.classList.remove('ar');
+                body.classList.add('en');
+                body.dir = 'ltr';
+                btn.textContent = 'عربي';
             }
         }
 
-        // Scroll controls
-        var scrollUp = document.getElementById('scrollUp');
-        var scrollDown = document.getElementById('scrollDown');
-        var holdTimer, scrollInterval;
-
-        function setupScrollButton(btn, direction) {
-            var scrollAmount = direction === 'up' ? -800 : 800;
-            var jumpTo = direction === 'up' ? 0 : document.documentElement.scrollHeight;
-
-            btn.addEventListener('mousedown', function(e) {
-                e.preventDefault();
-                scrollInterval = setInterval(function() {
-                    window.scrollBy({ top: scrollAmount, behavior: 'auto' });
-                }, 50);
-                holdTimer = setTimeout(function() {
-                    clearInterval(scrollInterval);
-                    window.scrollTo({ top: jumpTo, behavior: 'smooth' });
-                }, 500);
-            });
-
-            btn.addEventListener('mouseup', function() {
-                clearTimeout(holdTimer);
-                clearInterval(scrollInterval);
-            });
-
-            btn.addEventListener('touchstart', function(e) {
-                e.preventDefault();
-                scrollInterval = setInterval(function() {
-                    window.scrollBy({ top: scrollAmount, behavior: 'auto' });
-                }, 50);
-                holdTimer = setTimeout(function() {
-                    clearInterval(scrollInterval);
-                    window.scrollTo({ top: jumpTo, behavior: 'smooth' });
-                }, 500);
-            }, { passive: false });
-
-            btn.addEventListener('touchend', function() {
-                clearTimeout(holdTimer);
-                clearInterval(scrollInterval);
-            });
+        // Route Navigation
+        function navigateToRoute(route) {
+            if (route) {
+                window.location.href = route + '.html';
+            }
         }
 
-        setupScrollButton(scrollUp, 'up');
-        setupScrollButton(scrollDown, 'down');
+        // Date Filter State (Excel-style hierarchical)
+        let selectedDates = new Set();
 
-        // Position indicator
-        function updatePositionIndicator() {
-            var scrollTop = window.scrollY;
-            var docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            var scrollPercent = docHeight > 0 ? (scrollTop / docHeight) : 0;
-            var bar = document.getElementById('positionBar');
-            bar.style.height = '20px';
-            bar.style.top = (scrollPercent * 80) + 'px';
+        // Initialize: select all dates
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('#dateFilterList .filter-tree-day[data-date]').forEach(item => {
+                selectedDates.add(item.dataset.date);
+            });
+            updateAllCheckboxes();
+        });
+
+        function openFilterModal(type) {
+            const modal = document.getElementById(type + 'FilterModal');
+            if (modal) modal.classList.add('show');
         }
 
-        window.addEventListener('scroll', updatePositionIndicator, { passive: true });
-        updatePositionIndicator();
+        function closeFilterModal(type) {
+            const modal = document.getElementById(type + 'FilterModal');
+            if (modal) modal.classList.remove('show');
+        }
 
-        // Freshness check
-        (function() {
-            var meta = document.querySelector('meta[name="report-generated"]');
-            if (meta) {
-                var generated = new Date(meta.content);
-                var now = new Date();
-                var hoursDiff = (now - generated) / (1000 * 60 * 60);
-                if (hoursDiff > 24) {
-                    document.getElementById('freshnessWarning').style.display = 'block';
+        // Toggle tree node expand/collapse
+        function toggleTreeNode(element) {
+            var header = element;
+            var node = header.closest('.filter-tree-node');
+            var toggle = header.querySelector('.filter-tree-toggle');
+            var children = node.querySelector(':scope > .filter-tree-children');
+
+            if (toggle && children) {
+                var isCollapsed = children.classList.toggle('collapsed');
+                toggle.classList.toggle('collapsed', isCollapsed);
+            }
+        }
+
+        // Toggle checkbox for year/month (affects all children)
+        function toggleYearMonth(element, level) {
+            var node = element.closest('.filter-tree-node');
+            var header = node.querySelector('.filter-tree-header');
+            var checkbox = header ? header.querySelector('.filter-tree-checkbox') : null;
+            if (!checkbox) return;
+            var isChecked = checkbox.className.indexOf('checked') !== -1;
+
+            // Get all day checkboxes under this node
+            const dayItems = node.querySelectorAll('.filter-tree-day');
+            dayItems.forEach(day => {
+                const dayCheckbox = day.querySelector('.filter-tree-checkbox');
+                const dateValue = day.dataset.date;
+                if (isChecked) {
+                    dayCheckbox.classList.remove('checked');
+                    selectedDates.delete(dateValue);
+                } else {
+                    dayCheckbox.classList.add('checked');
+                    selectedDates.add(dateValue);
                 }
+            });
+
+            updateAllCheckboxes();
+        }
+
+        // Toggle individual day
+        function toggleDay(element) {
+            const checkbox = element.querySelector('.filter-tree-checkbox');
+            const dateValue = element.dataset.date;
+
+            if (checkbox.classList.contains('checked')) {
+                checkbox.classList.remove('checked');
+                selectedDates.delete(dateValue);
+            } else {
+                checkbox.classList.add('checked');
+                selectedDates.add(dateValue);
+            }
+
+            updateAllCheckboxes();
+        }
+
+        // Update parent checkboxes based on children state
+        function updateAllCheckboxes() {
+            // Update month checkboxes
+            document.querySelectorAll('.filter-tree-node[data-level="month"]').forEach(monthNode => {
+                const dayItems = monthNode.querySelectorAll('.filter-tree-day');
+                const checkedDays = monthNode.querySelectorAll('.filter-tree-day .filter-tree-checkbox.checked');
+                const monthCheckbox = monthNode.querySelector(':scope > .filter-tree-header .filter-tree-checkbox');
+
+                if (checkedDays.length === 0) {
+                    monthCheckbox.classList.remove('checked', 'partial');
+                    monthCheckbox.textContent = '';
+                } else if (checkedDays.length === dayItems.length) {
+                    monthCheckbox.classList.add('checked');
+                    monthCheckbox.classList.remove('partial');
+                    monthCheckbox.textContent = '✓';
+                } else {
+                    monthCheckbox.classList.remove('checked');
+                    monthCheckbox.classList.add('partial');
+                    monthCheckbox.textContent = '−';
+                }
+            });
+
+            // Update year checkboxes
+            document.querySelectorAll('.filter-tree-node[data-level="year"]').forEach(yearNode => {
+                const dayItems = yearNode.querySelectorAll('.filter-tree-day');
+                const checkedDays = yearNode.querySelectorAll('.filter-tree-day .filter-tree-checkbox.checked');
+                const yearCheckbox = yearNode.querySelector(':scope > .filter-tree-header .filter-tree-checkbox');
+
+                if (checkedDays.length === 0) {
+                    yearCheckbox.classList.remove('checked', 'partial');
+                    yearCheckbox.textContent = '';
+                } else if (checkedDays.length === dayItems.length) {
+                    yearCheckbox.classList.add('checked');
+                    yearCheckbox.classList.remove('partial');
+                    yearCheckbox.textContent = '✓';
+                } else {
+                    yearCheckbox.classList.remove('checked');
+                    yearCheckbox.classList.add('partial');
+                    yearCheckbox.textContent = '−';
+                }
+            });
+        }
+
+        function selectAllDates() {
+            document.querySelectorAll('#dateFilterList .filter-tree-day').forEach(day => {
+                day.querySelector('.filter-tree-checkbox').classList.add('checked');
+                selectedDates.add(day.dataset.date);
+            });
+            updateAllCheckboxes();
+        }
+
+        function clearAllDates() {
+            document.querySelectorAll('#dateFilterList .filter-tree-day').forEach(day => {
+                day.querySelector('.filter-tree-checkbox').classList.remove('checked');
+                selectedDates.delete(day.dataset.date);
+            });
+            updateAllCheckboxes();
+        }
+
+        function applyDateFilter() {
+            closeFilterModal('date');
+            updateFilterButton();
+            // Use unified filter (considers both date AND threat level)
+            applyAllFilters();
+        }
+
+        function updateFilterButton() {
+            const allDays = document.querySelectorAll('#dateFilterList .filter-tree-day').length;
+            const dateBtn = document.getElementById('dateFilterCount');
+            const dateBtnParent = document.getElementById('dateFilterBtn');
+
+            if (selectedDates.size === allDays || selectedDates.size === 0) {
+                if (dateBtn) dateBtn.textContent = 'All';
+                if (dateBtnParent) dateBtnParent.classList.remove('active');
+            } else {
+                if (dateBtn) dateBtn.textContent = selectedDates.size;
+                if (dateBtnParent) dateBtnParent.classList.add('active');
+            }
+        }
+
+        // Threat Level Color Overlay
+        function setThreatOverlay(level) {
+            let overlay = document.getElementById('threatOverlay');
+            if (!overlay) {
+                overlay = document.createElement('div');
+                overlay.id = 'threatOverlay';
+                overlay.className = 'threat-overlay';
+                document.body.insertBefore(overlay, document.body.firstChild);
+            }
+            overlay.className = 'threat-overlay';
+            if (level && level !== 'all') {
+                overlay.classList.add(level.toLowerCase());
+                overlay.classList.add('active');
+            }
+        }
+
+
+        // Store original date section order for restoration
+        let originalDateOrder = [];
+        (function() {
+            const container = document.querySelector('.date-sections-container, .content-area, main');
+            if (container) {
+                originalDateOrder = Array.from(container.querySelectorAll('[data-date]'));
             }
         })();
+
+        function sortDateSectionsByThreat(level) {
+            const container = document.querySelector('.date-sections-container, .content-area, main');
+            if (!container) return;
+
+            const sections = Array.from(container.querySelectorAll('[data-date]'));
+
+            if (!level) {
+                // Restore original order
+                originalDateOrder.forEach(section => container.appendChild(section));
+                return;
+            }
+
+            // Sort by count of threat cards of selected level (descending)
+            sections.sort((a, b) => {
+                const aCount = a.querySelectorAll(`.threat-card.${level}`).length;
+                const bCount = b.querySelectorAll(`.threat-card.${level}`).length;
+                return bCount - aCount;
+            });
+
+            // Reorder in DOM
+            sections.forEach(section => container.appendChild(section));
+        }
+
+        // Filter by threat level
+        let activeLevel = null;
+        // UNIFIED FILTER: Applies both threat level AND date filters together
+        function applyAllFilters() {
+            const allDays = document.querySelectorAll('#dateFilterList .filter-tree-day').length;
+            const showAllDates = selectedDates.size === 0 || selectedDates.size === allDays;
+
+            // Filter threat cards
+            document.querySelectorAll('.threat-card').forEach(card => {
+                const parent = card.closest('[data-date]');
+                const cardDate = parent ? parent.dataset.date : null;
+
+                // Check threat level filter
+                const matchesLevel = !activeLevel || card.classList.contains(activeLevel);
+
+                // Check date filter
+                const matchesDate = showAllDates || (cardDate && selectedDates.has(cardDate));
+
+                // Show only if BOTH filters match
+                card.style.display = (matchesLevel && matchesDate) ? '' : 'none';
+            });
+
+            // Hide date sections with no visible threat cards
+            document.querySelectorAll('[data-date]').forEach(dateSection => {
+                const sectionDate = dateSection.dataset.date;
+                const matchesDate = showAllDates || selectedDates.has(sectionDate);
+
+                if (!matchesDate) {
+                    dateSection.style.display = 'none';
+                } else {
+                    // Check if any visible cards in this section
+                    const visibleCards = dateSection.querySelectorAll('.threat-card[style=""], .threat-card:not([style])');
+                    const hasVisibleCards = Array.from(visibleCards).some(c => c.style.display !== 'none');
+                    dateSection.style.display = hasVisibleCards ? '' : 'none';
+                }
+            });
+        }
+
+        function filterByLevel(level) {
+            const navItems = document.querySelectorAll('.nav-item');
+            const statItems = document.querySelectorAll('.stat-item');
+
+            // Toggle off if same level clicked again
+            if (activeLevel === level) {
+                showAll();
+                return;
+            }
+
+            activeLevel = level;
+            setThreatOverlay(level);
+
+            // Update nav (0=high, 1=medium, 2=low) - add filtering class for pulse animation
+            navItems.forEach((item, i) => {
+                item.classList.remove('active');
+                item.classList.remove('filtering');
+            });
+            const navIndex = level === 'high' ? 0 : (level === 'medium' ? 1 : 2);
+            navItems[navIndex].classList.add('active');
+            navItems[navIndex].classList.add('filtering');
+
+            // Update stats - add filtering class for pulse animation
+            statItems.forEach(item => {
+                const isActive = item.dataset.level === level;
+                item.classList.toggle('active', isActive);
+                item.classList.toggle('filtering', isActive);
+            });
+
+            // Apply unified filter (considers both level AND date)
+            applyAllFilters();
+        }
+
+        function showAll() {
+            activeLevel = null;
+            setThreatOverlay(null);
+            // Restore original order
+            sortDateSectionsByThreat(null);
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+                item.classList.remove('filtering');
+            });
+            document.querySelectorAll('.stat-item').forEach(item => {
+                item.classList.remove('active');
+                item.classList.remove('filtering');
+            });
+            // Apply unified filter (will show all since activeLevel is null)
+            applyAllFilters();
+        }
+
+        // Scroll Navigation with dual functionality
+        (function() {
+            const LONG_PRESS_DELAY = 300;
+            const SCROLL_SPEED = 80;
+            const SCROLL_INTERVAL = 16;
+
+            let scrollInterval = null;
+            let longPressTimer = null;
+            let isLongPress = false;
+
+            function jumpToTop() {
+                window.scrollTo({ top: 0, behavior: 'instant' });
+            }
+
+            function jumpToBottom() {
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'instant' });
+            }
+
+            function startFastScroll(direction) {
+                stopFastScroll();
+                isLongPress = true;
+                scrollInterval = setInterval(() => {
+                    window.scrollBy({ top: direction * SCROLL_SPEED, behavior: 'instant' });
+                }, SCROLL_INTERVAL);
+            }
+
+            function stopFastScroll() {
+                if (scrollInterval) {
+                    clearInterval(scrollInterval);
+                    scrollInterval = null;
+                }
+                if (longPressTimer) {
+                    clearTimeout(longPressTimer);
+                    longPressTimer = null;
+                }
+            }
+
+            function setupButton(btn, direction, jumpFn) {
+                if (!btn) return;
+
+                btn.addEventListener('touchstart', (e) => {
+                    e.preventDefault();
+                    isLongPress = false;
+                    btn.classList.add('pressed');
+                    longPressTimer = setTimeout(() => {
+                        startFastScroll(direction);
+                    }, LONG_PRESS_DELAY);
+                }, { passive: false });
+
+                btn.addEventListener('touchend', (e) => {
+                    e.preventDefault();
+                    btn.classList.remove('pressed');
+                    stopFastScroll();
+                    if (!isLongPress) {
+                        jumpFn();
+                    }
+                    isLongPress = false;
+                });
+
+                btn.addEventListener('touchcancel', () => {
+                    btn.classList.remove('pressed');
+                    stopFastScroll();
+                    isLongPress = false;
+                });
+
+                btn.addEventListener('mousedown', (e) => {
+                    isLongPress = false;
+                    btn.classList.add('pressed');
+                    longPressTimer = setTimeout(() => {
+                        startFastScroll(direction);
+                    }, LONG_PRESS_DELAY);
+                });
+
+                btn.addEventListener('mouseup', () => {
+                    btn.classList.remove('pressed');
+                    stopFastScroll();
+                    if (!isLongPress) {
+                        jumpFn();
+                    }
+                    isLongPress = false;
+                });
+
+                btn.addEventListener('mouseleave', () => {
+                    btn.classList.remove('pressed');
+                    stopFastScroll();
+                    isLongPress = false;
+                });
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                setupButton(document.getElementById('scrollTop'), -1, jumpToTop);
+                setupButton(document.getElementById('scrollBottom'), 1, jumpToBottom);
+            });
+        })();
+
+        // Position indicator with requestAnimationFrame
+        (function() {
+            let hidePercentTimeout = null;
+            let rafId = null;
+
+            function updatePositionIndicator() {
+                if (rafId) return; // Already scheduled
+
+                rafId = requestAnimationFrame(() => {
+                    const scrollTop = window.scrollY;
+                    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    const percent = Math.round((scrollTop / docHeight) * 100) || 0;
+
+                    const marker = document.getElementById('positionMarker');
+                    const markerTop = (percent / 100) * 80;
+                    marker.style.top = markerTop + 'px';
+
+                    const percentEl = document.getElementById('positionPercent');
+                    percentEl.textContent = percent + '%';
+                    percentEl.classList.add('visible');
+
+                    clearTimeout(hidePercentTimeout);
+                    hidePercentTimeout = setTimeout(() => {
+                        percentEl.classList.remove('visible');
+                    }, 1500);
+
+                    rafId = null;
+                });
+            }
+
+            window.addEventListener('scroll', updatePositionIndicator, { passive: true });
+            updatePositionIndicator();
+        })();
+    </script>
+
+    <!-- Freshness Check - Warns if report is older than 24 hours -->
+    <div id="freshnessWarning" style="display:none; position:fixed; top:0; left:0; right:0; background:linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color:white; padding:10px 15px; text-align:center; z-index:9999; font-weight:600; font-size:0.85em; box-shadow:0 2px 10px rgba(0,0,0,0.3);">
+        <span class="ar-text">⚠️ تقرير قديم (أكثر من 24 ساعة) - <a href="javascript:location.reload(true)" style="color:#fff;text-decoration:underline;">تحديث</a></span>
+        <span class="en-text">⚠️ Stale report (older than 24h) - <a href="javascript:location.reload(true)" style="color:#fff;text-decoration:underline;">Refresh</a></span>
+        <button onclick="this.parentElement.style.display='none'" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:white;font-size:1.2em;cursor:pointer;">×</button>
+    </div>
+    <script>
+    (function() {
+        var meta = document.querySelector('meta[name="report-generated"]');
+        if (meta) {
+            var generated = new Date(meta.content);
+            var now = new Date();
+            var hoursDiff = (now - generated) / (1000 * 60 * 60);
+            if (hoursDiff > 24) {
+                document.getElementById('freshnessWarning').style.display = 'block';
+            }
+        }
+    })();
     </script>
 
     <!-- LOADER SCRIPT -->
@@ -566,17 +2012,17 @@
             var loader = document.getElementById('page-loader');
             if (loader) loader.classList.add('loaded');
         }, 4000);
-
+        
         // SHOW LOADER IMMEDIATELY on any navigation
         function showLoader() {
             var loader = document.getElementById('page-loader');
             if (loader) loader.classList.remove('loaded');
         }
-
+        
         // Show loader when leaving page (back/forward/link click)
         window.addEventListener('beforeunload', showLoader);
         window.addEventListener('pagehide', showLoader);
-
+        
         // Show loader on ALL link clicks
         document.addEventListener('click', function(e) {
             var link = e.target.closest('a');
@@ -584,12 +2030,25 @@
                 showLoader();
             }
         });
-
+        
         // Show loader on route selector change
         var routeSelector = document.getElementById('routeSelector');
         if (routeSelector) {
             routeSelector.addEventListener('change', showLoader);
         }
     </script>
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                var loader = document.getElementById('page-loader');
+                if (loader) loader.classList.add('loaded');
+            }, 300);
+        });
+        setTimeout(function() {
+            var loader = document.getElementById('page-loader');
+            if (loader) loader.classList.add('loaded');
+        }, 4000);
+    </script>
+
 </body>
 </html>

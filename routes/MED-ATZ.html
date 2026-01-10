@@ -119,22 +119,23 @@
         .stat-item:active { transform: scale(0.95); }
 
         .stat-sphere {
-            width: 63px;
-            height: 63px;
-            margin-bottom: 6px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
-            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
         .stat-sphere img {
             width: 100%;
             height: 100%;
+            border-radius: 50%;
             object-fit: cover;
         }
-
-        .stat-item.low .stat-sphere img {
-            transform: scale(1.4);
-        }
+        .stat-item.low .stat-sphere img { transform: scale(1.4); }
 
         .stat-count {
             font-size: 1.1em;
