@@ -1016,9 +1016,69 @@
         .threat-overlay.low {
             background: radial-gradient(ellipse at center, rgba(40, 167, 69, 0.15) 0%, rgba(40, 167, 69, 0.05) 70%, transparent 100%);
         }
+    
+        /* ===== PAGE LOADER ===== */
+        #page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fcfcfc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+        #page-loader.loaded {
+            opacity: 0;
+            visibility: hidden;
+        }
+        #page-loader .loader-gif {
+            width: 100px;
+            height: 100px;
+        }
+        #page-loader .loader-text {
+            color: #462B73;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            margin-top: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        #page-loader .loader-dots {
+            display: flex;
+            gap: 5px;
+            margin-top: 15px;
+        }
+        #page-loader .loader-dots span {
+            width: 8px;
+            height: 8px;
+            background: #F7941D;
+            border-radius: 50%;
+            animation: loader-bounce 1.4s ease-in-out infinite;
+        }
+        #page-loader .loader-dots span:nth-child(1) { animation-delay: 0s; }
+        #page-loader .loader-dots span:nth-child(2) { animation-delay: 0.2s; }
+        #page-loader .loader-dots span:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes loader-bounce {
+            0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+            40% { transform: scale(1.2); opacity: 1; }
+        }
+        /* ===== END PAGE LOADER ===== */
+
     </style>
 </head>
 <body class="en">
+    <!-- PAGE LOADER -->
+    <div id="page-loader">
+        <img class="loader-gif" src="assets/img/aircairo-loader.gif" alt="Loading...">
+        <div class="loader-text">LOADING</div>
+        <div class="loader-dots"><span></span><span></span><span></span></div>
+    </div>
+
     <!-- Threat Overlay (visual effect for threat level filtering) -->
     <div id="threatOverlay" class="threat-overlay"></div>
 
@@ -7509,5 +7569,20 @@
         }
     })();
     </script>
+
+    <!-- LOADER SCRIPT -->
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                var loader = document.getElementById('page-loader');
+                if (loader) loader.classList.add('loaded');
+            }, 300);
+        });
+        setTimeout(function() {
+            var loader = document.getElementById('page-loader');
+            if (loader) loader.classList.add('loaded');
+        }, 4000);
+    </script>
+
 </body>
 </html>
