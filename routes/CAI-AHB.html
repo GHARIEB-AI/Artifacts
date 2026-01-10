@@ -2491,10 +2491,17 @@
         // Toggle tree node expand/collapse
         function toggleTreeNode(element) {
             const node = element.closest('.filter-tree-node');
-            // Use :scope > to select ONLY direct children, not nested ones
-            const header = node.querySelector(':scope > .filter-tree-header');
-            const toggle = header ? header.querySelector('.filter-tree-toggle') : null;
-            const children = node.querySelector(':scope > .filter-tree-children');
+            // Find direct children only (compatible with all browsers)
+            let toggle = null;
+            let children = null;
+            for (let i = 0; i < node.children.length; i++) {
+                const child = node.children[i];
+                if (child.classList.contains('filter-tree-header')) {
+                    toggle = child.querySelector('.filter-tree-toggle');
+                } else if (child.classList.contains('filter-tree-children')) {
+                    children = child;
+                }
+            }
             if (toggle && children) {
                 toggle.classList.toggle('collapsed');
                 children.classList.toggle('collapsed');
@@ -2504,7 +2511,15 @@
         // Toggle checkbox for year/month (affects all children)
         function toggleYearMonth(element, level) {
             const node = element.closest('.filter-tree-node');
-            const checkbox = node.querySelector(':scope > .filter-tree-header .filter-tree-checkbox');
+            // Find checkbox in direct header child (compatible with all browsers)
+            let checkbox = null;
+            for (let i = 0; i < node.children.length; i++) {
+                if (node.children[i].classList.contains('filter-tree-header')) {
+                    checkbox = node.children[i].querySelector('.filter-tree-checkbox');
+                    break;
+                }
+            }
+            if (!checkbox) return;
             const isChecked = checkbox.classList.contains('checked');
 
             // Get all day checkboxes under this node
