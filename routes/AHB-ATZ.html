@@ -1374,37 +1374,30 @@
 
         // Toggle tree node expand/collapse
         function toggleTreeNode(element) {
-            const node = element.closest('.filter-tree-node');
-            // Find direct children only (compatible with all browsers)
-            let toggle = null;
-            let children = null;
-            for (let i = 0; i < node.children.length; i++) {
-                const child = node.children[i];
-                if (child.classList.contains('filter-tree-header')) {
-                    toggle = child.querySelector('.filter-tree-toggle');
-                } else if (child.classList.contains('filter-tree-children')) {
-                    children = child;
-                }
-            }
+            // element is the header div - children div is its next sibling
+            var toggle = element.querySelector('.filter-tree-toggle');
+            var children = element.nextElementSibling;
+
             if (toggle && children) {
-                toggle.classList.toggle('collapsed');
-                children.classList.toggle('collapsed');
+                // Use className manipulation for maximum compatibility
+                var hasCollapsed = toggle.className.indexOf('collapsed') !== -1;
+                if (hasCollapsed) {
+                    toggle.className = toggle.className.replace(' collapsed', '').replace('collapsed ', '').replace('collapsed', '');
+                    children.className = children.className.replace(' collapsed', '').replace('collapsed ', '').replace('collapsed', '');
+                } else {
+                    toggle.className = toggle.className + ' collapsed';
+                    children.className = children.className + ' collapsed';
+                }
             }
         }
 
         // Toggle checkbox for year/month (affects all children)
         function toggleYearMonth(element, level) {
-            const node = element.closest('.filter-tree-node');
-            // Find checkbox in direct header child (compatible with all browsers)
-            let checkbox = null;
-            for (let i = 0; i < node.children.length; i++) {
-                if (node.children[i].classList.contains('filter-tree-header')) {
-                    checkbox = node.children[i].querySelector('.filter-tree-checkbox');
-                    break;
-                }
-            }
+            var node = element.closest('.filter-tree-node');
+            var header = node.querySelector('.filter-tree-header');
+            var checkbox = header ? header.querySelector('.filter-tree-checkbox') : null;
             if (!checkbox) return;
-            const isChecked = checkbox.classList.contains('checked');
+            var isChecked = checkbox.className.indexOf('checked') !== -1;
 
             // Get all day checkboxes under this node
             const dayItems = node.querySelectorAll('.filter-tree-day');
