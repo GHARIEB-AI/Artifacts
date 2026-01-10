@@ -1,68 +1,32 @@
 {
-  "timestamp": "2026-01-10T08:46:26.741588",
+  "timestamp": "2026-01-10T09:41:14.647666",
   "status": "COMPLETED",
   "running": false,
   "active_workers": 0,
   "paths": {
     "outputs_root": "D:\\CODERED\\LAB\\Artifacts",
-    "active_output_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_311225_at_23.27",
-    "active_checkpoint_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_311225_at_23.27\\checkpoints",
-    "active_logs_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_311225_at_23.27\\logs",
+    "active_output_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_100126_at_08.36",
+    "active_checkpoint_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_100126_at_08.36\\checkpoints",
+    "active_logs_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_100126_at_08.36\\logs",
     "backend": "sqlite"
   },
   "config": {
-    "run_id": "20251231_232924",
+    "run_id": "20260110_083619",
     "mode": "LF_OAL",
-    "started_at": "2025-12-31T23:29:24.503234",
+    "started_at": "2026-01-10T08:36:19.987749",
     "routes": [
-      "MED-CAI",
-      "MED-HBE",
-      "MED-ATZ",
       "JED-CAI",
       "JED-HBE",
-      "JED-ATZ",
-      "JED-LXR",
-      "JED-ASW",
-      "RUH-CAI",
-      "RUH-ATZ",
       "DMM-CAI",
       "DMM-ATZ",
-      "TUU-CAI",
-      "TUU-ATZ",
-      "AJF-CAI",
-      "AJF-ATZ",
-      "YNB-CAI",
-      "AHB-CAI",
-      "AHB-ATZ",
-      "ELQ-CAI",
-      "ELQ-ATZ",
-      "GIZ-CAI",
-      "CAI-MED",
-      "HBE-MED",
-      "ATZ-MED",
       "CAI-JED",
       "HBE-JED",
-      "ATZ-JED",
-      "LXR-JED",
-      "ASW-JED",
-      "CAI-RUH",
-      "ATZ-RUH",
       "CAI-DMM",
-      "ATZ-DMM",
-      "CAI-TUU",
-      "ATZ-TUU",
-      "CAI-AJF",
-      "ATZ-AJF",
-      "CAI-YNB",
-      "CAI-AHB",
-      "ATZ-AHB",
-      "CAI-ELQ",
-      "ATZ-ELQ",
-      "CAI-GIZ"
+      "ATZ-DMM"
     ],
-    "routes_count": 44,
-    "dates_count": 60,
-    "chunks_count": 15,
+    "routes_count": 8,
+    "dates_count": 22,
+    "chunks_count": 2,
     "ports": [
       9222,
       9223,
@@ -76,7 +40,7 @@
     ],
     "ports_count": 9,
     "oal_workers": 10,
-    "date_range": "2025-12-31 to 2026-02-28"
+    "date_range": "2026-01-10 to 2026-01-31"
   },
   "progress": {
     "lf": 100.0,
@@ -85,15 +49,15 @@
     "oal_status": "completed",
     "oal_current_pass": 2,
     "oal_total_passes": 2,
-    "oal_routes_completed": 44,
-    "oal_routes_total": 44,
+    "oal_routes_completed": 8,
+    "oal_routes_total": 8,
     "excel": 100.0,
     "overall": 100.0,
     "run_completed": true
   },
   "tasks": {
-    "total": 660,
-    "done": 660,
+    "total": 16,
+    "done": 16,
     "running": 0,
     "pending": 0,
     "failed": 0
@@ -146,278 +110,61 @@
     }
   },
   "pending_routes": {
-    "MED-CAI": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "MED-HBE": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "MED-ATZ": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
     "JED-CAI": {
-      "total_tasks": 15,
-      "done_tasks": 15,
+      "total_tasks": 2,
+      "done_tasks": 2,
       "pending_dates": [],
       "done_dates": []
     },
     "JED-HBE": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "JED-ATZ": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "JED-LXR": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "JED-ASW": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "RUH-CAI": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "RUH-ATZ": {
-      "total_tasks": 15,
-      "done_tasks": 15,
+      "total_tasks": 2,
+      "done_tasks": 2,
       "pending_dates": [],
       "done_dates": []
     },
     "DMM-CAI": {
-      "total_tasks": 15,
-      "done_tasks": 15,
+      "total_tasks": 2,
+      "done_tasks": 2,
       "pending_dates": [],
       "done_dates": []
     },
     "DMM-ATZ": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "TUU-CAI": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "TUU-ATZ": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "AJF-CAI": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "AJF-ATZ": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "YNB-CAI": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "AHB-CAI": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "AHB-ATZ": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "ELQ-CAI": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "ELQ-ATZ": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "GIZ-CAI": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "CAI-MED": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "HBE-MED": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "ATZ-MED": {
-      "total_tasks": 15,
-      "done_tasks": 15,
+      "total_tasks": 2,
+      "done_tasks": 2,
       "pending_dates": [],
       "done_dates": []
     },
     "CAI-JED": {
-      "total_tasks": 15,
-      "done_tasks": 15,
+      "total_tasks": 2,
+      "done_tasks": 2,
       "pending_dates": [],
       "done_dates": []
     },
     "HBE-JED": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "ATZ-JED": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "LXR-JED": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "ASW-JED": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "CAI-RUH": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "ATZ-RUH": {
-      "total_tasks": 15,
-      "done_tasks": 15,
+      "total_tasks": 2,
+      "done_tasks": 2,
       "pending_dates": [],
       "done_dates": []
     },
     "CAI-DMM": {
-      "total_tasks": 15,
-      "done_tasks": 15,
+      "total_tasks": 2,
+      "done_tasks": 2,
       "pending_dates": [],
       "done_dates": []
     },
     "ATZ-DMM": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "CAI-TUU": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "ATZ-TUU": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "CAI-AJF": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "ATZ-AJF": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "CAI-YNB": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "CAI-AHB": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "ATZ-AHB": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "CAI-ELQ": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "ATZ-ELQ": {
-      "total_tasks": 15,
-      "done_tasks": 15,
-      "pending_dates": [],
-      "done_dates": []
-    },
-    "CAI-GIZ": {
-      "total_tasks": 15,
-      "done_tasks": 15,
+      "total_tasks": 2,
+      "done_tasks": 2,
       "pending_dates": [],
       "done_dates": []
     }
   },
   "running_tasks": [],
   "excel_files": [
-    "EGY_TO_KSA_31DEC25_TO_28FEB26_generated_at_01jan_00.42.xlsx",
-    "KSA_TO_EGY_31DEC25_TO_28FEB26_generated_at_01jan_00.43.xlsx",
-    "LOAD_FACTOR_SUMMARY_01-01-26_TO_01-JAN-26_generated_at_01jan_00.46.xlsx"
+    "ALL_10JAN26_TO_31JAN26_generated_at_10jan_08.45.xlsx",
+    "LOAD_FACTOR_SUMMARY_10-01-26_TO_10-JAN-26_generated_at_10jan_08.46.xlsx"
   ],
-  "excel_count": 3,
+  "excel_count": 2,
   "speed_metrics": {
     "speed_per_minute": 0.0,
     "speed_per_hour": 0.0,
@@ -436,322 +183,322 @@
   "oal_details": {
     "current_pass": 2,
     "total_passes": 2,
-    "routes_completed_in_pass": 44,
-    "routes_total_per_pass": 44,
+    "routes_completed_in_pass": 8,
+    "routes_total_per_pass": 8,
     "is_estimated": false,
     "status": "completed"
   },
   "live_logs": {
     "lines": [
-      "2026-01-01 00:21:24 | INFO     | [lf.day.start] Processing CAI-AHB for 04JAN",
-      "2026-01-01 00:21:25 | WARNING  | [lf.day.no_flights] No direct flights on 04JAN",
-      "2026-01-01 00:21:25 | INFO     | [SUCCESS] Day 04JAN",
-      "2026-01-01 00:21:25 | INFO     | [DAY_START] Processing 03JAN",
-      "2026-01-01 00:21:25 | INFO     | [lf.day.start] Processing CAI-AHB for 03JAN",
-      "2026-01-01 00:21:26 | INFO     | [lf.day.flights_found] Found 1 flights on 03JAN",
-      "2026-01-01 00:21:28 | INFO     | [lf.flight.extracted] SM443 on 03JAN: BKG=175, LF=97.8%",
-      "2026-01-01 00:21:35 | INFO     | [SUCCESS] Day 03JAN",
-      "2026-01-01 00:21:35 | INFO     | [DAY_START] Processing 02JAN",
-      "2026-01-01 00:21:35 | INFO     | [lf.day.start] Processing CAI-AHB for 02JAN",
-      "2026-01-01 00:21:36 | WARNING  | [lf.day.no_flights] No direct flights on 02JAN",
-      "2026-01-01 00:21:36 | INFO     | [SUCCESS] Day 02JAN",
-      "2026-01-01 00:21:36 | INFO     | [DAY_START] Processing 31DEC",
-      "2026-01-01 00:21:36 | INFO     | [lf.day.start] Processing CAI-AHB for 31DEC",
-      "2026-01-01 00:21:37 | WARNING  | [lf.day.no_flights] No direct flights on 31DEC",
-      "2026-01-01 00:21:38 | INFO     | [SUCCESS] Day 31DEC",
-      "2026-01-01 00:21:38 | INFO     | [SUCCESS] LF Search Complete",
-      "2026-01-01 00:21:40 | INFO     | [Worker_9233] Completed: CAI-AHB - 5 results, 0 errors",
-      "2026-01-01 00:42:42 | INFO     | [Worker_9233] Shutdown signal received, exiting...",
-      "2026-01-01 00:42:42 | INFO     | [Worker_9233] Finished. Processed 79 groups."
+      "2026-01-10 08:38:59 | INFO     | [lf.day.start] Processing JED-HBE for 13JAN",
+      "2026-01-10 08:39:00 | INFO     | [lf.day.flights_found] Found 1 flights on 13JAN",
+      "2026-01-10 08:39:02 | INFO     | [lf.flight.extracted] SM452 on 13JAN: BKG=175, LF=100.0%",
+      "2026-01-10 08:39:09 | INFO     | [SUCCESS] Day 13JAN",
+      "2026-01-10 08:39:09 | INFO     | [DAY_START] Processing 12JAN",
+      "2026-01-10 08:39:09 | INFO     | [lf.day.start] Processing JED-HBE for 12JAN",
+      "2026-01-10 08:39:10 | INFO     | [lf.day.flights_found] Found 2 flights on 12JAN",
+      "2026-01-10 08:39:12 | INFO     | [lf.flight.extracted] SM458 on 12JAN: BKG=172, LF=98.3%",
+      "2026-01-10 08:39:15 | INFO     | [lf.flight.extracted] SM452 on 12JAN: BKG=172, LF=98.3%",
+      "2026-01-10 08:39:26 | INFO     | [SUCCESS] Day 12JAN",
+      "2026-01-10 08:39:26 | INFO     | [DAY_START] Processing 11JAN",
+      "2026-01-10 08:39:26 | INFO     | [lf.day.start] Processing JED-HBE for 11JAN",
+      "2026-01-10 08:39:29 | INFO     | [lf.day.flights_found] Found 2 flights on 11JAN",
+      "2026-01-10 08:39:31 | INFO     | [lf.flight.extracted] SM458 on 11JAN: BKG=175, LF=100.0%",
+      "2026-01-10 08:39:35 | INFO     | [lf.flight.extracted] SM452 on 11JAN: BKG=172, LF=98.3%",
+      "2026-01-10 08:39:48 | INFO     | [SUCCESS] Day 11JAN",
+      "2026-01-10 08:39:48 | INFO     | [SUCCESS] LF Search Complete",
+      "2026-01-10 08:39:50 | INFO     | [Worker_9226] Completed: JED-HBE - 10 results, 0 errors",
+      "2026-01-10 08:45:35 | INFO     | [Worker_9226] Shutdown signal received, exiting...",
+      "2026-01-10 08:45:35 | INFO     | [Worker_9226] Finished. Processed 2 groups."
     ],
-    "file": "LF_CAI-AHB_20260101_002121.log",
-    "total_lines": 33
+    "file": "LF_JED-HBE_20260110_083707.log",
+    "total_lines": 69
   },
   "flight_booking_data": {
     "flights": [
       {
-        "flight": "SM471",
-        "route": "CAI-JED",
-        "date": "Wednesday, December 31, 2025",
-        "lst_sold": "2025-12-30 00:00:00",
-        "to_day": 0,
-        "y_day": 0,
-        "weekly": 12,
-        "lowest_avail": "CLOSED",
-        "lf_percent": 100.0,
-        "capacity": 176,
-        "booked": 176,
-        "extracted_at": "2026-01-01T00:22:47.400229"
-      },
-      {
-        "flight": "SM459",
-        "route": "CAI-JED",
-        "date": "Friday, January 02, 2026",
-        "lst_sold": "2025-12-31 00:00:00",
-        "to_day": 0,
-        "y_day": 17,
-        "weekly": 43,
-        "lowest_avail": "I1",
-        "lf_percent": 37.4,
-        "capacity": 179,
-        "booked": 67,
-        "extracted_at": "2026-01-01T00:22:39.093223"
-      },
-      {
-        "flight": "SM471",
-        "route": "CAI-JED",
-        "date": "Friday, January 02, 2026",
-        "lst_sold": "2025-12-31 00:00:00",
-        "to_day": 0,
-        "y_day": 5,
-        "weekly": 31,
-        "lowest_avail": "I9",
-        "lf_percent": 30.2,
-        "capacity": 179,
-        "booked": 54,
-        "extracted_at": "2026-01-01T00:22:35.244294"
-      },
-      {
         "flight": "SM479",
         "route": "CAI-JED",
-        "date": "Friday, January 02, 2026",
-        "lst_sold": "2025-12-31 00:00:00",
+        "date": "Sunday, January 11, 2026",
+        "lst_sold": "2026-01-09 00:00:00",
         "to_day": 0,
-        "y_day": 13,
-        "weekly": 30,
-        "lowest_avail": "I9",
-        "lf_percent": 36.3,
+        "y_day": 17,
+        "weekly": 79,
+        "lowest_avail": "X9",
+        "lf_percent": 77.6,
         "capacity": 179,
-        "booked": 65,
-        "extracted_at": "2026-01-01T00:22:32.009179"
-      },
-      {
-        "flight": "SM475",
-        "route": "CAI-JED",
-        "date": "Friday, January 02, 2026",
-        "lst_sold": "2025-12-31 00:00:00",
-        "to_day": 0,
-        "y_day": 6,
-        "weekly": 83,
-        "lowest_avail": "U9",
-        "lf_percent": 86.0,
-        "capacity": 179,
-        "booked": 154,
-        "extracted_at": "2026-01-01T00:22:28.863643"
-      },
-      {
-        "flight": "SM491",
-        "route": "ATZ-JED",
-        "date": "Friday, January 02, 2026",
-        "lst_sold": "2025-12-31 00:00:00",
-        "to_day": 0,
-        "y_day": 2,
-        "weekly": 36,
-        "lowest_avail": "I9",
-        "lf_percent": 45.2,
-        "capacity": 179,
-        "booked": 81,
-        "extracted_at": "2026-01-01T00:22:13.371591"
-      },
-      {
-        "flight": "SM423",
-        "route": "CAI-JED",
-        "date": "Saturday, January 03, 2026",
-        "lst_sold": "2025-12-31 00:00:00",
-        "to_day": 0,
-        "y_day": 8,
-        "weekly": 76,
-        "lowest_avail": "U9",
-        "lf_percent": 58.1,
-        "capacity": 179,
-        "booked": 104,
-        "extracted_at": "2026-01-01T00:22:09.664231"
+        "booked": 139,
+        "extracted_at": "2026-01-10T08:44:53.178065"
       },
       {
         "flight": "SM477",
         "route": "CAI-JED",
-        "date": "Saturday, January 03, 2026",
-        "lst_sold": "2025-12-31 00:00:00",
+        "date": "Sunday, January 11, 2026",
+        "lst_sold": "2026-01-09 00:00:00",
         "to_day": 0,
-        "y_day": 2,
-        "weekly": 53,
-        "lowest_avail": "T5",
-        "lf_percent": 97.2,
-        "capacity": 179,
-        "booked": 174,
-        "extracted_at": "2026-01-01T00:22:05.095098"
+        "y_day": 5,
+        "weekly": 40,
+        "lowest_avail": "X6",
+        "lf_percent": 94.3,
+        "capacity": 176,
+        "booked": 166,
+        "extracted_at": "2026-01-10T08:44:48.057481"
       },
       {
-        "flight": "SM478",
-        "route": "JED-CAI",
-        "date": "Wednesday, December 31, 2025",
-        "lst_sold": "2025-12-30 00:00:00",
+        "flight": "SM459",
+        "route": "CAI-JED",
+        "date": "Sunday, January 11, 2026",
+        "lst_sold": "2026-01-09 00:00:00",
         "to_day": 0,
-        "y_day": 0,
-        "weekly": 15,
-        "lowest_avail": "CLOSED",
-        "lf_percent": 100.0,
-        "capacity": 178,
-        "booked": 178,
-        "extracted_at": "2026-01-01T00:22:01.020836"
+        "y_day": 2,
+        "weekly": 45,
+        "lowest_avail": "U1",
+        "lf_percent": 95.5,
+        "capacity": 179,
+        "booked": 171,
+        "extracted_at": "2026-01-10T08:44:43.581181"
+      },
+      {
+        "flight": "SM431",
+        "route": "CAI-JED",
+        "date": "Sunday, January 11, 2026",
+        "lst_sold": "2026-01-09 00:00:00",
+        "to_day": 0,
+        "y_day": 23,
+        "weekly": 108,
+        "lowest_avail": "U3",
+        "lf_percent": 89.9,
+        "capacity": 179,
+        "booked": 161,
+        "extracted_at": "2026-01-10T08:44:39.031607"
       },
       {
         "flight": "SM475",
         "route": "CAI-JED",
-        "date": "Saturday, January 03, 2026",
-        "lst_sold": "2025-12-31 00:00:00",
+        "date": "Sunday, January 11, 2026",
+        "lst_sold": "2026-01-09 00:00:00",
+        "to_day": 0,
+        "y_day": 19,
+        "weekly": 79,
+        "lowest_avail": "U2",
+        "lf_percent": 92.7,
+        "capacity": 179,
+        "booked": 166,
+        "extracted_at": "2026-01-10T08:44:19.472621"
+      },
+      {
+        "flight": "SM459",
+        "route": "CAI-JED",
+        "date": "Monday, January 12, 2026",
+        "lst_sold": "2026-01-10 00:00:00",
+        "to_day": 2,
+        "y_day": 5,
+        "weekly": 60,
+        "lowest_avail": "W8",
+        "lf_percent": 59.2,
+        "capacity": 179,
+        "booked": 106,
+        "extracted_at": "2026-01-10T08:43:54.067625"
+      },
+      {
+        "flight": "SM477",
+        "route": "CAI-JED",
+        "date": "Monday, January 12, 2026",
+        "lst_sold": "2026-01-09 00:00:00",
+        "to_day": 0,
+        "y_day": 1,
+        "weekly": 11,
+        "lowest_avail": "CLOSED",
+        "lf_percent": 100.0,
+        "capacity": 179,
+        "booked": 179,
+        "extracted_at": "2026-01-10T08:43:49.156552"
+      },
+      {
+        "flight": "SM475",
+        "route": "CAI-JED",
+        "date": "Monday, January 12, 2026",
+        "lst_sold": "2026-01-09 00:00:00",
+        "to_day": 0,
+        "y_day": 4,
+        "weekly": 45,
+        "lowest_avail": "T1",
+        "lf_percent": 95.0,
+        "capacity": 179,
+        "booked": 170,
+        "extracted_at": "2026-01-10T08:43:44.830058"
+      },
+      {
+        "flight": "SM475",
+        "route": "CAI-JED",
+        "date": "Tuesday, January 13, 2026",
+        "lst_sold": "2026-01-09 00:00:00",
         "to_day": 0,
         "y_day": 6,
-        "weekly": 28,
-        "lowest_avail": "I2",
-        "lf_percent": 49.2,
+        "weekly": 34,
+        "lowest_avail": "S9",
+        "lf_percent": 73.7,
         "capacity": 179,
-        "booked": 88,
-        "extracted_at": "2026-01-01T00:22:00.393711"
+        "booked": 132,
+        "extracted_at": "2026-01-10T08:43:29.512453"
+      },
+      {
+        "flight": "SM478",
+        "route": "JED-CAI",
+        "date": "Sunday, January 11, 2026",
+        "lst_sold": "2026-01-09 00:00:00",
+        "to_day": 0,
+        "y_day": 1,
+        "weekly": 10,
+        "lowest_avail": "CLOSED",
+        "lf_percent": 100.0,
+        "capacity": 175,
+        "booked": 175,
+        "extracted_at": "2026-01-10T08:43:28.940084"
+      },
+      {
+        "flight": "SM423",
+        "route": "CAI-JED",
+        "date": "Tuesday, January 13, 2026",
+        "lst_sold": "2026-01-10 00:00:00",
+        "to_day": 2,
+        "y_day": 18,
+        "weekly": 68,
+        "lowest_avail": "T1",
+        "lf_percent": 74.9,
+        "capacity": 179,
+        "booked": 134,
+        "extracted_at": "2026-01-10T08:43:25.437901"
       },
       {
         "flight": "SM460",
         "route": "JED-CAI",
-        "date": "Wednesday, December 31, 2025",
-        "lst_sold": "2025-12-29 00:00:00",
+        "date": "Sunday, January 11, 2026",
+        "lst_sold": "2026-01-08 00:00:00",
         "to_day": 0,
         "y_day": 0,
-        "weekly": 63,
+        "weekly": 43,
         "lowest_avail": "CLOSED",
-        "lf_percent": 100.6,
+        "lf_percent": 100.0,
         "capacity": 178,
-        "booked": 179,
-        "extracted_at": "2026-01-01T00:21:56.422607"
+        "booked": 178,
+        "extracted_at": "2026-01-10T08:43:24.378087"
       },
       {
-        "flight": "SM449",
+        "flight": "SM459",
         "route": "CAI-JED",
-        "date": "Saturday, January 03, 2026",
-        "lst_sold": "2025-12-31 00:00:00",
+        "date": "Tuesday, January 13, 2026",
+        "lst_sold": "2026-01-09 00:00:00",
         "to_day": 0,
-        "y_day": 11,
-        "weekly": 19,
-        "lowest_avail": "I3",
-        "lf_percent": 44.7,
+        "y_day": 9,
+        "weekly": 48,
+        "lowest_avail": "S9",
+        "lf_percent": 71.0,
         "capacity": 179,
-        "booked": 80,
-        "extracted_at": "2026-01-01T00:21:56.070203"
+        "booked": 127,
+        "extracted_at": "2026-01-10T08:43:20.371362"
       },
       {
-        "flight": "SM329",
-        "route": "CAI-GIZ",
-        "date": "Saturday, January 03, 2026",
-        "lst_sold": "2025-12-31 00:00:00",
+        "flight": "SM432",
+        "route": "JED-CAI",
+        "date": "Sunday, January 11, 2026",
+        "lst_sold": "2026-01-09 00:00:00",
         "to_day": 0,
-        "y_day": 4,
-        "weekly": 44,
-        "lowest_avail": "G9",
-        "lf_percent": 86.0,
+        "y_day": 1,
+        "weekly": 11,
+        "lowest_avail": "CLOSED",
+        "lf_percent": 100.0,
+        "capacity": 178,
+        "booked": 178,
+        "extracted_at": "2026-01-10T08:43:19.455570"
+      },
+      {
+        "flight": "SM477",
+        "route": "CAI-JED",
+        "date": "Tuesday, January 13, 2026",
+        "lst_sold": "2026-01-08 00:00:00",
+        "to_day": 0,
+        "y_day": 0,
+        "weekly": 28,
+        "lowest_avail": "CLOSED",
+        "lf_percent": 100.0,
         "capacity": 179,
-        "booked": 154,
-        "extracted_at": "2026-01-01T00:21:52.413346"
+        "booked": 179,
+        "extracted_at": "2026-01-10T08:43:15.824884"
       },
       {
         "flight": "SM476",
         "route": "JED-CAI",
-        "date": "Wednesday, December 31, 2025",
-        "lst_sold": "2025-12-30 00:00:00",
+        "date": "Sunday, January 11, 2026",
+        "lst_sold": "2026-01-09 00:00:00",
         "to_day": 0,
-        "y_day": 0,
-        "weekly": 6,
-        "lowest_avail": "CLOSED",
-        "lf_percent": 101.1,
-        "capacity": 176,
-        "booked": 178,
-        "extracted_at": "2026-01-01T00:21:51.419827"
+        "y_day": 2,
+        "weekly": 42,
+        "lowest_avail": "S1",
+        "lf_percent": 99.4,
+        "capacity": 178,
+        "booked": 177,
+        "extracted_at": "2026-01-10T08:43:14.806571"
       },
       {
-        "flight": "SM441",
-        "route": "CAI-YNB",
-        "date": "Friday, January 02, 2026",
-        "lst_sold": "2025-12-30 00:00:00",
+        "flight": "SM479",
+        "route": "CAI-JED",
+        "date": "Tuesday, January 13, 2026",
+        "lst_sold": "2026-01-09 00:00:00",
+        "to_day": 0,
+        "y_day": 2,
+        "weekly": 8,
+        "lowest_avail": "W2",
+        "lf_percent": 98.9,
+        "capacity": 179,
+        "booked": 177,
+        "extracted_at": "2026-01-10T08:43:11.417225"
+      },
+      {
+        "flight": "SM424",
+        "route": "JED-CAI",
+        "date": "Sunday, January 11, 2026",
+        "lst_sold": "2026-01-05 00:00:00",
         "to_day": 0,
         "y_day": 0,
-        "weekly": 8,
+        "weekly": 4,
+        "lowest_avail": "W1",
+        "lf_percent": 99.4,
+        "capacity": 175,
+        "booked": 174,
+        "extracted_at": "2026-01-10T08:43:10.026204"
+      },
+      {
+        "flight": "SM471",
+        "route": "CAI-JED",
+        "date": "Tuesday, January 13, 2026",
+        "lst_sold": "2026-01-09 00:00:00",
+        "to_day": 0,
+        "y_day": 2,
+        "weekly": 58,
+        "lowest_avail": "T2",
+        "lf_percent": 86.9,
+        "capacity": 176,
+        "booked": 153,
+        "extracted_at": "2026-01-10T08:43:06.873758"
+      },
+      {
+        "flight": "SM471",
+        "route": "CAI-JED",
+        "date": "Wednesday, January 21, 2026",
+        "lst_sold": "2026-01-03 00:00:00",
+        "to_day": 0,
+        "y_day": 0,
+        "weekly": 1,
         "lowest_avail": "CLOSED",
         "lf_percent": 100.0,
-        "capacity": 176,
-        "booked": 176,
-        "extracted_at": "2026-01-01T00:21:51.337613"
-      },
-      {
-        "flight": "SM453",
-        "route": "ATZ-JED",
-        "date": "Saturday, January 03, 2026",
-        "lst_sold": "2025-12-31 00:00:00",
-        "to_day": 0,
-        "y_day": 8,
-        "weekly": 20,
-        "lowest_avail": "I8",
-        "lf_percent": 50.3,
         "capacity": 179,
-        "booked": 90,
-        "extracted_at": "2026-01-01T00:21:46.673414"
-      },
-      {
-        "flight": "SM435",
-        "route": "ATZ-ELQ",
-        "date": "Saturday, January 03, 2026",
-        "lst_sold": "2025-12-31 00:00:00",
-        "to_day": 0,
-        "y_day": 8,
-        "weekly": 54,
-        "lowest_avail": "X9",
-        "lf_percent": 67.0,
-        "capacity": 179,
-        "booked": 120,
-        "extracted_at": "2026-01-01T00:21:44.631406"
-      },
-      {
-        "flight": "SM427",
-        "route": "CAI-ELQ",
-        "date": "Friday, January 02, 2026",
-        "lst_sold": "2025-12-30 00:00:00",
-        "to_day": 0,
-        "y_day": 0,
-        "weekly": 52,
-        "lowest_avail": "W9",
-        "lf_percent": 68.2,
-        "capacity": 179,
-        "booked": 122,
-        "extracted_at": "2026-01-01T00:21:43.253709"
-      },
-      {
-        "flight": "SM441",
-        "route": "CAI-YNB",
-        "date": "Saturday, January 03, 2026",
-        "lst_sold": "2025-12-31 00:00:00",
-        "to_day": 0,
-        "y_day": 7,
-        "weekly": 29,
-        "lowest_avail": "S9",
-        "lf_percent": 88.3,
-        "capacity": 179,
-        "booked": 158,
-        "extracted_at": "2026-01-01T00:21:42.582240"
-      },
-      {
-        "flight": "SM491",
-        "route": "ATZ-JED",
-        "date": "Saturday, January 03, 2026",
-        "lst_sold": "2025-12-31 00:00:00",
-        "to_day": 0,
-        "y_day": 50,
-        "weekly": 71,
-        "lowest_avail": "U4",
-        "lf_percent": 83.2,
-        "capacity": 179,
-        "booked": 149,
-        "extracted_at": "2026-01-01T00:21:41.779172"
+        "booked": 179,
+        "extracted_at": "2026-01-10T08:43:04.057386"
       }
     ],
-    "updated_at": "2026-01-01T00:22:47.400233",
-    "total_extracted": 843
+    "updated_at": "2026-01-10T08:44:53.178072",
+    "total_extracted": 317
   },
   "validation": {
     "passed": true,
