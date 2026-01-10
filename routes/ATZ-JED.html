@@ -25135,8 +25135,10 @@
         // Toggle tree node expand/collapse
         function toggleTreeNode(element) {
             const node = element.closest('.filter-tree-node');
-            const toggle = node.querySelector('.filter-tree-toggle');
-            const children = node.querySelector('.filter-tree-children');
+            // Use :scope > to select ONLY direct children, not nested ones
+            const header = node.querySelector(':scope > .filter-tree-header');
+            const toggle = header ? header.querySelector('.filter-tree-toggle') : null;
+            const children = node.querySelector(':scope > .filter-tree-children');
             if (toggle && children) {
                 toggle.classList.toggle('collapsed');
                 children.classList.toggle('collapsed');
@@ -25244,28 +25246,8 @@
         function applyDateFilter() {
             closeFilterModal('date');
             updateFilterButton();
-
-            const allDays = document.querySelectorAll('#dateFilterList .filter-tree-day').length;
-            const showAll = selectedDates.size === 0 || selectedDates.size === allDays;
-
-            // Filter date sections (containers with data-date attribute)
-            document.querySelectorAll('[data-date]').forEach(section => {
-                const sectionDate = section.dataset.date;
-                if (showAll || selectedDates.has(sectionDate)) {
-                    section.style.display = '';
-                } else {
-                    section.style.display = 'none';
-                }
-            });
-
-            // Also filter threat cards and flight headers by their parent date
-            document.querySelectorAll('.threat-card, .flight-lf-header, .date-header').forEach(element => {
-                const parent = element.closest('[data-date]');
-                if (parent) {
-                    const parentDate = parent.dataset.date;
-                    element.style.display = (showAll || selectedDates.has(parentDate)) ? '' : 'none';
-                }
-            });
+            // Use unified filter (considers both date AND threat level)
+            applyAllFilters();
         }
 
         function updateFilterButton() {
@@ -25333,6 +25315,42 @@
 
         // Filter by threat level
         let activeLevel = null;
+        // UNIFIED FILTER: Applies both threat level AND date filters together
+        function applyAllFilters() {
+            const allDays = document.querySelectorAll('#dateFilterList .filter-tree-day').length;
+            const showAllDates = selectedDates.size === 0 || selectedDates.size === allDays;
+
+            // Filter threat cards
+            document.querySelectorAll('.threat-card').forEach(card => {
+                const parent = card.closest('[data-date]');
+                const cardDate = parent ? parent.dataset.date : null;
+
+                // Check threat level filter
+                const matchesLevel = !activeLevel || card.classList.contains(activeLevel);
+
+                // Check date filter
+                const matchesDate = showAllDates || (cardDate && selectedDates.has(cardDate));
+
+                // Show only if BOTH filters match
+                card.style.display = (matchesLevel && matchesDate) ? '' : 'none';
+            });
+
+            // Hide date sections with no visible threat cards
+            document.querySelectorAll('[data-date]').forEach(dateSection => {
+                const sectionDate = dateSection.dataset.date;
+                const matchesDate = showAllDates || selectedDates.has(sectionDate);
+
+                if (!matchesDate) {
+                    dateSection.style.display = 'none';
+                } else {
+                    // Check if any visible cards in this section
+                    const visibleCards = dateSection.querySelectorAll('.threat-card[style=""], .threat-card:not([style])');
+                    const hasVisibleCards = Array.from(visibleCards).some(c => c.style.display !== 'none');
+                    dateSection.style.display = hasVisibleCards ? '' : 'none';
+                }
+            });
+        }
+
         function filterByLevel(level) {
             const navItems = document.querySelectorAll('.nav-item');
             const statItems = document.querySelectorAll('.stat-item');
@@ -25362,23 +25380,13 @@
                 item.classList.toggle('filtering', isActive);
             });
 
-            // Hide non-matching threat cards
-            document.querySelectorAll('.threat-card').forEach(card => {
-                card.classList.toggle('hidden', !card.classList.contains(level));
-            });
-
-            // Hide date sections with no visible threat cards
-            document.querySelectorAll('[data-date]').forEach(dateSection => {
-                const visibleThreats = dateSection.querySelectorAll('.threat-card:not(.hidden)');
-                dateSection.classList.toggle('hidden', visibleThreats.length === 0);
-            });
+            // Apply unified filter (considers both level AND date)
+            applyAllFilters();
         }
 
         function showAll() {
             activeLevel = null;
             setThreatOverlay(null);
-            document.querySelectorAll('.threat-card').forEach(card => card.classList.remove('hidden'));
-            document.querySelectorAll('[data-date]').forEach(section => section.classList.remove('hidden'));
             // Restore original order
             sortDateSectionsByThreat(null);
             document.querySelectorAll('.nav-item').forEach(item => {
@@ -25389,6 +25397,8 @@
                 item.classList.remove('active');
                 item.classList.remove('filtering');
             });
+            // Apply unified filter (will show all since activeLevel is null)
+            applyAllFilters();
         }
 
         // Scroll Navigation with dual functionality
