@@ -1633,9 +1633,13 @@
                     show = false;
                 }
 
-                // Threat filter
-                if (currentThreatFilter && threatLevel !== currentThreatFilter) {
-                    show = false;
+                // Threat filter - show routes that have ANY threats of selected level
+                if (currentThreatFilter) {
+                    const miniSphere = card.querySelector(`.mini-sphere.${currentThreatFilter.toLowerCase()}`);
+                    const threatCount = miniSphere ? parseInt(miniSphere.textContent) || 0 : 0;
+                    if (threatCount === 0) {
+                        show = false;
+                    }
                 }
 
                 // Direction filter
