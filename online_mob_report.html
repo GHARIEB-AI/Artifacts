@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="report-generated" content="2026-01-11T01:17:00">
-    <meta name="report-version" content="20260111011700">
+    <meta name="report-generated" content="2026-01-11T01:17:28.902650">
+    <meta name="report-version" content="20260111061601">
     <title>Threat Alert Report - Routes</title>
     <style>
         * {
@@ -128,12 +128,12 @@
             flex-direction: column;
             align-items: center;
             cursor: pointer;
-            min-width: 70px;
+            min-width: 140px;
         }
 
         .sphere {
-            width: 75px;
-            height: 75px;
+            width: 150px;
+            height: 150px;
             margin-bottom: 8px;
             position: relative;
             border-radius: 50%;
@@ -396,8 +396,8 @@
         }
 
         .mini-sphere {
-            width: 36px;
-            height: 36px;
+            width: 72px;
+            height: 72px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -515,8 +515,8 @@
         <div class="header-text">
             <h1><span class="ar-text">رصد حركة الاسعار ✈️</span><span class="en-text">Threat Alert Report ✈️</span></h1>
             <div class="header-meta">
-                <div class="subtitle"><span class="ar-text">الفترة: 11JAN26 - 28FEB26</span><span class="en-text">Range: 11JAN26 - 28FEB26</span></div>
-                <div class="generated"><span class="ar-text">تم الإنشاء:</span><span class="en-text">Generated:</span> 2026-01-11 01:17</div>
+                <div class="subtitle">Range: FROM 11JAN26 TO 28FEB26</div>
+                <div class="generated"><span class="ar-text">تم الإنشاء:</span><span class="en-text">Generated:</span> 11JAN26 AT 01:17</div>
             </div>
         </div>
     </header>
@@ -526,22 +526,22 @@
         <span class="en-text">THREAT ALERT</span>
     </div>
     <div class="stats-section" id="statsSection"
-         data-all-low="1646" data-all-medium="284" data-all-high="784"
+         data-all-low="3292" data-all-medium="568" data-all-high="1568"
          data-egy-low="637" data-egy-medium="92" data-egy-high="446"
          data-ksa-low="1009" data-ksa-medium="192" data-ksa-high="338">
         <div class="stat-sphere low" onclick="filterByThreat('LOW')">
             <div class="sphere"><img src="web_blue.png" alt="Low"></div>
-            <div class="count" id="lowCount">1646</div>
+            <div class="count" id="lowCount">3292</div>
             <div class="label"><span class="ar-text">تهديد منخفض</span><span class="en-text">LOW THREAT</span></div>
         </div>
         <div class="stat-sphere medium" onclick="filterByThreat('MEDIUM')">
             <div class="sphere"><img src="web_yello.png" alt="Medium"></div>
-            <div class="count" id="mediumCount">284</div>
+            <div class="count" id="mediumCount">568</div>
             <div class="label"><span class="ar-text">تهديد متوسط</span><span class="en-text">MEDIUM THREAT</span></div>
         </div>
         <div class="stat-sphere high" onclick="filterByThreat('HIGH')">
             <div class="sphere"><img src="web_red.png" alt="High"></div>
-            <div class="count" id="highCount">784</div>
+            <div class="count" id="highCount">1568</div>
             <div class="label"><span class="ar-text">تهديد عالي</span><span class="en-text">HIGH THREAT</span></div>
         </div>
     </div>
@@ -1262,6 +1262,32 @@
             <span class="ar-text">اجمالي التهديدات: </span>
             <span class="en-text">threats </span>
             <strong>34</strong>
+        </div>
+    </a>
+    
+    <a href="routes/_total.html" class="route-card" data-route="_total" data-threat="HIGH" data-direction="">
+        <div class="route-card-header">
+            <span class="plane-icon">✈️</span>
+            <span class="route-card-name">_total</span>
+        </div>
+        <div class="route-stats-row">
+            <div class="mini-stat low">
+                <div class="mini-sphere low">1646</div>
+                <span class="mini-stat-label"><span class="ar-text">منخفض</span><span class="en-text">Low</span></span>
+            </div>
+            <div class="mini-stat medium">
+                <div class="mini-sphere medium">284</div>
+                <span class="mini-stat-label"><span class="ar-text">متوسط</span><span class="en-text">Med</span></span>
+            </div>
+            <div class="mini-stat high">
+                <div class="mini-sphere high">784</div>
+                <span class="mini-stat-label"><span class="ar-text">عالي</span><span class="en-text">High</span></span>
+            </div>
+        </div>
+        <div class="route-total">
+            <span class="ar-text">اجمالي التهديدات: </span>
+            <span class="en-text">threats </span>
+            <strong>2714</strong>
         </div>
     </a>
     
