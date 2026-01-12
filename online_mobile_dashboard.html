@@ -626,7 +626,9 @@
     </div>
 
     <script>
-        const API_BASE = 'https://fix-investigated-poems-metres.trycloudflare.com';
+        // JSON-only mode: Read from static dashboard_status.json file
+        const JSON_ONLY_MODE = true;
+        const API_BASE = window.location.origin;
         let lastData = null;
         let lastRunData = null;
         let isOnline = false;
@@ -775,6 +777,39 @@
         }
 
         async function fetchStatus() {
+            // JSON-only mode: Read directly from static file
+            if (JSON_ONLY_MODE) {
+                try {
+                    const response = await fetch('dashboard_status.json?t=' + Date.now(), {
+                        cache: 'no-store'
+                    });
+                    if (response.ok) {
+                        const data = await response.json();
+                        lastData = data;
+                        lastRunData = data;
+                        updateDashboard(data);
+
+                        const statusBadge = document.getElementById('status-badge');
+                        if (data.running) {
+                            statusBadge.textContent = 'LIVE';
+                            statusBadge.className = 'status-badge running';
+                        } else if (data.status === 'COMPLETED') {
+                            statusBadge.textContent = 'COMPLETED';
+                            statusBadge.className = 'status-badge completed';
+                        } else {
+                            statusBadge.textContent = 'DATA LOADED';
+                            statusBadge.className = 'status-badge completed';
+                        }
+                    }
+                } catch (e) {
+                    console.error('JSON fetch error:', e);
+                    document.getElementById('status-badge').textContent = 'NO DATA';
+                    document.getElementById('status-badge').className = 'status-badge no_data';
+                }
+                return;
+            }
+
+            // Live API mode (not used in JSON-only mode)
             try {
                 const controller = new AbortController();
                 const timeoutId = setTimeout(() => controller.abort(), 5000);
@@ -814,12 +849,10 @@
         });
 
         // Initial load
-        loadCachedData().then(() => {
-            fetchStatus();
-        });
+        fetchStatus();
 
-        // Auto refresh every 5 seconds (slightly longer for mobile battery)
-        setInterval(fetchStatus, 5000);
+        // Auto refresh every 30 seconds (JSON file doesn't change frequently)
+        setInterval(fetchStatus, 30000);
     </script>
 </body>
 </html>

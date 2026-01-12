@@ -1561,26 +1561,10 @@
         // Base URL for API calls:
         // - Local server: falls back to window.location.origin
         // - GitHub Pages: injected at runtime into the template placeholder
-        const API_BASE_OVERRIDE = 'https://fix-investigated-poems-metres.trycloudflare.com';
-        const API_BASE = (() => {
-            try {
-                if (API_BASE_OVERRIDE && !API_BASE_OVERRIDE.startsWith('__')) {
-                    return API_BASE_OVERRIDE.replace(/\/$/, '');
-                }
-
-                const params = new URLSearchParams(window.location.search);
-                const override = params.get('api');
-                if (override) return override.replace(/\/$/, '');
-            } catch (e) {
-                // Ignore parsing errors and fall back to location-based base URL.
-            }
-
-            const loc = window.location;
-            if (loc.protocol === 'file:' || !loc.origin || loc.origin === 'null') {
-                return 'http://localhost:8081';
-            }
-            return loc.origin;
-        })();
+        // JSON-only mode: Read from static dashboard_status.json file
+        // No live API connection needed - data is synced automatically from local runs
+        const JSON_ONLY_MODE = true;
+        const API_BASE = window.location.origin;
 
         // ========== LIVE DATA STREAM - REAL DATA ==========
 
@@ -2462,8 +2446,42 @@
         }
 
         async function fetchStatus() {
+            // JSON-only mode: Read directly from static file, no API needed
+            if (JSON_ONLY_MODE) {
+                try {
+                    const response = await fetch('dashboard_status.json?t=' + Date.now(), {
+                        cache: 'no-store'
+                    });
+                    if (response.ok) {
+                        const data = await response.json();
+                        lastData = data;
+                        lastRunData = data;
+                        updateDashboard(data);
+                        updateRealFlights();
+
+                        // Show status based on data
+                        const statusBadge = document.getElementById('status-badge');
+                        if (data.running) {
+                            statusBadge.textContent = 'LIVE';
+                            statusBadge.className = 'status-badge running';
+                        } else if (data.status === 'COMPLETED') {
+                            statusBadge.textContent = 'COMPLETED';
+                            statusBadge.className = 'status-badge completed';
+                        } else {
+                            statusBadge.textContent = 'DATA LOADED';
+                            statusBadge.className = 'status-badge completed';
+                        }
+                    }
+                } catch (e) {
+                    console.error('JSON fetch error:', e);
+                    document.getElementById('status-badge').textContent = 'NO DATA';
+                    document.getElementById('status-badge').className = 'status-badge no_data';
+                }
+                return;
+            }
+
+            // Live API mode (not used in JSON-only mode)
             try {
-                // Use AbortController for 5-second timeout to fail fast when tunnel is dead
                 const controller = new AbortController();
                 const timeoutId = setTimeout(() => controller.abort(), 5000);
 
@@ -2477,18 +2495,15 @@
                 isOnline = true;
                 lastData = data;
                 updateDashboard(data);
-                updateRealFlights();  // Update data stream with live data
+                updateRealFlights();
             } catch (e) {
                 console.error('Fetch error:', e);
                 isOnline = false;
 
-                // If we have cached data from last run, use it
                 if (lastRunData) {
                     lastData = lastRunData;
                     updateDashboard(lastRunData);
                     updateRealFlights();
-
-                    // Show it's from cached/last run data
                     document.getElementById('status-badge').textContent = 'LAST RUN';
                     document.getElementById('status-badge').className = 'status-badge completed';
                 } else {
@@ -2498,11 +2513,9 @@
             }
         }
 
-        // Initial load: First load cached data, then try live API
-        loadCachedData().then(() => {
-            fetchStatus();
-        });
-        setInterval(fetchStatus, 3000);  // Update every 3 seconds
+        // Initial load
+        fetchStatus();
+        setInterval(fetchStatus, 30000);  // Update every 30 seconds (JSON file doesn't change frequently)
     </script>
 </body>
 </html>
