@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive | Air Cairo Reports</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', 'Cairo', Arial, sans-serif;
+            background: linear-gradient(135deg, #462B73 0%, #2d1a4a 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 30px;
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(70, 43, 115, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(247, 148, 29, 0.3);
+        }
+        .logo {
+            font-size: 36px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+        .logo .white { color: #fff; }
+        .logo .orange { color: #F7941D; }
+        .header h1 {
+            color: #F7941D;
+            font-size: 28px;
+            margin-bottom: 10px;
+            margin-top: 15px;
+        }
+        .header p { color: rgba(100, 220, 255, 0.8); font-size: 14px; }
+        .btn-container {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .back-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #F7941D 0%, #ff6b00 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(247, 148, 29, 0.4);
+        }
+        .back-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 25px rgba(247, 148, 29, 0.6);
+        }
+        .empty-msg {
+            text-align: center;
+            color: rgba(100, 220, 255, 0.6);
+            padding: 50px;
+            font-size: 18px;
+            background: rgba(70, 43, 115, 0.3);
+            border-radius: 15px;
+            border: 1px dashed rgba(100, 220, 255, 0.3);
+        }
+        .empty-msg .icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <span class="white">Air</span><span class="orange">Cairo</span>
+            </div>
+            <h1>Reports Archive</h1>
+            <p>Previous threat alert reports</p>
+        </div>
+
+        <div class="btn-container">
+            <a href="../" class="back-btn">GATE</a>
+        </div>
+
+        <div class="empty-msg">
+            <div class="icon">📁</div>
+            <p>No archived reports yet</p>
+            <p style="font-size: 14px; margin-top: 10px;">Reports will appear here after each run</p>
+        </div>
+    </div>
+</body>
+</html>
