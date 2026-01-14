@@ -1103,16 +1103,28 @@
         var currentFilter = null;
         function filterByLevel(level) {
             var items = document.querySelectorAll('.stat-item');
+            var navItems = document.querySelectorAll('.bottom-nav .nav-item');
             var cards = document.querySelectorAll('.threat-card');
 
             if (currentFilter === level) {
                 currentFilter = null;
                 items.forEach(i => i.classList.remove('active'));
+                navItems.forEach(n => n.classList.remove('active'));
                 cards.forEach(c => c.style.display = 'block');
             } else {
                 currentFilter = level;
                 items.forEach(i => i.classList.remove('active'));
-                event.currentTarget.classList.add('active');
+                var targetStat = document.querySelector('.stat-item.' + level);
+                if (targetStat) targetStat.classList.add('active');
+                navItems.forEach(n => n.classList.remove('active'));
+                navItems.forEach(n => {
+                    var icon = n.querySelector('.nav-icon');
+                    if (icon && ((level === 'high' && icon.textContent.includes('🔴')) ||
+                        (level === 'medium' && icon.textContent.includes('🟡')) ||
+                        (level === 'low' && icon.textContent.includes('🔵')))) {
+                        n.classList.add('active');
+                    }
+                });
                 cards.forEach(c => {
                     c.style.display = c.classList.contains(level) ? 'block' : 'none';
                 });
