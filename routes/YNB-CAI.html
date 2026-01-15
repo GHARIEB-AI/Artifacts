@@ -834,11 +834,21 @@
         }
 
         .filter-month-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
             font-size: 0.95em;
             font-weight: 600;
             color: #666;
             padding: 8px 0 5px;
             margin-top: 5px;
+            cursor: pointer;
+        }
+
+        .filter-month-header input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            accent-color: #462B73;
         }
 
         .filter-dates-grid {
@@ -6479,7 +6489,7 @@
             </div>
             <div class="filter-modal-body" id="dateFilterBody">
                 <div class="filter-year-header">2026</div>
-<div class="filter-month-header">January</div>
+<label class="filter-month-header"><input type="checkbox" data-month="2026-01" checked><span>January</span></label>
 <div class="filter-dates-grid">
 <label class="filter-date-item"><input type="checkbox" data-date="2026-01-15" checked><span>15 Jan</span></label>
 <label class="filter-date-item"><input type="checkbox" data-date="2026-01-20" checked><span>20 Jan</span></label>
@@ -6487,7 +6497,7 @@
 <label class="filter-date-item"><input type="checkbox" data-date="2026-01-22" checked><span>22 Jan</span></label>
 <label class="filter-date-item"><input type="checkbox" data-date="2026-01-25" checked><span>25 Jan</span></label>
 </div>
-<div class="filter-month-header">February</div>
+<label class="filter-month-header"><input type="checkbox" data-month="2026-02" checked><span>February</span></label>
 <div class="filter-dates-grid">
 <label class="filter-date-item"><input type="checkbox" data-date="2026-02-08" checked><span>08 Feb</span></label>
 <label class="filter-date-item"><input type="checkbox" data-date="2026-02-09" checked><span>09 Feb</span></label>
@@ -6760,16 +6770,52 @@
                     } else {
                         selectedDates.delete(this.dataset.date);
                     }
+                    updateMonthCheckboxState(this.dataset.date.substring(0, 7));
                     applyDateFilter();
                 });
             });
         })();
+
+        // Initialize month checkboxes
+        (function initMonthFilter() {
+            var monthCheckboxes = document.querySelectorAll('#dateFilterBody input[type="checkbox"][data-month]');
+            monthCheckboxes.forEach(function(mcb) {
+                mcb.addEventListener('change', function() {
+                    var monthKey = this.dataset.month;
+                    var dateCheckboxes = document.querySelectorAll('#dateFilterBody input[type="checkbox"][data-date^="' + monthKey + '"]');
+                    dateCheckboxes.forEach(function(dcb) {
+                        dcb.checked = mcb.checked;
+                        if (mcb.checked) {
+                            selectedDates.add(dcb.dataset.date);
+                        } else {
+                            selectedDates.delete(dcb.dataset.date);
+                        }
+                    });
+                    applyDateFilter();
+                });
+            });
+        })();
+
+        function updateMonthCheckboxState(monthKey) {
+            var monthCb = document.querySelector('#dateFilterBody input[type="checkbox"][data-month="' + monthKey + '"]');
+            if (!monthCb) return;
+            var dateCheckboxes = document.querySelectorAll('#dateFilterBody input[type="checkbox"][data-date^="' + monthKey + '"]');
+            var allChecked = true;
+            dateCheckboxes.forEach(function(dcb) {
+                if (!dcb.checked) allChecked = false;
+            });
+            monthCb.checked = allChecked;
+        }
 
         function selectAllDates() {
             var checkboxes = document.querySelectorAll('#dateFilterBody input[type="checkbox"][data-date]');
             checkboxes.forEach(function(cb) {
                 cb.checked = true;
                 selectedDates.add(cb.dataset.date);
+            });
+            var monthCheckboxes = document.querySelectorAll('#dateFilterBody input[type="checkbox"][data-month]');
+            monthCheckboxes.forEach(function(mcb) {
+                mcb.checked = true;
             });
             applyDateFilter();
         }
@@ -6779,6 +6825,10 @@
             checkboxes.forEach(function(cb) {
                 cb.checked = false;
                 selectedDates.delete(cb.dataset.date);
+            });
+            var monthCheckboxes = document.querySelectorAll('#dateFilterBody input[type="checkbox"][data-month]');
+            monthCheckboxes.forEach(function(mcb) {
+                mcb.checked = false;
             });
             applyDateFilter();
         }
