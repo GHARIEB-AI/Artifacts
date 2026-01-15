@@ -1,0 +1,522 @@
+
+============================================================
+     LF WORKER - PORT 9232
+============================================================
+Worker: Worker_9232
+Status: READY
+Waiting for tasks...
+============================================================
+
+
+============================================================
+[Worker_9232] Processing: ATZ-TUU
+  Tier 0: Range 1, Chunk 1/5
+  Dates: 7 days
+  Date Range: 2026-01-31 to 2026-01-25
+============================================================
+
+2025-12-30 21:07:33 | INFO     | ======================================================================
+2025-12-30 21:07:33 | INFO     | Load Factor Scraper Started - Route: ATZ-TUU
+2025-12-30 21:07:33 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_301225_at_21.07\logs\LF_ATZ-TUU_20251230_210733.log
+2025-12-30 21:07:33 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-30 21:07:33 | INFO     | ======================================================================
+[LF] Processing dates (override): ['31JAN', '30JAN', '29JAN', '28JAN', '27JAN', '26JAN', '25JAN']
+[LF] Attaching to Chrome for Altea access
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9232 (after 1 attempts)
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+[LF] Processing ATZ-TUU for 31JAN
+[LF][ERROR] Amadeus command error detected: UNKNOWN TRANSACTION
+[LF][ERROR] Command: SN31JANATZTUU/ASM
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+============================================================
+[LF][RESYNC] Command 'SN31JANATZTUU/ASM' failed: TECH_ERROR:UNKNOWN TRANSACTION
+[LF][RESYNC] Re-running entire day from SN command for ATZ-TUU 31JAN
+[LF][RESYNC] Attempt 1/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing ATZ-TUU for 31JAN
+[LF] No direct flights on 31JAN for ATZ-TUU
+[LF] Processing ATZ-TUU for 30JAN
+[LF] 30JAN: found 1 direct flights
+[LF] SM327 30JAN: BKG=8, GRP=0, CAP=179, LF%=4.5%, Brd-Off=ATZ-TUU, Classes: I:4, O:2, X:2
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM327 30JAN: LASTSOLD=2025-12-28 00:00:00, WEEKLY=1, TODAY=0, YDAY=0
+[LF] Processing ATZ-TUU for 29JAN
+[LF] No direct flights on 29JAN for ATZ-TUU
+[LF] Processing ATZ-TUU for 28JAN
+[LF] No direct flights on 28JAN for ATZ-TUU
+[LF] Processing ATZ-TUU for 27JAN
+[LF] No direct flights on 27JAN for ATZ-TUU
+[LF] Processing ATZ-TUU for 26JAN
+[LF] No direct flights on 26JAN for ATZ-TUU
+[LF] Processing ATZ-TUU for 25JAN
+[LF] No direct flights on 25JAN for ATZ-TUU
+[LF] Results summary:
+  2026-01-31: 0 flights
+  2026-01-30: 1 flights
+  2026-01-29: 0 flights
+  2026-01-28: 0 flights
+  2026-01-27: 0 flights
+  2026-01-26: 0 flights
+  2026-01-25: 0 flights
+
+============================================================
+[Worker_9232] ✓ COMPLETED: ATZ-TUU
+  Results: 7 dates
+  Errors: 0 dates
+  Total Processed: 1 groups
+============================================================
+
+
+============================================================
+[Worker_9232] Processing: CAI-JED
+  Tier 0: Range 1, Chunk 2/5
+  Dates: 7 days
+  Date Range: 2026-01-24 to 2026-01-18
+============================================================
+
+2025-12-30 21:07:59 | INFO     | ======================================================================
+2025-12-30 21:07:59 | INFO     | Load Factor Scraper Started - Route: CAI-JED
+2025-12-30 21:07:59 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_301225_at_21.07\logs\LF_CAI-JED_20251230_210759.log
+2025-12-30 21:07:59 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-30 21:07:59 | INFO     | ======================================================================
+[LF] Processing dates (override): ['24JAN', '23JAN', '22JAN', '21JAN', '20JAN', '19JAN', '18JAN']
+[LF] Attaching to Chrome for Altea access
+2025-12-30 21:07:59 | INFO     | Starting LF search for route: CAI-JED
+2025-12-30 21:07:59 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9232 (after 1 attempts)
+2025-12-30 21:07:59 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+2025-12-30 21:08:00 | INFO     | [DAY_START] Processing 24JAN
+[LF] Processing CAI-JED for 24JAN
+2025-12-30 21:08:00 | INFO     | [lf.day.start] Processing CAI-JED for 24JAN
+[LF] 24JAN: found 4 direct flights
+2025-12-30 21:08:01 | INFO     | [lf.day.flights_found] Found 4 flights on 24JAN
+2025-12-30 21:08:02 | INFO     | [lf.flight.extracted] SM449 on 24JAN: BKG=166, LF=92.7%
+[LF] SM449 24JAN: BKG=166, GRP=135, CAP=179, LF%=92.7%, Brd-Off=CAI-JED, Classes: P:135, I:9, X:5, T:7, W:10
+2025-12-30 21:08:06 | INFO     | [lf.flight.extracted] SM475 on 24JAN: BKG=174, LF=97.2%
+[LF] SM475 24JAN: BKG=174, GRP=135, CAP=179, LF%=97.2%, Brd-Off=CAI-JED, Classes: P:135, I:10, X:3, T:19, W:6, K:1
+2025-12-30 21:08:09 | INFO     | [lf.flight.extracted] SM477 on 24JAN: BKG=179, LF=100.0%
+[LF] SM477 24JAN: BKG=179, GRP=135, CAP=179, LF%=100.0%, Brd-Off=CAI-JED, Classes: P:135, U:6, X:7, T:16, W:8, L:7
+2025-12-30 21:08:12 | INFO     | [lf.flight.extracted] SM423 on 24JAN: BKG=179, LF=100.0%
+[LF] SM423 24JAN: BKG=179, GRP=135, CAP=179, LF%=100.0%, Brd-Off=CAI-JED, Classes: P:135, I:9, O:7, U:8, X:5, T:9, W:5, S:1
+[LF] Getting WEEKLY/LASTSOLD data for 4 flights
+[LF] SM449 24JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=16, TODAY=3, YDAY=13
+[LF] SM475 24JAN: LASTSOLD=2025-12-29 00:00:00, WEEKLY=9, TODAY=0, YDAY=6
+[LF] SM477 24JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=12, TODAY=1, YDAY=1
+[LF] SM423 24JAN: LASTSOLD=2025-12-28 00:00:00, WEEKLY=5, TODAY=0, YDAY=0
+2025-12-30 21:08:26 | INFO     | [SUCCESS] Day 24JAN
+2025-12-30 21:08:26 | INFO     | [DAY_START] Processing 23JAN
+[LF] Processing CAI-JED for 23JAN
+2025-12-30 21:08:26 | INFO     | [lf.day.start] Processing CAI-JED for 23JAN
+[LF] 23JAN: found 5 direct flights
+2025-12-30 21:08:27 | INFO     | [lf.day.flights_found] Found 5 flights on 23JAN
+2025-12-30 21:08:29 | INFO     | [lf.flight.extracted] SM475 on 23JAN: BKG=178, LF=99.4%
+[LF] SM475 23JAN: BKG=178, GRP=135, CAP=179, LF%=99.4%, Brd-Off=CAI-JED, Classes: P:135, I:8, X:5, T:15, W:11, L:4
+2025-12-30 21:08:32 | INFO     | [lf.flight.extracted] SM477 on 23JAN: BKG=178, LF=99.4%
+[LF] SM477 23JAN: BKG=178, GRP=135, CAP=179, LF%=99.4%, Brd-Off=CAI-JED, Classes: P:135, I:5, U:1, X:7, T:16, W:12, S:2
+2025-12-30 21:08:36 | INFO     | [lf.flight.extracted] SM479 on 23JAN: BKG=97, LF=54.2%
+[LF] SM479 23JAN: BKG=97, GRP=45, CAP=179, LF%=54.2%, Brd-Off=CAI-JED, Classes: P:45, I:10, X:3, T:28, W:9, S:1, K:1
+2025-12-30 21:08:39 | INFO     | [lf.flight.extracted] SM471 on 23JAN: BKG=138, LF=77.1%
+[LF] SM471 23JAN: BKG=138, GRP=90, CAP=179, LF%=77.1%, Brd-Off=CAI-JED, Classes: P:90, I:9, X:4, T:23, W:11, S:1
+2025-12-30 21:08:42 | INFO     | [lf.flight.extracted] SM459 on 23JAN: BKG=64, LF=35.8%
+[LF] SM459 23JAN: BKG=64, GRP=0, CAP=179, LF%=35.8%, Brd-Off=CAI-JED, Classes: I:7, X:3, T:26, W:8, S:7, L:13
+[LF] Getting WEEKLY/LASTSOLD data for 5 flights
+[LF] SM475 23JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=14, TODAY=1, YDAY=3
+[LF] SM477 23JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=19, TODAY=2, YDAY=11
+[LF] SM479 23JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=23, TODAY=11, YDAY=9
+[LF] SM471 23JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=19, TODAY=6, YDAY=6
+[LF] SM459 23JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=25, TODAY=8, YDAY=6
+2025-12-30 21:09:00 | INFO     | [SUCCESS] Day 23JAN
+2025-12-30 21:09:00 | INFO     | [DAY_START] Processing 22JAN
+[LF] Processing CAI-JED for 22JAN
+2025-12-30 21:09:00 | INFO     | [lf.day.start] Processing CAI-JED for 22JAN
+[LF] 22JAN: found 7 direct flights
+2025-12-30 21:09:01 | INFO     | [lf.day.flights_found] Found 7 flights on 22JAN
+2025-12-30 21:09:03 | INFO     | [lf.flight.extracted] SM449 on 22JAN: BKG=80, LF=44.7%
+[LF] SM449 22JAN: BKG=80, GRP=45, CAP=179, LF%=44.7%, Brd-Off=CAI-JED, Classes: P:45, U:6, X:21, T:2, W:6
+2025-12-30 21:09:06 | INFO     | [lf.flight.extracted] SM475 on 22JAN: BKG=159, LF=88.8%
+[LF] SM475 22JAN: BKG=159, GRP=130, CAP=179, LF%=88.8%, Brd-Off=CAI-JED, Classes: P:130, U:7, X:18, T:3, W:1
+2025-12-30 21:09:09 | INFO     | [lf.flight.extracted] SM961 on 22JAN: BKG=147, LF=83.5%
+[LF] SM961 22JAN: BKG=147, GRP=135, CAP=176, LF%=83.5%, Brd-Off=CAI-JED, Classes: P:135, U:2, T:10
+2025-12-30 21:09:13 | INFO     | [lf.flight.extracted] SM431 on 22JAN: BKG=168, LF=93.8%
+[LF] SM431 22JAN: BKG=168, GRP=125, CAP=179, LF%=93.8%, Brd-Off=CAI-JED, Classes: N:4, P:125, X:31, T:3, W:3, S:1, K:1
+2025-12-30 21:09:16 | INFO     | [lf.flight.extracted] SM477 on 22JAN: BKG=180, LF=100.6%
+[LF] SM477 22JAN: BKG=180, GRP=143, CAP=179, LF%=100.6%, Brd-Off=CAI-JED, Classes: P:143, U:6, X:7, T:12, S:6, K:6
+2025-12-30 21:09:19 | INFO     | [lf.flight.extracted] SM479 on 22JAN: BKG=151, LF=84.4%
+[LF] SM479 22JAN: BKG=151, GRP=90, CAP=179, LF%=84.4%, Brd-Off=CAI-JED, Classes: P:90, I:9, X:3, T:27, W:18, S:4
+2025-12-30 21:09:22 | INFO     | [lf.flight.extracted] SM423 on 22JAN: BKG=151, LF=84.4%
+[LF] SM423 22JAN: BKG=151, GRP=115, CAP=179, LF%=84.4%, Brd-Off=CAI-JED, Classes: P:90, E:25, I:8, O:1, X:2, T:10, W:4, S:4, G:3, L:4
+[LF] Getting WEEKLY/LASTSOLD data for 7 flights
+[LF] SM449 22JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=23, TODAY=11, YDAY=5
+[LF] SM475 22JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=22, TODAY=6, YDAY=12
+[LF] SM961 22JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=8, TODAY=1, YDAY=0
+[LF] SM431 22JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=23, TODAY=3, YDAY=15
+[LF] SM477 22JAN: LASTSOLD=2025-12-25 00:00:00, WEEKLY=6, TODAY=0, YDAY=0
+[LF] SM479 22JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=31, TODAY=3, YDAY=6
+[LF] SM423 22JAN: LASTSOLD=2025-12-29 00:00:00, WEEKLY=11, TODAY=0, YDAY=10
+2025-12-30 21:09:41 | INFO     | [SUCCESS] Day 22JAN
+2025-12-30 21:09:41 | INFO     | [DAY_START] Processing 21JAN
+[LF] Processing CAI-JED for 21JAN
+2025-12-30 21:09:41 | INFO     | [lf.day.start] Processing CAI-JED for 21JAN
+[LF] 21JAN: found 5 direct flights
+2025-12-30 21:09:42 | INFO     | [lf.day.flights_found] Found 5 flights on 21JAN
+2025-12-30 21:09:44 | INFO     | [lf.flight.extracted] SM423 on 21JAN: BKG=125, LF=69.8%
+[LF] SM423 21JAN: BKG=125, GRP=115, CAP=179, LF%=69.8%, Brd-Off=CAI-JED, Classes: P:90, E:25, U:5, X:2, T:3
+2025-12-30 21:09:47 | INFO     | [lf.flight.extracted] SM475 on 21JAN: BKG=153, LF=85.5%
+[LF] SM475 21JAN: BKG=153, GRP=139, CAP=179, LF%=85.5%, Brd-Off=CAI-JED, Classes: P:94, E:45, U:5, X:7, W:2
+2025-12-30 21:09:50 | INFO     | [lf.flight.extracted] SM459 on 21JAN: BKG=155, LF=86.6%
+[LF] SM459 21JAN: BKG=155, GRP=135, CAP=179, LF%=86.6%, Brd-Off=CAI-JED, Classes: P:135, U:6, X:14
+2025-12-30 21:09:53 | INFO     | [lf.flight.extracted] SM477 on 21JAN: BKG=167, LF=93.3%
+[LF] SM477 21JAN: BKG=167, GRP=135, CAP=179, LF%=93.3%, Brd-Off=CAI-JED, Classes: P:135, U:6, X:20, T:6
+2025-12-30 21:09:56 | INFO     | [lf.flight.extracted] SM471 on 21JAN: BKG=177, LF=98.9%
+[LF] SM471 21JAN: BKG=177, GRP=135, CAP=179, LF%=98.9%, Brd-Off=CAI-JED, Classes: P:135, U:6, X:33, S:3
+[LF] Getting WEEKLY/LASTSOLD data for 5 flights
+[LF] SM423 21JAN: LASTSOLD=2025-12-28 00:00:00, WEEKLY=3, TODAY=0, YDAY=0
+[LF] SM475 21JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=6, TODAY=1, YDAY=3
+[LF] SM459 21JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=8, TODAY=5, YDAY=0
+[LF] SM477 21JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=11, TODAY=2, YDAY=6
+[LF] SM471 21JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=23, TODAY=9, YDAY=8
+2025-12-30 21:10:09 | INFO     | [SUCCESS] Day 21JAN
+2025-12-30 21:10:09 | INFO     | [DAY_START] Processing 20JAN
+[LF] Processing CAI-JED for 20JAN
+2025-12-30 21:10:09 | INFO     | [lf.day.start] Processing CAI-JED for 20JAN
+[LF] 20JAN: found 7 direct flights
+2025-12-30 21:10:09 | INFO     | [lf.day.flights_found] Found 7 flights on 20JAN
+2025-12-30 21:10:11 | INFO     | [lf.flight.extracted] SM471 on 20JAN: BKG=151, LF=84.4%
+[LF] SM471 20JAN: BKG=151, GRP=135, CAP=179, LF%=84.4%, Brd-Off=CAI-JED, Classes: P:45, E:90, U:3, X:10, T:1, S:2
+2025-12-30 21:10:15 | INFO     | [lf.flight.extracted] SM953 on 20JAN: BKG=124, LF=69.3%
+[LF] SM953 20JAN: BKG=124, GRP=90, CAP=179, LF%=69.3%, Brd-Off=CAI-JED, Classes: P:90, I:15, O:14, X:5
+2025-12-30 21:10:18 | INFO     | [lf.flight.extracted] SM479 on 20JAN: BKG=144, LF=81.8%
+[LF] SM479 20JAN: BKG=144, GRP=135, CAP=176, LF%=81.8%, Brd-Off=CAI-JED, Classes: P:135, U:6, X:3
+2025-12-30 21:10:21 | INFO     | [lf.flight.extracted] SM477 on 20JAN: BKG=150, LF=83.8%
+[LF] SM477 20JAN: BKG=150, GRP=140, CAP=179, LF%=83.8%, Brd-Off=CAI-JED, Classes: P:140, U:6, X:4
+2025-12-30 21:10:25 | INFO     | [lf.flight.extracted] SM459 on 20JAN: BKG=173, LF=96.1%
+[LF] SM459 20JAN: BKG=173, GRP=135, CAP=180, LF%=96.1%, Brd-Off=CAI-JED, Classes: P:135, U:6, X:31, S:1
+2025-12-30 21:10:28 | INFO     | [lf.flight.extracted] SM423 on 20JAN: BKG=155, LF=86.6%
+[LF] SM423 20JAN: BKG=155, GRP=135, CAP=179, LF%=86.6%, Brd-Off=CAI-JED, Classes: P:135, U:5, X:6, T:4, S:5
+2025-12-30 21:10:32 | INFO     | [lf.flight.extracted] SM475 on 20JAN: BKG=136, LF=76.0%
+[LF] SM475 20JAN: BKG=136, GRP=90, CAP=179, LF%=76.0%, Brd-Off=CAI-JED, Classes: P:90, U:4, X:37, T:5
+[LF] Getting WEEKLY/LASTSOLD data for 7 flights
+[LF] SM471 20JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=11, TODAY=7, YDAY=2
+[LF] SM953 20JAN: LASTSOLD=2025-12-25 00:00:00, WEEKLY=2, TODAY=0, YDAY=0
+[LF] SM479 20JAN: LASTSOLD=2025-12-24 00:00:00, WEEKLY=2, TODAY=0, YDAY=0
+[LF] SM477 20JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=2, TODAY=1, YDAY=0
+[LF] SM459 20JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=21, TODAY=15, YDAY=0
+2025-12-30 21:10:45 | ERROR    | Atomic write failed for D:\CODERED\LAB\market_insights\outputs\run_generated_301225_at_21.07\checkpoints\flight_booking_data.json: [WinError 2] The system cannot find the file specified: 'D:\\CODERED\\LAB\\market_insights\\outputs\\run_generated_301225_at_21.07\\checkpoints\\flight_booking_data.json'
+[LF] SM423 20JAN: LASTSOLD=2025-12-27 00:00:00, WEEKLY=4, TODAY=0, YDAY=0
+[LF] SM475 20JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=38, TODAY=8, YDAY=13
+2025-12-30 21:10:52 | INFO     | [SUCCESS] Day 20JAN
+2025-12-30 21:10:52 | INFO     | [DAY_START] Processing 19JAN
+[LF] Processing CAI-JED for 19JAN
+2025-12-30 21:10:52 | INFO     | [lf.day.start] Processing CAI-JED for 19JAN
+[LF] 19JAN: found 3 direct flights
+2025-12-30 21:10:54 | INFO     | [lf.day.flights_found] Found 3 flights on 19JAN
+2025-12-30 21:10:56 | INFO     | [lf.flight.extracted] SM475 on 19JAN: BKG=179, LF=100.0%
+[LF] SM475 19JAN: BKG=179, GRP=140, CAP=179, LF%=100.0%, Brd-Off=CAI-JED, Classes: P:140, U:6, X:26, T:7
+2025-12-30 21:11:00 | INFO     | [lf.flight.extracted] SM477 on 19JAN: BKG=173, LF=96.7%
+[LF] SM477 19JAN: BKG=173, GRP=135, CAP=179, LF%=96.7%, Brd-Off=CAI-JED, Classes: P:135, U:6, X:29, T:1, G:2
+2025-12-30 21:11:04 | INFO     | [lf.flight.extracted] SM459 on 19JAN: BKG=179, LF=100.0%
+[LF] SM459 19JAN: BKG=179, GRP=135, CAP=179, LF%=100.0%, Brd-Off=CAI-JED, Classes: P:135, U:8, X:26, T:6, L:4
+[LF] Getting WEEKLY/LASTSOLD data for 3 flights
+[LF] SM475 19JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=11, TODAY=2, YDAY=4
+[LF] SM477 19JAN: LASTSOLD=2025-12-29 00:00:00, WEEKLY=11, TODAY=0, YDAY=4
+[LF] SM459 19JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=18, TODAY=6, YDAY=6
+2025-12-30 21:11:17 | INFO     | [SUCCESS] Day 19JAN
+2025-12-30 21:11:17 | INFO     | [DAY_START] Processing 18JAN
+[LF] Processing CAI-JED for 18JAN
+2025-12-30 21:11:17 | INFO     | [lf.day.start] Processing CAI-JED for 18JAN
+[LF] 18JAN: found 5 direct flights
+2025-12-30 21:11:18 | INFO     | [lf.day.flights_found] Found 5 flights on 18JAN
+2025-12-30 21:11:20 | INFO     | [lf.flight.extracted] SM475 on 18JAN: BKG=178, LF=99.4%
+[LF] SM475 18JAN: BKG=178, GRP=135, CAP=179, LF%=99.4%, Brd-Off=CAI-JED, Classes: P:135, U:8, X:12, T:13, W:7, S:3
+2025-12-30 21:11:23 | INFO     | [lf.flight.extracted] SM431 on 18JAN: BKG=165, LF=92.2%
+[LF] SM431 18JAN: BKG=165, GRP=90, CAP=179, LF%=92.2%, Brd-Off=CAI-JED, Classes: P:90, I:9, O:9, U:8, X:29, T:13, W:6, S:1
+2025-12-30 21:11:27 | INFO     | [lf.flight.extracted] SM459 on 18JAN: BKG=178, LF=99.4%
+[LF] SM459 18JAN: BKG=178, GRP=139, CAP=179, LF%=99.4%, Brd-Off=CAI-JED, Classes: P:139, U:6, X:20, T:6, W:7
+2025-12-30 21:11:30 | INFO     | [lf.flight.extracted] SM477 on 18JAN: BKG=179, LF=100.0%
+[LF] SM477 18JAN: BKG=179, GRP=135, CAP=179, LF%=100.0%, Brd-Off=CAI-JED, Classes: P:135, U:8, X:17, T:14, W:5
+2025-12-30 21:11:34 | INFO     | [lf.flight.extracted] SM479 on 18JAN: BKG=179, LF=100.0%
+[LF] SM479 18JAN: BKG=179, GRP=90, CAP=179, LF%=100.0%, Brd-Off=CAI-JED, Classes: P:90, U:6, X:39, T:30, W:14
+[LF] Getting WEEKLY/LASTSOLD data for 5 flights
+[LF] SM475 18JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=14, TODAY=1, YDAY=5
+[LF] SM431 18JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=49, TODAY=11, YDAY=14
+[LF] SM459 18JAN: LASTSOLD=2025-12-29 00:00:00, WEEKLY=21, TODAY=0, YDAY=4
+[LF] SM477 18JAN: LASTSOLD=2025-12-29 00:00:00, WEEKLY=29, TODAY=0, YDAY=2
+[LF] SM479 18JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=51, TODAY=1, YDAY=14
+2025-12-30 21:11:55 | ERROR    | Failed to load D:\CODERED\LAB\market_insights\outputs\run_generated_301225_at_21.07\checkpoints\flight_booking_data.json: Extra data: line 287 column 1 (char 7168)
+2025-12-30 21:11:55 | INFO     | [SUCCESS] Day 18JAN
+[LF] Results summary:
+  2026-01-24: 4 flights
+  2026-01-23: 5 flights
+  2026-01-22: 7 flights
+  2026-01-21: 5 flights
+  2026-01-20: 7 flights
+  2026-01-19: 3 flights
+  2026-01-18: 5 flights
+2025-12-30 21:11:55 | INFO     | [SUCCESS] LF Search Complete
+
+============================================================
+[Worker_9232] ✓ COMPLETED: CAI-JED
+  Results: 7 dates
+  Errors: 0 dates
+  Total Processed: 2 groups
+============================================================
+
+2025-12-30 21:11:57 | INFO     | [Worker_9232] Completed: CAI-JED - 7 results, 0 errors
+
+============================================================
+[Worker_9232] Processing: CAI-TUU
+  Tier 0: Range 1, Chunk 4/5
+  Dates: 6 days
+  Date Range: 2026-01-10 to 2026-01-05
+============================================================
+
+2025-12-30 21:11:57 | INFO     | [Worker_9232] Processing: CAI-TUU
+2025-12-30 21:11:57 | INFO     |   Tier 0: Range 1, Chunk 4/5 (6 days)
+2025-12-30 21:11:57 | INFO     | ======================================================================
+2025-12-30 21:11:57 | INFO     | Load Factor Scraper Started - Route: CAI-TUU
+2025-12-30 21:11:57 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_301225_at_21.07\logs\LF_CAI-TUU_20251230_211157.log
+2025-12-30 21:11:57 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-30 21:11:57 | INFO     | ======================================================================
+[LF] Processing dates (override): ['10JAN', '09JAN', '08JAN', '07JAN', '06JAN', '05JAN']
+[LF] Attaching to Chrome for Altea access
+2025-12-30 21:11:57 | INFO     | Starting LF search for route: CAI-TUU
+2025-12-30 21:11:57 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9232 (after 1 attempts)
+2025-12-30 21:11:58 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+2025-12-30 21:11:58 | INFO     | [DAY_START] Processing 10JAN
+[LF] Processing CAI-TUU for 10JAN
+2025-12-30 21:11:58 | INFO     | [lf.day.start] Processing CAI-TUU for 10JAN
+[LF] 10JAN: found 1 direct flights
+2025-12-30 21:11:59 | INFO     | [lf.day.flights_found] Found 1 flights on 10JAN
+2025-12-30 21:12:01 | INFO     | [lf.flight.extracted] SM325 on 10JAN: BKG=43, LF=24.0%
+[LF] SM325 10JAN: BKG=43, GRP=0, CAP=179, LF%=24.0%, Brd-Off=CAI-TUU, Classes: I:27, O:16
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM325 10JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=16, TODAY=3, YDAY=4
+2025-12-30 21:12:05 | INFO     | [SUCCESS] Day 10JAN
+2025-12-30 21:12:05 | INFO     | [DAY_START] Processing 09JAN
+[LF] Processing CAI-TUU for 09JAN
+2025-12-30 21:12:05 | INFO     | [lf.day.start] Processing CAI-TUU for 09JAN
+[LF] No direct flights on 09JAN for CAI-TUU
+2025-12-30 21:12:06 | WARNING  | [lf.day.no_flights] No direct flights on 09JAN
+2025-12-30 21:12:06 | INFO     | [SUCCESS] Day 09JAN
+2025-12-30 21:12:06 | INFO     | [DAY_START] Processing 08JAN
+[LF] Processing CAI-TUU for 08JAN
+2025-12-30 21:12:06 | INFO     | [lf.day.start] Processing CAI-TUU for 08JAN
+[LF] 08JAN: found 1 direct flights
+2025-12-30 21:12:07 | INFO     | [lf.day.flights_found] Found 1 flights on 08JAN
+2025-12-30 21:12:09 | INFO     | [lf.flight.extracted] SM325 on 08JAN: BKG=27, LF=15.1%
+[LF] SM325 08JAN: BKG=27, GRP=0, CAP=179, LF%=15.1%, Brd-Off=CAI-TUU, Classes: I:25, O:2
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM325 08JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=10, TODAY=3, YDAY=2
+2025-12-30 21:12:12 | INFO     | [SUCCESS] Day 08JAN
+2025-12-30 21:12:12 | INFO     | [DAY_START] Processing 07JAN
+[LF] Processing CAI-TUU for 07JAN
+2025-12-30 21:12:12 | INFO     | [lf.day.start] Processing CAI-TUU for 07JAN
+[LF] 07JAN: found 1 direct flights
+2025-12-30 21:12:13 | INFO     | [lf.day.flights_found] Found 1 flights on 07JAN
+2025-12-30 21:12:16 | INFO     | [lf.flight.extracted] SM325 on 07JAN: BKG=37, LF=20.7%
+[LF] SM325 07JAN: BKG=37, GRP=0, CAP=179, LF%=20.7%, Brd-Off=CAI-TUU, Classes: I:27, O:8, T:2
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM325 07JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=25, TODAY=3, YDAY=11
+2025-12-30 21:12:19 | INFO     | [SUCCESS] Day 07JAN
+2025-12-30 21:12:19 | INFO     | [DAY_START] Processing 06JAN
+[LF] Processing CAI-TUU for 06JAN
+2025-12-30 21:12:19 | INFO     | [lf.day.start] Processing CAI-TUU for 06JAN
+[LF] No direct flights on 06JAN for CAI-TUU
+2025-12-30 21:12:20 | WARNING  | [lf.day.no_flights] No direct flights on 06JAN
+2025-12-30 21:12:20 | INFO     | [SUCCESS] Day 06JAN
+2025-12-30 21:12:20 | INFO     | [DAY_START] Processing 05JAN
+[LF] Processing CAI-TUU for 05JAN
+2025-12-30 21:12:20 | INFO     | [lf.day.start] Processing CAI-TUU for 05JAN
+[LF] No direct flights on 05JAN for CAI-TUU
+2025-12-30 21:12:21 | WARNING  | [lf.day.no_flights] No direct flights on 05JAN
+2025-12-30 21:12:21 | INFO     | [SUCCESS] Day 05JAN
+[LF] Results summary:
+  2026-01-10: 1 flights
+  2026-01-09: 0 flights
+  2026-01-08: 1 flights
+  2026-01-07: 1 flights
+  2026-01-06: 0 flights
+  2026-01-05: 0 flights
+2025-12-30 21:12:21 | INFO     | [SUCCESS] LF Search Complete
+
+============================================================
+[Worker_9232] ✓ COMPLETED: CAI-TUU
+  Results: 6 dates
+  Errors: 0 dates
+  Total Processed: 3 groups
+============================================================
+
+2025-12-30 21:12:23 | INFO     | [Worker_9232] Completed: CAI-TUU - 6 results, 0 errors
+
+============================================================
+[Worker_9232] Processing: CAI-JED
+  Tier 0: Range 1, Chunk 5/5
+  Dates: 6 days
+  Date Range: 2026-01-04 to 2025-12-30
+============================================================
+
+2025-12-30 21:12:23 | INFO     | [Worker_9232] Processing: CAI-JED
+2025-12-30 21:12:23 | INFO     |   Tier 0: Range 1, Chunk 5/5 (6 days)
+2025-12-30 21:12:23 | INFO     | ======================================================================
+2025-12-30 21:12:23 | INFO     | Load Factor Scraper Started - Route: CAI-JED
+2025-12-30 21:12:23 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_301225_at_21.07\logs\LF_CAI-JED_20251230_211223.log
+2025-12-30 21:12:23 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-30 21:12:23 | INFO     | ======================================================================
+[LF] Processing dates (override): ['04JAN', '03JAN', '02JAN', '01JAN', '31DEC', '30DEC']
+[LF] Attaching to Chrome for Altea access
+2025-12-30 21:12:23 | INFO     | Starting LF search for route: CAI-JED
+2025-12-30 21:12:23 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9232 (after 1 attempts)
+2025-12-30 21:12:24 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+2025-12-30 21:12:24 | INFO     | [DAY_START] Processing 04JAN
+[LF] Processing CAI-JED for 04JAN
+2025-12-30 21:12:24 | INFO     | [lf.day.start] Processing CAI-JED for 04JAN
+[LF] 04JAN: found 5 direct flights
+2025-12-30 21:12:25 | INFO     | [lf.day.flights_found] Found 5 flights on 04JAN
+2025-12-30 21:12:27 | INFO     | [lf.flight.extracted] SM475 on 04JAN: BKG=32, LF=17.9%
+[LF] SM475 04JAN: BKG=32, GRP=0, CAP=179, LF%=17.9%, Brd-Off=CAI-JED, Classes: I:10, O:7, U:8, X:7
+2025-12-30 21:12:31 | INFO     | [lf.flight.extracted] SM431 on 04JAN: BKG=61, LF=34.1%
+[LF] SM431 04JAN: BKG=61, GRP=40, CAP=179, LF%=34.1%, Brd-Off=CAI-JED, Classes: P:40, I:10, O:2, X:7, S:2
+2025-12-30 21:12:34 | INFO     | [lf.flight.extracted] SM459 on 04JAN: BKG=158, LF=88.3%
+[LF] SM459 04JAN: BKG=158, GRP=124, CAP=179, LF%=88.3%, Brd-Off=CAI-JED, Classes: P:124, I:22, O:9, U:2, X:1
+2025-12-30 21:12:37 | INFO     | [lf.flight.extracted] SM477 on 04JAN: BKG=95, LF=53.1%
+[LF] SM477 04JAN: BKG=95, GRP=45, CAP=179, LF%=53.1%, Brd-Off=CAI-JED, Classes: P:45, I:33, O:13, U:4
+2025-12-30 21:12:41 | INFO     | [lf.flight.extracted] SM479 on 04JAN: BKG=51, LF=28.5%
+[LF] SM479 04JAN: BKG=51, GRP=0, CAP=179, LF%=28.5%, Brd-Off=CAI-JED, Classes: I:25, O:16, U:8, X:2
+[LF] Getting WEEKLY/LASTSOLD data for 5 flights
+[LF] SM475 04JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=18, TODAY=2, YDAY=5
+[LF] SM431 04JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=5, TODAY=1, YDAY=1
+[LF] SM459 04JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=31, TODAY=5, YDAY=14
+[LF] SM477 04JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=45, TODAY=11, YDAY=12
+[LF] SM479 04JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=32, TODAY=5, YDAY=9
+2025-12-30 21:12:58 | INFO     | [SUCCESS] Day 04JAN
+2025-12-30 21:12:58 | INFO     | [DAY_START] Processing 03JAN
+[LF] Processing CAI-JED for 03JAN
+2025-12-30 21:12:58 | INFO     | [lf.day.start] Processing CAI-JED for 03JAN
+[LF] 03JAN: found 4 direct flights
+2025-12-30 21:12:59 | INFO     | [lf.day.flights_found] Found 4 flights on 03JAN
+2025-12-30 21:13:01 | INFO     | [lf.flight.extracted] SM449 on 03JAN: BKG=70, LF=39.1%
+[LF] SM449 03JAN: BKG=70, GRP=45, CAP=179, LF%=39.1%, Brd-Off=CAI-JED, Classes: P:45, I:6, U:7, X:11, S:1
+2025-12-30 21:13:04 | INFO     | [lf.flight.extracted] SM475 on 03JAN: BKG=78, LF=43.6%
+[LF] SM475 03JAN: BKG=78, GRP=45, CAP=179, LF%=43.6%, Brd-Off=CAI-JED, Classes: P:45, I:10, U:20, X:3
+2025-12-30 21:13:08 | INFO     | [lf.flight.extracted] SM477 on 03JAN: BKG=176, LF=98.3%
+[LF] SM477 03JAN: BKG=176, GRP=92, CAP=179, LF%=98.3%, Brd-Off=CAI-JED, Classes: P:45, E:47, I:30, U:22, X:23, T:7, W:1, S:1
+[LPC] SM477 03JAN: Found 1 outbound flights with connecting passengers
+2025-12-30 21:13:12 | INFO     | [lf.flight.extracted] SM423 on 03JAN: BKG=98, LF=54.8%
+[LF] SM423 03JAN: BKG=98, GRP=0, CAP=179, LF%=54.8%, Brd-Off=CAI-JED, Classes: I:38, U:39, X:20, T:1
+[LF] Getting WEEKLY/LASTSOLD data for 4 flights
+[LF] SM449 03JAN: LASTSOLD=2025-12-29 00:00:00, WEEKLY=8, TODAY=0, YDAY=6
+[LF] SM475 03JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=20, TODAY=2, YDAY=8
+[LF] SM477 03JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=51, TODAY=2, YDAY=20
+[LF] SM423 03JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=71, TODAY=24, YDAY=16
+2025-12-30 21:13:28 | INFO     | [SUCCESS] Day 03JAN
+2025-12-30 21:13:28 | INFO     | [DAY_START] Processing 02JAN
+[LF] Processing CAI-JED for 02JAN
+2025-12-30 21:13:28 | INFO     | [lf.day.start] Processing CAI-JED for 02JAN
+[LF] 02JAN: 1 cancelled flight(s) detected from SN
+[LF] 02JAN: found 4 direct flights
+2025-12-30 21:13:29 | INFO     | [lf.day.flights_found] Found 4 flights on 02JAN
+2025-12-30 21:13:31 | INFO     | [lf.flight.extracted] SM475 on 02JAN: BKG=149, LF=83.2%
+[LF] SM475 02JAN: BKG=149, GRP=49, CAP=179, LF%=83.2%, Brd-Off=CAI-JED, Classes: N:2, E:49, I:41, O:16, U:38, X:2, K:1
+2025-12-30 21:13:35 | INFO     | [lf.flight.extracted] SM479 on 02JAN: BKG=50, LF=27.9%
+[LF] SM479 02JAN: BKG=50, GRP=0, CAP=179, LF%=27.9%, Brd-Off=CAI-JED, Classes: I:15, O:7, U:10, X:18
+2025-12-30 21:13:38 | INFO     | [lf.flight.extracted] SM471 on 02JAN: BKG=50, LF=27.9%
+[LF] SM471 02JAN: BKG=50, GRP=0, CAP=179, LF%=27.9%, Brd-Off=CAI-JED, Classes: I:23, O:5, U:15, X:7
+2025-12-30 21:13:42 | INFO     | [lf.flight.extracted] SM459 on 02JAN: BKG=46, LF=25.7%
+[LF] SM459 02JAN: BKG=46, GRP=0, CAP=179, LF%=25.7%, Brd-Off=CAI-JED, Classes: I:12, U:12, X:15, T:6, G:1
+[LF] Getting WEEKLY/LASTSOLD data for 4 flights
+[LF] SM475 02JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=86, TODAY=8, YDAY=38
+[LF] SM479 02JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=14, TODAY=11, YDAY=2
+[LF] SM471 02JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=27, TODAY=11, YDAY=7
+[LF] SM459 02JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=19, TODAY=1, YDAY=12
+2025-12-30 21:13:57 | INFO     | [SUCCESS] Day 02JAN
+2025-12-30 21:13:57 | INFO     | [DAY_START] Processing 01JAN
+[LF] Processing CAI-JED for 01JAN
+2025-12-30 21:13:57 | INFO     | [lf.day.start] Processing CAI-JED for 01JAN
+[LF] 01JAN: 1 cancelled flight(s) detected from SN
+[LF] 01JAN: found 5 direct flights
+2025-12-30 21:13:58 | INFO     | [lf.day.flights_found] Found 5 flights on 01JAN
+2025-12-30 21:14:00 | INFO     | [lf.flight.extracted] SM449 on 01JAN: BKG=34, LF=19.0%
+[LF] SM449 01JAN: BKG=34, GRP=0, CAP=179, LF%=19.0%, Brd-Off=CAI-JED, Classes: I:14, O:15, U:3, X:2
+2025-12-30 21:14:04 | INFO     | [lf.flight.extracted] SM475 on 01JAN: BKG=66, LF=36.9%
+[LF] SM475 01JAN: BKG=66, GRP=0, CAP=179, LF%=36.9%, Brd-Off=CAI-JED, Classes: I:33, O:20, U:7, X:5, Y:1
+2025-12-30 21:14:07 | INFO     | [lf.flight.extracted] SM431 on 01JAN: BKG=72, LF=40.2%
+[LF] SM431 01JAN: BKG=72, GRP=41, CAP=179, LF%=40.2%, Brd-Off=CAI-JED, Classes: P:41, I:11, O:15, U:1, X:4
+2025-12-30 21:14:10 | INFO     | [lf.flight.extracted] SM477 on 01JAN: BKG=146, LF=81.6%
+[LF] SM477 01JAN: BKG=146, GRP=85, CAP=179, LF%=81.6%, Brd-Off=CAI-JED, Classes: N:4, P:85, I:17, O:22, U:8, X:6, T:3, K:1
+2025-12-30 21:14:13 | INFO     | [lf.flight.extracted] SM479 on 01JAN: BKG=111, LF=62.7%
+[LF] SM479 01JAN: BKG=111, GRP=35, CAP=177, LF%=62.7%, Brd-Off=CAI-JED, Classes: P:35, I:36, O:7, U:12, X:13, T:4, V:4
+[LF] Getting WEEKLY/LASTSOLD data for 5 flights
+[LF] SM449 01JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=26, TODAY=7, YDAY=2
+[LF] SM475 01JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=52, TODAY=3, YDAY=12
+[LF] SM431 01JAN: LASTSOLD=2025-12-29 00:00:00, WEEKLY=28, TODAY=0, YDAY=11
+[LF] SM477 01JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=29, TODAY=4, YDAY=7
+[LF] SM479 01JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=50, TODAY=12, YDAY=21
+2025-12-30 21:14:33 | INFO     | [SUCCESS] Day 01JAN
+2025-12-30 21:14:33 | INFO     | [DAY_START] Processing 31DEC
+[LF] Processing CAI-JED for 31DEC
+2025-12-30 21:14:33 | INFO     | [lf.day.start] Processing CAI-JED for 31DEC
+[LF] 31DEC: found 5 direct flights
+2025-12-30 21:14:34 | INFO     | [lf.day.flights_found] Found 5 flights on 31DEC
+2025-12-30 21:14:36 | INFO     | [lf.flight.extracted] SM423 on 31DEC: BKG=175, LF=97.8%
+[LF] SM423 31DEC: BKG=175, GRP=131, CAP=179, LF%=97.8%, Brd-Off=CAI-JED, Classes: P:86, E:45, I:10, O:11, U:11, X:4, S:8
+2025-12-30 21:14:39 | INFO     | [lf.flight.extracted] SM475 on 31DEC: BKG=176, LF=98.3%
+[LF] SM475 31DEC: BKG=176, GRP=137, CAP=179, LF%=98.3%, Brd-Off=CAI-JED, Classes: P:137, I:10, O:11, U:11, X:7
+2025-12-30 21:14:42 | INFO     | [lf.flight.extracted] SM459 on 31DEC: BKG=179, LF=100.0%
+[LF] SM459 31DEC: BKG=179, GRP=137, CAP=179, LF%=100.0%, Brd-Off=CAI-JED, Classes: P:137, I:9, O:24, X:9
+2025-12-30 21:14:45 | INFO     | [lf.flight.extracted] SM477 on 31DEC: BKG=173, LF=96.7%
+[LF] SM477 31DEC: BKG=173, GRP=136, CAP=179, LF%=96.7%, Brd-Off=CAI-JED, Classes: P:136, I:9, O:11, U:8, X:9
+2025-12-30 21:14:48 | INFO     | [lf.flight.extracted] SM471 on 31DEC: BKG=172, LF=97.7%
+[LF] SM471 31DEC: BKG=172, GRP=133, CAP=176, LF%=97.7%, Brd-Off=CAI-JED, Classes: P:133, I:10, O:21, U:2, X:4, S:1, V:1
+[LF] Getting WEEKLY/LASTSOLD data for 5 flights
+[LF] SM423 31DEC: LASTSOLD=2025-12-29 00:00:00, WEEKLY=29, TODAY=0, YDAY=4
+[LF] SM475 31DEC: LASTSOLD=2025-12-29 00:00:00, WEEKLY=19, TODAY=0, YDAY=2
+[LF] SM459 31DEC: LASTSOLD=2025-12-30 00:00:00, WEEKLY=10, TODAY=3, YDAY=2
+[LF] SM477 31DEC: LASTSOLD=2025-12-28 00:00:00, WEEKLY=7, TODAY=0, YDAY=0
+[LF] SM471 31DEC: LASTSOLD=2025-12-28 00:00:00, WEEKLY=7, TODAY=0, YDAY=0
+2025-12-30 21:15:11 | INFO     | [SUCCESS] Day 31DEC
+[LF] Skipping 30DEC (Today) - will be processed by supplement scan
+[LF] Results summary:
+  2026-01-04: 5 flights
+  2026-01-03: 4 flights
+  2026-01-02: 4 flights
+  2026-01-01: 5 flights
+  2025-12-31: 5 flights
+[LF] Cancelled flights found: 2
+  - SM477 02JAN (SN)
+  - SM423 01JAN (SN)
+2025-12-30 21:15:11 | INFO     | [SUCCESS] LF Search Complete
+[Worker_9232] Cancelled flights collected: 2
+
+============================================================
+[Worker_9232] ✓ COMPLETED: CAI-JED
+  Results: 5 dates
+  Errors: 0 dates
+  Total Processed: 4 groups
+============================================================
+
+2025-12-30 21:15:13 | INFO     | [Worker_9232] Completed: CAI-JED - 5 results, 0 errors
+[Worker_9232] Waiting for tasks...
+
+============================================================
+[Worker_9232] Shutdown signal received
+Exiting...
+============================================================
+2025-12-30 21:31:19 | INFO     | [Worker_9232] Shutdown signal received, exiting...
+
+============================================================
+[Worker_9232] FINISHED
+  Total Groups Processed: 4
+============================================================
+
+2025-12-30 21:31:19 | INFO     | [Worker_9232] Finished. Processed 4 groups.

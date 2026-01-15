@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive | Air Cairo Reports</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', 'Cairo', Arial, sans-serif;
+            background: linear-gradient(135deg, #462B73 0%, #2d1a4a 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 30px;
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(70, 43, 115, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(247, 148, 29, 0.3);
+        }
+        .logo {
+            font-size: 36px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+        .logo .white { color: #fff; }
+        .logo .orange { color: #F7941D; }
+        .header h1 {
+            color: #F7941D;
+            font-size: 28px;
+            margin-bottom: 10px;
+            margin-top: 15px;
+        }
+        .header p { color: rgba(100, 220, 255, 0.8); font-size: 14px; }
+        .btn-container {
+            text-align: left;
+            margin-bottom: 20px;
+            clear: both;
+        }
+        .back-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #F7941D 0%, #ff6b00 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(247, 148, 29, 0.4);
+        }
+        .back-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 25px rgba(247, 148, 29, 0.6);
+        }
+        .report-list { list-style: none; }
+        .report-item {
+            background: rgba(70, 43, 115, 0.5);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(100, 220, 255, 0.2);
+            border-radius: 12px;
+            margin-bottom: 15px;
+            padding: 20px 25px;
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            color: inherit;
+        }
+        .report-item:hover {
+            background: rgba(247, 148, 29, 0.2);
+            border-color: rgba(247, 148, 29, 0.5);
+            transform: translateX(-5px);
+            box-shadow: 0 4px 20px rgba(247, 148, 29, 0.3);
+        }
+        .report-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+        .report-row:last-child {
+            margin-bottom: 0;
+        }
+        .row-icon {
+            font-size: 16px;
+            width: 24px;
+            text-align: center;
+        }
+        .row-label {
+            color: rgba(100, 220, 255, 0.6);
+            font-size: 12px;
+            min-width: 70px;
+        }
+        .row-value {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .run-date-value {
+            color: #F7941D;
+            font-size: 16px;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(247, 148, 29, 0.3);
+            direction: ltr;
+            unicode-bidi: isolate;
+            display: inline-block;
+        }
+        .range-value {
+            background: rgba(74, 222, 128, 0.15);
+            color: #4ade80;
+            padding: 4px 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            text-shadow: 0 0 8px rgba(74, 222, 128, 0.4);
+        }
+        .routes-value {
+            color: rgba(100, 220, 255, 0.9);
+            font-size: 12px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            letter-spacing: 0.5px;
+            text-shadow: 0 0 8px rgba(100, 220, 255, 0.3);
+            line-height: 1.5;
+        }
+        .routes-count {
+            background: rgba(96, 165, 250, 0.2);
+            color: #60a5fa;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            margin-left: 8px;
+        }
+        .empty-msg {
+            text-align: center;
+            color: rgba(100, 220, 255, 0.6);
+            padding: 50px;
+            font-size: 18px;
+        }
+        .count-badge {
+            background: rgba(247, 148, 29, 0.2);
+            color: #F7941D;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 14px;
+            margin-top: 15px;
+            display: inline-block;
+            box-shadow: 0 0 15px rgba(247, 148, 29, 0.3);
+        }
+
+        /* Loading Screen */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #462B73 0%, #2d1a4a 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-overlay.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(255,255,255,0.1);
+            border-top-color: #F7941D;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .loading-plane {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            animation: bounce 1.5s ease infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Pages Navigation Bar */
+        .pages-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 15px 20px;
+            background: rgba(70, 43, 115, 0.5);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .pages-nav a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 25px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .pages-nav a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+        .pages-nav a.active {
+            background: linear-gradient(135deg, #F7941D 0%, #ff6b00 100%);
+            border-color: transparent;
+        }
+        .pages-nav .nav-icon {
+            font-size: 16px;
+        }
+        @media (max-width: 600px) {
+            .pages-nav {
+                gap: 8px;
+                padding: 10px;
+            }
+            .pages-nav a {
+                padding: 8px 15px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-plane">✈️</div>
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Loading archive...</div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            const overlay = document.getElementById('loadingOverlay');
+            if (overlay) {
+                overlay.classList.add('fade-out');
+                setTimeout(() => { overlay.style.display = 'none'; }, 500);
+            }
+        });
+    </script>
+
+    <div class="container">
+        <!-- Pages Navigation -->
+        <div class="pages-nav">
+            <a href="../">
+                <span class="nav-icon">🌐</span>
+                <span>Dashboard</span>
+            </a>
+            <a href="../online_pc_report.html">
+                <span class="nav-icon">📊</span>
+                <span>Report</span>
+            </a>
+            <a href="../online_mob_report.html">
+                <span class="nav-icon">📱</span>
+                <span>Mobile</span>
+            </a>
+        </div>
+
+        <div class="header">
+            <div class="logo"><span class="white">AIR</span><span class="orange">CAIRO</span></div>
+            <h1>📁 Report Archive</h1>
+            <p>All historical price monitoring reports</p>
+            <div class="count-badge">📊 33 reports</div>
+        </div>
+
+        <div class="report-list">
+        <a href="report_2026_01_07_16-32.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">07-JAN-26 16:32</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">07JAN26 - 31JAN26</span>
+            </div>
+        </a>
+        <a href="report_2026_01_06_10-24.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">06-JAN-26 10:24</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">06JAN26 - 31JAN26</span>
+            </div>
+        </a>
+        <a href="report_2026_01_06_09-20.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">06-JAN-26 09:20</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">06JAN26 - 31JAN26</span>
+            </div>
+        </a>
+        <a href="report_2026_01_06_08-43.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">06-JAN-26 08:43</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">06JAN26 - 31JAN26</span>
+            </div>
+        </a>
+        <a href="report_2026_01_06_07-53.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">06-JAN-26 07:53</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">06JAN26 - 31JAN26</span>
+            </div>
+        </a>
+        <a href="report_2026_01_05_16-47.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">05-JAN-26 16:47</span>
+            </div>
+        </a>
+        <a href="report_2026_01_05_05-36.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">05-JAN-26 05:36</span>
+            </div>
+        </a>
+        <a href="report_2026_01_05_00-18.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">05-JAN-26 00:18</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">05JAN26 - 31JAN26</span>
+            </div>
+        </a>
+        <a href="report_2026_01_04_09-19.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">04-JAN-26 09:19</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">04JAN26 - 31JAN26</span>
+            </div>
+        </a>
+        <a href="report_2026_01_04_07-15.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">04-JAN-26 07:15</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">04JAN26 - 31JAN26</span>
+            </div>
+        </a>
+        <a href="report_2026_01_03_05-10.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">03-JAN-26 05:10</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">03JAN26 - 31JAN26</span>
+            </div>
+        </a>
+        <a href="report_2026_01_01_08-01.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">01-JAN-26 08:01</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">01JAN26 - 31MAR26</span>
+            </div>
+        </a>
+        <a href="report_2025_12_31_23-27.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">31-DEC-25 23:27</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">01JAN26 - 28FEB26</span>
+            </div>
+        </a>
+        <a href="report_2025_12_31_22-10.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">31-DEC-25 22:10</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">01JAN26 - 31JAN26</span>
+            </div>
+        </a>
+        <a href="report_2025_12_31_20-48.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">31-DEC-25 20:48</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">01JAN26 - 31JAN26</span>
+            </div>
+        </a>
+        <a href="report_2025_12_30_21-07.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">30-DEC-25 21:07</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">31DEC25 - 31JAN26</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">✈️</span>
+                <span class="row-label">Routes</span>
+                <span class="routes-value">ATZ-JED • CAI-JED • CAI-TUU • JED-ATZ • JED-CAI • TUU-CAI</span>
+            </div>
+        </a>
+        <a href="report_2025_12_29_07-25.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">29-DEC-25 07:25</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">29DEC25 - 21JAN26</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">✈️</span>
+                <span class="row-label">Routes</span>
+                <span class="routes-value">ATZ-RUH • CAI-RUH • JED-ATZ • JED-CAI</span>
+            </div>
+        </a>
+        <a href="report_2025_12_28_07-09.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">28-DEC-25 07:09</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">28DEC25 - 20JAN26</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">✈️</span>
+                <span class="row-label">Routes</span>
+                <span class="routes-value">ATZ-RUH • ELQ-CAI • HBE-MED • JED-ATZ • JED-CAI</span>
+            </div>
+        </a>
+        <a href="report_2025_12_28_05-25.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">28-DEC-25 05:25</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">28DEC25 - 21JAN26</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">✈️</span>
+                <span class="row-label">Routes</span>
+                <span class="routes-value">ATZ-DMM • CAI-TUU • HBE-MED • JED-ATZ • JED-CAI • MED-CAI<span class="routes-count">+1 more</span></span>
+            </div>
+        </a>
+        <a href="report_2025_12_28_03-27.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">28-DEC-25 03:27</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">28DEC25 - 21JAN26</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">✈️</span>
+                <span class="row-label">Routes</span>
+                <span class="routes-value">ATZ-DMM • CAI-ELQ • CAI-TUU • JED-CAI • JED-HBE • RUH-ATZ<span class="routes-count">+1 more</span></span>
+            </div>
+        </a>
+        <a href="report_2025_12_25_22-36.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">25-DEC-25 22:36</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">26DEC25 - 16JAN26</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">✈️</span>
+                <span class="row-label">Routes</span>
+                <span class="routes-value">ATZ-MED • CAI-MED • HBE-MED • JED-ATZ • JED-CAI • JED-HBE</span>
+            </div>
+        </a>
+        <a href="report_2025_12_25_10-34.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">25-DEC-25 10:34</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">26DEC25 - 05JAN26</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">✈️</span>
+                <span class="row-label">Routes</span>
+                <span class="routes-value">ATZ-RUH • CAI-RUH • RUH-ATZ • RUH-CAI</span>
+            </div>
+        </a>
+        <a href="report_2025_12_25_08-12.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">25-DEC-25 08:12</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">26DEC25 - 05JAN26</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">✈️</span>
+                <span class="row-label">Routes</span>
+                <span class="routes-value">HBE-JED • JED-ATZ • JED-CAI</span>
+            </div>
+        </a>
+        <a href="report_2025-12-27_00-11.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">27-DEC-25 00:11</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">27DEC25 - 16JAN26</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">✈️</span>
+                <span class="row-label">Routes</span>
+                <span class="routes-value">ATZ-MED • CAI-MED • HBE-JED • JED-ATZ • JED-CAI • JED-HBE</span>
+            </div>
+        </a>
+        <a href="report_2025-12-26_22-28.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">26-DEC-25 22:28</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">27DEC25 - 15JAN26</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">✈️</span>
+                <span class="row-label">Routes</span>
+                <span class="routes-value">ATZ-MED • CAI-MED • HBE-JED • JED-ATZ • JED-CAI • JED-HBE</span>
+            </div>
+        </a>
+        <a href="report_2025-12-26_21-58.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">26-DEC-25 21:58</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">27DEC25 - 15JAN26</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">✈️</span>
+                <span class="row-label">Routes</span>
+                <span class="routes-value">ATZ-MED • CAI-MED • HBE-JED • JED-ATZ • JED-CAI • JED-HBE</span>
+            </div>
+        </a>
+        <a href="report_2025-12-26_16-14.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">26-DEC-25 16:14</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">29DEC25 - 17JAN26</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">✈️</span>
+                <span class="row-label">Routes</span>
+                <span class="routes-value">CAI-MED • HBE-JED • JED-ATZ • JED-CAI • JED-HBE</span>
+            </div>
+        </a>
+        <a href="report_2025-12-26_02-35.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">26-DEC-25 02:35</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">29DEC25 - 17JAN26</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">✈️</span>
+                <span class="row-label">Routes</span>
+                <span class="routes-value">CAI-MED • HBE-JED • JED-ATZ • JED-CAI • JED-HBE</span>
+            </div>
+        </a>
+        <a href="report_2025-12-25_01-29.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">25-DEC-25 01:29</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">✈️</span>
+                <span class="row-label">Routes</span>
+                <span class="routes-value">JED-CAI</span>
+            </div>
+        </a>
+        <a href="report_2025-12-25_01-27.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">25-DEC-25 01:27</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">✈️</span>
+                <span class="row-label">Routes</span>
+                <span class="routes-value">JED-CAI</span>
+            </div>
+        </a>
+        <a href="report_2024_12_25_18-28.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">25-DEC-24 18:28</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">25DEC25 - 10JAN26</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">✈️</span>
+                <span class="row-label">Routes</span>
+                <span class="routes-value">AHB-CAI • AJF-CAI • DMM-CAI • ELQ-CAI • GIZ-CAI • JED-ATZ<span class="routes-count">+7 more</span></span>
+            </div>
+        </a>
+        <a href="report_2024-12-25_08-12.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">25-DEC-24 08:12</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">24DEC25 - 31MAR26</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">✈️</span>
+                <span class="row-label">Routes</span>
+                <span class="routes-value">AHB-CAI • AJF-CAI • ATZ-JED • ATZ-RUH • CAI-AHB • CAI-AJF<span class="routes-count">+22 more</span></span>
+            </div>
+        </a>
+        <a href="report_060126_at_10.24.html" class="report-item">
+            <div class="report-row">
+                <span class="row-icon">🕐</span>
+                <span class="row-label">Run Date</span>
+                <span class="run-date-value">06-JAN-26 10:24</span>
+            </div>
+            <div class="report-row">
+                <span class="row-icon">📅</span>
+                <span class="row-label">Range</span>
+                <span class="range-value">06JAN26 - 31JAN26</span>
+            </div>
+        </a>
+
+        </div>
+    </div>
+</body>
+</html>

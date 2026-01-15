@@ -1,0 +1,57 @@
+2026-01-05 17:06:26 | INFO     | ======================================================================
+2026-01-05 17:06:26 | INFO     | Load Factor Scraper Started - Route: CAI-AHB
+2026-01-05 17:06:26 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_050126_at_16.47\logs\LF_CAI-AHB_20260105_170626.log
+2026-01-05 17:06:26 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-05 17:06:26 | INFO     | ======================================================================
+2026-01-05 17:06:26 | INFO     | Starting LF search for route: CAI-AHB
+2026-01-05 17:06:26 | INFO     | [START] LF Search
+2026-01-05 17:06:28 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-05 17:06:28 | INFO     | [DAY_START] Processing 28FEB
+2026-01-05 17:06:28 | INFO     | [lf.day.start] Processing CAI-AHB for 28FEB
+2026-01-05 17:06:29 | INFO     | [lf.day.flights_found] Found 1 flights on 28FEB
+2026-01-05 17:06:31 | INFO     | [lf.flight.extracted] SM443 on 28FEB: BKG=8, LF=4.5%
+2026-01-05 17:06:34 | INFO     | [SUCCESS] Day 28FEB
+2026-01-05 17:06:34 | INFO     | [DAY_START] Processing 27FEB
+2026-01-05 17:06:34 | INFO     | [lf.day.start] Processing CAI-AHB for 27FEB
+2026-01-05 17:06:35 | WARNING  | [lf.day.no_flights] No direct flights on 27FEB
+2026-01-05 17:06:35 | INFO     | [SUCCESS] Day 27FEB
+2026-01-05 17:06:35 | INFO     | [DAY_START] Processing 26FEB
+2026-01-05 17:06:35 | INFO     | [lf.day.start] Processing CAI-AHB for 26FEB
+2026-01-05 17:06:36 | INFO     | [lf.day.flights_found] Found 1 flights on 26FEB
+2026-01-05 17:06:38 | INFO     | [lf.flight.extracted] SM443 on 26FEB: BKG=4, LF=2.2%
+2026-01-05 17:06:41 | INFO     | [SUCCESS] Day 26FEB
+2026-01-05 17:06:41 | INFO     | [DAY_START] Processing 25FEB
+2026-01-05 17:06:41 | INFO     | [lf.day.start] Processing CAI-AHB for 25FEB
+2026-01-05 17:06:42 | INFO     | [lf.day.flights_found] Found 1 flights on 25FEB
+2026-01-05 17:06:44 | INFO     | [lf.flight.extracted] SM447 on 25FEB: BKG=2, LF=1.1%
+2026-01-05 17:06:47 | INFO     | [SUCCESS] Day 25FEB
+2026-01-05 17:06:47 | INFO     | [DAY_START] Processing 24FEB
+2026-01-05 17:06:47 | INFO     | [lf.day.start] Processing CAI-AHB for 24FEB
+2026-01-05 17:06:48 | WARNING  | [lf.day.no_flights] No direct flights on 24FEB
+2026-01-05 17:06:49 | INFO     | [SUCCESS] Day 24FEB
+2026-01-05 17:06:49 | INFO     | [DAY_START] Processing 23FEB
+2026-01-05 17:06:49 | INFO     | [lf.day.start] Processing CAI-AHB for 23FEB
+2026-01-05 17:06:50 | WARNING  | [lf.day.no_flights] No direct flights on 23FEB
+2026-01-05 17:06:50 | INFO     | [SUCCESS] Day 23FEB
+2026-01-05 17:06:50 | INFO     | [DAY_START] Processing 22FEB
+2026-01-05 17:06:50 | INFO     | [lf.day.start] Processing CAI-AHB for 22FEB
+2026-01-05 17:06:51 | WARNING  | [lf.day.no_flights] No direct flights on 22FEB
+2026-01-05 17:06:51 | INFO     | [SUCCESS] Day 22FEB
+2026-01-05 17:06:51 | INFO     | [DAY_START] Processing 21FEB
+2026-01-05 17:06:51 | INFO     | [lf.day.start] Processing CAI-AHB for 21FEB
+2026-01-05 17:06:52 | INFO     | [lf.day.flights_found] Found 1 flights on 21FEB
+2026-01-05 17:06:55 | INFO     | [lf.flight.extracted] SM443 on 21FEB: BKG=6, LF=3.4%
+2026-01-05 17:06:58 | INFO     | [SUCCESS] Day 21FEB
+2026-01-05 17:06:58 | INFO     | [DAY_START] Processing 20FEB
+2026-01-05 17:06:58 | INFO     | [lf.day.start] Processing CAI-AHB for 20FEB
+2026-01-05 17:06:59 | WARNING  | [lf.day.no_flights] No direct flights on 20FEB
+2026-01-05 17:06:59 | INFO     | [SUCCESS] Day 20FEB
+2026-01-05 17:06:59 | INFO     | [DAY_START] Processing 19FEB
+2026-01-05 17:06:59 | INFO     | [lf.day.start] Processing CAI-AHB for 19FEB
+2026-01-05 17:07:00 | INFO     | [lf.day.flights_found] Found 1 flights on 19FEB
+2026-01-05 17:07:02 | INFO     | [lf.flight.extracted] SM443 on 19FEB: BKG=7, LF=3.9%
+2026-01-05 17:07:05 | INFO     | [SUCCESS] Day 19FEB
+2026-01-05 17:07:05 | INFO     | [SUCCESS] LF Search Complete
+2026-01-05 17:07:07 | INFO     | [Worker_9225] Completed: CAI-AHB - 10 results, 0 errors
+2026-01-05 17:07:07 | INFO     | [Worker_9225] Processing: MED-ATZ
+2026-01-05 17:07:07 | INFO     |   Tier 0: Range 2, Chunk 2/3 (9 days)

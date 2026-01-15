@@ -1,0 +1,200 @@
+{
+  "timestamp": "2026-01-04T09:22:59.974608",
+  "service": "market-insights",
+  "counters": {
+    "oal_requests_total": {
+      "description": "Total OAL API requests",
+      "values": []
+    },
+    "lf_requests_total": {
+      "description": "Total LF requests",
+      "values": [
+        {
+          "labels": {
+            "destination": "ATZ",
+            "origin": "MED",
+            "status": "success"
+          },
+          "value": 7.0
+        },
+        {
+          "labels": {
+            "destination": "ATZ",
+            "origin": "DMM",
+            "status": "success"
+          },
+          "value": 7.0
+        },
+        {
+          "labels": {
+            "destination": "ATZ",
+            "origin": "AJF",
+            "status": "success"
+          },
+          "value": 7.0
+        },
+        {
+          "labels": {
+            "destination": "ATZ",
+            "origin": "ELQ",
+            "status": "success"
+          },
+          "value": 7.0
+        },
+        {
+          "labels": {
+            "destination": "ASW",
+            "origin": "JED",
+            "status": "success"
+          },
+          "value": 7.0
+        },
+        {
+          "labels": {
+            "destination": "ATZ",
+            "origin": "RUH",
+            "status": "success"
+          },
+          "value": 7.0
+        }
+      ]
+    },
+    "errors_total": {
+      "description": "Total errors",
+      "values": []
+    }
+  },
+  "gauges": {
+    "routes_in_progress": {
+      "description": "Routes currently being processed",
+      "values": [
+        {
+          "labels": {},
+          "value": 0.0
+        }
+      ]
+    },
+    "flights_analyzed": {
+      "description": "Total flights analyzed in session",
+      "values": [
+        {
+          "labels": {
+            "direction": "lf"
+          },
+          "value": 12.0
+        }
+      ]
+    },
+    "circuit_breaker_state": {
+      "description": "Circuit breaker state (0=closed, 1=open)",
+      "values": []
+    }
+  },
+  "histograms": {
+    "request_duration_seconds": {
+      "description": "Request duration in seconds",
+      "data": {}
+    },
+    "route_processing_seconds": {
+      "description": "Route processing duration",
+      "data": {
+        "{'route': 'MED-ATZ'}": {
+          "sum": 35.312195,
+          "count": 7,
+          "buckets": {
+            "30.0": 7,
+            "60.0": 7,
+            "120.0": 7,
+            "300.0": 7,
+            "5.0": 3,
+            "10.0": 6,
+            "1.0": 1
+          },
+          "p50": 4.333333333333334,
+          "p95": 7.208333333333334,
+          "p99": 7.441666666666666
+        },
+        "{'route': 'DMM-ATZ'}": {
+          "sum": 18.786976,
+          "count": 7,
+          "buckets": {
+            "5.0": 5,
+            "10.0": 7,
+            "30.0": 7,
+            "60.0": 7,
+            "120.0": 7,
+            "300.0": 7,
+            "1.0": 1
+          },
+          "p50": 3.0,
+          "p95": 5.464285714285714,
+          "p99": 5.664285714285714
+        },
+        "{'route': 'AJF-ATZ'}": {
+          "sum": 14.940401999999999,
+          "count": 7,
+          "buckets": {
+            "5.0": 6,
+            "10.0": 7,
+            "30.0": 7,
+            "60.0": 7,
+            "120.0": 7,
+            "300.0": 7,
+            "1.0": 1
+          },
+          "p50": 2.666666666666667,
+          "p95": 4.7666666666666675,
+          "p99": 4.953333333333333
+        },
+        "{'route': 'ELQ-ATZ'}": {
+          "sum": 81.69329900000001,
+          "count": 7,
+          "buckets": {
+            "10.0": 6,
+            "30.0": 6,
+            "60.0": 6,
+            "120.0": 7,
+            "300.0": 7,
+            "5.0": 5,
+            "1.0": 3
+          },
+          "p50": 1.4,
+          "p95": 3.9200000000000004,
+          "p99": 4.144
+        },
+        "{'route': 'JED-ASW'}": {
+          "sum": 7.523551,
+          "count": 7,
+          "buckets": {
+            "5.0": 7,
+            "10.0": 7,
+            "30.0": 7,
+            "60.0": 7,
+            "120.0": 7,
+            "300.0": 7,
+            "1.0": 1
+          },
+          "p50": 2.428571428571429,
+          "p95": 4.228571428571429,
+          "p99": 4.388571428571428
+        },
+        "{'route': 'RUH-ATZ'}": {
+          "sum": 23.869816,
+          "count": 7,
+          "buckets": {
+            "5.0": 4,
+            "10.0": 7,
+            "30.0": 7,
+            "60.0": 7,
+            "120.0": 7,
+            "300.0": 7,
+            "1.0": 3
+          },
+          "p50": 1.5,
+          "p95": 4.65,
+          "p99": 4.93
+        }
+      }
+    }
+  }
+}

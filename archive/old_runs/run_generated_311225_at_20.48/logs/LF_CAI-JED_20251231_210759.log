@@ -1,0 +1,52 @@
+2025-12-31 21:07:59 | INFO     | ======================================================================
+2025-12-31 21:07:59 | INFO     | Load Factor Scraper Started - Route: CAI-JED
+2025-12-31 21:07:59 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_20.48\logs\LF_CAI-JED_20251231_210759.log
+2025-12-31 21:07:59 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 21:07:59 | INFO     | ======================================================================
+2025-12-31 21:07:59 | INFO     | Starting LF search for route: CAI-JED
+2025-12-31 21:07:59 | INFO     | [START] LF Search
+2025-12-31 21:08:01 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 21:08:01 | INFO     | [DAY_START] Processing 05JAN
+2025-12-31 21:08:01 | INFO     | [lf.day.start] Processing CAI-JED for 05JAN
+2025-12-31 21:08:02 | INFO     | [lf.day.flights_found] Found 3 flights on 05JAN
+2025-12-31 21:08:04 | INFO     | [lf.flight.extracted] SM475 on 05JAN: BKG=138, LF=77.1%
+2025-12-31 21:08:08 | INFO     | [lf.flight.extracted] SM477 on 05JAN: BKG=118, LF=65.9%
+2025-12-31 21:08:11 | INFO     | [lf.flight.extracted] SM459 on 05JAN: BKG=128, LF=71.5%
+2025-12-31 21:08:27 | INFO     | [SUCCESS] Day 05JAN
+2025-12-31 21:08:27 | INFO     | [DAY_START] Processing 04JAN
+2025-12-31 21:08:27 | INFO     | [lf.day.start] Processing CAI-JED for 04JAN
+2025-12-31 21:08:28 | INFO     | [lf.day.flights_found] Found 5 flights on 04JAN
+2025-12-31 21:08:30 | INFO     | [lf.flight.extracted] SM475 on 04JAN: BKG=39, LF=21.8%
+2025-12-31 21:08:33 | INFO     | [lf.flight.extracted] SM431 on 04JAN: BKG=64, LF=35.8%
+2025-12-31 21:08:37 | INFO     | [lf.flight.extracted] SM459 on 04JAN: BKG=168, LF=93.8%
+2025-12-31 21:08:40 | INFO     | [lf.flight.extracted] SM477 on 04JAN: BKG=105, LF=58.7%
+2025-12-31 21:08:44 | INFO     | [lf.flight.extracted] SM479 on 04JAN: BKG=69, LF=38.6%
+2025-12-31 21:09:04 | INFO     | [SUCCESS] Day 04JAN
+2025-12-31 21:09:04 | INFO     | [DAY_START] Processing 03JAN
+2025-12-31 21:09:04 | INFO     | [lf.day.start] Processing CAI-JED for 03JAN
+2025-12-31 21:09:05 | INFO     | [lf.day.flights_found] Found 4 flights on 03JAN
+2025-12-31 21:09:08 | INFO     | [lf.flight.extracted] SM449 on 03JAN: BKG=80, LF=44.7%
+2025-12-31 21:09:12 | INFO     | [lf.flight.extracted] SM475 on 03JAN: BKG=88, LF=49.2%
+2025-12-31 21:09:16 | INFO     | [lf.flight.extracted] SM477 on 03JAN: BKG=174, LF=97.2%
+2025-12-31 21:09:21 | INFO     | [lf.flight.extracted] SM423 on 03JAN: BKG=106, LF=59.2%
+2025-12-31 21:09:42 | INFO     | [SUCCESS] Day 03JAN
+2025-12-31 21:09:42 | INFO     | [DAY_START] Processing 02JAN
+2025-12-31 21:09:42 | INFO     | [lf.day.start] Processing CAI-JED for 02JAN
+2025-12-31 21:09:43 | INFO     | [lf.day.flights_found] Found 4 flights on 02JAN
+2025-12-31 21:09:45 | INFO     | [lf.flight.extracted] SM475 on 02JAN: BKG=154, LF=86.0%
+2025-12-31 21:09:49 | INFO     | [lf.flight.extracted] SM479 on 02JAN: BKG=61, LF=34.1%
+2025-12-31 21:09:52 | INFO     | [lf.flight.extracted] SM471 on 02JAN: BKG=54, LF=30.2%
+2025-12-31 21:09:55 | INFO     | [lf.flight.extracted] SM459 on 02JAN: BKG=61, LF=34.1%
+2025-12-31 21:10:12 | INFO     | [SUCCESS] Day 02JAN
+2025-12-31 21:10:12 | INFO     | [DAY_START] Processing 01JAN
+2025-12-31 21:10:12 | INFO     | [lf.day.start] Processing CAI-JED for 01JAN
+2025-12-31 21:10:13 | INFO     | [lf.day.flights_found] Found 4 flights on 01JAN
+2025-12-31 21:10:15 | INFO     | [lf.flight.extracted] SM449 on 01JAN: BKG=38, LF=21.2%
+2025-12-31 21:10:18 | INFO     | [lf.flight.extracted] SM475 on 01JAN: BKG=140, LF=78.2%
+2025-12-31 21:10:22 | INFO     | [lf.flight.extracted] SM477 on 01JAN: BKG=149, LF=82.8%
+2025-12-31 21:10:26 | INFO     | [lf.flight.extracted] SM479 on 01JAN: BKG=129, LF=72.9%
+2025-12-31 21:10:54 | INFO     | [SUCCESS] Day 01JAN
+2025-12-31 21:10:54 | INFO     | [SUCCESS] LF Search Complete
+2025-12-31 21:10:56 | INFO     | [Worker_9226] Completed: CAI-JED - 5 results, 0 errors
+2025-12-31 21:34:18 | INFO     | [Worker_9226] Shutdown signal received, exiting...
+2025-12-31 21:34:18 | INFO     | [Worker_9226] Finished. Processed 16 groups.

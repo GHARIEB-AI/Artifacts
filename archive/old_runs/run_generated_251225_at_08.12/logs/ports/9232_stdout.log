@@ -1,0 +1,85 @@
+
+============================================================
+     LF WORKER - PORT 9232
+============================================================
+Worker: Worker_9232
+Status: READY
+Waiting for tasks...
+============================================================
+
+
+============================================================
+[Worker_9232] Processing: JED-ATZ
+  Tier 0: Range 1, Chunk 3/3
+  Dates: 3 days
+  Date Range: 2025-12-28 to 2025-12-26
+============================================================
+
+2025-12-25 08:13:06 | INFO     | ======================================================================
+2025-12-25 08:13:06 | INFO     | Load Factor Scraper Started - Route: JED-ATZ
+2025-12-25 08:13:06 | INFO     | Log file: D:\CODERED\OUTPUTS\logs\LF_JED-ATZ_20251225_081306.log
+2025-12-25 08:13:06 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-25 08:13:06 | INFO     | ======================================================================
+[LF] Processing dates (override): ['28DEC', '27DEC', '26DEC']
+[LF] Attaching to Chrome for Altea access
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9232 (after 1 attempts)
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+[LF] Processing JED-ATZ for 28DEC
+[LF][ERROR] Amadeus command error detected: UNKNOWN TRANSACTION
+[LF][ERROR] Command: SN28DECJEDATZ/ASM
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+============================================================
+[LF][RESYNC] Command 'SN28DECJEDATZ/ASM' failed: TECH_ERROR:UNKNOWN TRANSACTION
+[LF][RESYNC] Re-running entire day from SN command for JED-ATZ 28DEC
+[LF][RESYNC] Attempt 1/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing JED-ATZ for 28DEC
+[LF] 28DEC: found 2 direct flights
+[LF] SM492 28DEC: BKG=167, GRP=131, CAP=168, LF%=99.4%, Brd-Off=JED-ATZ, Classes: P:131, I:4, O:2, U:3, X:6, T:15, W:2, S:4
+[LF] SM456 28DEC: BKG=174, GRP=155, CAP=179, LF%=97.2%, Brd-Off=JED-ATZ, Classes: P:155, I:4, O:2, U:3, X:5, T:5
+[LF] Getting WEEKLY/LASTSOLD data for 2 flights
+[LF] SM492 28DEC: LASTSOLD=2025-12-24 00:00:00, WEEKLY=16, TODAY=0, YDAY=5
+[LF] SM456 28DEC: LASTSOLD=2025-12-23 00:00:00, WEEKLY=6, TODAY=0, YDAY=0
+[LF] Processing JED-ATZ for 27DEC
+[LF] 27DEC: 1 cancelled flight(s) detected from SN
+[LF] 27DEC: found 2 direct flights
+[LF] SM492 27DEC: BKG=169, GRP=130, CAP=179, LF%=94.4%, Brd-Off=JED-ATZ, Classes: P:130, I:10, O:10, U:10, X:2, T:5, S:2
+[LF] SM456 27DEC: BKG=168, GRP=151, CAP=179, LF%=93.8%, Brd-Off=JED-ATZ, Classes: P:90, E:61, I:8, O:4, U:2, S:1, L:2
+[LF] Getting WEEKLY/LASTSOLD data for 2 flights
+[LF] SM492 27DEC: LASTSOLD=2025-12-24 00:00:00, WEEKLY=6, TODAY=0, YDAY=2
+[LF] SM456 27DEC: LASTSOLD=2025-12-25 00:00:00, WEEKLY=2, TODAY=2, YDAY=0
+[LF] Processing JED-ATZ for 26DEC
+[LF] 26DEC: found 1 direct flights
+[LF] SM492 26DEC: BKG=103, GRP=0, CAP=179, LF%=57.5%, Brd-Off=JED-ATZ, Classes: I:19, O:26, U:15, X:15, T:15, W:8, S:5
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM492 26DEC: LASTSOLD=2025-12-24 00:00:00, WEEKLY=32, TODAY=0, YDAY=4
+[LF] Results summary:
+  2025-12-28: 2 flights
+  2025-12-27: 2 flights
+  2025-12-26: 1 flights
+[LF] Cancelled flights found: 1
+  - SM454 27DEC (SN)
+[Worker_9232] Cancelled flights collected: 1
+
+============================================================
+[Worker_9232] ✓ COMPLETED: JED-ATZ
+  Results: 3 dates
+  Errors: 0 dates
+  Total Processed: 1 groups
+============================================================
+
+[Worker_9232] Waiting for tasks...
+
+============================================================
+[Worker_9232] Shutdown signal received
+Exiting...
+============================================================
+
+============================================================
+[Worker_9232] FINISHED
+  Total Groups Processed: 1
+============================================================
+

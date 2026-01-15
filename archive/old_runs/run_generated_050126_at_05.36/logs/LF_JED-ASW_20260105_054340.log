@@ -1,0 +1,47 @@
+2026-01-05 05:43:40 | INFO     | ======================================================================
+2026-01-05 05:43:40 | INFO     | Load Factor Scraper Started - Route: JED-ASW
+2026-01-05 05:43:40 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_050126_at_05.36\logs\LF_JED-ASW_20260105_054340.log
+2026-01-05 05:43:40 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-05 05:43:40 | INFO     | ======================================================================
+2026-01-05 05:43:40 | INFO     | Starting LF search for route: JED-ASW
+2026-01-05 05:43:40 | INFO     | [START] LF Search
+2026-01-05 05:43:42 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-05 05:43:42 | INFO     | [DAY_START] Processing 13JAN
+2026-01-05 05:43:42 | INFO     | [lf.day.start] Processing JED-ASW for 13JAN
+2026-01-05 05:43:43 | INFO     | [lf.day.flights_found] Found 1 flights on 13JAN
+2026-01-05 05:43:45 | INFO     | [lf.flight.extracted] SM986 on 13JAN: BKG=152, LF=91.0%
+2026-01-05 05:44:05 | INFO     | [SUCCESS] Day 13JAN
+2026-01-05 05:44:05 | INFO     | [DAY_START] Processing 12JAN
+2026-01-05 05:44:05 | INFO     | [lf.day.start] Processing JED-ASW for 12JAN
+2026-01-05 05:44:06 | INFO     | [lf.day.flights_found] Found 2 flights on 12JAN
+2026-01-05 05:44:08 | INFO     | [lf.flight.extracted] SM426 on 12JAN: BKG=175, LF=104.8%
+2026-01-05 05:44:12 | INFO     | [lf.flight.extracted] SM950 on 12JAN: BKG=180, LF=107.8%
+2026-01-05 05:44:22 | INFO     | [SUCCESS] Day 12JAN
+2026-01-05 05:44:22 | INFO     | [DAY_START] Processing 11JAN
+2026-01-05 05:44:22 | INFO     | [lf.day.start] Processing JED-ASW for 11JAN
+2026-01-05 05:44:23 | WARNING  | [lf.day.no_flights] No direct flights on 11JAN
+2026-01-05 05:44:24 | INFO     | [SUCCESS] Day 11JAN
+2026-01-05 05:44:24 | INFO     | [DAY_START] Processing 10JAN
+2026-01-05 05:44:24 | INFO     | [lf.day.start] Processing JED-ASW for 10JAN
+2026-01-05 05:44:25 | WARNING  | [lf.day.no_flights] No direct flights on 10JAN
+2026-01-05 05:44:25 | INFO     | [SUCCESS] Day 10JAN
+2026-01-05 05:44:25 | INFO     | [DAY_START] Processing 09JAN
+2026-01-05 05:44:25 | INFO     | [lf.day.start] Processing JED-ASW for 09JAN
+2026-01-05 05:44:26 | WARNING  | [lf.day.no_flights] No direct flights on 09JAN
+2026-01-05 05:44:26 | INFO     | [SUCCESS] Day 09JAN
+2026-01-05 05:44:26 | INFO     | [DAY_START] Processing 08JAN
+2026-01-05 05:44:26 | INFO     | [lf.day.start] Processing JED-ASW for 08JAN
+2026-01-05 05:44:27 | WARNING  | [lf.day.no_flights] No direct flights on 08JAN
+2026-01-05 05:44:27 | INFO     | [SUCCESS] Day 08JAN
+2026-01-05 05:44:27 | INFO     | [DAY_START] Processing 07JAN
+2026-01-05 05:44:27 | INFO     | [lf.day.start] Processing JED-ASW for 07JAN
+2026-01-05 05:44:28 | WARNING  | [lf.day.no_flights] No direct flights on 07JAN
+2026-01-05 05:44:28 | INFO     | [SUCCESS] Day 07JAN
+2026-01-05 05:44:28 | INFO     | [DAY_START] Processing 06JAN
+2026-01-05 05:44:28 | INFO     | [lf.day.start] Processing JED-ASW for 06JAN
+2026-01-05 05:44:29 | WARNING  | [lf.day.no_flights] No direct flights on 06JAN
+2026-01-05 05:44:30 | INFO     | [SUCCESS] Day 06JAN
+2026-01-05 05:44:30 | INFO     | [SUCCESS] LF Search Complete
+2026-01-05 05:44:32 | INFO     | [Worker_9224] Completed: JED-ASW - 8 results, 0 errors
+2026-01-05 05:44:32 | INFO     | [Worker_9224] Processing: DMM-ATZ
+2026-01-05 05:44:32 | INFO     |   Tier 0: Range 1, Chunk 3/3 (9 days)

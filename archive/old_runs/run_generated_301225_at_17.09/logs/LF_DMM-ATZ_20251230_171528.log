@@ -1,0 +1,50 @@
+2025-12-30 17:15:28 | INFO     | ======================================================================
+2025-12-30 17:15:28 | INFO     | Load Factor Scraper Started - Route: DMM-ATZ
+2025-12-30 17:15:28 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_301225_at_17.09\logs\LF_DMM-ATZ_20251230_171528.log
+2025-12-30 17:15:28 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-30 17:15:28 | INFO     | ======================================================================
+2025-12-30 17:15:28 | INFO     | Starting LF search for route: DMM-ATZ
+2025-12-30 17:15:28 | INFO     | [START] LF Search
+2025-12-30 17:15:29 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-30 17:15:29 | INFO     | [DAY_START] Processing 18FEB
+2025-12-30 17:15:29 | INFO     | [lf.day.start] Processing DMM-ATZ for 18FEB
+2025-12-30 17:15:30 | WARNING  | [lf.day.no_flights] No direct flights on 18FEB
+2025-12-30 17:15:30 | INFO     | [SUCCESS] Day 18FEB
+2025-12-30 17:15:30 | INFO     | [DAY_START] Processing 17FEB
+2025-12-30 17:15:30 | INFO     | [lf.day.start] Processing DMM-ATZ for 17FEB
+2025-12-30 17:15:31 | WARNING  | [lf.day.no_flights] No direct flights on 17FEB
+2025-12-30 17:15:32 | INFO     | [SUCCESS] Day 17FEB
+2025-12-30 17:15:32 | INFO     | [DAY_START] Processing 16FEB
+2025-12-30 17:15:32 | INFO     | [lf.day.start] Processing DMM-ATZ for 16FEB
+2025-12-30 17:15:33 | INFO     | [lf.day.flights_found] Found 1 flights on 16FEB
+2025-12-30 17:15:35 | INFO     | [lf.flight.extracted] SM438 on 16FEB: BKG=17, LF=9.7%
+2025-12-30 17:15:39 | INFO     | [SUCCESS] Day 16FEB
+2025-12-30 17:15:39 | INFO     | [DAY_START] Processing 15FEB
+2025-12-30 17:15:39 | INFO     | [lf.day.start] Processing DMM-ATZ for 15FEB
+2025-12-30 17:15:40 | WARNING  | [lf.day.no_flights] No direct flights on 15FEB
+2025-12-30 17:15:41 | INFO     | [SUCCESS] Day 15FEB
+2025-12-30 17:15:41 | INFO     | [DAY_START] Processing 14FEB
+2025-12-30 17:15:41 | INFO     | [lf.day.start] Processing DMM-ATZ for 14FEB
+2025-12-30 17:15:42 | WARNING  | [lf.day.no_flights] No direct flights on 14FEB
+2025-12-30 17:15:43 | INFO     | [SUCCESS] Day 14FEB
+2025-12-30 17:15:43 | INFO     | [DAY_START] Processing 13FEB
+2025-12-30 17:15:43 | INFO     | [lf.day.start] Processing DMM-ATZ for 13FEB
+2025-12-30 17:15:44 | INFO     | [lf.day.flights_found] Found 1 flights on 13FEB
+2025-12-30 17:15:46 | INFO     | [lf.flight.extracted] SM438 on 13FEB: BKG=8, LF=4.8%
+2025-12-30 17:15:49 | INFO     | [SUCCESS] Day 13FEB
+2025-12-30 17:15:49 | INFO     | [DAY_START] Processing 12FEB
+2025-12-30 17:15:49 | INFO     | [lf.day.start] Processing DMM-ATZ for 12FEB
+2025-12-30 17:15:51 | WARNING  | [lf.day.no_flights] No direct flights on 12FEB
+2025-12-30 17:15:51 | INFO     | [SUCCESS] Day 12FEB
+2025-12-30 17:15:51 | INFO     | [DAY_START] Processing 11FEB
+2025-12-30 17:15:51 | INFO     | [lf.day.start] Processing DMM-ATZ for 11FEB
+2025-12-30 17:15:52 | WARNING  | [lf.day.no_flights] No direct flights on 11FEB
+2025-12-30 17:15:52 | INFO     | [SUCCESS] Day 11FEB
+2025-12-30 17:15:52 | INFO     | [DAY_START] Processing 10FEB
+2025-12-30 17:15:52 | INFO     | [lf.day.start] Processing DMM-ATZ for 10FEB
+2025-12-30 17:15:54 | WARNING  | [lf.day.no_flights] No direct flights on 10FEB
+2025-12-30 17:15:54 | INFO     | [SUCCESS] Day 10FEB
+2025-12-30 17:15:54 | INFO     | [SUCCESS] LF Search Complete
+2025-12-30 17:15:56 | INFO     | [Worker_9233] Completed: DMM-ATZ - 9 results, 0 errors
+2025-12-30 17:15:56 | INFO     | [Worker_9233] Processing: TUU-CAI
+2025-12-30 17:15:56 | INFO     |   Tier 0: Range 2, Chunk 2/3 (9 days)

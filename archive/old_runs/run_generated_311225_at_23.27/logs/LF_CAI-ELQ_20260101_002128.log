@@ -1,0 +1,33 @@
+2026-01-01 00:21:28 | INFO     | ======================================================================
+2026-01-01 00:21:28 | INFO     | Load Factor Scraper Started - Route: CAI-ELQ
+2026-01-01 00:21:28 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_23.27\logs\LF_CAI-ELQ_20260101_002128.log
+2026-01-01 00:21:28 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-01 00:21:28 | INFO     | ======================================================================
+2026-01-01 00:21:28 | INFO     | Starting LF search for route: CAI-ELQ
+2026-01-01 00:21:28 | INFO     | [START] LF Search
+2026-01-01 00:21:30 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-01 00:21:30 | INFO     | [DAY_START] Processing 05JAN
+2026-01-01 00:21:30 | INFO     | [lf.day.start] Processing CAI-ELQ for 05JAN
+2026-01-01 00:21:31 | WARNING  | [lf.day.no_flights] No direct flights on 05JAN
+2026-01-01 00:21:31 | INFO     | [SUCCESS] Day 05JAN
+2026-01-01 00:21:31 | INFO     | [DAY_START] Processing 04JAN
+2026-01-01 00:21:31 | INFO     | [lf.day.start] Processing CAI-ELQ for 04JAN
+2026-01-01 00:21:32 | WARNING  | [lf.day.no_flights] No direct flights on 04JAN
+2026-01-01 00:21:32 | INFO     | [SUCCESS] Day 04JAN
+2026-01-01 00:21:32 | INFO     | [DAY_START] Processing 03JAN
+2026-01-01 00:21:32 | INFO     | [lf.day.start] Processing CAI-ELQ for 03JAN
+2026-01-01 00:21:33 | WARNING  | [lf.day.no_flights] No direct flights on 03JAN
+2026-01-01 00:21:34 | INFO     | [SUCCESS] Day 03JAN
+2026-01-01 00:21:34 | INFO     | [DAY_START] Processing 02JAN
+2026-01-01 00:21:34 | INFO     | [lf.day.start] Processing CAI-ELQ for 02JAN
+2026-01-01 00:21:35 | INFO     | [lf.day.flights_found] Found 1 flights on 02JAN
+2026-01-01 00:21:37 | INFO     | [lf.flight.extracted] SM427 on 02JAN: BKG=122, LF=68.2%
+2026-01-01 00:21:43 | INFO     | [SUCCESS] Day 02JAN
+2026-01-01 00:21:43 | INFO     | [DAY_START] Processing 31DEC
+2026-01-01 00:21:43 | INFO     | [lf.day.start] Processing CAI-ELQ for 31DEC
+2026-01-01 00:21:44 | WARNING  | [lf.day.no_flights] No direct flights on 31DEC
+2026-01-01 00:21:44 | INFO     | [SUCCESS] Day 31DEC
+2026-01-01 00:21:44 | INFO     | [SUCCESS] LF Search Complete
+2026-01-01 00:21:46 | INFO     | [Worker_9225] Completed: CAI-ELQ - 5 results, 0 errors
+2026-01-01 00:42:38 | INFO     | [Worker_9225] Shutdown signal received, exiting...
+2026-01-01 00:42:38 | INFO     | [Worker_9225] Finished. Processed 69 groups.

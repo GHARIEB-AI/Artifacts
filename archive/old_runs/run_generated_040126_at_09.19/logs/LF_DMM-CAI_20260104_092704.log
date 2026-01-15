@@ -1,0 +1,40 @@
+2026-01-04 09:27:04 | INFO     | ======================================================================
+2026-01-04 09:27:04 | INFO     | Load Factor Scraper Started - Route: DMM-CAI
+2026-01-04 09:27:04 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_040126_at_09.19\logs\LF_DMM-CAI_20260104_092704.log
+2026-01-04 09:27:04 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-04 09:27:04 | INFO     | ======================================================================
+2026-01-04 09:27:04 | INFO     | Starting LF search for route: DMM-CAI
+2026-01-04 09:27:04 | INFO     | [START] LF Search
+2026-01-04 09:27:06 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-04 09:27:06 | INFO     | [DAY_START] Processing 10JAN
+2026-01-04 09:27:06 | INFO     | [lf.day.start] Processing DMM-CAI for 10JAN
+2026-01-04 09:27:07 | INFO     | [lf.day.flights_found] Found 1 flights on 10JAN
+2026-01-04 09:27:09 | INFO     | [lf.flight.extracted] SM434 on 10JAN: BKG=32, LF=18.3%
+2026-01-04 09:27:12 | INFO     | [SUCCESS] Day 10JAN
+2026-01-04 09:27:12 | INFO     | [DAY_START] Processing 09JAN
+2026-01-04 09:27:12 | INFO     | [lf.day.start] Processing DMM-CAI for 09JAN
+2026-01-04 09:27:13 | INFO     | [lf.day.flights_found] Found 1 flights on 09JAN
+2026-01-04 09:27:15 | INFO     | [lf.flight.extracted] SM434 on 09JAN: BKG=70, LF=40.0%
+2026-01-04 09:27:20 | INFO     | [SUCCESS] Day 09JAN
+2026-01-04 09:27:20 | INFO     | [DAY_START] Processing 08JAN
+2026-01-04 09:27:20 | INFO     | [lf.day.start] Processing DMM-CAI for 08JAN
+2026-01-04 09:27:21 | INFO     | [lf.day.flights_found] Found 1 flights on 08JAN
+2026-01-04 09:27:22 | INFO     | [lf.flight.extracted] SM434 on 08JAN: BKG=69, LF=39.4%
+2026-01-04 09:27:26 | INFO     | [SUCCESS] Day 08JAN
+2026-01-04 09:27:26 | INFO     | [DAY_START] Processing 07JAN
+2026-01-04 09:27:26 | INFO     | [lf.day.start] Processing DMM-CAI for 07JAN
+2026-01-04 09:27:27 | WARNING  | [lf.day.no_flights] No direct flights on 07JAN
+2026-01-04 09:27:27 | INFO     | [SUCCESS] Day 07JAN
+2026-01-04 09:27:27 | INFO     | [DAY_START] Processing 06JAN
+2026-01-04 09:27:27 | INFO     | [lf.day.start] Processing DMM-CAI for 06JAN
+2026-01-04 09:27:28 | INFO     | [lf.day.flights_found] Found 1 flights on 06JAN
+2026-01-04 09:27:30 | INFO     | [lf.flight.extracted] SM434 on 06JAN: BKG=31, LF=17.7%
+2026-01-04 09:27:34 | INFO     | [SUCCESS] Day 06JAN
+2026-01-04 09:27:34 | INFO     | [DAY_START] Processing 05JAN
+2026-01-04 09:27:34 | INFO     | [lf.day.start] Processing DMM-CAI for 05JAN
+2026-01-04 09:27:35 | WARNING  | [lf.day.no_flights] No direct flights on 05JAN
+2026-01-04 09:27:36 | INFO     | [SUCCESS] Day 05JAN
+2026-01-04 09:27:36 | INFO     | [SUCCESS] LF Search Complete
+2026-01-04 09:27:38 | INFO     | [Worker_9224] Completed: DMM-CAI - 6 results, 0 errors
+2026-01-04 09:27:38 | INFO     | [Worker_9224] Processing: AJF-CAI
+2026-01-04 09:27:38 | INFO     |   Tier 0: Range 1, Chunk 4/4 (7 days)

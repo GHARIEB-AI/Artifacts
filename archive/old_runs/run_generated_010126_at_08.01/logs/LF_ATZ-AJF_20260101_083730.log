@@ -1,0 +1,37 @@
+2026-01-01 08:37:30 | INFO     | ======================================================================
+2026-01-01 08:37:30 | INFO     | Load Factor Scraper Started - Route: ATZ-AJF
+2026-01-01 08:37:30 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_010126_at_08.01\logs\LF_ATZ-AJF_20260101_083730.log
+2026-01-01 08:37:30 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-01 08:37:30 | INFO     | ======================================================================
+2026-01-01 08:37:30 | INFO     | Starting LF search for route: ATZ-AJF
+2026-01-01 08:37:30 | INFO     | [START] LF Search
+2026-01-01 08:37:31 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-01 08:37:31 | INFO     | [DAY_START] Processing 24JAN
+2026-01-01 08:37:31 | INFO     | [lf.day.start] Processing ATZ-AJF for 24JAN
+2026-01-01 08:37:32 | WARNING  | [lf.day.no_flights] No direct flights on 24JAN
+2026-01-01 08:37:33 | INFO     | [SUCCESS] Day 24JAN
+2026-01-01 08:37:33 | INFO     | [DAY_START] Processing 23JAN
+2026-01-01 08:37:33 | INFO     | [lf.day.start] Processing ATZ-AJF for 23JAN
+2026-01-01 08:37:34 | INFO     | [lf.day.flights_found] Found 1 flights on 23JAN
+2026-01-01 08:37:35 | INFO     | [lf.flight.extracted] SM323 on 23JAN: BKG=26, LF=14.5%
+2026-01-01 08:37:39 | INFO     | [SUCCESS] Day 23JAN
+2026-01-01 08:37:39 | INFO     | [DAY_START] Processing 22JAN
+2026-01-01 08:37:39 | INFO     | [lf.day.start] Processing ATZ-AJF for 22JAN
+2026-01-01 08:37:40 | WARNING  | [lf.day.no_flights] No direct flights on 22JAN
+2026-01-01 08:37:40 | INFO     | [SUCCESS] Day 22JAN
+2026-01-01 08:37:40 | INFO     | [DAY_START] Processing 21JAN
+2026-01-01 08:37:40 | INFO     | [lf.day.start] Processing ATZ-AJF for 21JAN
+2026-01-01 08:37:41 | WARNING  | [lf.day.no_flights] No direct flights on 21JAN
+2026-01-01 08:37:41 | INFO     | [SUCCESS] Day 21JAN
+2026-01-01 08:37:41 | INFO     | [DAY_START] Processing 20JAN
+2026-01-01 08:37:41 | INFO     | [lf.day.start] Processing ATZ-AJF for 20JAN
+2026-01-01 08:37:42 | WARNING  | [lf.day.no_flights] No direct flights on 20JAN
+2026-01-01 08:37:42 | INFO     | [SUCCESS] Day 20JAN
+2026-01-01 08:37:42 | INFO     | [DAY_START] Processing 19JAN
+2026-01-01 08:37:42 | INFO     | [lf.day.start] Processing ATZ-AJF for 19JAN
+2026-01-01 08:37:43 | WARNING  | [lf.day.no_flights] No direct flights on 19JAN
+2026-01-01 08:37:43 | INFO     | [SUCCESS] Day 19JAN
+2026-01-01 08:37:43 | INFO     | [SUCCESS] LF Search Complete
+2026-01-01 08:37:45 | INFO     | [Worker_9234] Completed: ATZ-AJF - 6 results, 0 errors
+2026-01-01 08:37:45 | INFO     | [Worker_9234] Processing: ATZ-ELQ
+2026-01-01 08:37:45 | INFO     |   Tier 0: Range 1, Chunk 2/5 (6 days)

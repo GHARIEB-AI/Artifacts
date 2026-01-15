@@ -1,0 +1,34 @@
+2025-12-31 21:07:10 | INFO     | ======================================================================
+2025-12-31 21:07:10 | INFO     | Load Factor Scraper Started - Route: AJF-CAI
+2025-12-31 21:07:10 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_20.48\logs\LF_AJF-CAI_20251231_210710.log
+2025-12-31 21:07:10 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 21:07:10 | INFO     | ======================================================================
+2025-12-31 21:07:10 | INFO     | Starting LF search for route: AJF-CAI
+2025-12-31 21:07:10 | INFO     | [START] LF Search
+2025-12-31 21:07:12 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 21:07:12 | INFO     | [DAY_START] Processing 05JAN
+2025-12-31 21:07:12 | INFO     | [lf.day.start] Processing AJF-CAI for 05JAN
+2025-12-31 21:07:13 | WARNING  | [lf.day.no_flights] No direct flights on 05JAN
+2025-12-31 21:07:13 | INFO     | [SUCCESS] Day 05JAN
+2025-12-31 21:07:13 | INFO     | [DAY_START] Processing 04JAN
+2025-12-31 21:07:13 | INFO     | [lf.day.start] Processing AJF-CAI for 04JAN
+2025-12-31 21:07:14 | WARNING  | [lf.day.no_flights] No direct flights on 04JAN
+2025-12-31 21:07:14 | INFO     | [SUCCESS] Day 04JAN
+2025-12-31 21:07:14 | INFO     | [DAY_START] Processing 03JAN
+2025-12-31 21:07:14 | INFO     | [lf.day.start] Processing AJF-CAI for 03JAN
+2025-12-31 21:07:15 | INFO     | [lf.day.flights_found] Found 1 flights on 03JAN
+2025-12-31 21:07:18 | INFO     | [lf.flight.extracted] SM322 on 03JAN: BKG=160, LF=91.4%
+2025-12-31 21:07:25 | INFO     | [SUCCESS] Day 03JAN
+2025-12-31 21:07:25 | INFO     | [DAY_START] Processing 02JAN
+2025-12-31 21:07:25 | INFO     | [lf.day.start] Processing AJF-CAI for 02JAN
+2025-12-31 21:07:26 | WARNING  | [lf.day.no_flights] No direct flights on 02JAN
+2025-12-31 21:07:26 | INFO     | [SUCCESS] Day 02JAN
+2025-12-31 21:07:26 | INFO     | [DAY_START] Processing 01JAN
+2025-12-31 21:07:26 | INFO     | [lf.day.start] Processing AJF-CAI for 01JAN
+2025-12-31 21:07:27 | INFO     | [lf.day.flights_found] Found 1 flights on 01JAN
+2025-12-31 21:07:29 | INFO     | [lf.flight.extracted] SM322 on 01JAN: BKG=167, LF=100.0%
+2025-12-31 21:07:53 | INFO     | [SUCCESS] Day 01JAN
+2025-12-31 21:07:53 | INFO     | [SUCCESS] LF Search Complete
+2025-12-31 21:07:55 | INFO     | [Worker_9232] Completed: AJF-CAI - 5 results, 0 errors
+2025-12-31 21:07:55 | INFO     | [Worker_9232] Processing: HBE-MED
+2025-12-31 21:07:55 | INFO     |   Tier 0: Range 1, Chunk 5/5 (6 days)

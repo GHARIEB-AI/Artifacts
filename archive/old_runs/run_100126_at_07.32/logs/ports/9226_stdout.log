@@ -1,0 +1,260 @@
+
+============================================================
+     LF WORKER - PORT 9226
+============================================================
+Worker: Worker_9226
+Status: READY
+Waiting for tasks...
+============================================================
+
+
+============================================================
+[Worker_9226] Processing: MED-HBE
+  Tier 0: Range 2, Chunk 1/3
+  Dates: 7 days
+  Date Range: 2026-01-31 to 2026-01-25
+============================================================
+
+2026-01-10 07:33:03 | INFO     | ======================================================================
+2026-01-10 07:33:03 | INFO     | Load Factor Scraper Started - Route: MED-HBE
+2026-01-10 07:33:03 | INFO     | Log file: D:\CODERED\LAB\Artifacts\run_100126_at_07.32\logs\LF_MED-HBE_20260110_073303.log
+2026-01-10 07:33:03 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-10 07:33:03 | INFO     | ======================================================================
+[LF] Processing dates (override): ['31JAN', '30JAN', '29JAN', '28JAN', '27JAN', '26JAN', '25JAN']
+[LF] Attaching to Chrome for Altea access
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9226 (after 1 attempts)
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+[LF] Processing MED-HBE for 31JAN
+[LF][ERROR] Amadeus command error detected: UNKNOWN TRANSACTION
+[LF][ERROR] Command: SN31JANMEDHBE/ASM
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+============================================================
+[LF][RESYNC] Command 'SN31JANMEDHBE/ASM' failed: TECH_ERROR:UNKNOWN TRANSACTION
+[LF][RESYNC] Re-running entire day from SN command for MED-HBE 31JAN
+[LF][RESYNC] Attempt 1/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing MED-HBE for 31JAN
+[LF] No direct flights on 31JAN for MED-HBE
+[LF] Processing MED-HBE for 30JAN
+[LF] No direct flights on 30JAN for MED-HBE
+[LF] Processing MED-HBE for 29JAN
+[LF] 29JAN: found 1 direct flights
+[LF] SM486 29JAN: BKG=169, GRP=140, CAP=175, LF%=96.6%, Brd-Off=MED-HBE, Classes: P:140, I:8, O:14, U:3, K:4
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM486 29JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+[LF] Processing MED-HBE for 28JAN
+[LF] 28JAN: found 1 direct flights
+[LF] SM486 28JAN: BKG=168, GRP=135, CAP=175, LF%=96.0%, Brd-Off=MED-HBE, Classes: P:137, I:17, O:12, K:2
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM486 28JAN: LASTSOLD=2026-01-08 00:00:00, WEEKLY=1, TODAY=0, YDAY=0
+[LF] Processing MED-HBE for 27JAN
+[LF] 27JAN: found 1 direct flights
+[LF] SM486 27JAN: BKG=165, GRP=145, CAP=175, LF%=94.3%, Brd-Off=MED-HBE, Classes: P:145, I:4, O:16
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM486 27JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=1, TODAY=0, YDAY=1
+[LF] Processing MED-HBE for 26JAN
+[LF] No direct flights on 26JAN for MED-HBE
+[LF] Processing MED-HBE for 25JAN
+[LF] 25JAN: found 1 direct flights
+[LF] SM486 25JAN: BKG=168, GRP=135, CAP=175, LF%=96.0%, Brd-Off=MED-HBE, Classes: P:135, I:16, O:13, S:1, K:3
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM486 25JAN: LASTSOLD=2026-01-01 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+[LF] Results summary:
+  2026-01-31: 0 flights
+  2026-01-30: 0 flights
+  2026-01-29: 1 flights
+  2026-01-28: 1 flights
+  2026-01-27: 1 flights
+  2026-01-26: 0 flights
+  2026-01-25: 1 flights
+
+============================================================
+[Worker_9226] ✓ COMPLETED: MED-HBE
+  Results: 7 dates
+  Errors: 0 dates
+  Total Processed: 1 groups
+============================================================
+
+
+============================================================
+[Worker_9226] Processing: DMM-ATZ
+  Tier 0: Range 2, Chunk 1/3
+  Dates: 7 days
+  Date Range: 2026-01-31 to 2026-01-25
+============================================================
+
+2026-01-10 07:33:43 | INFO     | ======================================================================
+2026-01-10 07:33:43 | INFO     | Load Factor Scraper Started - Route: DMM-ATZ
+2026-01-10 07:33:43 | INFO     | Log file: D:\CODERED\LAB\Artifacts\run_100126_at_07.32\logs\LF_DMM-ATZ_20260110_073343.log
+2026-01-10 07:33:43 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-10 07:33:43 | INFO     | ======================================================================
+[LF] Processing dates (override): ['31JAN', '30JAN', '29JAN', '28JAN', '27JAN', '26JAN', '25JAN']
+[LF] Attaching to Chrome for Altea access
+2026-01-10 07:33:43 | INFO     | Starting LF search for route: DMM-ATZ
+2026-01-10 07:33:43 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9226 (after 1 attempts)
+2026-01-10 07:33:44 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+2026-01-10 07:33:44 | INFO     | [DAY_START] Processing 31JAN
+[LF] Processing DMM-ATZ for 31JAN
+2026-01-10 07:33:44 | INFO     | [lf.day.start] Processing DMM-ATZ for 31JAN
+[LF] No direct flights on 31JAN for DMM-ATZ
+2026-01-10 07:33:45 | WARNING  | [lf.day.no_flights] No direct flights on 31JAN
+2026-01-10 07:33:45 | INFO     | [SUCCESS] Day 31JAN
+2026-01-10 07:33:45 | INFO     | [DAY_START] Processing 30JAN
+[LF] Processing DMM-ATZ for 30JAN
+2026-01-10 07:33:45 | INFO     | [lf.day.start] Processing DMM-ATZ for 30JAN
+[LF] 30JAN: found 1 direct flights
+2026-01-10 07:33:46 | INFO     | [lf.day.flights_found] Found 1 flights on 30JAN
+2026-01-10 07:33:47 | INFO     | [lf.flight.extracted] SM438 on 30JAN: BKG=85, LF=48.6%
+[LF] SM438 30JAN: BKG=85, GRP=0, CAP=175, LF%=48.6%, Brd-Off=DMM-ATZ, Classes: I:9, O:9, U:9, X:9, T:44, W:5
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM438 30JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=47, TODAY=0, YDAY=7
+2026-01-10 07:33:52 | INFO     | [SUCCESS] Day 30JAN
+2026-01-10 07:33:52 | INFO     | [DAY_START] Processing 29JAN
+[LF] Processing DMM-ATZ for 29JAN
+2026-01-10 07:33:52 | INFO     | [lf.day.start] Processing DMM-ATZ for 29JAN
+[LF] No direct flights on 29JAN for DMM-ATZ
+2026-01-10 07:33:53 | WARNING  | [lf.day.no_flights] No direct flights on 29JAN
+2026-01-10 07:33:53 | INFO     | [SUCCESS] Day 29JAN
+2026-01-10 07:33:53 | INFO     | [DAY_START] Processing 28JAN
+[LF] Processing DMM-ATZ for 28JAN
+2026-01-10 07:33:53 | INFO     | [lf.day.start] Processing DMM-ATZ for 28JAN
+[LF] No direct flights on 28JAN for DMM-ATZ
+2026-01-10 07:33:55 | WARNING  | [lf.day.no_flights] No direct flights on 28JAN
+2026-01-10 07:33:55 | INFO     | [SUCCESS] Day 28JAN
+2026-01-10 07:33:55 | INFO     | [DAY_START] Processing 27JAN
+[LF] Processing DMM-ATZ for 27JAN
+2026-01-10 07:33:55 | INFO     | [lf.day.start] Processing DMM-ATZ for 27JAN
+[LF] No direct flights on 27JAN for DMM-ATZ
+2026-01-10 07:33:56 | WARNING  | [lf.day.no_flights] No direct flights on 27JAN
+2026-01-10 07:33:56 | INFO     | [SUCCESS] Day 27JAN
+2026-01-10 07:33:56 | INFO     | [DAY_START] Processing 26JAN
+[LF] Processing DMM-ATZ for 26JAN
+2026-01-10 07:33:56 | INFO     | [lf.day.start] Processing DMM-ATZ for 26JAN
+[LF] 26JAN: found 1 direct flights
+2026-01-10 07:33:57 | INFO     | [lf.day.flights_found] Found 1 flights on 26JAN
+2026-01-10 07:33:59 | INFO     | [lf.flight.extracted] SM438 on 26JAN: BKG=62, LF=35.4%
+[LF] SM438 26JAN: BKG=62, GRP=0, CAP=175, LF%=35.4%, Brd-Off=DMM-ATZ, Classes: I:9, O:9, U:9, X:22, T:12, G:1
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM438 26JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=33, TODAY=0, YDAY=3
+2026-01-10 07:34:03 | INFO     | [SUCCESS] Day 26JAN
+2026-01-10 07:34:03 | INFO     | [DAY_START] Processing 25JAN
+[LF] Processing DMM-ATZ for 25JAN
+2026-01-10 07:34:03 | INFO     | [lf.day.start] Processing DMM-ATZ for 25JAN
+[LF] No direct flights on 25JAN for DMM-ATZ
+2026-01-10 07:34:04 | WARNING  | [lf.day.no_flights] No direct flights on 25JAN
+2026-01-10 07:34:04 | INFO     | [SUCCESS] Day 25JAN
+[LF] Results summary:
+  2026-01-31: 0 flights
+  2026-01-30: 1 flights
+  2026-01-29: 0 flights
+  2026-01-28: 0 flights
+  2026-01-27: 0 flights
+  2026-01-26: 1 flights
+  2026-01-25: 0 flights
+2026-01-10 07:34:04 | INFO     | [SUCCESS] LF Search Complete
+
+============================================================
+[Worker_9226] ✓ COMPLETED: DMM-ATZ
+  Results: 7 dates
+  Errors: 0 dates
+  Total Processed: 2 groups
+============================================================
+
+2026-01-10 07:34:06 | INFO     | [Worker_9226] Completed: DMM-ATZ - 7 results, 0 errors
+
+============================================================
+[Worker_9226] Processing: YNB-CAI
+  Tier 0: Range 2, Chunk 1/3
+  Dates: 7 days
+  Date Range: 2026-01-31 to 2026-01-25
+============================================================
+
+2026-01-10 07:34:06 | INFO     | [Worker_9226] Processing: YNB-CAI
+2026-01-10 07:34:06 | INFO     |   Tier 0: Range 2, Chunk 1/3 (7 days)
+2026-01-10 07:34:06 | INFO     | ======================================================================
+2026-01-10 07:34:06 | INFO     | Load Factor Scraper Started - Route: YNB-CAI
+2026-01-10 07:34:06 | INFO     | Log file: D:\CODERED\LAB\Artifacts\run_100126_at_07.32\logs\LF_YNB-CAI_20260110_073406.log
+2026-01-10 07:34:06 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-10 07:34:06 | INFO     | ======================================================================
+[LF] Processing dates (override): ['31JAN', '30JAN', '29JAN', '28JAN', '27JAN', '26JAN', '25JAN']
+[LF] Attaching to Chrome for Altea access
+2026-01-10 07:34:06 | INFO     | Starting LF search for route: YNB-CAI
+2026-01-10 07:34:06 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9226 (after 1 attempts)
+2026-01-10 07:34:07 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+2026-01-10 07:34:07 | INFO     | [DAY_START] Processing 31JAN
+[LF] Processing YNB-CAI for 31JAN
+2026-01-10 07:34:07 | INFO     | [lf.day.start] Processing YNB-CAI for 31JAN
+[LF] 31JAN: found 1 direct flights
+2026-01-10 07:34:08 | INFO     | [lf.day.flights_found] Found 1 flights on 31JAN
+2026-01-10 07:34:10 | INFO     | [lf.flight.extracted] SM442 on 31JAN: BKG=116, LF=66.3%
+[LF] SM442 31JAN: BKG=116, GRP=90, CAP=175, LF%=66.3%, Brd-Off=YNB-CAI, Classes: P:90, I:17, O:6, K:3
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM442 31JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=17, TODAY=0, YDAY=4
+2026-01-10 07:34:13 | INFO     | [SUCCESS] Day 31JAN
+2026-01-10 07:34:13 | INFO     | [DAY_START] Processing 30JAN
+[LF] Processing YNB-CAI for 30JAN
+2026-01-10 07:34:13 | INFO     | [lf.day.start] Processing YNB-CAI for 30JAN
+[LF] 30JAN: found 1 direct flights
+2026-01-10 07:34:15 | INFO     | [lf.day.flights_found] Found 1 flights on 30JAN
+2026-01-10 07:34:17 | INFO     | [lf.flight.extracted] SM442 on 30JAN: BKG=97, LF=55.4%
+[LF] SM442 30JAN: BKG=97, GRP=45, CAP=175, LF%=55.4%, Brd-Off=YNB-CAI, Classes: P:45, I:17, O:17, U:7, X:4, T:6, K:1
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM442 30JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=20, TODAY=0, YDAY=1
+2026-01-10 07:34:21 | INFO     | [SUCCESS] Day 30JAN
+2026-01-10 07:34:21 | INFO     | [DAY_START] Processing 29JAN
+[LF] Processing YNB-CAI for 29JAN
+2026-01-10 07:34:21 | INFO     | [lf.day.start] Processing YNB-CAI for 29JAN
+[LF] 29JAN: found 1 direct flights
+2026-01-10 07:34:22 | INFO     | [lf.day.flights_found] Found 1 flights on 29JAN
+2026-01-10 07:34:23 | INFO     | [lf.flight.extracted] SM442 on 29JAN: BKG=167, LF=95.4%
+[LF] SM442 29JAN: BKG=167, GRP=135, CAP=175, LF%=95.4%, Brd-Off=YNB-CAI, Classes: P:135, I:17, O:14, W:1
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM442 29JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=10, TODAY=0, YDAY=2
+2026-01-10 07:34:28 | INFO     | [SUCCESS] Day 29JAN
+2026-01-10 07:34:28 | INFO     | [DAY_START] Processing 28JAN
+[LF] Processing YNB-CAI for 28JAN
+2026-01-10 07:34:28 | INFO     | [lf.day.start] Processing YNB-CAI for 28JAN
+[LF] 28JAN: found 1 direct flights
+2026-01-10 07:34:29 | INFO     | [lf.day.flights_found] Found 1 flights on 28JAN
+2026-01-10 07:34:31 | INFO     | [lf.flight.extracted] SM442 on 28JAN: BKG=166, LF=94.9%
+[LF] SM442 28JAN: BKG=166, GRP=140, CAP=175, LF%=94.9%, Brd-Off=YNB-CAI, Classes: P:95, E:45, I:17, O:7, W:2
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM442 28JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=12, TODAY=0, YDAY=1
+2026-01-10 07:34:35 | INFO     | [SUCCESS] Day 28JAN
+2026-01-10 07:34:35 | INFO     | [DAY_START] Processing 27JAN
+[LF] Processing YNB-CAI for 27JAN
+2026-01-10 07:34:35 | INFO     | [lf.day.start] Processing YNB-CAI for 27JAN
+[LF] 27JAN: found 1 direct flights
+2026-01-10 07:34:36 | INFO     | [lf.day.flights_found] Found 1 flights on 27JAN
+2026-01-10 07:34:38 | INFO     | [lf.flight.extracted] SM442 on 27JAN: BKG=169, LF=98.3%
+[LF] SM442 27JAN: BKG=169, GRP=162, CAP=172, LF%=98.3%, Brd-Off=YNB-CAI, Classes: P:115, E:47, I:5, W:2
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM442 27JAN: LASTSOLD=2026-01-08 00:00:00, WEEKLY=1, TODAY=0, YDAY=0
+2026-01-10 07:34:43 | INFO     | [SUCCESS] Day 27JAN
+2026-01-10 07:34:43 | INFO     | [DAY_START] Processing 26JAN
+[LF] Processing YNB-CAI for 26JAN
+2026-01-10 07:34:43 | INFO     | [lf.day.start] Processing YNB-CAI for 26JAN
+[LF] 26JAN: found 1 direct flights
+2026-01-10 07:34:44 | INFO     | [lf.day.flights_found] Found 1 flights on 26JAN
+2026-01-10 07:34:46 | INFO     | [lf.flight.extracted] SM442 on 26JAN: BKG=108, LF=61.7%
+[LF] SM442 26JAN: BKG=108, GRP=83, CAP=175, LF%=61.7%, Brd-Off=YNB-CAI, Classes: P:83, I:17, O:7, W:1
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM442 26JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=15, TODAY=0, YDAY=1
+2026-01-10 07:34:51 | INFO     | [SUCCESS] Day 26JAN
+2026-01-10 07:34:51 | INFO     | [DAY_START] Processing 25JAN
+[LF] Processing YNB-CAI for 25JAN
+2026-01-10 07:34:51 | INFO     | [lf.day.start] Processing YNB-CAI for 25JAN
+[LF] 25JAN: found 1 direct flights
+2026-01-10 07:34:52 | INFO     | [lf.day.flights_found] Found 1 flights on 25JAN
+2026-01-10 07:34:54 | INFO     | [lf.flight.extracted] SM442 on 25JAN: BKG=104, LF=60.5%
+[LF] SM442 25JAN: BKG=104, GRP=90, CAP=172, LF%=60.5%, Brd-Off=YNB-CAI, Classes: P:90, X:11, W:2, G:1
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights

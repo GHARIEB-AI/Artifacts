@@ -1,0 +1,39 @@
+2026-01-01 08:41:28 | INFO     | ======================================================================
+2026-01-01 08:41:28 | INFO     | Load Factor Scraper Started - Route: CAI-TUU
+2026-01-01 08:41:28 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_010126_at_08.01\logs\LF_CAI-TUU_20260101_084128.log
+2026-01-01 08:41:28 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-01 08:41:28 | INFO     | ======================================================================
+2026-01-01 08:41:28 | INFO     | Starting LF search for route: CAI-TUU
+2026-01-01 08:41:28 | INFO     | [START] LF Search
+2026-01-01 08:41:30 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-01 08:41:30 | INFO     | [DAY_START] Processing 18JAN
+2026-01-01 08:41:30 | INFO     | [lf.day.start] Processing CAI-TUU for 18JAN
+2026-01-01 08:41:31 | WARNING  | [lf.day.no_flights] No direct flights on 18JAN
+2026-01-01 08:41:31 | INFO     | [SUCCESS] Day 18JAN
+2026-01-01 08:41:31 | INFO     | [DAY_START] Processing 17JAN
+2026-01-01 08:41:31 | INFO     | [lf.day.start] Processing CAI-TUU for 17JAN
+2026-01-01 08:41:33 | INFO     | [lf.day.flights_found] Found 1 flights on 17JAN
+2026-01-01 08:41:36 | INFO     | [lf.flight.extracted] SM325 on 17JAN: BKG=91, LF=50.8%
+2026-01-01 08:41:44 | INFO     | [SUCCESS] Day 17JAN
+2026-01-01 08:41:44 | INFO     | [DAY_START] Processing 16JAN
+2026-01-01 08:41:44 | INFO     | [lf.day.start] Processing CAI-TUU for 16JAN
+2026-01-01 08:41:46 | WARNING  | [lf.day.no_flights] No direct flights on 16JAN
+2026-01-01 08:41:46 | INFO     | [SUCCESS] Day 16JAN
+2026-01-01 08:41:46 | INFO     | [DAY_START] Processing 15JAN
+2026-01-01 08:41:46 | INFO     | [lf.day.start] Processing CAI-TUU for 15JAN
+2026-01-01 08:41:47 | INFO     | [lf.day.flights_found] Found 1 flights on 15JAN
+2026-01-01 08:41:50 | INFO     | [lf.flight.extracted] SM325 on 15JAN: BKG=44, LF=24.6%
+2026-01-01 08:41:56 | INFO     | [SUCCESS] Day 15JAN
+2026-01-01 08:41:56 | INFO     | [DAY_START] Processing 14JAN
+2026-01-01 08:41:56 | INFO     | [lf.day.start] Processing CAI-TUU for 14JAN
+2026-01-01 08:41:57 | INFO     | [lf.day.flights_found] Found 1 flights on 14JAN
+2026-01-01 08:42:00 | INFO     | [lf.flight.extracted] SM325 on 14JAN: BKG=29, LF=16.2%
+2026-01-01 08:42:07 | INFO     | [SUCCESS] Day 14JAN
+2026-01-01 08:42:07 | INFO     | [DAY_START] Processing 13JAN
+2026-01-01 08:42:07 | INFO     | [lf.day.start] Processing CAI-TUU for 13JAN
+2026-01-01 08:42:09 | WARNING  | [lf.day.no_flights] No direct flights on 13JAN
+2026-01-01 08:42:09 | INFO     | [SUCCESS] Day 13JAN
+2026-01-01 08:42:09 | INFO     | [SUCCESS] LF Search Complete
+2026-01-01 08:42:11 | INFO     | [Worker_9222] Completed: CAI-TUU - 6 results, 0 errors
+2026-01-01 08:42:11 | INFO     | [Worker_9222] Processing: CAI-AHB
+2026-01-01 08:42:11 | INFO     |   Tier 0: Range 1, Chunk 3/5 (6 days)

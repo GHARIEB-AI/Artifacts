@@ -1,0 +1,29 @@
+2026-01-03 05:24:06 | INFO     | ======================================================================
+2026-01-03 05:24:06 | INFO     | Load Factor Scraper Started - Route: TUU-CAI
+2026-01-03 05:24:06 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_030126_at_05.10\logs\LF_TUU-CAI_20260103_052406.log
+2026-01-03 05:24:06 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-03 05:24:06 | INFO     | ======================================================================
+2026-01-03 05:24:06 | INFO     | Starting LF search for route: TUU-CAI
+2026-01-03 05:24:06 | INFO     | [START] LF Search
+2026-01-03 05:24:07 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-03 05:24:07 | INFO     | [DAY_START] Processing 26JAN
+2026-01-03 05:24:07 | INFO     | [lf.day.start] Processing TUU-CAI for 26JAN
+2026-01-03 05:24:08 | WARNING  | [lf.day.no_flights] No direct flights on 26JAN
+2026-01-03 05:24:08 | INFO     | [SUCCESS] Day 26JAN
+2026-01-03 05:24:08 | INFO     | [DAY_START] Processing 25JAN
+2026-01-03 05:24:08 | INFO     | [lf.day.start] Processing TUU-CAI for 25JAN
+2026-01-03 05:24:09 | WARNING  | [lf.day.no_flights] No direct flights on 25JAN
+2026-01-03 05:24:09 | INFO     | [SUCCESS] Day 25JAN
+2026-01-03 05:24:09 | INFO     | [DAY_START] Processing 24JAN
+2026-01-03 05:24:09 | INFO     | [lf.day.start] Processing TUU-CAI for 24JAN
+2026-01-03 05:24:10 | INFO     | [lf.day.flights_found] Found 1 flights on 24JAN
+2026-01-03 05:24:12 | INFO     | [lf.flight.extracted] SM326 on 24JAN: BKG=10, LF=5.7%
+2026-01-03 05:24:15 | INFO     | [SUCCESS] Day 24JAN
+2026-01-03 05:24:15 | INFO     | [DAY_START] Processing 23JAN
+2026-01-03 05:24:15 | INFO     | [lf.day.start] Processing TUU-CAI for 23JAN
+2026-01-03 05:24:16 | WARNING  | [lf.day.no_flights] No direct flights on 23JAN
+2026-01-03 05:24:16 | INFO     | [SUCCESS] Day 23JAN
+2026-01-03 05:24:16 | INFO     | [SUCCESS] LF Search Complete
+2026-01-03 05:24:18 | INFO     | [Worker_9233] Completed: TUU-CAI - 4 results, 0 errors
+2026-01-03 05:24:18 | INFO     | [Worker_9233] Processing: HBE-MED
+2026-01-03 05:24:18 | INFO     |   Tier 0: Range 2, Chunk 2/3 (4 days)

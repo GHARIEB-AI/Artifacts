@@ -1,0 +1,51 @@
+2026-01-05 17:21:58 | INFO     | ======================================================================
+2026-01-05 17:21:58 | INFO     | Load Factor Scraper Started - Route: ATZ-RUH
+2026-01-05 17:21:58 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_050126_at_16.47\logs\LF_ATZ-RUH_20260105_172158.log
+2026-01-05 17:21:58 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-05 17:21:58 | INFO     | ======================================================================
+2026-01-05 17:21:58 | INFO     | Starting LF search for route: ATZ-RUH
+2026-01-05 17:21:58 | INFO     | [START] LF Search
+2026-01-05 17:22:00 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-05 17:22:00 | INFO     | [DAY_START] Processing 31JAN
+2026-01-05 17:22:00 | INFO     | [lf.day.start] Processing ATZ-RUH for 31JAN
+2026-01-05 17:22:01 | WARNING  | [lf.day.no_flights] No direct flights on 31JAN
+2026-01-05 17:22:01 | INFO     | [SUCCESS] Day 31JAN
+2026-01-05 17:22:01 | INFO     | [DAY_START] Processing 30JAN
+2026-01-05 17:22:01 | INFO     | [lf.day.start] Processing ATZ-RUH for 30JAN
+2026-01-05 17:22:02 | WARNING  | [lf.day.no_flights] No direct flights on 30JAN
+2026-01-05 17:22:03 | INFO     | [SUCCESS] Day 30JAN
+2026-01-05 17:22:03 | INFO     | [DAY_START] Processing 29JAN
+2026-01-05 17:22:03 | INFO     | [lf.day.start] Processing ATZ-RUH for 29JAN
+2026-01-05 17:22:04 | WARNING  | [lf.day.no_flights] No direct flights on 29JAN
+2026-01-05 17:22:04 | INFO     | [SUCCESS] Day 29JAN
+2026-01-05 17:22:04 | INFO     | [DAY_START] Processing 28JAN
+2026-01-05 17:22:04 | INFO     | [lf.day.start] Processing ATZ-RUH for 28JAN
+2026-01-05 17:22:06 | INFO     | [lf.day.flights_found] Found 1 flights on 28JAN
+2026-01-05 17:22:08 | INFO     | [lf.flight.extracted] SM465 on 28JAN: BKG=67, LF=37.4%
+2026-01-05 17:22:14 | INFO     | [SUCCESS] Day 28JAN
+2026-01-05 17:22:14 | INFO     | [DAY_START] Processing 27JAN
+2026-01-05 17:22:14 | INFO     | [lf.day.start] Processing ATZ-RUH for 27JAN
+2026-01-05 17:22:16 | INFO     | [lf.day.flights_found] Found 1 flights on 27JAN
+2026-01-05 17:22:19 | INFO     | [lf.flight.extracted] SM463 on 27JAN: BKG=62, LF=34.6%
+2026-01-05 17:22:25 | INFO     | [SUCCESS] Day 27JAN
+2026-01-05 17:22:25 | INFO     | [DAY_START] Processing 26JAN
+2026-01-05 17:22:25 | INFO     | [lf.day.start] Processing ATZ-RUH for 26JAN
+2026-01-05 17:22:26 | WARNING  | [lf.day.no_flights] No direct flights on 26JAN
+2026-01-05 17:22:26 | INFO     | [SUCCESS] Day 26JAN
+2026-01-05 17:22:26 | INFO     | [DAY_START] Processing 25JAN
+2026-01-05 17:22:26 | INFO     | [lf.day.start] Processing ATZ-RUH for 25JAN
+2026-01-05 17:22:28 | INFO     | [lf.day.flights_found] Found 1 flights on 25JAN
+2026-01-05 17:22:31 | INFO     | [lf.flight.extracted] SM463 on 25JAN: BKG=55, LF=30.7%
+2026-01-05 17:22:36 | INFO     | [SUCCESS] Day 25JAN
+2026-01-05 17:22:36 | INFO     | [DAY_START] Processing 24JAN
+2026-01-05 17:22:36 | INFO     | [lf.day.start] Processing ATZ-RUH for 24JAN
+2026-01-05 17:22:38 | WARNING  | [lf.day.no_flights] No direct flights on 24JAN
+2026-01-05 17:22:38 | INFO     | [SUCCESS] Day 24JAN
+2026-01-05 17:22:38 | INFO     | [DAY_START] Processing 23JAN
+2026-01-05 17:22:38 | INFO     | [lf.day.start] Processing ATZ-RUH for 23JAN
+2026-01-05 17:22:40 | WARNING  | [lf.day.no_flights] No direct flights on 23JAN
+2026-01-05 17:22:40 | INFO     | [SUCCESS] Day 23JAN
+2026-01-05 17:22:40 | INFO     | [SUCCESS] LF Search Complete
+2026-01-05 17:22:42 | INFO     | [Worker_9232] Completed: ATZ-RUH - 9 results, 0 errors
+2026-01-05 17:22:42 | INFO     | [Worker_9232] Processing: ATZ-TUU
+2026-01-05 17:22:42 | INFO     |   Tier 0: Range 1, Chunk 1/3 (9 days)

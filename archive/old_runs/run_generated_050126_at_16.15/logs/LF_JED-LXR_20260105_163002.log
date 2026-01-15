@@ -1,0 +1,57 @@
+2026-01-05 16:30:02 | INFO     | ======================================================================
+2026-01-05 16:30:02 | INFO     | Load Factor Scraper Started - Route: JED-LXR
+2026-01-05 16:30:02 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_050126_at_16.15\logs\LF_JED-LXR_20260105_163002.log
+2026-01-05 16:30:02 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-05 16:30:02 | INFO     | ======================================================================
+2026-01-05 16:30:02 | INFO     | Starting LF search for route: JED-LXR
+2026-01-05 16:30:02 | INFO     | [START] LF Search
+2026-01-05 16:30:03 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-05 16:30:03 | INFO     | [DAY_START] Processing 28FEB
+2026-01-05 16:30:03 | INFO     | [lf.day.start] Processing JED-LXR for 28FEB
+2026-01-05 16:30:05 | WARNING  | [lf.day.no_flights] No direct flights on 28FEB
+2026-01-05 16:30:05 | INFO     | [SUCCESS] Day 28FEB
+2026-01-05 16:30:05 | INFO     | [DAY_START] Processing 27FEB
+2026-01-05 16:30:05 | INFO     | [lf.day.start] Processing JED-LXR for 27FEB
+2026-01-05 16:30:06 | WARNING  | [lf.day.no_flights] No direct flights on 27FEB
+2026-01-05 16:30:06 | INFO     | [SUCCESS] Day 27FEB
+2026-01-05 16:30:06 | INFO     | [DAY_START] Processing 26FEB
+2026-01-05 16:30:06 | INFO     | [lf.day.start] Processing JED-LXR for 26FEB
+2026-01-05 16:30:07 | WARNING  | [lf.day.no_flights] No direct flights on 26FEB
+2026-01-05 16:30:07 | INFO     | [SUCCESS] Day 26FEB
+2026-01-05 16:30:07 | INFO     | [DAY_START] Processing 25FEB
+2026-01-05 16:30:07 | INFO     | [lf.day.start] Processing JED-LXR for 25FEB
+2026-01-05 16:30:08 | INFO     | [lf.day.flights_found] Found 1 flights on 25FEB
+2026-01-05 16:30:10 | INFO     | [lf.flight.extracted] SM960 on 25FEB: BKG=0, LF=0.0%
+2026-01-05 16:30:11 | INFO     | [SUCCESS] Day 25FEB
+2026-01-05 16:30:11 | INFO     | [DAY_START] Processing 24FEB
+2026-01-05 16:30:11 | INFO     | [lf.day.start] Processing JED-LXR for 24FEB
+2026-01-05 16:30:12 | INFO     | [lf.day.flights_found] Found 4 flights on 24FEB
+2026-01-05 16:30:14 | INFO     | [lf.flight.extracted] SM482 on 24FEB: BKG=0, LF=0.0%
+2026-01-05 16:30:17 | INFO     | [lf.flight.extracted] SM430 on 24FEB: BKG=0, LF=0.0%
+2026-01-05 16:30:20 | INFO     | [lf.flight.extracted] SM982 on 24FEB: BKG=0, LF=0.0%
+2026-01-05 16:30:23 | INFO     | [lf.flight.extracted] SM484 on 24FEB: BKG=0, LF=0.0%
+2026-01-05 16:30:25 | INFO     | [SUCCESS] Day 24FEB
+2026-01-05 16:30:25 | INFO     | [DAY_START] Processing 23FEB
+2026-01-05 16:30:25 | INFO     | [lf.day.start] Processing JED-LXR for 23FEB
+2026-01-05 16:30:26 | WARNING  | [lf.day.no_flights] No direct flights on 23FEB
+2026-01-05 16:30:26 | INFO     | [SUCCESS] Day 23FEB
+2026-01-05 16:30:26 | INFO     | [DAY_START] Processing 22FEB
+2026-01-05 16:30:26 | INFO     | [lf.day.start] Processing JED-LXR for 22FEB
+2026-01-05 16:30:27 | WARNING  | [lf.day.no_flights] No direct flights on 22FEB
+2026-01-05 16:30:27 | INFO     | [SUCCESS] Day 22FEB
+2026-01-05 16:30:27 | INFO     | [DAY_START] Processing 21FEB
+2026-01-05 16:30:27 | INFO     | [lf.day.start] Processing JED-LXR for 21FEB
+2026-01-05 16:30:28 | WARNING  | [lf.day.no_flights] No direct flights on 21FEB
+2026-01-05 16:30:28 | INFO     | [SUCCESS] Day 21FEB
+2026-01-05 16:30:28 | INFO     | [DAY_START] Processing 20FEB
+2026-01-05 16:30:28 | INFO     | [lf.day.start] Processing JED-LXR for 20FEB
+2026-01-05 16:30:29 | WARNING  | [lf.day.no_flights] No direct flights on 20FEB
+2026-01-05 16:30:29 | INFO     | [SUCCESS] Day 20FEB
+2026-01-05 16:30:29 | INFO     | [DAY_START] Processing 19FEB
+2026-01-05 16:30:29 | INFO     | [lf.day.start] Processing JED-LXR for 19FEB
+2026-01-05 16:30:30 | WARNING  | [lf.day.no_flights] No direct flights on 19FEB
+2026-01-05 16:30:30 | INFO     | [SUCCESS] Day 19FEB
+2026-01-05 16:30:30 | INFO     | [SUCCESS] LF Search Complete
+2026-01-05 16:30:32 | INFO     | [Worker_9223] Completed: JED-LXR - 10 results, 0 errors
+2026-01-05 16:30:32 | INFO     | [Worker_9223] Processing: JED-ASW
+2026-01-05 16:30:32 | INFO     |   Tier 0: Range 2, Chunk 1/3 (10 days)

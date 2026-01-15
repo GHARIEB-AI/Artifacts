@@ -1,0 +1,125 @@
+
+============================================================
+     LF WORKER - PORT 9233
+============================================================
+Worker: Worker_9233
+Status: READY
+Waiting for tasks...
+============================================================
+
+
+============================================================
+[Worker_9233] Processing: JED-ATZ
+  Tier 0: Range 2, Chunk 1/3
+  Dates: 7 days
+  Date Range: 2026-01-31 to 2026-01-25
+============================================================
+
+2026-01-10 07:33:03 | INFO     | ======================================================================
+2026-01-10 07:33:03 | INFO     | Load Factor Scraper Started - Route: JED-ATZ
+2026-01-10 07:33:03 | INFO     | Log file: D:\CODERED\LAB\Artifacts\run_100126_at_07.32\logs\LF_JED-ATZ_20260110_073303.log
+2026-01-10 07:33:03 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-10 07:33:03 | INFO     | ======================================================================
+[LF] Processing dates (override): ['31JAN', '30JAN', '29JAN', '28JAN', '27JAN', '26JAN', '25JAN']
+[LF] Attaching to Chrome for Altea access
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9233 (after 1 attempts)
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+[LF] Processing JED-ATZ for 31JAN
+[LF][ERROR] Amadeus command error detected: UNKNOWN TRANSACTION
+[LF][ERROR] Command: SN31JANJEDATZ/ASM
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+============================================================
+[LF][RESYNC] Command 'SN31JANJEDATZ/ASM' failed: TECH_ERROR:UNKNOWN TRANSACTION
+[LF][RESYNC] Re-running entire day from SN command for JED-ATZ 31JAN
+[LF][RESYNC] Attempt 1/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing JED-ATZ for 31JAN
+[LF] 31JAN: found 3 direct flights
+[LF] SM492 31JAN: BKG=168, GRP=135, CAP=175, LF%=96.0%, Brd-Off=JED-ATZ, Classes: P:135, I:17, O:13, U:3
+[LF] SM454 31JAN: BKG=168, GRP=135, CAP=175, LF%=96.0%, Brd-Off=JED-ATZ, Classes: P:135, I:17, O:13, U:3
+[LF] SM456 31JAN: BKG=109, GRP=45, CAP=175, LF%=62.3%, Brd-Off=JED-ATZ, Classes: P:45, I:17, O:17, U:17, X:12, S:1
+[LF] Getting WEEKLY/LASTSOLD data for 3 flights
+[LF] SM492 31JAN: LASTSOLD=2026-01-04 00:00:00, WEEKLY=6, TODAY=0, YDAY=0
+[LF] SM454 31JAN: LASTSOLD=2026-01-03 00:00:00, WEEKLY=1, TODAY=0, YDAY=0
+[LF] SM456 31JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=19, TODAY=0, YDAY=4
+[LF] Processing JED-ATZ for 30JAN
+[LF] 30JAN: found 1 direct flights
+[LF] SM492 30JAN: BKG=176, GRP=104, CAP=175, LF%=100.6%, Brd-Off=JED-ATZ, Classes: P:99, E:5, I:27, O:27, U:14, T:1, L:2, K:1
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM492 30JAN: LASTSOLD=2026-01-08 00:00:00, WEEKLY=40, TODAY=0, YDAY=0
+[LF] Processing JED-ATZ for 29JAN
+[LF] 29JAN: found 4 direct flights
+[LF] SM982 29JAN: BKG=167, GRP=130, CAP=167, LF%=100.0%, Brd-Off=JED-ATZ, Classes: P:90, E:40, I:30, O:7
+[LF] SM422 29JAN: BKG=166, GRP=130, CAP=175, LF%=94.9%, Brd-Off=JED-ATZ, Classes: P:130, I:17, O:15, T:3, S:1
+[LF] SM454 29JAN: BKG=168, GRP=146, CAP=175, LF%=96.0%, Brd-Off=JED-ATZ, Classes: P:96, E:50, I:17, O:1, U:4
+[LF] SM456 29JAN: BKG=159, GRP=135, CAP=168, LF%=94.6%, Brd-Off=JED-ATZ, Classes: P:90, E:45, I:17, O:4, T:2, K:1
+[LF] Getting WEEKLY/LASTSOLD data for 4 flights
+[LF] SM982 29JAN: LASTSOLD=2026-01-10 00:00:00, WEEKLY=22, TODAY=1, YDAY=0
+[LF] SM422 29JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=18, TODAY=0, YDAY=5
+[LF] SM454 29JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+[LF] SM456 29JAN: LASTSOLD=2026-01-07 00:00:00, WEEKLY=2, TODAY=0, YDAY=0
+[LF] Processing JED-ATZ for 28JAN
+[LF] 28JAN: found 2 direct flights
+[LF] SM454 28JAN: BKG=168, GRP=139, CAP=175, LF%=96.0%, Brd-Off=JED-ATZ, Classes: P:139, I:17, O:9, G:1, K:2
+[LF] SM492 28JAN: BKG=168, GRP=135, CAP=175, LF%=96.0%, Brd-Off=JED-ATZ, Classes: P:136, I:17, O:14, U:1
+[LF] Getting WEEKLY/LASTSOLD data for 2 flights
+[LF] SM454 28JAN: LASTSOLD=2026-01-08 00:00:00, WEEKLY=13, TODAY=0, YDAY=0
+[LF] SM492 28JAN: LASTSOLD=2026-01-05 00:00:00, WEEKLY=3, TODAY=0, YDAY=0
+[LF] Processing JED-ATZ for 27JAN
+[LF] 27JAN: found 3 direct flights
+[LF] SM976 27JAN: BKG=155, GRP=125, CAP=167, LF%=92.8%, Brd-Off=JED-ATZ, Classes: P:90, E:35, I:29, O:1
+[LF] SM454 27JAN: BKG=150, GRP=126, CAP=175, LF%=85.7%, Brd-Off=JED-ATZ, Classes: P:126, I:17, O:6, G:1
+[LF] SM456 27JAN: BKG=102, GRP=69, CAP=175, LF%=58.3%, Brd-Off=JED-ATZ, Classes: P:69, I:17, O:14, T:2
+[LF] Getting WEEKLY/LASTSOLD data for 3 flights
+[LF] SM976 27JAN: WEEKLY=99 → LP/T MANDATORY
+[DEBUG] SM976 27JAN: Match #1: HK 03JAN | Line: 001  01KOTB/ASHRAF ABDEL          	75SBYZ O  HK 03JAN RUHAA28WH
+[DEBUG] SM976 27JAN: Match #2: HK 03JAN | Line: 002  02ABDALLA/ABDALLA G          	9Z3T4R I  HK 03JAN JEDS22340
+[DEBUG] SM976 27JAN: Match #3: HK 07JAN | Line: 003  01ABDALLA/KHEDR MR           	8ZQVK4 I  HK 07JAN RUHS228WF
+[DEBUG] SM976 27JAN: Match #4: HK 03JAN | Line: 004  02ABDELGALIL/ALAA A          	9Z3T4R I  HK 03JAN JEDS22340
+[DEBUG] SM976 27JAN: Match #5: HK 03JAN | Line: 006  03ABDELLATIF/RAMADA          	75C7MU I  HK 03JAN QCAS22124
+[DEBUG] SM976 27JAN: DUPLICATE #1: 001 HK 03JAN | Skipping
+[DEBUG] SM976 27JAN: DUPLICATE #2: 002 HK 03JAN | Skipping
+[DEBUG] SM976 27JAN: DUPLICATE #3: 003 HK 07JAN | Skipping
+[DEBUG] SM976 27JAN: DUPLICATE #4: 004 HK 03JAN | Skipping
+[DEBUG] SM976 27JAN: DUPLICATE #5: 006 HK 03JAN | Skipping
+[DEBUG] SM976 27JAN: Match #6: HK 07JAN | Line: 007  01ABDELMAWLLA/MOHAM          	95JXM7 I  HK 07JAN JEDSM07TP
+[DEBUG] SM976 27JAN: Match #7: HK 03JAN | Line: 008  01ABDELRAHMAN/ALI M          	73Z9GT I  HK 03JAN TIFS22231
+[DEBUG] SM976 27JAN: Match #8: HK 03JAN | Line: 009  01ABDELREHIM YOUNES          	74UKPF I  HK 03JAN JEDAK38AC
+[DEBUG] SM976 27JAN: Match #9: HK 05JAN | Line: 010  01ABDELSAMIE/MOHAME          	839KXI I  HK 05JAN RUHS228WF
+[DEBUG] SM976 27JAN: Match #10: HK 08JAN | Line: 011  02ABOUELNASR/SANAA           	9R3IMK I  HK 08JAN JEDSM07TP
+[DEBUG] SM976 27JAN: Match #11: HK 03JAN | Line: 014  01AHMED/ELFOULY MAH          	76TA6R I  HK 03JAN JEDAK38AC
+[DEBUG] SM976 27JAN: Match #12: HK 08JAN | Line: 016  04ELSAMMAN/MOSAAB            	9PS2TZ I  HK 08JAN RUHAA28WH
+[DEBUG] SM976 27JAN: Match #13: HK 08JAN | Line: 017  04ELSAMMAN/MOUTAZ            	9PS2TZ I  HK 08JAN RUHAA28WH
+[DEBUG] SM976 27JAN: Match #14: HK 08JAN | Line: 018  04ELSAMMAN/TAREK             	9PS2TZ I  HK 08JAN RUHAA28WH
+[DEBUG] SM976 27JAN: Match #15: HK 08JAN | Line: 019  04ELTOHAMY/AMER              	9PS2TZ I  HK 08JAN RUHAA28WH
+[DEBUG] SM976 27JAN: Match #16: HK 03JAN | Line: 020  03HUSEIN/HAMDY MR            	75C7MU I  HK 03JAN QCAS22124
+[DEBUG] SM976 27JAN: Match #17: HK 08JAN | Line: 023  02KHALAFALLA/ALY AB          	9Q5YK9 I  HK 08JAN QCAS22124
+[DEBUG] SM976 27JAN: Match #18: HK 03JAN | Line: 024  03MOHAMED/KAMAL MR           	75C7MU I  HK 03JAN QCAS22124
+[DEBUG] SM976 27JAN: Match #19: HK 05JAN | Line: 025  01MOHAMED/MAHMOUD E          	88GED2 I  HK 05JAN JEDS228AW
+[DEBUG] SM976 27JAN: Match #20: HK 06JAN | Line: 026  01MOHAMED HASSAN/EL          	8KJUXW I  HK 06JAN JEDAK38AC
+[DEBUG] SM976 27JAN: Match #21: HK 08JAN | Line: 027  02MOSTAFA/ASMAA MRS          	9R3IMK I  HK 08JAN JEDSM07TP
+[DEBUG] SM976 27JAN: Match #22: HK 09JAN | Line: 028  01MOUSSA/RABEA MR            	7X87LA I  HK 09JAN QCAS22124
+[DEBUG] SM976 27JAN: Match #23: HK 03JAN | Line: 029  01RABIE/HAMADA MR            	72YEG5 I  HK 03JAN ISTSM07TP
+[DEBUG] SM976 27JAN: DUPLICATE #6: 024 HK 03JAN | Skipping
+[DEBUG] SM976 27JAN: DUPLICATE #7: 025 HK 05JAN | Skipping
+[DEBUG] SM976 27JAN: DUPLICATE #8: 026 HK 06JAN | Skipping
+[DEBUG] SM976 27JAN: DUPLICATE #9: 027 HK 08JAN | Skipping
+[DEBUG] SM976 27JAN: DUPLICATE #10: 028 HK 09JAN | Skipping
+[DEBUG] SM976 27JAN: DUPLICATE #11: 029 HK 03JAN | Skipping
+[DEBUG] SM976 27JAN: Match #24: HK 08JAN | Line: 030  02TAGELKHETM/SHAALA          	9Q5YK9 I  HK 08JAN QCAS22124
+[LF] SM976 27JAN: LP/T count complete. True WEEKLY: 24, TODAY: 0, YDAY: 1 | Removed 11 duplicates
+[LF] SM976 27JAN: LP/T result: WEEKLY=24, TODAY=0, YDAY=1
+[LF] SM976 27JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=24, TODAY=0, YDAY=1
+[LF] SM454 27JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=4, TODAY=0, YDAY=2
+[LF] SM456 27JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=14, TODAY=0, YDAY=1
+[LF] Processing JED-ATZ for 26JAN
+[LF] 26JAN: found 4 direct flights
+[LF] SM974 26JAN: BKG=115, GRP=90, CAP=167, LF%=68.9%, Brd-Off=JED-ATZ, Classes: P:90, I:20, O:4, K:1
+[LF] SM456 26JAN: BKG=113, GRP=80, CAP=168, LF%=67.3%, Brd-Off=JED-ATZ, Classes: P:80, I:17, O:16
+[LF] SM492 26JAN: BKG=134, GRP=94, CAP=175, LF%=76.6%, Brd-Off=JED-ATZ, Classes: P:94, I:17, O:17, U:6
+[LF] SM454 26JAN: BKG=116, GRP=89, CAP=175, LF%=66.3%, Brd-Off=JED-ATZ, Classes: P:49, E:45, I:17, O:5
+[LF] Getting WEEKLY/LASTSOLD data for 4 flights
+[LF] SM974 26JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=11, TODAY=0, YDAY=3

@@ -1,0 +1,40 @@
+2026-01-01 08:12:17 | INFO     | ======================================================================
+2026-01-01 08:12:17 | INFO     | Load Factor Scraper Started - Route: LXR-JED
+2026-01-01 08:12:17 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_010126_at_08.01\logs\LF_LXR-JED_20260101_081217.log
+2026-01-01 08:12:17 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-01 08:12:17 | INFO     | ======================================================================
+2026-01-01 08:12:17 | INFO     | Starting LF search for route: LXR-JED
+2026-01-01 08:12:17 | INFO     | [START] LF Search
+2026-01-01 08:12:18 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-01 08:12:18 | INFO     | [DAY_START] Processing 12MAR
+2026-01-01 08:12:18 | INFO     | [lf.day.start] Processing LXR-JED for 12MAR
+2026-01-01 08:12:19 | WARNING  | [lf.day.no_flights] No direct flights on 12MAR
+2026-01-01 08:12:19 | INFO     | [SUCCESS] Day 12MAR
+2026-01-01 08:12:19 | INFO     | [DAY_START] Processing 11MAR
+2026-01-01 08:12:19 | INFO     | [lf.day.start] Processing LXR-JED for 11MAR
+2026-01-01 08:12:20 | WARNING  | [lf.day.no_flights] No direct flights on 11MAR
+2026-01-01 08:12:20 | INFO     | [SUCCESS] Day 11MAR
+2026-01-01 08:12:20 | INFO     | [DAY_START] Processing 10MAR
+2026-01-01 08:12:20 | INFO     | [lf.day.start] Processing LXR-JED for 10MAR
+2026-01-01 08:12:21 | INFO     | [lf.day.flights_found] Found 3 flights on 10MAR
+2026-01-01 08:12:23 | INFO     | [lf.flight.extracted] SM429 on 10MAR: BKG=0, LF=0.0%
+2026-01-01 08:12:26 | INFO     | [lf.flight.extracted] SM483 on 10MAR: BKG=0, LF=0.0%
+2026-01-01 08:12:30 | INFO     | [lf.flight.extracted] SM981 on 10MAR: BKG=0, LF=0.0%
+2026-01-01 08:12:31 | INFO     | [SUCCESS] Day 10MAR
+2026-01-01 08:12:31 | INFO     | [DAY_START] Processing 09MAR
+2026-01-01 08:12:31 | INFO     | [lf.day.start] Processing LXR-JED for 09MAR
+2026-01-01 08:12:32 | INFO     | [lf.day.flights_found] Found 1 flights on 09MAR
+2026-01-01 08:12:34 | INFO     | [lf.flight.extracted] SM481 on 09MAR: BKG=0, LF=0.0%
+2026-01-01 08:12:35 | INFO     | [SUCCESS] Day 09MAR
+2026-01-01 08:12:35 | INFO     | [DAY_START] Processing 08MAR
+2026-01-01 08:12:35 | INFO     | [lf.day.start] Processing LXR-JED for 08MAR
+2026-01-01 08:12:36 | WARNING  | [lf.day.no_flights] No direct flights on 08MAR
+2026-01-01 08:12:36 | INFO     | [SUCCESS] Day 08MAR
+2026-01-01 08:12:36 | INFO     | [DAY_START] Processing 07MAR
+2026-01-01 08:12:36 | INFO     | [lf.day.start] Processing LXR-JED for 07MAR
+2026-01-01 08:12:38 | WARNING  | [lf.day.no_flights] No direct flights on 07MAR
+2026-01-01 08:12:38 | INFO     | [SUCCESS] Day 07MAR
+2026-01-01 08:12:38 | INFO     | [SUCCESS] LF Search Complete
+2026-01-01 08:12:40 | INFO     | [Worker_9234] Completed: LXR-JED - 6 results, 0 errors
+2026-01-01 08:12:40 | INFO     | [Worker_9234] Processing: CAI-TUU
+2026-01-01 08:12:40 | INFO     |   Tier 0: Range 3, Chunk 4/5 (6 days)

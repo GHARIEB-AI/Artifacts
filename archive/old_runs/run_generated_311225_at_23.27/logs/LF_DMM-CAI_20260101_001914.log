@@ -1,0 +1,34 @@
+2026-01-01 00:19:14 | INFO     | ======================================================================
+2026-01-01 00:19:14 | INFO     | Load Factor Scraper Started - Route: DMM-CAI
+2026-01-01 00:19:14 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_23.27\logs\LF_DMM-CAI_20260101_001914.log
+2026-01-01 00:19:14 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-01 00:19:14 | INFO     | ======================================================================
+2026-01-01 00:19:14 | INFO     | Starting LF search for route: DMM-CAI
+2026-01-01 00:19:14 | INFO     | [START] LF Search
+2026-01-01 00:19:15 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-01 00:19:15 | INFO     | [DAY_START] Processing 05JAN
+2026-01-01 00:19:15 | INFO     | [lf.day.start] Processing DMM-CAI for 05JAN
+2026-01-01 00:19:16 | WARNING  | [lf.day.no_flights] No direct flights on 05JAN
+2026-01-01 00:19:16 | INFO     | [SUCCESS] Day 05JAN
+2026-01-01 00:19:16 | INFO     | [DAY_START] Processing 04JAN
+2026-01-01 00:19:16 | INFO     | [lf.day.start] Processing DMM-CAI for 04JAN
+2026-01-01 00:19:17 | WARNING  | [lf.day.no_flights] No direct flights on 04JAN
+2026-01-01 00:19:17 | INFO     | [SUCCESS] Day 04JAN
+2026-01-01 00:19:17 | INFO     | [DAY_START] Processing 03JAN
+2026-01-01 00:19:17 | INFO     | [lf.day.start] Processing DMM-CAI for 03JAN
+2026-01-01 00:19:18 | INFO     | [lf.day.flights_found] Found 1 flights on 03JAN
+2026-01-01 00:19:20 | INFO     | [lf.flight.extracted] SM434 on 03JAN: BKG=29, LF=16.6%
+2026-01-01 00:19:25 | INFO     | [SUCCESS] Day 03JAN
+2026-01-01 00:19:25 | INFO     | [DAY_START] Processing 02JAN
+2026-01-01 00:19:25 | INFO     | [lf.day.start] Processing DMM-CAI for 02JAN
+2026-01-01 00:19:26 | INFO     | [lf.day.flights_found] Found 1 flights on 02JAN
+2026-01-01 00:19:28 | INFO     | [lf.flight.extracted] SM434 on 02JAN: BKG=112, LF=64.0%
+2026-01-01 00:19:34 | INFO     | [SUCCESS] Day 02JAN
+2026-01-01 00:19:34 | INFO     | [DAY_START] Processing 31DEC
+2026-01-01 00:19:34 | INFO     | [lf.day.start] Processing DMM-CAI for 31DEC
+2026-01-01 00:19:35 | WARNING  | [lf.day.no_flights] No direct flights on 31DEC
+2026-01-01 00:19:36 | INFO     | [SUCCESS] Day 31DEC
+2026-01-01 00:19:36 | INFO     | [SUCCESS] LF Search Complete
+2026-01-01 00:19:38 | INFO     | [Worker_9224] Completed: DMM-CAI - 5 results, 0 errors
+2026-01-01 00:19:38 | INFO     | [Worker_9224] Processing: TUU-ATZ
+2026-01-01 00:19:38 | INFO     |   Tier 0: Range 1, Chunk 5/5 (6 days)

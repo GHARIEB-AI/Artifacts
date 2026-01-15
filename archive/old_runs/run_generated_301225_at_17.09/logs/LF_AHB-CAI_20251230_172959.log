@@ -1,0 +1,154 @@
+2025-12-30 17:29:59 | INFO     | ======================================================================
+2025-12-30 17:29:59 | INFO     | Load Factor Scraper Started - Route: AHB-CAI
+2025-12-30 17:29:59 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_301225_at_17.09\logs\LF_AHB-CAI_20251230_172959.log
+2025-12-30 17:29:59 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-30 17:29:59 | INFO     | ======================================================================
+2025-12-30 17:29:59 | INFO     | Starting LF search for route: AHB-CAI
+2025-12-30 17:29:59 | INFO     | [START] LF Search
+2025-12-30 17:30:01 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-30 17:30:01 | INFO     | [DAY_START] Processing 31JAN
+2025-12-30 17:30:01 | INFO     | [lf.day.start] Processing AHB-CAI for 31JAN
+2025-12-30 17:30:02 | WARNING  | [lf.day.no_flights] No direct flights on 31JAN
+2025-12-30 17:30:02 | INFO     | [SUCCESS] Day 31JAN
+2025-12-30 17:30:02 | INFO     | [DAY_START] Processing 30JAN
+2025-12-30 17:30:02 | INFO     | [lf.day.start] Processing AHB-CAI for 30JAN
+2025-12-30 17:30:03 | INFO     | [lf.day.flights_found] Found 1 flights on 30JAN
+2025-12-30 17:30:06 | INFO     | [lf.flight.extracted] SM444 on 30JAN: BKG=38, LF=21.7%
+2025-12-30 17:30:09 | INFO     | [SUCCESS] Day 30JAN
+2025-12-30 17:30:09 | INFO     | [DAY_START] Processing 29JAN
+2025-12-30 17:30:09 | INFO     | [lf.day.start] Processing AHB-CAI for 29JAN
+2025-12-30 17:30:11 | INFO     | [lf.day.flights_found] Found 1 flights on 29JAN
+2025-12-30 17:30:13 | INFO     | [lf.flight.extracted] SM448 on 29JAN: BKG=32, LF=18.3%
+2025-12-30 17:30:16 | INFO     | [SUCCESS] Day 29JAN
+2025-12-30 17:30:16 | INFO     | [DAY_START] Processing 28JAN
+2025-12-30 17:30:16 | INFO     | [lf.day.start] Processing AHB-CAI for 28JAN
+2025-12-30 17:30:17 | WARNING  | [lf.day.no_flights] No direct flights on 28JAN
+2025-12-30 17:30:17 | INFO     | [SUCCESS] Day 28JAN
+2025-12-30 17:30:17 | INFO     | [DAY_START] Processing 27JAN
+2025-12-30 17:30:17 | INFO     | [lf.day.start] Processing AHB-CAI for 27JAN
+2025-12-30 17:30:18 | WARNING  | [lf.day.no_flights] No direct flights on 27JAN
+2025-12-30 17:30:18 | INFO     | [SUCCESS] Day 27JAN
+2025-12-30 17:30:18 | INFO     | [DAY_START] Processing 26JAN
+2025-12-30 17:30:18 | INFO     | [lf.day.start] Processing AHB-CAI for 26JAN
+2025-12-30 17:30:19 | WARNING  | [lf.day.no_flights] No direct flights on 26JAN
+2025-12-30 17:30:19 | INFO     | [SUCCESS] Day 26JAN
+2025-12-30 17:30:19 | INFO     | [DAY_START] Processing 25JAN
+2025-12-30 17:30:19 | INFO     | [lf.day.start] Processing AHB-CAI for 25JAN
+2025-12-30 17:30:21 | INFO     | [lf.day.flights_found] Found 1 flights on 25JAN
+2025-12-30 17:30:23 | INFO     | [lf.flight.extracted] SM444 on 25JAN: BKG=22, LF=12.6%
+2025-12-30 17:30:26 | INFO     | [SUCCESS] Day 25JAN
+2025-12-30 17:30:26 | INFO     | [DAY_START] Processing 24JAN
+2025-12-30 17:30:26 | INFO     | [lf.day.start] Processing AHB-CAI for 24JAN
+2025-12-30 17:30:28 | WARNING  | [lf.day.no_flights] No direct flights on 24JAN
+2025-12-30 17:30:28 | INFO     | [SUCCESS] Day 24JAN
+2025-12-30 17:30:28 | INFO     | [DAY_START] Processing 23JAN
+2025-12-30 17:30:28 | INFO     | [lf.day.start] Processing AHB-CAI for 23JAN
+2025-12-30 17:30:29 | INFO     | [lf.day.flights_found] Found 1 flights on 23JAN
+2025-12-30 17:30:31 | INFO     | [lf.flight.extracted] SM444 on 23JAN: BKG=22, LF=12.6%
+2025-12-30 17:30:34 | INFO     | [SUCCESS] Day 23JAN
+2025-12-30 17:30:34 | INFO     | [DAY_START] Processing 22JAN
+2025-12-30 17:30:34 | INFO     | [lf.day.start] Processing AHB-CAI for 22JAN
+2025-12-30 17:30:36 | INFO     | [lf.day.flights_found] Found 1 flights on 22JAN
+2025-12-30 17:30:38 | INFO     | [lf.flight.extracted] SM448 on 22JAN: BKG=29, LF=16.9%
+2025-12-30 17:30:41 | INFO     | [SUCCESS] Day 22JAN
+2025-12-30 17:30:41 | INFO     | [DAY_START] Processing 21JAN
+2025-12-30 17:30:41 | INFO     | [lf.day.start] Processing AHB-CAI for 21JAN
+2025-12-30 17:30:42 | WARNING  | [lf.day.no_flights] No direct flights on 21JAN
+2025-12-30 17:30:42 | INFO     | [SUCCESS] Day 21JAN
+2025-12-30 17:30:42 | INFO     | [DAY_START] Processing 20JAN
+2025-12-30 17:30:42 | INFO     | [lf.day.start] Processing AHB-CAI for 20JAN
+2025-12-30 17:30:43 | WARNING  | [lf.day.no_flights] No direct flights on 20JAN
+2025-12-30 17:30:43 | INFO     | [SUCCESS] Day 20JAN
+2025-12-30 17:30:43 | INFO     | [DAY_START] Processing 19JAN
+2025-12-30 17:30:43 | INFO     | [lf.day.start] Processing AHB-CAI for 19JAN
+2025-12-30 17:30:44 | WARNING  | [lf.day.no_flights] No direct flights on 19JAN
+2025-12-30 17:30:44 | INFO     | [SUCCESS] Day 19JAN
+2025-12-30 17:30:44 | INFO     | [DAY_START] Processing 18JAN
+2025-12-30 17:30:44 | INFO     | [lf.day.start] Processing AHB-CAI for 18JAN
+2025-12-30 17:30:45 | INFO     | [lf.day.flights_found] Found 1 flights on 18JAN
+2025-12-30 17:30:48 | INFO     | [lf.flight.extracted] SM444 on 18JAN: BKG=26, LF=14.9%
+2025-12-30 17:30:51 | INFO     | [SUCCESS] Day 18JAN
+2025-12-30 17:30:51 | INFO     | [DAY_START] Processing 17JAN
+2025-12-30 17:30:51 | INFO     | [lf.day.start] Processing AHB-CAI for 17JAN
+2025-12-30 17:30:52 | WARNING  | [lf.day.no_flights] No direct flights on 17JAN
+2025-12-30 17:30:52 | INFO     | [SUCCESS] Day 17JAN
+2025-12-30 17:30:52 | INFO     | [DAY_START] Processing 16JAN
+2025-12-30 17:30:52 | INFO     | [lf.day.start] Processing AHB-CAI for 16JAN
+2025-12-30 17:30:53 | INFO     | [lf.day.flights_found] Found 1 flights on 16JAN
+2025-12-30 17:30:55 | INFO     | [lf.flight.extracted] SM444 on 16JAN: BKG=51, LF=29.1%
+2025-12-30 17:30:59 | INFO     | [SUCCESS] Day 16JAN
+2025-12-30 17:30:59 | INFO     | [DAY_START] Processing 15JAN
+2025-12-30 17:30:59 | INFO     | [lf.day.start] Processing AHB-CAI for 15JAN
+2025-12-30 17:31:00 | INFO     | [lf.day.flights_found] Found 1 flights on 15JAN
+2025-12-30 17:31:02 | INFO     | [lf.flight.extracted] SM448 on 15JAN: BKG=61, LF=34.9%
+2025-12-30 17:31:06 | INFO     | [SUCCESS] Day 15JAN
+2025-12-30 17:31:06 | INFO     | [DAY_START] Processing 14JAN
+2025-12-30 17:31:06 | INFO     | [lf.day.start] Processing AHB-CAI for 14JAN
+2025-12-30 17:31:07 | WARNING  | [lf.day.no_flights] No direct flights on 14JAN
+2025-12-30 17:31:08 | INFO     | [SUCCESS] Day 14JAN
+2025-12-30 17:31:08 | INFO     | [DAY_START] Processing 13JAN
+2025-12-30 17:31:08 | INFO     | [lf.day.start] Processing AHB-CAI for 13JAN
+2025-12-30 17:31:09 | WARNING  | [lf.day.no_flights] No direct flights on 13JAN
+2025-12-30 17:31:09 | INFO     | [SUCCESS] Day 13JAN
+2025-12-30 17:31:09 | INFO     | [DAY_START] Processing 12JAN
+2025-12-30 17:31:09 | INFO     | [lf.day.start] Processing AHB-CAI for 12JAN
+2025-12-30 17:31:10 | WARNING  | [lf.day.no_flights] No direct flights on 12JAN
+2025-12-30 17:31:10 | INFO     | [SUCCESS] Day 12JAN
+2025-12-30 17:31:10 | INFO     | [DAY_START] Processing 11JAN
+2025-12-30 17:31:10 | INFO     | [lf.day.start] Processing AHB-CAI for 11JAN
+2025-12-30 17:31:11 | INFO     | [lf.day.flights_found] Found 1 flights on 11JAN
+2025-12-30 17:31:13 | INFO     | [lf.flight.extracted] SM444 on 11JAN: BKG=51, LF=29.1%
+2025-12-30 17:31:18 | INFO     | [SUCCESS] Day 11JAN
+2025-12-30 17:31:18 | INFO     | [DAY_START] Processing 10JAN
+2025-12-30 17:31:18 | INFO     | [lf.day.start] Processing AHB-CAI for 10JAN
+2025-12-30 17:31:19 | WARNING  | [lf.day.no_flights] No direct flights on 10JAN
+2025-12-30 17:31:19 | INFO     | [SUCCESS] Day 10JAN
+2025-12-30 17:31:19 | INFO     | [DAY_START] Processing 09JAN
+2025-12-30 17:31:19 | INFO     | [lf.day.start] Processing AHB-CAI for 09JAN
+2025-12-30 17:31:20 | INFO     | [lf.day.flights_found] Found 1 flights on 09JAN
+2025-12-30 17:31:22 | INFO     | [lf.flight.extracted] SM444 on 09JAN: BKG=73, LF=41.7%
+2025-12-30 17:31:31 | INFO     | [SUCCESS] Day 09JAN
+2025-12-30 17:31:31 | INFO     | [DAY_START] Processing 08JAN
+2025-12-30 17:31:31 | INFO     | [lf.day.start] Processing AHB-CAI for 08JAN
+2025-12-30 17:31:32 | INFO     | [lf.day.flights_found] Found 1 flights on 08JAN
+2025-12-30 17:31:34 | INFO     | [lf.flight.extracted] SM448 on 08JAN: BKG=58, LF=33.1%
+2025-12-30 17:31:40 | INFO     | [SUCCESS] Day 08JAN
+2025-12-30 17:31:40 | INFO     | [DAY_START] Processing 07JAN
+2025-12-30 17:31:40 | INFO     | [lf.day.start] Processing AHB-CAI for 07JAN
+2025-12-30 17:31:41 | WARNING  | [lf.day.no_flights] No direct flights on 07JAN
+2025-12-30 17:31:41 | INFO     | [SUCCESS] Day 07JAN
+2025-12-30 17:31:41 | INFO     | [DAY_START] Processing 06JAN
+2025-12-30 17:31:41 | INFO     | [lf.day.start] Processing AHB-CAI for 06JAN
+2025-12-30 17:31:43 | WARNING  | [lf.day.no_flights] No direct flights on 06JAN
+2025-12-30 17:31:43 | INFO     | [SUCCESS] Day 06JAN
+2025-12-30 17:31:43 | INFO     | [DAY_START] Processing 05JAN
+2025-12-30 17:31:43 | INFO     | [lf.day.start] Processing AHB-CAI for 05JAN
+2025-12-30 17:31:44 | WARNING  | [lf.day.no_flights] No direct flights on 05JAN
+2025-12-30 17:31:44 | INFO     | [SUCCESS] Day 05JAN
+2025-12-30 17:31:44 | INFO     | [DAY_START] Processing 04JAN
+2025-12-30 17:31:44 | INFO     | [lf.day.start] Processing AHB-CAI for 04JAN
+2025-12-30 17:31:45 | INFO     | [lf.day.flights_found] Found 1 flights on 04JAN
+2025-12-30 17:31:47 | INFO     | [lf.flight.extracted] SM444 on 04JAN: BKG=69, LF=39.4%
+2025-12-30 17:31:52 | INFO     | [SUCCESS] Day 04JAN
+2025-12-30 17:31:52 | INFO     | [DAY_START] Processing 03JAN
+2025-12-30 17:31:52 | INFO     | [lf.day.start] Processing AHB-CAI for 03JAN
+2025-12-30 17:31:53 | WARNING  | [lf.day.no_flights] No direct flights on 03JAN
+2025-12-30 17:31:53 | INFO     | [SUCCESS] Day 03JAN
+2025-12-30 17:31:53 | INFO     | [DAY_START] Processing 02JAN
+2025-12-30 17:31:53 | INFO     | [lf.day.start] Processing AHB-CAI for 02JAN
+2025-12-30 17:31:55 | INFO     | [lf.day.flights_found] Found 1 flights on 02JAN
+2025-12-30 17:31:57 | INFO     | [lf.flight.extracted] SM444 on 02JAN: BKG=55, LF=31.4%
+2025-12-30 17:32:04 | INFO     | [SUCCESS] Day 02JAN
+2025-12-30 17:32:04 | INFO     | [DAY_START] Processing 01JAN
+2025-12-30 17:32:04 | INFO     | [lf.day.start] Processing AHB-CAI for 01JAN
+2025-12-30 17:32:05 | INFO     | [lf.day.flights_found] Found 1 flights on 01JAN
+2025-12-30 17:32:08 | INFO     | [lf.flight.extracted] SM448 on 01JAN: BKG=88, LF=50.3%
+2025-12-30 17:32:15 | INFO     | [SUCCESS] Day 01JAN
+2025-12-30 17:32:15 | INFO     | [DAY_START] Processing 31DEC
+2025-12-30 17:32:15 | INFO     | [lf.day.start] Processing AHB-CAI for 31DEC
+2025-12-30 17:32:16 | WARNING  | [lf.day.no_flights] No direct flights on 31DEC
+2025-12-30 17:32:16 | INFO     | [SUCCESS] Day 31DEC
+2025-12-30 17:32:16 | INFO     | [SUCCESS] LF Search Complete
+2025-12-30 17:32:18 | INFO     | [Worker_9223] Completed: AHB-CAI - 32 results, 0 errors
+2025-12-30 17:32:18 | INFO     | [Worker_9223] Processing: ATZ-MED
+2025-12-30 17:32:18 | INFO     |   Tier 0: Range 1 (33 days)

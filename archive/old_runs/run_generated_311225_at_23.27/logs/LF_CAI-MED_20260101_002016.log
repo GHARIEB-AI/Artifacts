@@ -1,0 +1,35 @@
+2026-01-01 00:20:16 | INFO     | ======================================================================
+2026-01-01 00:20:16 | INFO     | Load Factor Scraper Started - Route: CAI-MED
+2026-01-01 00:20:16 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_23.27\logs\LF_CAI-MED_20260101_002016.log
+2026-01-01 00:20:16 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-01 00:20:16 | INFO     | ======================================================================
+2026-01-01 00:20:16 | INFO     | Starting LF search for route: CAI-MED
+2026-01-01 00:20:16 | INFO     | [START] LF Search
+2026-01-01 00:20:17 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-01 00:20:17 | INFO     | [DAY_START] Processing 05JAN
+2026-01-01 00:20:17 | INFO     | [lf.day.start] Processing CAI-MED for 05JAN
+2026-01-01 00:20:18 | INFO     | [lf.day.flights_found] Found 1 flights on 05JAN
+2026-01-01 00:20:20 | INFO     | [lf.flight.extracted] SM495 on 05JAN: BKG=71, LF=39.7%
+2026-01-01 00:20:25 | INFO     | [SUCCESS] Day 05JAN
+2026-01-01 00:20:25 | INFO     | [DAY_START] Processing 04JAN
+2026-01-01 00:20:25 | INFO     | [lf.day.start] Processing CAI-MED for 04JAN
+2026-01-01 00:20:26 | INFO     | [lf.day.flights_found] Found 1 flights on 04JAN
+2026-01-01 00:20:28 | INFO     | [lf.flight.extracted] SM493 on 04JAN: BKG=177, LF=98.9%
+2026-01-01 00:20:34 | INFO     | [SUCCESS] Day 04JAN
+2026-01-01 00:20:34 | INFO     | [DAY_START] Processing 03JAN
+2026-01-01 00:20:34 | INFO     | [lf.day.start] Processing CAI-MED for 03JAN
+2026-01-01 00:20:35 | INFO     | [lf.day.flights_found] Found 1 flights on 03JAN
+2026-01-01 00:20:37 | INFO     | [lf.flight.extracted] SM493 on 03JAN: BKG=165, LF=91.7%
+2026-01-01 00:20:43 | INFO     | [SUCCESS] Day 03JAN
+2026-01-01 00:20:43 | INFO     | [DAY_START] Processing 02JAN
+2026-01-01 00:20:43 | INFO     | [lf.day.start] Processing CAI-MED for 02JAN
+2026-01-01 00:20:44 | WARNING  | [lf.day.no_flights] No direct flights on 02JAN
+2026-01-01 00:20:44 | INFO     | [SUCCESS] Day 02JAN
+2026-01-01 00:20:44 | INFO     | [DAY_START] Processing 31DEC
+2026-01-01 00:20:44 | INFO     | [lf.day.start] Processing CAI-MED for 31DEC
+2026-01-01 00:20:45 | WARNING  | [lf.day.no_flights] No direct flights on 31DEC
+2026-01-01 00:20:45 | INFO     | [SUCCESS] Day 31DEC
+2026-01-01 00:20:45 | INFO     | [SUCCESS] LF Search Complete
+2026-01-01 00:20:47 | INFO     | [Worker_9233] Completed: CAI-MED - 5 results, 0 errors
+2026-01-01 00:20:47 | INFO     | [Worker_9233] Processing: ATZ-RUH
+2026-01-01 00:20:47 | INFO     |   Tier 0: Range 1, Chunk 5/5 (6 days)

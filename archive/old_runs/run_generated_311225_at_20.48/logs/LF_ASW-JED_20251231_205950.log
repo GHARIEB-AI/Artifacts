@@ -1,0 +1,39 @@
+2025-12-31 20:59:50 | INFO     | ======================================================================
+2025-12-31 20:59:50 | INFO     | Load Factor Scraper Started - Route: ASW-JED
+2025-12-31 20:59:50 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_20.48\logs\LF_ASW-JED_20251231_205950.log
+2025-12-31 20:59:50 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 20:59:50 | INFO     | ======================================================================
+2025-12-31 20:59:50 | INFO     | Starting LF search for route: ASW-JED
+2025-12-31 20:59:50 | INFO     | [START] LF Search
+2025-12-31 20:59:51 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 20:59:51 | INFO     | [DAY_START] Processing 17JAN
+2025-12-31 20:59:51 | INFO     | [lf.day.start] Processing ASW-JED for 17JAN
+2025-12-31 20:59:53 | WARNING  | [lf.day.no_flights] No direct flights on 17JAN
+2025-12-31 20:59:53 | INFO     | [SUCCESS] Day 17JAN
+2025-12-31 20:59:53 | INFO     | [DAY_START] Processing 16JAN
+2025-12-31 20:59:53 | INFO     | [lf.day.start] Processing ASW-JED for 16JAN
+2025-12-31 20:59:54 | WARNING  | [lf.day.no_flights] No direct flights on 16JAN
+2025-12-31 20:59:54 | INFO     | [SUCCESS] Day 16JAN
+2025-12-31 20:59:54 | INFO     | [DAY_START] Processing 15JAN
+2025-12-31 20:59:54 | INFO     | [lf.day.start] Processing ASW-JED for 15JAN
+2025-12-31 20:59:56 | WARNING  | [lf.day.no_flights] No direct flights on 15JAN
+2025-12-31 20:59:57 | INFO     | [SUCCESS] Day 15JAN
+2025-12-31 20:59:57 | INFO     | [DAY_START] Processing 14JAN
+2025-12-31 20:59:57 | INFO     | [lf.day.start] Processing ASW-JED for 14JAN
+2025-12-31 20:59:58 | WARNING  | [lf.day.no_flights] No direct flights on 14JAN
+2025-12-31 20:59:58 | INFO     | [SUCCESS] Day 14JAN
+2025-12-31 20:59:58 | INFO     | [DAY_START] Processing 13JAN
+2025-12-31 20:59:58 | INFO     | [lf.day.start] Processing ASW-JED for 13JAN
+2025-12-31 21:00:00 | INFO     | [lf.day.flights_found] Found 1 flights on 13JAN
+2025-12-31 21:00:02 | INFO     | [lf.flight.extracted] SM985 on 13JAN: BKG=0, LF=0.0%
+2025-12-31 21:00:03 | INFO     | [SUCCESS] Day 13JAN
+2025-12-31 21:00:03 | INFO     | [DAY_START] Processing 12JAN
+2025-12-31 21:00:03 | INFO     | [lf.day.start] Processing ASW-JED for 12JAN
+2025-12-31 21:00:04 | INFO     | [lf.day.flights_found] Found 2 flights on 12JAN
+2025-12-31 21:00:06 | INFO     | [lf.flight.extracted] SM425 on 12JAN: BKG=0, LF=0.0%
+2025-12-31 21:00:11 | INFO     | [lf.flight.extracted] SM949 on 12JAN: BKG=0, LF=0.0%
+2025-12-31 21:00:12 | INFO     | [SUCCESS] Day 12JAN
+2025-12-31 21:00:12 | INFO     | [SUCCESS] LF Search Complete
+2025-12-31 21:00:14 | INFO     | [Worker_9226] Completed: ASW-JED - 6 results, 0 errors
+2025-12-31 21:00:14 | INFO     | [Worker_9226] Processing: ATZ-DMM
+2025-12-31 21:00:14 | INFO     |   Tier 0: Range 1, Chunk 3/5 (6 days)

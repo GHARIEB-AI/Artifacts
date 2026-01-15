@@ -1,0 +1,98 @@
+{
+  "task_id": "TUU-CAI_r0_chunk1",
+  "saved_at": "2026-01-03T05:29:06.838578",
+  "lf_results": {
+    "2026-01-12": [],
+    "2026-01-11": [],
+    "2026-01-10": [
+      {
+        "Date": "Saturday, January 10, 2026",
+        "Flight": "SM326",
+        "DEP": "20:40",
+        "SOLD": 42,
+        "FULL CAPACITY": 175,
+        "LF%": 0.24,
+        "LowestAvail": "O9",
+        "LASTSOLD": "2026-01-02 00:00:00",
+        "WEEKLY PROGRESS": 28,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 18,
+          "O": 24,
+          "U": 0,
+          "X": 0,
+          "T": 0,
+          "W": 0,
+          "S": 0,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "TUU-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 6,
+        "CONNECTING_PASSENGERS": null
+      }
+    ],
+    "2026-01-09": [],
+    "2026-01-08": [
+      {
+        "Date": "Thursday, January 08, 2026",
+        "Flight": "SM326",
+        "DEP": "20:45",
+        "SOLD": 60,
+        "FULL CAPACITY": 175,
+        "LF%": 0.3429,
+        "LowestAvail": "T9",
+        "LASTSOLD": "2025-12-30 00:00:00",
+        "WEEKLY PROGRESS": 1,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 3,
+          "U": 5,
+          "X": 6,
+          "T": 12,
+          "W": 25,
+          "S": 8,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 1,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "TUU-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM326",
+          "sm_route": "TUU-CAI",
+          "sm_dep": "2045",
+          "sm_arr": "2105",
+          "connecting_passengers": []
+        }
+      }
+    ]
+  },
+  "lf_errors": {}
+}

@@ -1,0 +1,930 @@
+
+============================================================
+     LF WORKER - PORT 9222
+============================================================
+Worker: Worker_9222
+Status: READY
+Waiting for tasks...
+============================================================
+
+
+============================================================
+[Worker_9222] Processing: MED-ATZ
+  Tier 0: Range 1, Chunk 1/3
+  Dates: 6 days
+  Date Range: 2026-01-10 to 2026-01-05
+============================================================
+
+2025-12-24 18:29:01 | INFO     | ======================================================================
+2025-12-24 18:29:01 | INFO     | Load Factor Scraper Started - Route: MED-ATZ
+2025-12-24 18:29:01 | INFO     | Log file: D:\CODERED\OUTPUTS\logs\LF_MED-ATZ_20251224_182901.log
+2025-12-24 18:29:01 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-24 18:29:01 | INFO     | ======================================================================
+[LF] Processing dates (override): ['10JAN', '09JAN', '08JAN', '07JAN', '06JAN', '05JAN']
+[LF] Attaching to Chrome for Altea access
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9222 (after 1 attempts)
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin#
+[LF] Processing MED-ATZ for 10JAN
+[LF][ERROR] Amadeus command error detected: UNKNOWN TRANSACTION
+[LF][ERROR] Command: SN10JANMEDATZ/ASM
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+============================================================
+[LF][RESYNC] Command 'SN10JANMEDATZ/ASM' failed: TECH_ERROR:UNKNOWN TRANSACTION
+[LF][RESYNC] Re-running entire day from SN command for MED-ATZ 10JAN
+[LF][RESYNC] Attempt 1/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing MED-ATZ for 10JAN
+[LF] 10JAN: found 1 direct flights
+[LF] SM488 10JAN: BKG=48, GRP=0, CAP=168, LF%=28.6%, Brd-Off=MED-ATZ, Classes: I:9, O:8, U:19, X:11, V:1
+[LF][[SYNC] RETRYING] Cannot focus on command line
+[LF][[INFO] INFO] Will try 50 times before pausing...
+[LPC] SM488 10JAN: Found 0 outbound flights with connecting passengers
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM488 10JAN: LASTSOLD=2025-12-23 00:00:00, WEEKLY=22, TODAY=0, YDAY=14
+[LF] Processing MED-ATZ for 09JAN
+[LF] No direct flights on 09JAN for MED-ATZ
+[LF] Processing MED-ATZ for 08JAN
+[LF] No direct flights on 08JAN for MED-ATZ
+[LF] Processing MED-ATZ for 07JAN
+[LF] 07JAN: found 1 direct flights
+[LF] SM490 07JAN: BKG=154, GRP=117, CAP=168, LF%=91.7%, Brd-Off=MED-ATZ, Classes: P:35, E:82, I:9, O:7, U:1, T:5, W:11, S:2, V:2
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM490 07JAN: LASTSOLD=2025-12-24 00:00:00, WEEKLY=16, TODAY=2, YDAY=3
+[LF] Processing MED-ATZ for 06JAN
+[LF] 06JAN: found 1 direct flights
+[LF] SM488 06JAN: BKG=28, GRP=1, CAP=168, LF%=16.7%, Brd-Off=MED-ATZ, Classes: E:1, I:9, O:10, U:2, S:6
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM488 06JAN: LASTSOLD=2025-12-21 00:00:00, WEEKLY=3, TODAY=0, YDAY=0
+[LF] Processing MED-ATZ for 05JAN
+[LF] 05JAN: found 1 direct flights
+[LF] SM488 05JAN: BKG=162, GRP=147, CAP=168, LF%=96.4%, Brd-Off=MED-ATZ, Classes: P:147, X:7, T:8
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM488 05JAN: LASTSOLD=2025-12-24 00:00:00, WEEKLY=15, TODAY=1, YDAY=7
+[LF] Results summary:
+  2026-01-10: 1 flights
+  2026-01-09: 0 flights
+  2026-01-08: 0 flights
+  2026-01-07: 1 flights
+  2026-01-06: 1 flights
+  2026-01-05: 1 flights
+
+============================================================
+[Worker_9222] ✓ COMPLETED: MED-ATZ
+  Results: 6 dates
+  Errors: 0 dates
+  Total Processed: 1 groups
+============================================================
+
+
+============================================================
+[Worker_9222] Processing: DMM-ATZ
+  Tier 0: Range 1, Chunk 1/3
+  Dates: 6 days
+  Date Range: 2026-01-10 to 2026-01-05
+============================================================
+
+2025-12-24 18:29:51 | INFO     | ======================================================================
+2025-12-24 18:29:51 | INFO     | Load Factor Scraper Started - Route: DMM-ATZ
+2025-12-24 18:29:51 | INFO     | Log file: D:\CODERED\OUTPUTS\logs\LF_DMM-ATZ_20251224_182951.log
+2025-12-24 18:29:51 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-24 18:29:51 | INFO     | ======================================================================
+[LF] Processing dates (override): ['10JAN', '09JAN', '08JAN', '07JAN', '06JAN', '05JAN']
+[LF] Attaching to Chrome for Altea access
+2025-12-24 18:29:51 | INFO     | Starting LF search for route: DMM-ATZ
+2025-12-24 18:29:51 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9222 (after 1 attempts)
+2025-12-24 18:29:52 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin#
+2025-12-24 18:29:53 | INFO     | [DAY_START] Processing 10JAN
+[LF] Processing DMM-ATZ for 10JAN
+2025-12-24 18:29:53 | INFO     | [lf.day.start] Processing DMM-ATZ for 10JAN
+[LF] No direct flights on 10JAN for DMM-ATZ
+2025-12-24 18:29:54 | WARNING  | [lf.day.no_flights] No direct flights on 10JAN
+2025-12-24 18:29:54 | INFO     | [SUCCESS] Day 10JAN
+2025-12-24 18:29:54 | INFO     | [DAY_START] Processing 09JAN
+[LF] Processing DMM-ATZ for 09JAN
+2025-12-24 18:29:54 | INFO     | [lf.day.start] Processing DMM-ATZ for 09JAN
+[LF] 09JAN: found 1 direct flights
+2025-12-24 18:29:55 | INFO     | [lf.day.flights_found] Found 1 flights on 09JAN
+2025-12-24 18:29:57 | INFO     | [lf.flight.extracted] SM438 on 09JAN: BKG=24, LF=14.3%
+[LF] SM438 09JAN: BKG=24, GRP=0, CAP=168, LF%=14.3%, Brd-Off=DMM-ATZ, Classes: W:16, S:8
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM438 09JAN: LASTSOLD=2025-12-21 00:00:00, WEEKLY=9, TODAY=0, YDAY=0
+2025-12-24 18:30:00 | INFO     | [SUCCESS] Day 09JAN
+2025-12-24 18:30:00 | INFO     | [DAY_START] Processing 08JAN
+[LF] Processing DMM-ATZ for 08JAN
+2025-12-24 18:30:00 | INFO     | [lf.day.start] Processing DMM-ATZ for 08JAN
+[LF] No direct flights on 08JAN for DMM-ATZ
+2025-12-24 18:30:01 | WARNING  | [lf.day.no_flights] No direct flights on 08JAN
+2025-12-24 18:30:01 | INFO     | [SUCCESS] Day 08JAN
+2025-12-24 18:30:01 | INFO     | [DAY_START] Processing 07JAN
+[LF] Processing DMM-ATZ for 07JAN
+2025-12-24 18:30:01 | INFO     | [lf.day.start] Processing DMM-ATZ for 07JAN
+[LF] No direct flights on 07JAN for DMM-ATZ
+2025-12-24 18:30:02 | WARNING  | [lf.day.no_flights] No direct flights on 07JAN
+2025-12-24 18:30:02 | INFO     | [SUCCESS] Day 07JAN
+2025-12-24 18:30:02 | INFO     | [DAY_START] Processing 06JAN
+[LF] Processing DMM-ATZ for 06JAN
+2025-12-24 18:30:02 | INFO     | [lf.day.start] Processing DMM-ATZ for 06JAN
+[LF] No direct flights on 06JAN for DMM-ATZ
+2025-12-24 18:30:03 | WARNING  | [lf.day.no_flights] No direct flights on 06JAN
+2025-12-24 18:30:03 | INFO     | [SUCCESS] Day 06JAN
+2025-12-24 18:30:03 | INFO     | [DAY_START] Processing 05JAN
+[LF] Processing DMM-ATZ for 05JAN
+2025-12-24 18:30:03 | INFO     | [lf.day.start] Processing DMM-ATZ for 05JAN
+[LF] 05JAN: found 1 direct flights
+2025-12-24 18:30:04 | INFO     | [lf.day.flights_found] Found 1 flights on 05JAN
+2025-12-24 18:30:06 | INFO     | [lf.flight.extracted] SM438 on 05JAN: BKG=37, LF=22.0%
+[LF] SM438 05JAN: BKG=37, GRP=0, CAP=168, LF%=22.0%, Brd-Off=DMM-ATZ, Classes: I:5, O:5, U:5, X:9, S:13
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM438 05JAN: LASTSOLD=2025-12-24 00:00:00, WEEKLY=14, TODAY=1, YDAY=5
+2025-12-24 18:30:10 | INFO     | [SUCCESS] Day 05JAN
+[LF] Results summary:
+  2026-01-10: 0 flights
+  2026-01-09: 1 flights
+  2026-01-08: 0 flights
+  2026-01-07: 0 flights
+  2026-01-06: 0 flights
+  2026-01-05: 1 flights
+2025-12-24 18:30:10 | INFO     | [SUCCESS] LF Search Complete
+
+============================================================
+[Worker_9222] ✓ COMPLETED: DMM-ATZ
+  Results: 6 dates
+  Errors: 0 dates
+  Total Processed: 2 groups
+============================================================
+
+2025-12-24 18:30:12 | INFO     | [Worker_9222] Completed: DMM-ATZ - 6 results, 0 errors
+
+============================================================
+[Worker_9222] Processing: AJF-CAI
+  Tier 0: Range 1, Chunk 1/3
+  Dates: 6 days
+  Date Range: 2026-01-10 to 2026-01-05
+============================================================
+
+2025-12-24 18:30:12 | INFO     | [Worker_9222] Processing: AJF-CAI
+2025-12-24 18:30:12 | INFO     |   Tier 0: Range 1, Chunk 1/3 (6 days)
+2025-12-24 18:30:12 | INFO     | ======================================================================
+2025-12-24 18:30:12 | INFO     | Load Factor Scraper Started - Route: AJF-CAI
+2025-12-24 18:30:12 | INFO     | Log file: D:\CODERED\OUTPUTS\logs\LF_AJF-CAI_20251224_183012.log
+2025-12-24 18:30:12 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-24 18:30:12 | INFO     | ======================================================================
+[LF] Processing dates (override): ['10JAN', '09JAN', '08JAN', '07JAN', '06JAN', '05JAN']
+[LF] Attaching to Chrome for Altea access
+2025-12-24 18:30:12 | INFO     | Starting LF search for route: AJF-CAI
+2025-12-24 18:30:12 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9222 (after 1 attempts)
+2025-12-24 18:30:14 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin#
+2025-12-24 18:30:14 | INFO     | [DAY_START] Processing 10JAN
+[LF] Processing AJF-CAI for 10JAN
+2025-12-24 18:30:14 | INFO     | [lf.day.start] Processing AJF-CAI for 10JAN
+[LF] 10JAN: found 1 direct flights
+2025-12-24 18:30:15 | INFO     | [lf.day.flights_found] Found 1 flights on 10JAN
+2025-12-24 18:30:17 | INFO     | [lf.flight.extracted] SM322 on 10JAN: BKG=31, LF=18.4%
+[LF] SM322 10JAN: BKG=31, GRP=0, CAP=168, LF%=18.4%, Brd-Off=AJF-CAI, Classes: O:30, S:1
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM322 10JAN: LASTSOLD=2025-12-24 00:00:00, WEEKLY=19, TODAY=1, YDAY=0
+2025-12-24 18:30:20 | INFO     | [SUCCESS] Day 10JAN
+2025-12-24 18:30:20 | INFO     | [DAY_START] Processing 09JAN
+[LF] Processing AJF-CAI for 09JAN
+2025-12-24 18:30:20 | INFO     | [lf.day.start] Processing AJF-CAI for 09JAN
+[LF] No direct flights on 09JAN for AJF-CAI
+2025-12-24 18:30:21 | WARNING  | [lf.day.no_flights] No direct flights on 09JAN
+2025-12-24 18:30:21 | INFO     | [SUCCESS] Day 09JAN
+2025-12-24 18:30:21 | INFO     | [DAY_START] Processing 08JAN
+[LF] Processing AJF-CAI for 08JAN
+2025-12-24 18:30:21 | INFO     | [lf.day.start] Processing AJF-CAI for 08JAN
+[LF] 08JAN: found 1 direct flights
+2025-12-24 18:30:22 | INFO     | [lf.day.flights_found] Found 1 flights on 08JAN
+2025-12-24 18:30:24 | INFO     | [lf.flight.extracted] SM322 on 08JAN: BKG=70, LF=42.4%
+[LF] SM322 08JAN: BKG=70, GRP=0, CAP=165, LF%=42.4%, Brd-Off=AJF-CAI, Classes: O:5, U:20, X:22, T:11, W:4, S:6, K:2
+[LPC] SM322 08JAN: Found 0 outbound flights with connecting passengers
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM322 08JAN: LASTSOLD=2025-12-24 00:00:00, WEEKLY=14, TODAY=4, YDAY=2
+2025-12-24 18:30:30 | INFO     | [SUCCESS] Day 08JAN
+2025-12-24 18:30:30 | INFO     | [DAY_START] Processing 07JAN
+[LF] Processing AJF-CAI for 07JAN
+2025-12-24 18:30:30 | INFO     | [lf.day.start] Processing AJF-CAI for 07JAN
+[LF] No direct flights on 07JAN for AJF-CAI
+2025-12-24 18:30:31 | WARNING  | [lf.day.no_flights] No direct flights on 07JAN
+2025-12-24 18:30:31 | INFO     | [SUCCESS] Day 07JAN
+2025-12-24 18:30:31 | INFO     | [DAY_START] Processing 06JAN
+[LF] Processing AJF-CAI for 06JAN
+2025-12-24 18:30:31 | INFO     | [lf.day.start] Processing AJF-CAI for 06JAN
+[LF] 06JAN: found 1 direct flights
+2025-12-24 18:30:32 | INFO     | [lf.day.flights_found] Found 1 flights on 06JAN
+2025-12-24 18:30:34 | INFO     | [lf.flight.extracted] SM322 on 06JAN: BKG=32, LF=19.1%
+[LF] SM322 06JAN: BKG=32, GRP=0, CAP=168, LF%=19.1%, Brd-Off=AJF-CAI, Classes: O:30, T:1, S:1
+[LPC] SM322 06JAN: Found 1 outbound flights with connecting passengers
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM322 06JAN: LASTSOLD=2025-11-29 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+2025-12-24 18:30:38 | INFO     | [SUCCESS] Day 06JAN
+2025-12-24 18:30:38 | INFO     | [DAY_START] Processing 05JAN
+[LF] Processing AJF-CAI for 05JAN
+2025-12-24 18:30:38 | INFO     | [lf.day.start] Processing AJF-CAI for 05JAN
+[LF] No direct flights on 05JAN for AJF-CAI
+2025-12-24 18:30:38 | WARNING  | [lf.day.no_flights] No direct flights on 05JAN
+2025-12-24 18:30:39 | INFO     | [SUCCESS] Day 05JAN
+[LF] Results summary:
+  2026-01-10: 1 flights
+  2026-01-09: 0 flights
+  2026-01-08: 1 flights
+  2026-01-07: 0 flights
+  2026-01-06: 1 flights
+  2026-01-05: 0 flights
+2025-12-24 18:30:39 | INFO     | [SUCCESS] LF Search Complete
+
+============================================================
+[Worker_9222] ✓ COMPLETED: AJF-CAI
+  Results: 6 dates
+  Errors: 0 dates
+  Total Processed: 3 groups
+============================================================
+
+2025-12-24 18:30:41 | INFO     | [Worker_9222] Completed: AJF-CAI - 6 results, 0 errors
+
+============================================================
+[Worker_9222] Processing: MED-CAI
+  Tier 0: Range 1, Chunk 2/3
+  Dates: 6 days
+  Date Range: 2026-01-04 to 2025-12-30
+============================================================
+
+2025-12-24 18:30:41 | INFO     | [Worker_9222] Processing: MED-CAI
+2025-12-24 18:30:41 | INFO     |   Tier 0: Range 1, Chunk 2/3 (6 days)
+2025-12-24 18:30:41 | INFO     | ======================================================================
+2025-12-24 18:30:41 | INFO     | Load Factor Scraper Started - Route: MED-CAI
+2025-12-24 18:30:41 | INFO     | Log file: D:\CODERED\OUTPUTS\logs\LF_MED-CAI_20251224_183041.log
+2025-12-24 18:30:41 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-24 18:30:41 | INFO     | ======================================================================
+[LF] Processing dates (override): ['04JAN', '03JAN', '02JAN', '01JAN', '31DEC', '30DEC']
+[LF] Attaching to Chrome for Altea access
+2025-12-24 18:30:41 | INFO     | Starting LF search for route: MED-CAI
+2025-12-24 18:30:41 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9222 (after 1 attempts)
+2025-12-24 18:30:42 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin#
+2025-12-24 18:30:42 | INFO     | [DAY_START] Processing 04JAN
+[LF] Processing MED-CAI for 04JAN
+2025-12-24 18:30:42 | INFO     | [lf.day.start] Processing MED-CAI for 04JAN
+[LF] 04JAN: found 1 direct flights
+2025-12-24 18:30:43 | INFO     | [lf.day.flights_found] Found 1 flights on 04JAN
+2025-12-24 18:30:45 | INFO     | [lf.flight.extracted] SM494 on 04JAN: BKG=168, LF=93.3%
+[LF] SM494 04JAN: BKG=168, GRP=137, CAP=180, LF%=93.3%, Brd-Off=MED-CAI, Classes: N:5, P:88, E:49, T:7, S:17, K:2
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM494 04JAN: LASTSOLD=2025-12-24 00:00:00, WEEKLY=6, TODAY=1, YDAY=0
+2025-12-24 18:30:50 | INFO     | [SUCCESS] Day 04JAN
+2025-12-24 18:30:50 | INFO     | [DAY_START] Processing 03JAN
+[LF] Processing MED-CAI for 03JAN
+2025-12-24 18:30:50 | INFO     | [lf.day.start] Processing MED-CAI for 03JAN
+[LF] 03JAN: found 1 direct flights
+2025-12-24 18:30:51 | INFO     | [lf.day.flights_found] Found 1 flights on 03JAN
+2025-12-24 18:30:53 | INFO     | [lf.flight.extracted] SM494 on 03JAN: BKG=169, LF=102.4%
+[LF] SM494 03JAN: BKG=169, GRP=160, CAP=165, LF%=102.4%, Brd-Off=MED-CAI, Classes: P:160, S:8, G:1
+[LPC] SM494 03JAN: Found 1 outbound flights with connecting passengers
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM494 03JAN: LASTSOLD=2025-12-11 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+2025-12-24 18:31:08 | INFO     | [SUCCESS] Day 03JAN
+2025-12-24 18:31:08 | INFO     | [DAY_START] Processing 02JAN
+[LF] Processing MED-CAI for 02JAN
+2025-12-24 18:31:08 | INFO     | [lf.day.start] Processing MED-CAI for 02JAN
+[LF] No direct flights on 02JAN for MED-CAI
+2025-12-24 18:31:09 | WARNING  | [lf.day.no_flights] No direct flights on 02JAN
+2025-12-24 18:31:09 | INFO     | [SUCCESS] Day 02JAN
+2025-12-24 18:31:09 | INFO     | [DAY_START] Processing 01JAN
+[LF] Processing MED-CAI for 01JAN
+2025-12-24 18:31:09 | INFO     | [lf.day.start] Processing MED-CAI for 01JAN
+[LF] 01JAN: found 1 direct flights
+2025-12-24 18:31:11 | INFO     | [lf.day.flights_found] Found 1 flights on 01JAN
+2025-12-24 18:31:13 | INFO     | [lf.flight.extracted] SM494 on 01JAN: BKG=170, LF=95.0%
+[LF] SM494 01JAN: BKG=170, GRP=136, CAP=179, LF%=95.0%, Brd-Off=MED-CAI, Classes: N:1, P:91, E:45, S:29, G:2, K:2
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM494 01JAN: LASTSOLD=2025-12-24 00:00:00, WEEKLY=2, TODAY=2, YDAY=0
+2025-12-24 18:31:18 | INFO     | [SUCCESS] Day 01JAN
+2025-12-24 18:31:18 | INFO     | [DAY_START] Processing 31DEC
+[LF] Processing MED-CAI for 31DEC
+2025-12-24 18:31:18 | INFO     | [lf.day.start] Processing MED-CAI for 31DEC
+[LF] No direct flights on 31DEC for MED-CAI
+2025-12-24 18:31:20 | WARNING  | [lf.day.no_flights] No direct flights on 31DEC
+2025-12-24 18:31:20 | INFO     | [SUCCESS] Day 31DEC
+2025-12-24 18:31:20 | INFO     | [DAY_START] Processing 30DEC
+[LF] Processing MED-CAI for 30DEC
+2025-12-24 18:31:20 | INFO     | [lf.day.start] Processing MED-CAI for 30DEC
+[LF] 30DEC: found 2 direct flights
+2025-12-24 18:31:21 | INFO     | [lf.day.flights_found] Found 2 flights on 30DEC
+2025-12-24 18:31:23 | INFO     | [lf.flight.extracted] SM496 on 30DEC: BKG=164, LF=97.6%
+[LF] SM496 30DEC: BKG=164, GRP=123, CAP=168, LF%=97.6%, Brd-Off=MED-CAI, Classes: N:4, P:45, E:74, I:6, O:6, U:6, X:6, T:5, W:5, S:5, G:2
+[LPC] SM496 30DEC: Found 1 outbound flights with connecting passengers
+2025-12-24 18:31:33 | INFO     | [lf.flight.extracted] SM494 on 30DEC: BKG=165, LF=100.0%
+[LF] SM494 30DEC: BKG=165, GRP=85, CAP=165, LF%=100.0%, Brd-Off=MED-CAI, Classes: P:85, I:17, O:9, U:14, X:18, T:5, S:17
+[LF] Getting WEEKLY/LASTSOLD data for 2 flights
+[LF] SM496 30DEC: LASTSOLD=2025-12-11 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+[LF] SM494 30DEC: LASTSOLD=2025-12-23 00:00:00, WEEKLY=25, TODAY=0, YDAY=1
+2025-12-24 18:31:45 | INFO     | [SUCCESS] Day 30DEC
+[LF] Results summary:
+  2026-01-04: 1 flights
+  2026-01-03: 1 flights
+  2026-01-02: 0 flights
+  2026-01-01: 1 flights
+  2025-12-31: 0 flights
+  2025-12-30: 2 flights
+2025-12-24 18:31:45 | INFO     | [SUCCESS] LF Search Complete
+
+============================================================
+[Worker_9222] ✓ COMPLETED: MED-CAI
+  Results: 6 dates
+  Errors: 0 dates
+  Total Processed: 4 groups
+============================================================
+
+2025-12-24 18:31:47 | INFO     | [Worker_9222] Completed: MED-CAI - 6 results, 0 errors
+
+============================================================
+[Worker_9222] Processing: DMM-ATZ
+  Tier 0: Range 1, Chunk 2/3
+  Dates: 6 days
+  Date Range: 2026-01-04 to 2025-12-30
+============================================================
+
+2025-12-24 18:31:47 | INFO     | [Worker_9222] Processing: DMM-ATZ
+2025-12-24 18:31:47 | INFO     |   Tier 0: Range 1, Chunk 2/3 (6 days)
+2025-12-24 18:31:47 | INFO     | ======================================================================
+2025-12-24 18:31:47 | INFO     | Load Factor Scraper Started - Route: DMM-ATZ
+2025-12-24 18:31:47 | INFO     | Log file: D:\CODERED\OUTPUTS\logs\LF_DMM-ATZ_20251224_183147.log
+2025-12-24 18:31:47 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-24 18:31:47 | INFO     | ======================================================================
+[LF] Processing dates (override): ['04JAN', '03JAN', '02JAN', '01JAN', '31DEC', '30DEC']
+[LF] Attaching to Chrome for Altea access
+2025-12-24 18:31:47 | INFO     | Starting LF search for route: DMM-ATZ
+2025-12-24 18:31:47 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9222 (after 1 attempts)
+2025-12-24 18:31:49 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin#
+2025-12-24 18:31:50 | INFO     | [DAY_START] Processing 04JAN
+[LF] Processing DMM-ATZ for 04JAN
+2025-12-24 18:31:50 | INFO     | [lf.day.start] Processing DMM-ATZ for 04JAN
+[LF] No direct flights on 04JAN for DMM-ATZ
+2025-12-24 18:31:51 | WARNING  | [lf.day.no_flights] No direct flights on 04JAN
+2025-12-24 18:31:51 | INFO     | [SUCCESS] Day 04JAN
+2025-12-24 18:31:51 | INFO     | [DAY_START] Processing 03JAN
+[LF] Processing DMM-ATZ for 03JAN
+2025-12-24 18:31:51 | INFO     | [lf.day.start] Processing DMM-ATZ for 03JAN
+[LF] No direct flights on 03JAN for DMM-ATZ
+2025-12-24 18:31:52 | WARNING  | [lf.day.no_flights] No direct flights on 03JAN
+2025-12-24 18:31:52 | INFO     | [SUCCESS] Day 03JAN
+2025-12-24 18:31:52 | INFO     | [DAY_START] Processing 02JAN
+[LF] Processing DMM-ATZ for 02JAN
+2025-12-24 18:31:52 | INFO     | [lf.day.start] Processing DMM-ATZ for 02JAN
+[LF] 02JAN: found 1 direct flights
+2025-12-24 18:31:54 | INFO     | [lf.day.flights_found] Found 1 flights on 02JAN
+2025-12-24 18:31:56 | INFO     | [lf.flight.extracted] SM438 on 02JAN: BKG=78, LF=46.4%
+[LF] SM438 02JAN: BKG=78, GRP=0, CAP=168, LF%=46.4%, Brd-Off=DMM-ATZ, Classes: O:40, U:18, X:9, T:4, S:7
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM438 02JAN: LASTSOLD=2025-12-24 00:00:00, WEEKLY=23, TODAY=3, YDAY=5
+2025-12-24 18:32:01 | INFO     | [SUCCESS] Day 02JAN
+2025-12-24 18:32:01 | INFO     | [DAY_START] Processing 01JAN
+[LF] Processing DMM-ATZ for 01JAN
+2025-12-24 18:32:01 | INFO     | [lf.day.start] Processing DMM-ATZ for 01JAN
+[LF] No direct flights on 01JAN for DMM-ATZ
+2025-12-24 18:32:02 | WARNING  | [lf.day.no_flights] No direct flights on 01JAN
+2025-12-24 18:32:03 | INFO     | [SUCCESS] Day 01JAN
+2025-12-24 18:32:03 | INFO     | [DAY_START] Processing 31DEC
+[LF] Processing DMM-ATZ for 31DEC
+2025-12-24 18:32:03 | INFO     | [lf.day.start] Processing DMM-ATZ for 31DEC
+[LF] No direct flights on 31DEC for DMM-ATZ
+2025-12-24 18:32:04 | WARNING  | [lf.day.no_flights] No direct flights on 31DEC
+2025-12-24 18:32:04 | INFO     | [SUCCESS] Day 31DEC
+2025-12-24 18:32:04 | INFO     | [DAY_START] Processing 30DEC
+[LF] Processing DMM-ATZ for 30DEC
+2025-12-24 18:32:04 | INFO     | [lf.day.start] Processing DMM-ATZ for 30DEC
+[LF] No direct flights on 30DEC for DMM-ATZ
+2025-12-24 18:32:05 | WARNING  | [lf.day.no_flights] No direct flights on 30DEC
+2025-12-24 18:32:05 | INFO     | [SUCCESS] Day 30DEC
+[LF] Results summary:
+  2026-01-04: 0 flights
+  2026-01-03: 0 flights
+  2026-01-02: 1 flights
+  2026-01-01: 0 flights
+  2025-12-31: 0 flights
+  2025-12-30: 0 flights
+2025-12-24 18:32:05 | INFO     | [SUCCESS] LF Search Complete
+
+============================================================
+[Worker_9222] ✓ COMPLETED: DMM-ATZ
+  Results: 6 dates
+  Errors: 0 dates
+  Total Processed: 5 groups
+============================================================
+
+2025-12-24 18:32:07 | INFO     | [Worker_9222] Completed: DMM-ATZ - 6 results, 0 errors
+
+============================================================
+[Worker_9222] Processing: TUU-ATZ
+  Tier 0: Range 1, Chunk 2/3
+  Dates: 6 days
+  Date Range: 2026-01-04 to 2025-12-30
+============================================================
+
+2025-12-24 18:32:07 | INFO     | [Worker_9222] Processing: TUU-ATZ
+2025-12-24 18:32:07 | INFO     |   Tier 0: Range 1, Chunk 2/3 (6 days)
+2025-12-24 18:32:07 | INFO     | ======================================================================
+2025-12-24 18:32:07 | INFO     | Load Factor Scraper Started - Route: TUU-ATZ
+2025-12-24 18:32:07 | INFO     | Log file: D:\CODERED\OUTPUTS\logs\LF_TUU-ATZ_20251224_183207.log
+2025-12-24 18:32:07 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-24 18:32:07 | INFO     | ======================================================================
+[LF] Processing dates (override): ['04JAN', '03JAN', '02JAN', '01JAN', '31DEC', '30DEC']
+[LF] Attaching to Chrome for Altea access
+2025-12-24 18:32:07 | INFO     | Starting LF search for route: TUU-ATZ
+2025-12-24 18:32:07 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9222 (after 1 attempts)
+2025-12-24 18:32:09 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin#
+2025-12-24 18:32:09 | INFO     | [DAY_START] Processing 04JAN
+[LF] Processing TUU-ATZ for 04JAN
+2025-12-24 18:32:09 | INFO     | [lf.day.start] Processing TUU-ATZ for 04JAN
+[LF] No direct flights on 04JAN for TUU-ATZ
+2025-12-24 18:32:10 | WARNING  | [lf.day.no_flights] No direct flights on 04JAN
+2025-12-24 18:32:10 | INFO     | [SUCCESS] Day 04JAN
+2025-12-24 18:32:10 | INFO     | [DAY_START] Processing 03JAN
+[LF] Processing TUU-ATZ for 03JAN
+2025-12-24 18:32:10 | INFO     | [lf.day.start] Processing TUU-ATZ for 03JAN
+[LF] No direct flights on 03JAN for TUU-ATZ
+2025-12-24 18:32:11 | WARNING  | [lf.day.no_flights] No direct flights on 03JAN
+2025-12-24 18:32:11 | INFO     | [SUCCESS] Day 03JAN
+2025-12-24 18:32:11 | INFO     | [DAY_START] Processing 02JAN
+[LF] Processing TUU-ATZ for 02JAN
+2025-12-24 18:32:11 | INFO     | [lf.day.start] Processing TUU-ATZ for 02JAN
+[LF] 02JAN: found 1 direct flights
+2025-12-24 18:32:12 | INFO     | [lf.day.flights_found] Found 1 flights on 02JAN
+2025-12-24 18:32:14 | INFO     | [lf.flight.extracted] SM328 on 02JAN: BKG=51, LF=30.4%
+[LF] SM328 02JAN: BKG=51, GRP=0, CAP=168, LF%=30.4%, Brd-Off=TUU-ATZ, Classes: I:20, O:20, U:9, X:1, S:1
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM328 02JAN: LASTSOLD=2025-12-24 00:00:00, WEEKLY=24, TODAY=1, YDAY=0
+2025-12-24 18:32:18 | INFO     | [SUCCESS] Day 02JAN
+2025-12-24 18:32:18 | INFO     | [DAY_START] Processing 01JAN
+[LF] Processing TUU-ATZ for 01JAN
+2025-12-24 18:32:18 | INFO     | [lf.day.start] Processing TUU-ATZ for 01JAN
+[LF] No direct flights on 01JAN for TUU-ATZ
+2025-12-24 18:32:19 | WARNING  | [lf.day.no_flights] No direct flights on 01JAN
+2025-12-24 18:32:19 | INFO     | [SUCCESS] Day 01JAN
+2025-12-24 18:32:19 | INFO     | [DAY_START] Processing 31DEC
+[LF] Processing TUU-ATZ for 31DEC
+2025-12-24 18:32:19 | INFO     | [lf.day.start] Processing TUU-ATZ for 31DEC
+[LF] No direct flights on 31DEC for TUU-ATZ
+2025-12-24 18:32:20 | WARNING  | [lf.day.no_flights] No direct flights on 31DEC
+2025-12-24 18:32:20 | INFO     | [SUCCESS] Day 31DEC
+2025-12-24 18:32:20 | INFO     | [DAY_START] Processing 30DEC
+[LF] Processing TUU-ATZ for 30DEC
+2025-12-24 18:32:20 | INFO     | [lf.day.start] Processing TUU-ATZ for 30DEC
+[LF] No direct flights on 30DEC for TUU-ATZ
+2025-12-24 18:32:21 | WARNING  | [lf.day.no_flights] No direct flights on 30DEC
+2025-12-24 18:32:22 | INFO     | [SUCCESS] Day 30DEC
+[LF] Results summary:
+  2026-01-04: 0 flights
+  2026-01-03: 0 flights
+  2026-01-02: 1 flights
+  2026-01-01: 0 flights
+  2025-12-31: 0 flights
+  2025-12-30: 0 flights
+2025-12-24 18:32:22 | INFO     | [SUCCESS] LF Search Complete
+
+============================================================
+[Worker_9222] ✓ COMPLETED: TUU-ATZ
+  Results: 6 dates
+  Errors: 0 dates
+  Total Processed: 6 groups
+============================================================
+
+2025-12-24 18:32:24 | INFO     | [Worker_9222] Completed: TUU-ATZ - 6 results, 0 errors
+
+============================================================
+[Worker_9222] Processing: YNB-CAI
+  Tier 0: Range 1, Chunk 2/3
+  Dates: 6 days
+  Date Range: 2026-01-04 to 2025-12-30
+============================================================
+
+2025-12-24 18:32:24 | INFO     | [Worker_9222] Processing: YNB-CAI
+2025-12-24 18:32:24 | INFO     |   Tier 0: Range 1, Chunk 2/3 (6 days)
+2025-12-24 18:32:24 | INFO     | ======================================================================
+2025-12-24 18:32:24 | INFO     | Load Factor Scraper Started - Route: YNB-CAI
+2025-12-24 18:32:24 | INFO     | Log file: D:\CODERED\OUTPUTS\logs\LF_YNB-CAI_20251224_183224.log
+2025-12-24 18:32:24 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-24 18:32:24 | INFO     | ======================================================================
+[LF] Processing dates (override): ['04JAN', '03JAN', '02JAN', '01JAN', '31DEC', '30DEC']
+[LF] Attaching to Chrome for Altea access
+2025-12-24 18:32:24 | INFO     | Starting LF search for route: YNB-CAI
+2025-12-24 18:32:24 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9222 (after 1 attempts)
+2025-12-24 18:32:25 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin#
+2025-12-24 18:32:25 | INFO     | [DAY_START] Processing 04JAN
+[LF] Processing YNB-CAI for 04JAN
+2025-12-24 18:32:25 | INFO     | [lf.day.start] Processing YNB-CAI for 04JAN
+[LF] 04JAN: found 1 direct flights
+2025-12-24 18:32:26 | INFO     | [lf.day.flights_found] Found 1 flights on 04JAN
+2025-12-24 18:32:29 | INFO     | [lf.flight.extracted] SM442 on 04JAN: BKG=168, LF=100.0%
+[LF] SM442 04JAN: BKG=168, GRP=138, CAP=168, LF%=100.0%, Brd-Off=YNB-CAI, Classes: P:138, T:9, W:12, S:7, G:2
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM442 04JAN: LASTSOLD=2025-12-23 00:00:00, WEEKLY=10, TODAY=0, YDAY=1
+2025-12-24 18:32:35 | INFO     | [SUCCESS] Day 04JAN
+2025-12-24 18:32:35 | INFO     | [DAY_START] Processing 03JAN
+[LF] Processing YNB-CAI for 03JAN
+2025-12-24 18:32:35 | INFO     | [lf.day.start] Processing YNB-CAI for 03JAN
+[LF] 03JAN: found 1 direct flights
+2025-12-24 18:32:36 | INFO     | [lf.day.flights_found] Found 1 flights on 03JAN
+2025-12-24 18:32:38 | INFO     | [lf.flight.extracted] SM442 on 03JAN: BKG=161, LF=89.9%
+[LF] SM442 03JAN: BKG=161, GRP=151, CAP=179, LF%=89.9%, Brd-Off=YNB-CAI, Classes: P:151, T:1, W:8, G:1
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM442 03JAN: LASTSOLD=2025-12-22 00:00:00, WEEKLY=49, TODAY=0, YDAY=0
+2025-12-24 18:32:43 | INFO     | [SUCCESS] Day 03JAN
+2025-12-24 18:32:43 | INFO     | [DAY_START] Processing 02JAN
+[LF] Processing YNB-CAI for 02JAN
+2025-12-24 18:32:43 | INFO     | [lf.day.start] Processing YNB-CAI for 02JAN
+[LF] 02JAN: found 1 direct flights
+2025-12-24 18:32:44 | INFO     | [lf.day.flights_found] Found 1 flights on 02JAN
+2025-12-24 18:32:46 | INFO     | [lf.flight.extracted] SM442 on 02JAN: BKG=133, LF=79.2%
+[LF] SM442 02JAN: BKG=133, GRP=89, CAP=168, LF%=79.2%, Brd-Off=YNB-CAI, Classes: P:89, X:25, T:8, W:4, S:7
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM442 02JAN: LASTSOLD=2025-12-24 00:00:00, WEEKLY=3, TODAY=1, YDAY=0
+2025-12-24 18:32:52 | INFO     | [SUCCESS] Day 02JAN
+2025-12-24 18:32:52 | INFO     | [DAY_START] Processing 01JAN
+[LF] Processing YNB-CAI for 01JAN
+2025-12-24 18:32:52 | INFO     | [lf.day.start] Processing YNB-CAI for 01JAN
+[LF] 01JAN: found 1 direct flights
+2025-12-24 18:32:53 | INFO     | [lf.day.flights_found] Found 1 flights on 01JAN
+2025-12-24 18:32:55 | INFO     | [lf.flight.extracted] SM442 on 01JAN: BKG=150, LF=89.3%
+[LF] SM442 01JAN: BKG=150, GRP=119, CAP=168, LF%=89.3%, Brd-Off=YNB-CAI, Classes: P:116, E:3, X:5, T:13, W:9, S:4
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM442 01JAN: LASTSOLD=2025-12-24 00:00:00, WEEKLY=17, TODAY=2, YDAY=4
+2025-12-24 18:33:01 | INFO     | [SUCCESS] Day 01JAN
+2025-12-24 18:33:01 | INFO     | [DAY_START] Processing 31DEC
+[LF] Processing YNB-CAI for 31DEC
+2025-12-24 18:33:01 | INFO     | [lf.day.start] Processing YNB-CAI for 31DEC
+[LF] 31DEC: found 1 direct flights
+2025-12-24 18:33:03 | INFO     | [lf.day.flights_found] Found 1 flights on 31DEC
+2025-12-24 18:33:06 | INFO     | [lf.flight.extracted] SM442 on 31DEC: BKG=146, LF=81.6%
+[LF] SM442 31DEC: BKG=146, GRP=133, CAP=179, LF%=81.6%, Brd-Off=YNB-CAI, Classes: P:133, U:4, X:2, T:1, W:4, S:2
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM442 31DEC: LASTSOLD=2025-12-24 00:00:00, WEEKLY=6, TODAY=3, YDAY=3
+2025-12-24 18:33:16 | INFO     | [SUCCESS] Day 31DEC
+2025-12-24 18:33:16 | INFO     | [DAY_START] Processing 30DEC
+[LF] Processing YNB-CAI for 30DEC
+2025-12-24 18:33:16 | INFO     | [lf.day.start] Processing YNB-CAI for 30DEC
+[LF] 30DEC: found 1 direct flights
+2025-12-24 18:33:18 | INFO     | [lf.day.flights_found] Found 1 flights on 30DEC
+2025-12-24 18:33:20 | INFO     | [lf.flight.extracted] SM442 on 30DEC: BKG=163, LF=91.1%
+[LF] SM442 30DEC: BKG=163, GRP=137, CAP=179, LF%=91.1%, Brd-Off=YNB-CAI, Classes: P:137, X:8, T:8, W:7, S:1, G:2
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM442 30DEC: LASTSOLD=2025-12-22 00:00:00, WEEKLY=6, TODAY=0, YDAY=0
+2025-12-24 18:33:27 | INFO     | [SUCCESS] Day 30DEC
+[LF] Results summary:
+  2026-01-04: 1 flights
+  2026-01-03: 1 flights
+  2026-01-02: 1 flights
+  2026-01-01: 1 flights
+  2025-12-31: 1 flights
+  2025-12-30: 1 flights
+2025-12-24 18:33:27 | INFO     | [SUCCESS] LF Search Complete
+
+============================================================
+[Worker_9222] ✓ COMPLETED: YNB-CAI
+  Results: 6 dates
+  Errors: 0 dates
+  Total Processed: 7 groups
+============================================================
+
+2025-12-24 18:33:29 | INFO     | [Worker_9222] Completed: YNB-CAI - 6 results, 0 errors
+
+============================================================
+[Worker_9222] Processing: JED-ASW
+  Tier 0: Range 1, Chunk 3/3
+  Dates: 5 days
+  Date Range: 2025-12-29 to 2025-12-25
+============================================================
+
+2025-12-24 18:33:29 | INFO     | [Worker_9222] Processing: JED-ASW
+2025-12-24 18:33:29 | INFO     |   Tier 0: Range 1, Chunk 3/3 (5 days)
+2025-12-24 18:33:29 | INFO     | ======================================================================
+2025-12-24 18:33:29 | INFO     | Load Factor Scraper Started - Route: JED-ASW
+2025-12-24 18:33:29 | INFO     | Log file: D:\CODERED\OUTPUTS\logs\LF_JED-ASW_20251224_183329.log
+2025-12-24 18:33:29 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-24 18:33:29 | INFO     | ======================================================================
+[LF] Processing dates (override): ['29DEC', '28DEC', '27DEC', '26DEC', '25DEC']
+[LF] Attaching to Chrome for Altea access
+2025-12-24 18:33:29 | INFO     | Starting LF search for route: JED-ASW
+2025-12-24 18:33:29 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9222 (after 1 attempts)
+2025-12-24 18:33:31 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin#
+2025-12-24 18:33:31 | INFO     | [DAY_START] Processing 29DEC
+[LF] Processing JED-ASW for 29DEC
+2025-12-24 18:33:31 | INFO     | [lf.day.start] Processing JED-ASW for 29DEC
+[LF] 29DEC: found 2 direct flights
+2025-12-24 18:33:32 | INFO     | [lf.day.flights_found] Found 2 flights on 29DEC
+2025-12-24 18:33:34 | INFO     | [lf.flight.extracted] SM426 on 29DEC: BKG=180, LF=107.1%
+[LF] SM426 29DEC: BKG=180, GRP=180, CAP=168, LF%=107.1%, Brd-Off=JED-ASW, Classes: U:180
+2025-12-24 18:33:37 | INFO     | [lf.flight.extracted] SM950 on 29DEC: BKG=180, LF=107.1%
+[LF] SM950 29DEC: BKG=180, GRP=180, CAP=168, LF%=107.1%, Brd-Off=JED-ASW, Classes: U:180
+[LF] Getting WEEKLY/LASTSOLD data for 2 flights
+[LF] SM426 29DEC: LASTSOLD=2025-12-14 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+[LF] SM950 29DEC: LASTSOLD=2025-12-14 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+2025-12-24 18:33:49 | INFO     | [SUCCESS] Day 29DEC
+2025-12-24 18:33:49 | INFO     | [DAY_START] Processing 28DEC
+[LF] Processing JED-ASW for 28DEC
+2025-12-24 18:33:49 | INFO     | [lf.day.start] Processing JED-ASW for 28DEC
+[LF] No direct flights on 28DEC for JED-ASW
+2025-12-24 18:33:50 | WARNING  | [lf.day.no_flights] No direct flights on 28DEC
+2025-12-24 18:33:50 | INFO     | [SUCCESS] Day 28DEC
+2025-12-24 18:33:50 | INFO     | [DAY_START] Processing 27DEC
+[LF] Processing JED-ASW for 27DEC
+2025-12-24 18:33:50 | INFO     | [lf.day.start] Processing JED-ASW for 27DEC
+[LF] No direct flights on 27DEC for JED-ASW
+2025-12-24 18:33:51 | WARNING  | [lf.day.no_flights] No direct flights on 27DEC
+2025-12-24 18:33:51 | INFO     | [SUCCESS] Day 27DEC
+2025-12-24 18:33:51 | INFO     | [DAY_START] Processing 26DEC
+[LF] Processing JED-ASW for 26DEC
+2025-12-24 18:33:51 | INFO     | [lf.day.start] Processing JED-ASW for 26DEC
+[LF] 26DEC: 3 cancelled flight(s) detected from SN
+[LF] No direct flights on 26DEC for JED-ASW
+2025-12-24 18:33:52 | WARNING  | [lf.day.no_flights] No direct flights on 26DEC
+2025-12-24 18:33:52 | INFO     | [SUCCESS] Day 26DEC
+2025-12-24 18:33:52 | INFO     | [DAY_START] Processing 25DEC
+[LF] Processing JED-ASW for 25DEC
+2025-12-24 18:33:52 | INFO     | [lf.day.start] Processing JED-ASW for 25DEC
+[LF] 25DEC: 1 cancelled flight(s) detected from SN
+[LF] No direct flights on 25DEC for JED-ASW
+2025-12-24 18:33:53 | WARNING  | [lf.day.no_flights] No direct flights on 25DEC
+2025-12-24 18:33:53 | INFO     | [SUCCESS] Day 25DEC
+[LF] Results summary:
+  2025-12-29: 2 flights
+  2025-12-28: 0 flights
+  2025-12-27: 0 flights
+  2025-12-26: 0 flights
+  2025-12-25: 0 flights
+[LF] Cancelled flights found: 4
+  - SM478 26DEC (SN)
+  - SM478 26DEC (SN)
+  - SM478 26DEC (SN)
+  - SM472 25DEC (SN)
+2025-12-24 18:33:53 | INFO     | [SUCCESS] LF Search Complete
+[Worker_9222] Cancelled flights collected: 4
+
+============================================================
+[Worker_9222] ✓ COMPLETED: JED-ASW
+  Results: 5 dates
+  Errors: 0 dates
+  Total Processed: 8 groups
+============================================================
+
+2025-12-24 18:33:55 | INFO     | [Worker_9222] Completed: JED-ASW - 5 results, 0 errors
+
+============================================================
+[Worker_9222] Processing: TUU-CAI
+  Tier 0: Range 1, Chunk 3/3
+  Dates: 5 days
+  Date Range: 2025-12-29 to 2025-12-25
+============================================================
+
+2025-12-24 18:33:55 | INFO     | [Worker_9222] Processing: TUU-CAI
+2025-12-24 18:33:55 | INFO     |   Tier 0: Range 1, Chunk 3/3 (5 days)
+2025-12-24 18:33:55 | INFO     | ======================================================================
+2025-12-24 18:33:55 | INFO     | Load Factor Scraper Started - Route: TUU-CAI
+2025-12-24 18:33:55 | INFO     | Log file: D:\CODERED\OUTPUTS\logs\LF_TUU-CAI_20251224_183355.log
+2025-12-24 18:33:55 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-24 18:33:55 | INFO     | ======================================================================
+[LF] Processing dates (override): ['29DEC', '28DEC', '27DEC', '26DEC', '25DEC']
+[LF] Attaching to Chrome for Altea access
+2025-12-24 18:33:55 | INFO     | Starting LF search for route: TUU-CAI
+2025-12-24 18:33:55 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9222 (after 1 attempts)
+2025-12-24 18:33:58 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin#
+2025-12-24 18:33:58 | INFO     | [DAY_START] Processing 29DEC
+[LF] Processing TUU-CAI for 29DEC
+2025-12-24 18:33:58 | INFO     | [lf.day.start] Processing TUU-CAI for 29DEC
+[LF] No direct flights on 29DEC for TUU-CAI
+2025-12-24 18:33:59 | WARNING  | [lf.day.no_flights] No direct flights on 29DEC
+2025-12-24 18:33:59 | INFO     | [SUCCESS] Day 29DEC
+2025-12-24 18:33:59 | INFO     | [DAY_START] Processing 28DEC
+[LF] Processing TUU-CAI for 28DEC
+2025-12-24 18:33:59 | INFO     | [lf.day.start] Processing TUU-CAI for 28DEC
+[LF] No direct flights on 28DEC for TUU-CAI
+2025-12-24 18:34:00 | WARNING  | [lf.day.no_flights] No direct flights on 28DEC
+2025-12-24 18:34:00 | INFO     | [SUCCESS] Day 28DEC
+2025-12-24 18:34:00 | INFO     | [DAY_START] Processing 27DEC
+[LF] Processing TUU-CAI for 27DEC
+2025-12-24 18:34:00 | INFO     | [lf.day.start] Processing TUU-CAI for 27DEC
+[LF] 27DEC: 1 cancelled flight(s) detected from SN
+[LF] No direct flights on 27DEC for TUU-CAI
+2025-12-24 18:34:01 | WARNING  | [lf.day.no_flights] No direct flights on 27DEC
+2025-12-24 18:34:01 | INFO     | [SUCCESS] Day 27DEC
+2025-12-24 18:34:01 | INFO     | [DAY_START] Processing 26DEC
+[LF] Processing TUU-CAI for 26DEC
+2025-12-24 18:34:01 | INFO     | [lf.day.start] Processing TUU-CAI for 26DEC
+[LF] No direct flights on 26DEC for TUU-CAI
+2025-12-24 18:34:02 | WARNING  | [lf.day.no_flights] No direct flights on 26DEC
+2025-12-24 18:34:02 | INFO     | [SUCCESS] Day 26DEC
+2025-12-24 18:34:02 | INFO     | [DAY_START] Processing 25DEC
+[LF] Processing TUU-CAI for 25DEC
+2025-12-24 18:34:02 | INFO     | [lf.day.start] Processing TUU-CAI for 25DEC
+[LF] 25DEC: found 1 direct flights
+2025-12-24 18:34:03 | INFO     | [lf.day.flights_found] Found 1 flights on 25DEC
+2025-12-24 18:34:05 | INFO     | [lf.flight.extracted] SM326 on 25DEC: BKG=115, LF=69.7%
+[LF] SM326 25DEC: BKG=115, GRP=0, CAP=165, LF%=69.7%, Brd-Off=TUU-CAI, Classes: I:86, O:14, U:10, X:5
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM326 25DEC: LASTSOLD=2025-12-24 00:00:00, WEEKLY=53, TODAY=7, YDAY=13
+2025-12-24 18:34:11 | INFO     | [SUCCESS] Day 25DEC
+[LF] Results summary:
+  2025-12-29: 0 flights
+  2025-12-28: 0 flights
+  2025-12-27: 0 flights
+  2025-12-26: 0 flights
+  2025-12-25: 1 flights
+[LF] Cancelled flights found: 1
+  - SM326 27DEC (SN)
+2025-12-24 18:34:11 | INFO     | [SUCCESS] LF Search Complete
+[Worker_9222] Cancelled flights collected: 1
+
+============================================================
+[Worker_9222] ✓ COMPLETED: TUU-CAI
+  Results: 5 dates
+  Errors: 0 dates
+  Total Processed: 9 groups
+============================================================
+
+2025-12-24 18:34:13 | INFO     | [Worker_9222] Completed: TUU-CAI - 5 results, 0 errors
+
+============================================================
+[Worker_9222] Processing: AJF-ATZ
+  Tier 0: Range 1, Chunk 3/3
+  Dates: 5 days
+  Date Range: 2025-12-29 to 2025-12-25
+============================================================
+
+2025-12-24 18:34:13 | INFO     | [Worker_9222] Processing: AJF-ATZ
+2025-12-24 18:34:13 | INFO     |   Tier 0: Range 1, Chunk 3/3 (5 days)
+2025-12-24 18:34:13 | INFO     | ======================================================================
+2025-12-24 18:34:13 | INFO     | Load Factor Scraper Started - Route: AJF-ATZ
+2025-12-24 18:34:13 | INFO     | Log file: D:\CODERED\OUTPUTS\logs\LF_AJF-ATZ_20251224_183413.log
+2025-12-24 18:34:13 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-24 18:34:13 | INFO     | ======================================================================
+[LF] Processing dates (override): ['29DEC', '28DEC', '27DEC', '26DEC', '25DEC']
+[LF] Attaching to Chrome for Altea access
+2025-12-24 18:34:13 | INFO     | Starting LF search for route: AJF-ATZ
+2025-12-24 18:34:13 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9222 (after 1 attempts)
+2025-12-24 18:34:14 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin#
+2025-12-24 18:34:14 | INFO     | [DAY_START] Processing 29DEC
+[LF] Processing AJF-ATZ for 29DEC
+2025-12-24 18:34:14 | INFO     | [lf.day.start] Processing AJF-ATZ for 29DEC
+[LF] No direct flights on 29DEC for AJF-ATZ
+2025-12-24 18:34:15 | WARNING  | [lf.day.no_flights] No direct flights on 29DEC
+2025-12-24 18:34:15 | INFO     | [SUCCESS] Day 29DEC
+2025-12-24 18:34:15 | INFO     | [DAY_START] Processing 28DEC
+[LF] Processing AJF-ATZ for 28DEC
+2025-12-24 18:34:15 | INFO     | [lf.day.start] Processing AJF-ATZ for 28DEC
+[LF] No direct flights on 28DEC for AJF-ATZ
+2025-12-24 18:34:16 | WARNING  | [lf.day.no_flights] No direct flights on 28DEC
+2025-12-24 18:34:16 | INFO     | [SUCCESS] Day 28DEC
+2025-12-24 18:34:16 | INFO     | [DAY_START] Processing 27DEC
+[LF] Processing AJF-ATZ for 27DEC
+2025-12-24 18:34:16 | INFO     | [lf.day.start] Processing AJF-ATZ for 27DEC
+[LF] No direct flights on 27DEC for AJF-ATZ
+2025-12-24 18:34:17 | WARNING  | [lf.day.no_flights] No direct flights on 27DEC
+2025-12-24 18:34:17 | INFO     | [SUCCESS] Day 27DEC
+2025-12-24 18:34:17 | INFO     | [DAY_START] Processing 26DEC
+[LF] Processing AJF-ATZ for 26DEC
+2025-12-24 18:34:17 | INFO     | [lf.day.start] Processing AJF-ATZ for 26DEC
+[LF] 26DEC: found 1 direct flights
+2025-12-24 18:34:18 | INFO     | [lf.day.flights_found] Found 1 flights on 26DEC
+2025-12-24 18:34:20 | INFO     | [lf.flight.extracted] SM324 on 26DEC: BKG=120, LF=71.4%
+[LF] SM324 26DEC: BKG=120, GRP=0, CAP=168, LF%=71.4%, Brd-Off=AJF-ATZ, Classes: I:8, O:30, U:19, X:5, T:58
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM324 26DEC: LASTSOLD=2025-12-24 00:00:00, WEEKLY=58, TODAY=6, YDAY=10
+2025-12-24 18:34:26 | INFO     | [SUCCESS] Day 26DEC
+2025-12-24 18:34:26 | INFO     | [DAY_START] Processing 25DEC
+[LF] Processing AJF-ATZ for 25DEC
+2025-12-24 18:34:26 | INFO     | [lf.day.start] Processing AJF-ATZ for 25DEC
+[LF] No direct flights on 25DEC for AJF-ATZ
+2025-12-24 18:34:27 | WARNING  | [lf.day.no_flights] No direct flights on 25DEC
+2025-12-24 18:34:27 | INFO     | [SUCCESS] Day 25DEC
+[LF] Results summary:
+  2025-12-29: 0 flights
+  2025-12-28: 0 flights
+  2025-12-27: 0 flights
+  2025-12-26: 1 flights
+  2025-12-25: 0 flights
+2025-12-24 18:34:27 | INFO     | [SUCCESS] LF Search Complete
+
+============================================================
+[Worker_9222] ✓ COMPLETED: AJF-ATZ
+  Results: 5 dates
+  Errors: 0 dates
+  Total Processed: 10 groups
+============================================================
+
+2025-12-24 18:34:29 | INFO     | [Worker_9222] Completed: AJF-ATZ - 5 results, 0 errors
+
+============================================================
+[Worker_9222] Processing: AHB-ATZ
+  Tier 0: Range 1, Chunk 3/3
+  Dates: 5 days
+  Date Range: 2025-12-29 to 2025-12-25
+============================================================
+
+2025-12-24 18:34:29 | INFO     | [Worker_9222] Processing: AHB-ATZ
+2025-12-24 18:34:29 | INFO     |   Tier 0: Range 1, Chunk 3/3 (5 days)
+2025-12-24 18:34:29 | INFO     | ======================================================================
+2025-12-24 18:34:29 | INFO     | Load Factor Scraper Started - Route: AHB-ATZ
+2025-12-24 18:34:29 | INFO     | Log file: D:\CODERED\OUTPUTS\logs\LF_AHB-ATZ_20251224_183429.log
+2025-12-24 18:34:29 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-24 18:34:29 | INFO     | ======================================================================
+[LF] Processing dates (override): ['29DEC', '28DEC', '27DEC', '26DEC', '25DEC']
+[LF] Attaching to Chrome for Altea access
+2025-12-24 18:34:29 | INFO     | Starting LF search for route: AHB-ATZ
+2025-12-24 18:34:29 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9222 (after 1 attempts)
+2025-12-24 18:34:30 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin#
+2025-12-24 18:34:30 | INFO     | [DAY_START] Processing 29DEC
+[LF] Processing AHB-ATZ for 29DEC
+2025-12-24 18:34:30 | INFO     | [lf.day.start] Processing AHB-ATZ for 29DEC
+[LF] No direct flights on 29DEC for AHB-ATZ
+2025-12-24 18:34:31 | WARNING  | [lf.day.no_flights] No direct flights on 29DEC
+2025-12-24 18:34:32 | INFO     | [SUCCESS] Day 29DEC
+2025-12-24 18:34:32 | INFO     | [DAY_START] Processing 28DEC
+[LF] Processing AHB-ATZ for 28DEC
+2025-12-24 18:34:32 | INFO     | [lf.day.start] Processing AHB-ATZ for 28DEC
+[LF] No direct flights on 28DEC for AHB-ATZ
+2025-12-24 18:34:33 | WARNING  | [lf.day.no_flights] No direct flights on 28DEC
+2025-12-24 18:34:33 | INFO     | [SUCCESS] Day 28DEC
+2025-12-24 18:34:33 | INFO     | [DAY_START] Processing 27DEC
+[LF] Processing AHB-ATZ for 27DEC
+2025-12-24 18:34:33 | INFO     | [lf.day.start] Processing AHB-ATZ for 27DEC
+[LF] No direct flights on 27DEC for AHB-ATZ
+2025-12-24 18:34:34 | WARNING  | [lf.day.no_flights] No direct flights on 27DEC
+2025-12-24 18:34:34 | INFO     | [SUCCESS] Day 27DEC
+2025-12-24 18:34:34 | INFO     | [DAY_START] Processing 26DEC
+[LF] Processing AHB-ATZ for 26DEC
+2025-12-24 18:34:34 | INFO     | [lf.day.start] Processing AHB-ATZ for 26DEC
+[LF] 26DEC: found 1 direct flights
+2025-12-24 18:34:35 | INFO     | [lf.day.flights_found] Found 1 flights on 26DEC
+2025-12-24 18:34:37 | INFO     | [lf.flight.extracted] SM446 on 26DEC: BKG=92, LF=54.8%
+[LF] SM446 26DEC: BKG=92, GRP=0, CAP=168, LF%=54.8%, Brd-Off=AHB-ATZ, Classes: X:24, T:26, W:18, S:10, G:13, L:1
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM446 26DEC: LASTSOLD=2025-12-24 00:00:00, WEEKLY=24, TODAY=3, YDAY=0
+2025-12-24 18:34:42 | INFO     | [SUCCESS] Day 26DEC
+2025-12-24 18:34:42 | INFO     | [DAY_START] Processing 25DEC
+[LF] Processing AHB-ATZ for 25DEC
+2025-12-24 18:34:42 | INFO     | [lf.day.start] Processing AHB-ATZ for 25DEC
+[LF] No direct flights on 25DEC for AHB-ATZ
+2025-12-24 18:34:43 | WARNING  | [lf.day.no_flights] No direct flights on 25DEC
+2025-12-24 18:34:43 | INFO     | [SUCCESS] Day 25DEC
+[LF] Results summary:
+  2025-12-29: 0 flights
+  2025-12-28: 0 flights
+  2025-12-27: 0 flights
+  2025-12-26: 1 flights
+  2025-12-25: 0 flights
+2025-12-24 18:34:43 | INFO     | [SUCCESS] LF Search Complete
+
+============================================================
+[Worker_9222] ✓ COMPLETED: AHB-ATZ
+  Results: 5 dates
+  Errors: 0 dates
+  Total Processed: 11 groups
+============================================================
+
+2025-12-24 18:34:45 | INFO     | [Worker_9222] Completed: AHB-ATZ - 5 results, 0 errors
+[Worker_9222] Waiting for tasks...
+
+============================================================
+[Worker_9222] Shutdown signal received
+Exiting...
+============================================================
+2025-12-24 18:41:16 | INFO     | [Worker_9222] Shutdown signal received, exiting...
+
+============================================================
+[Worker_9222] FINISHED
+  Total Groups Processed: 11
+============================================================
+
+2025-12-24 18:41:16 | INFO     | [Worker_9222] Finished. Processed 11 groups.

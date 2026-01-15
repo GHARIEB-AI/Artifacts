@@ -1,0 +1,45 @@
+2026-01-04 07:18:51 | INFO     | ======================================================================
+2026-01-04 07:18:51 | INFO     | Load Factor Scraper Started - Route: ATZ-TUU
+2026-01-04 07:18:51 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_040126_at_07.15\logs\LF_ATZ-TUU_20260104_071851.log
+2026-01-04 07:18:51 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-04 07:18:51 | INFO     | ======================================================================
+2026-01-04 07:18:51 | INFO     | Starting LF search for route: ATZ-TUU
+2026-01-04 07:18:51 | INFO     | [START] LF Search
+2026-01-04 07:18:52 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-04 07:18:52 | INFO     | [DAY_START] Processing 12JAN
+2026-01-04 07:18:52 | INFO     | [lf.day.start] Processing ATZ-TUU for 12JAN
+2026-01-04 07:18:53 | WARNING  | [lf.day.no_flights] No direct flights on 12JAN
+2026-01-04 07:18:53 | INFO     | [SUCCESS] Day 12JAN
+2026-01-04 07:18:53 | INFO     | [DAY_START] Processing 11JAN
+2026-01-04 07:18:53 | INFO     | [lf.day.start] Processing ATZ-TUU for 11JAN
+2026-01-04 07:18:55 | WARNING  | [lf.day.no_flights] No direct flights on 11JAN
+2026-01-04 07:18:55 | INFO     | [SUCCESS] Day 11JAN
+2026-01-04 07:18:55 | INFO     | [DAY_START] Processing 10JAN
+2026-01-04 07:18:55 | INFO     | [lf.day.start] Processing ATZ-TUU for 10JAN
+2026-01-04 07:18:57 | WARNING  | [lf.day.no_flights] No direct flights on 10JAN
+2026-01-04 07:18:57 | INFO     | [SUCCESS] Day 10JAN
+2026-01-04 07:18:57 | INFO     | [DAY_START] Processing 09JAN
+2026-01-04 07:18:57 | INFO     | [lf.day.start] Processing ATZ-TUU for 09JAN
+2026-01-04 07:18:58 | INFO     | [lf.day.flights_found] Found 1 flights on 09JAN
+2026-01-04 07:19:00 | INFO     | [lf.flight.extracted] SM327 on 09JAN: BKG=46, LF=25.7%
+2026-01-04 07:19:04 | INFO     | [SUCCESS] Day 09JAN
+2026-01-04 07:19:04 | INFO     | [DAY_START] Processing 08JAN
+2026-01-04 07:19:04 | INFO     | [lf.day.start] Processing ATZ-TUU for 08JAN
+2026-01-04 07:19:04 | WARNING  | [lf.day.no_flights] No direct flights on 08JAN
+2026-01-04 07:19:05 | INFO     | [SUCCESS] Day 08JAN
+2026-01-04 07:19:05 | INFO     | [DAY_START] Processing 07JAN
+2026-01-04 07:19:05 | INFO     | [lf.day.start] Processing ATZ-TUU for 07JAN
+2026-01-04 07:19:05 | WARNING  | [lf.day.no_flights] No direct flights on 07JAN
+2026-01-04 07:19:06 | INFO     | [SUCCESS] Day 07JAN
+2026-01-04 07:19:06 | INFO     | [DAY_START] Processing 06JAN
+2026-01-04 07:19:06 | INFO     | [lf.day.start] Processing ATZ-TUU for 06JAN
+2026-01-04 07:19:06 | WARNING  | [lf.day.no_flights] No direct flights on 06JAN
+2026-01-04 07:19:07 | INFO     | [SUCCESS] Day 06JAN
+2026-01-04 07:19:07 | INFO     | [DAY_START] Processing 05JAN
+2026-01-04 07:19:07 | INFO     | [lf.day.start] Processing ATZ-TUU for 05JAN
+2026-01-04 07:19:08 | WARNING  | [lf.day.no_flights] No direct flights on 05JAN
+2026-01-04 07:19:08 | INFO     | [SUCCESS] Day 05JAN
+2026-01-04 07:19:08 | INFO     | [SUCCESS] LF Search Complete
+2026-01-04 07:19:10 | INFO     | [Worker_9227] Completed: ATZ-TUU - 8 results, 0 errors
+2026-01-04 07:25:25 | INFO     | [Worker_9227] Shutdown signal received, exiting...
+2026-01-04 07:25:25 | INFO     | [Worker_9227] Finished. Processed 4 groups.

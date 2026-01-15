@@ -1,0 +1,268 @@
+{
+  "task_id": "CAI-RUH_chunk1",
+  "saved_at": "2025-12-26T20:09:29.950592",
+  "lf_results": {
+    "2026-01-05": [
+      {
+        "Date": "Monday, January 05, 2026",
+        "Flight": "SM469",
+        "DEP": "17:25",
+        "SOLD": 71,
+        "FULL CAPACITY": 179,
+        "LF%": 0.3966,
+        "LowestAvail": "T9",
+        "LASTSOLD": "2025-12-25 00:00:00",
+        "WEEKLY PROGRESS": 32,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 4,
+          "O": 11,
+          "U": 15,
+          "X": 35,
+          "T": 6,
+          "W": 0,
+          "S": 0,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "CAI-RUH",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 12,
+        "CONNECTING_PASSENGERS": null
+      }
+    ],
+    "2026-01-04": [
+      {
+        "Date": "Sunday, January 04, 2026",
+        "Flight": "SM461",
+        "DEP": "10:15",
+        "SOLD": 58,
+        "FULL CAPACITY": 109,
+        "LF%": 0.5321,
+        "LowestAvail": "W3",
+        "LASTSOLD": "2025-12-25 00:00:00",
+        "WEEKLY PROGRESS": 18,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 2,
+          "O": 13,
+          "U": 3,
+          "X": 0,
+          "T": 31,
+          "W": 8,
+          "S": 1,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "E90",
+        "Brd-Off": "CAI-RUH",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 3,
+        "CONNECTING_PASSENGERS": null
+      }
+    ],
+    "2026-01-03": [
+      {
+        "Date": "Saturday, January 03, 2026",
+        "Flight": "SM461",
+        "DEP": "09:55",
+        "SOLD": 103,
+        "FULL CAPACITY": 179,
+        "LF%": 0.5754,
+        "LowestAvail": "G1",
+        "LASTSOLD": "2025-12-26 00:00:00",
+        "WEEKLY PROGRESS": 25,
+        "RBD": {
+          "N": 1,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 5,
+          "O": 5,
+          "U": 7,
+          "X": 4,
+          "T": 12,
+          "W": 13,
+          "S": 9,
+          "G": 28,
+          "L": 16,
+          "V": 0,
+          "K": 3,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "CAI-RUH",
+        "SOLD TODAY": 8,
+        "SOLD YDAY": 7,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM461",
+          "sm_route": "CAI-RUH",
+          "sm_dep": "0955",
+          "sm_arr": "1340",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "XY0227",
+              "outbound_route": "RUH-DWC",
+              "outbound_dep": "1630",
+              "passengers": [
+                {
+                  "iata": "RUHAA2149"
+                },
+                {
+                  "iata": "RUHAA2149"
+                },
+                {
+                  "iata": "RUHAA2149"
+                }
+              ]
+            },
+            {
+              "outbound_flight": "XY0133",
+              "outbound_route": "RUH-HAS",
+              "outbound_dep": "1655",
+              "passengers": [
+                {
+                  "iata": "CAISM3232"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "2026-01-02": [
+      {
+        "Date": "Friday, January 02, 2026",
+        "Flight": "SM469",
+        "DEP": "17:25",
+        "SOLD": 123,
+        "FULL CAPACITY": 179,
+        "LF%": 0.6872,
+        "LowestAvail": "S3",
+        "LASTSOLD": "2025-12-17 00:00:00",
+        "WEEKLY PROGRESS": 0,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 8,
+          "O": 17,
+          "U": 17,
+          "X": 18,
+          "T": 20,
+          "W": 18,
+          "S": 6,
+          "G": 19,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "CAI-RUH",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM469",
+          "sm_route": "CAI-RUH",
+          "sm_dep": "1725",
+          "sm_arr": "2110",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "XY0213",
+              "outbound_route": "RUH-DXB",
+              "outbound_dep": "2300",
+              "passengers": [
+                {
+                  "iata": "DXBAD38SS"
+                },
+                {
+                  "iata": "DXBAD38SS"
+                },
+                {
+                  "iata": "DXBAD38SS"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "2026-01-01": [
+      {
+        "Date": "Thursday, January 01, 2026",
+        "Flight": "SM461",
+        "DEP": "09:55",
+        "SOLD": 116,
+        "FULL CAPACITY": 179,
+        "LF%": 0.648,
+        "LowestAvail": "T8",
+        "LASTSOLD": "2025-12-26 00:00:00",
+        "WEEKLY PROGRESS": 41,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 29,
+          "O": 20,
+          "U": 20,
+          "X": 31,
+          "T": 12,
+          "W": 3,
+          "S": 1,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "CAI-RUH",
+        "SOLD TODAY": 2,
+        "SOLD YDAY": 8,
+        "CONNECTING_PASSENGERS": null
+      }
+    ]
+  },
+  "lf_errors": {}
+}

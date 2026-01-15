@@ -1,0 +1,101 @@
+{
+  "timestamp": "2025-12-31T20:51:39.638136",
+  "service": "market-insights",
+  "counters": {
+    "oal_requests_total": {
+      "description": "Total OAL API requests",
+      "values": []
+    },
+    "lf_requests_total": {
+      "description": "Total LF requests",
+      "values": [
+        {
+          "labels": {
+            "destination": "ATZ",
+            "origin": "JED",
+            "status": "success"
+          },
+          "value": 7.0
+        },
+        {
+          "labels": {
+            "destination": "JED",
+            "origin": "ASW",
+            "status": "success"
+          },
+          "value": 7.0
+        }
+      ]
+    },
+    "errors_total": {
+      "description": "Total errors",
+      "values": []
+    }
+  },
+  "gauges": {
+    "routes_in_progress": {
+      "description": "Routes currently being processed",
+      "values": [
+        {
+          "labels": {},
+          "value": 0.0
+        }
+      ]
+    },
+    "flights_analyzed": {
+      "description": "Total flights analyzed in session",
+      "values": [
+        {
+          "labels": {
+            "direction": "lf"
+          },
+          "value": 22.0
+        }
+      ]
+    },
+    "circuit_breaker_state": {
+      "description": "Circuit breaker state (0=closed, 1=open)",
+      "values": []
+    }
+  },
+  "histograms": {
+    "request_duration_seconds": {
+      "description": "Request duration in seconds",
+      "data": {}
+    },
+    "route_processing_seconds": {
+      "description": "Route processing duration",
+      "data": {
+        "{'route': 'JED-ATZ'}": {
+          "sum": 134.844953,
+          "count": 7,
+          "buckets": {
+            "60.0": 7,
+            "120.0": 7,
+            "300.0": 7,
+            "10.0": 1,
+            "30.0": 6
+          },
+          "p50": 18.333333333333336,
+          "p95": 28.833333333333332,
+          "p99": 29.766666666666666
+        },
+        "{'route': 'ASW-JED'}": {
+          "sum": 20.432647000000003,
+          "count": 7,
+          "buckets": {
+            "5.0": 5,
+            "10.0": 7,
+            "30.0": 7,
+            "60.0": 7,
+            "120.0": 7,
+            "300.0": 7
+          },
+          "p50": 3.8,
+          "p95": 6.178571428571429,
+          "p99": 6.378571428571428
+        }
+      }
+    }
+  }
+}

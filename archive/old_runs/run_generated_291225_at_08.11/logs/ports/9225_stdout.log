@@ -1,0 +1,93 @@
+
+============================================================
+     LF WORKER - PORT 9225
+============================================================
+Worker: Worker_9225
+Status: READY
+Waiting for tasks...
+============================================================
+
+
+============================================================
+[Worker_9225] Processing: JED-CAI
+  Tier 0: Range 2, Chunk 3/3
+  Dates: 3 days
+  Date Range: 2026-01-13 to 2026-01-11
+============================================================
+
+2025-12-29 08:11:31 | INFO     | ======================================================================
+2025-12-29 08:11:31 | INFO     | Load Factor Scraper Started - Route: JED-CAI
+2025-12-29 08:11:31 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_291225_at_08.11\logs\LF_JED-CAI_20251229_081131.log
+2025-12-29 08:11:31 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-29 08:11:31 | INFO     | ======================================================================
+[LF] Processing dates (override): ['13JAN', '12JAN', '11JAN']
+[LF] Attaching to Chrome for Altea access
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9225 (after 1 attempts)
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+[LF] Processing JED-CAI for 13JAN
+[LF][ERROR] Amadeus command error detected: UNKNOWN TRANSACTION
+[LF][ERROR] Command: SN13JANJEDCAI/ASM
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+============================================================
+[LF][RESYNC] Command 'SN13JANJEDCAI/ASM' failed: TECH_ERROR:UNKNOWN TRANSACTION
+[LF][RESYNC] Re-running entire day from SN command for JED-CAI 13JAN
+[LF][RESYNC] Attempt 1/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing JED-CAI for 13JAN
+[LF] 13JAN: found 6 direct flights
+[LF] SM472 13JAN: BKG=53, GRP=50, CAP=167, LF%=31.7%, Brd-Off=JED-CAI, Classes: P:50, U:3
+[LF] SM480 13JAN: BKG=112, GRP=90, CAP=167, LF%=67.1%, Brd-Off=JED-CAI, Classes: P:45, E:45, U:10, X:11, K:1
+[LF] SM478 13JAN: BKG=142, GRP=131, CAP=167, LF%=85.0%, Brd-Off=JED-CAI, Classes: P:131, U:10, K:1
+[LF] SM460 13JAN: BKG=113, GRP=93, CAP=175, LF%=64.6%, Brd-Off=JED-CAI, Classes: N:2, P:92, E:1, U:8, X:8, S:2
+[LF] SM424 13JAN: BKG=51, GRP=46, CAP=167, LF%=30.5%, Brd-Off=JED-CAI, Classes: P:46, I:2, U:3
+[LF] SM476 13JAN: BKG=85, GRP=80, CAP=167, LF%=50.9%, Brd-Off=JED-CAI, Classes: P:80, U:1, X:3, K:1
+[LF] Getting WEEKLY/LASTSOLD data for 6 flights
+[LF] SM472 13JAN: LASTSOLD=2025-12-22 00:00:00, WEEKLY=1, TODAY=0, YDAY=0
+[LF] SM480 13JAN: LASTSOLD=2025-12-28 00:00:00, WEEKLY=21, TODAY=0, YDAY=7
+[LF] SM478 13JAN: LASTSOLD=2025-12-28 00:00:00, WEEKLY=3, TODAY=0, YDAY=1
+[LF] SM460 13JAN: LASTSOLD=2025-12-29 00:00:00, WEEKLY=13, TODAY=2, YDAY=11
+[LF] SM424 13JAN: LASTSOLD=2025-12-15 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+[LF] SM476 13JAN: LASTSOLD=2025-12-28 00:00:00, WEEKLY=4, TODAY=0, YDAY=4
+[LF] Processing JED-CAI for 12JAN
+[LF] 12JAN: found 4 direct flights
+[LF] SM480 12JAN: BKG=139, GRP=131, CAP=175, LF%=79.4%, Brd-Off=JED-CAI, Classes: P:131, U:7, W:1
+[LF] SM476 12JAN: BKG=126, GRP=117, CAP=167, LF%=75.4%, Brd-Off=JED-CAI, Classes: P:117, U:4, X:3, G:1, K:1
+[LF] SM478 12JAN: BKG=143, GRP=130, CAP=167, LF%=85.6%, Brd-Off=JED-CAI, Classes: P:130, U:10, X:1, S:1, K:1
+[LPC] SM478 12JAN: Found 0 outbound flights with connecting passengers
+[LF] SM460 12JAN: BKG=126, GRP=114, CAP=167, LF%=75.4%, Brd-Off=JED-CAI, Classes: P:114, U:8, X:2, G:1, L:1
+[LPC] SM460 12JAN: Found 0 outbound flights with connecting passengers
+[LF] Getting WEEKLY/LASTSOLD data for 4 flights
+[LF] SM480 12JAN: LASTSOLD=2025-12-24 00:00:00, WEEKLY=1, TODAY=0, YDAY=0
+[LF] SM476 12JAN: LASTSOLD=2025-12-28 00:00:00, WEEKLY=5, TODAY=0, YDAY=3
+[LF] SM478 12JAN: LASTSOLD=2025-12-28 00:00:00, WEEKLY=9, TODAY=0, YDAY=1
+[LF] SM460 12JAN: LASTSOLD=2025-12-28 00:00:00, WEEKLY=9, TODAY=0, YDAY=4
+[LF] Processing JED-CAI for 11JAN
+[LF] 11JAN: found 5 direct flights
+[LF] SM424 11JAN: BKG=143, GRP=127, CAP=178, LF%=80.3%, Brd-Off=JED-CAI, Classes: N:1, P:64, E:62, U:10, V:6
+[LPC] SM424 11JAN: Found 1 outbound flights with connecting passengers
+[LF] SM476 11JAN: BKG=97, GRP=66, CAP=167, LF%=58.1%, Brd-Off=JED-CAI, Classes: P:66, U:10, X:15, S:6
+[LF] SM432 11JAN: BKG=163, GRP=140, CAP=167, LF%=97.6%, Brd-Off=JED-CAI, Classes: P:140, O:7, U:5, X:11
+[LF] SM460 11JAN: BKG=126, GRP=94, CAP=167, LF%=75.4%, Brd-Off=JED-CAI, Classes: P:94, I:7, O:7, U:7, X:7, T:4
+[LF] SM478 11JAN: BKG=165, GRP=137, CAP=175, LF%=94.3%, Brd-Off=JED-CAI, Classes: P:43, E:94, U:10, X:14, S:4
+[LF] Getting WEEKLY/LASTSOLD data for 5 flights
+[LF] SM424 11JAN: LASTSOLD=2025-12-19 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+[LF] SM476 11JAN: LASTSOLD=2025-12-28 00:00:00, WEEKLY=22, TODAY=0, YDAY=16
+[LF] SM432 11JAN: LASTSOLD=2025-12-28 00:00:00, WEEKLY=14, TODAY=0, YDAY=10
+[LF] SM460 11JAN: LASTSOLD=2025-12-29 00:00:00, WEEKLY=8, TODAY=4, YDAY=2
+[LF] SM478 11JAN: LASTSOLD=2025-12-29 00:00:00, WEEKLY=6, TODAY=2, YDAY=4
+[LF] Results summary:
+  2026-01-13: 6 flights
+  2026-01-12: 4 flights
+  2026-01-11: 5 flights
+
+============================================================
+[Worker_9225] ✓ COMPLETED: JED-CAI
+  Results: 3 dates
+  Errors: 0 dates
+  Total Processed: 1 groups
+============================================================
+
+[Worker_9225] Waiting for tasks...

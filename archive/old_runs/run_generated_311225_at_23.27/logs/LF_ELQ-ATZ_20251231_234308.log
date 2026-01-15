@@ -1,0 +1,33 @@
+2025-12-31 23:43:08 | INFO     | ======================================================================
+2025-12-31 23:43:08 | INFO     | Load Factor Scraper Started - Route: ELQ-ATZ
+2025-12-31 23:43:08 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_23.27\logs\LF_ELQ-ATZ_20251231_234308.log
+2025-12-31 23:43:08 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 23:43:08 | INFO     | ======================================================================
+2025-12-31 23:43:08 | INFO     | Starting LF search for route: ELQ-ATZ
+2025-12-31 23:43:08 | INFO     | [START] LF Search
+2025-12-31 23:43:10 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 23:43:10 | INFO     | [DAY_START] Processing 05FEB
+2025-12-31 23:43:10 | INFO     | [lf.day.start] Processing ELQ-ATZ for 05FEB
+2025-12-31 23:43:12 | WARNING  | [lf.day.no_flights] No direct flights on 05FEB
+2025-12-31 23:43:12 | INFO     | [SUCCESS] Day 05FEB
+2025-12-31 23:43:12 | INFO     | [DAY_START] Processing 04FEB
+2025-12-31 23:43:12 | INFO     | [lf.day.start] Processing ELQ-ATZ for 04FEB
+2025-12-31 23:43:13 | INFO     | [lf.day.flights_found] Found 1 flights on 04FEB
+2025-12-31 23:43:16 | INFO     | [lf.flight.extracted] SM436 on 04FEB: BKG=4, LF=2.4%
+2025-12-31 23:43:20 | INFO     | [SUCCESS] Day 04FEB
+2025-12-31 23:43:20 | INFO     | [DAY_START] Processing 03FEB
+2025-12-31 23:43:20 | INFO     | [lf.day.start] Processing ELQ-ATZ for 03FEB
+2025-12-31 23:43:21 | WARNING  | [lf.day.no_flights] No direct flights on 03FEB
+2025-12-31 23:43:21 | INFO     | [SUCCESS] Day 03FEB
+2025-12-31 23:43:21 | INFO     | [DAY_START] Processing 02FEB
+2025-12-31 23:43:21 | INFO     | [lf.day.start] Processing ELQ-ATZ for 02FEB
+2025-12-31 23:43:23 | WARNING  | [lf.day.no_flights] No direct flights on 02FEB
+2025-12-31 23:43:23 | INFO     | [SUCCESS] Day 02FEB
+2025-12-31 23:43:23 | INFO     | [DAY_START] Processing 01FEB
+2025-12-31 23:43:23 | INFO     | [lf.day.start] Processing ELQ-ATZ for 01FEB
+2025-12-31 23:43:24 | WARNING  | [lf.day.no_flights] No direct flights on 01FEB
+2025-12-31 23:43:24 | INFO     | [SUCCESS] Day 01FEB
+2025-12-31 23:43:24 | INFO     | [SUCCESS] LF Search Complete
+2025-12-31 23:43:26 | INFO     | [Worker_9234] Completed: ELQ-ATZ - 5 results, 0 errors
+2025-12-31 23:43:26 | INFO     | [Worker_9234] Processing: CAI-JED
+2025-12-31 23:43:26 | INFO     |   Tier 0: Range 3, Chunk 5/5 (5 days)

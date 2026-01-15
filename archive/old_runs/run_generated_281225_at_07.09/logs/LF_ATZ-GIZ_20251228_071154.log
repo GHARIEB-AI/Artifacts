@@ -1,0 +1,36 @@
+2025-12-28 07:11:54 | INFO     | ======================================================================
+2025-12-28 07:11:54 | INFO     | Load Factor Scraper Started - Route: ATZ-GIZ
+2025-12-28 07:11:54 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_281225_at_07.09\logs\LF_ATZ-GIZ_20251228_071154.log
+2025-12-28 07:11:54 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-28 07:11:54 | INFO     | ======================================================================
+2025-12-28 07:11:54 | INFO     | Starting LF search for route: ATZ-GIZ
+2025-12-28 07:11:54 | INFO     | [START] LF Search
+2025-12-28 07:11:56 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-28 07:11:56 | INFO     | [DAY_START] Processing 03JAN
+2025-12-28 07:11:56 | INFO     | [lf.day.start] Processing ATZ-GIZ for 03JAN
+2025-12-28 07:11:57 | WARNING  | [lf.day.no_flights] No direct flights on 03JAN
+2025-12-28 07:11:57 | INFO     | [SUCCESS] Day 03JAN
+2025-12-28 07:11:57 | INFO     | [DAY_START] Processing 02JAN
+2025-12-28 07:11:57 | INFO     | [lf.day.start] Processing ATZ-GIZ for 02JAN
+2025-12-28 07:11:58 | WARNING  | [lf.day.no_flights] No direct flights on 02JAN
+2025-12-28 07:11:59 | INFO     | [SUCCESS] Day 02JAN
+2025-12-28 07:11:59 | INFO     | [DAY_START] Processing 01JAN
+2025-12-28 07:11:59 | INFO     | [lf.day.start] Processing ATZ-GIZ for 01JAN
+2025-12-28 07:12:00 | WARNING  | [lf.day.no_flights] No direct flights on 01JAN
+2025-12-28 07:12:00 | INFO     | [SUCCESS] Day 01JAN
+2025-12-28 07:12:00 | INFO     | [DAY_START] Processing 31DEC
+2025-12-28 07:12:00 | INFO     | [lf.day.start] Processing ATZ-GIZ for 31DEC
+2025-12-28 07:12:01 | WARNING  | [lf.day.no_flights] No direct flights on 31DEC
+2025-12-28 07:12:01 | INFO     | [SUCCESS] Day 31DEC
+2025-12-28 07:12:01 | INFO     | [DAY_START] Processing 30DEC
+2025-12-28 07:12:01 | INFO     | [lf.day.start] Processing ATZ-GIZ for 30DEC
+2025-12-28 07:12:02 | WARNING  | [lf.day.no_flights] No direct flights on 30DEC
+2025-12-28 07:12:02 | INFO     | [SUCCESS] Day 30DEC
+2025-12-28 07:12:02 | INFO     | [DAY_START] Processing 29DEC
+2025-12-28 07:12:02 | INFO     | [lf.day.start] Processing ATZ-GIZ for 29DEC
+2025-12-28 07:12:03 | WARNING  | [lf.day.no_flights] No direct flights on 29DEC
+2025-12-28 07:12:03 | INFO     | [SUCCESS] Day 29DEC
+2025-12-28 07:12:03 | INFO     | [SUCCESS] LF Search Complete
+2025-12-28 07:12:05 | INFO     | [Worker_9232] Completed: ATZ-GIZ - 6 results, 0 errors
+2025-12-28 07:16:36 | INFO     | [Worker_9232] Shutdown signal received, exiting...
+2025-12-28 07:16:36 | INFO     | [Worker_9232] Finished. Processed 5 groups.

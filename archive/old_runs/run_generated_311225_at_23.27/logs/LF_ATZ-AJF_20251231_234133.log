@@ -1,0 +1,33 @@
+2025-12-31 23:41:33 | INFO     | ======================================================================
+2025-12-31 23:41:33 | INFO     | Load Factor Scraper Started - Route: ATZ-AJF
+2025-12-31 23:41:33 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_23.27\logs\LF_ATZ-AJF_20251231_234133.log
+2025-12-31 23:41:33 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 23:41:33 | INFO     | ======================================================================
+2025-12-31 23:41:33 | INFO     | Starting LF search for route: ATZ-AJF
+2025-12-31 23:41:33 | INFO     | [START] LF Search
+2025-12-31 23:41:34 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 23:41:35 | INFO     | [DAY_START] Processing 10FEB
+2025-12-31 23:41:35 | INFO     | [lf.day.start] Processing ATZ-AJF for 10FEB
+2025-12-31 23:41:36 | WARNING  | [lf.day.no_flights] No direct flights on 10FEB
+2025-12-31 23:41:36 | INFO     | [SUCCESS] Day 10FEB
+2025-12-31 23:41:36 | INFO     | [DAY_START] Processing 09FEB
+2025-12-31 23:41:36 | INFO     | [lf.day.start] Processing ATZ-AJF for 09FEB
+2025-12-31 23:41:37 | WARNING  | [lf.day.no_flights] No direct flights on 09FEB
+2025-12-31 23:41:37 | INFO     | [SUCCESS] Day 09FEB
+2025-12-31 23:41:37 | INFO     | [DAY_START] Processing 08FEB
+2025-12-31 23:41:37 | INFO     | [lf.day.start] Processing ATZ-AJF for 08FEB
+2025-12-31 23:41:39 | WARNING  | [lf.day.no_flights] No direct flights on 08FEB
+2025-12-31 23:41:39 | INFO     | [SUCCESS] Day 08FEB
+2025-12-31 23:41:39 | INFO     | [DAY_START] Processing 07FEB
+2025-12-31 23:41:39 | INFO     | [lf.day.start] Processing ATZ-AJF for 07FEB
+2025-12-31 23:41:40 | WARNING  | [lf.day.no_flights] No direct flights on 07FEB
+2025-12-31 23:41:40 | INFO     | [SUCCESS] Day 07FEB
+2025-12-31 23:41:40 | INFO     | [DAY_START] Processing 06FEB
+2025-12-31 23:41:40 | INFO     | [lf.day.start] Processing ATZ-AJF for 06FEB
+2025-12-31 23:41:41 | INFO     | [lf.day.flights_found] Found 1 flights on 06FEB
+2025-12-31 23:41:43 | INFO     | [lf.flight.extracted] SM323 on 06FEB: BKG=3, LF=1.7%
+2025-12-31 23:41:47 | INFO     | [SUCCESS] Day 06FEB
+2025-12-31 23:41:47 | INFO     | [SUCCESS] LF Search Complete
+2025-12-31 23:41:49 | INFO     | [Worker_9232] Completed: ATZ-AJF - 5 results, 0 errors
+2025-12-31 23:41:49 | INFO     | [Worker_9232] Processing: CAI-ELQ
+2025-12-31 23:41:49 | INFO     |   Tier 0: Range 3, Chunk 4/5 (5 days)

@@ -1,0 +1,150 @@
+{
+  "task_id": "MED-CAI_r0_chunk2",
+  "saved_at": "2026-01-03T05:30:39.372603",
+  "lf_results": {
+    "2026-01-07": [],
+    "2026-01-06": [
+      {
+        "Date": "Tuesday, January 06, 2026",
+        "Flight": "SM496",
+        "DEP": "01:10",
+        "SOLD": 168,
+        "FULL CAPACITY": 178,
+        "LF%": 0.9438,
+        "LowestAvail": "G9",
+        "LASTSOLD": "2025-12-17 00:00:00",
+        "WEEKLY PROGRESS": 0,
+        "RBD": {
+          "N": 2,
+          "P": 45,
+          "A": 0,
+          "E": 59,
+          "I": 0,
+          "O": 0,
+          "U": 0,
+          "X": 0,
+          "T": 0,
+          "W": 0,
+          "S": 31,
+          "G": 10,
+          "L": 0,
+          "V": 7,
+          "K": 2,
+          "Q": 7,
+          "H": 5,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 105,
+        "EQP": "320",
+        "Brd-Off": "MED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM496",
+          "sm_route": "MED-CAI",
+          "sm_dep": "0110",
+          "sm_arr": "0159",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "SM0601",
+              "outbound_route": "CAI-CGN",
+              "outbound_dep": "0605",
+              "passengers": [
+                {
+                  "iata": "CPHSG34AA"
+                },
+                {
+                  "iata": "CPHSG34AA"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Date": "Tuesday, January 06, 2026",
+        "Flight": "SM494",
+        "DEP": "23:30",
+        "SOLD": 180,
+        "FULL CAPACITY": 175,
+        "LF%": 1.0286,
+        "LowestAvail": "CLOSED",
+        "LASTSOLD": "2025-11-18 00:00:00",
+        "WEEKLY PROGRESS": 0,
+        "RBD": {
+          "N": 0,
+          "P": 178,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 0,
+          "U": 0,
+          "X": 0,
+          "T": 0,
+          "W": 0,
+          "S": 2,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 178,
+        "EQP": "320",
+        "Brd-Off": "MED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": null
+      }
+    ],
+    "2026-01-05": [],
+    "2026-01-04": [
+      {
+        "Date": "Sunday, January 04, 2026",
+        "Flight": "SM494",
+        "DEP": "21:40",
+        "SOLD": 179,
+        "FULL CAPACITY": 179,
+        "LF%": 1.0,
+        "LowestAvail": "CLOSED",
+        "LASTSOLD": "2025-12-29 00:00:00",
+        "WEEKLY PROGRESS": 9,
+        "RBD": {
+          "N": 5,
+          "P": 90,
+          "A": 0,
+          "E": 51,
+          "I": 0,
+          "O": 0,
+          "U": 0,
+          "X": 0,
+          "T": 7,
+          "W": 0,
+          "S": 17,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 9,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 141,
+        "EQP": "320",
+        "Brd-Off": "MED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": null
+      }
+    ]
+  },
+  "lf_errors": {}
+}

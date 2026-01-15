@@ -1,0 +1,33 @@
+2026-01-01 00:21:21 | INFO     | ======================================================================
+2026-01-01 00:21:21 | INFO     | Load Factor Scraper Started - Route: CAI-AHB
+2026-01-01 00:21:21 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_23.27\logs\LF_CAI-AHB_20260101_002121.log
+2026-01-01 00:21:21 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-01 00:21:21 | INFO     | ======================================================================
+2026-01-01 00:21:21 | INFO     | Starting LF search for route: CAI-AHB
+2026-01-01 00:21:21 | INFO     | [START] LF Search
+2026-01-01 00:21:23 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-01 00:21:23 | INFO     | [DAY_START] Processing 05JAN
+2026-01-01 00:21:23 | INFO     | [lf.day.start] Processing CAI-AHB for 05JAN
+2026-01-01 00:21:24 | WARNING  | [lf.day.no_flights] No direct flights on 05JAN
+2026-01-01 00:21:24 | INFO     | [SUCCESS] Day 05JAN
+2026-01-01 00:21:24 | INFO     | [DAY_START] Processing 04JAN
+2026-01-01 00:21:24 | INFO     | [lf.day.start] Processing CAI-AHB for 04JAN
+2026-01-01 00:21:25 | WARNING  | [lf.day.no_flights] No direct flights on 04JAN
+2026-01-01 00:21:25 | INFO     | [SUCCESS] Day 04JAN
+2026-01-01 00:21:25 | INFO     | [DAY_START] Processing 03JAN
+2026-01-01 00:21:25 | INFO     | [lf.day.start] Processing CAI-AHB for 03JAN
+2026-01-01 00:21:26 | INFO     | [lf.day.flights_found] Found 1 flights on 03JAN
+2026-01-01 00:21:28 | INFO     | [lf.flight.extracted] SM443 on 03JAN: BKG=175, LF=97.8%
+2026-01-01 00:21:35 | INFO     | [SUCCESS] Day 03JAN
+2026-01-01 00:21:35 | INFO     | [DAY_START] Processing 02JAN
+2026-01-01 00:21:35 | INFO     | [lf.day.start] Processing CAI-AHB for 02JAN
+2026-01-01 00:21:36 | WARNING  | [lf.day.no_flights] No direct flights on 02JAN
+2026-01-01 00:21:36 | INFO     | [SUCCESS] Day 02JAN
+2026-01-01 00:21:36 | INFO     | [DAY_START] Processing 31DEC
+2026-01-01 00:21:36 | INFO     | [lf.day.start] Processing CAI-AHB for 31DEC
+2026-01-01 00:21:37 | WARNING  | [lf.day.no_flights] No direct flights on 31DEC
+2026-01-01 00:21:38 | INFO     | [SUCCESS] Day 31DEC
+2026-01-01 00:21:38 | INFO     | [SUCCESS] LF Search Complete
+2026-01-01 00:21:40 | INFO     | [Worker_9233] Completed: CAI-AHB - 5 results, 0 errors
+2026-01-01 00:42:42 | INFO     | [Worker_9233] Shutdown signal received, exiting...
+2026-01-01 00:42:42 | INFO     | [Worker_9233] Finished. Processed 79 groups.

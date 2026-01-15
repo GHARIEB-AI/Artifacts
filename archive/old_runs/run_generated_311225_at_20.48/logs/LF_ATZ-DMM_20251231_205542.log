@@ -1,0 +1,42 @@
+2025-12-31 20:55:42 | INFO     | ======================================================================
+2025-12-31 20:55:42 | INFO     | Load Factor Scraper Started - Route: ATZ-DMM
+2025-12-31 20:55:42 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_20.48\logs\LF_ATZ-DMM_20251231_205542.log
+2025-12-31 20:55:42 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 20:55:42 | INFO     | ======================================================================
+2025-12-31 20:55:42 | INFO     | Starting LF search for route: ATZ-DMM
+2025-12-31 20:55:42 | INFO     | [START] LF Search
+2025-12-31 20:55:44 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 20:55:44 | INFO     | [DAY_START] Processing 24JAN
+2025-12-31 20:55:44 | INFO     | [lf.day.start] Processing ATZ-DMM for 24JAN
+2025-12-31 20:55:45 | WARNING  | [lf.day.no_flights] No direct flights on 24JAN
+2025-12-31 20:55:45 | INFO     | [SUCCESS] Day 24JAN
+2025-12-31 20:55:45 | INFO     | [DAY_START] Processing 23JAN
+2025-12-31 20:55:45 | INFO     | [lf.day.start] Processing ATZ-DMM for 23JAN
+2025-12-31 20:55:46 | INFO     | [lf.day.flights_found] Found 1 flights on 23JAN
+2025-12-31 20:55:48 | INFO     | [lf.flight.extracted] SM437 on 23JAN: BKG=68, LF=38.0%
+2025-12-31 20:55:53 | INFO     | [SUCCESS] Day 23JAN
+2025-12-31 20:55:53 | INFO     | [DAY_START] Processing 22JAN
+2025-12-31 20:55:53 | INFO     | [lf.day.start] Processing ATZ-DMM for 22JAN
+2025-12-31 20:55:54 | WARNING  | [lf.day.no_flights] No direct flights on 22JAN
+2025-12-31 20:55:54 | INFO     | [SUCCESS] Day 22JAN
+2025-12-31 20:55:54 | INFO     | [DAY_START] Processing 21JAN
+2025-12-31 20:55:54 | INFO     | [lf.day.start] Processing ATZ-DMM for 21JAN
+2025-12-31 20:55:55 | WARNING  | [lf.day.no_flights] No direct flights on 21JAN
+2025-12-31 20:55:55 | INFO     | [SUCCESS] Day 21JAN
+2025-12-31 20:55:55 | INFO     | [DAY_START] Processing 20JAN
+2025-12-31 20:55:55 | INFO     | [lf.day.start] Processing ATZ-DMM for 20JAN
+2025-12-31 20:55:56 | WARNING  | [lf.day.no_flights] No direct flights on 20JAN
+2025-12-31 20:55:57 | INFO     | [SUCCESS] Day 20JAN
+2025-12-31 20:55:57 | INFO     | [DAY_START] Processing 19JAN
+2025-12-31 20:55:57 | INFO     | [lf.day.start] Processing ATZ-DMM for 19JAN
+2025-12-31 20:55:58 | INFO     | [lf.day.flights_found] Found 1 flights on 19JAN
+2025-12-31 20:56:00 | INFO     | [lf.flight.extracted] SM437 on 19JAN: BKG=74, LF=41.3%
+2025-12-31 20:56:05 | INFO     | [SUCCESS] Day 19JAN
+2025-12-31 20:56:05 | INFO     | [DAY_START] Processing 18JAN
+2025-12-31 20:56:05 | INFO     | [lf.day.start] Processing ATZ-DMM for 18JAN
+2025-12-31 20:56:06 | WARNING  | [lf.day.no_flights] No direct flights on 18JAN
+2025-12-31 20:56:06 | INFO     | [SUCCESS] Day 18JAN
+2025-12-31 20:56:06 | INFO     | [SUCCESS] LF Search Complete
+2025-12-31 20:56:08 | INFO     | [Worker_9233] Completed: ATZ-DMM - 7 results, 0 errors
+2025-12-31 20:56:08 | INFO     | [Worker_9233] Processing: CAI-AJF
+2025-12-31 20:56:08 | INFO     |   Tier 0: Range 1, Chunk 2/5 (7 days)

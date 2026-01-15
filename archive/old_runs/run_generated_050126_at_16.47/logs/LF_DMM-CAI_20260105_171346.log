@@ -1,0 +1,52 @@
+2026-01-05 17:13:46 | INFO     | ======================================================================
+2026-01-05 17:13:46 | INFO     | Load Factor Scraper Started - Route: DMM-CAI
+2026-01-05 17:13:46 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_050126_at_16.47\logs\LF_DMM-CAI_20260105_171346.log
+2026-01-05 17:13:46 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-05 17:13:46 | INFO     | ======================================================================
+2026-01-05 17:13:46 | INFO     | Starting LF search for route: DMM-CAI
+2026-01-05 17:13:46 | INFO     | [START] LF Search
+2026-01-05 17:13:47 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-05 17:13:47 | INFO     | [DAY_START] Processing 09FEB
+2026-01-05 17:13:47 | INFO     | [lf.day.start] Processing DMM-CAI for 09FEB
+2026-01-05 17:13:49 | WARNING  | [lf.day.no_flights] No direct flights on 09FEB
+2026-01-05 17:13:49 | INFO     | [SUCCESS] Day 09FEB
+2026-01-05 17:13:49 | INFO     | [DAY_START] Processing 08FEB
+2026-01-05 17:13:49 | INFO     | [lf.day.start] Processing DMM-CAI for 08FEB
+2026-01-05 17:13:51 | WARNING  | [lf.day.no_flights] No direct flights on 08FEB
+2026-01-05 17:13:51 | INFO     | [SUCCESS] Day 08FEB
+2026-01-05 17:13:51 | INFO     | [DAY_START] Processing 07FEB
+2026-01-05 17:13:51 | INFO     | [lf.day.start] Processing DMM-CAI for 07FEB
+2026-01-05 17:13:52 | INFO     | [lf.day.flights_found] Found 1 flights on 07FEB
+2026-01-05 17:13:54 | INFO     | [lf.flight.extracted] SM434 on 07FEB: BKG=10, LF=5.9%
+2026-01-05 17:13:57 | INFO     | [SUCCESS] Day 07FEB
+2026-01-05 17:13:57 | INFO     | [DAY_START] Processing 06FEB
+2026-01-05 17:13:57 | INFO     | [lf.day.start] Processing DMM-CAI for 06FEB
+2026-01-05 17:13:59 | INFO     | [lf.day.flights_found] Found 1 flights on 06FEB
+2026-01-05 17:14:01 | INFO     | [lf.flight.extracted] SM434 on 06FEB: BKG=28, LF=16.0%
+2026-01-05 17:14:07 | INFO     | [SUCCESS] Day 06FEB
+2026-01-05 17:14:07 | INFO     | [DAY_START] Processing 05FEB
+2026-01-05 17:14:07 | INFO     | [lf.day.start] Processing DMM-CAI for 05FEB
+2026-01-05 17:14:08 | INFO     | [lf.day.flights_found] Found 1 flights on 05FEB
+2026-01-05 17:14:11 | INFO     | [lf.flight.extracted] SM434 on 05FEB: BKG=9, LF=5.1%
+2026-01-05 17:14:14 | INFO     | [SUCCESS] Day 05FEB
+2026-01-05 17:14:14 | INFO     | [DAY_START] Processing 04FEB
+2026-01-05 17:14:14 | INFO     | [lf.day.start] Processing DMM-CAI for 04FEB
+2026-01-05 17:14:16 | WARNING  | [lf.day.no_flights] No direct flights on 04FEB
+2026-01-05 17:14:16 | INFO     | [SUCCESS] Day 04FEB
+2026-01-05 17:14:16 | INFO     | [DAY_START] Processing 03FEB
+2026-01-05 17:14:16 | INFO     | [lf.day.start] Processing DMM-CAI for 03FEB
+2026-01-05 17:14:17 | INFO     | [lf.day.flights_found] Found 1 flights on 03FEB
+2026-01-05 17:14:20 | INFO     | [lf.flight.extracted] SM434 on 03FEB: BKG=13, LF=7.4%
+2026-01-05 17:14:23 | INFO     | [SUCCESS] Day 03FEB
+2026-01-05 17:14:23 | INFO     | [DAY_START] Processing 02FEB
+2026-01-05 17:14:23 | INFO     | [lf.day.start] Processing DMM-CAI for 02FEB
+2026-01-05 17:14:24 | WARNING  | [lf.day.no_flights] No direct flights on 02FEB
+2026-01-05 17:14:24 | INFO     | [SUCCESS] Day 02FEB
+2026-01-05 17:14:24 | INFO     | [DAY_START] Processing 01FEB
+2026-01-05 17:14:24 | INFO     | [lf.day.start] Processing DMM-CAI for 01FEB
+2026-01-05 17:14:26 | WARNING  | [lf.day.no_flights] No direct flights on 01FEB
+2026-01-05 17:14:26 | INFO     | [SUCCESS] Day 01FEB
+2026-01-05 17:14:26 | INFO     | [SUCCESS] LF Search Complete
+2026-01-05 17:14:28 | INFO     | [Worker_9222] Completed: DMM-CAI - 9 results, 0 errors
+2026-01-05 17:14:28 | INFO     | [Worker_9222] Processing: AJF-ATZ
+2026-01-05 17:14:28 | INFO     |   Tier 0: Range 2, Chunk 3/3 (9 days)

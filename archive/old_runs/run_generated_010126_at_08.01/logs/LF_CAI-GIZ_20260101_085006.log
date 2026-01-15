@@ -1,0 +1,33 @@
+2026-01-01 08:50:06 | INFO     | ======================================================================
+2026-01-01 08:50:06 | INFO     | Load Factor Scraper Started - Route: CAI-GIZ
+2026-01-01 08:50:06 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_010126_at_08.01\logs\LF_CAI-GIZ_20260101_085006.log
+2026-01-01 08:50:06 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-01 08:50:06 | INFO     | ======================================================================
+2026-01-01 08:50:06 | INFO     | Starting LF search for route: CAI-GIZ
+2026-01-01 08:50:06 | INFO     | [START] LF Search
+2026-01-01 08:50:08 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-01 08:50:08 | INFO     | [DAY_START] Processing 06JAN
+2026-01-01 08:50:08 | INFO     | [lf.day.start] Processing CAI-GIZ for 06JAN
+2026-01-01 08:50:09 | WARNING  | [lf.day.no_flights] No direct flights on 06JAN
+2026-01-01 08:50:09 | INFO     | [SUCCESS] Day 06JAN
+2026-01-01 08:50:09 | INFO     | [DAY_START] Processing 05JAN
+2026-01-01 08:50:09 | INFO     | [lf.day.start] Processing CAI-GIZ for 05JAN
+2026-01-01 08:50:10 | WARNING  | [lf.day.no_flights] No direct flights on 05JAN
+2026-01-01 08:50:10 | INFO     | [SUCCESS] Day 05JAN
+2026-01-01 08:50:10 | INFO     | [DAY_START] Processing 04JAN
+2026-01-01 08:50:10 | INFO     | [lf.day.start] Processing CAI-GIZ for 04JAN
+2026-01-01 08:50:11 | WARNING  | [lf.day.no_flights] No direct flights on 04JAN
+2026-01-01 08:50:12 | INFO     | [SUCCESS] Day 04JAN
+2026-01-01 08:50:12 | INFO     | [DAY_START] Processing 03JAN
+2026-01-01 08:50:12 | INFO     | [lf.day.start] Processing CAI-GIZ for 03JAN
+2026-01-01 08:50:14 | INFO     | [lf.day.flights_found] Found 1 flights on 03JAN
+2026-01-01 08:50:16 | INFO     | [lf.flight.extracted] SM329 on 03JAN: BKG=155, LF=86.6%
+2026-01-01 08:50:24 | INFO     | [SUCCESS] Day 03JAN
+2026-01-01 08:50:24 | INFO     | [DAY_START] Processing 02JAN
+2026-01-01 08:50:24 | INFO     | [lf.day.start] Processing CAI-GIZ for 02JAN
+2026-01-01 08:50:25 | WARNING  | [lf.day.no_flights] No direct flights on 02JAN
+2026-01-01 08:50:25 | INFO     | [SUCCESS] Day 02JAN
+2026-01-01 08:50:25 | INFO     | [SUCCESS] LF Search Complete
+2026-01-01 08:50:27 | INFO     | [Worker_9234] Completed: CAI-GIZ - 5 results, 0 errors
+2026-01-01 11:15:42 | INFO     | [Worker_9234] Shutdown signal received, exiting...
+2026-01-01 11:15:42 | INFO     | [Worker_9234] Finished. Processed 81 groups.

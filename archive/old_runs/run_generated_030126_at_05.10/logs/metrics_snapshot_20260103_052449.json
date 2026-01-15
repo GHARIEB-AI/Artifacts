@@ -1,0 +1,101 @@
+{
+  "timestamp": "2026-01-03T05:24:49.860506",
+  "service": "market-insights",
+  "counters": {
+    "oal_requests_total": {
+      "description": "Total OAL API requests",
+      "values": []
+    },
+    "lf_requests_total": {
+      "description": "Total LF requests",
+      "values": [
+        {
+          "labels": {
+            "destination": "CAI",
+            "origin": "MED",
+            "status": "success"
+          },
+          "value": 9.0
+        },
+        {
+          "labels": {
+            "destination": "ATZ",
+            "origin": "JED",
+            "status": "success"
+          },
+          "value": 4.0
+        }
+      ]
+    },
+    "errors_total": {
+      "description": "Total errors",
+      "values": []
+    }
+  },
+  "gauges": {
+    "routes_in_progress": {
+      "description": "Routes currently being processed",
+      "values": [
+        {
+          "labels": {},
+          "value": 0.0
+        }
+      ]
+    },
+    "flights_analyzed": {
+      "description": "Total flights analyzed in session",
+      "values": [
+        {
+          "labels": {
+            "direction": "lf"
+          },
+          "value": 18.0
+        }
+      ]
+    },
+    "circuit_breaker_state": {
+      "description": "Circuit breaker state (0=closed, 1=open)",
+      "values": []
+    }
+  },
+  "histograms": {
+    "request_duration_seconds": {
+      "description": "Request duration in seconds",
+      "data": {}
+    },
+    "route_processing_seconds": {
+      "description": "Route processing duration",
+      "data": {
+        "{'route': 'MED-CAI'}": {
+          "sum": 48.540443999999994,
+          "count": 9,
+          "buckets": {
+            "30.0": 9,
+            "60.0": 9,
+            "120.0": 9,
+            "300.0": 9,
+            "5.0": 4,
+            "10.0": 7
+          },
+          "p50": 5.357142857142857,
+          "p95": 8.25,
+          "p99": 8.507142857142856
+        },
+        "{'route': 'JED-ATZ'}": {
+          "sum": 64.637073,
+          "count": 4,
+          "buckets": {
+            "30.0": 4,
+            "60.0": 4,
+            "120.0": 4,
+            "300.0": 4,
+            "10.0": 1
+          },
+          "p50": 15.0,
+          "p95": 24.0,
+          "p99": 24.8
+        }
+      }
+    }
+  }
+}

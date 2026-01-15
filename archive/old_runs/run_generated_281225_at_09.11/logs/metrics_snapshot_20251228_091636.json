@@ -1,0 +1,99 @@
+{
+  "timestamp": "2025-12-28T09:16:36.309344",
+  "service": "market-insights",
+  "counters": {
+    "oal_requests_total": {
+      "description": "Total OAL API requests",
+      "values": []
+    },
+    "lf_requests_total": {
+      "description": "Total LF requests",
+      "values": [
+        {
+          "labels": {
+            "destination": "CAI",
+            "origin": "JED",
+            "status": "success"
+          },
+          "value": 3.0
+        },
+        {
+          "labels": {
+            "destination": "ATZ",
+            "origin": "JED",
+            "status": "success"
+          },
+          "value": 7.0
+        }
+      ]
+    },
+    "errors_total": {
+      "description": "Total errors",
+      "values": []
+    }
+  },
+  "gauges": {
+    "routes_in_progress": {
+      "description": "Routes currently being processed",
+      "values": [
+        {
+          "labels": {},
+          "value": 0.0
+        }
+      ]
+    },
+    "flights_analyzed": {
+      "description": "Total flights analyzed in session",
+      "values": [
+        {
+          "labels": {
+            "direction": "lf"
+          },
+          "value": 33.0
+        }
+      ]
+    },
+    "circuit_breaker_state": {
+      "description": "Circuit breaker state (0=closed, 1=open)",
+      "values": []
+    }
+  },
+  "histograms": {
+    "request_duration_seconds": {
+      "description": "Request duration in seconds",
+      "data": {}
+    },
+    "route_processing_seconds": {
+      "description": "Route processing duration",
+      "data": {
+        "{'route': 'JED-CAI'}": {
+          "sum": 113.34098399999999,
+          "count": 3,
+          "buckets": {
+            "60.0": 3,
+            "120.0": 3,
+            "300.0": 3,
+            "30.0": 1
+          },
+          "p50": 35.0,
+          "p95": 48.5,
+          "p99": 49.7
+        },
+        "{'route': 'JED-ATZ'}": {
+          "sum": 165.21170600000002,
+          "count": 7,
+          "buckets": {
+            "60.0": 7,
+            "120.0": 7,
+            "300.0": 7,
+            "10.0": 1,
+            "30.0": 5
+          },
+          "p50": 20.0,
+          "p95": 32.785714285714285,
+          "p99": 33.98571428571429
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,118 @@
+
+============================================================
+     LF WORKER - PORT 9232
+============================================================
+Worker: Worker_9232
+Status: READY
+Waiting for tasks...
+============================================================
+
+
+============================================================
+[Worker_9232] Processing: DMM-CAI
+  Tier 0: Range 1, Chunk 2/2
+  Dates: 13 days
+  Date Range: 2026-01-18 to 2026-01-06
+============================================================
+
+2026-01-06 08:43:42 | INFO     | ======================================================================
+2026-01-06 08:43:42 | INFO     | Load Factor Scraper Started - Route: DMM-CAI
+2026-01-06 08:43:42 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_060126_at_08.43\logs\LF_DMM-CAI_20260106_084342.log
+2026-01-06 08:43:42 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-06 08:43:42 | INFO     | ======================================================================
+[LF] Processing dates (override): ['18JAN', '17JAN', '16JAN', '15JAN', '14JAN', '13JAN', '12JAN', '11JAN', '10JAN', '09JAN', '08JAN', '07JAN', '06JAN']
+[LF] Attaching to Chrome for Altea access
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9232 (after 1 attempts)
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+[LF] Processing DMM-CAI for 18JAN
+[LF][ERROR] Amadeus command error detected: UNKNOWN TRANSACTION
+[LF][ERROR] Command: SN18JANDMMCAI/ASM
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+============================================================
+[LF][RESYNC] Command 'SN18JANDMMCAI/ASM' failed: TECH_ERROR:UNKNOWN TRANSACTION
+[LF][RESYNC] Re-running entire day from SN command for DMM-CAI 18JAN
+[LF][RESYNC] Attempt 1/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing DMM-CAI for 18JAN
+[LF] No direct flights on 18JAN for DMM-CAI
+[LF] Processing DMM-CAI for 17JAN
+[LF] 17JAN: found 1 direct flights
+[LF] SM434 17JAN: BKG=22, GRP=0, CAP=175, LF%=12.6%, Brd-Off=DMM-CAI, Classes: O:7, U:7, X:3, W:5
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM434 17JAN: LASTSOLD=2026-01-02 00:00:00, WEEKLY=4, TODAY=0, YDAY=0
+[LF] Processing DMM-CAI for 16JAN
+[LF] 16JAN: found 1 direct flights
+[LF] SM434 16JAN: BKG=60, GRP=0, CAP=168, LF%=35.7%, Brd-Off=DMM-CAI, Classes: I:21, O:12, U:10, X:8, T:8, W:1
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM434 16JAN: LASTSOLD=2026-01-05 00:00:00, WEEKLY=24, TODAY=0, YDAY=7
+[LF] Processing DMM-CAI for 15JAN
+[LF] 15JAN: found 1 direct flights
+[LF] SM434 15JAN: BKG=41, GRP=0, CAP=175, LF%=23.4%, Brd-Off=DMM-CAI, Classes: I:8, U:4, X:15, T:5, S:4, G:5
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM434 15JAN: LASTSOLD=2026-01-05 00:00:00, WEEKLY=14, TODAY=0, YDAY=8
+[LF] Processing DMM-CAI for 14JAN
+[LF] No direct flights on 14JAN for DMM-CAI
+[LF] Processing DMM-CAI for 13JAN
+[LF] 13JAN: found 1 direct flights
+[LF] SM434 13JAN: BKG=30, GRP=0, CAP=175, LF%=17.1%, Brd-Off=DMM-CAI, Classes: O:1, U:12, X:11, T:3, G:3
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM434 13JAN: LASTSOLD=2026-01-05 00:00:00, WEEKLY=6, TODAY=0, YDAY=3
+[LF] Processing DMM-CAI for 12JAN
+[LF] No direct flights on 12JAN for DMM-CAI
+[LF] Processing DMM-CAI for 11JAN
+[LF] No direct flights on 11JAN for DMM-CAI
+[LF] Processing DMM-CAI for 10JAN
+[LF] 10JAN: found 1 direct flights
+[LF] SM434 10JAN: BKG=36, GRP=0, CAP=175, LF%=20.6%, Brd-Off=DMM-CAI, Classes: U:5, X:5, T:1, W:9, S:11, G:5
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM434 10JAN: LASTSOLD=2026-01-05 00:00:00, WEEKLY=11, TODAY=0, YDAY=2
+[LF] Processing DMM-CAI for 09JAN
+[LF] 09JAN: found 1 direct flights
+[LF] SM434 09JAN: BKG=74, GRP=0, CAP=175, LF%=42.3%, Brd-Off=DMM-CAI, Classes: I:3, W:6, S:19, G:32, L:10, V:4
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM434 09JAN: LASTSOLD=2026-01-05 00:00:00, WEEKLY=30, TODAY=0, YDAY=3
+[LF] Processing DMM-CAI for 08JAN
+[LF] 08JAN: found 1 direct flights
+[LF] SM434 08JAN: BKG=72, GRP=0, CAP=175, LF%=41.1%, Brd-Off=DMM-CAI, Classes: S:12, G:35, L:12, V:13
+[LPC] SM434 08JAN: Found 0 outbound flights with connecting passengers
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM434 08JAN: LASTSOLD=2026-01-04 00:00:00, WEEKLY=19, TODAY=0, YDAY=0
+[LF] Processing DMM-CAI for 07JAN
+[LF] No direct flights on 07JAN for DMM-CAI
+[LF] Skipping 06JAN (Today) - will be processed by supplement scan
+[LF] Results summary:
+  2026-01-18: 0 flights
+  2026-01-17: 1 flights
+  2026-01-16: 1 flights
+  2026-01-15: 1 flights
+  2026-01-14: 0 flights
+  2026-01-13: 1 flights
+  2026-01-12: 0 flights
+  2026-01-11: 0 flights
+  2026-01-10: 1 flights
+  2026-01-09: 1 flights
+  2026-01-08: 1 flights
+  2026-01-07: 0 flights
+
+============================================================
+[Worker_9232] ✓ COMPLETED: DMM-CAI
+  Results: 12 dates
+  Errors: 0 dates
+  Total Processed: 1 groups
+============================================================
+
+[Worker_9232] Waiting for tasks...
+
+============================================================
+[Worker_9232] Shutdown signal received
+Exiting...
+============================================================
+
+============================================================
+[Worker_9232] FINISHED
+  Total Groups Processed: 1
+============================================================
+

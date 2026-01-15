@@ -1,0 +1,197 @@
+{
+  "task_id": "MED-CAI_r2_chunk0",
+  "saved_at": "2026-01-01T08:02:59.527852",
+  "lf_results": {
+    "2026-03-31": [
+      {
+        "Date": "Tuesday, March 31, 2026",
+        "Flight": "SM494",
+        "DEP": "09:30",
+        "SOLD": 168,
+        "FULL CAPACITY": 175,
+        "LF%": 0.96,
+        "LowestAvail": "CLOSED",
+        "LASTSOLD": "2025-12-29 00:00:00",
+        "WEEKLY PROGRESS": 8,
+        "RBD": {
+          "N": 0,
+          "P": 135,
+          "A": 0,
+          "E": 0,
+          "I": 15,
+          "O": 6,
+          "U": 0,
+          "X": 0,
+          "T": 0,
+          "W": 0,
+          "S": 0,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 12,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 135,
+        "EQP": "320",
+        "Brd-Off": "MED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": null
+      }
+    ],
+    "2026-03-30": [
+      {
+        "Date": "Monday, March 30, 2026",
+        "Flight": "SM494",
+        "DEP": "01:45",
+        "SOLD": 168,
+        "FULL CAPACITY": 175,
+        "LF%": 0.96,
+        "LowestAvail": "CLOSED",
+        "LASTSOLD": "2025-12-30 00:00:00",
+        "WEEKLY PROGRESS": 15,
+        "RBD": {
+          "N": 0,
+          "P": 135,
+          "A": 0,
+          "E": 0,
+          "I": 17,
+          "O": 10,
+          "U": 0,
+          "X": 1,
+          "T": 0,
+          "W": 0,
+          "S": 0,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 5,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 135,
+        "EQP": "320",
+        "Brd-Off": "MED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": null
+      }
+    ],
+    "2026-03-29": [],
+    "2026-03-28": [
+      {
+        "Date": "Saturday, March 28, 2026",
+        "Flight": "SM494",
+        "DEP": "09:30",
+        "SOLD": 140,
+        "FULL CAPACITY": 175,
+        "LF%": 0.8,
+        "LowestAvail": "L1",
+        "LASTSOLD": "2025-12-31 00:00:00",
+        "WEEKLY PROGRESS": 3,
+        "RBD": {
+          "N": 0,
+          "P": 135,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 0,
+          "U": 0,
+          "X": 0,
+          "T": 0,
+          "W": 0,
+          "S": 0,
+          "G": 0,
+          "L": 4,
+          "V": 0,
+          "K": 1,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 135,
+        "EQP": "320",
+        "Brd-Off": "MED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 1,
+        "CONNECTING_PASSENGERS": null
+      }
+    ],
+    "2026-03-27": [],
+    "2026-03-26": [
+      {
+        "Date": "Thursday, March 26, 2026",
+        "Flight": "SM494",
+        "DEP": "12:55",
+        "SOLD": 151,
+        "FULL CAPACITY": 175,
+        "LF%": 0.8629,
+        "LowestAvail": "V1",
+        "LASTSOLD": "2025-12-30 00:00:00",
+        "WEEKLY PROGRESS": 9,
+        "RBD": {
+          "N": 0,
+          "P": 135,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 0,
+          "U": 0,
+          "X": 0,
+          "T": 0,
+          "W": 0,
+          "S": 1,
+          "G": 0,
+          "L": 5,
+          "V": 4,
+          "K": 5,
+          "Q": 0,
+          "H": 0,
+          "M": 1,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 135,
+        "EQP": "320",
+        "Brd-Off": "MED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM494",
+          "sm_route": "MED-CAI",
+          "sm_dep": "1255",
+          "sm_arr": "1345",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "MS0861",
+              "outbound_route": "CAI-CMN",
+              "outbound_dep": "1900",
+              "passengers": [
+                {
+                  "iata": "MIASG38AA"
+                },
+                {
+                  "iata": "MIASG38AA"
+                },
+                {
+                  "iata": "MIASG38AA"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "2026-03-25": []
+  },
+  "lf_errors": {}
+}

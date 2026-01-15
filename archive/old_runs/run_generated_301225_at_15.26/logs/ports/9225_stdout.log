@@ -1,0 +1,267 @@
+
+============================================================
+     LF WORKER - PORT 9225
+============================================================
+Worker: Worker_9225
+Status: READY
+Waiting for tasks...
+============================================================
+
+
+============================================================
+[Worker_9225] Processing: JED-SSH
+  Tier 0: Range 1, Chunk 1/4
+  Dates: 9 days
+  Date Range: 2026-01-31 to 2026-01-23
+============================================================
+
+2025-12-30 15:27:10 | INFO     | ======================================================================
+2025-12-30 15:27:10 | INFO     | Load Factor Scraper Started - Route: JED-SSH
+2025-12-30 15:27:10 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_301225_at_15.26\logs\LF_JED-SSH_20251230_152710.log
+2025-12-30 15:27:10 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-30 15:27:10 | INFO     | ======================================================================
+[LF] Processing dates (override): ['31JAN', '30JAN', '29JAN', '28JAN', '27JAN', '26JAN', '25JAN', '24JAN', '23JAN']
+[LF] Attaching to Chrome for Altea access
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9225 (after 1 attempts)
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+[LF] Processing JED-SSH for 31JAN
+[LF][ERROR] Amadeus command error detected: UNKNOWN TRANSACTION
+[LF][ERROR] Command: SN31JANJEDSSH/ASM
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+============================================================
+[LF][RESYNC] Command 'SN31JANJEDSSH/ASM' failed: TECH_ERROR:UNKNOWN TRANSACTION
+[LF][RESYNC] Re-running entire day from SN command for JED-SSH 31JAN
+[LF][RESYNC] Attempt 1/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing JED-SSH for 31JAN
+[LF] No direct flights on 31JAN for JED-SSH
+[LF] Processing JED-SSH for 30JAN
+[LF] No direct flights on 30JAN for JED-SSH
+[LF] Processing JED-SSH for 29JAN
+[LF] No direct flights on 29JAN for JED-SSH
+[LF] Processing JED-SSH for 28JAN
+[LF] No direct flights on 28JAN for JED-SSH
+[LF] Processing JED-SSH for 27JAN
+[LF] No direct flights on 27JAN for JED-SSH
+[LF] Processing JED-SSH for 26JAN
+[LF] No direct flights on 26JAN for JED-SSH
+[LF] Processing JED-SSH for 25JAN
+[LF] No direct flights on 25JAN for JED-SSH
+[LF] Processing JED-SSH for 24JAN
+[LF] No direct flights on 24JAN for JED-SSH
+[LF] Processing JED-SSH for 23JAN
+[LF] No direct flights on 23JAN for JED-SSH
+[LF] Results summary:
+  2026-01-31: 0 flights
+  2026-01-30: 0 flights
+  2026-01-29: 0 flights
+  2026-01-28: 0 flights
+  2026-01-27: 0 flights
+  2026-01-26: 0 flights
+  2026-01-25: 0 flights
+  2026-01-24: 0 flights
+  2026-01-23: 0 flights
+
+============================================================
+[Worker_9225] ✓ COMPLETED: JED-SSH
+  Results: 9 dates
+  Errors: 0 dates
+  Total Processed: 1 groups
+============================================================
+
+
+============================================================
+[Worker_9225] Processing: JED-HRG
+  Tier 0: Range 1, Chunk 1/4
+  Dates: 9 days
+  Date Range: 2026-01-31 to 2026-01-23
+============================================================
+
+2025-12-30 15:27:33 | INFO     | ======================================================================
+2025-12-30 15:27:33 | INFO     | Load Factor Scraper Started - Route: JED-HRG
+2025-12-30 15:27:33 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_301225_at_15.26\logs\LF_JED-HRG_20251230_152733.log
+2025-12-30 15:27:33 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-30 15:27:33 | INFO     | ======================================================================
+[LF] Processing dates (override): ['31JAN', '30JAN', '29JAN', '28JAN', '27JAN', '26JAN', '25JAN', '24JAN', '23JAN']
+[LF] Attaching to Chrome for Altea access
+2025-12-30 15:27:33 | INFO     | Starting LF search for route: JED-HRG
+2025-12-30 15:27:33 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9225 (after 1 attempts)
+2025-12-30 15:27:34 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+2025-12-30 15:27:34 | INFO     | [DAY_START] Processing 31JAN
+[LF] Processing JED-HRG for 31JAN
+2025-12-30 15:27:34 | INFO     | [lf.day.start] Processing JED-HRG for 31JAN
+[LF] No direct flights on 31JAN for JED-HRG
+2025-12-30 15:27:35 | WARNING  | [lf.day.no_flights] No direct flights on 31JAN
+2025-12-30 15:27:35 | INFO     | [SUCCESS] Day 31JAN
+2025-12-30 15:27:35 | INFO     | [DAY_START] Processing 30JAN
+[LF] Processing JED-HRG for 30JAN
+2025-12-30 15:27:35 | INFO     | [lf.day.start] Processing JED-HRG for 30JAN
+[LF] No direct flights on 30JAN for JED-HRG
+2025-12-30 15:27:36 | WARNING  | [lf.day.no_flights] No direct flights on 30JAN
+2025-12-30 15:27:36 | INFO     | [SUCCESS] Day 30JAN
+2025-12-30 15:27:36 | INFO     | [DAY_START] Processing 29JAN
+[LF] Processing JED-HRG for 29JAN
+2025-12-30 15:27:36 | INFO     | [lf.day.start] Processing JED-HRG for 29JAN
+[LF] No direct flights on 29JAN for JED-HRG
+2025-12-30 15:27:37 | WARNING  | [lf.day.no_flights] No direct flights on 29JAN
+2025-12-30 15:27:37 | INFO     | [SUCCESS] Day 29JAN
+2025-12-30 15:27:37 | INFO     | [DAY_START] Processing 28JAN
+[LF] Processing JED-HRG for 28JAN
+2025-12-30 15:27:37 | INFO     | [lf.day.start] Processing JED-HRG for 28JAN
+[LF] No direct flights on 28JAN for JED-HRG
+2025-12-30 15:27:38 | WARNING  | [lf.day.no_flights] No direct flights on 28JAN
+2025-12-30 15:27:38 | INFO     | [SUCCESS] Day 28JAN
+2025-12-30 15:27:38 | INFO     | [DAY_START] Processing 27JAN
+[LF] Processing JED-HRG for 27JAN
+2025-12-30 15:27:38 | INFO     | [lf.day.start] Processing JED-HRG for 27JAN
+[LF] No direct flights on 27JAN for JED-HRG
+2025-12-30 15:27:39 | WARNING  | [lf.day.no_flights] No direct flights on 27JAN
+2025-12-30 15:27:39 | INFO     | [SUCCESS] Day 27JAN
+2025-12-30 15:27:39 | INFO     | [DAY_START] Processing 26JAN
+[LF] Processing JED-HRG for 26JAN
+2025-12-30 15:27:39 | INFO     | [lf.day.start] Processing JED-HRG for 26JAN
+[LF] No direct flights on 26JAN for JED-HRG
+2025-12-30 15:27:40 | WARNING  | [lf.day.no_flights] No direct flights on 26JAN
+2025-12-30 15:27:40 | INFO     | [SUCCESS] Day 26JAN
+2025-12-30 15:27:40 | INFO     | [DAY_START] Processing 25JAN
+[LF] Processing JED-HRG for 25JAN
+2025-12-30 15:27:40 | INFO     | [lf.day.start] Processing JED-HRG for 25JAN
+[LF][[SYNC] RETRYING] Cannot focus on command line
+[LF][[INFO] INFO] Will try 50 times before pausing...
+[LF] No direct flights on 25JAN for JED-HRG
+2025-12-30 15:27:42 | WARNING  | [lf.day.no_flights] No direct flights on 25JAN
+2025-12-30 15:27:43 | INFO     | [SUCCESS] Day 25JAN
+2025-12-30 15:27:43 | INFO     | [DAY_START] Processing 24JAN
+[LF] Processing JED-HRG for 24JAN
+2025-12-30 15:27:43 | INFO     | [lf.day.start] Processing JED-HRG for 24JAN
+[LF] No direct flights on 24JAN for JED-HRG
+2025-12-30 15:27:43 | WARNING  | [lf.day.no_flights] No direct flights on 24JAN
+2025-12-30 15:27:44 | INFO     | [SUCCESS] Day 24JAN
+2025-12-30 15:27:44 | INFO     | [DAY_START] Processing 23JAN
+[LF] Processing JED-HRG for 23JAN
+2025-12-30 15:27:44 | INFO     | [lf.day.start] Processing JED-HRG for 23JAN
+[LF] No direct flights on 23JAN for JED-HRG
+2025-12-30 15:27:45 | WARNING  | [lf.day.no_flights] No direct flights on 23JAN
+2025-12-30 15:27:45 | INFO     | [SUCCESS] Day 23JAN
+[LF] Results summary:
+  2026-01-31: 0 flights
+  2026-01-30: 0 flights
+  2026-01-29: 0 flights
+  2026-01-28: 0 flights
+  2026-01-27: 0 flights
+  2026-01-26: 0 flights
+  2026-01-25: 0 flights
+  2026-01-24: 0 flights
+  2026-01-23: 0 flights
+2025-12-30 15:27:45 | INFO     | [SUCCESS] LF Search Complete
+
+============================================================
+[Worker_9225] ✓ COMPLETED: JED-HRG
+  Results: 9 dates
+  Errors: 0 dates
+  Total Processed: 2 groups
+============================================================
+
+2025-12-30 15:27:47 | INFO     | [Worker_9225] Completed: JED-HRG - 9 results, 0 errors
+
+============================================================
+[Worker_9225] Processing: RUH-CAI
+  Tier 0: Range 1, Chunk 1/4
+  Dates: 9 days
+  Date Range: 2026-01-31 to 2026-01-23
+============================================================
+
+2025-12-30 15:27:47 | INFO     | [Worker_9225] Processing: RUH-CAI
+2025-12-30 15:27:47 | INFO     |   Tier 0: Range 1, Chunk 1/4 (9 days)
+2025-12-30 15:27:47 | INFO     | ======================================================================
+2025-12-30 15:27:47 | INFO     | Load Factor Scraper Started - Route: RUH-CAI
+2025-12-30 15:27:47 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_301225_at_15.26\logs\LF_RUH-CAI_20251230_152747.log
+2025-12-30 15:27:47 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-30 15:27:47 | INFO     | ======================================================================
+[LF] Processing dates (override): ['31JAN', '30JAN', '29JAN', '28JAN', '27JAN', '26JAN', '25JAN', '24JAN', '23JAN']
+[LF] Attaching to Chrome for Altea access
+2025-12-30 15:27:47 | INFO     | Starting LF search for route: RUH-CAI
+2025-12-30 15:27:47 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9225 (after 1 attempts)
+2025-12-30 15:27:48 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+2025-12-30 15:27:48 | INFO     | [DAY_START] Processing 31JAN
+[LF] Processing RUH-CAI for 31JAN
+2025-12-30 15:27:48 | INFO     | [lf.day.start] Processing RUH-CAI for 31JAN
+[LF] 31JAN: found 1 direct flights
+2025-12-30 15:27:49 | INFO     | [lf.day.flights_found] Found 1 flights on 31JAN
+============================================================
+[LF][RESYNC] Command 'LL/I/SM462/31JAN' failed: TIMEOUT: No response after 50 attempts
+[LF][RESYNC] Re-running entire day from SN command for RUH-CAI 31JAN
+[LF][RESYNC] Attempt 1/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing RUH-CAI for 31JAN
+2025-12-30 15:36:47 | INFO     | [lf.day.start] Processing RUH-CAI for 31JAN
+[LF] 31JAN: found 1 direct flights
+2025-12-30 15:36:49 | INFO     | [lf.day.flights_found] Found 1 flights on 31JAN
+============================================================
+[LF][RESYNC] Command 'LL/I/SM462/31JAN' failed: TIMEOUT: No response after 50 attempts
+[LF][RESYNC] Re-running entire day from SN command for RUH-CAI 31JAN
+[LF][RESYNC] Attempt 2/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing RUH-CAI for 31JAN
+2025-12-30 15:45:44 | INFO     | [lf.day.start] Processing RUH-CAI for 31JAN
+[LF] 31JAN: found 1 direct flights
+2025-12-30 15:45:45 | INFO     | [lf.day.flights_found] Found 1 flights on 31JAN
+============================================================
+[LF][RESYNC] Command 'LL/I/SM462/31JAN' failed: TIMEOUT: No response after 50 attempts
+[LF][RESYNC] Re-running entire day from SN command for RUH-CAI 31JAN
+[LF][RESYNC] Attempt 3/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing RUH-CAI for 31JAN
+2025-12-30 15:54:40 | INFO     | [lf.day.start] Processing RUH-CAI for 31JAN
+[LF] 31JAN: found 1 direct flights
+2025-12-30 15:54:41 | INFO     | [lf.day.flights_found] Found 1 flights on 31JAN
+============================================================
+[LF][RESYNC] Command 'LL/I/SM462/31JAN' failed: TIMEOUT: No response after 50 attempts
+[LF][RESYNC] Re-running entire day from SN command for RUH-CAI 31JAN
+[LF][RESYNC] Attempt 4/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing RUH-CAI for 31JAN
+2025-12-30 16:03:40 | INFO     | [lf.day.start] Processing RUH-CAI for 31JAN
+[LF] 31JAN: found 1 direct flights
+2025-12-30 16:03:41 | INFO     | [lf.day.flights_found] Found 1 flights on 31JAN
+============================================================
+[LF][RESYNC] Command 'LL/I/SM462/31JAN' failed: TIMEOUT: No response after 50 attempts
+[LF][RESYNC] Re-running entire day from SN command for RUH-CAI 31JAN
+[LF][RESYNC] Attempt 5/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing RUH-CAI for 31JAN
+2025-12-30 16:12:36 | INFO     | [lf.day.start] Processing RUH-CAI for 31JAN
+[LF] 31JAN: found 1 direct flights
+2025-12-30 16:12:38 | INFO     | [lf.day.flights_found] Found 1 flights on 31JAN
+============================================================
+[LF][RESYNC] Command 'LL/I/SM462/31JAN' failed: TIMEOUT: No response after 50 attempts
+[LF][RESYNC] Re-running entire day from SN command for RUH-CAI 31JAN
+[LF][RESYNC] Attempt 6/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing RUH-CAI for 31JAN
+2025-12-30 16:21:33 | INFO     | [lf.day.start] Processing RUH-CAI for 31JAN
+[LF] 31JAN: found 1 direct flights
+2025-12-30 16:21:35 | INFO     | [lf.day.flights_found] Found 1 flights on 31JAN
+[LF][RETRY] Error processing 2026-01-31: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+[LF][INFO] Program will keep trying until successful...

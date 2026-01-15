@@ -1,0 +1,228 @@
+
+============================================================
+     LF WORKER - PORT 9224
+============================================================
+Worker: Worker_9224
+Status: READY
+Waiting for tasks...
+============================================================
+
+
+============================================================
+[Worker_9224] Processing: JED-ATZ
+  Tier 0: Range 2, Chunk 1/2
+  Dates: 5 days
+  Date Range: 2026-01-20 to 2026-01-16
+============================================================
+
+2025-12-28 07:10:04 | INFO     | ======================================================================
+2025-12-28 07:10:04 | INFO     | Load Factor Scraper Started - Route: JED-ATZ
+2025-12-28 07:10:04 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_281225_at_07.09\logs\LF_JED-ATZ_20251228_071004.log
+2025-12-28 07:10:04 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-28 07:10:04 | INFO     | ======================================================================
+[LF] Processing dates (override): ['20JAN', '19JAN', '18JAN', '17JAN', '16JAN']
+[LF] Attaching to Chrome for Altea access
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9224 (after 1 attempts)
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+[LF] Processing JED-ATZ for 20JAN
+[LF][ERROR] Amadeus command error detected: UNKNOWN TRANSACTION
+[LF][ERROR] Command: SN20JANJEDATZ/ASM
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+============================================================
+[LF][RESYNC] Command 'SN20JANJEDATZ/ASM' failed: TECH_ERROR:UNKNOWN TRANSACTION
+[LF][RESYNC] Re-running entire day from SN command for JED-ATZ 20JAN
+[LF][RESYNC] Attempt 1/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing JED-ATZ for 20JAN
+[LF] 20JAN: found 2 direct flights
+[LF] SM454 20JAN: BKG=161, GRP=134, CAP=167, LF%=96.4%, Brd-Off=JED-ATZ, Classes: P:90, E:44, I:17, O:8, T:1, S:1
+[LF] SM456 20JAN: BKG=159, GRP=135, CAP=167, LF%=95.2%, Brd-Off=JED-ATZ, Classes: P:135, I:17, O:4, U:3
+[LF] Getting WEEKLY/LASTSOLD data for 2 flights
+[LF] SM454 20JAN: LASTSOLD=2025-12-27 00:00:00, WEEKLY=9, TODAY=0, YDAY=4
+[LF] SM456 20JAN: LASTSOLD=2025-12-27 00:00:00, WEEKLY=9, TODAY=0, YDAY=1
+[LF] Processing JED-ATZ for 19JAN
+[LF] 19JAN: found 4 direct flights
+[LF] SM492 19JAN: BKG=67, GRP=48, CAP=167, LF%=40.1%, Brd-Off=JED-ATZ, Classes: P:48, I:16, O:2, S:1
+[LF] SM456 19JAN: BKG=17, GRP=0, CAP=167, LF%=10.2%, Brd-Off=JED-ATZ, Classes: I:17
+[LF] SM422 19JAN: BKG=21, GRP=0, CAP=167, LF%=12.6%, Brd-Off=JED-ATZ, Classes: I:17, O:3, K:1
+[LF] SM454 19JAN: BKG=116, GRP=91, CAP=167, LF%=69.5%, Brd-Off=JED-ATZ, Classes: E:91, I:17, O:5, U:2, S:1
+[LF] Getting WEEKLY/LASTSOLD data for 4 flights
+[LF] SM492 19JAN: LASTSOLD=2025-12-27 00:00:00, WEEKLY=8, TODAY=0, YDAY=6
+[LF] SM456 19JAN: LASTSOLD=2025-12-27 00:00:00, WEEKLY=11, TODAY=0, YDAY=1
+[LF] SM422 19JAN: LASTSOLD=2025-12-26 00:00:00, WEEKLY=14, TODAY=0, YDAY=0
+[LF] SM454 19JAN: LASTSOLD=2025-12-27 00:00:00, WEEKLY=9, TODAY=0, YDAY=2
+[LF] Processing JED-ATZ for 18JAN
+[LF] 18JAN: found 2 direct flights
+[LF] SM492 18JAN: BKG=125, GRP=90, CAP=167, LF%=74.9%, Brd-Off=JED-ATZ, Classes: P:90, I:17, O:17, U:1
+[LF] SM456 18JAN: BKG=77, GRP=45, CAP=167, LF%=46.1%, Brd-Off=JED-ATZ, Classes: P:45, I:17, O:14, S:1
+[LF] Getting WEEKLY/LASTSOLD data for 2 flights
+[LF] SM492 18JAN: LASTSOLD=2025-12-25 00:00:00, WEEKLY=14, TODAY=0, YDAY=0
+[LF] SM456 18JAN: LASTSOLD=2025-12-27 00:00:00, WEEKLY=18, TODAY=0, YDAY=1
+[LF] Processing JED-ATZ for 17JAN
+[LF] 17JAN: found 3 direct flights
+[LF] SM492 17JAN: BKG=100, GRP=94, CAP=167, LF%=59.9%, Brd-Off=JED-ATZ, Classes: P:45, E:49, I:4, L:1, K:1
+[LF] SM454 17JAN: BKG=54, GRP=45, CAP=167, LF%=32.3%, Brd-Off=JED-ATZ, Classes: P:45, I:4, U:4, G:1
+[LF] SM456 17JAN: BKG=59, GRP=50, CAP=167, LF%=35.3%, Brd-Off=JED-ATZ, Classes: P:50, I:4, O:2, G:3
+[LF] Getting WEEKLY/LASTSOLD data for 3 flights
+[LF] SM492 17JAN: LASTSOLD=2025-12-22 00:00:00, WEEKLY=1, TODAY=0, YDAY=0
+[LF] SM454 17JAN: LASTSOLD=2025-12-27 00:00:00, WEEKLY=1, TODAY=0, YDAY=1
+[LF] SM456 17JAN: LASTSOLD=2025-12-26 00:00:00, WEEKLY=3, TODAY=0, YDAY=0
+[LF] Processing JED-ATZ for 16JAN
+[LF] 16JAN: found 1 direct flights
+[LF] SM492 16JAN: BKG=56, GRP=45, CAP=167, LF%=33.5%, Brd-Off=JED-ATZ, Classes: P:45, I:4, O:2, U:3, L:2
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM492 16JAN: LASTSOLD=2025-12-21 00:00:00, WEEKLY=2, TODAY=0, YDAY=0
+[LF] Results summary:
+  2026-01-20: 2 flights
+  2026-01-19: 4 flights
+  2026-01-18: 2 flights
+  2026-01-17: 3 flights
+  2026-01-16: 1 flights
+
+============================================================
+[Worker_9224] ✓ COMPLETED: JED-ATZ
+  Results: 5 dates
+  Errors: 0 dates
+  Total Processed: 1 groups
+============================================================
+
+
+============================================================
+[Worker_9224] Processing: JED-ATZ
+  Tier 0: Range 1, Chunk 2/2
+  Dates: 7 days
+  Date Range: 2026-01-03 to 2025-12-28
+============================================================
+
+2025-12-28 07:11:25 | INFO     | ======================================================================
+2025-12-28 07:11:25 | INFO     | Load Factor Scraper Started - Route: JED-ATZ
+2025-12-28 07:11:25 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_281225_at_07.09\logs\LF_JED-ATZ_20251228_071125.log
+2025-12-28 07:11:25 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-28 07:11:25 | INFO     | ======================================================================
+[LF] Processing dates (override): ['03JAN', '02JAN', '01JAN', '31DEC', '30DEC', '29DEC', '28DEC']
+[LF] Attaching to Chrome for Altea access
+2025-12-28 07:11:25 | INFO     | Starting LF search for route: JED-ATZ
+2025-12-28 07:11:25 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9224 (after 1 attempts)
+2025-12-28 07:11:27 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+2025-12-28 07:11:27 | INFO     | [DAY_START] Processing 03JAN
+[LF] Processing JED-ATZ for 03JAN
+2025-12-28 07:11:27 | INFO     | [lf.day.start] Processing JED-ATZ for 03JAN
+[LF] 03JAN: found 3 direct flights
+2025-12-28 07:11:28 | INFO     | [lf.day.flights_found] Found 3 flights on 03JAN
+2025-12-28 07:11:30 | INFO     | [lf.flight.extracted] SM492 on 03JAN: BKG=162, LF=91.0%
+[LF] SM492 03JAN: BKG=162, GRP=135, CAP=178, LF%=91.0%, Brd-Off=JED-ATZ, Classes: P:135, I:4, O:2, U:7, W:13, S:1
+2025-12-28 07:11:34 | INFO     | [lf.flight.extracted] SM454 on 03JAN: BKG=162, LF=91.0%
+[LF] SM454 03JAN: BKG=162, GRP=140, CAP=178, LF%=91.0%, Brd-Off=JED-ATZ, Classes: P:140, I:2, O:4, U:2, X:4, W:10
+2025-12-28 07:11:37 | INFO     | [lf.flight.extracted] SM456 on 03JAN: BKG=130, LF=77.8%
+[LF] SM456 03JAN: BKG=130, GRP=90, CAP=167, LF%=77.8%, Brd-Off=JED-ATZ, Classes: P:90, I:8, O:8, U:8, X:7, S:8, G:1
+[LF] Getting WEEKLY/LASTSOLD data for 3 flights
+[LF] SM492 03JAN: LASTSOLD=2025-12-27 00:00:00, WEEKLY=9, TODAY=0, YDAY=1
+[LF] SM454 03JAN: LASTSOLD=2025-12-27 00:00:00, WEEKLY=6, TODAY=0, YDAY=1
+[LF] SM456 03JAN: LASTSOLD=2025-12-18 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+2025-12-28 07:11:53 | INFO     | [SUCCESS] Day 03JAN
+2025-12-28 07:11:53 | INFO     | [DAY_START] Processing 02JAN
+[LF] Processing JED-ATZ for 02JAN
+2025-12-28 07:11:53 | INFO     | [lf.day.start] Processing JED-ATZ for 02JAN
+[LF] 02JAN: found 1 direct flights
+2025-12-28 07:11:54 | INFO     | [lf.day.flights_found] Found 1 flights on 02JAN
+2025-12-28 07:11:56 | INFO     | [lf.flight.extracted] SM492 on 02JAN: BKG=166, LF=99.4%
+[LF] SM492 02JAN: BKG=166, GRP=130, CAP=167, LF%=99.4%, Brd-Off=JED-ATZ, Classes: P:130, I:4, O:1, U:4, X:8, T:7, W:2, S:10
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM492 02JAN: LASTSOLD=2025-12-27 00:00:00, WEEKLY=5, TODAY=0, YDAY=1
+2025-12-28 07:12:01 | INFO     | [SUCCESS] Day 02JAN
+2025-12-28 07:12:01 | INFO     | [DAY_START] Processing 01JAN
+[LF] Processing JED-ATZ for 01JAN
+2025-12-28 07:12:01 | INFO     | [lf.day.start] Processing JED-ATZ for 01JAN
+[LF] 01JAN: found 3 direct flights
+2025-12-28 07:12:02 | INFO     | [lf.day.flights_found] Found 3 flights on 01JAN
+2025-12-28 07:12:04 | INFO     | [lf.flight.extracted] SM422 on 01JAN: BKG=148, LF=88.6%
+[LF] SM422 01JAN: BKG=148, GRP=126, CAP=167, LF%=88.6%, Brd-Off=JED-ATZ, Classes: P:126, I:4, O:2, U:2, X:7, W:6, S:1
+2025-12-28 07:12:08 | INFO     | [lf.flight.extracted] SM454 on 01JAN: BKG=108, LF=64.7%
+[LF] SM454 01JAN: BKG=108, GRP=79, CAP=167, LF%=64.7%, Brd-Off=JED-ATZ, Classes: P:80, I:4, O:2, U:2, X:10, W:7, S:1, K:2
+2025-12-28 07:12:11 | INFO     | [lf.flight.extracted] SM456 on 01JAN: BKG=126, LF=75.4%
+[LF] SM456 01JAN: BKG=126, GRP=91, CAP=167, LF%=75.4%, Brd-Off=JED-ATZ, Classes: P:91, I:4, O:2, U:3, X:8, T:1, W:11, S:5, K:1
+[LF] Getting WEEKLY/LASTSOLD data for 3 flights
+[LF] SM422 01JAN: LASTSOLD=2025-12-27 00:00:00, WEEKLY=5, TODAY=0, YDAY=4
+[LF] SM454 01JAN: LASTSOLD=2025-12-25 00:00:00, WEEKLY=7, TODAY=0, YDAY=0
+[LF] SM456 01JAN: LASTSOLD=2025-12-27 00:00:00, WEEKLY=11, TODAY=0, YDAY=4
+2025-12-28 07:12:26 | INFO     | [SUCCESS] Day 01JAN
+2025-12-28 07:12:26 | INFO     | [DAY_START] Processing 31DEC
+[LF] Processing JED-ATZ for 31DEC
+2025-12-28 07:12:26 | INFO     | [lf.day.start] Processing JED-ATZ for 31DEC
+[LF] 31DEC: found 2 direct flights
+2025-12-28 07:12:28 | INFO     | [lf.day.flights_found] Found 2 flights on 31DEC
+2025-12-28 07:12:30 | INFO     | [lf.flight.extracted] SM454 on 31DEC: BKG=171, LF=96.1%
+[LF] SM454 31DEC: BKG=171, GRP=149, CAP=178, LF%=96.1%, Brd-Off=JED-ATZ, Classes: P:142, E:7, I:4, O:2, U:3, X:7, T:2, S:4
+2025-12-28 07:12:34 | INFO     | [lf.flight.extracted] SM492 on 31DEC: BKG=179, LF=107.2%
+[LF] SM492 31DEC: BKG=179, GRP=178, CAP=167, LF%=107.2%, Brd-Off=JED-ATZ, Classes: P:133, E:45, I:1
+[LF] Getting WEEKLY/LASTSOLD data for 2 flights
+[LF] SM454 31DEC: LASTSOLD=2025-12-23 00:00:00, WEEKLY=6, TODAY=0, YDAY=0
+[LF] SM492 31DEC: LASTSOLD=2025-11-10 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+2025-12-28 07:12:45 | INFO     | [SUCCESS] Day 31DEC
+2025-12-28 07:12:45 | INFO     | [DAY_START] Processing 30DEC
+[LF] Processing JED-ATZ for 30DEC
+2025-12-28 07:12:45 | INFO     | [lf.day.start] Processing JED-ATZ for 30DEC
+[LF] 30DEC: found 2 direct flights
+2025-12-28 07:12:46 | INFO     | [lf.day.flights_found] Found 2 flights on 30DEC
+2025-12-28 07:12:48 | INFO     | [lf.flight.extracted] SM454 on 30DEC: BKG=168, LF=100.6%
+[LF] SM454 30DEC: BKG=168, GRP=142, CAP=167, LF%=100.6%, Brd-Off=JED-ATZ, Classes: P:97, I:2, O:4, U:48, X:6, T:11
+2025-12-28 07:12:51 | INFO     | [lf.flight.extracted] SM456 on 30DEC: BKG=170, LF=95.5%
+[LF] SM456 30DEC: BKG=170, GRP=139, CAP=178, LF%=95.5%, Brd-Off=JED-ATZ, Classes: P:137, E:2, I:4, O:1, U:3, X:8, T:3, W:2, S:3, L:7
+[LF] Getting WEEKLY/LASTSOLD data for 2 flights
+[LF] SM454 30DEC: LASTSOLD=2025-12-22 00:00:00, WEEKLY=5, TODAY=0, YDAY=0
+[LF] SM456 30DEC: LASTSOLD=2025-12-27 00:00:00, WEEKLY=7, TODAY=0, YDAY=4
+2025-12-28 07:13:02 | INFO     | [SUCCESS] Day 30DEC
+2025-12-28 07:13:02 | INFO     | [DAY_START] Processing 29DEC
+[LF] Processing JED-ATZ for 29DEC
+2025-12-28 07:13:02 | INFO     | [lf.day.start] Processing JED-ATZ for 29DEC
+[LF] 29DEC: found 3 direct flights
+2025-12-28 07:13:03 | INFO     | [lf.day.flights_found] Found 3 flights on 29DEC
+2025-12-28 07:13:05 | INFO     | [lf.flight.extracted] SM492 on 29DEC: BKG=138, LF=82.6%
+[LF] SM492 29DEC: BKG=138, GRP=88, CAP=167, LF%=82.6%, Brd-Off=JED-ATZ, Classes: P:42, E:46, I:4, O:1, U:3, X:12, T:15, W:8, S:7
+2025-12-28 07:13:08 | INFO     | [lf.flight.extracted] SM456 on 29DEC: BKG=152, LF=91.0%
+[LF] SM456 29DEC: BKG=152, GRP=31, CAP=167, LF%=91.0%, Brd-Off=JED-ATZ, Classes: P:31, I:36, O:18, U:22, X:19, T:10, W:9, S:7
+2025-12-28 07:13:11 | INFO     | [lf.flight.extracted] SM454 on 29DEC: BKG=160, LF=95.8%
+[LF] SM454 29DEC: BKG=160, GRP=90, CAP=167, LF%=95.8%, Brd-Off=JED-ATZ, Classes: P:46, E:44, I:4, O:14, U:15, X:15, T:20, W:2
+[LF] Getting WEEKLY/LASTSOLD data for 3 flights
+[LF] SM492 29DEC: LASTSOLD=2025-12-28 00:00:00, WEEKLY=23, TODAY=1, YDAY=7
+[LF] SM456 29DEC: LASTSOLD=2025-12-27 00:00:00, WEEKLY=30, TODAY=0, YDAY=9
+[LF] SM454 29DEC: LASTSOLD=2025-12-27 00:00:00, WEEKLY=31, TODAY=0, YDAY=5
+2025-12-28 07:13:27 | INFO     | [SUCCESS] Day 29DEC
+[LF] Skipping 28DEC (Today) - will be processed by supplement scan
+[LF] Results summary:
+  2026-01-03: 3 flights
+  2026-01-02: 1 flights
+  2026-01-01: 3 flights
+  2025-12-31: 2 flights
+  2025-12-30: 2 flights
+  2025-12-29: 3 flights
+2025-12-28 07:13:27 | INFO     | [SUCCESS] LF Search Complete
+
+============================================================
+[Worker_9224] ✓ COMPLETED: JED-ATZ
+  Results: 6 dates
+  Errors: 0 dates
+  Total Processed: 2 groups
+============================================================
+
+2025-12-28 07:13:29 | INFO     | [Worker_9224] Completed: JED-ATZ - 6 results, 0 errors
+[Worker_9224] Waiting for tasks...
+
+============================================================
+[Worker_9224] Shutdown signal received
+Exiting...
+============================================================
+2025-12-28 07:16:34 | INFO     | [Worker_9224] Shutdown signal received, exiting...
+
+============================================================
+[Worker_9224] FINISHED
+  Total Groups Processed: 2
+============================================================
+
+2025-12-28 07:16:34 | INFO     | [Worker_9224] Finished. Processed 2 groups.

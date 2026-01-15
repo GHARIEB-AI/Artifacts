@@ -1,0 +1,93 @@
+{
+  "timestamp": "2026-01-10T07:54:38.714048",
+  "service": "market-insights",
+  "counters": {
+    "oal_requests_total": {
+      "description": "Total OAL API requests",
+      "values": []
+    },
+    "lf_requests_total": {
+      "description": "Total LF requests",
+      "values": [
+        {
+          "labels": {
+            "destination": "CAI",
+            "origin": "JED",
+            "status": "success"
+          },
+          "value": 7.0
+        },
+        {
+          "labels": {
+            "destination": "CAI",
+            "origin": "JED",
+            "status": "error"
+          },
+          "value": 3.0
+        }
+      ]
+    },
+    "errors_total": {
+      "description": "Total errors",
+      "values": [
+        {
+          "labels": {
+            "operation": "lf_day",
+            "type": "MaxRetriesExceeded"
+          },
+          "value": 3.0
+        }
+      ]
+    }
+  },
+  "gauges": {
+    "routes_in_progress": {
+      "description": "Routes currently being processed",
+      "values": [
+        {
+          "labels": {},
+          "value": 0.0
+        }
+      ]
+    },
+    "flights_analyzed": {
+      "description": "Total flights analyzed in session",
+      "values": [
+        {
+          "labels": {
+            "direction": "lf"
+          },
+          "value": 35.0
+        }
+      ]
+    },
+    "circuit_breaker_state": {
+      "description": "Circuit breaker state (0=closed, 1=open)",
+      "values": []
+    }
+  },
+  "histograms": {
+    "request_duration_seconds": {
+      "description": "Request duration in seconds",
+      "data": {}
+    },
+    "route_processing_seconds": {
+      "description": "Route processing duration",
+      "data": {
+        "{'route': 'JED-CAI'}": {
+          "sum": 256.910704,
+          "count": 7,
+          "buckets": {
+            "60.0": 7,
+            "120.0": 7,
+            "300.0": 7,
+            "30.0": 1
+          },
+          "p50": 40.714285714285715,
+          "p95": 54.214285714285715,
+          "p99": 55.41428571428571
+        }
+      }
+    }
+  }
+}

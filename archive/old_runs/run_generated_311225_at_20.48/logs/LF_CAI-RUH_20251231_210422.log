@@ -1,0 +1,45 @@
+2025-12-31 21:04:22 | INFO     | ======================================================================
+2025-12-31 21:04:22 | INFO     | Load Factor Scraper Started - Route: CAI-RUH
+2025-12-31 21:04:22 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_20.48\logs\LF_CAI-RUH_20251231_210422.log
+2025-12-31 21:04:22 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 21:04:22 | INFO     | ======================================================================
+2025-12-31 21:04:22 | INFO     | Starting LF search for route: CAI-RUH
+2025-12-31 21:04:22 | INFO     | [START] LF Search
+2025-12-31 21:04:23 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 21:04:23 | INFO     | [DAY_START] Processing 11JAN
+2025-12-31 21:04:23 | INFO     | [lf.day.start] Processing CAI-RUH for 11JAN
+2025-12-31 21:04:24 | INFO     | [lf.day.flights_found] Found 1 flights on 11JAN
+2025-12-31 21:04:26 | INFO     | [lf.flight.extracted] SM461 on 11JAN: BKG=66, LF=36.9%
+2025-12-31 21:04:32 | INFO     | [SUCCESS] Day 11JAN
+2025-12-31 21:04:32 | INFO     | [DAY_START] Processing 10JAN
+2025-12-31 21:04:32 | INFO     | [lf.day.start] Processing CAI-RUH for 10JAN
+2025-12-31 21:04:33 | INFO     | [lf.day.flights_found] Found 1 flights on 10JAN
+2025-12-31 21:04:35 | INFO     | [lf.flight.extracted] SM461 on 10JAN: BKG=62, LF=34.6%
+2025-12-31 21:04:40 | INFO     | [SUCCESS] Day 10JAN
+2025-12-31 21:04:40 | INFO     | [DAY_START] Processing 09JAN
+2025-12-31 21:04:40 | INFO     | [lf.day.start] Processing CAI-RUH for 09JAN
+2025-12-31 21:04:41 | INFO     | [lf.day.flights_found] Found 2 flights on 09JAN
+2025-12-31 21:04:43 | INFO     | [lf.flight.extracted] SM461 on 09JAN: BKG=57, LF=31.8%
+2025-12-31 21:04:46 | INFO     | [lf.flight.extracted] SM469 on 09JAN: BKG=45, LF=25.1%
+2025-12-31 21:04:56 | INFO     | [SUCCESS] Day 09JAN
+2025-12-31 21:04:56 | INFO     | [DAY_START] Processing 08JAN
+2025-12-31 21:04:56 | INFO     | [lf.day.start] Processing CAI-RUH for 08JAN
+2025-12-31 21:04:58 | INFO     | [lf.day.flights_found] Found 1 flights on 08JAN
+2025-12-31 21:05:01 | INFO     | [lf.flight.extracted] SM461 on 08JAN: BKG=86, LF=48.0%
+2025-12-31 21:05:09 | INFO     | [SUCCESS] Day 08JAN
+2025-12-31 21:05:09 | INFO     | [DAY_START] Processing 07JAN
+2025-12-31 21:05:09 | INFO     | [lf.day.start] Processing CAI-RUH for 07JAN
+2025-12-31 21:05:10 | INFO     | [lf.day.flights_found] Found 2 flights on 07JAN
+2025-12-31 21:05:13 | INFO     | [lf.flight.extracted] SM461 on 07JAN: BKG=91, LF=50.8%
+2025-12-31 21:05:18 | INFO     | [lf.flight.extracted] SM469 on 07JAN: BKG=64, LF=35.8%
+2025-12-31 21:05:30 | ERROR    | Atomic write failed for D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_20.48\checkpoints\flight_booking_data.json: [Errno 13] Permission denied: 'D:\\CODERED\\LAB\\market_insights\\outputs\\run_generated_311225_at_20.48\\checkpoints\\flight_booking_data.tmp'
+2025-12-31 21:05:30 | INFO     | [SUCCESS] Day 07JAN
+2025-12-31 21:05:30 | INFO     | [DAY_START] Processing 06JAN
+2025-12-31 21:05:30 | INFO     | [lf.day.start] Processing CAI-RUH for 06JAN
+2025-12-31 21:05:31 | INFO     | [lf.day.flights_found] Found 1 flights on 06JAN
+2025-12-31 21:05:34 | INFO     | [lf.flight.extracted] SM469 on 06JAN: BKG=79, LF=44.1%
+2025-12-31 21:05:41 | INFO     | [SUCCESS] Day 06JAN
+2025-12-31 21:05:41 | INFO     | [SUCCESS] LF Search Complete
+2025-12-31 21:05:43 | INFO     | [Worker_9225] Completed: CAI-RUH - 6 results, 0 errors
+2025-12-31 21:05:43 | INFO     | [Worker_9225] Processing: ATZ-ELQ
+2025-12-31 21:05:43 | INFO     |   Tier 0: Range 1, Chunk 4/5 (6 days)

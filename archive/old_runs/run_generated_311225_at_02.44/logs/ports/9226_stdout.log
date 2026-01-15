@@ -1,0 +1,105 @@
+
+============================================================
+     LF WORKER - PORT 9226
+============================================================
+Worker: Worker_9226
+Status: READY
+Waiting for tasks...
+============================================================
+
+
+============================================================
+[Worker_9226] Processing: JED-CAI
+  Tier 0: Range 1, Chunk 7/10
+  Dates: 1 days
+  Date Range: 2026-01-03 to 2026-01-03
+============================================================
+
+2025-12-31 02:44:51 | INFO     | ======================================================================
+2025-12-31 02:44:51 | INFO     | Load Factor Scraper Started - Route: JED-CAI
+2025-12-31 02:44:51 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_02.44\logs\LF_JED-CAI_20251231_024451.log
+2025-12-31 02:44:51 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 02:44:51 | INFO     | ======================================================================
+[LF] Processing dates (override): ['03JAN']
+[LF] Attaching to Chrome for Altea access
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9226 (after 1 attempts)
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+[LF] Processing JED-CAI for 03JAN
+[LF][ERROR] Amadeus command error detected: UNKNOWN TRANSACTION
+[LF][ERROR] Command: SN03JANJEDCAI/ASM
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+============================================================
+[LF][RESYNC] Command 'SN03JANJEDCAI/ASM' failed: TECH_ERROR:UNKNOWN TRANSACTION
+[LF][RESYNC] Re-running entire day from SN command for JED-CAI 03JAN
+[LF][RESYNC] Attempt 1/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing JED-CAI for 03JAN
+[LF] 03JAN: found 3 direct flights
+[LF] SM450 03JAN: BKG=162, GRP=141, CAP=178, LF%=91.0%, Brd-Off=JED-CAI, Classes: P:141, U:10, X:7, T:2, K:2
+[LPC] SM450 03JAN: Found 1 outbound flights with connecting passengers
+[LF] SM476 03JAN: BKG=166, GRP=131, CAP=178, LF%=93.3%, Brd-Off=JED-CAI, Classes: P:131, I:2, U:7, X:11, T:9, W:2, S:3, K:1
+[LF] SM478 03JAN: BKG=178, GRP=139, CAP=178, LF%=100.0%, Brd-Off=JED-CAI, Classes: P:139, I:5, U:15, X:8, T:3, W:6, S:2
+[LF] Getting WEEKLY/LASTSOLD data for 3 flights
+[LF] SM450 03JAN: LASTSOLD=2025-12-24 00:00:00, WEEKLY=2, TODAY=0, YDAY=0
+[LF] SM476 03JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=9, TODAY=0, YDAY=1
+[LF] SM478 03JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=13, TODAY=0, YDAY=3
+[LF] Results summary:
+  2026-01-03: 3 flights
+
+============================================================
+[Worker_9226] ✓ COMPLETED: JED-CAI
+  Results: 1 dates
+  Errors: 0 dates
+  Total Processed: 1 groups
+============================================================
+
+
+============================================================
+[Worker_9226] Processing: JED-CAI
+  Tier 0: Range 1, Chunk 10/10
+  Dates: 1 days
+  Date Range: 2025-12-31 to 2025-12-31
+============================================================
+
+2025-12-31 02:45:31 | INFO     | ======================================================================
+2025-12-31 02:45:31 | INFO     | Load Factor Scraper Started - Route: JED-CAI
+2025-12-31 02:45:31 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_02.44\logs\LF_JED-CAI_20251231_024531.log
+2025-12-31 02:45:31 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 02:45:31 | INFO     | ======================================================================
+[LF] Processing dates (override): ['31DEC']
+[LF] Attaching to Chrome for Altea access
+2025-12-31 02:45:31 | INFO     | Starting LF search for route: JED-CAI
+2025-12-31 02:45:31 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9226 (after 1 attempts)
+2025-12-31 02:45:33 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+[LF] Skipping 31DEC (Today) - will be processed by supplement scan
+[LF] Results summary:
+2025-12-31 02:45:33 | INFO     | [SUCCESS] LF Search Complete
+
+============================================================
+[Worker_9226] ✓ COMPLETED: JED-CAI
+  Results: 0 dates
+  Errors: 0 dates
+  Total Processed: 2 groups
+============================================================
+
+2025-12-31 02:45:35 | INFO     | [Worker_9226] Completed: JED-CAI - 0 results, 0 errors
+[Worker_9226] Waiting for tasks...
+
+============================================================
+[Worker_9226] Shutdown signal received
+Exiting...
+============================================================
+2025-12-31 02:52:05 | INFO     | [Worker_9226] Shutdown signal received, exiting...
+
+============================================================
+[Worker_9226] FINISHED
+  Total Groups Processed: 2
+============================================================
+
+2025-12-31 02:52:05 | INFO     | [Worker_9226] Finished. Processed 2 groups.

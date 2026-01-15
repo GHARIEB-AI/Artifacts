@@ -1,0 +1,52 @@
+2025-12-30 17:16:04 | INFO     | ======================================================================
+2025-12-30 17:16:04 | INFO     | Load Factor Scraper Started - Route: AJF-CAI
+2025-12-30 17:16:04 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_301225_at_17.09\logs\LF_AJF-CAI_20251230_171604.log
+2025-12-30 17:16:04 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-30 17:16:04 | INFO     | ======================================================================
+2025-12-30 17:16:04 | INFO     | Starting LF search for route: AJF-CAI
+2025-12-30 17:16:04 | INFO     | [START] LF Search
+2025-12-30 17:16:06 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-30 17:16:06 | INFO     | [DAY_START] Processing 18FEB
+2025-12-30 17:16:06 | INFO     | [lf.day.start] Processing AJF-CAI for 18FEB
+2025-12-30 17:16:07 | WARNING  | [lf.day.no_flights] No direct flights on 18FEB
+2025-12-30 17:16:07 | INFO     | [SUCCESS] Day 18FEB
+2025-12-30 17:16:07 | INFO     | [DAY_START] Processing 17FEB
+2025-12-30 17:16:07 | INFO     | [lf.day.start] Processing AJF-CAI for 17FEB
+2025-12-30 17:16:08 | INFO     | [lf.day.flights_found] Found 1 flights on 17FEB
+2025-12-30 17:16:10 | INFO     | [lf.flight.extracted] SM322 on 17FEB: BKG=16, LF=9.1%
+2025-12-30 17:16:13 | INFO     | [SUCCESS] Day 17FEB
+2025-12-30 17:16:13 | INFO     | [DAY_START] Processing 16FEB
+2025-12-30 17:16:13 | INFO     | [lf.day.start] Processing AJF-CAI for 16FEB
+2025-12-30 17:16:14 | WARNING  | [lf.day.no_flights] No direct flights on 16FEB
+2025-12-30 17:16:14 | INFO     | [SUCCESS] Day 16FEB
+2025-12-30 17:16:14 | INFO     | [DAY_START] Processing 15FEB
+2025-12-30 17:16:14 | INFO     | [lf.day.start] Processing AJF-CAI for 15FEB
+2025-12-30 17:16:15 | WARNING  | [lf.day.no_flights] No direct flights on 15FEB
+2025-12-30 17:16:15 | INFO     | [SUCCESS] Day 15FEB
+2025-12-30 17:16:15 | INFO     | [DAY_START] Processing 14FEB
+2025-12-30 17:16:15 | INFO     | [lf.day.start] Processing AJF-CAI for 14FEB
+2025-12-30 17:16:16 | INFO     | [lf.day.flights_found] Found 1 flights on 14FEB
+2025-12-30 17:16:18 | INFO     | [lf.flight.extracted] SM322 on 14FEB: BKG=17, LF=9.7%
+2025-12-30 17:16:21 | INFO     | [SUCCESS] Day 14FEB
+2025-12-30 17:16:21 | INFO     | [DAY_START] Processing 13FEB
+2025-12-30 17:16:21 | INFO     | [lf.day.start] Processing AJF-CAI for 13FEB
+2025-12-30 17:16:23 | WARNING  | [lf.day.no_flights] No direct flights on 13FEB
+2025-12-30 17:16:23 | INFO     | [SUCCESS] Day 13FEB
+2025-12-30 17:16:23 | INFO     | [DAY_START] Processing 12FEB
+2025-12-30 17:16:23 | INFO     | [lf.day.start] Processing AJF-CAI for 12FEB
+2025-12-30 17:16:24 | INFO     | [lf.day.flights_found] Found 1 flights on 12FEB
+2025-12-30 17:16:26 | INFO     | [lf.flight.extracted] SM322 on 12FEB: BKG=27, LF=15.4%
+2025-12-30 17:16:29 | INFO     | [SUCCESS] Day 12FEB
+2025-12-30 17:16:29 | INFO     | [DAY_START] Processing 11FEB
+2025-12-30 17:16:29 | INFO     | [lf.day.start] Processing AJF-CAI for 11FEB
+2025-12-30 17:16:30 | WARNING  | [lf.day.no_flights] No direct flights on 11FEB
+2025-12-30 17:16:30 | INFO     | [SUCCESS] Day 11FEB
+2025-12-30 17:16:30 | INFO     | [DAY_START] Processing 10FEB
+2025-12-30 17:16:30 | INFO     | [lf.day.start] Processing AJF-CAI for 10FEB
+2025-12-30 17:16:32 | INFO     | [lf.day.flights_found] Found 1 flights on 10FEB
+2025-12-30 17:16:34 | INFO     | [lf.flight.extracted] SM322 on 10FEB: BKG=25, LF=14.3%
+2025-12-30 17:16:37 | INFO     | [SUCCESS] Day 10FEB
+2025-12-30 17:16:37 | INFO     | [SUCCESS] LF Search Complete
+2025-12-30 17:16:39 | INFO     | [Worker_9222] Completed: AJF-CAI - 9 results, 0 errors
+2025-12-30 17:16:39 | INFO     | [Worker_9222] Processing: GIZ-CAI
+2025-12-30 17:16:39 | INFO     |   Tier 0: Range 2, Chunk 2/3 (9 days)

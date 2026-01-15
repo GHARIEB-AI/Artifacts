@@ -1,0 +1,139 @@
+{
+  "task_id": "GIZ-CAI_r0_chunk3",
+  "saved_at": "2026-01-01T08:45:08.419079",
+  "lf_results": {
+    "2026-01-12": [],
+    "2026-01-11": [
+      {
+        "Date": "Sunday, January 11, 2026",
+        "Flight": "SM330",
+        "DEP": "01:00",
+        "SOLD": 100,
+        "FULL CAPACITY": 175,
+        "LF%": 0.5714,
+        "LowestAvail": "X9",
+        "LASTSOLD": "2025-12-05 00:00:00",
+        "WEEKLY PROGRESS": 0,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 5,
+          "U": 5,
+          "X": 41,
+          "T": 29,
+          "W": 14,
+          "S": 6,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "GIZ-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM330",
+          "sm_route": "GIZ-CAI",
+          "sm_dep": "0100",
+          "sm_arr": "0250",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "SM0020",
+              "outbound_route": "CAI-HRG",
+              "outbound_dep": "0610",
+              "passengers": [
+                {
+                  "iata": "GIZS2224H"
+                },
+                {
+                  "iata": "GIZS2224H"
+                },
+                {
+                  "iata": "GIZS2224H"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "2026-01-10": [],
+    "2026-01-09": [
+      {
+        "Date": "Friday, January 09, 2026",
+        "Flight": "SM330",
+        "DEP": "00:30",
+        "SOLD": 109,
+        "FULL CAPACITY": 175,
+        "LF%": 0.6229,
+        "LowestAvail": "L9",
+        "LASTSOLD": "2026-01-01 00:00:00",
+        "WEEKLY PROGRESS": 17,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 0,
+          "U": 0,
+          "X": 15,
+          "T": 13,
+          "W": 12,
+          "S": 10,
+          "G": 10,
+          "L": 15,
+          "V": 26,
+          "K": 8,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "GIZ-CAI",
+        "SOLD TODAY": 1,
+        "SOLD YDAY": 2,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM330",
+          "sm_route": "GIZ-CAI",
+          "sm_dep": "0030",
+          "sm_arr": "0220",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "SM0020",
+              "outbound_route": "CAI-HRG",
+              "outbound_dep": "0610",
+              "passengers": [
+                {
+                  "iata": "GIZS2224A"
+                },
+                {
+                  "iata": "GIZS2224A"
+                },
+                {
+                  "iata": "GIZS2224A"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "2026-01-08": [],
+    "2026-01-07": []
+  },
+  "lf_errors": {}
+}

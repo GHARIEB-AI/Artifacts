@@ -1,0 +1,165 @@
+{
+  "task_id": "AHB-CAI_chunk2",
+  "saved_at": "2025-12-24T18:34:48.568400",
+  "lf_results": {
+    "2025-12-29": [],
+    "2025-12-28": [
+      {
+        "Date": "Sunday, December 28, 2025",
+        "Flight": "SM444",
+        "DEP": "00:40",
+        "SOLD": 92,
+        "FULL CAPACITY": 168,
+        "LF%": 0.5476,
+        "LowestAvail": "W1",
+        "LASTSOLD": "2025-12-24 00:00:00",
+        "WEEKLY PROGRESS": 20,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 3,
+          "U": 8,
+          "X": 57,
+          "T": 10,
+          "W": 9,
+          "S": 5,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "AHB-CAI",
+        "SOLD TODAY": 4,
+        "SOLD YDAY": 5,
+        "CONNECTING_PASSENGERS": null
+      }
+    ],
+    "2025-12-27": [],
+    "2025-12-26": [
+      {
+        "Date": "Friday, December 26, 2025",
+        "Flight": "SM444",
+        "DEP": "01:20",
+        "SOLD": 86,
+        "FULL CAPACITY": 168,
+        "LF%": 0.5119,
+        "LowestAvail": "S4",
+        "LASTSOLD": "2025-12-24 00:00:00",
+        "WEEKLY PROGRESS": 28,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 3,
+          "U": 8,
+          "X": 39,
+          "T": 20,
+          "W": 10,
+          "S": 6,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "AHB-CAI",
+        "SOLD TODAY": 12,
+        "SOLD YDAY": 4,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM444",
+          "sm_route": "AHB-CAI",
+          "sm_dep": "0120",
+          "sm_arr": "0320",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "SM0080",
+              "outbound_route": "CAI-ASW",
+              "outbound_dep": "0540",
+              "passengers": [
+                {
+                  "iata": "RUHAA28WH"
+                },
+                {
+                  "iata": "RUHAA28WH"
+                },
+                {
+                  "iata": "RUHAA28WH"
+                }
+              ]
+            },
+            {
+              "outbound_flight": "SM0145",
+              "outbound_route": "CAI-ASW",
+              "outbound_dep": "1520",
+              "passengers": [
+                {
+                  "iata": "AHBS228A9"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "2025-12-25": [
+      {
+        "Date": "Thursday, December 25, 2025",
+        "Flight": "SM448",
+        "DEP": "01:05",
+        "SOLD": 90,
+        "FULL CAPACITY": 168,
+        "LF%": 0.5357,
+        "LowestAvail": "G8",
+        "LASTSOLD": "2025-12-24 00:00:00",
+        "WEEKLY PROGRESS": 49,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 4,
+          "U": 8,
+          "X": 38,
+          "T": 18,
+          "W": 10,
+          "S": 10,
+          "G": 2,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "AHB-CAI",
+        "SOLD TODAY": 20,
+        "SOLD YDAY": 5,
+        "CONNECTING_PASSENGERS": null
+      }
+    ]
+  },
+  "lf_errors": {}
+}

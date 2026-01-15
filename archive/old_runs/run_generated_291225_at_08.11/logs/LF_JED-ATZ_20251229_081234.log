@@ -1,0 +1,41 @@
+2025-12-29 08:12:34 | INFO     | ======================================================================
+2025-12-29 08:12:34 | INFO     | Load Factor Scraper Started - Route: JED-ATZ
+2025-12-29 08:12:34 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_291225_at_08.11\logs\LF_JED-ATZ_20251229_081234.log
+2025-12-29 08:12:34 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-29 08:12:34 | INFO     | ======================================================================
+2025-12-29 08:12:34 | INFO     | Starting LF search for route: JED-ATZ
+2025-12-29 08:12:34 | INFO     | [START] LF Search
+2025-12-29 08:12:35 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-29 08:12:35 | INFO     | [DAY_START] Processing 10JAN
+2025-12-29 08:12:35 | INFO     | [lf.day.start] Processing JED-ATZ for 10JAN
+2025-12-29 08:12:37 | INFO     | [lf.day.flights_found] Found 3 flights on 10JAN
+2025-12-29 08:12:39 | INFO     | [lf.flight.extracted] SM492 on 10JAN: BKG=153, LF=91.6%
+2025-12-29 08:12:43 | INFO     | [lf.flight.extracted] SM454 on 10JAN: BKG=154, LF=92.2%
+2025-12-29 08:12:47 | INFO     | [lf.flight.extracted] SM456 on 10JAN: BKG=161, LF=96.4%
+2025-12-29 08:13:04 | INFO     | [SUCCESS] Day 10JAN
+2025-12-29 08:13:04 | INFO     | [DAY_START] Processing 09JAN
+2025-12-29 08:13:04 | INFO     | [lf.day.start] Processing JED-ATZ for 09JAN
+2025-12-29 08:13:05 | INFO     | [lf.day.flights_found] Found 1 flights on 09JAN
+2025-12-29 08:13:07 | INFO     | [lf.flight.extracted] SM492 on 09JAN: BKG=45, LF=27.0%
+2025-12-29 08:13:10 | INFO     | [SUCCESS] Day 09JAN
+2025-12-29 08:13:10 | INFO     | [DAY_START] Processing 08JAN
+2025-12-29 08:13:10 | INFO     | [lf.day.start] Processing JED-ATZ for 08JAN
+2025-12-29 08:13:11 | INFO     | [lf.day.flights_found] Found 3 flights on 08JAN
+2025-12-29 08:13:13 | INFO     | [lf.flight.extracted] SM422 on 08JAN: BKG=166, LF=99.4%
+2025-12-29 08:13:17 | INFO     | [lf.flight.extracted] SM454 on 08JAN: BKG=147, LF=88.0%
+2025-12-29 08:13:22 | INFO     | [lf.flight.extracted] SM456 on 08JAN: BKG=179, LF=107.2%
+2025-12-29 08:13:37 | INFO     | [SUCCESS] Day 08JAN
+2025-12-29 08:13:37 | INFO     | [DAY_START] Processing 07JAN
+2025-12-29 08:13:37 | INFO     | [lf.day.start] Processing JED-ATZ for 07JAN
+2025-12-29 08:13:38 | INFO     | [lf.day.flights_found] Found 2 flights on 07JAN
+2025-12-29 08:13:40 | INFO     | [lf.flight.extracted] SM454 on 07JAN: BKG=176, LF=98.9%
+2025-12-29 08:13:43 | INFO     | [lf.flight.extracted] SM492 on 07JAN: BKG=183, LF=109.6%
+2025-12-29 08:13:54 | INFO     | [SUCCESS] Day 07JAN
+2025-12-29 08:13:54 | INFO     | [DAY_START] Processing 06JAN
+2025-12-29 08:13:54 | INFO     | [lf.day.start] Processing JED-ATZ for 06JAN
+2025-12-29 08:13:55 | INFO     | [lf.day.flights_found] Found 2 flights on 06JAN
+2025-12-29 08:13:57 | INFO     | [lf.flight.extracted] SM454 on 06JAN: BKG=178, LF=106.6%
+2025-12-29 08:14:00 | INFO     | [lf.flight.extracted] SM456 on 06JAN: BKG=180, LF=107.8%
+2025-12-29 08:14:12 | INFO     | [SUCCESS] Day 06JAN
+2025-12-29 08:14:12 | INFO     | [SUCCESS] LF Search Complete
+2025-12-29 08:14:14 | INFO     | [Worker_9234] Completed: JED-ATZ - 5 results, 0 errors

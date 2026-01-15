@@ -1,0 +1,186 @@
+{
+  "task_id": "JED-CAI_r0_chunk0",
+  "saved_at": "2026-01-10T08:07:28.538343",
+  "lf_results": {
+    "2026-01-31": [
+      {
+        "Date": "Saturday, January 31, 2026",
+        "Flight": "SM450",
+        "DEP": "05:40",
+        "SOLD": 158,
+        "FULL CAPACITY": 175,
+        "LF%": 0.9029,
+        "LowestAvail": "U7",
+        "LASTSOLD": "2026-01-09 00:00:00",
+        "WEEKLY PROGRESS": 18,
+        "RBD": {
+          "N": 2,
+          "P": 0,
+          "A": 0,
+          "E": 125,
+          "I": 6,
+          "O": 0,
+          "U": 18,
+          "X": 7,
+          "T": 0,
+          "W": 0,
+          "S": 0,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 127,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 8,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM450",
+          "sm_route": "JED-CAI",
+          "sm_dep": "0540",
+          "sm_arr": "0655",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "SM0303",
+              "outbound_route": "CAI-SAW",
+              "outbound_dep": "1030",
+              "passengers": [
+                {
+                  "iata": "ISTSM0100"
+                },
+                {
+                  "iata": "ISTSM0100"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Date": "Saturday, January 31, 2026",
+        "Flight": "SM476",
+        "DEP": "08:00",
+        "SOLD": 168,
+        "FULL CAPACITY": 175,
+        "LF%": 0.96,
+        "LowestAvail": "CLOSED",
+        "LASTSOLD": "2026-01-05 00:00:00",
+        "WEEKLY PROGRESS": 3,
+        "RBD": {
+          "N": 0,
+          "P": 135,
+          "A": 0,
+          "E": 0,
+          "I": 17,
+          "O": 1,
+          "U": 3,
+          "X": 3,
+          "T": 0,
+          "W": 5,
+          "S": 4,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 135,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM476",
+          "sm_route": "JED-CAI",
+          "sm_dep": "0800",
+          "sm_arr": "0915",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "SM0012",
+              "outbound_route": "CAI-SSH",
+              "outbound_dep": "1330",
+              "passengers": [
+                {
+                  "iata": "CAISM08MB"
+                },
+                {
+                  "iata": "CAISM08MB"
+                },
+                {
+                  "iata": "CAISM08MB"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Date": "Saturday, January 31, 2026",
+        "Flight": "SM478",
+        "DEP": "16:20",
+        "SOLD": 105,
+        "FULL CAPACITY": 175,
+        "LF%": 0.6,
+        "LowestAvail": "T9",
+        "LASTSOLD": "2026-01-08 00:00:00",
+        "WEEKLY PROGRESS": 20,
+        "RBD": {
+          "N": 4,
+          "P": 70,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 0,
+          "U": 9,
+          "X": 21,
+          "T": 0,
+          "W": 0,
+          "S": 0,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 1,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 70,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM478",
+          "sm_route": "JED-CAI",
+          "sm_dep": "1620",
+          "sm_arr": "1735",
+          "connecting_passengers": []
+        }
+      }
+    ]
+  },
+  "lf_errors": {
+    "2026-01-30": "Max retries (5) exceeded for 30JAN",
+    "2026-01-29": "Max retries (5) exceeded for 29JAN",
+    "2026-01-28": "Max retries (5) exceeded for 28JAN",
+    "2026-01-27": "Max retries (5) exceeded for 27JAN",
+    "2026-01-26": "Max retries (5) exceeded for 26JAN",
+    "2026-01-25": "Max retries (5) exceeded for 25JAN",
+    "2026-01-24": "Max retries (5) exceeded for 24JAN",
+    "2026-01-23": "Max retries (5) exceeded for 23JAN",
+    "2026-01-22": "Max retries (5) exceeded for 22JAN",
+    "2026-01-21": "Max retries (5) exceeded for 21JAN"
+  }
+}

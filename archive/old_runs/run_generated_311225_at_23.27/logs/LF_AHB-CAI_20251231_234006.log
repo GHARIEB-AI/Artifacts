@@ -1,0 +1,34 @@
+2025-12-31 23:40:06 | INFO     | ======================================================================
+2025-12-31 23:40:06 | INFO     | Load Factor Scraper Started - Route: AHB-CAI
+2025-12-31 23:40:06 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_23.27\logs\LF_AHB-CAI_20251231_234006.log
+2025-12-31 23:40:06 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 23:40:06 | INFO     | ======================================================================
+2025-12-31 23:40:06 | INFO     | Starting LF search for route: AHB-CAI
+2025-12-31 23:40:06 | INFO     | [START] LF Search
+2025-12-31 23:40:08 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 23:40:08 | INFO     | [DAY_START] Processing 10FEB
+2025-12-31 23:40:08 | INFO     | [lf.day.start] Processing AHB-CAI for 10FEB
+2025-12-31 23:40:09 | WARNING  | [lf.day.no_flights] No direct flights on 10FEB
+2025-12-31 23:40:09 | INFO     | [SUCCESS] Day 10FEB
+2025-12-31 23:40:09 | INFO     | [DAY_START] Processing 09FEB
+2025-12-31 23:40:09 | INFO     | [lf.day.start] Processing AHB-CAI for 09FEB
+2025-12-31 23:40:10 | WARNING  | [lf.day.no_flights] No direct flights on 09FEB
+2025-12-31 23:40:11 | INFO     | [SUCCESS] Day 09FEB
+2025-12-31 23:40:11 | INFO     | [DAY_START] Processing 08FEB
+2025-12-31 23:40:11 | INFO     | [lf.day.start] Processing AHB-CAI for 08FEB
+2025-12-31 23:40:12 | INFO     | [lf.day.flights_found] Found 1 flights on 08FEB
+2025-12-31 23:40:14 | INFO     | [lf.flight.extracted] SM444 on 08FEB: BKG=15, LF=8.7%
+2025-12-31 23:40:18 | INFO     | [SUCCESS] Day 08FEB
+2025-12-31 23:40:18 | INFO     | [DAY_START] Processing 07FEB
+2025-12-31 23:40:18 | INFO     | [lf.day.start] Processing AHB-CAI for 07FEB
+2025-12-31 23:40:19 | WARNING  | [lf.day.no_flights] No direct flights on 07FEB
+2025-12-31 23:40:19 | INFO     | [SUCCESS] Day 07FEB
+2025-12-31 23:40:19 | INFO     | [DAY_START] Processing 06FEB
+2025-12-31 23:40:19 | INFO     | [lf.day.start] Processing AHB-CAI for 06FEB
+2025-12-31 23:40:20 | INFO     | [lf.day.flights_found] Found 1 flights on 06FEB
+2025-12-31 23:40:23 | INFO     | [lf.flight.extracted] SM444 on 06FEB: BKG=9, LF=5.1%
+2025-12-31 23:40:26 | INFO     | [SUCCESS] Day 06FEB
+2025-12-31 23:40:26 | INFO     | [SUCCESS] LF Search Complete
+2025-12-31 23:40:29 | INFO     | [Worker_9224] Completed: AHB-CAI - 5 results, 0 errors
+2025-12-31 23:40:29 | INFO     | [Worker_9224] Processing: CAI-MED
+2025-12-31 23:40:29 | INFO     |   Tier 0: Range 3, Chunk 4/5 (5 days)

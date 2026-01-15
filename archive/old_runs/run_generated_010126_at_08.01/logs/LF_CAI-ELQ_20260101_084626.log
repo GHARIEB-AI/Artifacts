@@ -1,0 +1,39 @@
+2026-01-01 08:46:26 | INFO     | ======================================================================
+2026-01-01 08:46:26 | INFO     | Load Factor Scraper Started - Route: CAI-ELQ
+2026-01-01 08:46:26 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_010126_at_08.01\logs\LF_CAI-ELQ_20260101_084626.log
+2026-01-01 08:46:26 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-01 08:46:26 | INFO     | ======================================================================
+2026-01-01 08:46:26 | INFO     | Starting LF search for route: CAI-ELQ
+2026-01-01 08:46:26 | INFO     | [START] LF Search
+2026-01-01 08:46:27 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-01 08:46:27 | INFO     | [DAY_START] Processing 12JAN
+2026-01-01 08:46:27 | INFO     | [lf.day.start] Processing CAI-ELQ for 12JAN
+2026-01-01 08:46:28 | WARNING  | [lf.day.no_flights] No direct flights on 12JAN
+2026-01-01 08:46:28 | INFO     | [SUCCESS] Day 12JAN
+2026-01-01 08:46:28 | INFO     | [DAY_START] Processing 11JAN
+2026-01-01 08:46:28 | INFO     | [lf.day.start] Processing CAI-ELQ for 11JAN
+2026-01-01 08:46:29 | INFO     | [lf.day.flights_found] Found 1 flights on 11JAN
+2026-01-01 08:46:31 | INFO     | [lf.flight.extracted] SM427 on 11JAN: BKG=42, LF=23.5%
+2026-01-01 08:46:35 | INFO     | [SUCCESS] Day 11JAN
+2026-01-01 08:46:35 | INFO     | [DAY_START] Processing 10JAN
+2026-01-01 08:46:35 | INFO     | [lf.day.start] Processing CAI-ELQ for 10JAN
+2026-01-01 08:46:36 | WARNING  | [lf.day.no_flights] No direct flights on 10JAN
+2026-01-01 08:46:36 | INFO     | [SUCCESS] Day 10JAN
+2026-01-01 08:46:36 | INFO     | [DAY_START] Processing 09JAN
+2026-01-01 08:46:36 | INFO     | [lf.day.start] Processing CAI-ELQ for 09JAN
+2026-01-01 08:46:37 | INFO     | [lf.day.flights_found] Found 1 flights on 09JAN
+2026-01-01 08:46:39 | INFO     | [lf.flight.extracted] SM427 on 09JAN: BKG=67, LF=37.4%
+2026-01-01 08:46:44 | INFO     | [SUCCESS] Day 09JAN
+2026-01-01 08:46:44 | INFO     | [DAY_START] Processing 08JAN
+2026-01-01 08:46:44 | INFO     | [lf.day.start] Processing CAI-ELQ for 08JAN
+2026-01-01 08:46:45 | INFO     | [lf.day.flights_found] Found 1 flights on 08JAN
+2026-01-01 08:46:47 | INFO     | [lf.flight.extracted] SM427 on 08JAN: BKG=64, LF=35.8%
+2026-01-01 08:46:52 | INFO     | [SUCCESS] Day 08JAN
+2026-01-01 08:46:52 | INFO     | [DAY_START] Processing 07JAN
+2026-01-01 08:46:52 | INFO     | [lf.day.start] Processing CAI-ELQ for 07JAN
+2026-01-01 08:46:53 | WARNING  | [lf.day.no_flights] No direct flights on 07JAN
+2026-01-01 08:46:53 | INFO     | [SUCCESS] Day 07JAN
+2026-01-01 08:46:53 | INFO     | [SUCCESS] LF Search Complete
+2026-01-01 08:46:55 | INFO     | [Worker_9226] Completed: CAI-ELQ - 6 results, 0 errors
+2026-01-01 08:46:55 | INFO     | [Worker_9226] Processing: JED-HBE
+2026-01-01 08:46:55 | INFO     |   Tier 0: Range 1, Chunk 5/5 (6 days)

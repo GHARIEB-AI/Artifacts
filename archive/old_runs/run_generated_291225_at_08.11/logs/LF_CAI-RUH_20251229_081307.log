@@ -1,0 +1,32 @@
+2025-12-29 08:13:07 | INFO     | ======================================================================
+2025-12-29 08:13:07 | INFO     | Load Factor Scraper Started - Route: CAI-RUH
+2025-12-29 08:13:07 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_291225_at_08.11\logs\LF_CAI-RUH_20251229_081307.log
+2025-12-29 08:13:07 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-29 08:13:07 | INFO     | ======================================================================
+2025-12-29 08:13:07 | INFO     | Starting LF search for route: CAI-RUH
+2025-12-29 08:13:07 | INFO     | [START] LF Search
+2025-12-29 08:13:08 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-29 08:13:08 | INFO     | [DAY_START] Processing 05JAN
+2025-12-29 08:13:08 | INFO     | [lf.day.start] Processing CAI-RUH for 05JAN
+2025-12-29 08:13:10 | INFO     | [lf.day.flights_found] Found 1 flights on 05JAN
+2025-12-29 08:13:12 | INFO     | [lf.flight.extracted] SM469 on 05JAN: BKG=90, LF=50.3%
+2025-12-29 08:13:17 | INFO     | [SUCCESS] Day 05JAN
+2025-12-29 08:13:17 | INFO     | [DAY_START] Processing 04JAN
+2025-12-29 08:13:17 | INFO     | [lf.day.start] Processing CAI-RUH for 04JAN
+2025-12-29 08:13:18 | INFO     | [lf.day.flights_found] Found 1 flights on 04JAN
+2025-12-29 08:13:21 | INFO     | [lf.flight.extracted] SM461 on 04JAN: BKG=61, LF=56.0%
+2025-12-29 08:13:26 | INFO     | [SUCCESS] Day 04JAN
+2025-12-29 08:13:26 | INFO     | [DAY_START] Processing 03JAN
+2025-12-29 08:13:26 | INFO     | [lf.day.start] Processing CAI-RUH for 03JAN
+2025-12-29 08:13:27 | INFO     | [lf.day.flights_found] Found 1 flights on 03JAN
+2025-12-29 08:13:29 | INFO     | [lf.flight.extracted] SM461 on 03JAN: BKG=120, LF=67.0%
+2025-12-29 08:13:37 | INFO     | [SUCCESS] Day 03JAN
+2025-12-29 08:13:37 | INFO     | [DAY_START] Processing 02JAN
+2025-12-29 08:13:37 | INFO     | [lf.day.start] Processing CAI-RUH for 02JAN
+2025-12-29 08:13:38 | INFO     | [lf.day.flights_found] Found 1 flights on 02JAN
+2025-12-29 08:13:40 | INFO     | [lf.flight.extracted] SM469 on 02JAN: BKG=132, LF=73.7%
+2025-12-29 08:13:43 | INFO     | [SUCCESS] Day 02JAN
+2025-12-29 08:13:43 | INFO     | [SUCCESS] LF Search Complete
+2025-12-29 08:13:45 | INFO     | [Worker_9232] Completed: CAI-RUH - 4 results, 0 errors
+2025-12-29 08:13:45 | INFO     | [Worker_9232] Processing: ATZ-RUH
+2025-12-29 08:13:45 | INFO     |   Tier 0: Range 1, Chunk 3/3 (4 days)

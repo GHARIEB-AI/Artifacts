@@ -1,0 +1,54 @@
+2026-01-05 17:17:53 | INFO     | ======================================================================
+2026-01-05 17:17:53 | INFO     | Load Factor Scraper Started - Route: MED-CAI
+2026-01-05 17:17:53 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_050126_at_16.47\logs\LF_MED-CAI_20260105_171753.log
+2026-01-05 17:17:53 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-05 17:17:53 | INFO     | ======================================================================
+2026-01-05 17:17:53 | INFO     | Starting LF search for route: MED-CAI
+2026-01-05 17:17:53 | INFO     | [START] LF Search
+2026-01-05 17:17:54 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-05 17:17:55 | INFO     | [DAY_START] Processing 31JAN
+2026-01-05 17:17:55 | INFO     | [lf.day.start] Processing MED-CAI for 31JAN
+2026-01-05 17:17:56 | INFO     | [lf.day.flights_found] Found 1 flights on 31JAN
+2026-01-05 17:17:59 | INFO     | [lf.flight.extracted] SM494 on 31JAN: BKG=168, LF=97.7%
+2026-01-05 17:18:07 | INFO     | [SUCCESS] Day 31JAN
+2026-01-05 17:18:07 | INFO     | [DAY_START] Processing 30JAN
+2026-01-05 17:18:07 | INFO     | [lf.day.start] Processing MED-CAI for 30JAN
+2026-01-05 17:18:09 | WARNING  | [lf.day.no_flights] No direct flights on 30JAN
+2026-01-05 17:18:09 | INFO     | [SUCCESS] Day 30JAN
+2026-01-05 17:18:09 | INFO     | [DAY_START] Processing 29JAN
+2026-01-05 17:18:09 | INFO     | [lf.day.start] Processing MED-CAI for 29JAN
+2026-01-05 17:18:10 | INFO     | [lf.day.flights_found] Found 1 flights on 29JAN
+2026-01-05 17:18:13 | INFO     | [lf.flight.extracted] SM494 on 29JAN: BKG=167, LF=101.2%
+2026-01-05 17:18:18 | INFO     | [SUCCESS] Day 29JAN
+2026-01-05 17:18:18 | INFO     | [DAY_START] Processing 28JAN
+2026-01-05 17:18:18 | INFO     | [lf.day.start] Processing MED-CAI for 28JAN
+2026-01-05 17:18:20 | WARNING  | [lf.day.no_flights] No direct flights on 28JAN
+2026-01-05 17:18:20 | INFO     | [SUCCESS] Day 28JAN
+2026-01-05 17:18:20 | INFO     | [DAY_START] Processing 27JAN
+2026-01-05 17:18:20 | INFO     | [lf.day.start] Processing MED-CAI for 27JAN
+2026-01-05 17:18:21 | INFO     | [lf.day.flights_found] Found 2 flights on 27JAN
+2026-01-05 17:18:24 | INFO     | [lf.flight.extracted] SM496 on 27JAN: BKG=168, LF=96.0%
+2026-01-05 17:18:29 | INFO     | [lf.flight.extracted] SM494 on 27JAN: BKG=165, LF=94.3%
+2026-01-05 17:18:39 | INFO     | [SUCCESS] Day 27JAN
+2026-01-05 17:18:39 | INFO     | [DAY_START] Processing 26JAN
+2026-01-05 17:18:39 | INFO     | [lf.day.start] Processing MED-CAI for 26JAN
+2026-01-05 17:18:41 | WARNING  | [lf.day.no_flights] No direct flights on 26JAN
+2026-01-05 17:18:41 | INFO     | [SUCCESS] Day 26JAN
+2026-01-05 17:18:41 | INFO     | [DAY_START] Processing 25JAN
+2026-01-05 17:18:41 | INFO     | [lf.day.start] Processing MED-CAI for 25JAN
+2026-01-05 17:18:42 | INFO     | [lf.day.flights_found] Found 1 flights on 25JAN
+2026-01-05 17:18:45 | INFO     | [lf.flight.extracted] SM494 on 25JAN: BKG=170, LF=97.1%
+2026-01-05 17:18:50 | INFO     | [SUCCESS] Day 25JAN
+2026-01-05 17:18:50 | INFO     | [DAY_START] Processing 24JAN
+2026-01-05 17:18:50 | INFO     | [lf.day.start] Processing MED-CAI for 24JAN
+2026-01-05 17:18:52 | INFO     | [lf.day.flights_found] Found 1 flights on 24JAN
+2026-01-05 17:18:54 | INFO     | [lf.flight.extracted] SM494 on 24JAN: BKG=155, LF=88.6%
+2026-01-05 17:18:58 | INFO     | [SUCCESS] Day 24JAN
+2026-01-05 17:18:58 | INFO     | [DAY_START] Processing 23JAN
+2026-01-05 17:18:58 | INFO     | [lf.day.start] Processing MED-CAI for 23JAN
+2026-01-05 17:18:59 | WARNING  | [lf.day.no_flights] No direct flights on 23JAN
+2026-01-05 17:19:00 | INFO     | [SUCCESS] Day 23JAN
+2026-01-05 17:19:00 | INFO     | [SUCCESS] LF Search Complete
+2026-01-05 17:19:02 | INFO     | [Worker_9225] Completed: MED-CAI - 9 results, 0 errors
+2026-01-05 17:19:02 | INFO     | [Worker_9225] Processing: RUH-ATZ
+2026-01-05 17:19:02 | INFO     |   Tier 0: Range 1, Chunk 1/3 (9 days)

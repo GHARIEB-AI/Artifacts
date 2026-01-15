@@ -1,0 +1,44 @@
+2025-12-31 20:50:48 | INFO     | ======================================================================
+2025-12-31 20:50:48 | INFO     | Load Factor Scraper Started - Route: HBE-MED
+2025-12-31 20:50:48 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_20.48\logs\LF_HBE-MED_20251231_205048.log
+2025-12-31 20:50:48 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 20:50:48 | INFO     | ======================================================================
+2025-12-31 20:50:48 | INFO     | Starting LF search for route: HBE-MED
+2025-12-31 20:50:48 | INFO     | [START] LF Search
+2025-12-31 20:50:50 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 20:50:50 | INFO     | [DAY_START] Processing 31JAN
+2025-12-31 20:50:50 | INFO     | [lf.day.start] Processing HBE-MED for 31JAN
+2025-12-31 20:50:51 | WARNING  | [lf.day.no_flights] No direct flights on 31JAN
+2025-12-31 20:50:51 | INFO     | [SUCCESS] Day 31JAN
+2025-12-31 20:50:51 | INFO     | [DAY_START] Processing 30JAN
+2025-12-31 20:50:51 | INFO     | [lf.day.start] Processing HBE-MED for 30JAN
+2025-12-31 20:50:52 | WARNING  | [lf.day.no_flights] No direct flights on 30JAN
+2025-12-31 20:50:53 | INFO     | [SUCCESS] Day 30JAN
+2025-12-31 20:50:53 | INFO     | [DAY_START] Processing 29JAN
+2025-12-31 20:50:53 | INFO     | [lf.day.start] Processing HBE-MED for 29JAN
+2025-12-31 20:50:54 | INFO     | [lf.day.flights_found] Found 1 flights on 29JAN
+2025-12-31 20:50:56 | INFO     | [lf.flight.extracted] SM485 on 29JAN: BKG=173, LF=96.7%
+2025-12-31 20:51:01 | INFO     | [SUCCESS] Day 29JAN
+2025-12-31 20:51:01 | INFO     | [DAY_START] Processing 28JAN
+2025-12-31 20:51:01 | INFO     | [lf.day.start] Processing HBE-MED for 28JAN
+2025-12-31 20:51:03 | INFO     | [lf.day.flights_found] Found 1 flights on 28JAN
+2025-12-31 20:51:05 | INFO     | [lf.flight.extracted] SM485 on 28JAN: BKG=178, LF=99.4%
+2025-12-31 20:51:08 | INFO     | [SUCCESS] Day 28JAN
+2025-12-31 20:51:08 | INFO     | [DAY_START] Processing 27JAN
+2025-12-31 20:51:08 | INFO     | [lf.day.start] Processing HBE-MED for 27JAN
+2025-12-31 20:51:09 | INFO     | [lf.day.flights_found] Found 1 flights on 27JAN
+2025-12-31 20:51:12 | INFO     | [lf.flight.extracted] SM485 on 27JAN: BKG=179, LF=100.0%
+2025-12-31 20:51:17 | INFO     | [SUCCESS] Day 27JAN
+2025-12-31 20:51:17 | INFO     | [DAY_START] Processing 26JAN
+2025-12-31 20:51:17 | INFO     | [lf.day.start] Processing HBE-MED for 26JAN
+2025-12-31 20:51:18 | WARNING  | [lf.day.no_flights] No direct flights on 26JAN
+2025-12-31 20:51:18 | INFO     | [SUCCESS] Day 26JAN
+2025-12-31 20:51:18 | INFO     | [DAY_START] Processing 25JAN
+2025-12-31 20:51:18 | INFO     | [lf.day.start] Processing HBE-MED for 25JAN
+2025-12-31 20:51:19 | INFO     | [lf.day.flights_found] Found 1 flights on 25JAN
+2025-12-31 20:51:22 | INFO     | [lf.flight.extracted] SM485 on 25JAN: BKG=180, LF=102.3%
+2025-12-31 20:51:27 | INFO     | [SUCCESS] Day 25JAN
+2025-12-31 20:51:27 | INFO     | [SUCCESS] LF Search Complete
+2025-12-31 20:51:29 | INFO     | [Worker_9223] Completed: HBE-MED - 7 results, 0 errors
+2025-12-31 20:51:29 | INFO     | [Worker_9223] Processing: ATZ-RUH
+2025-12-31 20:51:29 | INFO     |   Tier 0: Range 1, Chunk 1/5 (7 days)

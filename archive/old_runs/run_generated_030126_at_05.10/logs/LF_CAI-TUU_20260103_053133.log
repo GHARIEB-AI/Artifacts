@@ -1,0 +1,29 @@
+2026-01-03 05:31:33 | INFO     | ======================================================================
+2026-01-03 05:31:33 | INFO     | Load Factor Scraper Started - Route: CAI-TUU
+2026-01-03 05:31:33 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_030126_at_05.10\logs\LF_CAI-TUU_20260103_053133.log
+2026-01-03 05:31:33 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-03 05:31:33 | INFO     | ======================================================================
+2026-01-03 05:31:33 | INFO     | Starting LF search for route: CAI-TUU
+2026-01-03 05:31:33 | INFO     | [START] LF Search
+2026-01-03 05:31:34 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-03 05:31:34 | INFO     | [DAY_START] Processing 07JAN
+2026-01-03 05:31:34 | INFO     | [lf.day.start] Processing CAI-TUU for 07JAN
+2026-01-03 05:31:35 | INFO     | [lf.day.flights_found] Found 1 flights on 07JAN
+2026-01-03 05:31:37 | INFO     | [lf.flight.extracted] SM325 on 07JAN: BKG=62, LF=34.6%
+2026-01-03 05:31:41 | INFO     | [SUCCESS] Day 07JAN
+2026-01-03 05:31:41 | INFO     | [DAY_START] Processing 06JAN
+2026-01-03 05:31:41 | INFO     | [lf.day.start] Processing CAI-TUU for 06JAN
+2026-01-03 05:31:42 | WARNING  | [lf.day.no_flights] No direct flights on 06JAN
+2026-01-03 05:31:42 | INFO     | [SUCCESS] Day 06JAN
+2026-01-03 05:31:42 | INFO     | [DAY_START] Processing 05JAN
+2026-01-03 05:31:42 | INFO     | [lf.day.start] Processing CAI-TUU for 05JAN
+2026-01-03 05:31:43 | WARNING  | [lf.day.no_flights] No direct flights on 05JAN
+2026-01-03 05:31:43 | INFO     | [SUCCESS] Day 05JAN
+2026-01-03 05:31:43 | INFO     | [DAY_START] Processing 04JAN
+2026-01-03 05:31:43 | INFO     | [lf.day.start] Processing CAI-TUU for 04JAN
+2026-01-03 05:31:44 | WARNING  | [lf.day.no_flights] No direct flights on 04JAN
+2026-01-03 05:31:44 | INFO     | [SUCCESS] Day 04JAN
+2026-01-03 05:31:44 | INFO     | [SUCCESS] LF Search Complete
+2026-01-03 05:31:46 | INFO     | [Worker_9224] Completed: CAI-TUU - 4 results, 0 errors
+2026-01-03 05:39:02 | INFO     | [Worker_9224] Shutdown signal received, exiting...
+2026-01-03 05:39:02 | INFO     | [Worker_9224] Finished. Processed 12 groups.

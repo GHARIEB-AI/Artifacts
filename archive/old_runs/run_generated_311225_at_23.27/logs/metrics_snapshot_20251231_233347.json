@@ -1,0 +1,192 @@
+{
+  "timestamp": "2025-12-31T23:33:47.002632",
+  "service": "market-insights",
+  "counters": {
+    "oal_requests_total": {
+      "description": "Total OAL API requests",
+      "values": []
+    },
+    "lf_requests_total": {
+      "description": "Total LF requests",
+      "values": [
+        {
+          "labels": {
+            "destination": "ATZ",
+            "origin": "JED",
+            "status": "success"
+          },
+          "value": 6.0
+        },
+        {
+          "labels": {
+            "destination": "JED",
+            "origin": "LXR",
+            "status": "success"
+          },
+          "value": 6.0
+        },
+        {
+          "labels": {
+            "destination": "DMM",
+            "origin": "ATZ",
+            "status": "success"
+          },
+          "value": 6.0
+        },
+        {
+          "labels": {
+            "destination": "AJF",
+            "origin": "ATZ",
+            "status": "success"
+          },
+          "value": 6.0
+        },
+        {
+          "labels": {
+            "destination": "ELQ",
+            "origin": "ATZ",
+            "status": "success"
+          },
+          "value": 6.0
+        },
+        {
+          "labels": {
+            "destination": "HBE",
+            "origin": "JED",
+            "status": "success"
+          },
+          "value": 6.0
+        }
+      ]
+    },
+    "errors_total": {
+      "description": "Total errors",
+      "values": []
+    }
+  },
+  "gauges": {
+    "routes_in_progress": {
+      "description": "Routes currently being processed",
+      "values": [
+        {
+          "labels": {},
+          "value": 0.0
+        }
+      ]
+    },
+    "flights_analyzed": {
+      "description": "Total flights analyzed in session",
+      "values": [
+        {
+          "labels": {
+            "direction": "lf"
+          },
+          "value": 38.0
+        }
+      ]
+    },
+    "circuit_breaker_state": {
+      "description": "Circuit breaker state (0=closed, 1=open)",
+      "values": []
+    }
+  },
+  "histograms": {
+    "request_duration_seconds": {
+      "description": "Request duration in seconds",
+      "data": {}
+    },
+    "route_processing_seconds": {
+      "description": "Route processing duration",
+      "data": {
+        "{'route': 'JED-ATZ'}": {
+          "sum": 99.159386,
+          "count": 6,
+          "buckets": {
+            "30.0": 6,
+            "60.0": 6,
+            "120.0": 6,
+            "300.0": 6,
+            "10.0": 1
+          },
+          "p50": 16.666666666666668,
+          "p95": 25.666666666666664,
+          "p99": 26.46666666666667
+        },
+        "{'route': 'LXR-JED'}": {
+          "sum": 25.062869999999997,
+          "count": 6,
+          "buckets": {
+            "5.0": 5,
+            "10.0": 5,
+            "30.0": 6,
+            "60.0": 6,
+            "120.0": 6,
+            "300.0": 6
+          },
+          "p50": 3.4,
+          "p95": 5.7,
+          "p99": 5.94
+        },
+        "{'route': 'ATZ-DMM'}": {
+          "sum": 17.272288,
+          "count": 6,
+          "buckets": {
+            "5.0": 4,
+            "10.0": 6,
+            "30.0": 6,
+            "60.0": 6,
+            "120.0": 6,
+            "300.0": 6
+          },
+          "p50": 4.0,
+          "p95": 6.416666666666667,
+          "p99": 6.616666666666667
+        },
+        "{'route': 'ATZ-AJF'}": {
+          "sum": 12.242134,
+          "count": 6,
+          "buckets": {
+            "5.0": 5,
+            "10.0": 6,
+            "30.0": 6,
+            "60.0": 6,
+            "120.0": 6,
+            "300.0": 6
+          },
+          "p50": 3.4,
+          "p95": 5.583333333333334,
+          "p99": 5.783333333333333
+        },
+        "{'route': 'ATZ-ELQ'}": {
+          "sum": 14.971179999999999,
+          "count": 6,
+          "buckets": {
+            "10.0": 6,
+            "30.0": 6,
+            "60.0": 6,
+            "120.0": 6,
+            "300.0": 6,
+            "5.0": 5
+          },
+          "p50": 3.4,
+          "p95": 5.583333333333334,
+          "p99": 5.783333333333333
+        },
+        "{'route': 'JED-HBE'}": {
+          "sum": 64.762276,
+          "count": 6,
+          "buckets": {
+            "30.0": 6,
+            "60.0": 6,
+            "120.0": 6,
+            "300.0": 6,
+            "10.0": 2
+          },
+          "p50": 13.333333333333334,
+          "p95": 22.333333333333336,
+          "p99": 23.133333333333333
+        }
+      }
+    }
+  }
+}

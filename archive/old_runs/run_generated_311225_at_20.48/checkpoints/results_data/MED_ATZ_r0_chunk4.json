@@ -1,0 +1,98 @@
+{
+  "task_id": "MED-ATZ_r0_chunk4",
+  "saved_at": "2025-12-31T21:06:32.413507",
+  "lf_results": {
+    "2026-01-05": [
+      {
+        "Date": "Monday, January 05, 2026",
+        "Flight": "SM488",
+        "DEP": "19:20",
+        "SOLD": 168,
+        "FULL CAPACITY": 175,
+        "LF%": 0.96,
+        "LowestAvail": "CLOSED",
+        "LASTSOLD": "2025-12-31 00:00:00",
+        "WEEKLY PROGRESS": 10,
+        "RBD": {
+          "N": 0,
+          "P": 147,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 0,
+          "U": 0,
+          "X": 10,
+          "T": 9,
+          "W": 2,
+          "S": 0,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 147,
+        "EQP": "320",
+        "Brd-Off": "MED-ATZ",
+        "SOLD TODAY": 1,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": null
+      }
+    ],
+    "2026-01-04": [],
+    "2026-01-03": [
+      {
+        "Date": "Saturday, January 03, 2026",
+        "Flight": "SM488",
+        "DEP": "22:55",
+        "SOLD": 79,
+        "FULL CAPACITY": 175,
+        "LF%": 0.4514,
+        "LowestAvail": "O5",
+        "LASTSOLD": "2025-12-31 00:00:00",
+        "WEEKLY PROGRESS": 23,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 15,
+          "O": 10,
+          "U": 9,
+          "X": 11,
+          "T": 6,
+          "W": 6,
+          "S": 19,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 3,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "MED-ATZ",
+        "SOLD TODAY": 9,
+        "SOLD YDAY": 7,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM488",
+          "sm_route": "MED-ATZ",
+          "sm_dep": "2255",
+          "sm_arr": "2340",
+          "connecting_passengers": []
+        }
+      }
+    ],
+    "2026-01-02": [],
+    "2026-01-01": []
+  },
+  "lf_errors": {}
+}

@@ -1,0 +1,38 @@
+2025-12-31 23:55:52 | INFO     | ======================================================================
+2025-12-31 23:55:52 | INFO     | Load Factor Scraper Started - Route: AHB-CAI
+2025-12-31 23:55:52 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_23.27\logs\LF_AHB-CAI_20251231_235552.log
+2025-12-31 23:55:52 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 23:55:52 | INFO     | ======================================================================
+2025-12-31 23:55:52 | INFO     | Starting LF search for route: AHB-CAI
+2025-12-31 23:55:52 | INFO     | [START] LF Search
+2025-12-31 23:55:54 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 23:55:54 | INFO     | [DAY_START] Processing 24JAN
+2025-12-31 23:55:54 | INFO     | [lf.day.start] Processing AHB-CAI for 24JAN
+2025-12-31 23:55:55 | WARNING  | [lf.day.no_flights] No direct flights on 24JAN
+2025-12-31 23:55:55 | INFO     | [SUCCESS] Day 24JAN
+2025-12-31 23:55:55 | INFO     | [DAY_START] Processing 23JAN
+2025-12-31 23:55:55 | INFO     | [lf.day.start] Processing AHB-CAI for 23JAN
+2025-12-31 23:55:56 | INFO     | [lf.day.flights_found] Found 1 flights on 23JAN
+2025-12-31 23:55:58 | INFO     | [lf.flight.extracted] SM444 on 23JAN: BKG=22, LF=12.6%
+2025-12-31 23:56:02 | INFO     | [SUCCESS] Day 23JAN
+2025-12-31 23:56:02 | INFO     | [DAY_START] Processing 22JAN
+2025-12-31 23:56:02 | INFO     | [lf.day.start] Processing AHB-CAI for 22JAN
+2025-12-31 23:56:03 | INFO     | [lf.day.flights_found] Found 1 flights on 22JAN
+2025-12-31 23:56:05 | INFO     | [lf.flight.extracted] SM448 on 22JAN: BKG=29, LF=16.9%
+2025-12-31 23:56:09 | INFO     | [SUCCESS] Day 22JAN
+2025-12-31 23:56:09 | INFO     | [DAY_START] Processing 21JAN
+2025-12-31 23:56:09 | INFO     | [lf.day.start] Processing AHB-CAI for 21JAN
+2025-12-31 23:56:10 | WARNING  | [lf.day.no_flights] No direct flights on 21JAN
+2025-12-31 23:56:10 | INFO     | [SUCCESS] Day 21JAN
+2025-12-31 23:56:10 | INFO     | [DAY_START] Processing 20JAN
+2025-12-31 23:56:10 | INFO     | [lf.day.start] Processing AHB-CAI for 20JAN
+2025-12-31 23:56:11 | WARNING  | [lf.day.no_flights] No direct flights on 20JAN
+2025-12-31 23:56:11 | INFO     | [SUCCESS] Day 20JAN
+2025-12-31 23:56:11 | INFO     | [DAY_START] Processing 19JAN
+2025-12-31 23:56:11 | INFO     | [lf.day.start] Processing AHB-CAI for 19JAN
+2025-12-31 23:56:12 | WARNING  | [lf.day.no_flights] No direct flights on 19JAN
+2025-12-31 23:56:12 | INFO     | [SUCCESS] Day 19JAN
+2025-12-31 23:56:12 | INFO     | [SUCCESS] LF Search Complete
+2025-12-31 23:56:14 | INFO     | [Worker_9232] Completed: AHB-CAI - 6 results, 0 errors
+2025-12-31 23:56:14 | INFO     | [Worker_9232] Processing: ELQ-ATZ
+2025-12-31 23:56:14 | INFO     |   Tier 0: Range 1, Chunk 2/5 (7 days)

@@ -1,0 +1,4454 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="report-generated" content="2026-01-04T07:26:10.329473">
+    <meta name="report-version" content="20260104072610">
+    <title>JED-HBE - Threat Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f3f9 0%, #ebe7f3 100%);
+            color: #462B73;
+            min-height: 100vh;
+            padding-bottom: 80px;
+        }
+
+        body.en { direction: ltr; }
+        .ar-text { display: inline; }
+        .en-text { display: none; }
+        body.en .ar-text { display: none; }
+        body.en .en-text { display: inline; }
+        .hidden { display: none !important; }
+
+        /* FREEZE PANES - header + filter together as one sticky unit */
+        .freeze-panes {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .back-btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.2em;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-content {
+            flex: 1;
+        }
+
+        .header h1 {
+            font-size: 1.3em;
+            color: white;
+        }
+
+        .header .subtitle {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.85em;
+        }
+
+        .lang-toggle {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            cursor: pointer;
+        }
+
+        .stats-bar {
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 10px;
+            background: rgba(70, 43, 115, 0.1);
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 8px;
+            min-width: 70px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .stat-item:active { transform: scale(0.95); }
+        .stat-item.active .stat-sphere { box-shadow: 0 0 0 3px rgba(70, 43, 115, 0.3), 0 4px 12px rgba(0,0,0,0.25); }
+
+        .stat-sphere {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .stat-item.high .stat-sphere { background: linear-gradient(135deg, #e74c3c 0%, #922b21 100%); }
+        .stat-item.medium .stat-sphere { background: linear-gradient(135deg, #f1c40f 0%, #d4ac0d 100%); }
+        .stat-item.low .stat-sphere { background: linear-gradient(135deg, #9b59b6 0%, #6c3483 100%); }
+
+        .stat-count {
+            font-size: 1.1em;
+            font-weight: 800;
+        }
+
+        .stat-item.high .stat-count { color: #e74c3c; }
+        .stat-item.medium .stat-count { color: #d4ac0d; }
+        .stat-item.low .stat-count { color: #9b59b6; }
+
+        .stat-label {
+            font-size: 0.6em;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-top: 2px;
+            color: #666;
+        }
+
+        /* Filter Section - part of freeze panes container */
+        .filter-section {
+            padding: 12px 15px;
+            background: linear-gradient(135deg, rgba(70, 43, 115, 0.95) 0%, rgba(90, 61, 138, 0.95) 100%);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .filter-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .filter-btn {
+            flex: 1;
+            padding: 10px 12px;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            font-size: 0.85em;
+            text-align: center;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .filter-btn.active {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: white;
+        }
+
+        .filter-btn .count {
+            background: #F7941D;
+            color: white;
+            font-size: 0.7em;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-weight: 700;
+        }
+
+        /* Route Selector Dropdown */
+        .route-selector {
+            flex: 1;
+            padding: 10px 12px;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            font-size: 0.85em;
+            font-weight: 600;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='white' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            padding-right: 30px;
+        }
+
+        .route-selector option {
+            background: #462B73;
+            color: white;
+        }
+
+        body.ar .route-selector {
+            background-position: left 12px center;
+            padding-right: 12px;
+            padding-left: 30px;
+        }
+
+        .route-selector:focus {
+            outline: none;
+            border-color: white;
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        /* Filter Modal */
+        .filter-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            justify-content: center;
+            align-items: flex-end;
+            z-index: 200;
+        }
+
+        .filter-modal.show {
+            display: flex;
+        }
+
+        .filter-modal-content {
+            background: white;
+            border-radius: 20px 20px 0 0;
+            width: 100%;
+            max-height: 70vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-modal-header {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .filter-modal-title {
+            font-weight: 700;
+            color: #462B73;
+            font-size: 1.1em;
+        }
+
+        .filter-modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            color: #888;
+            cursor: pointer;
+        }
+
+        .filter-modal-actions {
+            display: flex;
+            gap: 10px;
+            padding: 10px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .filter-action-btn {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #462B73;
+            border-radius: 20px;
+            background: white;
+            color: #462B73;
+            font-size: 0.85em;
+            cursor: pointer;
+        }
+
+        .filter-modal-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px 20px;
+        }
+
+        .filter-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            cursor: pointer;
+        }
+
+        .filter-checkbox {
+            width: 22px;
+            height: 22px;
+            border: 2px solid #462B73;
+            border-radius: 4px;
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+
+        body.ar .filter-checkbox {
+            margin-right: 0;
+            margin-left: 12px;
+        }
+
+        .filter-checkbox.checked {
+            background: #462B73;
+        }
+
+        .filter-checkbox.checked::after {
+            content: '✓';
+            color: white;
+            font-size: 14px;
+        }
+
+        .filter-item-text {
+            flex: 1;
+            color: #462B73;
+        }
+
+        /* Tree Structure for Excel-like filter */
+        .filter-tree {
+            padding: 5px 0;
+        }
+
+        .filter-tree-node {
+            margin-bottom: 2px;
+        }
+
+        .filter-tree-header {
+            display: flex;
+            align-items: center;
+            padding: 8px 5px;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        .filter-tree-header:hover {
+            background: rgba(70, 43, 115, 0.05);
+        }
+
+        .filter-tree-toggle {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #462B73;
+            font-size: 12px;
+            transition: transform 0.2s;
+        }
+
+        .filter-tree-toggle.collapsed {
+            transform: rotate(-90deg);
+        }
+
+        body.ar .filter-tree-toggle.collapsed {
+            transform: rotate(90deg);
+        }
+
+        .filter-tree-checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #462B73;
+            border-radius: 3px;
+            margin: 0 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            background: white;
+        }
+
+        .filter-tree-checkbox.checked {
+            background: #462B73;
+            color: white;
+        }
+
+        .filter-tree-checkbox.partial {
+            background: rgba(70, 43, 115, 0.5);
+            color: white;
+        }
+
+        .filter-tree-label {
+            flex: 1;
+            font-size: 0.95em;
+            color: #333;
+        }
+
+        .filter-tree-children {
+            margin-left: 25px;
+            border-left: 1px solid #e0e0e0;
+            padding-left: 10px;
+            display: block;
+        }
+
+        body.ar .filter-tree-children {
+            margin-left: 0;
+            margin-right: 25px;
+            border-left: none;
+            border-right: 1px solid #e0e0e0;
+            padding-left: 0;
+            padding-right: 10px;
+        }
+
+        .filter-tree-children.collapsed {
+            display: none;
+        }
+
+        .filter-tree-day {
+            display: flex;
+            align-items: center;
+            padding: 6px 5px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .filter-tree-day:hover {
+            background: rgba(70, 43, 115, 0.05);
+        }
+
+        .filter-modal-apply {
+            padding: 15px 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .filter-apply-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+            color: white;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .content {
+            padding: 10px;
+        }
+
+        .date-header {
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+            color: white;
+            padding: 12px 15px;
+            font-weight: 600;
+            margin: 15px 0 10px 0;
+            border-radius: 8px;
+            font-size: 0.9em;
+        }
+
+        /* Flight Card - Purple Gradient Design */
+        .flight-card {
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+            border-radius: 15px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .flight-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: rgba(0,0,0,0.2);
+        }
+
+        .flight-name {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #F7941D;
+        }
+
+        .lf-badge {
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9em;
+            color: white;
+        }
+
+        .lf-high { background: linear-gradient(135deg, #462B73, #5a3d8a); }
+        .lf-medium { background: linear-gradient(135deg, #f39c12, #e67e22); }
+        .lf-low { background: linear-gradient(135deg, #e74c3c, #c0392b); }
+
+        /* LF Details Grid */
+        .lf-details {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            padding: 12px;
+            background: rgba(0,0,0,0.15);
+            color: white;
+        }
+
+        .lf-item {
+            text-align: center;
+            padding: 8px 5px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+        }
+
+        .lf-item-label {
+            font-size: 0.65em;
+            opacity: 0.8;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .lf-item-value {
+            font-size: 0.95em;
+            font-weight: 600;
+            margin-top: 3px;
+            color: white;
+        }
+
+        /* Threat Cards - Air Cairo Brand Design */
+        .threats-container {
+            padding: 10px;
+        }
+
+        .threat-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f6fc 100%);
+            border: 2px solid #462B73;
+            border-radius: 20px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 8px 20px rgba(70, 43, 115, 0.2);
+        }
+
+        .threat-card.high {
+            border-color: #e74c3c;
+            box-shadow: 0 8px 20px rgba(231, 76, 60, 0.25);
+            background: linear-gradient(135deg, #fff5f5 0%, #ffebeb 100%);
+        }
+        .threat-card.medium {
+            border-color: #F7941D;
+            box-shadow: 0 8px 20px rgba(247, 148, 29, 0.25);
+            background: linear-gradient(135deg, #fffbf5 0%, #fff5e6 100%);
+        }
+        .threat-card.low {
+            border-color: #0000E6;
+            box-shadow: 0 8px 20px rgba(0, 0, 230, 0.2);
+            background: linear-gradient(135deg, #f0f0ff 0%, #e6e6ff 100%);
+        }
+        .threat-card.alternative { opacity: 0.85; }
+
+        .card-date-header {
+            font-size: 0.75em;
+            color: #888;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .blocks-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .flight-block {
+            background: white;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+
+        .flight-block-title {
+            font-weight: 700;
+            font-size: 0.95em;
+            color: #462B73;
+            margin-bottom: 4px;
+        }
+
+        .flight-dep-time {
+            font-size: 0.8em;
+            color: #888;
+            margin-bottom: 8px;
+        }
+
+        .flight-block-details {
+            display: flex;
+            gap: 15px;
+        }
+
+        .flight-detail-col {
+            flex: 1;
+            text-align: center;
+        }
+
+        .flight-detail-label {
+            font-size: 0.65em;
+            color: #888;
+            text-transform: uppercase;
+        }
+
+        .flight-detail-value {
+            font-size: 0.9em;
+            font-weight: 600;
+            color: #462B73;
+        }
+
+        .flight-detail-separator {
+            width: 1px;
+            background: #eee;
+        }
+
+        .vs-between {
+            display: flex;
+            justify-content: center;
+            padding: 5px 0;
+        }
+
+        .vs-pill {
+            background: #462B73;
+            color: white;
+            padding: 3px 12px;
+            border-radius: 10px;
+            font-size: 0.7em;
+            font-weight: 600;
+        }
+
+        .comparison-summary {
+            margin-top: 10px;
+            padding: 10px;
+            background: rgba(70, 43, 115, 0.05);
+            border-radius: 8px;
+        }
+
+        .advantage-text {
+            font-size: 0.85em;
+            font-weight: 600;
+            color: #462B73;
+        }
+
+        .summary-details {
+            font-size: 0.75em;
+            color: #666;
+            margin-top: 4px;
+        }
+
+        .alert-banner {
+            margin-top: 10px;
+            padding: 8px 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.8em;
+        }
+
+        .alert-banner.high {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+        }
+
+        .alert-banner.medium {
+            background: linear-gradient(135deg, #F7941D 0%, #e8850a 100%);
+            color: white;
+        }
+
+        .alert-banner.low {
+            background: linear-gradient(135deg, #0000E6 0%, #3333FF 100%);
+            color: white;
+        }
+
+        .scroll-nav {
+            position: fixed;
+            right: 15px;
+            bottom: 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            z-index: 99;
+        }
+
+        .scroll-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid rgba(247, 148, 29, 0.15);
+            background: rgba(70, 43, 115, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+        }
+
+        .scroll-btn:active, .scroll-btn.pressed {
+            background: rgba(70, 43, 115, 0.8);
+            border-color: rgba(247, 148, 29, 0.8);
+            color: rgba(255, 255, 255, 1);
+            transform: scale(0.95);
+        }
+
+        .scroll-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .pages-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #462B73 0%, #5a3d8a 100%);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0 max(10px, env(safe-area-inset-bottom));
+            z-index: 100;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+        }
+
+        .pages-nav a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 10px;
+            padding: 5px 15px;
+        }
+
+        .pages-nav a.active {
+            color: #F7941D;
+        }
+
+        .nav-icon {
+            font-size: 20px;
+            margin-bottom: 3px;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 60px;
+            left: 0;
+            right: 0;
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 8px 0;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            z-index: 99;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5px 15px;
+            color: #888;
+            font-size: 10px;
+            cursor: pointer;
+        }
+
+        .nav-item.active {
+            color: #462B73;
+        }
+
+        .position-indicator {
+            position: fixed;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 100px;
+            background: rgba(70, 43, 115, 0.1);
+            border-radius: 2px;
+            z-index: 98;
+        }
+
+        .position-marker {
+            position: absolute;
+            width: 4px;
+            height: 20px;
+            background: #F7941D;
+            border-radius: 2px;
+            transition: top 0.1s;
+        }
+
+        .position-percent {
+            position: fixed;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%) translateX(30px);
+            background: rgba(70, 43, 115, 0.9);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.7em;
+            font-weight: 600;
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+            z-index: 98;
+        }
+
+        .position-percent.visible {
+            opacity: 1;
+            transform: translateY(-50%) translateX(0);
+        }
+
+        /* Lazy loading trigger */
+        .lazy-trigger {
+            height: 1px;
+            margin-top: -1px;
+        }
+
+        /* Threat Overlay - Visual effect when filtering by threat level */
+        .threat-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .threat-overlay.active {
+            opacity: 1;
+        }
+        .threat-overlay.high {
+            background: radial-gradient(ellipse at center, rgba(220, 53, 69, 0.15) 0%, rgba(220, 53, 69, 0.05) 70%, transparent 100%);
+        }
+        .threat-overlay.medium {
+            background: radial-gradient(ellipse at center, rgba(255, 193, 7, 0.15) 0%, rgba(255, 193, 7, 0.05) 70%, transparent 100%);
+        }
+        .threat-overlay.low {
+            background: radial-gradient(ellipse at center, rgba(40, 167, 69, 0.15) 0%, rgba(40, 167, 69, 0.05) 70%, transparent 100%);
+        }
+    </style>
+</head>
+<body class="en">
+    <!-- Threat Overlay (visual effect for threat level filtering) -->
+    <div id="threatOverlay" class="threat-overlay"></div>
+
+    <!-- FREEZE PANES: Header + Filter Section stay sticky together -->
+    <div class="freeze-panes">
+        <header class="header">
+            <button class="back-btn" onclick="history.back()">←</button>
+            <div class="header-content">
+                <h1>JED-HBE</h1>
+                <div class="subtitle">SM-452 | SM-458</div>
+            </div>
+            <button class="lang-toggle" onclick="toggleLanguage()">AR</button>
+        </header>
+
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <div class="filter-row">
+                <select class="route-selector" id="routeSelector" onchange="navigateToRoute(this.value)">
+                    <option value="CAI-MED">CAI-MED</option>
+<option value="CAI-TUU">CAI-TUU</option>
+<option value="HBE-MED">HBE-MED</option>
+<option value="JED-CAI">JED-CAI</option>
+<option value="JED-HBE" selected>JED-HBE</option>
+<option value="MED-CAI">MED-CAI</option>
+<option value="MED-HBE">MED-HBE</option>
+                </select>
+                <button class="filter-btn" id="dateFilterBtn" onclick="openFilterModal('date')">
+                    <span class="ar-text">📅 التواريخ</span>
+                    <span class="en-text">📅 Dates</span>
+                    <span class="count" id="dateFilterCount">All</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="stats-bar">
+        <div class="stat-item high" data-level="high" onclick="filterByLevel('high')">
+            <div class="stat-sphere"></div>
+            <div class="stat-count">0</div>
+            <div class="stat-label">
+                <span class="ar-text">عالي</span>
+                <span class="en-text">HIGH</span>
+            </div>
+        </div>
+        <div class="stat-item medium" data-level="medium" onclick="filterByLevel('medium')">
+            <div class="stat-sphere"></div>
+            <div class="stat-count">4</div>
+            <div class="stat-label">
+                <span class="ar-text">متوسط</span>
+                <span class="en-text">MEDIUM</span>
+            </div>
+        </div>
+        <div class="stat-item low" data-level="low" onclick="filterByLevel('low')">
+            <div class="stat-sphere"></div>
+            <div class="stat-count">28</div>
+            <div class="stat-label">
+                <span class="ar-text">منخفض</span>
+                <span class="en-text">LOW</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Date Filter Modal (Excel-style hierarchy) -->
+    <div class="filter-modal" id="dateFilterModal" onclick="closeFilterModal('date')">
+        <div class="filter-modal-content" onclick="event.stopPropagation()">
+            <div class="filter-modal-header">
+                <span class="filter-modal-title">
+                    <span class="ar-text">اختر التواريخ</span>
+                    <span class="en-text">Select Dates</span>
+                </span>
+                <button class="filter-modal-close" onclick="closeFilterModal('date')">×</button>
+            </div>
+            <div class="filter-modal-actions">
+                <button class="filter-action-btn" onclick="selectAllDates()">
+                    <span class="ar-text">تحديد الكل</span>
+                    <span class="en-text">Select All</span>
+                </button>
+                <button class="filter-action-btn" onclick="clearAllDates()">
+                    <span class="ar-text">إلغاء الكل</span>
+                    <span class="en-text">Clear All</span>
+                </button>
+            </div>
+            <div class="filter-modal-list" id="dateFilterList">
+                <div class="filter-tree">
+<div class="filter-tree-node" data-level="year"><div class="filter-tree-header" onclick="toggleTreeNode(this)"><span class="filter-tree-toggle">▼</span><div class="filter-tree-checkbox checked" onclick="event.stopPropagation(); toggleYearMonth(this, 'year')">✓</div><span class="filter-tree-label">2026</span></div><div class="filter-tree-children">
+<div class="filter-tree-node" data-level="month"><div class="filter-tree-header" onclick="toggleTreeNode(this)"><span class="filter-tree-toggle">▼</span><div class="filter-tree-checkbox checked" onclick="event.stopPropagation(); toggleYearMonth(this, 'month')">✓</div><span class="filter-tree-label">January</span></div><div class="filter-tree-children">
+<div class="filter-tree-day" data-date="2026-01-08" onclick="toggleDay(this)"><div class="filter-tree-checkbox checked">✓</div><span class="filter-tree-label">08</span></div>
+<div class="filter-tree-day" data-date="2026-01-11" onclick="toggleDay(this)"><div class="filter-tree-checkbox checked">✓</div><span class="filter-tree-label">11</span></div>
+<div class="filter-tree-day" data-date="2026-01-16" onclick="toggleDay(this)"><div class="filter-tree-checkbox checked">✓</div><span class="filter-tree-label">16</span></div>
+<div class="filter-tree-day" data-date="2026-01-17" onclick="toggleDay(this)"><div class="filter-tree-checkbox checked">✓</div><span class="filter-tree-label">17</span></div>
+<div class="filter-tree-day" data-date="2026-01-18" onclick="toggleDay(this)"><div class="filter-tree-checkbox checked">✓</div><span class="filter-tree-label">18</span></div>
+<div class="filter-tree-day" data-date="2026-01-19" onclick="toggleDay(this)"><div class="filter-tree-checkbox checked">✓</div><span class="filter-tree-label">19</span></div>
+<div class="filter-tree-day" data-date="2026-01-20" onclick="toggleDay(this)"><div class="filter-tree-checkbox checked">✓</div><span class="filter-tree-label">20</span></div>
+<div class="filter-tree-day" data-date="2026-01-26" onclick="toggleDay(this)"><div class="filter-tree-checkbox checked">✓</div><span class="filter-tree-label">26</span></div>
+</div></div>
+</div></div>
+</div>
+            </div>
+            <div class="filter-modal-apply">
+                <button class="filter-apply-btn" onclick="applyDateFilter()">
+                    <span class="ar-text">تطبيق</span>
+                    <span class="en-text">Apply Filter</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" id="content">
+        
+            <div class="date-section" data-date="2026-01-08">
+                <div class="date-header">
+                    <span class="ar-text">08 يناير 2026 الخميس</span>
+                    <span class="en-text">08 JANUARY 2026 THURSDAY</span>
+                </div>
+            
+    <div class="threat-card low">
+        <div class="card-date-header">
+            <span class="ar-text">08 يناير 2026 الخميس &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">08 JANUARY 2026 THURSDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">06:35</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">856 ريال سعودي</span>
+                            <span class="en-text">856 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">E5-394</span>
+                    <span class="en-text">E5-394</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">896 ريال سعودي</span>
+                            <span class="en-text">896 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">40 كجم</span>
+                            <span class="en-text">40K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح العربية للطيران</span>
+                <span class="en-text">Air leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">سعر إير كايرو أقل بـ 40 ريال سعودي لكن العربية للطيران يقدم وزنًا أعلى بـ 10 كجم</span>
+                <span class="en-text">SM price lower by 40 SAR but Air offers 10K more baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    </div>
+            <div class="date-section" data-date="2026-01-11">
+                <div class="date-header">
+                    <span class="ar-text">11 يناير 2026 الأحد</span>
+                    <span class="en-text">11 JANUARY 2026 SUNDAY</span>
+                </div>
+            
+    <div class="threat-card low alternative">
+        <div class="card-date-header">
+            <span class="ar-text">11 يناير 2026 الأحد &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">11 JANUARY 2026 SUNDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">16:30</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">856 ريال سعودي</span>
+                            <span class="en-text">856 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">NE-177 (بديل)</span>
+                    <span class="en-text">NE-177 (ALTERNATIVE)</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">595 ريال سعودي</span>
+                            <span class="en-text">595 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح نسما</span>
+                <span class="en-text">Nesma leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">نسما أرخص بـ 261 ريال سعودي بنفس الوزن</span>
+                <span class="en-text">Nesma cheaper by 261 SAR, same baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card low alternative">
+        <div class="card-date-header">
+            <span class="ar-text">11 يناير 2026 الأحد &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">11 JANUARY 2026 SUNDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">16:30</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">856 ريال سعودي</span>
+                            <span class="en-text">856 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">NE-175 (بديل)</span>
+                    <span class="en-text">NE-175 (ALTERNATIVE)</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">595 ريال سعودي</span>
+                            <span class="en-text">595 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح نسما</span>
+                <span class="en-text">Nesma leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">نسما أرخص بـ 261 ريال سعودي بنفس الوزن</span>
+                <span class="en-text">Nesma cheaper by 261 SAR, same baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card low alternative">
+        <div class="card-date-header">
+            <span class="ar-text">11 يناير 2026 الأحد &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">11 JANUARY 2026 SUNDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">16:30</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">856 ريال سعودي</span>
+                            <span class="en-text">856 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">NP-128 (بديل)</span>
+                    <span class="en-text">NP-128 (ALTERNATIVE)</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">601 ريال سعودي</span>
+                            <span class="en-text">601 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح طيران النيل</span>
+                <span class="en-text">Nile leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">طيران النيل أرخص بـ 255 ريال سعودي بنفس الوزن</span>
+                <span class="en-text">Nile cheaper by 255 SAR, same baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card low alternative">
+        <div class="card-date-header">
+            <span class="ar-text">11 يناير 2026 الأحد &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">11 JANUARY 2026 SUNDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">16:30</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">856 ريال سعودي</span>
+                            <span class="en-text">856 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">E5-328 (بديل)</span>
+                    <span class="en-text">E5-328 (ALTERNATIVE)</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">636 ريال سعودي</span>
+                            <span class="en-text">636 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح العربية للطيران</span>
+                <span class="en-text">Air leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">العربية للطيران أرخص بـ 220 ريال سعودي بنفس الوزن</span>
+                <span class="en-text">Air cheaper by 220 SAR, same baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    </div>
+            <div class="date-section" data-date="2026-01-16">
+                <div class="date-header">
+                    <span class="ar-text">16 يناير 2026 الجمعة</span>
+                    <span class="en-text">16 JANUARY 2026 FRIDAY</span>
+                </div>
+            
+    <div class="threat-card low">
+        <div class="card-date-header">
+            <span class="ar-text">16 يناير 2026 الجمعة &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">16 JANUARY 2026 FRIDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">10:00</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">526 ريال سعودي</span>
+                            <span class="en-text">526 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">E5-392</span>
+                    <span class="en-text">E5-392</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">633 ريال سعودي</span>
+                            <span class="en-text">633 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">40 كجم</span>
+                            <span class="en-text">40K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح العربية للطيران</span>
+                <span class="en-text">Air leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">سعر إير كايرو أقل بـ 107 ريال سعودي لكن العربية للطيران يقدم وزنًا أعلى بـ 10 كجم</span>
+                <span class="en-text">SM price lower by 107 SAR but Air offers 10K more baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    </div>
+            <div class="date-section" data-date="2026-01-17">
+                <div class="date-header">
+                    <span class="ar-text">17 يناير 2026 السبت</span>
+                    <span class="en-text">17 JANUARY 2026 SATURDAY</span>
+                </div>
+            
+    <div class="threat-card low">
+        <div class="card-date-header">
+            <span class="ar-text">17 يناير 2026 السبت &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">17 JANUARY 2026 SATURDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">19:00</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">526 ريال سعودي</span>
+                            <span class="en-text">526 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">E5-326</span>
+                    <span class="en-text">E5-326</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">633 ريال سعودي</span>
+                            <span class="en-text">633 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">40 كجم</span>
+                            <span class="en-text">40K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح العربية للطيران</span>
+                <span class="en-text">Air leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">سعر إير كايرو أقل بـ 107 ريال سعودي لكن العربية للطيران يقدم وزنًا أعلى بـ 10 كجم</span>
+                <span class="en-text">SM price lower by 107 SAR but Air offers 10K more baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card low">
+        <div class="card-date-header">
+            <span class="ar-text">17 يناير 2026 السبت &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">17 JANUARY 2026 SATURDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">19:00</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">526 ريال سعودي</span>
+                            <span class="en-text">526 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">E5-364</span>
+                    <span class="en-text">E5-364</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">633 ريال سعودي</span>
+                            <span class="en-text">633 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">40 كجم</span>
+                            <span class="en-text">40K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح العربية للطيران</span>
+                <span class="en-text">Air leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">سعر إير كايرو أقل بـ 107 ريال سعودي لكن العربية للطيران يقدم وزنًا أعلى بـ 10 كجم</span>
+                <span class="en-text">SM price lower by 107 SAR but Air offers 10K more baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    </div>
+            <div class="date-section" data-date="2026-01-18">
+                <div class="date-header">
+                    <span class="ar-text">18 يناير 2026 الأحد</span>
+                    <span class="en-text">18 JANUARY 2026 SUNDAY</span>
+                </div>
+            
+    <div class="threat-card low alternative">
+        <div class="card-date-header">
+            <span class="ar-text">18 يناير 2026 الأحد &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">18 JANUARY 2026 SUNDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-458</div>
+                <div class="flight-dep-time">11:45</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">471 ريال سعودي</span>
+                            <span class="en-text">471 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">SV-309 (بديل)</span>
+                    <span class="en-text">SV-309 (ALTERNATIVE)</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">461 ريال سعودي</span>
+                            <span class="en-text">461 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">46 كجم</span>
+                            <span class="en-text">46K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح الخطوط السعودية</span>
+                <span class="en-text">Saudia leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">الخطوط السعودية أرخص بـ 10 ريال سعودي ووزنه أعلى بـ 16 كجم</span>
+                <span class="en-text">Saudia cheaper by 10 SAR with 16K more baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    </div>
+            <div class="date-section" data-date="2026-01-19">
+                <div class="date-header">
+                    <span class="ar-text">19 يناير 2026 الاثنين</span>
+                    <span class="en-text">19 JANUARY 2026 MONDAY</span>
+                </div>
+            
+    <div class="threat-card low">
+        <div class="card-date-header">
+            <span class="ar-text">19 يناير 2026 الاثنين &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">19 JANUARY 2026 MONDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">15:30</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">471 ريال سعودي</span>
+                            <span class="en-text">471 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">E5-324</span>
+                    <span class="en-text">E5-324</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">609 ريال سعودي</span>
+                            <span class="en-text">609 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">40 كجم</span>
+                            <span class="en-text">40K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح العربية للطيران</span>
+                <span class="en-text">Air leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">سعر إير كايرو أقل بـ 138 ريال سعودي لكن العربية للطيران يقدم وزنًا أعلى بـ 10 كجم</span>
+                <span class="en-text">SM price lower by 138 SAR but Air offers 10K more baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card low">
+        <div class="card-date-header">
+            <span class="ar-text">19 يناير 2026 الاثنين &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">19 JANUARY 2026 MONDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">15:30</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">471 ريال سعودي</span>
+                            <span class="en-text">471 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">MS-656</span>
+                    <span class="en-text">MS-656</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">676 ريال سعودي</span>
+                            <span class="en-text">676 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">46 كجم</span>
+                            <span class="en-text">46K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح مصر للطيران</span>
+                <span class="en-text">EgyptAir leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">سعر إير كايرو أقل بـ 205 ريال سعودي لكن مصر للطيران يقدم وزنًا أعلى بـ 16 كجم</span>
+                <span class="en-text">SM price lower by 205 SAR but EgyptAir offers 16K more baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    </div>
+            <div class="date-section" data-date="2026-01-20">
+                <div class="date-header">
+                    <span class="ar-text">20 يناير 2026 الثلاثاء</span>
+                    <span class="en-text">20 JANUARY 2026 TUESDAY</span>
+                </div>
+            
+    <div class="threat-card medium">
+        <div class="card-date-header">
+            <span class="ar-text">20 يناير 2026 الثلاثاء &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">20 JANUARY 2026 TUESDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">17:00</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">706 ريال سعودي</span>
+                            <span class="en-text">706 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">E5-392</span>
+                    <span class="en-text">E5-392</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">609 ريال سعودي</span>
+                            <span class="en-text">609 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">40 كجم</span>
+                            <span class="en-text">40K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح العربية للطيران</span>
+                <span class="en-text">Air leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">العربية للطيران أرخص بـ 97 ريال سعودي ووزنه أعلى بـ 10 كجم</span>
+                <span class="en-text">Air cheaper by 97 SAR with 10K more baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner medium">
+            <div class="alert-text">
+                <span class="ar-text">تهديد متوسط - راقب</span>
+                <span class="en-text">MEDIUM THREAT - MONITOR</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card medium">
+        <div class="card-date-header">
+            <span class="ar-text">20 يناير 2026 الثلاثاء &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">20 JANUARY 2026 TUESDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">17:00</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">706 ريال سعودي</span>
+                            <span class="en-text">706 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">E5-326</span>
+                    <span class="en-text">E5-326</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">609 ريال سعودي</span>
+                            <span class="en-text">609 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">40 كجم</span>
+                            <span class="en-text">40K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح العربية للطيران</span>
+                <span class="en-text">Air leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">العربية للطيران أرخص بـ 97 ريال سعودي ووزنه أعلى بـ 10 كجم</span>
+                <span class="en-text">Air cheaper by 97 SAR with 10K more baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner medium">
+            <div class="alert-text">
+                <span class="ar-text">تهديد متوسط - راقب</span>
+                <span class="en-text">MEDIUM THREAT - MONITOR</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card low">
+        <div class="card-date-header">
+            <span class="ar-text">20 يناير 2026 الثلاثاء &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">20 JANUARY 2026 TUESDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">17:00</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">706 ريال سعودي</span>
+                            <span class="en-text">706 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">SV-331</span>
+                    <span class="en-text">SV-331</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">774 ريال سعودي</span>
+                            <span class="en-text">774 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">46 كجم</span>
+                            <span class="en-text">46K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح الخطوط السعودية</span>
+                <span class="en-text">Saudia leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">سعر إير كايرو أقل بـ 68 ريال سعودي لكن الخطوط السعودية يقدم وزنًا أعلى بـ 16 كجم</span>
+                <span class="en-text">SM price lower by 68 SAR but Saudia offers 16K more baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card low alternative">
+        <div class="card-date-header">
+            <span class="ar-text">20 يناير 2026 الثلاثاء &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">20 JANUARY 2026 TUESDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">17:00</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">706 ريال سعودي</span>
+                            <span class="en-text">706 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">XY-565 (بديل)</span>
+                    <span class="en-text">XY-565 (ALTERNATIVE)</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">519 ريال سعودي</span>
+                            <span class="en-text">519 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">40 كجم</span>
+                            <span class="en-text">40K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح طيران ناس</span>
+                <span class="en-text">flynas leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">طيران ناس أرخص بـ 187 ريال سعودي ووزنه أعلى بـ 10 كجم</span>
+                <span class="en-text">flynas cheaper by 187 SAR with 10K more baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card low alternative">
+        <div class="card-date-header">
+            <span class="ar-text">20 يناير 2026 الثلاثاء &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">20 JANUARY 2026 TUESDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">17:00</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">706 ريال سعودي</span>
+                            <span class="en-text">706 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">XY-583 (بديل)</span>
+                    <span class="en-text">XY-583 (ALTERNATIVE)</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">559 ريال سعودي</span>
+                            <span class="en-text">559 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">40 كجم</span>
+                            <span class="en-text">40K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح طيران ناس</span>
+                <span class="en-text">flynas leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">طيران ناس أرخص بـ 147 ريال سعودي ووزنه أعلى بـ 10 كجم</span>
+                <span class="en-text">flynas cheaper by 147 SAR with 10K more baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card low alternative">
+        <div class="card-date-header">
+            <span class="ar-text">20 يناير 2026 الثلاثاء &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">20 JANUARY 2026 TUESDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">17:00</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">706 ريال سعودي</span>
+                            <span class="en-text">706 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">XY-571 (بديل)</span>
+                    <span class="en-text">XY-571 (ALTERNATIVE)</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">559 ريال سعودي</span>
+                            <span class="en-text">559 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">40 كجم</span>
+                            <span class="en-text">40K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح طيران ناس</span>
+                <span class="en-text">flynas leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">طيران ناس أرخص بـ 147 ريال سعودي ووزنه أعلى بـ 10 كجم</span>
+                <span class="en-text">flynas cheaper by 147 SAR with 10K more baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card low alternative">
+        <div class="card-date-header">
+            <span class="ar-text">20 يناير 2026 الثلاثاء &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">20 JANUARY 2026 TUESDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">17:00</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">706 ريال سعودي</span>
+                            <span class="en-text">706 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">XY-577 (بديل)</span>
+                    <span class="en-text">XY-577 (ALTERNATIVE)</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">559 ريال سعودي</span>
+                            <span class="en-text">559 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">40 كجم</span>
+                            <span class="en-text">40K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح طيران ناس</span>
+                <span class="en-text">flynas leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">طيران ناس أرخص بـ 147 ريال سعودي ووزنه أعلى بـ 10 كجم</span>
+                <span class="en-text">flynas cheaper by 147 SAR with 10K more baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card low alternative">
+        <div class="card-date-header">
+            <span class="ar-text">20 يناير 2026 الثلاثاء &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">20 JANUARY 2026 TUESDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">17:00</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">706 ريال سعودي</span>
+                            <span class="en-text">706 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">XY-569 (بديل)</span>
+                    <span class="en-text">XY-569 (ALTERNATIVE)</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">559 ريال سعودي</span>
+                            <span class="en-text">559 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">40 كجم</span>
+                            <span class="en-text">40K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح طيران ناس</span>
+                <span class="en-text">flynas leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">طيران ناس أرخص بـ 147 ريال سعودي ووزنه أعلى بـ 10 كجم</span>
+                <span class="en-text">flynas cheaper by 147 SAR with 10K more baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card low alternative">
+        <div class="card-date-header">
+            <span class="ar-text">20 يناير 2026 الثلاثاء &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">20 JANUARY 2026 TUESDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">17:00</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">706 ريال سعودي</span>
+                            <span class="en-text">706 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">E5-362 (بديل)</span>
+                    <span class="en-text">E5-362 (ALTERNATIVE)</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">387 ريال سعودي</span>
+                            <span class="en-text">387 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح العربية للطيران</span>
+                <span class="en-text">Air leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">العربية للطيران أرخص بـ 319 ريال سعودي بنفس الوزن</span>
+                <span class="en-text">Air cheaper by 319 SAR, same baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card low alternative">
+        <div class="card-date-header">
+            <span class="ar-text">20 يناير 2026 الثلاثاء &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">20 JANUARY 2026 TUESDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">17:00</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">706 ريال سعودي</span>
+                            <span class="en-text">706 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">NE-171 (بديل)</span>
+                    <span class="en-text">NE-171 (ALTERNATIVE)</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">400 ريال سعودي</span>
+                            <span class="en-text">400 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح نسما</span>
+                <span class="en-text">Nesma leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">نسما أرخص بـ 306 ريال سعودي بنفس الوزن</span>
+                <span class="en-text">Nesma cheaper by 306 SAR, same baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card low alternative">
+        <div class="card-date-header">
+            <span class="ar-text">20 يناير 2026 الثلاثاء &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">20 JANUARY 2026 TUESDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">17:00</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">706 ريال سعودي</span>
+                            <span class="en-text">706 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">NP-328 (بديل)</span>
+                    <span class="en-text">NP-328 (ALTERNATIVE)</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">401 ريال سعودي</span>
+                            <span class="en-text">401 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح طيران النيل</span>
+                <span class="en-text">Nile leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">طيران النيل أرخص بـ 305 ريال سعودي بنفس الوزن</span>
+                <span class="en-text">Nile cheaper by 305 SAR, same baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card low alternative">
+        <div class="card-date-header">
+            <span class="ar-text">20 يناير 2026 الثلاثاء &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">20 JANUARY 2026 TUESDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">17:00</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">706 ريال سعودي</span>
+                            <span class="en-text">706 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">NP-128 (بديل)</span>
+                    <span class="en-text">NP-128 (ALTERNATIVE)</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">401 ريال سعودي</span>
+                            <span class="en-text">401 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح طيران النيل</span>
+                <span class="en-text">Nile leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">طيران النيل أرخص بـ 305 ريال سعودي بنفس الوزن</span>
+                <span class="en-text">Nile cheaper by 305 SAR, same baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card low alternative">
+        <div class="card-date-header">
+            <span class="ar-text">20 يناير 2026 الثلاثاء &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">20 JANUARY 2026 TUESDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">17:00</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">706 ريال سعودي</span>
+                            <span class="en-text">706 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">XY-573 (بديل)</span>
+                    <span class="en-text">XY-573 (ALTERNATIVE)</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">599 ريال سعودي</span>
+                            <span class="en-text">599 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">40 كجم</span>
+                            <span class="en-text">40K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح طيران ناس</span>
+                <span class="en-text">flynas leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">طيران ناس أرخص بـ 107 ريال سعودي ووزنه أعلى بـ 10 كجم</span>
+                <span class="en-text">flynas cheaper by 107 SAR with 10K more baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card low alternative">
+        <div class="card-date-header">
+            <span class="ar-text">20 يناير 2026 الثلاثاء &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">20 JANUARY 2026 TUESDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">17:00</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">706 ريال سعودي</span>
+                            <span class="en-text">706 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">XY-567 (بديل)</span>
+                    <span class="en-text">XY-567 (ALTERNATIVE)</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">599 ريال سعودي</span>
+                            <span class="en-text">599 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">40 كجم</span>
+                            <span class="en-text">40K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح طيران ناس</span>
+                <span class="en-text">flynas leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">طيران ناس أرخص بـ 107 ريال سعودي ووزنه أعلى بـ 10 كجم</span>
+                <span class="en-text">flynas cheaper by 107 SAR with 10K more baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card low alternative">
+        <div class="card-date-header">
+            <span class="ar-text">20 يناير 2026 الثلاثاء &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">20 JANUARY 2026 TUESDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">17:00</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">706 ريال سعودي</span>
+                            <span class="en-text">706 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">XY-589 (بديل)</span>
+                    <span class="en-text">XY-589 (ALTERNATIVE)</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">599 ريال سعودي</span>
+                            <span class="en-text">599 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">40 كجم</span>
+                            <span class="en-text">40K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح طيران ناس</span>
+                <span class="en-text">flynas leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">طيران ناس أرخص بـ 107 ريال سعودي ووزنه أعلى بـ 10 كجم</span>
+                <span class="en-text">flynas cheaper by 107 SAR with 10K more baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card medium alternative">
+        <div class="card-date-header">
+            <span class="ar-text">20 يناير 2026 الثلاثاء &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">20 JANUARY 2026 TUESDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">17:00</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">706 ريال سعودي</span>
+                            <span class="en-text">706 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">SV-383 (بديل)</span>
+                    <span class="en-text">SV-383 (ALTERNATIVE)</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">533 ريال سعودي</span>
+                            <span class="en-text">533 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">46 كجم</span>
+                            <span class="en-text">46K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح الخطوط السعودية</span>
+                <span class="en-text">Saudia leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">الخطوط السعودية أرخص بـ 173 ريال سعودي ووزنه أعلى بـ 16 كجم</span>
+                <span class="en-text">Saudia cheaper by 173 SAR with 16K more baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner medium">
+            <div class="alert-text">
+                <span class="ar-text">تهديد متوسط - راقب</span>
+                <span class="en-text">MEDIUM THREAT - MONITOR</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card medium alternative">
+        <div class="card-date-header">
+            <span class="ar-text">20 يناير 2026 الثلاثاء &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">20 JANUARY 2026 TUESDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">17:00</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">706 ريال سعودي</span>
+                            <span class="en-text">706 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">SV-335 (بديل)</span>
+                    <span class="en-text">SV-335 (ALTERNATIVE)</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">533 ريال سعودي</span>
+                            <span class="en-text">533 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">46 كجم</span>
+                            <span class="en-text">46K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح الخطوط السعودية</span>
+                <span class="en-text">Saudia leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">الخطوط السعودية أرخص بـ 173 ريال سعودي ووزنه أعلى بـ 16 كجم</span>
+                <span class="en-text">Saudia cheaper by 173 SAR with 16K more baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner medium">
+            <div class="alert-text">
+                <span class="ar-text">تهديد متوسط - راقب</span>
+                <span class="en-text">MEDIUM THREAT - MONITOR</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card low alternative">
+        <div class="card-date-header">
+            <span class="ar-text">20 يناير 2026 الثلاثاء &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">20 JANUARY 2026 TUESDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">17:00</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">706 ريال سعودي</span>
+                            <span class="en-text">706 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">MS-666 (بديل)</span>
+                    <span class="en-text">MS-666 (ALTERNATIVE)</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">586 ريال سعودي</span>
+                            <span class="en-text">586 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">46 كجم</span>
+                            <span class="en-text">46K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح مصر للطيران</span>
+                <span class="en-text">EgyptAir leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">مصر للطيران أرخص بـ 120 ريال سعودي ووزنه أعلى بـ 16 كجم</span>
+                <span class="en-text">EgyptAir cheaper by 120 SAR with 16K more baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card low alternative">
+        <div class="card-date-header">
+            <span class="ar-text">20 يناير 2026 الثلاثاء &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">20 JANUARY 2026 TUESDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">17:00</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">706 ريال سعودي</span>
+                            <span class="en-text">706 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">SV-301 (بديل)</span>
+                    <span class="en-text">SV-301 (ALTERNATIVE)</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">644 ريال سعودي</span>
+                            <span class="en-text">644 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">46 كجم</span>
+                            <span class="en-text">46K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح الخطوط السعودية</span>
+                <span class="en-text">Saudia leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">الخطوط السعودية أرخص بـ 62 ريال سعودي ووزنه أعلى بـ 16 كجم</span>
+                <span class="en-text">Saudia cheaper by 62 SAR with 16K more baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card low alternative">
+        <div class="card-date-header">
+            <span class="ar-text">20 يناير 2026 الثلاثاء &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">20 JANUARY 2026 TUESDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">17:00</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">706 ريال سعودي</span>
+                            <span class="en-text">706 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">MS-662 (بديل)</span>
+                    <span class="en-text">MS-662 (ALTERNATIVE)</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">681 ريال سعودي</span>
+                            <span class="en-text">681 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">46 كجم</span>
+                            <span class="en-text">46K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح مصر للطيران</span>
+                <span class="en-text">EgyptAir leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">مصر للطيران أرخص بـ 25 ريال سعودي ووزنه أعلى بـ 16 كجم</span>
+                <span class="en-text">EgyptAir cheaper by 25 SAR with 16K more baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    </div>
+            <div class="date-section" data-date="2026-01-26">
+                <div class="date-header">
+                    <span class="ar-text">26 يناير 2026 الاثنين</span>
+                    <span class="en-text">26 JANUARY 2026 MONDAY</span>
+                </div>
+            
+    <div class="threat-card low">
+        <div class="card-date-header">
+            <span class="ar-text">26 يناير 2026 الاثنين &nbsp;•&nbsp; JED-HBE</span>
+            <span class="en-text">26 JANUARY 2026 MONDAY &nbsp;•&nbsp; JED-HBE</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block">
+                <div class="flight-block-title">SM-452</div>
+                <div class="flight-dep-time">15:30</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">401 ريال سعودي</span>
+                            <span class="en-text">401 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-between">
+                <div class="vs-pill">
+                    <span class="ar-text">ضد</span>
+                    <span class="en-text">VS</span>
+                </div>
+            </div>
+
+            <div class="flight-block">
+                <div class="flight-block-title">
+                    <span class="ar-text">MS-656</span>
+                    <span class="en-text">MS-656</span>
+                </div>
+                <div class="flight-dep-time">-</div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">576 ريال سعودي</span>
+                            <span class="en-text">576 SAR</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">46 كجم</span>
+                            <span class="en-text">46K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-summary threat">
+            <div class="advantage-text">
+                <span class="ar-text">الأفضلية الإجمالية لصالح مصر للطيران</span>
+                <span class="en-text">EgyptAir leads overall</span>
+            </div>
+            <div class="summary-details">
+                <span class="ar-text">سعر إير كايرو أقل بـ 175 ريال سعودي لكن مصر للطيران يقدم وزنًا أعلى بـ 16 كجم</span>
+                <span class="en-text">SM price lower by 175 SAR but EgyptAir offers 16K more baggage</span>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="lazy-trigger" id="lazyTrigger"></div>
+
+    <div class="scroll-nav">
+        <button class="scroll-btn" id="scrollTop"><svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" transform="rotate(0 12 12)"/></svg></button>
+        <button class="scroll-btn" id="scrollBottom"><svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" transform="rotate(180 12 12)"/></svg></button>
+    </div>
+
+    <div class="position-indicator">
+        <div class="position-marker" id="positionMarker"></div>
+    </div>
+    <div class="position-percent" id="positionPercent">0%</div>
+
+    <nav class="bottom-nav">
+        <div class="nav-item active" onclick="showAll()">
+            <span class="nav-icon">📊</span>
+            <span>
+                <span class="ar-text">الكل</span>
+                <span class="en-text">All</span>
+            </span>
+        </div>
+        <div class="nav-item" onclick="filterByLevel('high')">
+            <span class="nav-icon">🔴</span>
+            <span>
+                <span class="ar-text">عالي</span>
+                <span class="en-text">High</span>
+            </span>
+        </div>
+        <div class="nav-item" onclick="filterByLevel('medium')">
+            <span class="nav-icon">🟡</span>
+            <span>
+                <span class="ar-text">متوسط</span>
+                <span class="en-text">Medium</span>
+            </span>
+        </div>
+    </nav>
+
+    <div class="pages-nav">
+        <a href="../online_mobile_dashboard.html">
+            <span class="nav-icon">🌐</span>
+            <span>Dashboard</span>
+        </a>
+        <a href="https://flyaircairo-my.sharepoint.com/:f:/g/personal/dammam_to_aircairo_com/IgDvjscVb3zPQ63E6oVxGyViAencC8ryBmR137Me_icPPRs?e=oNiSIH" target="_blank" style="background: #0078D4;">
+            <span class="nav-icon">📥</span>
+            <span>Download</span>
+        </a>
+        <a href="../archive/">
+            <span class="nav-icon">📁</span>
+            <span>Archive</span>
+        </a>
+    </div>
+
+    <script>
+        // Language Toggle
+        function toggleLanguage() {
+            const body = document.body;
+            const btn = document.querySelector('.lang-toggle');
+            if (body.classList.contains('en')) {
+                body.classList.remove('en');
+                body.classList.add('ar');
+                body.dir = 'rtl';
+                btn.textContent = 'EN';
+            } else {
+                body.classList.remove('ar');
+                body.classList.add('en');
+                body.dir = 'ltr';
+                btn.textContent = 'عربي';
+            }
+        }
+
+        // Route Navigation
+        function navigateToRoute(route) {
+            if (route) {
+                window.location.href = route + '.html';
+            }
+        }
+
+        // Date Filter State (Excel-style hierarchical)
+        let selectedDates = new Set();
+
+        // Initialize: select all dates
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('#dateFilterList .filter-tree-day[data-date]').forEach(item => {
+                selectedDates.add(item.dataset.date);
+            });
+            updateAllCheckboxes();
+        });
+
+        function openFilterModal(type) {
+            const modal = document.getElementById(type + 'FilterModal');
+            if (modal) modal.classList.add('show');
+        }
+
+        function closeFilterModal(type) {
+            const modal = document.getElementById(type + 'FilterModal');
+            if (modal) modal.classList.remove('show');
+        }
+
+        // Toggle tree node expand/collapse
+        function toggleTreeNode(element) {
+            const node = element.closest('.filter-tree-node');
+            const toggle = node.querySelector('.filter-tree-toggle');
+            const children = node.querySelector('.filter-tree-children');
+            if (toggle && children) {
+                toggle.classList.toggle('collapsed');
+                children.classList.toggle('collapsed');
+            }
+        }
+
+        // Toggle checkbox for year/month (affects all children)
+        function toggleYearMonth(element, level) {
+            const node = element.closest('.filter-tree-node');
+            const checkbox = node.querySelector(':scope > .filter-tree-header .filter-tree-checkbox');
+            const isChecked = checkbox.classList.contains('checked');
+
+            // Get all day checkboxes under this node
+            const dayItems = node.querySelectorAll('.filter-tree-day');
+            dayItems.forEach(day => {
+                const dayCheckbox = day.querySelector('.filter-tree-checkbox');
+                const dateValue = day.dataset.date;
+                if (isChecked) {
+                    dayCheckbox.classList.remove('checked');
+                    selectedDates.delete(dateValue);
+                } else {
+                    dayCheckbox.classList.add('checked');
+                    selectedDates.add(dateValue);
+                }
+            });
+
+            updateAllCheckboxes();
+        }
+
+        // Toggle individual day
+        function toggleDay(element) {
+            const checkbox = element.querySelector('.filter-tree-checkbox');
+            const dateValue = element.dataset.date;
+
+            if (checkbox.classList.contains('checked')) {
+                checkbox.classList.remove('checked');
+                selectedDates.delete(dateValue);
+            } else {
+                checkbox.classList.add('checked');
+                selectedDates.add(dateValue);
+            }
+
+            updateAllCheckboxes();
+        }
+
+        // Update parent checkboxes based on children state
+        function updateAllCheckboxes() {
+            // Update month checkboxes
+            document.querySelectorAll('.filter-tree-node[data-level="month"]').forEach(monthNode => {
+                const dayItems = monthNode.querySelectorAll('.filter-tree-day');
+                const checkedDays = monthNode.querySelectorAll('.filter-tree-day .filter-tree-checkbox.checked');
+                const monthCheckbox = monthNode.querySelector(':scope > .filter-tree-header .filter-tree-checkbox');
+
+                if (checkedDays.length === 0) {
+                    monthCheckbox.classList.remove('checked', 'partial');
+                    monthCheckbox.textContent = '';
+                } else if (checkedDays.length === dayItems.length) {
+                    monthCheckbox.classList.add('checked');
+                    monthCheckbox.classList.remove('partial');
+                    monthCheckbox.textContent = '✓';
+                } else {
+                    monthCheckbox.classList.remove('checked');
+                    monthCheckbox.classList.add('partial');
+                    monthCheckbox.textContent = '−';
+                }
+            });
+
+            // Update year checkboxes
+            document.querySelectorAll('.filter-tree-node[data-level="year"]').forEach(yearNode => {
+                const dayItems = yearNode.querySelectorAll('.filter-tree-day');
+                const checkedDays = yearNode.querySelectorAll('.filter-tree-day .filter-tree-checkbox.checked');
+                const yearCheckbox = yearNode.querySelector(':scope > .filter-tree-header .filter-tree-checkbox');
+
+                if (checkedDays.length === 0) {
+                    yearCheckbox.classList.remove('checked', 'partial');
+                    yearCheckbox.textContent = '';
+                } else if (checkedDays.length === dayItems.length) {
+                    yearCheckbox.classList.add('checked');
+                    yearCheckbox.classList.remove('partial');
+                    yearCheckbox.textContent = '✓';
+                } else {
+                    yearCheckbox.classList.remove('checked');
+                    yearCheckbox.classList.add('partial');
+                    yearCheckbox.textContent = '−';
+                }
+            });
+        }
+
+        function selectAllDates() {
+            document.querySelectorAll('#dateFilterList .filter-tree-day').forEach(day => {
+                day.querySelector('.filter-tree-checkbox').classList.add('checked');
+                selectedDates.add(day.dataset.date);
+            });
+            updateAllCheckboxes();
+        }
+
+        function clearAllDates() {
+            document.querySelectorAll('#dateFilterList .filter-tree-day').forEach(day => {
+                day.querySelector('.filter-tree-checkbox').classList.remove('checked');
+                selectedDates.delete(day.dataset.date);
+            });
+            updateAllCheckboxes();
+        }
+
+        function applyDateFilter() {
+            closeFilterModal('date');
+            updateFilterButton();
+
+            const allDays = document.querySelectorAll('#dateFilterList .filter-tree-day').length;
+
+            // Filter content based on selected dates
+            document.querySelectorAll('.date-header, .date-section').forEach(section => {
+                const sectionDate = section.dataset.date;
+                if (selectedDates.size === 0 || selectedDates.size === allDays || selectedDates.has(sectionDate)) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+
+            // Also filter flight cards by date
+            document.querySelectorAll('.flight-card').forEach(card => {
+                const parent = card.closest('[data-date]');
+                if (parent) {
+                    const cardDate = parent.dataset.date;
+                    card.style.display = (selectedDates.size === 0 || selectedDates.size === allDays || selectedDates.has(cardDate)) ? '' : 'none';
+                }
+            });
+        }
+
+        function updateFilterButton() {
+            const allDays = document.querySelectorAll('#dateFilterList .filter-tree-day').length;
+            const dateBtn = document.getElementById('dateFilterCount');
+            const dateBtnParent = document.getElementById('dateFilterBtn');
+
+            if (selectedDates.size === allDays || selectedDates.size === 0) {
+                if (dateBtn) dateBtn.textContent = 'All';
+                if (dateBtnParent) dateBtnParent.classList.remove('active');
+            } else {
+                if (dateBtn) dateBtn.textContent = selectedDates.size;
+                if (dateBtnParent) dateBtnParent.classList.add('active');
+            }
+        }
+
+        // Threat Level Color Overlay
+        function setThreatOverlay(level) {
+            let overlay = document.getElementById('threatOverlay');
+            if (!overlay) {
+                overlay = document.createElement('div');
+                overlay.id = 'threatOverlay';
+                overlay.className = 'threat-overlay';
+                document.body.insertBefore(overlay, document.body.firstChild);
+            }
+            overlay.className = 'threat-overlay';
+            if (level && level !== 'all') {
+                overlay.classList.add(level.toLowerCase());
+                overlay.classList.add('active');
+            }
+        }
+
+        // Filter by threat level
+        let activeLevel = null;
+        function filterByLevel(level) {
+            const navItems = document.querySelectorAll('.nav-item');
+            const statItems = document.querySelectorAll('.stat-item');
+
+            if (activeLevel === level) {
+                showAll();
+                return;
+            }
+
+            activeLevel = level;
+            setThreatOverlay(level);
+
+            // Update nav
+            navItems.forEach(item => item.classList.remove('active'));
+            const navIndex = level === 'high' ? 1 : (level === 'medium' ? 2 : 0);
+            navItems[navIndex].classList.add('active');
+
+            // Update stats
+            statItems.forEach(item => {
+                item.classList.toggle('active', item.dataset.level === level);
+            });
+
+            // Hide non-matching threat cards
+            document.querySelectorAll('.threat-card').forEach(card => {
+                card.classList.toggle('hidden', !card.classList.contains(level));
+            });
+
+            // Hide flight cards with no visible threats
+            document.querySelectorAll('.flight-card').forEach(flightCard => {
+                const visibleThreats = flightCard.querySelectorAll('.threat-card:not(.hidden)');
+                flightCard.classList.toggle('hidden', visibleThreats.length === 0);
+            });
+
+            // Hide date sections with no visible flight cards
+            document.querySelectorAll('[data-date]').forEach(dateSection => {
+                const visibleFlights = dateSection.querySelectorAll('.flight-card:not(.hidden)');
+                dateSection.classList.toggle('hidden', visibleFlights.length === 0);
+            });
+        }
+
+        function showAll() {
+            activeLevel = null;
+            setThreatOverlay(null);
+            document.querySelectorAll('.threat-card').forEach(card => card.classList.remove('hidden'));
+            document.querySelectorAll('.flight-card').forEach(card => card.classList.remove('hidden'));
+            document.querySelectorAll('[data-date]').forEach(section => section.classList.remove('hidden'));
+            document.querySelectorAll('.nav-item').forEach((item, i) => {
+                item.classList.toggle('active', i === 0);
+            });
+            document.querySelectorAll('.stat-item').forEach(item => item.classList.remove('active'));
+        }
+
+        // Scroll Navigation with dual functionality
+        (function() {
+            const LONG_PRESS_DELAY = 300;
+            const SCROLL_SPEED = 80;
+            const SCROLL_INTERVAL = 16;
+
+            let scrollInterval = null;
+            let longPressTimer = null;
+            let isLongPress = false;
+
+            function jumpToTop() {
+                window.scrollTo({ top: 0, behavior: 'instant' });
+            }
+
+            function jumpToBottom() {
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'instant' });
+            }
+
+            function startFastScroll(direction) {
+                stopFastScroll();
+                isLongPress = true;
+                scrollInterval = setInterval(() => {
+                    window.scrollBy({ top: direction * SCROLL_SPEED, behavior: 'instant' });
+                }, SCROLL_INTERVAL);
+            }
+
+            function stopFastScroll() {
+                if (scrollInterval) {
+                    clearInterval(scrollInterval);
+                    scrollInterval = null;
+                }
+                if (longPressTimer) {
+                    clearTimeout(longPressTimer);
+                    longPressTimer = null;
+                }
+            }
+
+            function setupButton(btn, direction, jumpFn) {
+                if (!btn) return;
+
+                btn.addEventListener('touchstart', (e) => {
+                    e.preventDefault();
+                    isLongPress = false;
+                    btn.classList.add('pressed');
+                    longPressTimer = setTimeout(() => {
+                        startFastScroll(direction);
+                    }, LONG_PRESS_DELAY);
+                }, { passive: false });
+
+                btn.addEventListener('touchend', (e) => {
+                    e.preventDefault();
+                    btn.classList.remove('pressed');
+                    stopFastScroll();
+                    if (!isLongPress) {
+                        jumpFn();
+                    }
+                    isLongPress = false;
+                });
+
+                btn.addEventListener('touchcancel', () => {
+                    btn.classList.remove('pressed');
+                    stopFastScroll();
+                    isLongPress = false;
+                });
+
+                btn.addEventListener('mousedown', (e) => {
+                    isLongPress = false;
+                    btn.classList.add('pressed');
+                    longPressTimer = setTimeout(() => {
+                        startFastScroll(direction);
+                    }, LONG_PRESS_DELAY);
+                });
+
+                btn.addEventListener('mouseup', () => {
+                    btn.classList.remove('pressed');
+                    stopFastScroll();
+                    if (!isLongPress) {
+                        jumpFn();
+                    }
+                    isLongPress = false;
+                });
+
+                btn.addEventListener('mouseleave', () => {
+                    btn.classList.remove('pressed');
+                    stopFastScroll();
+                    isLongPress = false;
+                });
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                setupButton(document.getElementById('scrollTop'), -1, jumpToTop);
+                setupButton(document.getElementById('scrollBottom'), 1, jumpToBottom);
+            });
+        })();
+
+        // Position indicator with requestAnimationFrame
+        (function() {
+            let hidePercentTimeout = null;
+            let rafId = null;
+
+            function updatePositionIndicator() {
+                if (rafId) return; // Already scheduled
+
+                rafId = requestAnimationFrame(() => {
+                    const scrollTop = window.scrollY;
+                    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    const percent = Math.round((scrollTop / docHeight) * 100) || 0;
+
+                    const marker = document.getElementById('positionMarker');
+                    const markerTop = (percent / 100) * 80;
+                    marker.style.top = markerTop + 'px';
+
+                    const percentEl = document.getElementById('positionPercent');
+                    percentEl.textContent = percent + '%';
+                    percentEl.classList.add('visible');
+
+                    clearTimeout(hidePercentTimeout);
+                    hidePercentTimeout = setTimeout(() => {
+                        percentEl.classList.remove('visible');
+                    }, 1500);
+
+                    rafId = null;
+                });
+            }
+
+            window.addEventListener('scroll', updatePositionIndicator, { passive: true });
+            updatePositionIndicator();
+        })();
+    </script>
+
+    <!-- Freshness Check - Warns if report is older than 24 hours -->
+    <div id="freshnessWarning" style="display:none; position:fixed; top:0; left:0; right:0; background:linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color:white; padding:10px 15px; text-align:center; z-index:9999; font-weight:600; font-size:0.85em; box-shadow:0 2px 10px rgba(0,0,0,0.3);">
+        <span class="ar-text">⚠️ تقرير قديم (أكثر من 24 ساعة) - <a href="javascript:location.reload(true)" style="color:#fff;text-decoration:underline;">تحديث</a></span>
+        <span class="en-text">⚠️ Stale report (older than 24h) - <a href="javascript:location.reload(true)" style="color:#fff;text-decoration:underline;">Refresh</a></span>
+        <button onclick="this.parentElement.style.display='none'" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:white;font-size:1.2em;cursor:pointer;">×</button>
+    </div>
+    <script>
+    (function() {
+        var meta = document.querySelector('meta[name="report-generated"]');
+        if (meta) {
+            var generated = new Date(meta.content);
+            var now = new Date();
+            var hoursDiff = (now - generated) / (1000 * 60 * 60);
+            if (hoursDiff > 24) {
+                document.getElementById('freshnessWarning').style.display = 'block';
+            }
+        }
+    })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+
+============================================================
+     LF WORKER - PORT 9227
+============================================================
+Worker: Worker_9227
+Status: READY
+Waiting for tasks...
+============================================================
+
+
+============================================================
+[Worker_9227] Processing: ATZ-DMM
+  Tier 0: Range 1, Chunk 1/2
+  Dates: 11 days
+  Date Range: 2026-01-31 to 2026-01-21
+============================================================
+
+2026-01-10 07:43:01 | INFO     | ======================================================================
+2026-01-10 07:43:01 | INFO     | Load Factor Scraper Started - Route: ATZ-DMM
+2026-01-10 07:43:01 | INFO     | Log file: D:\CODERED\LAB\Artifacts\run_generated_100126_at_07.42\logs\LF_ATZ-DMM_20260110_074301.log
+2026-01-10 07:43:01 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-10 07:43:01 | INFO     | ======================================================================
+[LF] Processing dates (override): ['31JAN', '30JAN', '29JAN', '28JAN', '27JAN', '26JAN', '25JAN', '24JAN', '23JAN', '22JAN', '21JAN']
+[LF] Attaching to Chrome for Altea access
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9227 (after 1 attempts)
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+[LF] Processing ATZ-DMM for 31JAN
+[LF][ERROR] Amadeus command error detected: UNKNOWN TRANSACTION
+[LF][ERROR] Command: SN31JANATZDMM/ASM
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+============================================================
+[LF][RESYNC] Command 'SN31JANATZDMM/ASM' failed: TECH_ERROR:UNKNOWN TRANSACTION
+[LF][RESYNC] Re-running entire day from SN command for ATZ-DMM 31JAN
+[LF][RESYNC] Attempt 1/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing ATZ-DMM for 31JAN
+[LF] No direct flights on 31JAN for ATZ-DMM
+[LF] Processing ATZ-DMM for 30JAN
+[LF] 30JAN: found 1 direct flights
+[LF] SM437 30JAN: BKG=53, GRP=0, CAP=179, LF%=29.6%, Brd-Off=ATZ-DMM, Classes: O:30, U:9, X:10, T:4
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM437 30JAN: LASTSOLD=2026-01-08 00:00:00, WEEKLY=29, TODAY=0, YDAY=0
+[LF] Processing ATZ-DMM for 29JAN
+[LF] No direct flights on 29JAN for ATZ-DMM
+[LF] Processing ATZ-DMM for 28JAN
+[LF] No direct flights on 28JAN for ATZ-DMM
+[LF] Processing ATZ-DMM for 27JAN
+[LF] No direct flights on 27JAN for ATZ-DMM
+[LF] Processing ATZ-DMM for 26JAN
+[LF] 26JAN: found 1 direct flights
+[LF] SM437 26JAN: BKG=89, GRP=0, CAP=179, LF%=49.7%, Brd-Off=ATZ-DMM, Classes: O:20, U:10, X:40, T:8, W:7, S:4
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM437 26JAN: LASTSOLD=2026-01-10 00:00:00, WEEKLY=31, TODAY=6, YDAY=2
+[LF] Processing ATZ-DMM for 25JAN
+[LF] No direct flights on 25JAN for ATZ-DMM
+[LF] Processing ATZ-DMM for 24JAN
+[LF] No direct flights on 24JAN for ATZ-DMM
+[LF] Processing ATZ-DMM for 23JAN
+[LF] 23JAN: found 1 direct flights
+[LF] SM437 23JAN: BKG=120, GRP=0, CAP=179, LF%=67.0%, Brd-Off=ATZ-DMM, Classes: W:60, S:30, G:30
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM437 23JAN: LASTSOLD=2026-01-10 00:00:00, WEEKLY=45, TODAY=8, YDAY=7
+[LF] Processing ATZ-DMM for 22JAN
+[LF] No direct flights on 22JAN for ATZ-DMM
+[LF] Processing ATZ-DMM for 21JAN
+[LF] No direct flights on 21JAN for ATZ-DMM
+[LF] Results summary:
+  2026-01-31: 0 flights
+  2026-01-30: 1 flights
+  2026-01-29: 0 flights
+  2026-01-28: 0 flights
+  2026-01-27: 0 flights
+  2026-01-26: 1 flights
+  2026-01-25: 0 flights
+  2026-01-24: 0 flights
+  2026-01-23: 1 flights
+  2026-01-22: 0 flights
+  2026-01-21: 0 flights
+
+============================================================
+[Worker_9227] ✓ COMPLETED: ATZ-DMM
+  Results: 11 dates
+  Errors: 0 dates
+  Total Processed: 1 groups
+============================================================
+
+
+============================================================
+[Worker_9227] Processing: ATZ-DMM
+  Tier 0: Range 1, Chunk 2/2
+  Dates: 11 days
+  Date Range: 2026-01-20 to 2026-01-10
+============================================================
+
+2026-01-10 07:43:43 | INFO     | ======================================================================
+2026-01-10 07:43:43 | INFO     | Load Factor Scraper Started - Route: ATZ-DMM
+2026-01-10 07:43:43 | INFO     | Log file: D:\CODERED\LAB\Artifacts\run_generated_100126_at_07.42\logs\LF_ATZ-DMM_20260110_074343.log
+2026-01-10 07:43:43 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-10 07:43:43 | INFO     | ======================================================================
+[LF] Processing dates (override): ['20JAN', '19JAN', '18JAN', '17JAN', '16JAN', '15JAN', '14JAN', '13JAN', '12JAN', '11JAN', '10JAN']
+[LF] Attaching to Chrome for Altea access
+2026-01-10 07:43:43 | INFO     | Starting LF search for route: ATZ-DMM
+2026-01-10 07:43:43 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9227 (after 1 attempts)
+2026-01-10 07:43:44 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+2026-01-10 07:43:44 | INFO     | [DAY_START] Processing 20JAN
+[LF] Processing ATZ-DMM for 20JAN
+2026-01-10 07:43:44 | INFO     | [lf.day.start] Processing ATZ-DMM for 20JAN
+[LF] No direct flights on 20JAN for ATZ-DMM
+2026-01-10 07:43:45 | WARNING  | [lf.day.no_flights] No direct flights on 20JAN
+2026-01-10 07:43:45 | INFO     | [SUCCESS] Day 20JAN
+2026-01-10 07:43:45 | INFO     | [DAY_START] Processing 19JAN
+[LF] Processing ATZ-DMM for 19JAN
+2026-01-10 07:43:45 | INFO     | [lf.day.start] Processing ATZ-DMM for 19JAN
+[LF] 19JAN: found 1 direct flights
+2026-01-10 07:43:46 | INFO     | [lf.day.flights_found] Found 1 flights on 19JAN
+2026-01-10 07:43:48 | INFO     | [lf.flight.extracted] SM437 on 19JAN: BKG=112, LF=62.6%
+[LF] SM437 19JAN: BKG=112, GRP=0, CAP=179, LF%=62.6%, Brd-Off=ATZ-DMM, Classes: O:3, U:17, X:14, T:10, W:10, S:15, G:38, L:5
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM437 19JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=34, TODAY=0, YDAY=6
+2026-01-10 07:43:53 | INFO     | [SUCCESS] Day 19JAN
+2026-01-10 07:43:53 | INFO     | [DAY_START] Processing 18JAN
+[LF] Processing ATZ-DMM for 18JAN
+2026-01-10 07:43:53 | INFO     | [lf.day.start] Processing ATZ-DMM for 18JAN
+[LF] No direct flights on 18JAN for ATZ-DMM
+2026-01-10 07:43:54 | WARNING  | [lf.day.no_flights] No direct flights on 18JAN
+2026-01-10 07:43:55 | INFO     | [SUCCESS] Day 18JAN
+2026-01-10 07:43:55 | INFO     | [DAY_START] Processing 17JAN
+[LF] Processing ATZ-DMM for 17JAN
+2026-01-10 07:43:55 | INFO     | [lf.day.start] Processing ATZ-DMM for 17JAN
+[LF] No direct flights on 17JAN for ATZ-DMM
+2026-01-10 07:43:55 | WARNING  | [lf.day.no_flights] No direct flights on 17JAN
+2026-01-10 07:43:56 | INFO     | [SUCCESS] Day 17JAN
+2026-01-10 07:43:56 | INFO     | [DAY_START] Processing 16JAN
+[LF] Processing ATZ-DMM for 16JAN
+2026-01-10 07:43:56 | INFO     | [lf.day.start] Processing ATZ-DMM for 16JAN
+[LF] 16JAN: found 1 direct flights
+2026-01-10 07:43:56 | INFO     | [lf.day.flights_found] Found 1 flights on 16JAN
+2026-01-10 07:43:59 | INFO     | [lf.flight.extracted] SM437 on 16JAN: BKG=149, LF=83.2%
+[LF] SM437 16JAN: BKG=149, GRP=0, CAP=179, LF%=83.2%, Brd-Off=ATZ-DMM, Classes: X:9, T:8, W:1, S:72, G:19, L:25, V:15
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM437 16JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=78, TODAY=0, YDAY=3
+2026-01-10 07:44:04 | INFO     | [SUCCESS] Day 16JAN
+2026-01-10 07:44:04 | INFO     | [DAY_START] Processing 15JAN
+[LF] Processing ATZ-DMM for 15JAN
+2026-01-10 07:44:04 | INFO     | [lf.day.start] Processing ATZ-DMM for 15JAN
+[LF] No direct flights on 15JAN for ATZ-DMM
+2026-01-10 07:44:05 | WARNING  | [lf.day.no_flights] No direct flights on 15JAN
+2026-01-10 07:44:06 | INFO     | [SUCCESS] Day 15JAN
+2026-01-10 07:44:06 | INFO     | [DAY_START] Processing 14JAN
+[LF] Processing ATZ-DMM for 14JAN
+2026-01-10 07:44:06 | INFO     | [lf.day.start] Processing ATZ-DMM for 14JAN
+[LF] No direct flights on 14JAN for ATZ-DMM
+2026-01-10 07:44:06 | WARNING  | [lf.day.no_flights] No direct flights on 14JAN
+2026-01-10 07:44:07 | INFO     | [SUCCESS] Day 14JAN
+2026-01-10 07:44:07 | INFO     | [DAY_START] Processing 13JAN
+[LF] Processing ATZ-DMM for 13JAN
+2026-01-10 07:44:07 | INFO     | [lf.day.start] Processing ATZ-DMM for 13JAN
+[LF] No direct flights on 13JAN for ATZ-DMM
+2026-01-10 07:44:07 | WARNING  | [lf.day.no_flights] No direct flights on 13JAN
+2026-01-10 07:44:08 | INFO     | [SUCCESS] Day 13JAN
+2026-01-10 07:44:08 | INFO     | [DAY_START] Processing 12JAN
+[LF] Processing ATZ-DMM for 12JAN
+2026-01-10 07:44:08 | INFO     | [lf.day.start] Processing ATZ-DMM for 12JAN
+[LF] 12JAN: found 1 direct flights
+2026-01-10 07:44:08 | INFO     | [lf.day.flights_found] Found 1 flights on 12JAN
+2026-01-10 07:44:10 | INFO     | [lf.flight.extracted] SM437 on 12JAN: BKG=158, LF=88.3%
+[LF] SM437 12JAN: BKG=158, GRP=0, CAP=179, LF%=88.3%, Brd-Off=ATZ-DMM, Classes: I:6, O:5, U:19, X:9, T:16, W:10, S:50, G:34, L:8, K:1
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM437 12JAN: LASTSOLD=2026-01-10 00:00:00, WEEKLY=48, TODAY=2, YDAY=1
+2026-01-10 07:44:16 | INFO     | [SUCCESS] Day 12JAN
+2026-01-10 07:44:16 | INFO     | [DAY_START] Processing 11JAN
+[LF] Processing ATZ-DMM for 11JAN
+2026-01-10 07:44:16 | INFO     | [lf.day.start] Processing ATZ-DMM for 11JAN
+[LF] No direct flights on 11JAN for ATZ-DMM
+2026-01-10 07:44:17 | WARNING  | [lf.day.no_flights] No direct flights on 11JAN
+2026-01-10 07:44:17 | INFO     | [SUCCESS] Day 11JAN
+[LF] Skipping 10JAN (Today) - will be processed by supplement scan
+[LF] Results summary:
+  2026-01-20: 0 flights
+  2026-01-19: 1 flights
+  2026-01-18: 0 flights
+  2026-01-17: 0 flights
+  2026-01-16: 1 flights
+  2026-01-15: 0 flights
+  2026-01-14: 0 flights
+  2026-01-13: 0 flights
+  2026-01-12: 1 flights
+  2026-01-11: 0 flights
+2026-01-10 07:44:17 | INFO     | [SUCCESS] LF Search Complete
+
+============================================================
+[Worker_9227] ✓ COMPLETED: ATZ-DMM
+  Results: 10 dates
+  Errors: 0 dates
+  Total Processed: 2 groups
+============================================================
+
+2026-01-10 07:44:19 | INFO     | [Worker_9227] Completed: ATZ-DMM - 10 results, 0 errors
+[Worker_9227] Waiting for tasks...
+
+============================================================
+[Worker_9227] Shutdown signal received
+Exiting...
+============================================================
+2026-01-10 08:07:33 | INFO     | [Worker_9227] Shutdown signal received, exiting...
+
+============================================================
+[Worker_9227] FINISHED
+  Total Groups Processed: 2
+============================================================
+
+2026-01-10 08:07:33 | INFO     | [Worker_9227] Finished. Processed 2 groups.

@@ -1,0 +1,50 @@
+2026-01-05 17:19:50 | INFO     | ======================================================================
+2026-01-05 17:19:50 | INFO     | Load Factor Scraper Started - Route: TUU-ATZ
+2026-01-05 17:19:50 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_050126_at_16.47\logs\LF_TUU-ATZ_20260105_171950.log
+2026-01-05 17:19:50 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-05 17:19:50 | INFO     | ======================================================================
+2026-01-05 17:19:50 | INFO     | Starting LF search for route: TUU-ATZ
+2026-01-05 17:19:50 | INFO     | [START] LF Search
+2026-01-05 17:19:52 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-05 17:19:52 | INFO     | [DAY_START] Processing 31JAN
+2026-01-05 17:19:52 | INFO     | [lf.day.start] Processing TUU-ATZ for 31JAN
+2026-01-05 17:19:54 | WARNING  | [lf.day.no_flights] No direct flights on 31JAN
+2026-01-05 17:19:54 | INFO     | [SUCCESS] Day 31JAN
+2026-01-05 17:19:54 | INFO     | [DAY_START] Processing 30JAN
+2026-01-05 17:19:54 | INFO     | [lf.day.start] Processing TUU-ATZ for 30JAN
+2026-01-05 17:19:55 | INFO     | [lf.day.flights_found] Found 1 flights on 30JAN
+2026-01-05 17:19:58 | INFO     | [lf.flight.extracted] SM328 on 30JAN: BKG=57, LF=32.6%
+2026-01-05 17:20:04 | INFO     | [SUCCESS] Day 30JAN
+2026-01-05 17:20:04 | INFO     | [DAY_START] Processing 29JAN
+2026-01-05 17:20:04 | INFO     | [lf.day.start] Processing TUU-ATZ for 29JAN
+2026-01-05 17:20:06 | WARNING  | [lf.day.no_flights] No direct flights on 29JAN
+2026-01-05 17:20:06 | INFO     | [SUCCESS] Day 29JAN
+2026-01-05 17:20:06 | INFO     | [DAY_START] Processing 28JAN
+2026-01-05 17:20:06 | INFO     | [lf.day.start] Processing TUU-ATZ for 28JAN
+2026-01-05 17:20:07 | WARNING  | [lf.day.no_flights] No direct flights on 28JAN
+2026-01-05 17:20:07 | INFO     | [SUCCESS] Day 28JAN
+2026-01-05 17:20:07 | INFO     | [DAY_START] Processing 27JAN
+2026-01-05 17:20:07 | INFO     | [lf.day.start] Processing TUU-ATZ for 27JAN
+2026-01-05 17:20:09 | WARNING  | [lf.day.no_flights] No direct flights on 27JAN
+2026-01-05 17:20:09 | INFO     | [SUCCESS] Day 27JAN
+2026-01-05 17:20:09 | INFO     | [DAY_START] Processing 26JAN
+2026-01-05 17:20:09 | INFO     | [lf.day.start] Processing TUU-ATZ for 26JAN
+2026-01-05 17:20:10 | WARNING  | [lf.day.no_flights] No direct flights on 26JAN
+2026-01-05 17:20:10 | INFO     | [SUCCESS] Day 26JAN
+2026-01-05 17:20:10 | INFO     | [DAY_START] Processing 25JAN
+2026-01-05 17:20:10 | INFO     | [lf.day.start] Processing TUU-ATZ for 25JAN
+2026-01-05 17:20:12 | WARNING  | [lf.day.no_flights] No direct flights on 25JAN
+2026-01-05 17:20:12 | INFO     | [SUCCESS] Day 25JAN
+2026-01-05 17:20:12 | INFO     | [DAY_START] Processing 24JAN
+2026-01-05 17:20:12 | INFO     | [lf.day.start] Processing TUU-ATZ for 24JAN
+2026-01-05 17:20:13 | WARNING  | [lf.day.no_flights] No direct flights on 24JAN
+2026-01-05 17:20:13 | INFO     | [SUCCESS] Day 24JAN
+2026-01-05 17:20:13 | INFO     | [DAY_START] Processing 23JAN
+2026-01-05 17:20:13 | INFO     | [lf.day.start] Processing TUU-ATZ for 23JAN
+2026-01-05 17:20:14 | INFO     | [lf.day.flights_found] Found 1 flights on 23JAN
+2026-01-05 17:20:17 | INFO     | [lf.flight.extracted] SM328 on 23JAN: BKG=38, LF=21.7%
+2026-01-05 17:20:21 | INFO     | [SUCCESS] Day 23JAN
+2026-01-05 17:20:21 | INFO     | [SUCCESS] LF Search Complete
+2026-01-05 17:20:23 | INFO     | [Worker_9234] Completed: TUU-ATZ - 9 results, 0 errors
+2026-01-05 17:20:23 | INFO     | [Worker_9234] Processing: AHB-CAI
+2026-01-05 17:20:23 | INFO     |   Tier 0: Range 1, Chunk 1/3 (9 days)

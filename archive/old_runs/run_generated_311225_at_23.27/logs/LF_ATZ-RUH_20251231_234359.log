@@ -1,0 +1,35 @@
+2025-12-31 23:43:59 | INFO     | ======================================================================
+2025-12-31 23:43:59 | INFO     | Load Factor Scraper Started - Route: ATZ-RUH
+2025-12-31 23:43:59 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_23.27\logs\LF_ATZ-RUH_20251231_234359.log
+2025-12-31 23:43:59 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 23:43:59 | INFO     | ======================================================================
+2025-12-31 23:43:59 | INFO     | Starting LF search for route: ATZ-RUH
+2025-12-31 23:43:59 | INFO     | [START] LF Search
+2025-12-31 23:44:00 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 23:44:00 | INFO     | [DAY_START] Processing 05FEB
+2025-12-31 23:44:00 | INFO     | [lf.day.start] Processing ATZ-RUH for 05FEB
+2025-12-31 23:44:02 | WARNING  | [lf.day.no_flights] No direct flights on 05FEB
+2025-12-31 23:44:02 | INFO     | [SUCCESS] Day 05FEB
+2025-12-31 23:44:02 | INFO     | [DAY_START] Processing 04FEB
+2025-12-31 23:44:02 | INFO     | [lf.day.start] Processing ATZ-RUH for 04FEB
+2025-12-31 23:44:04 | INFO     | [lf.day.flights_found] Found 1 flights on 04FEB
+2025-12-31 23:44:06 | INFO     | [lf.flight.extracted] SM465 on 04FEB: BKG=29, LF=16.2%
+2025-12-31 23:44:11 | INFO     | [SUCCESS] Day 04FEB
+2025-12-31 23:44:11 | INFO     | [DAY_START] Processing 03FEB
+2025-12-31 23:44:11 | INFO     | [lf.day.start] Processing ATZ-RUH for 03FEB
+2025-12-31 23:44:12 | INFO     | [lf.day.flights_found] Found 1 flights on 03FEB
+2025-12-31 23:44:14 | INFO     | [lf.flight.extracted] SM463 on 03FEB: BKG=24, LF=13.4%
+2025-12-31 23:44:19 | INFO     | [SUCCESS] Day 03FEB
+2025-12-31 23:44:19 | INFO     | [DAY_START] Processing 02FEB
+2025-12-31 23:44:19 | INFO     | [lf.day.start] Processing ATZ-RUH for 02FEB
+2025-12-31 23:44:20 | WARNING  | [lf.day.no_flights] No direct flights on 02FEB
+2025-12-31 23:44:20 | INFO     | [SUCCESS] Day 02FEB
+2025-12-31 23:44:20 | INFO     | [DAY_START] Processing 01FEB
+2025-12-31 23:44:20 | INFO     | [lf.day.start] Processing ATZ-RUH for 01FEB
+2025-12-31 23:44:22 | INFO     | [lf.day.flights_found] Found 1 flights on 01FEB
+2025-12-31 23:44:24 | INFO     | [lf.flight.extracted] SM463 on 01FEB: BKG=33, LF=18.4%
+2025-12-31 23:44:29 | INFO     | [SUCCESS] Day 01FEB
+2025-12-31 23:44:29 | INFO     | [SUCCESS] LF Search Complete
+2025-12-31 23:44:32 | INFO     | [Worker_9224] Completed: ATZ-RUH - 5 results, 0 errors
+2025-12-31 23:44:32 | INFO     | [Worker_9224] Processing: CAI-YNB
+2025-12-31 23:44:32 | INFO     |   Tier 0: Range 3, Chunk 5/5 (5 days)

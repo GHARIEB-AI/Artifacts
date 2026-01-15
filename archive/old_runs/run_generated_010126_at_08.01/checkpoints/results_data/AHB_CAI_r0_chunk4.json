@@ -1,0 +1,129 @@
+{
+  "task_id": "AHB-CAI_r0_chunk4",
+  "saved_at": "2026-01-01T08:48:35.157232",
+  "lf_results": {
+    "2026-01-06": [],
+    "2026-01-05": [],
+    "2026-01-04": [
+      {
+        "Date": "Sunday, January 04, 2026",
+        "Flight": "SM444",
+        "DEP": "00:05",
+        "SOLD": 71,
+        "FULL CAPACITY": 175,
+        "LF%": 0.4057,
+        "LowestAvail": "X1",
+        "LASTSOLD": "2025-12-31 00:00:00",
+        "WEEKLY PROGRESS": 21,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 3,
+          "U": 7,
+          "X": 32,
+          "T": 8,
+          "W": 18,
+          "S": 3,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "AHB-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 1,
+        "CONNECTING_PASSENGERS": null
+      }
+    ],
+    "2026-01-03": [],
+    "2026-01-02": [
+      {
+        "Date": "Friday, January 02, 2026",
+        "Flight": "SM444",
+        "DEP": "00:05",
+        "SOLD": 81,
+        "FULL CAPACITY": 169,
+        "LF%": 0.4793,
+        "LowestAvail": "T1",
+        "LASTSOLD": "2025-12-31 00:00:00",
+        "WEEKLY PROGRESS": 36,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 4,
+          "U": 6,
+          "X": 11,
+          "T": 38,
+          "W": 15,
+          "S": 7,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "AHB-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 21,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM444",
+          "sm_route": "AHB-CAI",
+          "sm_dep": "0005",
+          "sm_arr": "0205",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "SM0129",
+              "outbound_route": "CAI-ASW",
+              "outbound_dep": "0500",
+              "passengers": [
+                {
+                  "iata": "RUHAA28WH"
+                }
+              ]
+            },
+            {
+              "outbound_flight": "SM0137",
+              "outbound_route": "CAI-ASW",
+              "outbound_dep": "0600",
+              "passengers": [
+                {
+                  "iata": "JEDSM08AA"
+                }
+              ]
+            },
+            {
+              "outbound_flight": "SM0020",
+              "outbound_route": "CAI-HRG",
+              "outbound_dep": "0610",
+              "passengers": [
+                {
+                  "iata": "RUHS228YD"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "lf_errors": {}
+}

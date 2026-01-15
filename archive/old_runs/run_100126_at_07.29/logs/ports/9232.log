@@ -1,0 +1,64 @@
+2026-01-10 07:30:18,216 | ERROR    | [Worker_9232] Failed: ELQ-ATZ - 'Logger' object has no attribute 'operation_start'
+2026-01-10 07:30:18,218 | INFO     | [Worker_9232] Processing: ATZ-AJF
+2026-01-10 07:30:18,218 | INFO     |   Tier 0: Range 2, Chunk 3/3 (7 days)
+2026-01-10 07:30:18,222 | ERROR    | [Worker_9232] Failed: ATZ-AJF - 'Logger' object has no attribute 'operation_start'
+2026-01-10 07:30:18,224 | INFO     | [Worker_9232] Processing: MED-ATZ
+2026-01-10 07:30:18,224 | INFO     |   Tier 0: Range 1, Chunk 1/3 (8 days)
+2026-01-10 07:30:18,227 | ERROR    | [Worker_9232] Failed: MED-ATZ - 'Logger' object has no attribute 'operation_start'
+2026-01-10 07:30:18,229 | INFO     | [Worker_9232] Processing: RUH-ATZ
+2026-01-10 07:30:18,229 | INFO     |   Tier 0: Range 1, Chunk 1/3 (8 days)
+2026-01-10 07:30:18,232 | ERROR    | [Worker_9232] Failed: RUH-ATZ - 'Logger' object has no attribute 'operation_start'
+2026-01-10 07:30:18,233 | INFO     | [Worker_9232] Processing: YNB-CAI
+2026-01-10 07:30:18,234 | INFO     |   Tier 0: Range 1, Chunk 1/3 (8 days)
+2026-01-10 07:30:18,236 | ERROR    | [Worker_9232] Failed: YNB-CAI - 'Logger' object has no attribute 'operation_start'
+2026-01-10 07:30:18,237 | INFO     | [Worker_9232] Processing: CAI-MED
+2026-01-10 07:30:18,237 | INFO     |   Tier 0: Range 1, Chunk 1/3 (8 days)
+2026-01-10 07:30:18,241 | ERROR    | [Worker_9232] Failed: CAI-MED - 'Logger' object has no attribute 'operation_start'
+2026-01-10 07:30:18,242 | INFO     | [Worker_9232] Processing: ASW-JED
+2026-01-10 07:30:18,242 | INFO     |   Tier 0: Range 1, Chunk 1/3 (8 days)
+2026-01-10 07:30:18,244 | ERROR    | [Worker_9232] Failed: ASW-JED - 'Logger' object has no attribute 'operation_start'
+2026-01-10 07:30:18,245 | INFO     | [Worker_9232] Processing: ATZ-TUU
+2026-01-10 07:30:18,245 | INFO     |   Tier 0: Range 1, Chunk 1/3 (8 days)
+2026-01-10 07:30:18,248 | ERROR    | [Worker_9232] Failed: ATZ-TUU - 'Logger' object has no attribute 'operation_start'
+2026-01-10 07:30:18,250 | INFO     | [Worker_9232] Processing: CAI-GIZ
+2026-01-10 07:30:18,250 | INFO     |   Tier 0: Range 1, Chunk 1/3 (8 days)
+2026-01-10 07:30:18,253 | ERROR    | [Worker_9232] Failed: CAI-GIZ - 'Logger' object has no attribute 'operation_start'
+2026-01-10 07:30:18,254 | INFO     | [Worker_9232] Processing: JED-LXR
+2026-01-10 07:30:18,254 | INFO     |   Tier 0: Range 1, Chunk 2/3 (7 days)
+2026-01-10 07:30:18,257 | ERROR    | [Worker_9232] Failed: JED-LXR - 'Logger' object has no attribute 'operation_start'
+2026-01-10 07:30:18,258 | INFO     | [Worker_9232] Processing: TUU-CAI
+2026-01-10 07:30:18,258 | INFO     |   Tier 0: Range 1, Chunk 2/3 (7 days)
+2026-01-10 07:30:18,260 | ERROR    | [Worker_9232] Failed: TUU-CAI - 'Logger' object has no attribute 'operation_start'
+2026-01-10 07:30:18,261 | INFO     | [Worker_9232] Processing: ELQ-CAI
+2026-01-10 07:30:18,262 | INFO     |   Tier 0: Range 1, Chunk 2/3 (7 days)
+2026-01-10 07:30:18,264 | ERROR    | [Worker_9232] Failed: ELQ-CAI - 'Logger' object has no attribute 'operation_start'
+2026-01-10 07:30:18,265 | INFO     | [Worker_9232] Processing: HBE-JED
+2026-01-10 07:30:18,265 | INFO     |   Tier 0: Range 1, Chunk 2/3 (7 days)
+2026-01-10 07:30:18,267 | ERROR    | [Worker_9232] Failed: HBE-JED - 'Logger' object has no attribute 'operation_start'
+2026-01-10 07:30:18,269 | INFO     | [Worker_9232] Processing: ATZ-RUH
+2026-01-10 07:30:18,269 | INFO     |   Tier 0: Range 1, Chunk 2/3 (7 days)
+2026-01-10 07:30:18,272 | ERROR    | [Worker_9232] Failed: ATZ-RUH - 'Logger' object has no attribute 'operation_start'
+2026-01-10 07:30:18,273 | INFO     | [Worker_9232] Processing: CAI-AHB
+2026-01-10 07:30:18,273 | INFO     |   Tier 0: Range 1, Chunk 2/3 (7 days)
+2026-01-10 07:30:18,276 | ERROR    | [Worker_9232] Failed: CAI-AHB - 'Logger' object has no attribute 'operation_start'
+2026-01-10 07:30:18,277 | INFO     | [Worker_9232] Processing: MED-ATZ
+2026-01-10 07:30:18,278 | INFO     |   Tier 0: Range 1, Chunk 3/3 (7 days)
+2026-01-10 07:30:18,280 | ERROR    | [Worker_9232] Failed: MED-ATZ - 'Logger' object has no attribute 'operation_start'
+2026-01-10 07:30:18,282 | INFO     | [Worker_9232] Processing: RUH-CAI
+2026-01-10 07:30:18,282 | INFO     |   Tier 0: Range 1, Chunk 3/3 (7 days)
+2026-01-10 07:30:18,285 | ERROR    | [Worker_9232] Failed: RUH-CAI - 'Logger' object has no attribute 'operation_start'
+2026-01-10 07:30:18,287 | INFO     | [Worker_9232] Processing: YNB-CAI
+2026-01-10 07:30:18,287 | INFO     |   Tier 0: Range 1, Chunk 3/3 (7 days)
+2026-01-10 07:30:18,290 | ERROR    | [Worker_9232] Failed: YNB-CAI - 'Logger' object has no attribute 'operation_start'
+2026-01-10 07:30:18,291 | INFO     | [Worker_9232] Processing: HBE-MED
+2026-01-10 07:30:18,291 | INFO     |   Tier 0: Range 1, Chunk 3/3 (7 days)
+2026-01-10 07:30:18,293 | ERROR    | [Worker_9232] Failed: HBE-MED - 'Logger' object has no attribute 'operation_start'
+2026-01-10 07:30:18,295 | INFO     | [Worker_9232] Processing: SSH-JED
+2026-01-10 07:30:18,295 | INFO     |   Tier 0: Range 1, Chunk 3/3 (7 days)
+2026-01-10 07:30:18,298 | ERROR    | [Worker_9232] Failed: SSH-JED - 'Logger' object has no attribute 'operation_start'
+2026-01-10 07:30:18,300 | INFO     | [Worker_9232] Processing: CAI-AJF
+2026-01-10 07:30:18,300 | INFO     |   Tier 0: Range 1, Chunk 3/3 (7 days)
+2026-01-10 07:30:18,303 | ERROR    | [Worker_9232] Failed: CAI-AJF - 'Logger' object has no attribute 'operation_start'
+2026-01-10 07:30:18,305 | INFO     | [Worker_9232] Processing: CAI-GIZ
+2026-01-10 07:30:18,305 | INFO     |   Tier 0: Range 1, Chunk 3/3 (7 days)
+2026-01-10 07:30:18,307 | ERROR    | [Worker_9232] Failed: CAI-GIZ - 'Logger' object has no attribute 'operation_start'

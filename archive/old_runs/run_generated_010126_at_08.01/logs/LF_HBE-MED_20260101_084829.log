@@ -1,0 +1,34 @@
+2026-01-01 08:48:29 | INFO     | ======================================================================
+2026-01-01 08:48:29 | INFO     | Load Factor Scraper Started - Route: HBE-MED
+2026-01-01 08:48:29 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_010126_at_08.01\logs\LF_HBE-MED_20260101_084829.log
+2026-01-01 08:48:29 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-01 08:48:29 | INFO     | ======================================================================
+2026-01-01 08:48:29 | INFO     | Starting LF search for route: HBE-MED
+2026-01-01 08:48:29 | INFO     | [START] LF Search
+2026-01-01 08:48:31 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-01 08:48:31 | INFO     | [DAY_START] Processing 06JAN
+2026-01-01 08:48:31 | INFO     | [lf.day.start] Processing HBE-MED for 06JAN
+2026-01-01 08:48:32 | INFO     | [lf.day.flights_found] Found 1 flights on 06JAN
+2026-01-01 08:48:34 | INFO     | [lf.flight.extracted] SM485 on 06JAN: BKG=154, LF=86.0%
+2026-01-01 08:48:39 | INFO     | [SUCCESS] Day 06JAN
+2026-01-01 08:48:39 | INFO     | [DAY_START] Processing 05JAN
+2026-01-01 08:48:39 | INFO     | [lf.day.start] Processing HBE-MED for 05JAN
+2026-01-01 08:48:40 | WARNING  | [lf.day.no_flights] No direct flights on 05JAN
+2026-01-01 08:48:40 | INFO     | [SUCCESS] Day 05JAN
+2026-01-01 08:48:40 | INFO     | [DAY_START] Processing 04JAN
+2026-01-01 08:48:40 | INFO     | [lf.day.start] Processing HBE-MED for 04JAN
+2026-01-01 08:48:42 | INFO     | [lf.day.flights_found] Found 1 flights on 04JAN
+2026-01-01 08:48:44 | INFO     | [lf.flight.extracted] SM485 on 04JAN: BKG=124, LF=70.5%
+2026-01-01 08:48:52 | INFO     | [SUCCESS] Day 04JAN
+2026-01-01 08:48:52 | INFO     | [DAY_START] Processing 03JAN
+2026-01-01 08:48:52 | INFO     | [lf.day.start] Processing HBE-MED for 03JAN
+2026-01-01 08:48:54 | WARNING  | [lf.day.no_flights] No direct flights on 03JAN
+2026-01-01 08:48:54 | INFO     | [SUCCESS] Day 03JAN
+2026-01-01 08:48:54 | INFO     | [DAY_START] Processing 02JAN
+2026-01-01 08:48:54 | INFO     | [lf.day.start] Processing HBE-MED for 02JAN
+2026-01-01 08:48:55 | WARNING  | [lf.day.no_flights] No direct flights on 02JAN
+2026-01-01 08:48:55 | INFO     | [SUCCESS] Day 02JAN
+2026-01-01 08:48:55 | INFO     | [SUCCESS] LF Search Complete
+2026-01-01 08:48:57 | INFO     | [Worker_9224] Completed: HBE-MED - 5 results, 0 errors
+2026-01-01 08:48:57 | INFO     | [Worker_9224] Processing: CAI-RUH
+2026-01-01 08:48:57 | INFO     |   Tier 0: Range 1, Chunk 5/5 (6 days)

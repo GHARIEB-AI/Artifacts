@@ -1,0 +1,42 @@
+2025-12-28 03:28:53 | INFO     | ======================================================================
+2025-12-28 03:28:53 | INFO     | Load Factor Scraper Started - Route: CAI-ELQ
+2025-12-28 03:28:53 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_281225_at_03.27\logs\LF_CAI-ELQ_20251228_032853.log
+2025-12-28 03:28:53 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-28 03:28:53 | INFO     | ======================================================================
+2025-12-28 03:28:53 | INFO     | Starting LF search for route: CAI-ELQ
+2025-12-28 03:28:53 | INFO     | [START] LF Search
+2025-12-28 03:28:54 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-28 03:28:54 | INFO     | [DAY_START] Processing 10JAN
+2025-12-28 03:28:54 | INFO     | [lf.day.start] Processing CAI-ELQ for 10JAN
+2025-12-28 03:28:55 | WARNING  | [lf.day.no_flights] No direct flights on 10JAN
+2025-12-28 03:28:56 | INFO     | [SUCCESS] Day 10JAN
+2025-12-28 03:28:56 | INFO     | [DAY_START] Processing 09JAN
+2025-12-28 03:28:56 | INFO     | [lf.day.start] Processing CAI-ELQ for 09JAN
+2025-12-28 03:28:57 | INFO     | [lf.day.flights_found] Found 1 flights on 09JAN
+2025-12-28 03:28:58 | INFO     | [lf.flight.extracted] SM427 on 09JAN: BKG=47, LF=26.3%
+2025-12-28 03:29:02 | INFO     | [SUCCESS] Day 09JAN
+2025-12-28 03:29:02 | INFO     | [DAY_START] Processing 08JAN
+2025-12-28 03:29:02 | INFO     | [lf.day.start] Processing CAI-ELQ for 08JAN
+2025-12-28 03:29:03 | INFO     | [lf.day.flights_found] Found 1 flights on 08JAN
+2025-12-28 03:29:05 | INFO     | [lf.flight.extracted] SM427 on 08JAN: BKG=48, LF=27.3%
+2025-12-28 03:29:09 | INFO     | [SUCCESS] Day 08JAN
+2025-12-28 03:29:09 | INFO     | [DAY_START] Processing 07JAN
+2025-12-28 03:29:09 | INFO     | [lf.day.start] Processing CAI-ELQ for 07JAN
+2025-12-28 03:29:10 | WARNING  | [lf.day.no_flights] No direct flights on 07JAN
+2025-12-28 03:29:10 | INFO     | [SUCCESS] Day 07JAN
+2025-12-28 03:29:10 | INFO     | [DAY_START] Processing 06JAN
+2025-12-28 03:29:10 | INFO     | [lf.day.start] Processing CAI-ELQ for 06JAN
+2025-12-28 03:29:11 | WARNING  | [lf.day.no_flights] No direct flights on 06JAN
+2025-12-28 03:29:11 | INFO     | [SUCCESS] Day 06JAN
+2025-12-28 03:29:11 | INFO     | [DAY_START] Processing 05JAN
+2025-12-28 03:29:11 | INFO     | [lf.day.start] Processing CAI-ELQ for 05JAN
+2025-12-28 03:29:12 | WARNING  | [lf.day.no_flights] No direct flights on 05JAN
+2025-12-28 03:29:12 | INFO     | [SUCCESS] Day 05JAN
+2025-12-28 03:29:12 | INFO     | [DAY_START] Processing 04JAN
+2025-12-28 03:29:12 | INFO     | [lf.day.start] Processing CAI-ELQ for 04JAN
+2025-12-28 03:29:13 | WARNING  | [lf.day.no_flights] No direct flights on 04JAN
+2025-12-28 03:29:13 | INFO     | [SUCCESS] Day 04JAN
+2025-12-28 03:29:13 | INFO     | [SUCCESS] LF Search Complete
+2025-12-28 03:29:16 | INFO     | [Worker_9225] Completed: CAI-ELQ - 7 results, 0 errors
+2025-12-28 03:29:16 | INFO     | [Worker_9225] Processing: ATZ-TUU
+2025-12-28 03:29:16 | INFO     |   Tier 0: Range 1, Chunk 1/2 (7 days)

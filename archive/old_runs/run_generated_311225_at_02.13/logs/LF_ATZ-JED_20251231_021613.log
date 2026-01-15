@@ -1,0 +1,39 @@
+2025-12-31 02:16:13 | INFO     | ======================================================================
+2025-12-31 02:16:13 | INFO     | Load Factor Scraper Started - Route: ATZ-JED
+2025-12-31 02:16:13 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_02.13\logs\LF_ATZ-JED_20251231_021613.log
+2025-12-31 02:16:13 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 02:16:13 | INFO     | ======================================================================
+2025-12-31 02:16:13 | INFO     | Starting LF search for route: ATZ-JED
+2025-12-31 02:16:13 | INFO     | [START] LF Search
+2025-12-31 02:16:15 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 02:16:15 | INFO     | [DAY_START] Processing 28FEB
+2025-12-31 02:16:15 | INFO     | [lf.day.start] Processing ATZ-JED for 28FEB
+2025-12-31 02:16:17 | INFO     | [lf.day.flights_found] Found 3 flights on 28FEB
+2025-12-31 02:16:19 | INFO     | [lf.flight.extracted] SM491 on 28FEB: BKG=0, LF=0.0%
+2025-12-31 02:16:22 | INFO     | [lf.flight.extracted] SM453 on 28FEB: BKG=1, LF=0.6%
+2025-12-31 02:16:26 | INFO     | [lf.flight.extracted] SM455 on 28FEB: BKG=8, LF=4.5%
+2025-12-31 02:16:30 | INFO     | [SUCCESS] Day 28FEB
+2025-12-31 02:16:30 | INFO     | [DAY_START] Processing 27FEB
+2025-12-31 02:16:30 | INFO     | [lf.day.start] Processing ATZ-JED for 27FEB
+2025-12-31 02:16:31 | INFO     | [lf.day.flights_found] Found 1 flights on 27FEB
+2025-12-31 02:16:34 | INFO     | [lf.flight.extracted] SM491 on 27FEB: BKG=8, LF=4.5%
+2025-12-31 02:16:37 | INFO     | [SUCCESS] Day 27FEB
+2025-12-31 02:16:37 | INFO     | [DAY_START] Processing 26FEB
+2025-12-31 02:16:37 | INFO     | [lf.day.start] Processing ATZ-JED for 26FEB
+2025-12-31 02:16:38 | INFO     | [lf.day.flights_found] Found 2 flights on 26FEB
+2025-12-31 02:16:42 | INFO     | [lf.flight.extracted] SM453 on 26FEB: BKG=0, LF=0.0%
+2025-12-31 02:16:46 | INFO     | [lf.flight.extracted] SM455 on 26FEB: BKG=0, LF=0.0%
+2025-12-31 02:16:48 | INFO     | [SUCCESS] Day 26FEB
+2025-12-31 02:16:48 | INFO     | [DAY_START] Processing 25FEB
+2025-12-31 02:16:48 | INFO     | [lf.day.start] Processing ATZ-JED for 25FEB
+2025-12-31 02:16:49 | INFO     | [lf.day.flights_found] Found 3 flights on 25FEB
+2025-12-31 02:16:52 | INFO     | [lf.flight.extracted] SM453 on 25FEB: BKG=0, LF=0.0%
+2025-12-31 02:16:58 | INFO     | [lf.flight.extracted] SM491 on 25FEB: BKG=0, LF=0.0%
+2025-12-31 02:17:15 | INFO     | [lf.flight.extracted] SM421 on 25FEB: BKG=1, LF=0.6%
+2025-12-31 02:17:25 | ERROR    | Atomic write failed for D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_02.13\checkpoints\flight_booking_data.json: [WinError 5] Access is denied: 'D:\\CODERED\\LAB\\market_insights\\outputs\\run_generated_311225_at_02.13\\checkpoints\\flight_booking_data.tmp' -> 'D:\\CODERED\\LAB\\market_insights\\outputs\\run_generated_311225_at_02.13\\checkpoints\\flight_booking_data.json'
+2025-12-31 02:17:25 | INFO     | [SUCCESS] Day 25FEB
+2025-12-31 02:17:25 | INFO     | [DAY_START] Processing 24FEB
+2025-12-31 02:17:25 | INFO     | [lf.day.start] Processing ATZ-JED for 24FEB
+2025-12-31 02:17:27 | INFO     | [lf.day.flights_found] Found 2 flights on 24FEB
+2025-12-31 02:17:29 | INFO     | [lf.flight.extracted] SM453 on 24FEB: BKG=5, LF=2.8%
+2025-12-31 02:17:36 | INFO     | [lf.flight.extracted] SM455 on 24FEB: BKG=0, LF=0.0%

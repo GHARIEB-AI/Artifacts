@@ -1,0 +1,52 @@
+2026-01-01 08:12:14 | INFO     | ======================================================================
+2026-01-01 08:12:14 | INFO     | Load Factor Scraper Started - Route: ATZ-JED
+2026-01-01 08:12:14 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_010126_at_08.01\logs\LF_ATZ-JED_20260101_081214.log
+2026-01-01 08:12:14 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-01 08:12:14 | INFO     | ======================================================================
+2026-01-01 08:12:14 | INFO     | Starting LF search for route: ATZ-JED
+2026-01-01 08:12:14 | INFO     | [START] LF Search
+2026-01-01 08:12:16 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-01 08:12:16 | INFO     | [DAY_START] Processing 12MAR
+2026-01-01 08:12:16 | INFO     | [lf.day.start] Processing ATZ-JED for 12MAR
+2026-01-01 08:12:17 | INFO     | [lf.day.flights_found] Found 2 flights on 12MAR
+2026-01-01 08:12:19 | INFO     | [lf.flight.extracted] SM453 on 12MAR: BKG=1, LF=0.6%
+2026-01-01 08:12:22 | INFO     | [lf.flight.extracted] SM455 on 12MAR: BKG=0, LF=0.0%
+2026-01-01 08:12:24 | INFO     | [SUCCESS] Day 12MAR
+2026-01-01 08:12:24 | INFO     | [DAY_START] Processing 11MAR
+2026-01-01 08:12:24 | INFO     | [lf.day.start] Processing ATZ-JED for 11MAR
+2026-01-01 08:12:25 | INFO     | [lf.day.flights_found] Found 3 flights on 11MAR
+2026-01-01 08:12:27 | INFO     | [lf.flight.extracted] SM453 on 11MAR: BKG=0, LF=0.0%
+2026-01-01 08:12:30 | INFO     | [lf.flight.extracted] SM491 on 11MAR: BKG=0, LF=0.0%
+2026-01-01 08:12:33 | INFO     | [lf.flight.extracted] SM421 on 11MAR: BKG=1, LF=0.6%
+2026-01-01 08:12:36 | INFO     | [SUCCESS] Day 11MAR
+2026-01-01 08:12:36 | INFO     | [DAY_START] Processing 10MAR
+2026-01-01 08:12:36 | INFO     | [lf.day.start] Processing ATZ-JED for 10MAR
+2026-01-01 08:12:38 | INFO     | [lf.day.flights_found] Found 2 flights on 10MAR
+2026-01-01 08:12:40 | INFO     | [lf.flight.extracted] SM453 on 10MAR: BKG=0, LF=0.0%
+2026-01-01 08:12:43 | INFO     | [lf.flight.extracted] SM455 on 10MAR: BKG=0, LF=0.0%
+2026-01-01 08:12:44 | INFO     | [SUCCESS] Day 10MAR
+2026-01-01 08:12:44 | INFO     | [DAY_START] Processing 09MAR
+2026-01-01 08:12:44 | INFO     | [lf.day.start] Processing ATZ-JED for 09MAR
+2026-01-01 08:12:45 | INFO     | [lf.day.flights_found] Found 4 flights on 09MAR
+2026-01-01 08:12:47 | INFO     | [lf.flight.extracted] SM491 on 09MAR: BKG=2, LF=1.1%
+2026-01-01 08:12:50 | INFO     | [lf.flight.extracted] SM455 on 09MAR: BKG=0, LF=0.0%
+2026-01-01 08:12:53 | INFO     | [lf.flight.extracted] SM421 on 09MAR: BKG=2, LF=1.1%
+2026-01-01 08:12:56 | INFO     | [lf.flight.extracted] SM453 on 09MAR: BKG=0, LF=0.0%
+2026-01-01 08:13:00 | INFO     | [SUCCESS] Day 09MAR
+2026-01-01 08:13:00 | INFO     | [DAY_START] Processing 08MAR
+2026-01-01 08:13:00 | INFO     | [lf.day.start] Processing ATZ-JED for 08MAR
+2026-01-01 08:13:01 | INFO     | [lf.day.flights_found] Found 2 flights on 08MAR
+2026-01-01 08:13:03 | INFO     | [lf.flight.extracted] SM491 on 08MAR: BKG=2, LF=1.1%
+2026-01-01 08:13:06 | INFO     | [lf.flight.extracted] SM455 on 08MAR: BKG=0, LF=0.0%
+2026-01-01 08:13:08 | INFO     | [SUCCESS] Day 08MAR
+2026-01-01 08:13:08 | INFO     | [DAY_START] Processing 07MAR
+2026-01-01 08:13:08 | INFO     | [lf.day.start] Processing ATZ-JED for 07MAR
+2026-01-01 08:13:09 | INFO     | [lf.day.flights_found] Found 3 flights on 07MAR
+2026-01-01 08:13:11 | INFO     | [lf.flight.extracted] SM491 on 07MAR: BKG=0, LF=0.0%
+2026-01-01 08:13:14 | INFO     | [lf.flight.extracted] SM453 on 07MAR: BKG=1, LF=0.6%
+2026-01-01 08:13:17 | INFO     | [lf.flight.extracted] SM455 on 07MAR: BKG=8, LF=4.5%
+2026-01-01 08:13:20 | INFO     | [SUCCESS] Day 07MAR
+2026-01-01 08:13:20 | INFO     | [SUCCESS] LF Search Complete
+2026-01-01 08:13:22 | INFO     | [Worker_9227] Completed: ATZ-JED - 6 results, 0 errors
+2026-01-01 08:13:22 | INFO     | [Worker_9227] Processing: MED-HBE
+2026-01-01 08:13:22 | INFO     |   Tier 0: Range 3, Chunk 5/5 (6 days)

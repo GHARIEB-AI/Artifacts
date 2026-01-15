@@ -1,0 +1,33 @@
+2025-12-31 23:41:41 | INFO     | ======================================================================
+2025-12-31 23:41:41 | INFO     | Load Factor Scraper Started - Route: CAI-AHB
+2025-12-31 23:41:41 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_23.27\logs\LF_CAI-AHB_20251231_234141.log
+2025-12-31 23:41:41 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 23:41:41 | INFO     | ======================================================================
+2025-12-31 23:41:41 | INFO     | Starting LF search for route: CAI-AHB
+2025-12-31 23:41:41 | INFO     | [START] LF Search
+2025-12-31 23:41:43 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 23:41:43 | INFO     | [DAY_START] Processing 10FEB
+2025-12-31 23:41:43 | INFO     | [lf.day.start] Processing CAI-AHB for 10FEB
+2025-12-31 23:41:45 | WARNING  | [lf.day.no_flights] No direct flights on 10FEB
+2025-12-31 23:41:45 | INFO     | [SUCCESS] Day 10FEB
+2025-12-31 23:41:45 | INFO     | [DAY_START] Processing 09FEB
+2025-12-31 23:41:45 | INFO     | [lf.day.start] Processing CAI-AHB for 09FEB
+2025-12-31 23:41:46 | WARNING  | [lf.day.no_flights] No direct flights on 09FEB
+2025-12-31 23:41:46 | INFO     | [SUCCESS] Day 09FEB
+2025-12-31 23:41:46 | INFO     | [DAY_START] Processing 08FEB
+2025-12-31 23:41:46 | INFO     | [lf.day.start] Processing CAI-AHB for 08FEB
+2025-12-31 23:41:48 | WARNING  | [lf.day.no_flights] No direct flights on 08FEB
+2025-12-31 23:41:48 | INFO     | [SUCCESS] Day 08FEB
+2025-12-31 23:41:48 | INFO     | [DAY_START] Processing 07FEB
+2025-12-31 23:41:48 | INFO     | [lf.day.start] Processing CAI-AHB for 07FEB
+2025-12-31 23:41:49 | INFO     | [lf.day.flights_found] Found 1 flights on 07FEB
+2025-12-31 23:41:52 | INFO     | [lf.flight.extracted] SM443 on 07FEB: BKG=21, LF=11.9%
+2025-12-31 23:41:55 | INFO     | [SUCCESS] Day 07FEB
+2025-12-31 23:41:55 | INFO     | [DAY_START] Processing 06FEB
+2025-12-31 23:41:55 | INFO     | [lf.day.start] Processing CAI-AHB for 06FEB
+2025-12-31 23:41:56 | WARNING  | [lf.day.no_flights] No direct flights on 06FEB
+2025-12-31 23:41:57 | INFO     | [SUCCESS] Day 06FEB
+2025-12-31 23:41:57 | INFO     | [SUCCESS] LF Search Complete
+2025-12-31 23:42:00 | INFO     | [Worker_9234] Completed: CAI-AHB - 5 results, 0 errors
+2025-12-31 23:42:00 | INFO     | [Worker_9234] Processing: MED-HBE
+2025-12-31 23:42:00 | INFO     |   Tier 0: Range 3, Chunk 5/5 (5 days)

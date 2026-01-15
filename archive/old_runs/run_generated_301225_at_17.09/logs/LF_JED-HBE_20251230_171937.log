@@ -1,0 +1,67 @@
+2025-12-30 17:19:37 | INFO     | ======================================================================
+2025-12-30 17:19:37 | INFO     | Load Factor Scraper Started - Route: JED-HBE
+2025-12-30 17:19:37 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_301225_at_17.09\logs\LF_JED-HBE_20251230_171937.log
+2025-12-30 17:19:37 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-30 17:19:37 | INFO     | ======================================================================
+2025-12-30 17:19:37 | INFO     | Starting LF search for route: JED-HBE
+2025-12-30 17:19:37 | INFO     | [START] LF Search
+2025-12-30 17:19:38 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-30 17:19:38 | INFO     | [DAY_START] Processing 09FEB
+2025-12-30 17:19:38 | INFO     | [lf.day.start] Processing JED-HBE for 09FEB
+2025-12-30 17:19:39 | INFO     | [lf.day.flights_found] Found 5 flights on 09FEB
+2025-12-30 17:19:41 | INFO     | [lf.flight.extracted] SM952 on 09FEB: BKG=175, LF=104.8%
+2025-12-30 17:19:45 | INFO     | [lf.flight.extracted] SM458 on 09FEB: BKG=142, LF=85.0%
+2025-12-30 17:19:48 | INFO     | [lf.flight.extracted] SM478 on 09FEB: BKG=131, LF=78.4%
+2025-12-30 17:19:51 | INFO     | [lf.flight.extracted] SM452 on 09FEB: BKG=155, LF=92.8%
+2025-12-30 17:19:55 | INFO     | [lf.flight.extracted] SM958 on 09FEB: BKG=175, LF=104.8%
+2025-12-30 17:20:05 | INFO     | [SUCCESS] Day 09FEB
+2025-12-30 17:20:05 | INFO     | [DAY_START] Processing 08FEB
+2025-12-30 17:20:05 | INFO     | [lf.day.start] Processing JED-HBE for 08FEB
+2025-12-30 17:20:06 | INFO     | [lf.day.flights_found] Found 2 flights on 08FEB
+2025-12-30 17:20:08 | INFO     | [lf.flight.extracted] SM458 on 08FEB: BKG=167, LF=100.0%
+2025-12-30 17:20:11 | INFO     | [lf.flight.extracted] SM452 on 08FEB: BKG=168, LF=100.6%
+2025-12-30 17:20:17 | INFO     | [SUCCESS] Day 08FEB
+2025-12-30 17:20:17 | INFO     | [DAY_START] Processing 07FEB
+2025-12-30 17:20:17 | INFO     | [lf.day.start] Processing JED-HBE for 07FEB
+2025-12-30 17:20:18 | INFO     | [lf.day.flights_found] Found 2 flights on 07FEB
+2025-12-30 17:20:19 | INFO     | [lf.flight.extracted] SM458 on 07FEB: BKG=168, LF=100.6%
+2025-12-30 17:20:23 | INFO     | [lf.flight.extracted] SM452 on 07FEB: BKG=174, LF=100.0%
+2025-12-30 17:20:30 | INFO     | [SUCCESS] Day 07FEB
+2025-12-30 17:20:30 | INFO     | [DAY_START] Processing 06FEB
+2025-12-30 17:20:30 | INFO     | [lf.day.start] Processing JED-HBE for 06FEB
+2025-12-30 17:20:31 | INFO     | [lf.day.flights_found] Found 1 flights on 06FEB
+2025-12-30 17:20:33 | INFO     | [lf.flight.extracted] SM452 on 06FEB: BKG=167, LF=100.0%
+2025-12-30 17:20:36 | INFO     | [SUCCESS] Day 06FEB
+2025-12-30 17:20:36 | INFO     | [DAY_START] Processing 05FEB
+2025-12-30 17:20:36 | INFO     | [lf.day.start] Processing JED-HBE for 05FEB
+2025-12-30 17:20:37 | INFO     | [lf.day.flights_found] Found 1 flights on 05FEB
+2025-12-30 17:20:40 | INFO     | [lf.flight.extracted] SM452 on 05FEB: BKG=167, LF=100.0%
+2025-12-30 17:20:43 | INFO     | [SUCCESS] Day 05FEB
+2025-12-30 17:20:43 | INFO     | [DAY_START] Processing 04FEB
+2025-12-30 17:20:43 | INFO     | [lf.day.start] Processing JED-HBE for 04FEB
+2025-12-30 17:20:44 | INFO     | [lf.day.flights_found] Found 3 flights on 04FEB
+2025-12-30 17:20:46 | INFO     | [lf.flight.extracted] SM452 on 04FEB: BKG=166, LF=99.4%
+2025-12-30 17:20:49 | INFO     | [lf.flight.extracted] SM474 on 04FEB: BKG=167, LF=100.0%
+2025-12-30 17:20:53 | INFO     | [lf.flight.extracted] SM458 on 04FEB: BKG=170, LF=101.8%
+2025-12-30 17:21:00 | INFO     | [SUCCESS] Day 04FEB
+2025-12-30 17:21:00 | INFO     | [DAY_START] Processing 03FEB
+2025-12-30 17:21:00 | INFO     | [lf.day.start] Processing JED-HBE for 03FEB
+2025-12-30 17:21:01 | INFO     | [lf.day.flights_found] Found 1 flights on 03FEB
+2025-12-30 17:21:03 | INFO     | [lf.flight.extracted] SM452 on 03FEB: BKG=167, LF=100.0%
+2025-12-30 17:21:11 | INFO     | [SUCCESS] Day 03FEB
+2025-12-30 17:21:11 | INFO     | [DAY_START] Processing 02FEB
+2025-12-30 17:21:11 | INFO     | [lf.day.start] Processing JED-HBE for 02FEB
+2025-12-30 17:21:12 | INFO     | [lf.day.flights_found] Found 2 flights on 02FEB
+2025-12-30 17:21:14 | INFO     | [lf.flight.extracted] SM458 on 02FEB: BKG=148, LF=88.6%
+2025-12-30 17:21:18 | INFO     | [lf.flight.extracted] SM452 on 02FEB: BKG=167, LF=100.0%
+2025-12-30 17:21:23 | INFO     | [SUCCESS] Day 02FEB
+2025-12-30 17:21:23 | INFO     | [DAY_START] Processing 01FEB
+2025-12-30 17:21:23 | INFO     | [lf.day.start] Processing JED-HBE for 01FEB
+2025-12-30 17:21:25 | INFO     | [lf.day.flights_found] Found 2 flights on 01FEB
+2025-12-30 17:21:27 | INFO     | [lf.flight.extracted] SM458 on 01FEB: BKG=163, LF=97.6%
+2025-12-30 17:21:31 | INFO     | [lf.flight.extracted] SM452 on 01FEB: BKG=166, LF=99.4%
+2025-12-30 17:21:38 | INFO     | [SUCCESS] Day 01FEB
+2025-12-30 17:21:38 | INFO     | [SUCCESS] LF Search Complete
+2025-12-30 17:21:40 | INFO     | [Worker_9233] Completed: JED-HBE - 9 results, 0 errors
+2025-12-30 17:21:40 | INFO     | [Worker_9233] Processing: CAI-MED
+2025-12-30 17:21:40 | INFO     |   Tier 0: Range 2, Chunk 3/3 (9 days)

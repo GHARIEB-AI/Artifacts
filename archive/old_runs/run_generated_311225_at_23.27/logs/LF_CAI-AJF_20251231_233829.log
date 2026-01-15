@@ -1,0 +1,38 @@
+2025-12-31 23:38:29 | INFO     | ======================================================================
+2025-12-31 23:38:29 | INFO     | Load Factor Scraper Started - Route: CAI-AJF
+2025-12-31 23:38:29 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_23.27\logs\LF_CAI-AJF_20251231_233829.log
+2025-12-31 23:38:29 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 23:38:29 | INFO     | ======================================================================
+2025-12-31 23:38:29 | INFO     | Starting LF search for route: CAI-AJF
+2025-12-31 23:38:29 | INFO     | [START] LF Search
+2025-12-31 23:38:31 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 23:38:31 | INFO     | [DAY_START] Processing 16FEB
+2025-12-31 23:38:31 | INFO     | [lf.day.start] Processing CAI-AJF for 16FEB
+2025-12-31 23:38:32 | WARNING  | [lf.day.no_flights] No direct flights on 16FEB
+2025-12-31 23:38:32 | INFO     | [SUCCESS] Day 16FEB
+2025-12-31 23:38:32 | INFO     | [DAY_START] Processing 15FEB
+2025-12-31 23:38:32 | INFO     | [lf.day.start] Processing CAI-AJF for 15FEB
+2025-12-31 23:38:33 | WARNING  | [lf.day.no_flights] No direct flights on 15FEB
+2025-12-31 23:38:33 | INFO     | [SUCCESS] Day 15FEB
+2025-12-31 23:38:33 | INFO     | [DAY_START] Processing 14FEB
+2025-12-31 23:38:33 | INFO     | [lf.day.start] Processing CAI-AJF for 14FEB
+2025-12-31 23:38:35 | INFO     | [lf.day.flights_found] Found 1 flights on 14FEB
+2025-12-31 23:38:37 | INFO     | [lf.flight.extracted] SM321 on 14FEB: BKG=1, LF=0.6%
+2025-12-31 23:38:40 | INFO     | [SUCCESS] Day 14FEB
+2025-12-31 23:38:40 | INFO     | [DAY_START] Processing 13FEB
+2025-12-31 23:38:40 | INFO     | [lf.day.start] Processing CAI-AJF for 13FEB
+2025-12-31 23:38:41 | WARNING  | [lf.day.no_flights] No direct flights on 13FEB
+2025-12-31 23:38:41 | INFO     | [SUCCESS] Day 13FEB
+2025-12-31 23:38:41 | INFO     | [DAY_START] Processing 12FEB
+2025-12-31 23:38:41 | INFO     | [lf.day.start] Processing CAI-AJF for 12FEB
+2025-12-31 23:38:42 | INFO     | [lf.day.flights_found] Found 1 flights on 12FEB
+2025-12-31 23:38:44 | INFO     | [lf.flight.extracted] SM321 on 12FEB: BKG=3, LF=1.7%
+2025-12-31 23:38:47 | INFO     | [SUCCESS] Day 12FEB
+2025-12-31 23:38:47 | INFO     | [DAY_START] Processing 11FEB
+2025-12-31 23:38:47 | INFO     | [lf.day.start] Processing CAI-AJF for 11FEB
+2025-12-31 23:38:48 | WARNING  | [lf.day.no_flights] No direct flights on 11FEB
+2025-12-31 23:38:49 | INFO     | [SUCCESS] Day 11FEB
+2025-12-31 23:38:49 | INFO     | [SUCCESS] LF Search Complete
+2025-12-31 23:38:51 | INFO     | [Worker_9227] Completed: CAI-AJF - 6 results, 0 errors
+2025-12-31 23:38:51 | INFO     | [Worker_9227] Processing: CAI-GIZ
+2025-12-31 23:38:51 | INFO     |   Tier 0: Range 3, Chunk 3/5 (6 days)

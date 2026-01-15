@@ -1,0 +1,225 @@
+
+============================================================
+     LF WORKER - PORT 9234
+============================================================
+Worker: Worker_9234
+Status: READY
+Waiting for tasks...
+============================================================
+
+
+============================================================
+[Worker_9234] Processing: JED-SSH
+  Tier 0: Range 2, Chunk 1/3
+  Dates: 10 days
+  Date Range: 2026-02-28 to 2026-02-19
+============================================================
+
+2025-12-30 08:06:14 | INFO     | ======================================================================
+2025-12-30 08:06:14 | INFO     | Load Factor Scraper Started - Route: JED-SSH
+2025-12-30 08:06:14 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_301225_at_08.05\logs\LF_JED-SSH_20251230_080614.log
+2025-12-30 08:06:14 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-30 08:06:14 | INFO     | ======================================================================
+[LF] Processing dates (override): ['28FEB', '27FEB', '26FEB', '25FEB', '24FEB', '23FEB', '22FEB', '21FEB', '20FEB', '19FEB']
+[LF] Attaching to Chrome for Altea access
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9234 (after 1 attempts)
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+[LF] Processing JED-SSH for 28FEB
+[LF][ERROR] Amadeus command error detected: UNKNOWN TRANSACTION
+[LF][ERROR] Command: SN28FEBJEDSSH/ASM
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+============================================================
+[LF][RESYNC] Command 'SN28FEBJEDSSH/ASM' failed: TECH_ERROR:UNKNOWN TRANSACTION
+[LF][RESYNC] Re-running entire day from SN command for JED-SSH 28FEB
+[LF][RESYNC] Attempt 1/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing JED-SSH for 28FEB
+[LF] No direct flights on 28FEB for JED-SSH
+[LF] Processing JED-SSH for 27FEB
+[LF] No direct flights on 27FEB for JED-SSH
+[LF] Processing JED-SSH for 26FEB
+[LF] No direct flights on 26FEB for JED-SSH
+[LF] Processing JED-SSH for 25FEB
+[LF] No direct flights on 25FEB for JED-SSH
+[LF] Processing JED-SSH for 24FEB
+[LF] 24FEB: 1 cancelled flight(s) detected from SN
+[LF] No direct flights on 24FEB for JED-SSH
+[LF] Processing JED-SSH for 23FEB
+[LF] 23FEB: 1 cancelled flight(s) detected from SN
+[LF] No direct flights on 23FEB for JED-SSH
+[LF] Processing JED-SSH for 22FEB
+[LF] No direct flights on 22FEB for JED-SSH
+[LF] Processing JED-SSH for 21FEB
+[LF] No direct flights on 21FEB for JED-SSH
+[LF] Processing JED-SSH for 20FEB
+[LF] 20FEB: 1 cancelled flight(s) detected from SN
+[LF] No direct flights on 20FEB for JED-SSH
+[LF] Processing JED-SSH for 19FEB
+[LF] No direct flights on 19FEB for JED-SSH
+[LF] Results summary:
+  2026-02-28: 0 flights
+  2026-02-27: 0 flights
+  2026-02-26: 0 flights
+  2026-02-25: 0 flights
+  2026-02-24: 0 flights
+  2026-02-23: 0 flights
+  2026-02-22: 0 flights
+  2026-02-21: 0 flights
+  2026-02-20: 0 flights
+  2026-02-19: 0 flights
+[LF] Cancelled flights found: 3
+  - SM958 24FEB (SN)
+  - SM958 23FEB (SN)
+  - SM982 20FEB (SN)
+[Worker_9234] Cancelled flights collected: 3
+
+============================================================
+[Worker_9234] ✓ COMPLETED: JED-SSH
+  Results: 10 dates
+  Errors: 0 dates
+  Total Processed: 1 groups
+============================================================
+
+
+============================================================
+[Worker_9234] Processing: JED-HRG
+  Tier 0: Range 2, Chunk 1/3
+  Dates: 10 days
+  Date Range: 2026-02-28 to 2026-02-19
+============================================================
+
+2025-12-30 08:06:42 | INFO     | ======================================================================
+2025-12-30 08:06:42 | INFO     | Load Factor Scraper Started - Route: JED-HRG
+2025-12-30 08:06:42 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_301225_at_08.05\logs\LF_JED-HRG_20251230_080642.log
+2025-12-30 08:06:42 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-30 08:06:42 | INFO     | ======================================================================
+[LF] Processing dates (override): ['28FEB', '27FEB', '26FEB', '25FEB', '24FEB', '23FEB', '22FEB', '21FEB', '20FEB', '19FEB']
+[LF] Attaching to Chrome for Altea access
+2025-12-30 08:06:42 | INFO     | Starting LF search for route: JED-HRG
+2025-12-30 08:06:42 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9234 (after 1 attempts)
+2025-12-30 08:06:46 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+2025-12-30 08:06:46 | INFO     | [DAY_START] Processing 28FEB
+[LF] Processing JED-HRG for 28FEB
+2025-12-30 08:06:46 | INFO     | [lf.day.start] Processing JED-HRG for 28FEB
+[LF] No direct flights on 28FEB for JED-HRG
+2025-12-30 08:06:48 | WARNING  | [lf.day.no_flights] No direct flights on 28FEB
+2025-12-30 08:06:48 | INFO     | [SUCCESS] Day 28FEB
+2025-12-30 08:06:48 | INFO     | [DAY_START] Processing 27FEB
+[LF] Processing JED-HRG for 27FEB
+2025-12-30 08:06:48 | INFO     | [lf.day.start] Processing JED-HRG for 27FEB
+[LF] No direct flights on 27FEB for JED-HRG
+2025-12-30 08:06:49 | WARNING  | [lf.day.no_flights] No direct flights on 27FEB
+2025-12-30 08:06:49 | INFO     | [SUCCESS] Day 27FEB
+2025-12-30 08:06:49 | INFO     | [DAY_START] Processing 26FEB
+[LF] Processing JED-HRG for 26FEB
+2025-12-30 08:06:49 | INFO     | [lf.day.start] Processing JED-HRG for 26FEB
+[LF] No direct flights on 26FEB for JED-HRG
+2025-12-30 08:06:50 | WARNING  | [lf.day.no_flights] No direct flights on 26FEB
+2025-12-30 08:06:50 | INFO     | [SUCCESS] Day 26FEB
+2025-12-30 08:06:50 | INFO     | [DAY_START] Processing 25FEB
+[LF] Processing JED-HRG for 25FEB
+2025-12-30 08:06:50 | INFO     | [lf.day.start] Processing JED-HRG for 25FEB
+[LF] No direct flights on 25FEB for JED-HRG
+2025-12-30 08:06:51 | WARNING  | [lf.day.no_flights] No direct flights on 25FEB
+2025-12-30 08:06:51 | INFO     | [SUCCESS] Day 25FEB
+2025-12-30 08:06:51 | INFO     | [DAY_START] Processing 24FEB
+[LF] Processing JED-HRG for 24FEB
+2025-12-30 08:06:51 | INFO     | [lf.day.start] Processing JED-HRG for 24FEB
+[LF] 24FEB: 1 cancelled flight(s) detected from SN
+[LF] No direct flights on 24FEB for JED-HRG
+2025-12-30 08:06:53 | WARNING  | [lf.day.no_flights] No direct flights on 24FEB
+2025-12-30 08:06:53 | INFO     | [SUCCESS] Day 24FEB
+2025-12-30 08:06:53 | INFO     | [DAY_START] Processing 23FEB
+[LF] Processing JED-HRG for 23FEB
+2025-12-30 08:06:53 | INFO     | [lf.day.start] Processing JED-HRG for 23FEB
+[LF] 23FEB: 1 cancelled flight(s) detected from SN
+[LF] No direct flights on 23FEB for JED-HRG
+2025-12-30 08:06:54 | WARNING  | [lf.day.no_flights] No direct flights on 23FEB
+2025-12-30 08:06:54 | INFO     | [SUCCESS] Day 23FEB
+2025-12-30 08:06:54 | INFO     | [DAY_START] Processing 22FEB
+[LF] Processing JED-HRG for 22FEB
+2025-12-30 08:06:54 | INFO     | [lf.day.start] Processing JED-HRG for 22FEB
+[LF] No direct flights on 22FEB for JED-HRG
+2025-12-30 08:06:55 | WARNING  | [lf.day.no_flights] No direct flights on 22FEB
+2025-12-30 08:06:55 | INFO     | [SUCCESS] Day 22FEB
+2025-12-30 08:06:55 | INFO     | [DAY_START] Processing 21FEB
+[LF] Processing JED-HRG for 21FEB
+2025-12-30 08:06:55 | INFO     | [lf.day.start] Processing JED-HRG for 21FEB
+[LF] No direct flights on 21FEB for JED-HRG
+2025-12-30 08:06:56 | WARNING  | [lf.day.no_flights] No direct flights on 21FEB
+2025-12-30 08:06:56 | INFO     | [SUCCESS] Day 21FEB
+2025-12-30 08:06:56 | INFO     | [DAY_START] Processing 20FEB
+[LF] Processing JED-HRG for 20FEB
+2025-12-30 08:06:56 | INFO     | [lf.day.start] Processing JED-HRG for 20FEB
+[LF] 20FEB: 1 cancelled flight(s) detected from SN
+[LF] No direct flights on 20FEB for JED-HRG
+2025-12-30 08:06:57 | WARNING  | [lf.day.no_flights] No direct flights on 20FEB
+2025-12-30 08:06:57 | INFO     | [SUCCESS] Day 20FEB
+2025-12-30 08:06:57 | INFO     | [DAY_START] Processing 19FEB
+[LF] Processing JED-HRG for 19FEB
+2025-12-30 08:06:57 | INFO     | [lf.day.start] Processing JED-HRG for 19FEB
+[LF] No direct flights on 19FEB for JED-HRG
+2025-12-30 08:06:58 | WARNING  | [lf.day.no_flights] No direct flights on 19FEB
+2025-12-30 08:06:59 | INFO     | [SUCCESS] Day 19FEB
+[LF] Results summary:
+  2026-02-28: 0 flights
+  2026-02-27: 0 flights
+  2026-02-26: 0 flights
+  2026-02-25: 0 flights
+  2026-02-24: 0 flights
+  2026-02-23: 0 flights
+  2026-02-22: 0 flights
+  2026-02-21: 0 flights
+  2026-02-20: 0 flights
+  2026-02-19: 0 flights
+[LF] Cancelled flights found: 3
+  - SM958 24FEB (SN)
+  - SM958 23FEB (SN)
+  - SM982 20FEB (SN)
+2025-12-30 08:06:59 | INFO     | [SUCCESS] LF Search Complete
+[Worker_9234] Cancelled flights collected: 3
+
+============================================================
+[Worker_9234] ✓ COMPLETED: JED-HRG
+  Results: 10 dates
+  Errors: 0 dates
+  Total Processed: 2 groups
+============================================================
+
+2025-12-30 08:07:01 | INFO     | [Worker_9234] Completed: JED-HRG - 10 results, 0 errors
+
+============================================================
+[Worker_9234] Processing: RUH-CAI
+  Tier 0: Range 2, Chunk 1/3
+  Dates: 10 days
+  Date Range: 2026-02-28 to 2026-02-19
+============================================================
+
+2025-12-30 08:07:01 | INFO     | [Worker_9234] Processing: RUH-CAI
+2025-12-30 08:07:01 | INFO     |   Tier 0: Range 2, Chunk 1/3 (10 days)
+2025-12-30 08:07:01 | INFO     | ======================================================================
+2025-12-30 08:07:01 | INFO     | Load Factor Scraper Started - Route: RUH-CAI
+2025-12-30 08:07:01 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_301225_at_08.05\logs\LF_RUH-CAI_20251230_080701.log
+2025-12-30 08:07:01 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-30 08:07:01 | INFO     | ======================================================================
+[LF] Processing dates (override): ['28FEB', '27FEB', '26FEB', '25FEB', '24FEB', '23FEB', '22FEB', '21FEB', '20FEB', '19FEB']
+[LF] Attaching to Chrome for Altea access
+2025-12-30 08:07:01 | INFO     | Starting LF search for route: RUH-CAI
+2025-12-30 08:07:01 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9234 (after 1 attempts)
+2025-12-30 08:07:02 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+2025-12-30 08:07:02 | INFO     | [DAY_START] Processing 28FEB
+[LF] Processing RUH-CAI for 28FEB
+2025-12-30 08:07:02 | INFO     | [lf.day.start] Processing RUH-CAI for 28FEB
+[LF] 28FEB: found 1 direct flights
+2025-12-30 08:07:03 | INFO     | [lf.day.flights_found] Found 1 flights on 28FEB
+[LF][RETRY] Error processing 2026-02-28: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+[LF][INFO] Program will keep trying until successful...

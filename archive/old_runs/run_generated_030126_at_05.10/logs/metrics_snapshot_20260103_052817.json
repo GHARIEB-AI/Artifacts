@@ -1,0 +1,168 @@
+{
+  "timestamp": "2026-01-03T05:28:17.230794",
+  "service": "market-insights",
+  "counters": {
+    "oal_requests_total": {
+      "description": "Total OAL API requests",
+      "values": []
+    },
+    "lf_requests_total": {
+      "description": "Total LF requests",
+      "values": [
+        {
+          "labels": {
+            "destination": "MED",
+            "origin": "CAI",
+            "status": "success"
+          },
+          "value": 9.0
+        },
+        {
+          "labels": {
+            "destination": "JED",
+            "origin": "ATZ",
+            "status": "success"
+          },
+          "value": 9.0
+        },
+        {
+          "labels": {
+            "destination": "JED",
+            "origin": "HBE",
+            "status": "success"
+          },
+          "value": 4.0
+        },
+        {
+          "labels": {
+            "destination": "HBE",
+            "origin": "JED",
+            "status": "success"
+          },
+          "value": 6.0
+        },
+        {
+          "labels": {
+            "destination": "TUU",
+            "origin": "ATZ",
+            "status": "success"
+          },
+          "value": 6.0
+        }
+      ]
+    },
+    "errors_total": {
+      "description": "Total errors",
+      "values": []
+    }
+  },
+  "gauges": {
+    "routes_in_progress": {
+      "description": "Routes currently being processed",
+      "values": [
+        {
+          "labels": {},
+          "value": 0.0
+        }
+      ]
+    },
+    "flights_analyzed": {
+      "description": "Total flights analyzed in session",
+      "values": [
+        {
+          "labels": {
+            "direction": "lf"
+          },
+          "value": 49.0
+        }
+      ]
+    },
+    "circuit_breaker_state": {
+      "description": "Circuit breaker state (0=closed, 1=open)",
+      "values": []
+    }
+  },
+  "histograms": {
+    "request_duration_seconds": {
+      "description": "Request duration in seconds",
+      "data": {}
+    },
+    "route_processing_seconds": {
+      "description": "Route processing duration",
+      "data": {
+        "{'route': 'CAI-MED'}": {
+          "sum": 42.27806799999999,
+          "count": 9,
+          "buckets": {
+            "10.0": 9,
+            "30.0": 9,
+            "60.0": 9,
+            "120.0": 9,
+            "300.0": 9,
+            "5.0": 3
+          },
+          "p50": 5.833333333333333,
+          "p95": 8.083333333333334,
+          "p99": 8.283333333333333
+        },
+        "{'route': 'ATZ-JED'}": {
+          "sum": 123.47552400000002,
+          "count": 9,
+          "buckets": {
+            "30.0": 9,
+            "60.0": 9,
+            "120.0": 9,
+            "300.0": 9,
+            "10.0": 2
+          },
+          "p50": 15.555555555555555,
+          "p95": 24.555555555555557,
+          "p99": 25.355555555555554
+        },
+        "{'route': 'HBE-JED'}": {
+          "sum": 52.36973699999999,
+          "count": 4,
+          "buckets": {
+            "10.0": 2,
+            "30.0": 4,
+            "60.0": 4,
+            "120.0": 4,
+            "300.0": 4
+          },
+          "p50": 10.0,
+          "p95": 19.0,
+          "p99": 19.8
+        },
+        "{'route': 'JED-HBE'}": {
+          "sum": 79.310037,
+          "count": 6,
+          "buckets": {
+            "30.0": 6,
+            "60.0": 6,
+            "120.0": 6,
+            "300.0": 6,
+            "10.0": 3
+          },
+          "p50": 10.0,
+          "p95": 19.0,
+          "p99": 19.800000000000004
+        },
+        "{'route': 'ATZ-TUU'}": {
+          "sum": 10.774002000000001,
+          "count": 6,
+          "buckets": {
+            "5.0": 5,
+            "10.0": 6,
+            "30.0": 6,
+            "60.0": 6,
+            "120.0": 6,
+            "300.0": 6
+          },
+          "p50": 3.4,
+          "p95": 5.583333333333334,
+          "p99": 5.783333333333333
+        }
+      }
+    }
+  }
+}

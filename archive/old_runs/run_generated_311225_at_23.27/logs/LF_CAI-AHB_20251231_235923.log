@@ -1,0 +1,43 @@
+2025-12-31 23:59:23 | INFO     | ======================================================================
+2025-12-31 23:59:23 | INFO     | Load Factor Scraper Started - Route: CAI-AHB
+2025-12-31 23:59:23 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_23.27\logs\LF_CAI-AHB_20251231_235923.log
+2025-12-31 23:59:23 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 23:59:23 | INFO     | ======================================================================
+2025-12-31 23:59:23 | INFO     | Starting LF search for route: CAI-AHB
+2025-12-31 23:59:23 | INFO     | [START] LF Search
+2025-12-31 23:59:24 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 23:59:24 | INFO     | [DAY_START] Processing 24JAN
+2025-12-31 23:59:24 | INFO     | [lf.day.start] Processing CAI-AHB for 24JAN
+2025-12-31 23:59:25 | INFO     | [lf.day.flights_found] Found 1 flights on 24JAN
+2025-12-31 23:59:27 | INFO     | [lf.flight.extracted] SM443 on 24JAN: BKG=53, LF=29.6%
+2025-12-31 23:59:32 | INFO     | [SUCCESS] Day 24JAN
+2025-12-31 23:59:32 | INFO     | [DAY_START] Processing 23JAN
+2025-12-31 23:59:32 | INFO     | [lf.day.start] Processing CAI-AHB for 23JAN
+2025-12-31 23:59:33 | WARNING  | [lf.day.no_flights] No direct flights on 23JAN
+2025-12-31 23:59:33 | INFO     | [SUCCESS] Day 23JAN
+2025-12-31 23:59:33 | INFO     | [DAY_START] Processing 22JAN
+2025-12-31 23:59:33 | INFO     | [lf.day.start] Processing CAI-AHB for 22JAN
+2025-12-31 23:59:34 | INFO     | [lf.day.flights_found] Found 1 flights on 22JAN
+2025-12-31 23:59:36 | INFO     | [lf.flight.extracted] SM443 on 22JAN: BKG=54, LF=30.2%
+2025-12-31 23:59:41 | INFO     | [SUCCESS] Day 22JAN
+2025-12-31 23:59:41 | INFO     | [DAY_START] Processing 21JAN
+2025-12-31 23:59:41 | INFO     | [lf.day.start] Processing CAI-AHB for 21JAN
+2025-12-31 23:59:42 | INFO     | [lf.day.flights_found] Found 1 flights on 21JAN
+2025-12-31 23:59:44 | INFO     | [lf.flight.extracted] SM447 on 21JAN: BKG=66, LF=37.5%
+2025-12-31 23:59:49 | INFO     | [SUCCESS] Day 21JAN
+2025-12-31 23:59:49 | INFO     | [DAY_START] Processing 20JAN
+2025-12-31 23:59:49 | INFO     | [lf.day.start] Processing CAI-AHB for 20JAN
+2025-12-31 23:59:50 | WARNING  | [lf.day.no_flights] No direct flights on 20JAN
+2025-12-31 23:59:50 | INFO     | [SUCCESS] Day 20JAN
+2025-12-31 23:59:50 | INFO     | [DAY_START] Processing 19JAN
+2025-12-31 23:59:50 | INFO     | [lf.day.start] Processing CAI-AHB for 19JAN
+2025-12-31 23:59:51 | WARNING  | [lf.day.no_flights] No direct flights on 19JAN
+2025-12-31 23:59:52 | INFO     | [SUCCESS] Day 19JAN
+2025-12-31 23:59:52 | INFO     | [DAY_START] Processing 18JAN
+2025-12-31 23:59:52 | INFO     | [lf.day.start] Processing CAI-AHB for 18JAN
+2025-12-31 23:59:53 | WARNING  | [lf.day.no_flights] No direct flights on 18JAN
+2025-12-31 23:59:53 | INFO     | [SUCCESS] Day 18JAN
+2025-12-31 23:59:53 | INFO     | [SUCCESS] LF Search Complete
+2025-12-31 23:59:55 | INFO     | [Worker_9233] Completed: CAI-AHB - 7 results, 0 errors
+2025-12-31 23:59:55 | INFO     | [Worker_9233] Processing: CAI-GIZ
+2025-12-31 23:59:55 | INFO     |   Tier 0: Range 2, Chunk 2/5 (6 days)

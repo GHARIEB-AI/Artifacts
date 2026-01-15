@@ -1,0 +1,41 @@
+2025-12-31 21:00:02 | INFO     | ======================================================================
+2025-12-31 21:00:02 | INFO     | Load Factor Scraper Started - Route: CAI-DMM
+2025-12-31 21:00:02 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_20.48\logs\LF_CAI-DMM_20251231_210002.log
+2025-12-31 21:00:02 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 21:00:02 | INFO     | ======================================================================
+2025-12-31 21:00:02 | INFO     | Starting LF search for route: CAI-DMM
+2025-12-31 21:00:02 | INFO     | [START] LF Search
+2025-12-31 21:00:03 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 21:00:03 | INFO     | [DAY_START] Processing 17JAN
+2025-12-31 21:00:03 | INFO     | [lf.day.start] Processing CAI-DMM for 17JAN
+2025-12-31 21:00:05 | INFO     | [lf.day.flights_found] Found 1 flights on 17JAN
+2025-12-31 21:00:07 | INFO     | [lf.flight.extracted] SM433 on 17JAN: BKG=64, LF=35.8%
+2025-12-31 21:00:13 | INFO     | [SUCCESS] Day 17JAN
+2025-12-31 21:00:13 | INFO     | [DAY_START] Processing 16JAN
+2025-12-31 21:00:13 | INFO     | [lf.day.start] Processing CAI-DMM for 16JAN
+2025-12-31 21:00:14 | INFO     | [lf.day.flights_found] Found 1 flights on 16JAN
+2025-12-31 21:00:16 | INFO     | [lf.flight.extracted] SM433 on 16JAN: BKG=77, LF=43.0%
+2025-12-31 21:00:22 | INFO     | [SUCCESS] Day 16JAN
+2025-12-31 21:00:22 | INFO     | [DAY_START] Processing 15JAN
+2025-12-31 21:00:22 | INFO     | [lf.day.start] Processing CAI-DMM for 15JAN
+2025-12-31 21:00:23 | INFO     | [lf.day.flights_found] Found 1 flights on 15JAN
+2025-12-31 21:00:25 | INFO     | [lf.flight.extracted] SM433 on 15JAN: BKG=54, LF=30.2%
+2025-12-31 21:00:31 | INFO     | [SUCCESS] Day 15JAN
+2025-12-31 21:00:31 | INFO     | [DAY_START] Processing 14JAN
+2025-12-31 21:00:31 | INFO     | [lf.day.start] Processing CAI-DMM for 14JAN
+2025-12-31 21:00:32 | WARNING  | [lf.day.no_flights] No direct flights on 14JAN
+2025-12-31 21:00:32 | INFO     | [SUCCESS] Day 14JAN
+2025-12-31 21:00:32 | INFO     | [DAY_START] Processing 13JAN
+2025-12-31 21:00:32 | INFO     | [lf.day.start] Processing CAI-DMM for 13JAN
+2025-12-31 21:00:33 | INFO     | [lf.day.flights_found] Found 1 flights on 13JAN
+2025-12-31 21:00:36 | INFO     | [lf.flight.extracted] SM433 on 13JAN: BKG=49, LF=27.4%
+2025-12-31 21:00:41 | ERROR    | Atomic write failed for D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_20.48\checkpoints\flight_booking_data.json: [WinError 32] The process cannot access the file because it is being used by another process: 'D:\\CODERED\\LAB\\market_insights\\outputs\\run_generated_311225_at_20.48\\checkpoints\\flight_booking_data.json'
+2025-12-31 21:00:42 | INFO     | [SUCCESS] Day 13JAN
+2025-12-31 21:00:42 | INFO     | [DAY_START] Processing 12JAN
+2025-12-31 21:00:42 | INFO     | [lf.day.start] Processing CAI-DMM for 12JAN
+2025-12-31 21:00:43 | WARNING  | [lf.day.no_flights] No direct flights on 12JAN
+2025-12-31 21:00:43 | INFO     | [SUCCESS] Day 12JAN
+2025-12-31 21:00:43 | INFO     | [SUCCESS] LF Search Complete
+2025-12-31 21:00:45 | INFO     | [Worker_9234] Completed: CAI-DMM - 6 results, 0 errors
+2025-12-31 21:00:45 | INFO     | [Worker_9234] Processing: CAI-YNB
+2025-12-31 21:00:45 | INFO     |   Tier 0: Range 1, Chunk 3/5 (6 days)

@@ -1,0 +1,38 @@
+2026-01-01 00:06:04 | INFO     | ======================================================================
+2026-01-01 00:06:04 | INFO     | Load Factor Scraper Started - Route: ELQ-ATZ
+2026-01-01 00:06:04 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_23.27\logs\LF_ELQ-ATZ_20260101_000604.log
+2026-01-01 00:06:04 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-01 00:06:04 | INFO     | ======================================================================
+2026-01-01 00:06:04 | INFO     | Starting LF search for route: ELQ-ATZ
+2026-01-01 00:06:04 | INFO     | [START] LF Search
+2026-01-01 00:06:05 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-01 00:06:06 | INFO     | [DAY_START] Processing 17JAN
+2026-01-01 00:06:06 | INFO     | [lf.day.start] Processing ELQ-ATZ for 17JAN
+2026-01-01 00:06:07 | INFO     | [lf.day.flights_found] Found 1 flights on 17JAN
+2026-01-01 00:06:09 | INFO     | [lf.flight.extracted] SM436 on 17JAN: BKG=50, LF=29.9%
+2026-01-01 00:06:13 | INFO     | [SUCCESS] Day 17JAN
+2026-01-01 00:06:13 | INFO     | [DAY_START] Processing 16JAN
+2026-01-01 00:06:13 | INFO     | [lf.day.start] Processing ELQ-ATZ for 16JAN
+2026-01-01 00:06:14 | WARNING  | [lf.day.no_flights] No direct flights on 16JAN
+2026-01-01 00:06:14 | INFO     | [SUCCESS] Day 16JAN
+2026-01-01 00:06:14 | INFO     | [DAY_START] Processing 15JAN
+2026-01-01 00:06:14 | INFO     | [lf.day.start] Processing ELQ-ATZ for 15JAN
+2026-01-01 00:06:15 | WARNING  | [lf.day.no_flights] No direct flights on 15JAN
+2026-01-01 00:06:16 | INFO     | [SUCCESS] Day 15JAN
+2026-01-01 00:06:16 | INFO     | [DAY_START] Processing 14JAN
+2026-01-01 00:06:16 | INFO     | [lf.day.start] Processing ELQ-ATZ for 14JAN
+2026-01-01 00:06:17 | INFO     | [lf.day.flights_found] Found 1 flights on 14JAN
+2026-01-01 00:06:19 | INFO     | [lf.flight.extracted] SM436 on 14JAN: BKG=51, LF=30.5%
+2026-01-01 00:06:23 | INFO     | [SUCCESS] Day 14JAN
+2026-01-01 00:06:23 | INFO     | [DAY_START] Processing 13JAN
+2026-01-01 00:06:23 | INFO     | [lf.day.start] Processing ELQ-ATZ for 13JAN
+2026-01-01 00:06:24 | WARNING  | [lf.day.no_flights] No direct flights on 13JAN
+2026-01-01 00:06:24 | INFO     | [SUCCESS] Day 13JAN
+2026-01-01 00:06:24 | INFO     | [DAY_START] Processing 12JAN
+2026-01-01 00:06:24 | INFO     | [lf.day.start] Processing ELQ-ATZ for 12JAN
+2026-01-01 00:06:25 | WARNING  | [lf.day.no_flights] No direct flights on 12JAN
+2026-01-01 00:06:25 | INFO     | [SUCCESS] Day 12JAN
+2026-01-01 00:06:25 | INFO     | [SUCCESS] LF Search Complete
+2026-01-01 00:06:27 | INFO     | [Worker_9227] Completed: ELQ-ATZ - 6 results, 0 errors
+2026-01-01 00:06:27 | INFO     | [Worker_9227] Processing: ATZ-MED
+2026-01-01 00:06:27 | INFO     |   Tier 0: Range 1, Chunk 3/5 (6 days)

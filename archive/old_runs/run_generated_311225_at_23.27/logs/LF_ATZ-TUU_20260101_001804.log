@@ -1,0 +1,33 @@
+2026-01-01 00:18:04 | INFO     | ======================================================================
+2026-01-01 00:18:04 | INFO     | Load Factor Scraper Started - Route: ATZ-TUU
+2026-01-01 00:18:04 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_23.27\logs\LF_ATZ-TUU_20260101_001804.log
+2026-01-01 00:18:04 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-01 00:18:04 | INFO     | ======================================================================
+2026-01-01 00:18:04 | INFO     | Starting LF search for route: ATZ-TUU
+2026-01-01 00:18:04 | INFO     | [START] LF Search
+2026-01-01 00:18:05 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-01 00:18:05 | INFO     | [DAY_START] Processing 06JAN
+2026-01-01 00:18:05 | INFO     | [lf.day.start] Processing ATZ-TUU for 06JAN
+2026-01-01 00:18:06 | WARNING  | [lf.day.no_flights] No direct flights on 06JAN
+2026-01-01 00:18:06 | INFO     | [SUCCESS] Day 06JAN
+2026-01-01 00:18:06 | INFO     | [DAY_START] Processing 05JAN
+2026-01-01 00:18:06 | INFO     | [lf.day.start] Processing ATZ-TUU for 05JAN
+2026-01-01 00:18:07 | WARNING  | [lf.day.no_flights] No direct flights on 05JAN
+2026-01-01 00:18:08 | INFO     | [SUCCESS] Day 05JAN
+2026-01-01 00:18:08 | INFO     | [DAY_START] Processing 04JAN
+2026-01-01 00:18:08 | INFO     | [lf.day.start] Processing ATZ-TUU for 04JAN
+2026-01-01 00:18:09 | WARNING  | [lf.day.no_flights] No direct flights on 04JAN
+2026-01-01 00:18:09 | INFO     | [SUCCESS] Day 04JAN
+2026-01-01 00:18:09 | INFO     | [DAY_START] Processing 03JAN
+2026-01-01 00:18:09 | INFO     | [lf.day.start] Processing ATZ-TUU for 03JAN
+2026-01-01 00:18:10 | WARNING  | [lf.day.no_flights] No direct flights on 03JAN
+2026-01-01 00:18:10 | INFO     | [SUCCESS] Day 03JAN
+2026-01-01 00:18:10 | INFO     | [DAY_START] Processing 02JAN
+2026-01-01 00:18:10 | INFO     | [lf.day.start] Processing ATZ-TUU for 02JAN
+2026-01-01 00:18:11 | INFO     | [lf.day.flights_found] Found 1 flights on 02JAN
+2026-01-01 00:18:13 | INFO     | [lf.flight.extracted] SM327 on 02JAN: BKG=51, LF=28.5%
+2026-01-01 00:18:18 | INFO     | [SUCCESS] Day 02JAN
+2026-01-01 00:18:18 | INFO     | [SUCCESS] LF Search Complete
+2026-01-01 00:18:20 | INFO     | [Worker_9233] Completed: ATZ-TUU - 5 results, 0 errors
+2026-01-01 00:18:20 | INFO     | [Worker_9233] Processing: CAI-AHB
+2026-01-01 00:18:20 | INFO     |   Tier 0: Range 2, Chunk 5/5 (6 days)

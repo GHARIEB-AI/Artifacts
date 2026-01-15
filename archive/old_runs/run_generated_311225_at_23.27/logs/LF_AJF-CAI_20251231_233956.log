@@ -1,0 +1,34 @@
+2025-12-31 23:39:56 | INFO     | ======================================================================
+2025-12-31 23:39:56 | INFO     | Load Factor Scraper Started - Route: AJF-CAI
+2025-12-31 23:39:56 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_23.27\logs\LF_AJF-CAI_20251231_233956.log
+2025-12-31 23:39:56 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 23:39:56 | INFO     | ======================================================================
+2025-12-31 23:39:56 | INFO     | Starting LF search for route: AJF-CAI
+2025-12-31 23:39:56 | INFO     | [START] LF Search
+2025-12-31 23:39:58 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 23:39:58 | INFO     | [DAY_START] Processing 10FEB
+2025-12-31 23:39:58 | INFO     | [lf.day.start] Processing AJF-CAI for 10FEB
+2025-12-31 23:39:59 | INFO     | [lf.day.flights_found] Found 1 flights on 10FEB
+2025-12-31 23:40:02 | INFO     | [lf.flight.extracted] SM322 on 10FEB: BKG=27, LF=15.4%
+2025-12-31 23:40:06 | INFO     | [SUCCESS] Day 10FEB
+2025-12-31 23:40:06 | INFO     | [DAY_START] Processing 09FEB
+2025-12-31 23:40:06 | INFO     | [lf.day.start] Processing AJF-CAI for 09FEB
+2025-12-31 23:40:07 | WARNING  | [lf.day.no_flights] No direct flights on 09FEB
+2025-12-31 23:40:08 | INFO     | [SUCCESS] Day 09FEB
+2025-12-31 23:40:08 | INFO     | [DAY_START] Processing 08FEB
+2025-12-31 23:40:08 | INFO     | [lf.day.start] Processing AJF-CAI for 08FEB
+2025-12-31 23:40:09 | WARNING  | [lf.day.no_flights] No direct flights on 08FEB
+2025-12-31 23:40:09 | INFO     | [SUCCESS] Day 08FEB
+2025-12-31 23:40:09 | INFO     | [DAY_START] Processing 07FEB
+2025-12-31 23:40:09 | INFO     | [lf.day.start] Processing AJF-CAI for 07FEB
+2025-12-31 23:40:10 | INFO     | [lf.day.flights_found] Found 1 flights on 07FEB
+2025-12-31 23:40:13 | INFO     | [lf.flight.extracted] SM322 on 07FEB: BKG=25, LF=14.3%
+2025-12-31 23:40:17 | INFO     | [SUCCESS] Day 07FEB
+2025-12-31 23:40:17 | INFO     | [DAY_START] Processing 06FEB
+2025-12-31 23:40:17 | INFO     | [lf.day.start] Processing AJF-CAI for 06FEB
+2025-12-31 23:40:18 | WARNING  | [lf.day.no_flights] No direct flights on 06FEB
+2025-12-31 23:40:18 | INFO     | [SUCCESS] Day 06FEB
+2025-12-31 23:40:18 | INFO     | [SUCCESS] LF Search Complete
+2025-12-31 23:40:20 | INFO     | [Worker_9234] Completed: AJF-CAI - 5 results, 0 errors
+2025-12-31 23:40:20 | INFO     | [Worker_9234] Processing: ELQ-ATZ
+2025-12-31 23:40:20 | INFO     |   Tier 0: Range 3, Chunk 4/5 (5 days)

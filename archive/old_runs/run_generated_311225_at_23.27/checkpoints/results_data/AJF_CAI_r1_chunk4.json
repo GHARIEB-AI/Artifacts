@@ -1,0 +1,115 @@
+{
+  "task_id": "AJF-CAI_r1_chunk4",
+  "saved_at": "2026-01-01T00:17:08.785880",
+  "lf_results": {
+    "2026-01-06": [
+      {
+        "Date": "Tuesday, January 06, 2026",
+        "Flight": "SM322",
+        "DEP": "11:00",
+        "SOLD": 85,
+        "FULL CAPACITY": 175,
+        "LF%": 0.4857,
+        "LowestAvail": "X3",
+        "LASTSOLD": "2025-12-31 00:00:00",
+        "WEEKLY PROGRESS": 52,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 41,
+          "U": 30,
+          "X": 7,
+          "T": 3,
+          "W": 0,
+          "S": 4,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "AJF-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 12,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM322",
+          "sm_route": "AJF-CAI",
+          "sm_dep": "1100",
+          "sm_arr": "1145",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "SM0054",
+              "outbound_route": "CAI-LXR",
+              "outbound_dep": "1530",
+              "passengers": [
+                {
+                  "iata": "RUHS228YD"
+                },
+                {
+                  "iata": "RUHS228YD"
+                },
+                {
+                  "iata": "RUHS228YD"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "2026-01-05": [],
+    "2026-01-04": [],
+    "2026-01-03": [
+      {
+        "Date": "Saturday, January 03, 2026",
+        "Flight": "SM322",
+        "DEP": "21:15",
+        "SOLD": 137,
+        "FULL CAPACITY": 175,
+        "LF%": 0.7829,
+        "LowestAvail": "W9",
+        "LASTSOLD": "2025-12-31 00:00:00",
+        "WEEKLY PROGRESS": 89,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 59,
+          "U": 39,
+          "X": 10,
+          "T": 10,
+          "W": 16,
+          "S": 2,
+          "G": 1,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "AJF-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 28,
+        "CONNECTING_PASSENGERS": null
+      }
+    ],
+    "2026-01-02": []
+  },
+  "lf_errors": {}
+}

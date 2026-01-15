@@ -1,0 +1,79 @@
+2026-01-05 17:04:11 | INFO     | ======================================================================
+2026-01-05 17:04:11 | INFO     | Load Factor Scraper Started - Route: ATZ-JED
+2026-01-05 17:04:11 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_050126_at_16.47\logs\LF_ATZ-JED_20260105_170411.log
+2026-01-05 17:04:11 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-05 17:04:11 | INFO     | ======================================================================
+2026-01-05 17:04:11 | INFO     | Starting LF search for route: ATZ-JED
+2026-01-05 17:04:11 | INFO     | [START] LF Search
+2026-01-05 17:04:12 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-05 17:04:12 | INFO     | [DAY_START] Processing 28FEB
+2026-01-05 17:04:12 | INFO     | [lf.day.start] Processing ATZ-JED for 28FEB
+2026-01-05 17:04:13 | INFO     | [lf.day.flights_found] Found 3 flights on 28FEB
+2026-01-05 17:04:15 | INFO     | [lf.flight.extracted] SM491 on 28FEB: BKG=0, LF=0.0%
+2026-01-05 17:04:19 | INFO     | [lf.flight.extracted] SM453 on 28FEB: BKG=1, LF=0.6%
+2026-01-05 17:04:23 | INFO     | [lf.flight.extracted] SM455 on 28FEB: BKG=8, LF=4.5%
+2026-01-05 17:04:28 | INFO     | [SUCCESS] Day 28FEB
+2026-01-05 17:04:28 | INFO     | [DAY_START] Processing 27FEB
+2026-01-05 17:04:28 | INFO     | [lf.day.start] Processing ATZ-JED for 27FEB
+2026-01-05 17:04:29 | INFO     | [lf.day.flights_found] Found 2 flights on 27FEB
+2026-01-05 17:04:31 | INFO     | [lf.flight.extracted] SM491 on 27FEB: BKG=8, LF=4.5%
+2026-01-05 17:04:35 | INFO     | [lf.flight.extracted] SM2479 on 27FEB: BKG=0, LF=0.0%
+2026-01-05 17:04:38 | INFO     | [SUCCESS] Day 27FEB
+2026-01-05 17:04:38 | INFO     | [DAY_START] Processing 26FEB
+2026-01-05 17:04:38 | INFO     | [lf.day.start] Processing ATZ-JED for 26FEB
+2026-01-05 17:04:39 | INFO     | [lf.day.flights_found] Found 2 flights on 26FEB
+2026-01-05 17:04:43 | INFO     | [lf.flight.extracted] SM453 on 26FEB: BKG=1, LF=0.6%
+2026-01-05 17:04:48 | INFO     | [lf.flight.extracted] SM455 on 26FEB: BKG=0, LF=0.0%
+2026-01-05 17:04:52 | INFO     | [SUCCESS] Day 26FEB
+2026-01-05 17:04:52 | INFO     | [DAY_START] Processing 25FEB
+2026-01-05 17:04:52 | INFO     | [lf.day.start] Processing ATZ-JED for 25FEB
+2026-01-05 17:04:54 | INFO     | [lf.day.flights_found] Found 3 flights on 25FEB
+2026-01-05 17:04:56 | INFO     | [lf.flight.extracted] SM453 on 25FEB: BKG=0, LF=0.0%
+2026-01-05 17:05:25 | INFO     | [lf.flight.extracted] SM491 on 25FEB: BKG=0, LF=0.0%
+2026-01-05 17:05:31 | INFO     | [lf.flight.extracted] SM421 on 25FEB: BKG=2, LF=1.1%
+2026-01-05 17:05:34 | INFO     | [SUCCESS] Day 25FEB
+2026-01-05 17:05:34 | INFO     | [DAY_START] Processing 24FEB
+2026-01-05 17:05:34 | INFO     | [lf.day.start] Processing ATZ-JED for 24FEB
+2026-01-05 17:05:37 | INFO     | [lf.day.flights_found] Found 3 flights on 24FEB
+2026-01-05 17:05:42 | INFO     | [lf.flight.extracted] SM453 on 24FEB: BKG=95, LF=53.1%
+2026-01-05 17:05:45 | INFO     | [lf.flight.extracted] SM2471 on 24FEB: BKG=90, LF=50.3%
+2026-01-05 17:05:49 | INFO     | [lf.flight.extracted] SM455 on 24FEB: BKG=0, LF=0.0%
+2026-01-05 17:05:53 | INFO     | [SUCCESS] Day 24FEB
+2026-01-05 17:05:53 | INFO     | [DAY_START] Processing 23FEB
+2026-01-05 17:05:53 | INFO     | [lf.day.start] Processing ATZ-JED for 23FEB
+2026-01-05 17:05:54 | INFO     | [lf.day.flights_found] Found 4 flights on 23FEB
+2026-01-05 17:05:57 | INFO     | [lf.flight.extracted] SM491 on 23FEB: BKG=0, LF=0.0%
+2026-01-05 17:06:00 | INFO     | [lf.flight.extracted] SM455 on 23FEB: BKG=0, LF=0.0%
+2026-01-05 17:06:03 | INFO     | [lf.flight.extracted] SM453 on 23FEB: BKG=0, LF=0.0%
+2026-01-05 17:06:07 | INFO     | [lf.flight.extracted] SM961 on 23FEB: BKG=0, LF=0.0%
+2026-01-05 17:06:08 | INFO     | [SUCCESS] Day 23FEB
+2026-01-05 17:06:08 | INFO     | [DAY_START] Processing 22FEB
+2026-01-05 17:06:08 | INFO     | [lf.day.start] Processing ATZ-JED for 22FEB
+2026-01-05 17:06:09 | INFO     | [lf.day.flights_found] Found 3 flights on 22FEB
+2026-01-05 17:06:11 | INFO     | [lf.flight.extracted] SM491 on 22FEB: BKG=53, LF=29.6%
+2026-01-05 17:06:15 | INFO     | [lf.flight.extracted] SM455 on 22FEB: BKG=2, LF=1.1%
+2026-01-05 17:06:18 | INFO     | [lf.flight.extracted] SM953 on 22FEB: BKG=90, LF=50.3%
+2026-01-05 17:06:23 | INFO     | [SUCCESS] Day 22FEB
+2026-01-05 17:06:23 | INFO     | [DAY_START] Processing 21FEB
+2026-01-05 17:06:23 | INFO     | [lf.day.start] Processing ATZ-JED for 21FEB
+2026-01-05 17:06:24 | INFO     | [lf.day.flights_found] Found 3 flights on 21FEB
+2026-01-05 17:06:27 | INFO     | [lf.flight.extracted] SM491 on 21FEB: BKG=5, LF=2.8%
+2026-01-05 17:06:30 | INFO     | [lf.flight.extracted] SM453 on 21FEB: BKG=6, LF=3.4%
+2026-01-05 17:06:34 | INFO     | [lf.flight.extracted] SM455 on 21FEB: BKG=3, LF=1.7%
+2026-01-05 17:06:40 | INFO     | [SUCCESS] Day 21FEB
+2026-01-05 17:06:40 | INFO     | [DAY_START] Processing 20FEB
+2026-01-05 17:06:40 | INFO     | [lf.day.start] Processing ATZ-JED for 20FEB
+2026-01-05 17:06:41 | INFO     | [lf.day.flights_found] Found 2 flights on 20FEB
+2026-01-05 17:06:44 | INFO     | [lf.flight.extracted] SM491 on 20FEB: BKG=3, LF=1.7%
+2026-01-05 17:06:47 | INFO     | [lf.flight.extracted] SM955 on 20FEB: BKG=0, LF=0.0%
+2026-01-05 17:06:50 | INFO     | [SUCCESS] Day 20FEB
+2026-01-05 17:06:50 | INFO     | [DAY_START] Processing 19FEB
+2026-01-05 17:06:50 | INFO     | [lf.day.start] Processing ATZ-JED for 19FEB
+2026-01-05 17:06:52 | INFO     | [lf.day.flights_found] Found 2 flights on 19FEB
+2026-01-05 17:06:54 | INFO     | [lf.flight.extracted] SM453 on 19FEB: BKG=93, LF=52.0%
+2026-01-05 17:06:58 | INFO     | [lf.flight.extracted] SM455 on 19FEB: BKG=1, LF=0.6%
+2026-01-05 17:07:02 | INFO     | [SUCCESS] Day 19FEB
+2026-01-05 17:07:02 | INFO     | [SUCCESS] LF Search Complete
+2026-01-05 17:07:04 | INFO     | [Worker_9224] Completed: ATZ-JED - 10 results, 0 errors
+2026-01-05 17:07:04 | INFO     | [Worker_9224] Processing: MED-HBE
+2026-01-05 17:07:04 | INFO     |   Tier 0: Range 2, Chunk 2/3 (9 days)

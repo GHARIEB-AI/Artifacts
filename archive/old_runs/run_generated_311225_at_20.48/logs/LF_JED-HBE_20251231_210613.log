@@ -1,0 +1,41 @@
+2025-12-31 21:06:13 | INFO     | ======================================================================
+2025-12-31 21:06:13 | INFO     | Load Factor Scraper Started - Route: JED-HBE
+2025-12-31 21:06:13 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_20.48\logs\LF_JED-HBE_20251231_210613.log
+2025-12-31 21:06:13 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 21:06:13 | INFO     | ======================================================================
+2025-12-31 21:06:13 | INFO     | Starting LF search for route: JED-HBE
+2025-12-31 21:06:13 | INFO     | [START] LF Search
+2025-12-31 21:06:15 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 21:06:15 | INFO     | [DAY_START] Processing 05JAN
+2025-12-31 21:06:15 | INFO     | [lf.day.start] Processing JED-HBE for 05JAN
+2025-12-31 21:06:17 | INFO     | [lf.day.flights_found] Found 2 flights on 05JAN
+2025-12-31 21:06:19 | INFO     | [lf.flight.extracted] SM458 on 05JAN: BKG=168, LF=97.7%
+2025-12-31 21:06:24 | INFO     | [lf.flight.extracted] SM452 on 05JAN: BKG=173, LF=100.6%
+2025-12-31 21:06:35 | INFO     | [SUCCESS] Day 05JAN
+2025-12-31 21:06:35 | INFO     | [DAY_START] Processing 04JAN
+2025-12-31 21:06:35 | INFO     | [lf.day.start] Processing JED-HBE for 04JAN
+2025-12-31 21:06:36 | INFO     | [lf.day.flights_found] Found 2 flights on 04JAN
+2025-12-31 21:06:38 | INFO     | [lf.flight.extracted] SM458 on 04JAN: BKG=165, LF=92.7%
+2025-12-31 21:06:42 | INFO     | [lf.flight.extracted] SM452 on 04JAN: BKG=164, LF=93.7%
+2025-12-31 21:06:54 | INFO     | [SUCCESS] Day 04JAN
+2025-12-31 21:06:54 | INFO     | [DAY_START] Processing 03JAN
+2025-12-31 21:06:54 | INFO     | [lf.day.start] Processing JED-HBE for 03JAN
+2025-12-31 21:06:56 | INFO     | [lf.day.flights_found] Found 2 flights on 03JAN
+2025-12-31 21:06:58 | INFO     | [lf.flight.extracted] SM458 on 03JAN: BKG=165, LF=94.3%
+2025-12-31 21:07:01 | INFO     | [lf.flight.extracted] SM452 on 03JAN: BKG=105, LF=61.1%
+2025-12-31 21:07:07 | ERROR    | Atomic write failed for D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_20.48\checkpoints\flight_booking_data.json: [WinError 32] The process cannot access the file because it is being used by another process: 'D:\\CODERED\\LAB\\market_insights\\outputs\\run_generated_311225_at_20.48\\checkpoints\\flight_booking_data.tmp' -> 'D:\\CODERED\\LAB\\market_insights\\outputs\\run_generated_311225_at_20.48\\checkpoints\\flight_booking_data.json'
+2025-12-31 21:07:13 | INFO     | [SUCCESS] Day 03JAN
+2025-12-31 21:07:13 | INFO     | [DAY_START] Processing 02JAN
+2025-12-31 21:07:13 | INFO     | [lf.day.start] Processing JED-HBE for 02JAN
+2025-12-31 21:07:17 | INFO     | [lf.day.flights_found] Found 1 flights on 02JAN
+2025-12-31 21:07:19 | INFO     | [lf.flight.extracted] SM452 on 02JAN: BKG=167, LF=95.4%
+2025-12-31 21:07:25 | INFO     | [SUCCESS] Day 02JAN
+2025-12-31 21:07:25 | INFO     | [DAY_START] Processing 01JAN
+2025-12-31 21:07:25 | INFO     | [lf.day.start] Processing JED-HBE for 01JAN
+2025-12-31 21:07:26 | INFO     | [lf.day.flights_found] Found 1 flights on 01JAN
+2025-12-31 21:07:28 | INFO     | [lf.flight.extracted] SM452 on 01JAN: BKG=162, LF=92.6%
+2025-12-31 21:07:34 | INFO     | [SUCCESS] Day 01JAN
+2025-12-31 21:07:34 | INFO     | [SUCCESS] LF Search Complete
+2025-12-31 21:07:37 | INFO     | [Worker_9225] Completed: JED-HBE - 5 results, 0 errors
+2025-12-31 21:07:37 | INFO     | [Worker_9225] Processing: ELQ-ATZ
+2025-12-31 21:07:37 | INFO     |   Tier 0: Range 1, Chunk 5/5 (6 days)

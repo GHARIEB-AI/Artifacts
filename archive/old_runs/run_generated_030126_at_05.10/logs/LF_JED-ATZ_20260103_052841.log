@@ -1,0 +1,44 @@
+2026-01-03 05:28:41 | INFO     | ======================================================================
+2026-01-03 05:28:41 | INFO     | Load Factor Scraper Started - Route: JED-ATZ
+2026-01-03 05:28:41 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_030126_at_05.10\logs\LF_JED-ATZ_20260103_052841.log
+2026-01-03 05:28:41 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-03 05:28:41 | INFO     | ======================================================================
+2026-01-03 05:28:41 | INFO     | Starting LF search for route: JED-ATZ
+2026-01-03 05:28:41 | INFO     | [START] LF Search
+2026-01-03 05:28:42 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-03 05:28:42 | INFO     | [DAY_START] Processing 12JAN
+2026-01-03 05:28:42 | INFO     | [lf.day.start] Processing JED-ATZ for 12JAN
+2026-01-03 05:28:43 | INFO     | [lf.day.flights_found] Found 3 flights on 12JAN
+2026-01-03 05:28:45 | INFO     | [lf.flight.extracted] SM456 on 12JAN: BKG=144, LF=85.7%
+2026-01-03 05:28:48 | INFO     | [lf.flight.extracted] SM492 on 12JAN: BKG=125, LF=71.4%
+2026-01-03 05:28:51 | INFO     | [lf.flight.extracted] SM454 on 12JAN: BKG=149, LF=85.1%
+2026-01-03 05:29:05 | INFO     | [SUCCESS] Day 12JAN
+2026-01-03 05:29:05 | INFO     | [DAY_START] Processing 11JAN
+2026-01-03 05:29:05 | INFO     | [lf.day.start] Processing JED-ATZ for 11JAN
+2026-01-03 05:29:06 | INFO     | [lf.day.flights_found] Found 2 flights on 11JAN
+2026-01-03 05:29:08 | INFO     | [lf.flight.extracted] SM492 on 11JAN: BKG=179, LF=102.3%
+2026-01-03 05:29:12 | INFO     | [lf.flight.extracted] SM456 on 11JAN: BKG=157, LF=89.7%
+2026-01-03 05:29:22 | INFO     | [SUCCESS] Day 11JAN
+2026-01-03 05:29:22 | INFO     | [DAY_START] Processing 10JAN
+2026-01-03 05:29:22 | INFO     | [lf.day.start] Processing JED-ATZ for 10JAN
+2026-01-03 05:29:23 | INFO     | [lf.day.flights_found] Found 3 flights on 10JAN
+2026-01-03 05:29:25 | INFO     | [lf.flight.extracted] SM492 on 10JAN: BKG=153, LF=87.4%
+2026-01-03 05:29:28 | INFO     | [lf.flight.extracted] SM454 on 10JAN: BKG=157, LF=89.7%
+2026-01-03 05:29:31 | INFO     | [lf.flight.extracted] SM456 on 10JAN: BKG=163, LF=93.1%
+2026-01-03 05:29:45 | INFO     | [SUCCESS] Day 10JAN
+2026-01-03 05:29:45 | INFO     | [DAY_START] Processing 09JAN
+2026-01-03 05:29:45 | INFO     | [lf.day.start] Processing JED-ATZ for 09JAN
+2026-01-03 05:29:46 | INFO     | [lf.day.flights_found] Found 1 flights on 09JAN
+2026-01-03 05:29:48 | INFO     | [lf.flight.extracted] SM492 on 09JAN: BKG=71, LF=40.6%
+2026-01-03 05:29:53 | INFO     | [SUCCESS] Day 09JAN
+2026-01-03 05:29:53 | INFO     | [DAY_START] Processing 08JAN
+2026-01-03 05:29:53 | INFO     | [lf.day.start] Processing JED-ATZ for 08JAN
+2026-01-03 05:29:54 | INFO     | [lf.day.flights_found] Found 3 flights on 08JAN
+2026-01-03 05:29:56 | INFO     | [lf.flight.extracted] SM422 on 08JAN: BKG=168, LF=96.0%
+2026-01-03 05:29:59 | INFO     | [lf.flight.extracted] SM454 on 08JAN: BKG=167, LF=95.4%
+2026-01-03 05:30:02 | INFO     | [lf.flight.extracted] SM456 on 08JAN: BKG=178, LF=106.0%
+2026-01-03 05:30:18 | INFO     | [SUCCESS] Day 08JAN
+2026-01-03 05:30:18 | INFO     | [SUCCESS] LF Search Complete
+2026-01-03 05:30:20 | INFO     | [Worker_9223] Completed: JED-ATZ - 5 results, 0 errors
+2026-01-03 05:30:20 | INFO     | [Worker_9223] Processing: JED-CAI
+2026-01-03 05:30:20 | INFO     |   Tier 0: Range 1, Chunk 3/3 (5 days)

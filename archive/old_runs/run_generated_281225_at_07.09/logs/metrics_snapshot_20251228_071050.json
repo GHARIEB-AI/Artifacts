@@ -1,0 +1,102 @@
+{
+  "timestamp": "2025-12-28T07:10:50.763171",
+  "service": "market-insights",
+  "counters": {
+    "oal_requests_total": {
+      "description": "Total OAL API requests",
+      "values": []
+    },
+    "lf_requests_total": {
+      "description": "Total LF requests",
+      "values": [
+        {
+          "labels": {
+            "destination": "GIZ",
+            "origin": "ATZ",
+            "status": "success"
+          },
+          "value": 5.0
+        },
+        {
+          "labels": {
+            "destination": "MED",
+            "origin": "HBE",
+            "status": "success"
+          },
+          "value": 5.0
+        }
+      ]
+    },
+    "errors_total": {
+      "description": "Total errors",
+      "values": []
+    }
+  },
+  "gauges": {
+    "routes_in_progress": {
+      "description": "Routes currently being processed",
+      "values": [
+        {
+          "labels": {},
+          "value": 0.0
+        }
+      ]
+    },
+    "flights_analyzed": {
+      "description": "Total flights analyzed in session",
+      "values": [
+        {
+          "labels": {
+            "direction": "lf"
+          },
+          "value": 4.0
+        }
+      ]
+    },
+    "circuit_breaker_state": {
+      "description": "Circuit breaker state (0=closed, 1=open)",
+      "values": []
+    }
+  },
+  "histograms": {
+    "request_duration_seconds": {
+      "description": "Request duration in seconds",
+      "data": {}
+    },
+    "route_processing_seconds": {
+      "description": "Route processing duration",
+      "data": {
+        "{'route': 'ATZ-GIZ'}": {
+          "sum": 8.623231,
+          "count": 5,
+          "buckets": {
+            "5.0": 5,
+            "10.0": 5,
+            "30.0": 5,
+            "60.0": 5,
+            "120.0": 5,
+            "300.0": 5
+          },
+          "p50": 3.0,
+          "p95": 4.8,
+          "p99": 4.96
+        },
+        "{'route': 'HBE-MED'}": {
+          "sum": 30.405528999999998,
+          "count": 5,
+          "buckets": {
+            "10.0": 5,
+            "30.0": 5,
+            "60.0": 5,
+            "120.0": 5,
+            "300.0": 5,
+            "5.0": 1
+          },
+          "p50": 6.5,
+          "p95": 8.75,
+          "p99": 8.95
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,249 @@
+
+============================================================
+     LF WORKER - PORT 9222
+============================================================
+Worker: Worker_9222
+Status: READY
+Waiting for tasks...
+============================================================
+
+
+============================================================
+[Worker_9222] Processing: JED-HBE
+  Tier 0: Range 1, Chunk 1/2
+  Dates: 11 days
+  Date Range: 2026-01-31 to 2026-01-21
+============================================================
+
+2026-01-10 08:36:25 | INFO     | ======================================================================
+2026-01-10 08:36:25 | INFO     | Load Factor Scraper Started - Route: JED-HBE
+2026-01-10 08:36:25 | INFO     | Log file: D:\CODERED\LAB\Artifacts\run_generated_100126_at_08.36\logs\LF_JED-HBE_20260110_083625.log
+2026-01-10 08:36:25 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-10 08:36:25 | INFO     | ======================================================================
+[LF] Processing dates (override): ['31JAN', '30JAN', '29JAN', '28JAN', '27JAN', '26JAN', '25JAN', '24JAN', '23JAN', '22JAN', '21JAN']
+[LF] Attaching to Chrome for Altea access
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9222 (after 1 attempts)
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+[LF] Processing JED-HBE for 31JAN
+[LF][ERROR] Amadeus command error detected: UNKNOWN TRANSACTION
+[LF][ERROR] Command: SN31JANJEDHBE/ASM
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+============================================================
+[LF][RESYNC] Command 'SN31JANJEDHBE/ASM' failed: TECH_ERROR:UNKNOWN TRANSACTION
+[LF][RESYNC] Re-running entire day from SN command for JED-HBE 31JAN
+[LF][RESYNC] Attempt 1/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing JED-HBE for 31JAN
+[LF] 31JAN: found 2 direct flights
+[LF] SM458 31JAN: BKG=168, GRP=134, CAP=175, LF%=96.0%, Brd-Off=JED-HBE, Classes: P:134, I:17, O:14, X:3
+[LF] SM452 31JAN: BKG=168, GRP=123, CAP=175, LF%=96.0%, Brd-Off=JED-HBE, Classes: P:123, I:17, O:10, X:11, K:7
+[LF] Getting WEEKLY/LASTSOLD data for 2 flights
+[LF] SM458 31JAN: LASTSOLD=2026-01-02 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+[LF] SM452 31JAN: LASTSOLD=2026-01-07 00:00:00, WEEKLY=6, TODAY=0, YDAY=0
+[LF] Processing JED-HBE for 30JAN
+[LF] 30JAN: found 1 direct flights
+[LF] SM452 30JAN: BKG=72, GRP=0, CAP=175, LF%=41.1%, Brd-Off=JED-HBE, Classes: I:17, O:17, U:15, X:16, T:1, S:2, K:4
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM452 30JAN: LASTSOLD=2026-01-08 00:00:00, WEEKLY=13, TODAY=0, YDAY=0
+[LF] Processing JED-HBE for 29JAN
+[LF] 29JAN: found 1 direct flights
+[LF] SM452 29JAN: BKG=120, GRP=93, CAP=175, LF%=68.6%, Brd-Off=JED-HBE, Classes: P:93, I:14, O:5, X:7, K:1
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM452 29JAN: LASTSOLD=2026-01-08 00:00:00, WEEKLY=4, TODAY=0, YDAY=0
+[LF] Processing JED-HBE for 28JAN
+[LF] 28JAN: found 3 direct flights
+[LF] SM452 28JAN: BKG=156, GRP=130, CAP=175, LF%=89.1%, Brd-Off=JED-HBE, Classes: P:130, I:17, O:6, K:3
+[LF] SM474 28JAN: BKG=168, GRP=131, CAP=175, LF%=96.0%, Brd-Off=JED-HBE, Classes: P:131, I:17, O:4, X:16
+[LF] SM458 28JAN: BKG=171, GRP=170, CAP=175, LF%=97.7%, Brd-Off=JED-HBE, Classes: P:170, X:1
+[LF] Getting WEEKLY/LASTSOLD data for 3 flights
+[LF] SM452 28JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=23, TODAY=0, YDAY=3
+[LF] SM474 28JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=7, TODAY=0, YDAY=2
+[LF] SM458 28JAN: LASTSOLD=2025-11-21 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+[LF] Processing JED-HBE for 27JAN
+[LF] 27JAN: found 2 direct flights
+[LF] SM958 27JAN: BKG=11, GRP=0, CAP=167, LF%=6.6%, Brd-Off=JED-HBE, Classes: I:10, O:1
+[LF] SM452 27JAN: BKG=165, GRP=130, CAP=175, LF%=94.3%, Brd-Off=JED-HBE, Classes: P:130, I:17, O:11, X:5, T:1, K:1
+[LF] Getting WEEKLY/LASTSOLD data for 2 flights
+[LF] SM958 27JAN: LASTSOLD=2026-01-05 00:00:00, WEEKLY=4, TODAY=0, YDAY=0
+[LF] SM452 27JAN: LASTSOLD=2026-01-07 00:00:00, WEEKLY=12, TODAY=0, YDAY=0
+[LF] Processing JED-HBE for 26JAN
+[LF] 26JAN: found 5 direct flights
+[LF] SM952 26JAN: BKG=102, GRP=92, CAP=167, LF%=61.1%, Brd-Off=JED-HBE, Classes: P:47, E:45, I:10
+[LF] SM954 26JAN: BKG=37, GRP=30, CAP=175, LF%=21.1%, Brd-Off=JED-HBE, Classes: P:30, I:7
+[LF] SM458 26JAN: BKG=146, GRP=135, CAP=175, LF%=83.4%, Brd-Off=JED-HBE, Classes: P:135, I:11
+[LF] SM452 26JAN: BKG=79, GRP=45, CAP=175, LF%=45.1%, Brd-Off=JED-HBE, Classes: P:45, I:17, O:3, X:6, K:8
+[LF] SM956 26JAN: BKG=94, GRP=80, CAP=167, LF%=56.3%, Brd-Off=JED-HBE, Classes: P:80, I:10, O:4
+[LF] Getting WEEKLY/LASTSOLD data for 5 flights
+[LF] SM952 26JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=58, TODAY=0, YDAY=2
+[LF] SM954 26JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=6, TODAY=0, YDAY=4
+[LF] SM458 26JAN: LASTSOLD=2026-01-08 00:00:00, WEEKLY=17, TODAY=0, YDAY=0
+[LF] SM452 26JAN: LASTSOLD=2026-01-08 00:00:00, WEEKLY=18, TODAY=0, YDAY=0
+[LF] SM956 26JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=11, TODAY=0, YDAY=2
+[LF] Processing JED-HBE for 25JAN
+[LF] 25JAN: found 2 direct flights
+[LF] SM458 25JAN: BKG=168, GRP=139, CAP=175, LF%=96.0%, Brd-Off=JED-HBE, Classes: N:1, P:139, I:17, O:5, X:2, W:1, K:3
+[LF] SM452 25JAN: BKG=174, GRP=132, CAP=175, LF%=99.4%, Brd-Off=JED-HBE, Classes: P:132, I:17, O:15, U:2, X:4, K:4
+[LF] Getting WEEKLY/LASTSOLD data for 2 flights
+[LF] SM458 25JAN: LASTSOLD=2026-01-08 00:00:00, WEEKLY=14, TODAY=0, YDAY=0
+[LF] SM452 25JAN: LASTSOLD=2026-01-10 00:00:00, WEEKLY=21, TODAY=5, YDAY=0
+[LF] Processing JED-HBE for 24JAN
+[LF] 24JAN: found 2 direct flights
+[LF] SM458 24JAN: BKG=170, GRP=169, CAP=175, LF%=97.1%, Brd-Off=JED-HBE, Classes: P:169, X:1
+[LF] SM452 24JAN: BKG=164, GRP=130, CAP=175, LF%=93.7%, Brd-Off=JED-HBE, Classes: P:130, I:17, O:6, U:2, X:5, S:2, G:1, K:1
+[LF] Getting WEEKLY/LASTSOLD data for 2 flights
+[LF] SM458 24JAN: LASTSOLD=2025-12-03 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+[LF] SM452 24JAN: LASTSOLD=2026-01-07 00:00:00, WEEKLY=6, TODAY=0, YDAY=0
+[LF] Processing JED-HBE for 23JAN
+[LF] 23JAN: found 1 direct flights
+[LF] SM452 23JAN: BKG=62, GRP=0, CAP=175, LF%=35.4%, Brd-Off=JED-HBE, Classes: I:17, O:22, U:8, X:11, S:1, K:3
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF][ERROR] Amadeus command error detected: UNKNOWN TRANSACTION
+[LF][ERROR] Command: M
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+[LF][ERROR] SM452 23JAN: M: TECH_ERROR:UNKNOWN TRANSACTION
+[LF] Processing JED-HBE for 22JAN
+[LF][ERROR] Amadeus command error detected: UNKNOWN TRANSACTION
+[LF][ERROR] Command: SN22JANJEDHBE/ASM
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+============================================================
+[LF][RESYNC] Command 'SN22JANJEDHBE/ASM' failed: TECH_ERROR:UNKNOWN TRANSACTION
+[LF][RESYNC] Re-running entire day from SN command for JED-HBE 22JAN
+[LF][RESYNC] Attempt 1/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing JED-HBE for 22JAN
+[LF] 22JAN: found 1 direct flights
+[LF] SM452 22JAN: BKG=154, GRP=131, CAP=175, LF%=88.0%, Brd-Off=JED-HBE, Classes: P:131, I:17, X:3, L:1, K:2
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF][STALE] Stale element detected - rebinding...
+[LF][ERROR] Amadeus command error detected: UNKNOWN TRANSACTION
+[LF][ERROR] Command: LP/L(99)/SM452/22JAN
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+[LF][ERROR] SM452 22JAN: LP/L(99)/SM452/22JAN: TECH_ERROR:UNKNOWN TRANSACTION
+[LF] Processing JED-HBE for 21JAN
+[LF] 21JAN: found 3 direct flights
+[LF][SYNC] RETRYING: Cannot focus on command line
+[LF][INFO] Will try 50 times before pausing...
+[LF][RECONNECT] Connection lost. Attempting reconnect #1...
+[LF][INFO] Make sure Chrome is open with remote debugging port
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9222 (after 1 attempts)
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+[LF][SUCCESS] Chrome reconnected successfully!
+[LF][RESUME] Restoring session context with: SN21JANJEDHBE/ASM
+[LF][SYNC] RETRYING: Cannot focus on command line
+[LF][INFO] Will try 50 times before pausing...
+[LF][STALE] Stale element detected - rebinding...
+[LF][STALE] Stale element detected - rebinding...
+[LF][STALE] Stale element threshold reached (5/5)
+[LF][RESUME] Failed to restore context: DOM corrupted: Stale element threshold exceeded during focus (after 4 attempts)
+[LF] Processing JED-HBE for 21JAN
+[LF] 21JAN: found 3 direct flights
+[LF] SM452 21JAN: BKG=130, GRP=118, CAP=175, LF%=74.3%, Brd-Off=JED-HBE, Classes: P:118, I:12
+[LF][STALE] Stale element detected - rebinding...
+[LF][SYNC] RETRYING: Cannot focus on command line
+[LF][INFO] Will try 50 times before pausing...
+[LF] SM474 21JAN: BKG=157, GRP=137, CAP=175, LF%=89.7%, Brd-Off=JED-HBE, Classes: P:137, I:17, O:1, G:1, K:1
+[LF] SM458 21JAN: BKG=170, GRP=170, CAP=175, LF%=97.1%, Brd-Off=JED-HBE, Classes: P:170
+[LF] Getting WEEKLY/LASTSOLD data for 3 flights
+[LF][SYNC] RETRYING: Cannot focus on command line
+[LF][INFO] Will try 50 times before pausing...
+[LF][ERROR] Amadeus command error detected: UNKNOWN TRANSACTION
+[LF][ERROR] Command: LP/L(99)/SM452/21JAN
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+[LF][ERROR] SM452 21JAN: LP/L(99)/SM452/21JAN: TECH_ERROR:UNKNOWN TRANSACTION
+[LF] SM474 21JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=9, TODAY=0, YDAY=3
+[LF][RECONNECT] Connection lost. Attempting reconnect #2...
+[LF][INFO] Make sure Chrome is open with remote debugging port
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9222 (after 1 attempts)
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+[LF][SUCCESS] Chrome reconnected successfully!
+[LF][RESUME] Restoring session context with: SN21JANJEDHBE/ASM
+[LF][STALE] Stale element detected - rebinding...
+[LF][RESUME] Session context restored!
+[LF] Processing JED-HBE for 21JAN
+[LF] 21JAN: found 3 direct flights
+[LF] SM452 21JAN: BKG=130, GRP=118, CAP=175, LF%=74.3%, Brd-Off=JED-HBE, Classes: P:118, I:12
+[LF][ERROR] Amadeus command error detected: INVALID FORMAT
+[LF][ERROR] Command: LL/I/SM474/21JAN
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+============================================================
+[LF][RESYNC] Command 'LL/I/SM474/21JAN' failed: TECH_ERROR:INVALID FORMAT
+[LF][RESYNC] Re-running entire day from SN command for JED-HBE 21JAN
+[LF][RESYNC] Attempt 1/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing JED-HBE for 21JAN
+[LF] 21JAN: found 3 direct flights
+[LF] SM452 21JAN: BKG=130, GRP=118, CAP=175, LF%=74.3%, Brd-Off=JED-HBE, Classes: P:118, I:12
+[LF][STALE] Stale element detected - rebinding...
+[LF] SM474 21JAN: BKG=157, GRP=137, CAP=175, LF%=89.7%, Brd-Off=JED-HBE, Classes: P:137, I:17, O:1, G:1, K:1
+[LF][SYNC] RETRYING: Cannot focus on command line
+[LF][INFO] Will try 50 times before pausing...
+[LF][ERROR] Amadeus command error detected: INVALID FORMAT
+[LF][ERROR] Command: LL/I/SM458/21JAN
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+============================================================
+[LF][RESYNC] Command 'LL/I/SM458/21JAN' failed: TECH_ERROR:INVALID FORMAT
+[LF][RESYNC] Re-running entire day from SN command for JED-HBE 21JAN
+[LF][RESYNC] Attempt 2/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing JED-HBE for 21JAN
+[LF] 21JAN: found 3 direct flights
+[LF] SM452 21JAN: BKG=130, GRP=118, CAP=175, LF%=74.3%, Brd-Off=JED-HBE, Classes: P:118, I:12
+[LF][SYNC] RETRYING: Cannot focus on command line
+[LF][INFO] Will try 50 times before pausing...
+[LF] SM474 21JAN: BKG=157, GRP=137, CAP=175, LF%=89.7%, Brd-Off=JED-HBE, Classes: P:137, I:17, O:1, G:1, K:1
+[LF][STALE] Stale element detected - rebinding...
+[LF][SYNC] RETRYING: Cannot focus on command line
+[LF][INFO] Will try 50 times before pausing...
+[LF] SM458 21JAN: BKG=170, GRP=170, CAP=175, LF%=97.1%, Brd-Off=JED-HBE, Classes: I:30, O:34, U:43, X:21, T:7, W:3
+[LF] Getting WEEKLY/LASTSOLD data for 3 flights
+[LF] SM452 21JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=10, TODAY=0, YDAY=2
+[LF] SM474 21JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=9, TODAY=0, YDAY=3
+[LF][SYNC] RETRYING: Cannot focus on command line
+[LF][INFO] Will try 50 times before pausing...
+[LF][ERROR] Amadeus command error detected: INVALID FORMAT
+[LF][ERROR] Command: M
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+[LF][ERROR] SM458 21JAN: M: TECH_ERROR:INVALID FORMAT
+[LF] Results summary:
+  2026-01-31: 2 flights
+  2026-01-30: 1 flights
+  2026-01-29: 1 flights
+  2026-01-28: 3 flights
+  2026-01-27: 2 flights
+  2026-01-26: 5 flights
+  2026-01-25: 2 flights
+  2026-01-24: 2 flights
+  2026-01-23: 1 flights
+  2026-01-22: 1 flights
+  2026-01-21: 3 flights
+
+============================================================
+[Worker_9222] ✓ COMPLETED: JED-HBE
+  Results: 11 dates
+  Errors: 0 dates
+  Total Processed: 1 groups
+============================================================
+
+[Worker_9222] Waiting for tasks...
+
+============================================================
+[Worker_9222] Shutdown signal received
+Exiting...
+============================================================
+
+============================================================
+[Worker_9222] FINISHED
+  Total Groups Processed: 1
+============================================================
+

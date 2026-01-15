@@ -1,0 +1,32 @@
+2025-12-28 09:12:54 | INFO     | ======================================================================
+2025-12-28 09:12:54 | INFO     | Load Factor Scraper Started - Route: JED-ATZ
+2025-12-28 09:12:54 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_281225_at_09.11\logs\LF_JED-ATZ_20251228_091254.log
+2025-12-28 09:12:54 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-28 09:12:54 | INFO     | ======================================================================
+2025-12-28 09:12:54 | INFO     | Starting LF search for route: JED-ATZ
+2025-12-28 09:12:54 | INFO     | [START] LF Search
+2025-12-28 09:12:56 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-28 09:12:56 | INFO     | [DAY_START] Processing 13JAN
+2025-12-28 09:12:56 | INFO     | [lf.day.start] Processing JED-ATZ for 13JAN
+2025-12-28 09:12:57 | INFO     | [lf.day.flights_found] Found 2 flights on 13JAN
+2025-12-28 09:13:00 | INFO     | [lf.flight.extracted] SM454 on 13JAN: BKG=173, LF=103.6%
+2025-12-28 09:13:03 | INFO     | [lf.flight.extracted] SM456 on 13JAN: BKG=137, LF=82.0%
+2025-12-28 09:13:09 | ERROR    | Atomic write failed for D:\CODERED\LAB\market_insights\outputs\run_generated_281225_at_09.11\checkpoints\flight_booking_data.json: [WinError 32] The process cannot access the file because it is being used by another process: 'D:\\CODERED\\LAB\\market_insights\\outputs\\run_generated_281225_at_09.11\\checkpoints\\flight_booking_data.tmp' -> 'D:\\CODERED\\LAB\\market_insights\\outputs\\run_generated_281225_at_09.11\\checkpoints\\flight_booking_data.json'
+2025-12-28 09:13:09 | INFO     | [SUCCESS] Day 13JAN
+2025-12-28 09:13:09 | INFO     | [DAY_START] Processing 12JAN
+2025-12-28 09:13:09 | INFO     | [lf.day.start] Processing JED-ATZ for 12JAN
+2025-12-28 09:13:10 | INFO     | [lf.day.flights_found] Found 3 flights on 12JAN
+2025-12-28 09:13:12 | INFO     | [lf.flight.extracted] SM456 on 12JAN: BKG=138, LF=82.6%
+2025-12-28 09:13:15 | INFO     | [lf.flight.extracted] SM492 on 12JAN: BKG=112, LF=67.1%
+2025-12-28 09:13:19 | INFO     | [lf.flight.extracted] SM454 on 12JAN: BKG=144, LF=86.2%
+2025-12-28 09:13:33 | INFO     | [SUCCESS] Day 12JAN
+2025-12-28 09:13:33 | INFO     | [DAY_START] Processing 11JAN
+2025-12-28 09:13:33 | INFO     | [lf.day.start] Processing JED-ATZ for 11JAN
+2025-12-28 09:13:35 | INFO     | [lf.day.flights_found] Found 2 flights on 11JAN
+2025-12-28 09:13:37 | INFO     | [lf.flight.extracted] SM492 on 11JAN: BKG=179, LF=107.2%
+2025-12-28 09:13:42 | INFO     | [lf.flight.extracted] SM456 on 11JAN: BKG=156, LF=93.4%
+2025-12-28 09:13:57 | INFO     | [SUCCESS] Day 11JAN
+2025-12-28 09:13:57 | INFO     | [SUCCESS] LF Search Complete
+2025-12-28 09:13:59 | INFO     | [Worker_9225] Completed: JED-ATZ - 3 results, 0 errors
+2025-12-28 09:13:59 | INFO     | [Worker_9225] Processing: CAI-JED
+2025-12-28 09:13:59 | INFO     |   Tier 0: Range 1, Chunk 1/2 (7 days)

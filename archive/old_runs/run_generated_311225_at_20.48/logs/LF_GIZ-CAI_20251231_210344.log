@@ -1,0 +1,38 @@
+2025-12-31 21:03:44 | INFO     | ======================================================================
+2025-12-31 21:03:44 | INFO     | Load Factor Scraper Started - Route: GIZ-CAI
+2025-12-31 21:03:44 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_20.48\logs\LF_GIZ-CAI_20251231_210344.log
+2025-12-31 21:03:44 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 21:03:44 | INFO     | ======================================================================
+2025-12-31 21:03:44 | INFO     | Starting LF search for route: GIZ-CAI
+2025-12-31 21:03:44 | INFO     | [START] LF Search
+2025-12-31 21:03:46 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 21:03:46 | INFO     | [DAY_START] Processing 11JAN
+2025-12-31 21:03:46 | INFO     | [lf.day.start] Processing GIZ-CAI for 11JAN
+2025-12-31 21:03:47 | INFO     | [lf.day.flights_found] Found 1 flights on 11JAN
+2025-12-31 21:03:50 | INFO     | [lf.flight.extracted] SM330 on 11JAN: BKG=101, LF=57.7%
+2025-12-31 21:03:53 | INFO     | [SUCCESS] Day 11JAN
+2025-12-31 21:03:53 | INFO     | [DAY_START] Processing 10JAN
+2025-12-31 21:03:53 | INFO     | [lf.day.start] Processing GIZ-CAI for 10JAN
+2025-12-31 21:03:55 | WARNING  | [lf.day.no_flights] No direct flights on 10JAN
+2025-12-31 21:03:55 | INFO     | [SUCCESS] Day 10JAN
+2025-12-31 21:03:55 | INFO     | [DAY_START] Processing 09JAN
+2025-12-31 21:03:55 | INFO     | [lf.day.start] Processing GIZ-CAI for 09JAN
+2025-12-31 21:03:56 | INFO     | [lf.day.flights_found] Found 1 flights on 09JAN
+2025-12-31 21:03:58 | INFO     | [lf.flight.extracted] SM330 on 09JAN: BKG=108, LF=61.7%
+2025-12-31 21:04:06 | INFO     | [SUCCESS] Day 09JAN
+2025-12-31 21:04:06 | INFO     | [DAY_START] Processing 08JAN
+2025-12-31 21:04:06 | INFO     | [lf.day.start] Processing GIZ-CAI for 08JAN
+2025-12-31 21:04:08 | WARNING  | [lf.day.no_flights] No direct flights on 08JAN
+2025-12-31 21:04:08 | INFO     | [SUCCESS] Day 08JAN
+2025-12-31 21:04:08 | INFO     | [DAY_START] Processing 07JAN
+2025-12-31 21:04:08 | INFO     | [lf.day.start] Processing GIZ-CAI for 07JAN
+2025-12-31 21:04:09 | WARNING  | [lf.day.no_flights] No direct flights on 07JAN
+2025-12-31 21:04:09 | INFO     | [SUCCESS] Day 07JAN
+2025-12-31 21:04:09 | INFO     | [DAY_START] Processing 06JAN
+2025-12-31 21:04:09 | INFO     | [lf.day.start] Processing GIZ-CAI for 06JAN
+2025-12-31 21:04:10 | WARNING  | [lf.day.no_flights] No direct flights on 06JAN
+2025-12-31 21:04:10 | INFO     | [SUCCESS] Day 06JAN
+2025-12-31 21:04:10 | INFO     | [SUCCESS] LF Search Complete
+2025-12-31 21:04:12 | INFO     | [Worker_9233] Completed: GIZ-CAI - 6 results, 0 errors
+2025-12-31 21:04:12 | INFO     | [Worker_9233] Processing: LXR-JED
+2025-12-31 21:04:12 | INFO     |   Tier 0: Range 1, Chunk 4/5 (6 days)

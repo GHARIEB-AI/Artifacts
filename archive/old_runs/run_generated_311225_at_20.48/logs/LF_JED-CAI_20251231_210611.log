@@ -1,0 +1,54 @@
+2025-12-31 21:06:11 | INFO     | ======================================================================
+2025-12-31 21:06:11 | INFO     | Load Factor Scraper Started - Route: JED-CAI
+2025-12-31 21:06:11 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_20.48\logs\LF_JED-CAI_20251231_210611.log
+2025-12-31 21:06:11 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 21:06:11 | INFO     | ======================================================================
+2025-12-31 21:06:11 | INFO     | Starting LF search for route: JED-CAI
+2025-12-31 21:06:11 | INFO     | [START] LF Search
+2025-12-31 21:06:13 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 21:06:13 | INFO     | [DAY_START] Processing 05JAN
+2025-12-31 21:06:13 | INFO     | [lf.day.start] Processing JED-CAI for 05JAN
+2025-12-31 21:06:14 | INFO     | [lf.day.flights_found] Found 4 flights on 05JAN
+2025-12-31 21:06:17 | INFO     | [lf.flight.extracted] SM480 on 05JAN: BKG=117, LF=66.9%
+2025-12-31 21:06:21 | INFO     | [lf.flight.extracted] SM476 on 05JAN: BKG=177, LF=105.4%
+2025-12-31 21:06:25 | INFO     | [lf.flight.extracted] SM478 on 05JAN: BKG=168, LF=94.4%
+2025-12-31 21:06:29 | INFO     | [lf.flight.extracted] SM460 on 05JAN: BKG=168, LF=94.4%
+2025-12-31 21:06:53 | INFO     | [SUCCESS] Day 05JAN
+2025-12-31 21:06:53 | INFO     | [DAY_START] Processing 04JAN
+2025-12-31 21:06:53 | INFO     | [lf.day.start] Processing JED-CAI for 04JAN
+2025-12-31 21:06:54 | INFO     | [lf.day.flights_found] Found 5 flights on 04JAN
+2025-12-31 21:06:57 | INFO     | [lf.flight.extracted] SM424 on 04JAN: BKG=169, LF=94.9%
+2025-12-31 21:07:11 | INFO     | [lf.flight.extracted] SM476 on 04JAN: BKG=140, LF=80.0%
+2025-12-31 21:07:15 | INFO     | [lf.flight.extracted] SM432 on 04JAN: BKG=144, LF=80.9%
+2025-12-31 21:07:19 | INFO     | [lf.flight.extracted] SM460 on 04JAN: BKG=167, LF=93.8%
+2025-12-31 21:07:23 | INFO     | [lf.flight.extracted] SM478 on 04JAN: BKG=178, LF=100.0%
+2025-12-31 21:07:52 | INFO     | [SUCCESS] Day 04JAN
+2025-12-31 21:07:52 | INFO     | [DAY_START] Processing 03JAN
+2025-12-31 21:07:52 | INFO     | [lf.day.start] Processing JED-CAI for 03JAN
+2025-12-31 21:07:53 | INFO     | [lf.day.flights_found] Found 3 flights on 03JAN
+2025-12-31 21:07:55 | INFO     | [lf.flight.extracted] SM450 on 03JAN: BKG=165, LF=92.7%
+2025-12-31 21:08:00 | INFO     | [lf.flight.extracted] SM476 on 03JAN: BKG=166, LF=94.9%
+2025-12-31 21:08:04 | INFO     | [lf.flight.extracted] SM478 on 03JAN: BKG=178, LF=100.0%
+2025-12-31 21:08:20 | INFO     | [SUCCESS] Day 03JAN
+2025-12-31 21:08:20 | INFO     | [DAY_START] Processing 02JAN
+2025-12-31 21:08:20 | INFO     | [lf.day.start] Processing JED-CAI for 02JAN
+2025-12-31 21:08:21 | INFO     | [lf.day.flights_found] Found 4 flights on 02JAN
+2025-12-31 21:08:24 | INFO     | [lf.flight.extracted] SM476 on 02JAN: BKG=162, LF=92.6%
+2025-12-31 21:08:29 | INFO     | [lf.flight.extracted] SM480 on 02JAN: BKG=170, LF=95.5%
+2025-12-31 21:08:34 | INFO     | [lf.flight.extracted] SM472 on 02JAN: BKG=164, LF=92.1%
+2025-12-31 21:08:38 | INFO     | [lf.flight.extracted] SM460 on 02JAN: BKG=163, LF=91.6%
+2025-12-31 21:09:00 | INFO     | [SUCCESS] Day 02JAN
+2025-12-31 21:09:00 | INFO     | [DAY_START] Processing 01JAN
+2025-12-31 21:09:00 | INFO     | [lf.day.start] Processing JED-CAI for 01JAN
+2025-12-31 21:09:01 | INFO     | [lf.day.flights_found] Found 6 flights on 01JAN
+2025-12-31 21:09:03 | INFO     | [lf.flight.extracted] SM424 on 01JAN: BKG=179, LF=102.3%
+2025-12-31 21:09:09 | INFO     | [lf.flight.extracted] SM472 on 01JAN: BKG=174, LF=99.4%
+2025-12-31 21:09:15 | INFO     | [lf.flight.extracted] SM450 on 01JAN: BKG=178, LF=100.0%
+2025-12-31 21:09:27 | INFO     | [lf.flight.extracted] SM476 on 01JAN: BKG=183, LF=104.6%
+2025-12-31 21:09:35 | INFO     | [lf.flight.extracted] SM478 on 01JAN: BKG=170, LF=95.5%
+2025-12-31 21:09:40 | INFO     | [lf.flight.extracted] SM480 on 01JAN: BKG=172, LF=98.3%
+2025-12-31 21:10:42 | INFO     | [SUCCESS] Day 01JAN
+2025-12-31 21:10:42 | INFO     | [SUCCESS] LF Search Complete
+2025-12-31 21:10:44 | INFO     | [Worker_9224] Completed: JED-CAI - 5 results, 0 errors
+2025-12-31 21:34:16 | INFO     | [Worker_9224] Shutdown signal received, exiting...
+2025-12-31 21:34:16 | INFO     | [Worker_9224] Finished. Processed 23 groups.

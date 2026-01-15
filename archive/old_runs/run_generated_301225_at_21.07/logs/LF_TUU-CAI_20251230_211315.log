@@ -1,0 +1,35 @@
+2025-12-30 21:13:15 | INFO     | ======================================================================
+2025-12-30 21:13:15 | INFO     | Load Factor Scraper Started - Route: TUU-CAI
+2025-12-30 21:13:15 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_301225_at_21.07\logs\LF_TUU-CAI_20251230_211315.log
+2025-12-30 21:13:15 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-30 21:13:15 | INFO     | ======================================================================
+2025-12-30 21:13:15 | INFO     | Starting LF search for route: TUU-CAI
+2025-12-30 21:13:15 | INFO     | [START] LF Search
+2025-12-30 21:13:16 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-30 21:13:16 | INFO     | [DAY_START] Processing 04JAN
+2025-12-30 21:13:16 | INFO     | [lf.day.start] Processing TUU-CAI for 04JAN
+2025-12-30 21:13:17 | WARNING  | [lf.day.no_flights] No direct flights on 04JAN
+2025-12-30 21:13:18 | INFO     | [SUCCESS] Day 04JAN
+2025-12-30 21:13:18 | INFO     | [DAY_START] Processing 03JAN
+2025-12-30 21:13:18 | INFO     | [lf.day.start] Processing TUU-CAI for 03JAN
+2025-12-30 21:13:19 | INFO     | [lf.day.flights_found] Found 1 flights on 03JAN
+2025-12-30 21:13:20 | INFO     | [lf.flight.extracted] SM326 on 03JAN: BKG=35, LF=20.0%
+2025-12-30 21:13:24 | INFO     | [SUCCESS] Day 03JAN
+2025-12-30 21:13:24 | INFO     | [DAY_START] Processing 02JAN
+2025-12-30 21:13:24 | INFO     | [lf.day.start] Processing TUU-CAI for 02JAN
+2025-12-30 21:13:25 | WARNING  | [lf.day.no_flights] No direct flights on 02JAN
+2025-12-30 21:13:25 | INFO     | [SUCCESS] Day 02JAN
+2025-12-30 21:13:25 | INFO     | [DAY_START] Processing 01JAN
+2025-12-30 21:13:25 | INFO     | [lf.day.start] Processing TUU-CAI for 01JAN
+2025-12-30 21:13:26 | INFO     | [lf.day.flights_found] Found 1 flights on 01JAN
+2025-12-30 21:13:28 | INFO     | [lf.flight.extracted] SM326 on 01JAN: BKG=115, LF=65.7%
+2025-12-30 21:13:32 | INFO     | [SUCCESS] Day 01JAN
+2025-12-30 21:13:32 | INFO     | [DAY_START] Processing 31DEC
+2025-12-30 21:13:32 | INFO     | [lf.day.start] Processing TUU-CAI for 31DEC
+2025-12-30 21:13:33 | INFO     | [lf.day.flights_found] Found 1 flights on 31DEC
+2025-12-30 21:13:35 | INFO     | [lf.flight.extracted] SM326 on 31DEC: BKG=105, LF=100.0%
+2025-12-30 21:13:41 | INFO     | [SUCCESS] Day 31DEC
+2025-12-30 21:13:41 | INFO     | [SUCCESS] LF Search Complete
+2025-12-30 21:13:43 | INFO     | [Worker_9222] Completed: TUU-CAI - 5 results, 0 errors
+2025-12-30 21:13:43 | INFO     | [Worker_9222] Processing: ATZ-TUU
+2025-12-30 21:13:43 | INFO     |   Tier 0: Range 1, Chunk 5/5 (6 days)

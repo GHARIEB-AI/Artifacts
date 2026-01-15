@@ -1,0 +1,55 @@
+2026-01-05 17:24:36 | INFO     | ======================================================================
+2026-01-05 17:24:36 | INFO     | Load Factor Scraper Started - Route: JED-LXR
+2026-01-05 17:24:36 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_050126_at_16.47\logs\LF_JED-LXR_20260105_172436.log
+2026-01-05 17:24:36 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-05 17:24:36 | INFO     | ======================================================================
+2026-01-05 17:24:36 | INFO     | Starting LF search for route: JED-LXR
+2026-01-05 17:24:36 | INFO     | [START] LF Search
+2026-01-05 17:24:37 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-05 17:24:37 | INFO     | [DAY_START] Processing 22JAN
+2026-01-05 17:24:37 | INFO     | [lf.day.start] Processing JED-LXR for 22JAN
+2026-01-05 17:24:39 | WARNING  | [lf.day.no_flights] No direct flights on 22JAN
+2026-01-05 17:24:39 | INFO     | [SUCCESS] Day 22JAN
+2026-01-05 17:24:39 | INFO     | [DAY_START] Processing 21JAN
+2026-01-05 17:24:39 | INFO     | [lf.day.start] Processing JED-LXR for 21JAN
+2026-01-05 17:24:40 | INFO     | [lf.day.flights_found] Found 1 flights on 21JAN
+2026-01-05 17:24:43 | INFO     | [lf.flight.extracted] SM984 on 21JAN: BKG=0, LF=0.0%
+2026-01-05 17:24:45 | INFO     | [SUCCESS] Day 21JAN
+2026-01-05 17:24:45 | INFO     | [DAY_START] Processing 20JAN
+2026-01-05 17:24:45 | INFO     | [lf.day.start] Processing JED-LXR for 20JAN
+2026-01-05 17:24:46 | INFO     | [lf.day.flights_found] Found 4 flights on 20JAN
+2026-01-05 17:24:49 | INFO     | [lf.flight.extracted] SM482 on 20JAN: BKG=0, LF=0.0%
+2026-01-05 17:24:53 | INFO     | [lf.flight.extracted] SM430 on 20JAN: BKG=0, LF=0.0%
+2026-01-05 17:24:57 | INFO     | [lf.flight.extracted] SM982 on 20JAN: BKG=3, LF=1.8%
+2026-01-05 17:25:02 | INFO     | [lf.flight.extracted] SM484 on 20JAN: BKG=0, LF=0.0%
+2026-01-05 17:25:06 | INFO     | [SUCCESS] Day 20JAN
+2026-01-05 17:25:06 | INFO     | [DAY_START] Processing 19JAN
+2026-01-05 17:25:06 | INFO     | [lf.day.start] Processing JED-LXR for 19JAN
+2026-01-05 17:25:08 | WARNING  | [lf.day.no_flights] No direct flights on 19JAN
+2026-01-05 17:25:08 | INFO     | [SUCCESS] Day 19JAN
+2026-01-05 17:25:08 | INFO     | [DAY_START] Processing 18JAN
+2026-01-05 17:25:08 | INFO     | [lf.day.start] Processing JED-LXR for 18JAN
+2026-01-05 17:25:09 | WARNING  | [lf.day.no_flights] No direct flights on 18JAN
+2026-01-05 17:25:10 | INFO     | [SUCCESS] Day 18JAN
+2026-01-05 17:25:10 | INFO     | [DAY_START] Processing 17JAN
+2026-01-05 17:25:10 | INFO     | [lf.day.start] Processing JED-LXR for 17JAN
+2026-01-05 17:25:11 | WARNING  | [lf.day.no_flights] No direct flights on 17JAN
+2026-01-05 17:25:11 | INFO     | [SUCCESS] Day 17JAN
+2026-01-05 17:25:11 | INFO     | [DAY_START] Processing 16JAN
+2026-01-05 17:25:11 | INFO     | [lf.day.start] Processing JED-LXR for 16JAN
+2026-01-05 17:25:13 | WARNING  | [lf.day.no_flights] No direct flights on 16JAN
+2026-01-05 17:25:13 | INFO     | [SUCCESS] Day 16JAN
+2026-01-05 17:25:13 | INFO     | [DAY_START] Processing 15JAN
+2026-01-05 17:25:13 | INFO     | [lf.day.start] Processing JED-LXR for 15JAN
+2026-01-05 17:25:14 | WARNING  | [lf.day.no_flights] No direct flights on 15JAN
+2026-01-05 17:25:14 | INFO     | [SUCCESS] Day 15JAN
+2026-01-05 17:25:14 | INFO     | [DAY_START] Processing 14JAN
+2026-01-05 17:25:14 | INFO     | [lf.day.start] Processing JED-LXR for 14JAN
+2026-01-05 17:25:16 | INFO     | [lf.day.flights_found] Found 2 flights on 14JAN
+2026-01-05 17:25:19 | INFO     | [lf.flight.extracted] SM960 on 14JAN: BKG=171, LF=104.3%
+2026-01-05 17:25:24 | INFO     | [lf.flight.extracted] SM962 on 14JAN: BKG=63, LF=38.4%
+2026-01-05 17:25:56 | INFO     | [SUCCESS] Day 14JAN
+2026-01-05 17:25:56 | INFO     | [SUCCESS] LF Search Complete
+2026-01-05 17:25:58 | INFO     | [Worker_9222] Completed: JED-LXR - 9 results, 0 errors
+2026-01-05 17:25:58 | INFO     | [Worker_9222] Processing: TUU-ATZ
+2026-01-05 17:25:58 | INFO     |   Tier 0: Range 1, Chunk 2/3 (9 days)

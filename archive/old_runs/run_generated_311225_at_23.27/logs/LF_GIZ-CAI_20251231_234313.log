@@ -1,0 +1,33 @@
+2025-12-31 23:43:13 | INFO     | ======================================================================
+2025-12-31 23:43:13 | INFO     | Load Factor Scraper Started - Route: GIZ-CAI
+2025-12-31 23:43:13 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_23.27\logs\LF_GIZ-CAI_20251231_234313.log
+2025-12-31 23:43:13 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 23:43:13 | INFO     | ======================================================================
+2025-12-31 23:43:13 | INFO     | Starting LF search for route: GIZ-CAI
+2025-12-31 23:43:13 | INFO     | [START] LF Search
+2025-12-31 23:43:16 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 23:43:16 | INFO     | [DAY_START] Processing 05FEB
+2025-12-31 23:43:16 | INFO     | [lf.day.start] Processing GIZ-CAI for 05FEB
+2025-12-31 23:43:17 | WARNING  | [lf.day.no_flights] No direct flights on 05FEB
+2025-12-31 23:43:17 | INFO     | [SUCCESS] Day 05FEB
+2025-12-31 23:43:17 | INFO     | [DAY_START] Processing 04FEB
+2025-12-31 23:43:17 | INFO     | [lf.day.start] Processing GIZ-CAI for 04FEB
+2025-12-31 23:43:19 | WARNING  | [lf.day.no_flights] No direct flights on 04FEB
+2025-12-31 23:43:19 | INFO     | [SUCCESS] Day 04FEB
+2025-12-31 23:43:19 | INFO     | [DAY_START] Processing 03FEB
+2025-12-31 23:43:19 | INFO     | [lf.day.start] Processing GIZ-CAI for 03FEB
+2025-12-31 23:43:20 | WARNING  | [lf.day.no_flights] No direct flights on 03FEB
+2025-12-31 23:43:20 | INFO     | [SUCCESS] Day 03FEB
+2025-12-31 23:43:20 | INFO     | [DAY_START] Processing 02FEB
+2025-12-31 23:43:20 | INFO     | [lf.day.start] Processing GIZ-CAI for 02FEB
+2025-12-31 23:43:22 | WARNING  | [lf.day.no_flights] No direct flights on 02FEB
+2025-12-31 23:43:22 | INFO     | [SUCCESS] Day 02FEB
+2025-12-31 23:43:22 | INFO     | [DAY_START] Processing 01FEB
+2025-12-31 23:43:22 | INFO     | [lf.day.start] Processing GIZ-CAI for 01FEB
+2025-12-31 23:43:23 | INFO     | [lf.day.flights_found] Found 1 flights on 01FEB
+2025-12-31 23:43:26 | INFO     | [lf.flight.extracted] SM330 on 01FEB: BKG=4, LF=2.3%
+2025-12-31 23:43:30 | INFO     | [SUCCESS] Day 01FEB
+2025-12-31 23:43:30 | INFO     | [SUCCESS] LF Search Complete
+2025-12-31 23:43:32 | INFO     | [Worker_9226] Completed: GIZ-CAI - 5 results, 0 errors
+2025-12-31 23:43:32 | INFO     | [Worker_9226] Processing: ATZ-JED
+2025-12-31 23:43:32 | INFO     |   Tier 0: Range 3, Chunk 5/5 (5 days)

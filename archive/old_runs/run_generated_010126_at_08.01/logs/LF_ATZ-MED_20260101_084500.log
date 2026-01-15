@@ -1,0 +1,39 @@
+2026-01-01 08:45:00 | INFO     | ======================================================================
+2026-01-01 08:45:00 | INFO     | Load Factor Scraper Started - Route: ATZ-MED
+2026-01-01 08:45:00 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_010126_at_08.01\logs\LF_ATZ-MED_20260101_084500.log
+2026-01-01 08:45:00 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-01 08:45:00 | INFO     | ======================================================================
+2026-01-01 08:45:00 | INFO     | Starting LF search for route: ATZ-MED
+2026-01-01 08:45:00 | INFO     | [START] LF Search
+2026-01-01 08:45:01 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-01 08:45:01 | INFO     | [DAY_START] Processing 12JAN
+2026-01-01 08:45:01 | INFO     | [lf.day.start] Processing ATZ-MED for 12JAN
+2026-01-01 08:45:02 | INFO     | [lf.day.flights_found] Found 1 flights on 12JAN
+2026-01-01 08:45:04 | INFO     | [lf.flight.extracted] SM487 on 12JAN: BKG=55, LF=30.7%
+2026-01-01 08:45:08 | INFO     | [SUCCESS] Day 12JAN
+2026-01-01 08:45:08 | INFO     | [DAY_START] Processing 11JAN
+2026-01-01 08:45:08 | INFO     | [lf.day.start] Processing ATZ-MED for 11JAN
+2026-01-01 08:45:09 | WARNING  | [lf.day.no_flights] No direct flights on 11JAN
+2026-01-01 08:45:09 | INFO     | [SUCCESS] Day 11JAN
+2026-01-01 08:45:09 | INFO     | [DAY_START] Processing 10JAN
+2026-01-01 08:45:09 | INFO     | [lf.day.start] Processing ATZ-MED for 10JAN
+2026-01-01 08:45:10 | INFO     | [lf.day.flights_found] Found 1 flights on 10JAN
+2026-01-01 08:45:12 | INFO     | [lf.flight.extracted] SM487 on 10JAN: BKG=128, LF=71.5%
+2026-01-01 08:45:16 | INFO     | [SUCCESS] Day 10JAN
+2026-01-01 08:45:16 | INFO     | [DAY_START] Processing 09JAN
+2026-01-01 08:45:16 | INFO     | [lf.day.start] Processing ATZ-MED for 09JAN
+2026-01-01 08:45:17 | WARNING  | [lf.day.no_flights] No direct flights on 09JAN
+2026-01-01 08:45:17 | INFO     | [SUCCESS] Day 09JAN
+2026-01-01 08:45:17 | INFO     | [DAY_START] Processing 08JAN
+2026-01-01 08:45:17 | INFO     | [lf.day.start] Processing ATZ-MED for 08JAN
+2026-01-01 08:45:18 | WARNING  | [lf.day.no_flights] No direct flights on 08JAN
+2026-01-01 08:45:18 | INFO     | [SUCCESS] Day 08JAN
+2026-01-01 08:45:18 | INFO     | [DAY_START] Processing 07JAN
+2026-01-01 08:45:18 | INFO     | [lf.day.start] Processing ATZ-MED for 07JAN
+2026-01-01 08:45:19 | INFO     | [lf.day.flights_found] Found 1 flights on 07JAN
+2026-01-01 08:45:21 | INFO     | [lf.flight.extracted] SM489 on 07JAN: BKG=175, LF=97.8%
+2026-01-01 08:45:25 | INFO     | [SUCCESS] Day 07JAN
+2026-01-01 08:45:25 | INFO     | [SUCCESS] LF Search Complete
+2026-01-01 08:45:27 | INFO     | [Worker_9234] Completed: ATZ-MED - 6 results, 0 errors
+2026-01-01 08:45:27 | INFO     | [Worker_9234] Processing: CAI-DMM
+2026-01-01 08:45:27 | INFO     |   Tier 0: Range 1, Chunk 4/5 (6 days)

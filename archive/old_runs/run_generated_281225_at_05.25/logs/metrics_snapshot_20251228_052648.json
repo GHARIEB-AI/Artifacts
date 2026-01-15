@@ -1,0 +1,102 @@
+{
+  "timestamp": "2025-12-28T05:26:48.167198",
+  "service": "market-insights",
+  "counters": {
+    "oal_requests_total": {
+      "description": "Total OAL API requests",
+      "values": []
+    },
+    "lf_requests_total": {
+      "description": "Total LF requests",
+      "values": [
+        {
+          "labels": {
+            "destination": "CAI",
+            "origin": "MED",
+            "status": "success"
+          },
+          "value": 6.0
+        },
+        {
+          "labels": {
+            "destination": "MED",
+            "origin": "HBE",
+            "status": "success"
+          },
+          "value": 5.0
+        }
+      ]
+    },
+    "errors_total": {
+      "description": "Total errors",
+      "values": []
+    }
+  },
+  "gauges": {
+    "routes_in_progress": {
+      "description": "Routes currently being processed",
+      "values": [
+        {
+          "labels": {},
+          "value": 0.0
+        }
+      ]
+    },
+    "flights_analyzed": {
+      "description": "Total flights analyzed in session",
+      "values": [
+        {
+          "labels": {
+            "direction": "lf"
+          },
+          "value": 8.0
+        }
+      ]
+    },
+    "circuit_breaker_state": {
+      "description": "Circuit breaker state (0=closed, 1=open)",
+      "values": []
+    }
+  },
+  "histograms": {
+    "request_duration_seconds": {
+      "description": "Request duration in seconds",
+      "data": {}
+    },
+    "route_processing_seconds": {
+      "description": "Route processing duration",
+      "data": {
+        "{'route': 'MED-CAI'}": {
+          "sum": 33.36545,
+          "count": 6,
+          "buckets": {
+            "5.0": 3,
+            "10.0": 5,
+            "30.0": 6,
+            "60.0": 6,
+            "120.0": 6,
+            "300.0": 6
+          },
+          "p50": 5.0,
+          "p95": 7.7,
+          "p99": 7.94
+        },
+        "{'route': 'HBE-MED'}": {
+          "sum": 30.555889,
+          "count": 5,
+          "buckets": {
+            "10.0": 5,
+            "30.0": 5,
+            "60.0": 5,
+            "120.0": 5,
+            "300.0": 5,
+            "5.0": 1
+          },
+          "p50": 6.5,
+          "p95": 8.75,
+          "p99": 8.95
+        }
+      }
+    }
+  }
+}

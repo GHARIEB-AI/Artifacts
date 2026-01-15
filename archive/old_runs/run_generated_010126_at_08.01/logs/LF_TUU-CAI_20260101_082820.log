@@ -1,0 +1,43 @@
+2026-01-01 08:28:20 | INFO     | ======================================================================
+2026-01-01 08:28:20 | INFO     | Load Factor Scraper Started - Route: TUU-CAI
+2026-01-01 08:28:20 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_010126_at_08.01\logs\LF_TUU-CAI_20260101_082820.log
+2026-01-01 08:28:20 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-01 08:28:20 | INFO     | ======================================================================
+2026-01-01 08:28:20 | INFO     | Starting LF search for route: TUU-CAI
+2026-01-01 08:28:20 | INFO     | [START] LF Search
+2026-01-01 08:28:22 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-01 08:28:22 | INFO     | [DAY_START] Processing 07FEB
+2026-01-01 08:28:22 | INFO     | [lf.day.start] Processing TUU-CAI for 07FEB
+2026-01-01 08:28:23 | INFO     | [lf.day.flights_found] Found 1 flights on 07FEB
+2026-01-01 08:28:25 | INFO     | [lf.flight.extracted] SM326 on 07FEB: BKG=0, LF=0.0%
+2026-01-01 08:28:26 | INFO     | [SUCCESS] Day 07FEB
+2026-01-01 08:28:26 | INFO     | [DAY_START] Processing 06FEB
+2026-01-01 08:28:26 | INFO     | [lf.day.start] Processing TUU-CAI for 06FEB
+2026-01-01 08:28:27 | WARNING  | [lf.day.no_flights] No direct flights on 06FEB
+2026-01-01 08:28:27 | INFO     | [SUCCESS] Day 06FEB
+2026-01-01 08:28:27 | INFO     | [DAY_START] Processing 05FEB
+2026-01-01 08:28:27 | INFO     | [lf.day.start] Processing TUU-CAI for 05FEB
+2026-01-01 08:28:28 | INFO     | [lf.day.flights_found] Found 1 flights on 05FEB
+2026-01-01 08:28:30 | INFO     | [lf.flight.extracted] SM326 on 05FEB: BKG=3, LF=1.7%
+2026-01-01 08:28:33 | INFO     | [SUCCESS] Day 05FEB
+2026-01-01 08:28:33 | INFO     | [DAY_START] Processing 04FEB
+2026-01-01 08:28:33 | INFO     | [lf.day.start] Processing TUU-CAI for 04FEB
+2026-01-01 08:28:34 | INFO     | [lf.day.flights_found] Found 1 flights on 04FEB
+2026-01-01 08:28:36 | INFO     | [lf.flight.extracted] SM326 on 04FEB: BKG=0, LF=0.0%
+2026-01-01 08:28:37 | INFO     | [SUCCESS] Day 04FEB
+2026-01-01 08:28:37 | INFO     | [DAY_START] Processing 03FEB
+2026-01-01 08:28:37 | INFO     | [lf.day.start] Processing TUU-CAI for 03FEB
+2026-01-01 08:28:38 | WARNING  | [lf.day.no_flights] No direct flights on 03FEB
+2026-01-01 08:28:38 | INFO     | [SUCCESS] Day 03FEB
+2026-01-01 08:28:38 | INFO     | [DAY_START] Processing 02FEB
+2026-01-01 08:28:38 | INFO     | [lf.day.start] Processing TUU-CAI for 02FEB
+2026-01-01 08:28:39 | WARNING  | [lf.day.no_flights] No direct flights on 02FEB
+2026-01-01 08:28:39 | INFO     | [SUCCESS] Day 02FEB
+2026-01-01 08:28:39 | INFO     | [DAY_START] Processing 01FEB
+2026-01-01 08:28:39 | INFO     | [lf.day.start] Processing TUU-CAI for 01FEB
+2026-01-01 08:28:40 | WARNING  | [lf.day.no_flights] No direct flights on 01FEB
+2026-01-01 08:28:40 | INFO     | [SUCCESS] Day 01FEB
+2026-01-01 08:28:40 | INFO     | [SUCCESS] LF Search Complete
+2026-01-01 08:28:42 | INFO     | [Worker_9224] Completed: TUU-CAI - 7 results, 0 errors
+2026-01-01 08:28:42 | INFO     | [Worker_9224] Processing: AJF-ATZ
+2026-01-01 08:28:42 | INFO     |   Tier 0: Range 2, Chunk 4/4 (7 days)

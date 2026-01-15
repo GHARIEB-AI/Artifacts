@@ -1,0 +1,212 @@
+{
+  "task_id": "DMM-CAI_chunk1",
+  "saved_at": "2025-12-24T18:32:19.753319",
+  "lf_results": {
+    "2026-01-04": [],
+    "2026-01-03": [
+      {
+        "Date": "Saturday, January 03, 2026",
+        "Flight": "SM434",
+        "DEP": "22:10",
+        "SOLD": 23,
+        "FULL CAPACITY": 168,
+        "LF%": 0.1369,
+        "LowestAvail": "X9",
+        "LASTSOLD": "2025-12-09 00:00:00",
+        "WEEKLY PROGRESS": 0,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 0,
+          "U": 4,
+          "X": 8,
+          "T": 3,
+          "W": 3,
+          "S": 1,
+          "G": 4,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "DMM-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM434",
+          "sm_route": "DMM-CAI",
+          "sm_dep": "2210",
+          "sm_arr": "0025",
+          "connecting_passengers": []
+        }
+      }
+    ],
+    "2026-01-02": [
+      {
+        "Date": "Friday, January 02, 2026",
+        "Flight": "SM434",
+        "DEP": "13:55",
+        "SOLD": 52,
+        "FULL CAPACITY": 168,
+        "LF%": 0.3095,
+        "LowestAvail": "W9",
+        "LASTSOLD": "2025-12-24 00:00:00",
+        "WEEKLY PROGRESS": 8,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 3,
+          "O": 3,
+          "U": 8,
+          "X": 9,
+          "T": 18,
+          "W": 6,
+          "S": 5,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "DMM-CAI",
+        "SOLD TODAY": 1,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": null
+      }
+    ],
+    "2026-01-01": [
+      {
+        "Date": "Thursday, January 01, 2026",
+        "Flight": "SM434",
+        "DEP": "22:10",
+        "SOLD": 42,
+        "FULL CAPACITY": 168,
+        "LF%": 0.25,
+        "LowestAvail": "X5",
+        "LASTSOLD": "2025-12-24 00:00:00",
+        "WEEKLY PROGRESS": 12,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 1,
+          "U": 11,
+          "X": 25,
+          "T": 3,
+          "W": 0,
+          "S": 1,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 1,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "DMM-CAI",
+        "SOLD TODAY": 1,
+        "SOLD YDAY": 1,
+        "CONNECTING_PASSENGERS": null
+      }
+    ],
+    "2025-12-31": [],
+    "2025-12-30": [
+      {
+        "Date": "Tuesday, December 30, 2025",
+        "Flight": "SM434",
+        "DEP": "06:30",
+        "SOLD": 98,
+        "FULL CAPACITY": 168,
+        "LF%": 0.5833,
+        "LowestAvail": "U2",
+        "LASTSOLD": "2025-12-24 00:00:00",
+        "WEEKLY PROGRESS": 21,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 48,
+          "O": 37,
+          "U": 8,
+          "X": 0,
+          "T": 0,
+          "W": 0,
+          "S": 5,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "DMM-CAI",
+        "SOLD TODAY": 2,
+        "SOLD YDAY": 1,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM434",
+          "sm_route": "DMM-CAI",
+          "sm_dep": "0630",
+          "sm_arr": "0845",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "SM0052",
+              "outbound_route": "CAI-LXR",
+              "outbound_dep": "1130",
+              "passengers": [
+                {
+                  "iata": "RUHAK38AB"
+                },
+                {
+                  "iata": "RUHAK38AB"
+                },
+                {
+                  "iata": "RUHAK38AB"
+                }
+              ]
+            },
+            {
+              "outbound_flight": "SM0054",
+              "outbound_route": "CAI-LXR",
+              "outbound_dep": "1530",
+              "passengers": [
+                {
+                  "iata": "RUHAA28WH"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "lf_errors": {}
+}

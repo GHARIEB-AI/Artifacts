@@ -1,0 +1,38 @@
+2025-12-31 15:59:20 | INFO     | ======================================================================
+2025-12-31 15:59:20 | INFO     | Load Factor Scraper Started - Route: ATZ-RUH
+2025-12-31 15:59:20 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_15.57\logs\LF_ATZ-RUH_20251231_155920.log
+2025-12-31 15:59:20 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 15:59:20 | INFO     | ======================================================================
+2025-12-31 15:59:20 | INFO     | Starting LF search for route: ATZ-RUH
+2025-12-31 15:59:20 | INFO     | [START] LF Search
+2025-12-31 15:59:21 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 15:59:21 | INFO     | [DAY_START] Processing 06JAN
+2025-12-31 15:59:21 | INFO     | [lf.day.start] Processing ATZ-RUH for 06JAN
+2025-12-31 15:59:22 | INFO     | [lf.day.flights_found] Found 1 flights on 06JAN
+2025-12-31 15:59:24 | INFO     | [lf.flight.extracted] SM463 on 06JAN: BKG=107, LF=59.8%
+2025-12-31 15:59:31 | INFO     | [SUCCESS] Day 06JAN
+2025-12-31 15:59:31 | INFO     | [DAY_START] Processing 05JAN
+2025-12-31 15:59:31 | INFO     | [lf.day.start] Processing ATZ-RUH for 05JAN
+2025-12-31 15:59:32 | WARNING  | [lf.day.no_flights] No direct flights on 05JAN
+2025-12-31 15:59:32 | INFO     | [SUCCESS] Day 05JAN
+2025-12-31 15:59:32 | INFO     | [DAY_START] Processing 04JAN
+2025-12-31 15:59:32 | INFO     | [lf.day.start] Processing ATZ-RUH for 04JAN
+2025-12-31 15:59:33 | INFO     | [lf.day.flights_found] Found 1 flights on 04JAN
+2025-12-31 15:59:35 | INFO     | [lf.flight.extracted] SM463 on 04JAN: BKG=149, LF=83.2%
+2025-12-31 15:59:41 | INFO     | [SUCCESS] Day 04JAN
+2025-12-31 15:59:41 | INFO     | [DAY_START] Processing 03JAN
+2025-12-31 15:59:41 | INFO     | [lf.day.start] Processing ATZ-RUH for 03JAN
+2025-12-31 15:59:42 | WARNING  | [lf.day.no_flights] No direct flights on 03JAN
+2025-12-31 15:59:42 | INFO     | [SUCCESS] Day 03JAN
+2025-12-31 15:59:42 | INFO     | [DAY_START] Processing 02JAN
+2025-12-31 15:59:42 | INFO     | [lf.day.start] Processing ATZ-RUH for 02JAN
+2025-12-31 15:59:43 | WARNING  | [lf.day.no_flights] No direct flights on 02JAN
+2025-12-31 15:59:43 | INFO     | [SUCCESS] Day 02JAN
+2025-12-31 15:59:43 | INFO     | [DAY_START] Processing 01JAN
+2025-12-31 15:59:43 | INFO     | [lf.day.start] Processing ATZ-RUH for 01JAN
+2025-12-31 15:59:44 | WARNING  | [lf.day.no_flights] No direct flights on 01JAN
+2025-12-31 15:59:45 | INFO     | [SUCCESS] Day 01JAN
+2025-12-31 15:59:45 | INFO     | [SUCCESS] LF Search Complete
+2025-12-31 15:59:47 | INFO     | [Worker_9224] Completed: ATZ-RUH - 6 results, 0 errors
+2025-12-31 16:06:32 | INFO     | [Worker_9224] Shutdown signal received, exiting...
+2025-12-31 16:06:32 | INFO     | [Worker_9224] Finished. Processed 2 groups.

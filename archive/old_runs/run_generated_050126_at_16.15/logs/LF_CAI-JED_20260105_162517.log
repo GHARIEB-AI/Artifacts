@@ -1,0 +1,83 @@
+2026-01-05 16:25:17 | INFO     | ======================================================================
+2026-01-05 16:25:17 | INFO     | Load Factor Scraper Started - Route: CAI-JED
+2026-01-05 16:25:17 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_050126_at_16.15\logs\LF_CAI-JED_20260105_162517.log
+2026-01-05 16:25:17 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-05 16:25:17 | INFO     | ======================================================================
+2026-01-05 16:25:17 | INFO     | Starting LF search for route: CAI-JED
+2026-01-05 16:25:17 | INFO     | [START] LF Search
+2026-01-05 16:25:18 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-05 16:25:18 | INFO     | [DAY_START] Processing 15MAR
+2026-01-05 16:25:18 | INFO     | [lf.day.start] Processing CAI-JED for 15MAR
+2026-01-05 16:25:19 | INFO     | [lf.day.flights_found] Found 5 flights on 15MAR
+2026-01-05 16:25:21 | INFO     | [lf.flight.extracted] SM475 on 15MAR: BKG=0, LF=0.0%
+2026-01-05 16:25:24 | INFO     | [lf.flight.extracted] SM431 on 15MAR: BKG=0, LF=0.0%
+2026-01-05 16:25:27 | INFO     | [lf.flight.extracted] SM459 on 15MAR: BKG=0, LF=0.0%
+2026-01-05 16:25:30 | INFO     | [lf.flight.extracted] SM477 on 15MAR: BKG=0, LF=0.0%
+2026-01-05 16:25:33 | INFO     | [lf.flight.extracted] SM479 on 15MAR: BKG=0, LF=0.0%
+2026-01-05 16:25:34 | INFO     | [SUCCESS] Day 15MAR
+2026-01-05 16:25:34 | INFO     | [DAY_START] Processing 14MAR
+2026-01-05 16:25:34 | INFO     | [lf.day.start] Processing CAI-JED for 14MAR
+2026-01-05 16:25:35 | INFO     | [lf.day.flights_found] Found 4 flights on 14MAR
+2026-01-05 16:25:37 | INFO     | [lf.flight.extracted] SM449 on 14MAR: BKG=0, LF=0.0%
+2026-01-05 16:25:40 | INFO     | [lf.flight.extracted] SM475 on 14MAR: BKG=0, LF=0.0%
+2026-01-05 16:25:43 | INFO     | [lf.flight.extracted] SM477 on 14MAR: BKG=0, LF=0.0%
+2026-01-05 16:25:46 | INFO     | [lf.flight.extracted] SM423 on 14MAR: BKG=0, LF=0.0%
+2026-01-05 16:25:47 | INFO     | [SUCCESS] Day 14MAR
+2026-01-05 16:25:47 | INFO     | [DAY_START] Processing 13MAR
+2026-01-05 16:25:47 | INFO     | [lf.day.start] Processing CAI-JED for 13MAR
+2026-01-05 16:25:48 | INFO     | [lf.day.flights_found] Found 5 flights on 13MAR
+2026-01-05 16:25:50 | INFO     | [lf.flight.extracted] SM475 on 13MAR: BKG=4, LF=2.2%
+2026-01-05 16:25:53 | INFO     | [lf.flight.extracted] SM477 on 13MAR: BKG=0, LF=0.0%
+2026-01-05 16:25:56 | INFO     | [lf.flight.extracted] SM479 on 13MAR: BKG=1, LF=0.6%
+2026-01-05 16:25:59 | INFO     | [lf.flight.extracted] SM471 on 13MAR: BKG=2, LF=1.1%
+2026-01-05 16:26:02 | INFO     | [lf.flight.extracted] SM459 on 13MAR: BKG=0, LF=0.0%
+2026-01-05 16:26:07 | INFO     | [SUCCESS] Day 13MAR
+2026-01-05 16:26:07 | INFO     | [DAY_START] Processing 12MAR
+2026-01-05 16:26:07 | INFO     | [lf.day.start] Processing CAI-JED for 12MAR
+2026-01-05 16:26:08 | INFO     | [lf.day.flights_found] Found 6 flights on 12MAR
+2026-01-05 16:26:10 | INFO     | [lf.flight.extracted] SM449 on 12MAR: BKG=0, LF=0.0%
+2026-01-05 16:26:13 | INFO     | [lf.flight.extracted] SM475 on 12MAR: BKG=0, LF=0.0%
+2026-01-05 16:26:16 | INFO     | [lf.flight.extracted] SM431 on 12MAR: BKG=0, LF=0.0%
+2026-01-05 16:26:19 | INFO     | [lf.flight.extracted] SM477 on 12MAR: BKG=1, LF=0.6%
+2026-01-05 16:26:22 | INFO     | [lf.flight.extracted] SM479 on 12MAR: BKG=1, LF=0.6%
+2026-01-05 16:26:25 | INFO     | [lf.flight.extracted] SM423 on 12MAR: BKG=50, LF=27.9%
+2026-01-05 16:26:30 | INFO     | [SUCCESS] Day 12MAR
+2026-01-05 16:26:30 | INFO     | [DAY_START] Processing 11MAR
+2026-01-05 16:26:30 | INFO     | [lf.day.start] Processing CAI-JED for 11MAR
+2026-01-05 16:26:31 | INFO     | [lf.day.flights_found] Found 5 flights on 11MAR
+2026-01-05 16:26:33 | INFO     | [lf.flight.extracted] SM423 on 11MAR: BKG=2, LF=1.1%
+2026-01-05 16:26:36 | INFO     | [lf.flight.extracted] SM475 on 11MAR: BKG=0, LF=0.0%
+2026-01-05 16:26:39 | INFO     | [lf.flight.extracted] SM459 on 11MAR: BKG=0, LF=0.0%
+2026-01-05 16:26:42 | INFO     | [lf.flight.extracted] SM477 on 11MAR: BKG=2, LF=1.1%
+2026-01-05 16:26:45 | INFO     | [lf.flight.extracted] SM471 on 11MAR: BKG=0, LF=0.0%
+2026-01-05 16:26:49 | INFO     | [SUCCESS] Day 11MAR
+2026-01-05 16:26:49 | INFO     | [DAY_START] Processing 10MAR
+2026-01-05 16:26:49 | INFO     | [lf.day.start] Processing CAI-JED for 10MAR
+2026-01-05 16:26:50 | INFO     | [lf.day.flights_found] Found 6 flights on 10MAR
+2026-01-05 16:26:52 | INFO     | [lf.flight.extracted] SM471 on 10MAR: BKG=1, LF=0.6%
+2026-01-05 16:26:55 | INFO     | [lf.flight.extracted] SM479 on 10MAR: BKG=0, LF=0.0%
+2026-01-05 16:26:58 | INFO     | [lf.flight.extracted] SM477 on 10MAR: BKG=0, LF=0.0%
+2026-01-05 16:27:01 | INFO     | [lf.flight.extracted] SM459 on 10MAR: BKG=0, LF=0.0%
+2026-01-05 16:27:04 | INFO     | [lf.flight.extracted] SM423 on 10MAR: BKG=81, LF=45.2%
+2026-01-05 16:27:07 | INFO     | [lf.flight.extracted] SM475 on 10MAR: BKG=50, LF=27.9%
+2026-01-05 16:27:11 | INFO     | [SUCCESS] Day 10MAR
+2026-01-05 16:27:11 | INFO     | [DAY_START] Processing 09MAR
+2026-01-05 16:27:11 | INFO     | [lf.day.start] Processing CAI-JED for 09MAR
+2026-01-05 16:27:12 | INFO     | [lf.day.flights_found] Found 3 flights on 09MAR
+2026-01-05 16:27:14 | INFO     | [lf.flight.extracted] SM475 on 09MAR: BKG=5, LF=2.8%
+2026-01-05 16:27:17 | INFO     | [lf.flight.extracted] SM477 on 09MAR: BKG=1, LF=0.6%
+2026-01-05 16:27:20 | INFO     | [lf.flight.extracted] SM459 on 09MAR: BKG=3, LF=1.7%
+2026-01-05 16:27:25 | INFO     | [SUCCESS] Day 09MAR
+2026-01-05 16:27:25 | INFO     | [DAY_START] Processing 08MAR
+2026-01-05 16:27:25 | INFO     | [lf.day.start] Processing CAI-JED for 08MAR
+2026-01-05 16:27:27 | INFO     | [lf.day.flights_found] Found 5 flights on 08MAR
+2026-01-05 16:27:28 | INFO     | [lf.flight.extracted] SM475 on 08MAR: BKG=0, LF=0.0%
+2026-01-05 16:27:32 | INFO     | [lf.flight.extracted] SM431 on 08MAR: BKG=4, LF=2.2%
+2026-01-05 16:27:35 | INFO     | [lf.flight.extracted] SM459 on 08MAR: BKG=10, LF=5.6%
+2026-01-05 16:27:38 | INFO     | [lf.flight.extracted] SM477 on 08MAR: BKG=5, LF=2.8%
+2026-01-05 16:27:41 | INFO     | [lf.flight.extracted] SM479 on 08MAR: BKG=2, LF=1.1%
+2026-01-05 16:27:47 | INFO     | [SUCCESS] Day 08MAR
+2026-01-05 16:27:47 | INFO     | [SUCCESS] LF Search Complete
+2026-01-05 16:27:49 | INFO     | [Worker_9226] Completed: CAI-JED - 8 results, 0 errors
+2026-01-05 16:27:49 | INFO     | [Worker_9226] Processing: TUU-ATZ
+2026-01-05 16:27:49 | INFO     |   Tier 0: Range 3, Chunk 4/4 (7 days)

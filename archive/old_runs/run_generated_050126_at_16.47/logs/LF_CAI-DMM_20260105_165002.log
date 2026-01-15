@@ -1,0 +1,51 @@
+2026-01-05 16:50:02 | INFO     | ======================================================================
+2026-01-05 16:50:02 | INFO     | Load Factor Scraper Started - Route: CAI-DMM
+2026-01-05 16:50:02 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_050126_at_16.47\logs\LF_CAI-DMM_20260105_165002.log
+2026-01-05 16:50:02 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-05 16:50:02 | INFO     | ======================================================================
+2026-01-05 16:50:02 | INFO     | Starting LF search for route: CAI-DMM
+2026-01-05 16:50:02 | INFO     | [START] LF Search
+2026-01-05 16:50:04 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-05 16:50:04 | INFO     | [DAY_START] Processing 31MAR
+2026-01-05 16:50:04 | INFO     | [lf.day.start] Processing CAI-DMM for 31MAR
+2026-01-05 16:50:05 | INFO     | [lf.day.flights_found] Found 1 flights on 31MAR
+2026-01-05 16:50:07 | INFO     | [lf.flight.extracted] SM433 on 31MAR: BKG=0, LF=0.0%
+2026-01-05 16:50:08 | INFO     | [SUCCESS] Day 31MAR
+2026-01-05 16:50:08 | INFO     | [DAY_START] Processing 30MAR
+2026-01-05 16:50:08 | INFO     | [lf.day.start] Processing CAI-DMM for 30MAR
+2026-01-05 16:50:09 | INFO     | [lf.day.flights_found] Found 1 flights on 30MAR
+2026-01-05 16:50:12 | INFO     | [lf.flight.extracted] SM433 on 30MAR: BKG=7, LF=3.9%
+2026-01-05 16:50:14 | INFO     | [SUCCESS] Day 30MAR
+2026-01-05 16:50:14 | INFO     | [DAY_START] Processing 29MAR
+2026-01-05 16:50:14 | INFO     | [lf.day.start] Processing CAI-DMM for 29MAR
+2026-01-05 16:50:15 | INFO     | [lf.day.flights_found] Found 1 flights on 29MAR
+2026-01-05 16:50:18 | INFO     | [lf.flight.extracted] SM439 on 29MAR: BKG=45, LF=25.1%
+2026-01-05 16:50:22 | INFO     | [SUCCESS] Day 29MAR
+2026-01-05 16:50:22 | INFO     | [DAY_START] Processing 28MAR
+2026-01-05 16:50:22 | INFO     | [lf.day.start] Processing CAI-DMM for 28MAR
+2026-01-05 16:50:23 | INFO     | [lf.day.flights_found] Found 1 flights on 28MAR
+2026-01-05 16:50:25 | INFO     | [lf.flight.extracted] SM433 on 28MAR: BKG=66, LF=36.9%
+2026-01-05 16:50:31 | INFO     | [SUCCESS] Day 28MAR
+2026-01-05 16:50:31 | INFO     | [DAY_START] Processing 27MAR
+2026-01-05 16:50:31 | INFO     | [lf.day.start] Processing CAI-DMM for 27MAR
+2026-01-05 16:50:32 | INFO     | [lf.day.flights_found] Found 1 flights on 27MAR
+2026-01-05 16:50:34 | INFO     | [lf.flight.extracted] SM433 on 27MAR: BKG=38, LF=21.2%
+2026-01-05 16:50:38 | INFO     | [SUCCESS] Day 27MAR
+2026-01-05 16:50:38 | INFO     | [DAY_START] Processing 26MAR
+2026-01-05 16:50:38 | INFO     | [lf.day.start] Processing CAI-DMM for 26MAR
+2026-01-05 16:50:39 | INFO     | [lf.day.flights_found] Found 1 flights on 26MAR
+2026-01-05 16:50:41 | INFO     | [lf.flight.extracted] SM433 on 26MAR: BKG=21, LF=11.7%
+2026-01-05 16:50:44 | INFO     | [SUCCESS] Day 26MAR
+2026-01-05 16:50:44 | INFO     | [DAY_START] Processing 25MAR
+2026-01-05 16:50:44 | INFO     | [lf.day.start] Processing CAI-DMM for 25MAR
+2026-01-05 16:50:45 | WARNING  | [lf.day.no_flights] No direct flights on 25MAR
+2026-01-05 16:50:45 | INFO     | [SUCCESS] Day 25MAR
+2026-01-05 16:50:45 | INFO     | [DAY_START] Processing 24MAR
+2026-01-05 16:50:45 | INFO     | [lf.day.start] Processing CAI-DMM for 24MAR
+2026-01-05 16:50:46 | INFO     | [lf.day.flights_found] Found 1 flights on 24MAR
+2026-01-05 16:50:48 | INFO     | [lf.flight.extracted] SM433 on 24MAR: BKG=11, LF=6.2%
+2026-01-05 16:50:51 | INFO     | [SUCCESS] Day 24MAR
+2026-01-05 16:50:51 | INFO     | [SUCCESS] LF Search Complete
+2026-01-05 16:50:53 | INFO     | [Worker_9222] Completed: CAI-DMM - 8 results, 0 errors
+2026-01-05 16:50:53 | INFO     | [Worker_9222] Processing: ATZ-AHB
+2026-01-05 16:50:53 | INFO     |   Tier 0: Range 3, Chunk 1/4 (8 days)

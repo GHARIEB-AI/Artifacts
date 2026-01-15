@@ -1,0 +1,30 @@
+2026-01-03 05:23:26 | INFO     | ======================================================================
+2026-01-03 05:23:26 | INFO     | Load Factor Scraper Started - Route: MED-CAI
+2026-01-03 05:23:26 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_030126_at_05.10\logs\LF_MED-CAI_20260103_052326.log
+2026-01-03 05:23:26 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-03 05:23:26 | INFO     | ======================================================================
+2026-01-03 05:23:26 | INFO     | Starting LF search for route: MED-CAI
+2026-01-03 05:23:26 | INFO     | [START] LF Search
+2026-01-03 05:23:27 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-03 05:23:27 | INFO     | [DAY_START] Processing 26JAN
+2026-01-03 05:23:27 | INFO     | [lf.day.start] Processing MED-CAI for 26JAN
+2026-01-03 05:23:28 | WARNING  | [lf.day.no_flights] No direct flights on 26JAN
+2026-01-03 05:23:28 | INFO     | [SUCCESS] Day 26JAN
+2026-01-03 05:23:28 | INFO     | [DAY_START] Processing 25JAN
+2026-01-03 05:23:28 | INFO     | [lf.day.start] Processing MED-CAI for 25JAN
+2026-01-03 05:23:29 | INFO     | [lf.day.flights_found] Found 1 flights on 25JAN
+2026-01-03 05:23:31 | INFO     | [lf.flight.extracted] SM494 on 25JAN: BKG=135, LF=77.1%
+2026-01-03 05:23:35 | INFO     | [SUCCESS] Day 25JAN
+2026-01-03 05:23:35 | INFO     | [DAY_START] Processing 24JAN
+2026-01-03 05:23:35 | INFO     | [lf.day.start] Processing MED-CAI for 24JAN
+2026-01-03 05:23:36 | INFO     | [lf.day.flights_found] Found 1 flights on 24JAN
+2026-01-03 05:23:37 | INFO     | [lf.flight.extracted] SM494 on 24JAN: BKG=168, LF=96.0%
+2026-01-03 05:23:41 | INFO     | [SUCCESS] Day 24JAN
+2026-01-03 05:23:41 | INFO     | [DAY_START] Processing 23JAN
+2026-01-03 05:23:41 | INFO     | [lf.day.start] Processing MED-CAI for 23JAN
+2026-01-03 05:23:41 | WARNING  | [lf.day.no_flights] No direct flights on 23JAN
+2026-01-03 05:23:42 | INFO     | [SUCCESS] Day 23JAN
+2026-01-03 05:23:42 | INFO     | [SUCCESS] LF Search Complete
+2026-01-03 05:23:44 | INFO     | [Worker_9225] Completed: MED-CAI - 4 results, 0 errors
+2026-01-03 05:23:44 | INFO     | [Worker_9225] Processing: JED-ATZ
+2026-01-03 05:23:44 | INFO     |   Tier 0: Range 2, Chunk 2/3 (4 days)

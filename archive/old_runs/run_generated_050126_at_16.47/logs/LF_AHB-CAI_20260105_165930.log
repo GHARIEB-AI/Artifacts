@@ -1,0 +1,43 @@
+2026-01-05 16:59:30 | INFO     | ======================================================================
+2026-01-05 16:59:30 | INFO     | Load Factor Scraper Started - Route: AHB-CAI
+2026-01-05 16:59:30 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_050126_at_16.47\logs\LF_AHB-CAI_20260105_165930.log
+2026-01-05 16:59:30 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-05 16:59:30 | INFO     | ======================================================================
+2026-01-05 16:59:30 | INFO     | Starting LF search for route: AHB-CAI
+2026-01-05 16:59:30 | INFO     | [START] LF Search
+2026-01-05 16:59:31 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-05 16:59:31 | INFO     | [DAY_START] Processing 07MAR
+2026-01-05 16:59:31 | INFO     | [lf.day.start] Processing AHB-CAI for 07MAR
+2026-01-05 16:59:32 | WARNING  | [lf.day.no_flights] No direct flights on 07MAR
+2026-01-05 16:59:32 | INFO     | [SUCCESS] Day 07MAR
+2026-01-05 16:59:32 | INFO     | [DAY_START] Processing 06MAR
+2026-01-05 16:59:32 | INFO     | [lf.day.start] Processing AHB-CAI for 06MAR
+2026-01-05 16:59:34 | INFO     | [lf.day.flights_found] Found 1 flights on 06MAR
+2026-01-05 16:59:36 | INFO     | [lf.flight.extracted] SM444 on 06MAR: BKG=33, LF=18.9%
+2026-01-05 16:59:39 | INFO     | [SUCCESS] Day 06MAR
+2026-01-05 16:59:39 | INFO     | [DAY_START] Processing 05MAR
+2026-01-05 16:59:39 | INFO     | [lf.day.start] Processing AHB-CAI for 05MAR
+2026-01-05 16:59:40 | INFO     | [lf.day.flights_found] Found 1 flights on 05MAR
+2026-01-05 16:59:42 | INFO     | [lf.flight.extracted] SM448 on 05MAR: BKG=45, LF=25.7%
+2026-01-05 16:59:46 | INFO     | [SUCCESS] Day 05MAR
+2026-01-05 16:59:46 | INFO     | [DAY_START] Processing 04MAR
+2026-01-05 16:59:46 | INFO     | [lf.day.start] Processing AHB-CAI for 04MAR
+2026-01-05 16:59:48 | WARNING  | [lf.day.no_flights] No direct flights on 04MAR
+2026-01-05 16:59:48 | INFO     | [SUCCESS] Day 04MAR
+2026-01-05 16:59:48 | INFO     | [DAY_START] Processing 03MAR
+2026-01-05 16:59:48 | INFO     | [lf.day.start] Processing AHB-CAI for 03MAR
+2026-01-05 16:59:49 | WARNING  | [lf.day.no_flights] No direct flights on 03MAR
+2026-01-05 16:59:49 | INFO     | [SUCCESS] Day 03MAR
+2026-01-05 16:59:49 | INFO     | [DAY_START] Processing 02MAR
+2026-01-05 16:59:49 | INFO     | [lf.day.start] Processing AHB-CAI for 02MAR
+2026-01-05 16:59:50 | WARNING  | [lf.day.no_flights] No direct flights on 02MAR
+2026-01-05 16:59:50 | INFO     | [SUCCESS] Day 02MAR
+2026-01-05 16:59:50 | INFO     | [DAY_START] Processing 01MAR
+2026-01-05 16:59:50 | INFO     | [lf.day.start] Processing AHB-CAI for 01MAR
+2026-01-05 16:59:51 | INFO     | [lf.day.flights_found] Found 1 flights on 01MAR
+2026-01-05 16:59:53 | INFO     | [lf.flight.extracted] SM444 on 01MAR: BKG=27, LF=15.4%
+2026-01-05 16:59:57 | INFO     | [SUCCESS] Day 01MAR
+2026-01-05 16:59:57 | INFO     | [SUCCESS] LF Search Complete
+2026-01-05 16:59:59 | INFO     | [Worker_9225] Completed: AHB-CAI - 7 results, 0 errors
+2026-01-05 16:59:59 | INFO     | [Worker_9225] Processing: ATZ-MED
+2026-01-05 16:59:59 | INFO     |   Tier 0: Range 3, Chunk 4/4 (7 days)

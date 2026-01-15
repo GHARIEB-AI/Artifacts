@@ -1,0 +1,61 @@
+2025-12-30 17:11:32 | INFO     | ======================================================================
+2025-12-30 17:11:32 | INFO     | Load Factor Scraper Started - Route: CAI-MED
+2025-12-30 17:11:32 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_301225_at_17.09\logs\LF_CAI-MED_20251230_171132.log
+2025-12-30 17:11:32 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-30 17:11:32 | INFO     | ======================================================================
+2025-12-30 17:11:32 | INFO     | Starting LF search for route: CAI-MED
+2025-12-30 17:11:32 | INFO     | [START] LF Search
+2025-12-30 17:11:33 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-30 17:11:33 | INFO     | [DAY_START] Processing 28FEB
+2025-12-30 17:11:33 | INFO     | [lf.day.start] Processing CAI-MED for 28FEB
+2025-12-30 17:11:34 | INFO     | [lf.day.flights_found] Found 1 flights on 28FEB
+2025-12-30 17:11:37 | INFO     | [lf.flight.extracted] SM493 on 28FEB: BKG=177, LF=98.9%
+2025-12-30 17:11:42 | INFO     | [SUCCESS] Day 28FEB
+2025-12-30 17:11:42 | INFO     | [DAY_START] Processing 27FEB
+2025-12-30 17:11:42 | INFO     | [lf.day.start] Processing CAI-MED for 27FEB
+2025-12-30 17:11:43 | WARNING  | [lf.day.no_flights] No direct flights on 27FEB
+2025-12-30 17:11:43 | INFO     | [SUCCESS] Day 27FEB
+2025-12-30 17:11:43 | INFO     | [DAY_START] Processing 26FEB
+2025-12-30 17:11:43 | INFO     | [lf.day.start] Processing CAI-MED for 26FEB
+2025-12-30 17:11:44 | INFO     | [lf.day.flights_found] Found 1 flights on 26FEB
+2025-12-30 17:11:46 | INFO     | [lf.flight.extracted] SM493 on 26FEB: BKG=138, LF=78.4%
+2025-12-30 17:11:50 | INFO     | [SUCCESS] Day 26FEB
+2025-12-30 17:11:50 | INFO     | [DAY_START] Processing 25FEB
+2025-12-30 17:11:50 | INFO     | [lf.day.start] Processing CAI-MED for 25FEB
+2025-12-30 17:11:51 | WARNING  | [lf.day.no_flights] No direct flights on 25FEB
+2025-12-30 17:11:51 | INFO     | [SUCCESS] Day 25FEB
+2025-12-30 17:11:51 | INFO     | [DAY_START] Processing 24FEB
+2025-12-30 17:11:51 | INFO     | [lf.day.start] Processing CAI-MED for 24FEB
+2025-12-30 17:11:52 | INFO     | [lf.day.flights_found] Found 1 flights on 24FEB
+2025-12-30 17:11:54 | INFO     | [lf.flight.extracted] SM493 on 24FEB: BKG=170, LF=95.0%
+2025-12-30 17:11:58 | INFO     | [SUCCESS] Day 24FEB
+2025-12-30 17:11:58 | INFO     | [DAY_START] Processing 23FEB
+2025-12-30 17:11:58 | INFO     | [lf.day.start] Processing CAI-MED for 23FEB
+2025-12-30 17:11:59 | INFO     | [lf.day.flights_found] Found 1 flights on 23FEB
+2025-12-30 17:12:02 | INFO     | [lf.flight.extracted] SM495 on 23FEB: BKG=153, LF=85.5%
+2025-12-30 17:12:05 | INFO     | [SUCCESS] Day 23FEB
+2025-12-30 17:12:05 | INFO     | [DAY_START] Processing 22FEB
+2025-12-30 17:12:05 | INFO     | [lf.day.start] Processing CAI-MED for 22FEB
+2025-12-30 17:12:06 | INFO     | [lf.day.flights_found] Found 1 flights on 22FEB
+2025-12-30 17:12:08 | INFO     | [lf.flight.extracted] SM493 on 22FEB: BKG=172, LF=96.1%
+2025-12-30 17:12:12 | INFO     | [SUCCESS] Day 22FEB
+2025-12-30 17:12:12 | INFO     | [DAY_START] Processing 21FEB
+2025-12-30 17:12:12 | INFO     | [lf.day.start] Processing CAI-MED for 21FEB
+2025-12-30 17:12:13 | INFO     | [lf.day.flights_found] Found 1 flights on 21FEB
+2025-12-30 17:12:15 | INFO     | [lf.flight.extracted] SM493 on 21FEB: BKG=177, LF=98.9%
+2025-12-30 17:12:19 | INFO     | [SUCCESS] Day 21FEB
+2025-12-30 17:12:19 | INFO     | [DAY_START] Processing 20FEB
+2025-12-30 17:12:19 | INFO     | [lf.day.start] Processing CAI-MED for 20FEB
+2025-12-30 17:12:20 | INFO     | [lf.day.flights_found] Found 2 flights on 20FEB
+2025-12-30 17:12:22 | INFO     | [lf.flight.extracted] SM971 on 20FEB: BKG=170, LF=96.6%
+2025-12-30 17:12:25 | INFO     | [lf.flight.extracted] SM983 on 20FEB: BKG=170, LF=95.0%
+2025-12-30 17:12:28 | INFO     | [SUCCESS] Day 20FEB
+2025-12-30 17:12:28 | INFO     | [DAY_START] Processing 19FEB
+2025-12-30 17:12:28 | INFO     | [lf.day.start] Processing CAI-MED for 19FEB
+2025-12-30 17:12:29 | INFO     | [lf.day.flights_found] Found 1 flights on 19FEB
+2025-12-30 17:12:31 | INFO     | [lf.flight.extracted] SM493 on 19FEB: BKG=153, LF=85.5%
+2025-12-30 17:12:35 | INFO     | [SUCCESS] Day 19FEB
+2025-12-30 17:12:36 | INFO     | [SUCCESS] LF Search Complete
+2025-12-30 17:12:38 | INFO     | [Worker_9233] Completed: CAI-MED - 10 results, 0 errors
+2025-12-30 17:12:38 | INFO     | [Worker_9233] Processing: HRG-JED
+2025-12-30 17:12:38 | INFO     |   Tier 0: Range 2, Chunk 1/3 (10 days)

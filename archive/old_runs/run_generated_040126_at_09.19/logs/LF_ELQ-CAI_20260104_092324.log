@@ -1,0 +1,43 @@
+2026-01-04 09:23:24 | INFO     | ======================================================================
+2026-01-04 09:23:24 | INFO     | Load Factor Scraper Started - Route: ELQ-CAI
+2026-01-04 09:23:24 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_040126_at_09.19\logs\LF_ELQ-CAI_20260104_092324.log
+2026-01-04 09:23:24 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-04 09:23:24 | INFO     | ======================================================================
+2026-01-04 09:23:24 | INFO     | Starting LF search for route: ELQ-CAI
+2026-01-04 09:23:24 | INFO     | [START] LF Search
+2026-01-04 09:23:25 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-04 09:23:25 | INFO     | [DAY_START] Processing 24JAN
+2026-01-04 09:23:25 | INFO     | [lf.day.start] Processing ELQ-CAI for 24JAN
+2026-01-04 09:23:26 | INFO     | [lf.day.flights_found] Found 1 flights on 24JAN
+2026-01-04 09:23:28 | INFO     | [lf.flight.extracted] SM428 on 24JAN: BKG=5, LF=3.0%
+2026-01-04 09:23:31 | INFO     | [SUCCESS] Day 24JAN
+2026-01-04 09:23:31 | INFO     | [DAY_START] Processing 23JAN
+2026-01-04 09:23:31 | INFO     | [lf.day.start] Processing ELQ-CAI for 23JAN
+2026-01-04 09:23:32 | WARNING  | [lf.day.no_flights] No direct flights on 23JAN
+2026-01-04 09:23:32 | INFO     | [SUCCESS] Day 23JAN
+2026-01-04 09:23:32 | INFO     | [DAY_START] Processing 22JAN
+2026-01-04 09:23:32 | INFO     | [lf.day.start] Processing ELQ-CAI for 22JAN
+2026-01-04 09:23:33 | INFO     | [lf.day.flights_found] Found 1 flights on 22JAN
+2026-01-04 09:23:35 | INFO     | [lf.flight.extracted] SM428 on 22JAN: BKG=14, LF=8.0%
+2026-01-04 09:23:37 | INFO     | [SUCCESS] Day 22JAN
+2026-01-04 09:23:37 | INFO     | [DAY_START] Processing 21JAN
+2026-01-04 09:23:37 | INFO     | [lf.day.start] Processing ELQ-CAI for 21JAN
+2026-01-04 09:23:38 | WARNING  | [lf.day.no_flights] No direct flights on 21JAN
+2026-01-04 09:23:39 | INFO     | [SUCCESS] Day 21JAN
+2026-01-04 09:23:39 | INFO     | [DAY_START] Processing 20JAN
+2026-01-04 09:23:39 | INFO     | [lf.day.start] Processing ELQ-CAI for 20JAN
+2026-01-04 09:23:39 | WARNING  | [lf.day.no_flights] No direct flights on 20JAN
+2026-01-04 09:23:40 | INFO     | [SUCCESS] Day 20JAN
+2026-01-04 09:23:40 | INFO     | [DAY_START] Processing 19JAN
+2026-01-04 09:23:40 | INFO     | [lf.day.start] Processing ELQ-CAI for 19JAN
+2026-01-04 09:23:41 | WARNING  | [lf.day.no_flights] No direct flights on 19JAN
+2026-01-04 09:23:41 | INFO     | [SUCCESS] Day 19JAN
+2026-01-04 09:23:41 | INFO     | [DAY_START] Processing 18JAN
+2026-01-04 09:23:41 | INFO     | [lf.day.start] Processing ELQ-CAI for 18JAN
+2026-01-04 09:23:42 | INFO     | [lf.day.flights_found] Found 1 flights on 18JAN
+2026-01-04 09:23:45 | INFO     | [lf.flight.extracted] SM428 on 18JAN: BKG=16, LF=9.6%
+2026-01-04 09:23:47 | INFO     | [SUCCESS] Day 18JAN
+2026-01-04 09:23:47 | INFO     | [SUCCESS] LF Search Complete
+2026-01-04 09:23:49 | INFO     | [Worker_9227] Completed: ELQ-CAI - 7 results, 0 errors
+2026-01-04 09:23:49 | INFO     | [Worker_9227] Processing: JED-CAI
+2026-01-04 09:23:49 | INFO     |   Tier 0: Range 1, Chunk 3/4 (7 days)

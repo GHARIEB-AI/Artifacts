@@ -1,0 +1,156 @@
+{
+  "task_id": "DMM-CAI_r2_chunk2",
+  "saved_at": "2025-12-31T23:36:43.504419",
+  "lf_results": {
+    "2026-02-16": [],
+    "2026-02-15": [],
+    "2026-02-14": [
+      {
+        "Date": "Saturday, February 14, 2026",
+        "Flight": "SM434",
+        "DEP": "22:10",
+        "SOLD": 3,
+        "FULL CAPACITY": 172,
+        "LF%": 0.0174,
+        "LowestAvail": "G9",
+        "LASTSOLD": "2025-11-29 00:00:00",
+        "WEEKLY PROGRESS": 0,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 0,
+          "U": 0,
+          "X": 0,
+          "T": 0,
+          "W": 0,
+          "S": 1,
+          "G": 1,
+          "L": 0,
+          "V": 0,
+          "K": 1,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "DMM-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": null
+      }
+    ],
+    "2026-02-13": [
+      {
+        "Date": "Friday, February 13, 2026",
+        "Flight": "SM434",
+        "DEP": "13:55",
+        "SOLD": 10,
+        "FULL CAPACITY": 175,
+        "LF%": 0.0571,
+        "LowestAvail": "G9",
+        "LASTSOLD": "2025-12-11 00:00:00",
+        "WEEKLY PROGRESS": 0,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 3,
+          "U": 2,
+          "X": 0,
+          "T": 0,
+          "W": 0,
+          "S": 0,
+          "G": 5,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "DMM-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM434",
+          "sm_route": "DMM-CAI",
+          "sm_dep": "1355",
+          "sm_arr": "1610",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "SM0135",
+              "outbound_route": "CAI-ASW",
+              "outbound_dep": "1820",
+              "passengers": [
+                {
+                  "iata": "RUHAK38AB"
+                },
+                {
+                  "iata": "RUHAK38AB"
+                },
+                {
+                  "iata": "RUHAK38AB"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "2026-02-12": [
+      {
+        "Date": "Thursday, February 12, 2026",
+        "Flight": "SM434",
+        "DEP": "22:10",
+        "SOLD": 8,
+        "FULL CAPACITY": 175,
+        "LF%": 0.0457,
+        "LowestAvail": "G9",
+        "LASTSOLD": "2025-12-07 00:00:00",
+        "WEEKLY PROGRESS": 0,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 3,
+          "U": 4,
+          "X": 0,
+          "T": 0,
+          "W": 0,
+          "S": 0,
+          "G": 1,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "DMM-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": null
+      }
+    ],
+    "2026-02-11": []
+  },
+  "lf_errors": {}
+}

@@ -1,0 +1,39 @@
+2025-12-31 23:31:54 | INFO     | ======================================================================
+2025-12-31 23:31:54 | INFO     | Load Factor Scraper Started - Route: CAI-TUU
+2025-12-31 23:31:54 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_23.27\logs\LF_CAI-TUU_20251231_233154.log
+2025-12-31 23:31:54 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 23:31:54 | INFO     | ======================================================================
+2025-12-31 23:31:54 | INFO     | Starting LF search for route: CAI-TUU
+2025-12-31 23:31:54 | INFO     | [START] LF Search
+2025-12-31 23:31:56 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 23:31:56 | INFO     | [DAY_START] Processing 28FEB
+2025-12-31 23:31:56 | INFO     | [lf.day.start] Processing CAI-TUU for 28FEB
+2025-12-31 23:31:57 | INFO     | [lf.day.flights_found] Found 1 flights on 28FEB
+2025-12-31 23:31:59 | INFO     | [lf.flight.extracted] SM325 on 28FEB: BKG=1, LF=0.6%
+2025-12-31 23:32:02 | INFO     | [SUCCESS] Day 28FEB
+2025-12-31 23:32:02 | INFO     | [DAY_START] Processing 27FEB
+2025-12-31 23:32:02 | INFO     | [lf.day.start] Processing CAI-TUU for 27FEB
+2025-12-31 23:32:03 | WARNING  | [lf.day.no_flights] No direct flights on 27FEB
+2025-12-31 23:32:03 | INFO     | [SUCCESS] Day 27FEB
+2025-12-31 23:32:03 | INFO     | [DAY_START] Processing 26FEB
+2025-12-31 23:32:03 | INFO     | [lf.day.start] Processing CAI-TUU for 26FEB
+2025-12-31 23:32:04 | INFO     | [lf.day.flights_found] Found 1 flights on 26FEB
+2025-12-31 23:32:07 | INFO     | [lf.flight.extracted] SM325 on 26FEB: BKG=0, LF=0.0%
+2025-12-31 23:32:08 | INFO     | [SUCCESS] Day 26FEB
+2025-12-31 23:32:08 | INFO     | [DAY_START] Processing 25FEB
+2025-12-31 23:32:08 | INFO     | [lf.day.start] Processing CAI-TUU for 25FEB
+2025-12-31 23:32:09 | INFO     | [lf.day.flights_found] Found 1 flights on 25FEB
+2025-12-31 23:32:11 | INFO     | [lf.flight.extracted] SM325 on 25FEB: BKG=0, LF=0.0%
+2025-12-31 23:32:12 | INFO     | [SUCCESS] Day 25FEB
+2025-12-31 23:32:12 | INFO     | [DAY_START] Processing 24FEB
+2025-12-31 23:32:12 | INFO     | [lf.day.start] Processing CAI-TUU for 24FEB
+2025-12-31 23:32:14 | WARNING  | [lf.day.no_flights] No direct flights on 24FEB
+2025-12-31 23:32:14 | INFO     | [SUCCESS] Day 24FEB
+2025-12-31 23:32:14 | INFO     | [DAY_START] Processing 23FEB
+2025-12-31 23:32:14 | INFO     | [lf.day.start] Processing CAI-TUU for 23FEB
+2025-12-31 23:32:15 | WARNING  | [lf.day.no_flights] No direct flights on 23FEB
+2025-12-31 23:32:15 | INFO     | [SUCCESS] Day 23FEB
+2025-12-31 23:32:15 | INFO     | [SUCCESS] LF Search Complete
+2025-12-31 23:32:17 | INFO     | [Worker_9223] Completed: CAI-TUU - 6 results, 0 errors
+2025-12-31 23:32:17 | INFO     | [Worker_9223] Processing: ATZ-AHB
+2025-12-31 23:32:17 | INFO     |   Tier 0: Range 3, Chunk 1/5 (6 days)

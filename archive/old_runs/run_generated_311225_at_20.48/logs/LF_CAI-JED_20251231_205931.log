@@ -1,0 +1,65 @@
+2025-12-31 20:59:31 | INFO     | ======================================================================
+2025-12-31 20:59:31 | INFO     | Load Factor Scraper Started - Route: CAI-JED
+2025-12-31 20:59:31 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_20.48\logs\LF_CAI-JED_20251231_205931.log
+2025-12-31 20:59:31 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 20:59:31 | INFO     | ======================================================================
+2025-12-31 20:59:31 | INFO     | Starting LF search for route: CAI-JED
+2025-12-31 20:59:31 | INFO     | [START] LF Search
+2025-12-31 20:59:33 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 20:59:33 | INFO     | [DAY_START] Processing 17JAN
+2025-12-31 20:59:33 | INFO     | [lf.day.start] Processing CAI-JED for 17JAN
+2025-12-31 20:59:34 | INFO     | [lf.day.flights_found] Found 4 flights on 17JAN
+2025-12-31 20:59:37 | INFO     | [lf.flight.extracted] SM449 on 17JAN: BKG=180, LF=100.6%
+2025-12-31 20:59:41 | INFO     | [lf.flight.extracted] SM475 on 17JAN: BKG=179, LF=100.0%
+2025-12-31 20:59:45 | INFO     | [lf.flight.extracted] SM477 on 17JAN: BKG=179, LF=100.0%
+2025-12-31 20:59:50 | INFO     | [lf.flight.extracted] SM423 on 17JAN: BKG=179, LF=100.0%
+2025-12-31 21:00:13 | INFO     | [SUCCESS] Day 17JAN
+2025-12-31 21:00:13 | INFO     | [DAY_START] Processing 16JAN
+2025-12-31 21:00:13 | INFO     | [lf.day.start] Processing CAI-JED for 16JAN
+2025-12-31 21:00:14 | INFO     | [lf.day.flights_found] Found 5 flights on 16JAN
+2025-12-31 21:00:16 | INFO     | [lf.flight.extracted] SM475 on 16JAN: BKG=171, LF=95.5%
+2025-12-31 21:00:19 | INFO     | [lf.flight.extracted] SM477 on 16JAN: BKG=155, LF=86.6%
+2025-12-31 21:00:23 | INFO     | [lf.flight.extracted] SM479 on 16JAN: BKG=145, LF=81.0%
+2025-12-31 21:00:28 | INFO     | [lf.flight.extracted] SM471 on 16JAN: BKG=102, LF=57.0%
+2025-12-31 21:00:33 | INFO     | [lf.flight.extracted] SM459 on 16JAN: BKG=158, LF=88.3%
+2025-12-31 21:01:06 | INFO     | [SUCCESS] Day 16JAN
+2025-12-31 21:01:06 | INFO     | [DAY_START] Processing 15JAN
+2025-12-31 21:01:06 | INFO     | [lf.day.start] Processing CAI-JED for 15JAN
+2025-12-31 21:01:07 | INFO     | [lf.day.flights_found] Found 6 flights on 15JAN
+2025-12-31 21:01:09 | INFO     | [lf.flight.extracted] SM449 on 15JAN: BKG=123, LF=68.7%
+2025-12-31 21:01:13 | INFO     | [lf.flight.extracted] SM475 on 15JAN: BKG=179, LF=100.0%
+2025-12-31 21:01:16 | INFO     | [lf.flight.extracted] SM431 on 15JAN: BKG=176, LF=100.0%
+2025-12-31 21:01:20 | INFO     | [lf.flight.extracted] SM477 on 15JAN: BKG=179, LF=100.0%
+2025-12-31 21:01:23 | INFO     | [lf.flight.extracted] SM479 on 15JAN: BKG=179, LF=100.0%
+2025-12-31 21:01:27 | INFO     | [lf.flight.extracted] SM423 on 15JAN: BKG=94, LF=52.5%
+2025-12-31 21:01:53 | INFO     | [SUCCESS] Day 15JAN
+2025-12-31 21:01:53 | INFO     | [DAY_START] Processing 14JAN
+2025-12-31 21:01:53 | INFO     | [lf.day.start] Processing CAI-JED for 14JAN
+2025-12-31 21:01:54 | INFO     | [lf.day.flights_found] Found 5 flights on 14JAN
+2025-12-31 21:01:57 | INFO     | [lf.flight.extracted] SM423 on 14JAN: BKG=168, LF=93.8%
+2025-12-31 21:02:02 | INFO     | [lf.flight.extracted] SM475 on 14JAN: BKG=96, LF=53.6%
+2025-12-31 21:02:09 | INFO     | [lf.flight.extracted] SM459 on 14JAN: BKG=128, LF=71.5%
+2025-12-31 21:02:13 | INFO     | [lf.flight.extracted] SM477 on 14JAN: BKG=176, LF=97.8%
+2025-12-31 21:02:17 | INFO     | [lf.flight.extracted] SM471 on 14JAN: BKG=150, LF=83.8%
+2025-12-31 21:02:37 | INFO     | [SUCCESS] Day 14JAN
+2025-12-31 21:02:37 | INFO     | [DAY_START] Processing 13JAN
+2025-12-31 21:02:37 | INFO     | [lf.day.start] Processing CAI-JED for 13JAN
+2025-12-31 21:02:38 | INFO     | [lf.day.flights_found] Found 6 flights on 13JAN
+2025-12-31 21:02:40 | INFO     | [lf.flight.extracted] SM471 on 13JAN: BKG=88, LF=49.2%
+2025-12-31 21:02:44 | INFO     | [lf.flight.extracted] SM479 on 13JAN: BKG=177, LF=98.9%
+2025-12-31 21:02:47 | INFO     | [lf.flight.extracted] SM477 on 13JAN: BKG=148, LF=82.7%
+2025-12-31 21:02:51 | INFO     | [lf.flight.extracted] SM459 on 13JAN: BKG=62, LF=34.6%
+2025-12-31 21:02:55 | INFO     | [lf.flight.extracted] SM423 on 13JAN: BKG=63, LF=35.2%
+2025-12-31 21:03:03 | INFO     | [lf.flight.extracted] SM475 on 13JAN: BKG=83, LF=46.4%
+2025-12-31 21:03:41 | INFO     | [SUCCESS] Day 13JAN
+2025-12-31 21:03:41 | INFO     | [DAY_START] Processing 12JAN
+2025-12-31 21:03:41 | INFO     | [lf.day.start] Processing CAI-JED for 12JAN
+2025-12-31 21:03:42 | INFO     | [lf.day.flights_found] Found 3 flights on 12JAN
+2025-12-31 21:03:44 | INFO     | [lf.flight.extracted] SM475 on 12JAN: BKG=115, LF=64.2%
+2025-12-31 21:03:48 | INFO     | [lf.flight.extracted] SM477 on 12JAN: BKG=159, LF=88.8%
+2025-12-31 21:03:52 | INFO     | [lf.flight.extracted] SM459 on 12JAN: BKG=40, LF=22.4%
+2025-12-31 21:04:02 | INFO     | [SUCCESS] Day 12JAN
+2025-12-31 21:04:02 | INFO     | [SUCCESS] LF Search Complete
+2025-12-31 21:04:04 | INFO     | [Worker_9232] Completed: CAI-JED - 6 results, 0 errors
+2025-12-31 21:04:04 | INFO     | [Worker_9232] Processing: HBE-JED
+2025-12-31 21:04:04 | INFO     |   Tier 0: Range 1, Chunk 4/5 (6 days)

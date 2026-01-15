@@ -1,0 +1,39 @@
+2026-01-01 08:39:56 | INFO     | ======================================================================
+2026-01-01 08:39:56 | INFO     | Load Factor Scraper Started - Route: ELQ-CAI
+2026-01-01 08:39:56 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_010126_at_08.01\logs\LF_ELQ-CAI_20260101_083956.log
+2026-01-01 08:39:56 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-01 08:39:56 | INFO     | ======================================================================
+2026-01-01 08:39:56 | INFO     | Starting LF search for route: ELQ-CAI
+2026-01-01 08:39:56 | INFO     | [START] LF Search
+2026-01-01 08:39:58 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-01 08:39:58 | INFO     | [DAY_START] Processing 18JAN
+2026-01-01 08:39:58 | INFO     | [lf.day.start] Processing ELQ-CAI for 18JAN
+2026-01-01 08:39:59 | INFO     | [lf.day.flights_found] Found 1 flights on 18JAN
+2026-01-01 08:40:02 | INFO     | [lf.flight.extracted] SM428 on 18JAN: BKG=14, LF=8.4%
+2026-01-01 08:40:07 | INFO     | [SUCCESS] Day 18JAN
+2026-01-01 08:40:07 | INFO     | [DAY_START] Processing 17JAN
+2026-01-01 08:40:07 | INFO     | [lf.day.start] Processing ELQ-CAI for 17JAN
+2026-01-01 08:40:08 | INFO     | [lf.day.flights_found] Found 1 flights on 17JAN
+2026-01-01 08:40:10 | INFO     | [lf.flight.extracted] SM428 on 17JAN: BKG=14, LF=8.4%
+2026-01-01 08:40:15 | INFO     | [SUCCESS] Day 17JAN
+2026-01-01 08:40:15 | INFO     | [DAY_START] Processing 16JAN
+2026-01-01 08:40:15 | INFO     | [lf.day.start] Processing ELQ-CAI for 16JAN
+2026-01-01 08:40:16 | WARNING  | [lf.day.no_flights] No direct flights on 16JAN
+2026-01-01 08:40:16 | INFO     | [SUCCESS] Day 16JAN
+2026-01-01 08:40:16 | INFO     | [DAY_START] Processing 15JAN
+2026-01-01 08:40:16 | INFO     | [lf.day.start] Processing ELQ-CAI for 15JAN
+2026-01-01 08:40:17 | INFO     | [lf.day.flights_found] Found 1 flights on 15JAN
+2026-01-01 08:40:20 | INFO     | [lf.flight.extracted] SM428 on 15JAN: BKG=28, LF=16.8%
+2026-01-01 08:40:24 | INFO     | [SUCCESS] Day 15JAN
+2026-01-01 08:40:24 | INFO     | [DAY_START] Processing 14JAN
+2026-01-01 08:40:24 | INFO     | [lf.day.start] Processing ELQ-CAI for 14JAN
+2026-01-01 08:40:25 | WARNING  | [lf.day.no_flights] No direct flights on 14JAN
+2026-01-01 08:40:25 | INFO     | [SUCCESS] Day 14JAN
+2026-01-01 08:40:25 | INFO     | [DAY_START] Processing 13JAN
+2026-01-01 08:40:25 | INFO     | [lf.day.start] Processing ELQ-CAI for 13JAN
+2026-01-01 08:40:27 | WARNING  | [lf.day.no_flights] No direct flights on 13JAN
+2026-01-01 08:40:27 | INFO     | [SUCCESS] Day 13JAN
+2026-01-01 08:40:27 | INFO     | [SUCCESS] LF Search Complete
+2026-01-01 08:40:29 | INFO     | [Worker_9227] Completed: ELQ-CAI - 6 results, 0 errors
+2026-01-01 08:40:29 | INFO     | [Worker_9227] Processing: ATZ-MED
+2026-01-01 08:40:29 | INFO     |   Tier 0: Range 1, Chunk 3/5 (6 days)

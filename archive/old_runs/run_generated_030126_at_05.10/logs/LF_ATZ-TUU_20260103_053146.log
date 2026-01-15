@@ -1,0 +1,28 @@
+2026-01-03 05:31:46 | INFO     | ======================================================================
+2026-01-03 05:31:46 | INFO     | Load Factor Scraper Started - Route: ATZ-TUU
+2026-01-03 05:31:46 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_030126_at_05.10\logs\LF_ATZ-TUU_20260103_053146.log
+2026-01-03 05:31:46 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-03 05:31:46 | INFO     | ======================================================================
+2026-01-03 05:31:46 | INFO     | Starting LF search for route: ATZ-TUU
+2026-01-03 05:31:46 | INFO     | [START] LF Search
+2026-01-03 05:31:47 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-03 05:31:47 | INFO     | [DAY_START] Processing 07JAN
+2026-01-03 05:31:47 | INFO     | [lf.day.start] Processing ATZ-TUU for 07JAN
+2026-01-03 05:31:48 | WARNING  | [lf.day.no_flights] No direct flights on 07JAN
+2026-01-03 05:31:48 | INFO     | [SUCCESS] Day 07JAN
+2026-01-03 05:31:48 | INFO     | [DAY_START] Processing 06JAN
+2026-01-03 05:31:48 | INFO     | [lf.day.start] Processing ATZ-TUU for 06JAN
+2026-01-03 05:31:49 | WARNING  | [lf.day.no_flights] No direct flights on 06JAN
+2026-01-03 05:31:49 | INFO     | [SUCCESS] Day 06JAN
+2026-01-03 05:31:49 | INFO     | [DAY_START] Processing 05JAN
+2026-01-03 05:31:49 | INFO     | [lf.day.start] Processing ATZ-TUU for 05JAN
+2026-01-03 05:31:50 | WARNING  | [lf.day.no_flights] No direct flights on 05JAN
+2026-01-03 05:31:50 | INFO     | [SUCCESS] Day 05JAN
+2026-01-03 05:31:50 | INFO     | [DAY_START] Processing 04JAN
+2026-01-03 05:31:50 | INFO     | [lf.day.start] Processing ATZ-TUU for 04JAN
+2026-01-03 05:31:51 | WARNING  | [lf.day.no_flights] No direct flights on 04JAN
+2026-01-03 05:31:51 | INFO     | [SUCCESS] Day 04JAN
+2026-01-03 05:31:51 | INFO     | [SUCCESS] LF Search Complete
+2026-01-03 05:31:53 | INFO     | [Worker_9226] Completed: ATZ-TUU - 4 results, 0 errors
+2026-01-03 05:38:59 | INFO     | [Worker_9226] Shutdown signal received, exiting...
+2026-01-03 05:38:59 | INFO     | [Worker_9226] Finished. Processed 8 groups.

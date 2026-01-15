@@ -1,0 +1,50 @@
+2026-01-05 16:53:06 | INFO     | ======================================================================
+2026-01-05 16:53:06 | INFO     | Load Factor Scraper Started - Route: ATZ-MED
+2026-01-05 16:53:06 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_050126_at_16.47\logs\LF_ATZ-MED_20260105_165306.log
+2026-01-05 16:53:06 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-05 16:53:06 | INFO     | ======================================================================
+2026-01-05 16:53:06 | INFO     | Starting LF search for route: ATZ-MED
+2026-01-05 16:53:06 | INFO     | [START] LF Search
+2026-01-05 16:53:08 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-05 16:53:08 | INFO     | [DAY_START] Processing 23MAR
+2026-01-05 16:53:08 | INFO     | [lf.day.start] Processing ATZ-MED for 23MAR
+2026-01-05 16:53:09 | INFO     | [lf.day.flights_found] Found 1 flights on 23MAR
+2026-01-05 16:53:11 | INFO     | [lf.flight.extracted] SM487 on 23MAR: BKG=0, LF=0.0%
+2026-01-05 16:53:12 | INFO     | [SUCCESS] Day 23MAR
+2026-01-05 16:53:12 | INFO     | [DAY_START] Processing 22MAR
+2026-01-05 16:53:12 | INFO     | [lf.day.start] Processing ATZ-MED for 22MAR
+2026-01-05 16:53:13 | INFO     | [lf.day.flights_found] Found 1 flights on 22MAR
+2026-01-05 16:53:15 | INFO     | [lf.flight.extracted] SM963 on 22MAR: BKG=0, LF=0.0%
+2026-01-05 16:53:16 | INFO     | [SUCCESS] Day 22MAR
+2026-01-05 16:53:16 | INFO     | [DAY_START] Processing 21MAR
+2026-01-05 16:53:16 | INFO     | [lf.day.start] Processing ATZ-MED for 21MAR
+2026-01-05 16:53:17 | INFO     | [lf.day.flights_found] Found 1 flights on 21MAR
+2026-01-05 16:53:19 | INFO     | [lf.flight.extracted] SM487 on 21MAR: BKG=0, LF=0.0%
+2026-01-05 16:53:20 | INFO     | [SUCCESS] Day 21MAR
+2026-01-05 16:53:20 | INFO     | [DAY_START] Processing 20MAR
+2026-01-05 16:53:20 | INFO     | [lf.day.start] Processing ATZ-MED for 20MAR
+2026-01-05 16:53:21 | INFO     | [lf.day.flights_found] Found 1 flights on 20MAR
+2026-01-05 16:53:23 | INFO     | [lf.flight.extracted] SM963 on 20MAR: BKG=0, LF=0.0%
+2026-01-05 16:53:24 | INFO     | [SUCCESS] Day 20MAR
+2026-01-05 16:53:24 | INFO     | [DAY_START] Processing 19MAR
+2026-01-05 16:53:24 | INFO     | [lf.day.start] Processing ATZ-MED for 19MAR
+2026-01-05 16:53:25 | WARNING  | [lf.day.no_flights] No direct flights on 19MAR
+2026-01-05 16:53:25 | INFO     | [SUCCESS] Day 19MAR
+2026-01-05 16:53:25 | INFO     | [DAY_START] Processing 18MAR
+2026-01-05 16:53:25 | INFO     | [lf.day.start] Processing ATZ-MED for 18MAR
+2026-01-05 16:53:26 | WARNING  | [lf.day.no_flights] No direct flights on 18MAR
+2026-01-05 16:53:26 | INFO     | [SUCCESS] Day 18MAR
+2026-01-05 16:53:26 | INFO     | [DAY_START] Processing 17MAR
+2026-01-05 16:53:26 | INFO     | [lf.day.start] Processing ATZ-MED for 17MAR
+2026-01-05 16:53:28 | INFO     | [lf.day.flights_found] Found 1 flights on 17MAR
+2026-01-05 16:53:29 | INFO     | [lf.flight.extracted] SM487 on 17MAR: BKG=0, LF=0.0%
+2026-01-05 16:53:31 | INFO     | [SUCCESS] Day 17MAR
+2026-01-05 16:53:31 | INFO     | [DAY_START] Processing 16MAR
+2026-01-05 16:53:31 | INFO     | [lf.day.start] Processing ATZ-MED for 16MAR
+2026-01-05 16:53:32 | INFO     | [lf.day.flights_found] Found 1 flights on 16MAR
+2026-01-05 16:53:34 | INFO     | [lf.flight.extracted] SM487 on 16MAR: BKG=0, LF=0.0%
+2026-01-05 16:53:35 | INFO     | [SUCCESS] Day 16MAR
+2026-01-05 16:53:35 | INFO     | [SUCCESS] LF Search Complete
+2026-01-05 16:53:37 | INFO     | [Worker_9232] Completed: ATZ-MED - 8 results, 0 errors
+2026-01-05 16:53:37 | INFO     | [Worker_9232] Processing: ATZ-RUH
+2026-01-05 16:53:37 | INFO     |   Tier 0: Range 3, Chunk 2/4 (8 days)

@@ -1,0 +1,51 @@
+2026-01-01 08:20:27 | INFO     | ======================================================================
+2026-01-01 08:20:27 | INFO     | Load Factor Scraper Started - Route: MED-CAI
+2026-01-01 08:20:27 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_010126_at_08.01\logs\LF_MED-CAI_20260101_082027.log
+2026-01-01 08:20:27 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-01 08:20:27 | INFO     | ======================================================================
+2026-01-01 08:20:27 | INFO     | Starting LF search for route: MED-CAI
+2026-01-01 08:20:27 | INFO     | [START] LF Search
+2026-01-01 08:20:28 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-01 08:20:28 | INFO     | [DAY_START] Processing 21FEB
+2026-01-01 08:20:28 | INFO     | [lf.day.start] Processing MED-CAI for 21FEB
+2026-01-01 08:20:29 | INFO     | [lf.day.flights_found] Found 1 flights on 21FEB
+2026-01-01 08:20:31 | INFO     | [lf.flight.extracted] SM494 on 21FEB: BKG=143, LF=81.7%
+2026-01-01 08:20:34 | INFO     | [SUCCESS] Day 21FEB
+2026-01-01 08:20:34 | INFO     | [DAY_START] Processing 20FEB
+2026-01-01 08:20:34 | INFO     | [lf.day.start] Processing MED-CAI for 20FEB
+2026-01-01 08:20:35 | INFO     | [lf.day.flights_found] Found 2 flights on 20FEB
+2026-01-01 08:20:37 | INFO     | [lf.flight.extracted] SM972 on 20FEB: BKG=170, LF=103.7%
+2026-01-01 08:20:41 | INFO     | [lf.flight.extracted] SM984 on 20FEB: BKG=170, LF=101.8%
+2026-01-01 08:20:44 | INFO     | [SUCCESS] Day 20FEB
+2026-01-01 08:20:44 | INFO     | [DAY_START] Processing 19FEB
+2026-01-01 08:20:44 | INFO     | [lf.day.start] Processing MED-CAI for 19FEB
+2026-01-01 08:20:45 | INFO     | [lf.day.flights_found] Found 1 flights on 19FEB
+2026-01-01 08:20:47 | INFO     | [lf.flight.extracted] SM494 on 19FEB: BKG=137, LF=78.3%
+2026-01-01 08:20:50 | INFO     | [SUCCESS] Day 19FEB
+2026-01-01 08:20:50 | INFO     | [DAY_START] Processing 18FEB
+2026-01-01 08:20:50 | INFO     | [lf.day.start] Processing MED-CAI for 18FEB
+2026-01-01 08:20:51 | INFO     | [lf.day.flights_found] Found 2 flights on 18FEB
+2026-01-01 08:20:52 | INFO     | [lf.flight.extracted] SM952 on 18FEB: BKG=0, LF=0.0%
+2026-01-01 08:20:55 | INFO     | [lf.flight.extracted] SM954 on 18FEB: BKG=0, LF=0.0%
+2026-01-01 08:20:57 | INFO     | [SUCCESS] Day 18FEB
+2026-01-01 08:20:57 | INFO     | [DAY_START] Processing 17FEB
+2026-01-01 08:20:57 | INFO     | [lf.day.start] Processing MED-CAI for 17FEB
+2026-01-01 08:20:57 | INFO     | [lf.day.flights_found] Found 3 flights on 17FEB
+2026-01-01 08:20:59 | INFO     | [lf.flight.extracted] SM496 on 17FEB: BKG=4, LF=2.3%
+2026-01-01 08:21:03 | INFO     | [lf.flight.extracted] SM972 on 17FEB: BKG=0, LF=0.0%
+2026-01-01 08:21:06 | INFO     | [lf.flight.extracted] SM494 on 17FEB: BKG=5, LF=2.9%
+2026-01-01 08:21:09 | INFO     | [SUCCESS] Day 17FEB
+2026-01-01 08:21:09 | INFO     | [DAY_START] Processing 16FEB
+2026-01-01 08:21:09 | INFO     | [lf.day.start] Processing MED-CAI for 16FEB
+2026-01-01 08:21:10 | INFO     | [lf.day.flights_found] Found 1 flights on 16FEB
+2026-01-01 08:21:12 | INFO     | [lf.flight.extracted] SM972 on 16FEB: BKG=9, LF=5.4%
+2026-01-01 08:21:15 | INFO     | [SUCCESS] Day 16FEB
+2026-01-01 08:21:15 | INFO     | [DAY_START] Processing 15FEB
+2026-01-01 08:21:15 | INFO     | [lf.day.start] Processing MED-CAI for 15FEB
+2026-01-01 08:21:16 | INFO     | [lf.day.flights_found] Found 1 flights on 15FEB
+2026-01-01 08:21:19 | INFO     | [lf.flight.extracted] SM494 on 15FEB: BKG=38, LF=22.1%
+2026-01-01 08:21:22 | INFO     | [SUCCESS] Day 15FEB
+2026-01-01 08:21:22 | INFO     | [SUCCESS] LF Search Complete
+2026-01-01 08:21:24 | INFO     | [Worker_9224] Completed: MED-CAI - 7 results, 0 errors
+2026-01-01 08:21:24 | INFO     | [Worker_9224] Processing: TUU-CAI
+2026-01-01 08:21:24 | INFO     |   Tier 0: Range 2, Chunk 2/4 (7 days)

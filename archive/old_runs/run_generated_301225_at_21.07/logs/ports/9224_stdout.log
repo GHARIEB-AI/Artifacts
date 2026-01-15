@@ -1,0 +1,765 @@
+
+============================================================
+     LF WORKER - PORT 9224
+============================================================
+Worker: Worker_9224
+Status: READY
+Waiting for tasks...
+============================================================
+
+
+============================================================
+[Worker_9224] Processing: JED-ATZ
+  Tier 0: Range 1, Chunk 1/5
+  Dates: 7 days
+  Date Range: 2026-01-31 to 2026-01-25
+============================================================
+
+2025-12-30 21:07:33 | INFO     | ======================================================================
+2025-12-30 21:07:33 | INFO     | Load Factor Scraper Started - Route: JED-ATZ
+2025-12-30 21:07:33 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_301225_at_21.07\logs\LF_JED-ATZ_20251230_210733.log
+2025-12-30 21:07:33 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-30 21:07:33 | INFO     | ======================================================================
+[LF] Processing dates (override): ['31JAN', '30JAN', '29JAN', '28JAN', '27JAN', '26JAN', '25JAN']
+[LF] Attaching to Chrome for Altea access
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9224 (after 1 attempts)
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+[LF] Processing JED-ATZ for 31JAN
+[LF][ERROR] Amadeus command error detected: UNKNOWN TRANSACTION
+[LF][ERROR] Command: SN31JANJEDATZ/ASM
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+============================================================
+[LF][RESYNC] Command 'SN31JANJEDATZ/ASM' failed: TECH_ERROR:UNKNOWN TRANSACTION
+[LF][RESYNC] Re-running entire day from SN command for JED-ATZ 31JAN
+[LF][RESYNC] Attempt 1/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing JED-ATZ for 31JAN
+[LF] 31JAN: found 3 direct flights
+[LF] SM492 31JAN: BKG=153, GRP=135, CAP=175, LF%=87.4%, Brd-Off=JED-ATZ, Classes: P:135, I:14, O:1, U:3
+[LF] SM454 31JAN: BKG=161, GRP=135, CAP=175, LF%=92.0%, Brd-Off=JED-ATZ, Classes: P:135, I:17, O:6, U:3
+[LF] SM456 31JAN: BKG=79, GRP=45, CAP=175, LF%=45.1%, Brd-Off=JED-ATZ, Classes: P:45, I:17, O:5, U:3, X:8, S:1
+[LF] Getting WEEKLY/LASTSOLD data for 3 flights
+[LF] SM492 31JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=7, TODAY=1, YDAY=0
+[LF] SM454 31JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=16, TODAY=2, YDAY=4
+[LF] SM456 31JAN: LASTSOLD=2025-12-29 00:00:00, WEEKLY=11, TODAY=0, YDAY=1
+[LF] Processing JED-ATZ for 30JAN
+[LF] 30JAN: found 1 direct flights
+[LF] SM492 30JAN: BKG=75, GRP=45, CAP=175, LF%=42.9%, Brd-Off=JED-ATZ, Classes: P:45, I:17, O:6, U:3, T:1, L:2, K:1
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM492 30JAN: LASTSOLD=2025-12-29 00:00:00, WEEKLY=10, TODAY=0, YDAY=2
+[LF] Processing JED-ATZ for 29JAN
+[LF] 29JAN: found 4 direct flights
+[LF] SM982 29JAN: BKG=145, GRP=130, CAP=167, LF%=86.8%, Brd-Off=JED-ATZ, Classes: P:90, E:40, I:15
+[LF] SM422 29JAN: BKG=138, GRP=130, CAP=175, LF%=78.9%, Brd-Off=JED-ATZ, Classes: P:130, I:5, O:2, S:1
+[LF] SM454 29JAN: BKG=167, GRP=146, CAP=175, LF%=95.4%, Brd-Off=JED-ATZ, Classes: P:96, E:50, I:17, U:4
+[LF] SM456 29JAN: BKG=156, GRP=135, CAP=168, LF%=92.9%, Brd-Off=JED-ATZ, Classes: P:90, E:45, I:17, O:4
+[LF] Getting WEEKLY/LASTSOLD data for 4 flights
+[LF] SM982 29JAN: LASTSOLD=2025-12-27 00:00:00, WEEKLY=1, TODAY=0, YDAY=0
+[LF] SM422 29JAN: LASTSOLD=2025-12-27 00:00:00, WEEKLY=1, TODAY=0, YDAY=0
+[LF] SM454 29JAN: LASTSOLD=2025-12-29 00:00:00, WEEKLY=8, TODAY=0, YDAY=2
+[LF] SM456 29JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=9, TODAY=2, YDAY=0
+[LF] Processing JED-ATZ for 28JAN
+[LF] 28JAN: found 2 direct flights
+[LF] SM454 28JAN: BKG=154, GRP=136, CAP=175, LF%=88.0%, Brd-Off=JED-ATZ, Classes: P:136, I:16, G:1, K:1
+[LF] SM492 28JAN: BKG=162, GRP=135, CAP=175, LF%=92.6%, Brd-Off=JED-ATZ, Classes: P:136, I:17, O:7, U:1, K:1
+[LF] Getting WEEKLY/LASTSOLD data for 2 flights
+[LF] SM454 28JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=15, TODAY=2, YDAY=7
+[LF] SM492 28JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=12, TODAY=7, YDAY=0
+[LF] Processing JED-ATZ for 27JAN
+[LF] 27JAN: found 3 direct flights
+[LF] SM976 27JAN: BKG=2, GRP=0, CAP=167, LF%=1.2%, Brd-Off=JED-ATZ, Classes: I:2
+[LF] SM454 27JAN: BKG=135, GRP=126, CAP=175, LF%=77.1%, Brd-Off=JED-ATZ, Classes: P:126, I:8, G:1
+[LF] SM456 27JAN: BKG=144, GRP=125, CAP=175, LF%=82.3%, Brd-Off=JED-ATZ, Classes: P:125, I:17, T:2
+[LF] Getting WEEKLY/LASTSOLD data for 3 flights
+[LF] SM976 27JAN: LASTSOLD=2025-12-25 00:00:00, WEEKLY=2, TODAY=0, YDAY=0
+[LF] SM454 27JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=5, TODAY=1, YDAY=0
+[LF] SM456 27JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=10, TODAY=1, YDAY=1
+[LF] Processing JED-ATZ for 26JAN
+[LF] 26JAN: found 4 direct flights
+[LF] SM974 26JAN: BKG=97, GRP=90, CAP=167, LF%=58.1%, Brd-Off=JED-ATZ, Classes: P:90, I:6, K:1
+[LF] SM456 26JAN: BKG=16, GRP=0, CAP=168, LF%=9.5%, Brd-Off=JED-ATZ, Classes: I:12, O:3, L:1
+[LF] SM492 26JAN: BKG=112, GRP=90, CAP=175, LF%=64.0%, Brd-Off=JED-ATZ, Classes: P:90, I:17, O:5
+[LF] SM454 26JAN: BKG=101, GRP=85, CAP=175, LF%=57.7%, Brd-Off=JED-ATZ, Classes: P:45, E:40, I:15, O:1
+[LF] Getting WEEKLY/LASTSOLD data for 4 flights
+[LF] SM974 26JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=3, TODAY=1, YDAY=2
+[LF] SM456 26JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=2, TODAY=1, YDAY=1
+[LF] SM492 26JAN: LASTSOLD=2025-12-28 00:00:00, WEEKLY=8, TODAY=0, YDAY=0
+[LF] SM454 26JAN: LASTSOLD=2025-12-29 00:00:00, WEEKLY=11, TODAY=0, YDAY=1
+[LF] Processing JED-ATZ for 25JAN
+[LF] 25JAN: found 2 direct flights
+[LF] SM492 25JAN: BKG=168, GRP=151, CAP=175, LF%=96.0%, Brd-Off=JED-ATZ, Classes: P:151, I:14, O:2, S:1
+[LF] SM456 25JAN: BKG=175, GRP=172, CAP=175, LF%=100.0%, Brd-Off=JED-ATZ, Classes: P:172, I:3
+[LF] Getting WEEKLY/LASTSOLD data for 2 flights
+[LF] SM492 25JAN: LASTSOLD=2025-12-24 00:00:00, WEEKLY=3, TODAY=0, YDAY=0
+[LF] SM456 25JAN: LASTSOLD=2025-12-22 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+[LF] Results summary:
+  2026-01-31: 3 flights
+  2026-01-30: 1 flights
+  2026-01-29: 4 flights
+  2026-01-28: 2 flights
+  2026-01-27: 3 flights
+  2026-01-26: 4 flights
+  2026-01-25: 2 flights
+
+============================================================
+[Worker_9224] ✓ COMPLETED: JED-ATZ
+  Results: 7 dates
+  Errors: 0 dates
+  Total Processed: 1 groups
+============================================================
+
+
+============================================================
+[Worker_9224] Processing: JED-ATZ
+  Tier 0: Range 1, Chunk 3/5
+  Dates: 7 days
+  Date Range: 2026-01-17 to 2026-01-11
+============================================================
+
+2025-12-30 21:09:32 | INFO     | ======================================================================
+2025-12-30 21:09:32 | INFO     | Load Factor Scraper Started - Route: JED-ATZ
+2025-12-30 21:09:32 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_301225_at_21.07\logs\LF_JED-ATZ_20251230_210932.log
+2025-12-30 21:09:32 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-30 21:09:32 | INFO     | ======================================================================
+[LF] Processing dates (override): ['17JAN', '16JAN', '15JAN', '14JAN', '13JAN', '12JAN', '11JAN']
+[LF] Attaching to Chrome for Altea access
+2025-12-30 21:09:32 | INFO     | Starting LF search for route: JED-ATZ
+2025-12-30 21:09:32 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9224 (after 1 attempts)
+2025-12-30 21:09:33 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+2025-12-30 21:09:33 | INFO     | [DAY_START] Processing 17JAN
+[LF] Processing JED-ATZ for 17JAN
+2025-12-30 21:09:33 | INFO     | [lf.day.start] Processing JED-ATZ for 17JAN
+[LF] 17JAN: found 3 direct flights
+2025-12-30 21:09:34 | INFO     | [lf.day.flights_found] Found 3 flights on 17JAN
+2025-12-30 21:09:36 | INFO     | [lf.flight.extracted] SM492 on 17JAN: BKG=64, LF=36.6%
+[LF] SM492 17JAN: BKG=64, GRP=45, CAP=175, LF%=36.6%, Brd-Off=JED-ATZ, Classes: P:45, I:10, O:7, L:1, K:1
+2025-12-30 21:09:39 | INFO     | [lf.flight.extracted] SM454 on 17JAN: BKG=53, LF=30.3%
+[LF] SM454 17JAN: BKG=53, GRP=45, CAP=175, LF%=30.3%, Brd-Off=JED-ATZ, Classes: P:45, I:4, U:4
+2025-12-30 21:09:42 | INFO     | [lf.flight.extracted] SM456 on 17JAN: BKG=110, LF=62.9%
+[LF] SM456 17JAN: BKG=110, GRP=98, CAP=175, LF%=62.9%, Brd-Off=JED-ATZ, Classes: P:98, I:4, O:2, U:2, X:1, G:3
+[LF] Getting WEEKLY/LASTSOLD data for 3 flights
+[LF] SM492 17JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=13, TODAY=10, YDAY=3
+[LF] SM454 17JAN: LASTSOLD=2025-12-14 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+[LF] SM456 17JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=55, TODAY=51, YDAY=0
+2025-12-30 21:09:49 | INFO     | [SUCCESS] Day 17JAN
+2025-12-30 21:09:49 | INFO     | [DAY_START] Processing 16JAN
+[LF] Processing JED-ATZ for 16JAN
+2025-12-30 21:09:49 | INFO     | [lf.day.start] Processing JED-ATZ for 16JAN
+[LF] 16JAN: found 1 direct flights
+2025-12-30 21:09:50 | INFO     | [lf.day.flights_found] Found 1 flights on 16JAN
+2025-12-30 21:09:52 | INFO     | [lf.flight.extracted] SM492 on 16JAN: BKG=61, LF=34.9%
+[LF] SM492 16JAN: BKG=61, GRP=45, CAP=175, LF%=34.9%, Brd-Off=JED-ATZ, Classes: P:45, I:4, O:2, U:3, X:5, L:2
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM492 16JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=5, TODAY=3, YDAY=2
+2025-12-30 21:09:55 | INFO     | [SUCCESS] Day 16JAN
+2025-12-30 21:09:55 | INFO     | [DAY_START] Processing 15JAN
+[LF] Processing JED-ATZ for 15JAN
+2025-12-30 21:09:55 | INFO     | [lf.day.start] Processing JED-ATZ for 15JAN
+[LF] 15JAN: found 3 direct flights
+2025-12-30 21:09:56 | INFO     | [lf.day.flights_found] Found 3 flights on 15JAN
+2025-12-30 21:09:58 | INFO     | [lf.flight.extracted] SM422 on 15JAN: BKG=146, LF=83.4%
+[LF] SM422 15JAN: BKG=146, GRP=125, CAP=175, LF%=83.4%, Brd-Off=JED-ATZ, Classes: P:125, I:20, K:1
+2025-12-30 21:10:01 | INFO     | [lf.flight.extracted] SM454 on 15JAN: BKG=143, LF=81.7%
+[LF] SM454 15JAN: BKG=143, GRP=129, CAP=175, LF%=81.7%, Brd-Off=JED-ATZ, Classes: P:129, I:4, O:2, U:3, S:2, V:2, K:1
+2025-12-30 21:10:05 | INFO     | [lf.flight.extracted] SM456 on 15JAN: BKG=127, LF=72.6%
+[LF] SM456 15JAN: BKG=127, GRP=118, CAP=175, LF%=72.6%, Brd-Off=JED-ATZ, Classes: P:118, I:4, O:2, U:1, S:2
+[LF] Getting WEEKLY/LASTSOLD data for 3 flights
+[LF] SM422 15JAN: LASTSOLD=2025-12-29 00:00:00, WEEKLY=87, TODAY=0, YDAY=46
+[LF] SM454 15JAN: LASTSOLD=2025-12-22 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+[LF] SM456 15JAN: LASTSOLD=2025-12-14 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+2025-12-30 21:10:18 | INFO     | [SUCCESS] Day 15JAN
+2025-12-30 21:10:18 | INFO     | [DAY_START] Processing 14JAN
+[LF] Processing JED-ATZ for 14JAN
+2025-12-30 21:10:18 | INFO     | [lf.day.start] Processing JED-ATZ for 14JAN
+[LF] 14JAN: found 2 direct flights
+2025-12-30 21:10:19 | INFO     | [lf.day.flights_found] Found 2 flights on 14JAN
+2025-12-30 21:10:21 | INFO     | [lf.flight.extracted] SM454 on 14JAN: BKG=179, LF=102.3%
+[LF] SM454 14JAN: BKG=179, GRP=172, CAP=175, LF%=102.3%, Brd-Off=JED-ATZ, Classes: P:136, E:36, I:4, O:2, U:1
+2025-12-30 21:10:25 | INFO     | [lf.flight.extracted] SM492 on 14JAN: BKG=131, LF=74.9%
+[LF] SM492 14JAN: BKG=131, GRP=90, CAP=175, LF%=74.9%, Brd-Off=JED-ATZ, Classes: P:90, I:18, O:18, U:4, W:1
+[LF] Getting WEEKLY/LASTSOLD data for 2 flights
+[LF] SM454 14JAN: LASTSOLD=2025-12-28 00:00:00, WEEKLY=2, TODAY=0, YDAY=0
+[LF] SM492 14JAN: WEEKLY=99 → LP/T MANDATORY
+[DEBUG] SM492 14JAN: Match #1: HK 25DEC | Line: 001 *01HUSSEIN/MAHMOUD H          	8ICMEU W  HK 25DEC SWI1G
+[DEBUG] SM492 14JAN: Match #2: HK 27DEC | Line: 002  01ABD ELHAFIZ/MOHAM          	9M447D U  HK 27DEC ISTSM07TP
+[DEBUG] SM492 14JAN: Match #3: HK 27DEC | Line: 003  01ABDELNAEIM/AHMED           	9LL8JM U  HK 27DEC QCAS22124
+[DEBUG] SM492 14JAN: Match #4: HK 27DEC | Line: 004  01ALI/KHALED YOUSRY          	8KV8QO U  HK 27DEC QCAS22124
+[DEBUG] SM492 14JAN: Match #5: HK 28DEC | Line: 005  01MOHAMED/MAHMOUD R          	9X9F9T U  HK 28DEC RUHAA28WH
+[DEBUG] SM492 14JAN: Match #6: HK 27DEC | Line: 006  01ABDELHAFEZ/SABRIN          	9JWX7A O  HK 27DEC JEDSM08AA
+[DEBUG] SM492 14JAN: DUPLICATE #1: 001 HK 25DEC | Skipping
+[DEBUG] SM492 14JAN: DUPLICATE #2: 002 HK 27DEC | Skipping
+[DEBUG] SM492 14JAN: DUPLICATE #3: 003 HK 27DEC | Skipping
+[DEBUG] SM492 14JAN: DUPLICATE #4: 004 HK 27DEC | Skipping
+[DEBUG] SM492 14JAN: DUPLICATE #5: 005 HK 28DEC | Skipping
+[DEBUG] SM492 14JAN: DUPLICATE #6: 006 HK 27DEC | Skipping
+[DEBUG] SM492 14JAN: Match #7: HK 26DEC | Line: 007  01ABDELKADER/AHMED           	93GLOQ O  HK 26DEC TIFS2222K
+[DEBUG] SM492 14JAN: Match #8: HK 26DEC | Line: 008  01ABDELLAH/ABDELGHA          	92AFXC O  HK 26DEC QCAS228WD
+[DEBUG] SM492 14JAN: Match #9: HK 27DEC | Line: 009  01ABDELMEGID/SEOUDY          	9JNSAV O  HK 27DEC RUHAA28WH
+[DEBUG] SM492 14JAN: Match #10: HK 26DEC | Line: 010  01ABDELMONEIM/HASSA          	937NGD O  HK 26DEC RUHAA28WH
+[DEBUG] SM492 14JAN: Match #11: HK 27DEC | Line: 011  02ABOSTEIT/MAI M             	9AQWG2 O  HK 27DEC RUHAA28WH
+[DEBUG] SM492 14JAN: Match #12: HK 27DEC | Line: 015  02AHMED/MAKKA K              	9AQWG2 O  HK 27DEC RUHAA28WH
+[DEBUG] SM492 14JAN: Match #13: HK 26DEC | Line: 016  01AHMED/MAMDOUH MR           	9277CB O  HK 26DEC QCAS228WD
+[DEBUG] SM492 14JAN: Match #14: HK 27DEC | Line: 017  01MAHMOUD/AMIN MR            	9FB3GB O  HK 27DEC TIFS22102
+[DEBUG] SM492 14JAN: Match #15: HK 26DEC | Line: 018  01MAHMOUD/YEHYA MR           	8ZRO7Q O  HK 26DEC QCAS22124
+[DEBUG] SM492 14JAN: Match #16: HK 27DEC | Line: 019  01MOHAAMED/HOSSAM            	9LINBQ O  HK 27DEC RUHS228YD
+[DEBUG] SM492 14JAN: Match #17: HK 26DEC | Line: 021  01MOHAMMADEIN/MOHAM          	948JYN O  HK 26DEC RUHAA28WH
+[DEBUG] SM492 14JAN: Match #18: HK 27DEC | Line: 022  01SAAD/ABDELRAHMAN           	9JPNJX O  HK 27DEC TIFS22102
+[DEBUG] SM492 14JAN: Match #19: HK 27DEC | Line: 023  01ZEIDAN/MOHAMED FA          	9FHB9K O  HK 27DEC QCAS22124
+[DEBUG] SM492 14JAN: Match #20: HK 25DEC | Line: 024  01ABDELNABY/EID AHM          	8N3KWO I  HK 25DEC RUHS228YD
+[DEBUG] SM492 14JAN: Match #21: HK 25DEC | Line: 025  01ABDELNAEIM/HUSSEI          	8KBKQY I  HK 25DEC RUHS228YD
+[DEBUG] SM492 14JAN: Match #22: HK 25DEC | Line: 026  01ABDELRAHMAN/AHMED          	8NCZ7N I  HK 25DEC RUHS228YD
+[DEBUG] SM492 14JAN: Match #23: HK 25DEC | Line: 027  01AHMED/ABDELMAKSOU          	8I2364 I  HK 25DEC RUHAA28WH
+[DEBUG] SM492 14JAN: Match #24: HK 26DEC | Line: 029  01BAKHIT/AHMED MERS          	8XPVHU I  HK 26DEC RUHS228YD
+[DEBUG] SM492 14JAN: Match #25: HK 26DEC | Line: 031  01ELFOULLY/TAHA              	8YM49V I  HK 26DEC RUHS228YD
+[DEBUG] SM492 14JAN: Match #26: HK 25DEC | Line: 032  01HEMID/MOUSTAFA MR          	8L2OEB I  HK 25DEC QCAS22124
+[DEBUG] SM492 14JAN: Match #27: HK 25DEC | Line: 033  01HOFNY/ABDELFATAH           	8MP6JT I  HK 25DEC TIFS2222K
+[DEBUG] SM492 14JAN: Match #28: HK 26DEC | Line: 034  01KHALIL/ELHASSAN A          	8R6IYO I  HK 26DEC JEDSM08AA
+[DEBUG] SM492 14JAN: Match #29: HK 25DEC | Line: 035  01MAHMOUD/HATEM MOH          	8N59DX I  HK 25DEC RUHS228YD
+[DEBUG] SM492 14JAN: Match #30: HK 25DEC | Line: 036  01MOHAMED/IBRAHIM K          	8JOU3O I  HK 25DEC ABTS22113
+[DEBUG] SM492 14JAN: Match #31: HK 25DEC | Line: 037  02MOHAMED/MAHMOUD Y          	8N6X5M I  HK 25DEC RUHS2232V
+[DEBUG] SM492 14JAN: Match #32: HK 25DEC | Line: 038  01MOHAMED/MARIAM MR          	8HWQYW I  HK 25DEC ISTSM07TP
+[DEBUG] SM492 14JAN: Match #33: HK 25DEC | Line: 039  01MOHAMED/MOHAMED F          	8LRUSR I  HK 25DEC RUHAA28WH
+[DEBUG] SM492 14JAN: Match #34: HK 25DEC | Line: 040  02MOHAMED/MOUSTAFA           	8N6X5M I  HK 25DEC RUHS2232V
+[DEBUG] SM492 14JAN: Match #35: HK 26DEC | Line: 041  01MOHAMED ALI/ARAFA          	8ZXM9J I  HK 26DEC BRQCK28EK
+[DEBUG] SM492 14JAN: Match #36: HK 29DEC | Line: 042N 01ABDELAAL/KHALAFSA          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #37: HK 29DEC | Line: 043N 01ABDELBAKY/BATTA I          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #38: HK 29DEC | Line: 044N 01ABDELBASET/ESSAM           	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #39: HK 29DEC | Line: 045N 01ABDELGALEIL/ASMAA          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #40: HK 29DEC | Line: 046N 01ABDELGAWAD/MAIMOU          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #41: HK 29DEC | Line: 047N 01ABDELGAWAD/SALAHA          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #42: HK 29DEC | Line: 048N 01ABDELKADER/MONABA          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #43: HK 29DEC | Line: 049N 01ABDELKADER/ZEINAB          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #44: HK 29DEC | Line: 050N 01ABDELNASER/SAFIA           	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #45: HK 29DEC | Line: 051N 01ABDELRAHMAN/NAGWA          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #46: HK 29DEC | Line: 052N 01ABDELRAZEK/ASMAAE          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #47: HK 29DEC | Line: 053N 01ABOELLIL/AYDAMOHA          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #48: HK 29DEC | Line: 054N 01ABOELQASEM/MOHAME          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #49: HK 29DEC | Line: 055N 01ABOUELKASSEM/ESSM          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #50: HK 29DEC | Line: 056N 01AFIFY/TAHANYSAFWA          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #51: HK 29DEC | Line: 057N 01AHMED/AHMED MOKHT          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #52: HK 29DEC | Line: 058N 01AHMED/EMAN MOKTHA          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #53: HK 29DEC | Line: 059N 01AHMED/HANAN HASSA          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #54: HK 29DEC | Line: 060N 01AHMED/SAYED MAHMO          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #55: HK 29DEC | Line: 061N 01ALI/ABIRSALEM              	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #56: HK 29DEC | Line: 062N 01ALI/AHMED ABDELRA          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #57: HK 29DEC | Line: 063N 01ALI/AMALALI                	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #58: HK 29DEC | Line: 064N 01ALI/MOEMENABDELHA          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #59: HK 29DEC | Line: 065N 01ALI/MOHAMED SAYED          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #60: HK 29DEC | Line: 066N 01ALI/SAYEDARASMI            	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #61: HK 29DEC | Line: 067N 01ALY/ASHRAF MOHAME          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #62: HK 29DEC | Line: 068N 01ALY/ELSHAIMAA FAW          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #63: HK 29DEC | Line: 069N 01ALY/EMAN ANTAR             	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #64: HK 29DEC | Line: 070N 01ALY/MANAR SAYED            	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #65: HK 29DEC | Line: 071N 01ALY/MSHAALLA ALY           	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #66: HK 29DEC | Line: 072N 01ALY/WALAA FAWZY            	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #67: HK 29DEC | Line: 073N 01AWAD/BADRIA SHAHA          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #68: HK 29DEC | Line: 074N 01EDRIS/ABDULRAHMAN          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #69: HK 29DEC | Line: 075N 01EDRIS/AHMEDSAEED           	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #70: HK 29DEC | Line: 076N 01FARAG/SOMAIAADHAM          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #71: HK 29DEC | Line: 077N 01GAD/ENAIAT ZAKY            	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #72: HK 29DEC | Line: 078N 01GOMAA/BAKR ABOUZE          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #73: HK 29DEC | Line: 079N 01HASSAN/DAWABA ISM          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #74: HK 29DEC | Line: 080N 01HASSAN/NADIAABDEL          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #75: HK 29DEC | Line: 081N 01HASSAN/ZEINABIBRA          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #76: HK 29DEC | Line: 082N 01HASSANIEN/FATMASA          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #77: HK 29DEC | Line: 083N 01HEMDAN/GAMILA MOH          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #78: HK 29DEC | Line: 084N 01HUSSEIN/HOSNY HAS          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #79: HK 29DEC | Line: 085N 01IBRAHIM/MEDHAT AL          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #80: HK 29DEC | Line: 086N 01IBRAHIM/NEAMAKASE          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #81: HK 29DEC | Line: 087N 01IBRAHIM/SANAA ABO          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #82: HK 29DEC | Line: 088N 01IBRAHIM/ZAINAHOMA          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #83: HK 29DEC | Line: 089N 01ISMAEIL/ASMHAN MO          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #84: HK 29DEC | Line: 090N 01ISMAIL/EMANSAYED           	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #85: HK 29DEC | Line: 091N 01ISMAIL/MAMDOUHABD          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #86: HK 29DEC | Line: 092N 01ISMAIL/SHAIMAAMAM          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #87: HK 29DEC | Line: 093N 01ISMAIL/ZEINAB ADA          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #88: HK 29DEC | Line: 094N 01KAWASHTY/ASMAA MO          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #89: HK 29DEC | Line: 095N 01KAWASHTY/NAWAL MO          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #90: HK 29DEC | Line: 096N 01KAWSHTY/SABAH MOH          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #91: HK 29DEC | Line: 097N 01KHALIL/KHEDRAABDE          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #92: HK 29DEC | Line: 098N 01MADI/WAELMOHAMED           	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #93: HK 29DEC | Line: 099N 01MAHMOUD/AHMED SAL          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #94: HK 29DEC | Line: 100N 01MAHMOUD/FATMA MAH          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #95: HK 29DEC | Line: 101N 01MAHMOUD/MANSOURA           	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #96: HK 29DEC | Line: 102N 01MANSOUR/MAHMOUDHA          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #97: HK 29DEC | Line: 103N 01MANSOUR/ZEINABMAN          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #98: HK 29DEC | Line: 104N 01MASOUD/MAHMOUD ZA          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #99: HK 29DEC | Line: 105N 01MOHAMED/ASMAAHUSS          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #100: HK 29DEC | Line: 106N 01MOHAMED/AYDAKHALL          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #101: HK 29DEC | Line: 107N 01MOHAMED/FAYEZASAY          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #102: HK 29DEC | Line: 108N 01MOHAMED/HEBA MOUS          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #103: HK 29DEC | Line: 109N 01MOHAMED/SAKHIAFAR          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #104: HK 29DEC | Line: 110N 01MOHAMED/SAMAHSAYE          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #105: HK 29DEC | Line: 111N 01MOHAMED/SHAIMAA A          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #106: HK 29DEC | Line: 112N 01MOHAMED/YASSERHUS          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #107: HK 29DEC | Line: 113N 01MOUSSA/HOURIAMAHM          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #108: HK 29DEC | Line: 114N 01MOUSSA/LABIBAMAHM          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #109: HK 29DEC | Line: 115N 01MOUSSA/SALEMFATHI          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #110: HK 29DEC | Line: 116N 01OMAR/MAHMOUD SABE          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #111: HK 29DEC | Line: 117N 01OTHMAN/NEFISA TOS          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #112: HK 29DEC | Line: 118N 01RABEH/ABLAAMOHAME          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #113: HK 29DEC | Line: 119N 01RAGAB/ALY ABDELTA          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #114: HK 29DEC | Line: 120N 01RAYES/NADYALI              	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #115: HK 29DEC | Line: 121N 01SAYED/BAYADA SAYE          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #116: HK 29DEC | Line: 122N 01SAYED/HADIRGALAL           	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #117: HK 29DEC | Line: 123N 01SAYED/MAHMOUD MOH          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #118: HK 29DEC | Line: 124N 01SAYED/SALEH MOSTA          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #119: HK 29DEC | Line: 125N 01SHERIF/SALAH SAAD          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #120: HK 29DEC | Line: 126N 01SOLIMAN/SAYEDAT A          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #121: HK 29DEC | Line: 127N 01SOLIMAN/WAFAA ABD          	9JIYRI P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: DUPLICATE #7: 125N HK 29DEC | Skipping
+[DEBUG] SM492 14JAN: DUPLICATE #8: 126N HK 29DEC | Skipping
+[DEBUG] SM492 14JAN: DUPLICATE #9: 127N HK 29DEC | Skipping
+[DEBUG] SM492 14JAN: Match #122: HK 29DEC | Line: 128N 01TOUNI/RAGHDAALAM           	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #123: HK 29DEC | Line: 129N 01YOUNES/ABDALLAMOR          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #124: HK 29DEC | Line: 130N 01ZEIDAN/SAMIRASAYE          	9736BU P  HK 29DEC CAISM05IN
+[DEBUG] SM492 14JAN: Match #125: HK 29DEC | Line: 131N 01ZOHDY/NOUR TAMER           	9JIYRI P  HK 29DEC CAISM05IN
+[LF] SM492 14JAN: LP/T count complete. True WEEKLY: 125, TODAY: 0, YDAY: 90 | Removed 9 duplicates
+[LF] SM492 14JAN: LP/T result: WEEKLY=125, TODAY=0, YDAY=90
+[LF] SM492 14JAN: LASTSOLD=2025-12-29 00:00:00, WEEKLY=125, TODAY=0, YDAY=90
+2025-12-30 21:10:50 | INFO     | [SUCCESS] Day 14JAN
+2025-12-30 21:10:50 | INFO     | [DAY_START] Processing 13JAN
+[LF] Processing JED-ATZ for 13JAN
+2025-12-30 21:10:50 | INFO     | [lf.day.start] Processing JED-ATZ for 13JAN
+[LF] 13JAN: found 2 direct flights
+2025-12-30 21:10:52 | INFO     | [lf.day.flights_found] Found 2 flights on 13JAN
+2025-12-30 21:10:54 | INFO     | [lf.flight.extracted] SM454 on 13JAN: BKG=165, LF=94.3%
+[LF] SM454 13JAN: BKG=165, GRP=159, CAP=175, LF%=94.3%, Brd-Off=JED-ATZ, Classes: P:159, I:2, W:3, S:1
+2025-12-30 21:10:58 | INFO     | [lf.flight.extracted] SM456 on 13JAN: BKG=152, LF=86.9%
+[LF] SM456 13JAN: BKG=152, GRP=135, CAP=175, LF%=86.9%, Brd-Off=JED-ATZ, Classes: P:91, E:45, I:4, O:2, U:3, X:6, G:1
+[LF] Getting WEEKLY/LASTSOLD data for 2 flights
+[LF] SM454 13JAN: LASTSOLD=2025-12-29 00:00:00, WEEKLY=39, TODAY=0, YDAY=1
+[LF] SM456 13JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=48, TODAY=1, YDAY=0
+2025-12-30 21:11:13 | INFO     | [SUCCESS] Day 13JAN
+2025-12-30 21:11:13 | INFO     | [DAY_START] Processing 12JAN
+[LF] Processing JED-ATZ for 12JAN
+2025-12-30 21:11:13 | INFO     | [lf.day.start] Processing JED-ATZ for 12JAN
+[LF] 12JAN: found 3 direct flights
+2025-12-30 21:11:14 | INFO     | [lf.day.flights_found] Found 3 flights on 12JAN
+2025-12-30 21:11:16 | INFO     | [lf.flight.extracted] SM456 on 12JAN: BKG=143, LF=85.1%
+[LF] SM456 12JAN: BKG=143, GRP=129, CAP=168, LF%=85.1%, Brd-Off=JED-ATZ, Classes: P:129, I:4, O:2, U:3, X:4, G:1
+2025-12-30 21:11:19 | INFO     | [lf.flight.extracted] SM492 on 12JAN: BKG=115, LF=65.7%
+[LF] SM492 12JAN: BKG=115, GRP=94, CAP=175, LF%=65.7%, Brd-Off=JED-ATZ, Classes: P:45, E:49, I:4, O:2, U:3, X:4, W:8
+2025-12-30 21:11:23 | INFO     | [lf.flight.extracted] SM454 on 12JAN: BKG=149, LF=85.1%
+[LF] SM454 12JAN: BKG=149, GRP=135, CAP=175, LF%=85.1%, Brd-Off=JED-ATZ, Classes: P:94, E:41, I:4, O:2, U:3, X:5
+[LF] Getting WEEKLY/LASTSOLD data for 3 flights
+[LF] SM456 12JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=5, TODAY=3, YDAY=2
+[LF] SM492 12JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=11, TODAY=1, YDAY=2
+[LF] SM454 12JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=10, TODAY=2, YDAY=3
+2025-12-30 21:11:39 | INFO     | [SUCCESS] Day 12JAN
+2025-12-30 21:11:39 | INFO     | [DAY_START] Processing 11JAN
+[LF] Processing JED-ATZ for 11JAN
+2025-12-30 21:11:39 | INFO     | [lf.day.start] Processing JED-ATZ for 11JAN
+[LF] 11JAN: found 2 direct flights
+2025-12-30 21:11:40 | INFO     | [lf.day.flights_found] Found 2 flights on 11JAN
+2025-12-30 21:11:42 | INFO     | [lf.flight.extracted] SM492 on 11JAN: BKG=179, LF=102.3%
+[LF] SM492 11JAN: BKG=179, GRP=179, CAP=175, LF%=102.3%, Brd-Off=JED-ATZ, Classes: P:179
+2025-12-30 21:11:46 | INFO     | [lf.flight.extracted] SM456 on 11JAN: BKG=156, LF=89.1%
+[LF] SM456 11JAN: BKG=156, GRP=141, CAP=175, LF%=89.1%, Brd-Off=JED-ATZ, Classes: P:141, I:4, O:2, U:3, X:1, V:4, K:1
+[LF] Getting WEEKLY/LASTSOLD data for 2 flights
+[LF] SM492 11JAN: LASTSOLD=2025-11-23 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+[LF] SM456 11JAN: LASTSOLD=2025-12-24 00:00:00, WEEKLY=2, TODAY=0, YDAY=0
+2025-12-30 21:11:57 | INFO     | [SUCCESS] Day 11JAN
+[LF] Results summary:
+  2026-01-17: 3 flights
+  2026-01-16: 1 flights
+  2026-01-15: 3 flights
+  2026-01-14: 2 flights
+  2026-01-13: 2 flights
+  2026-01-12: 3 flights
+  2026-01-11: 2 flights
+2025-12-30 21:11:57 | INFO     | [SUCCESS] LF Search Complete
+
+============================================================
+[Worker_9224] ✓ COMPLETED: JED-ATZ
+  Results: 7 dates
+  Errors: 0 dates
+  Total Processed: 2 groups
+============================================================
+
+2025-12-30 21:11:59 | INFO     | [Worker_9224] Completed: JED-ATZ - 7 results, 0 errors
+
+============================================================
+[Worker_9224] Processing: TUU-ATZ
+  Tier 0: Range 1, Chunk 4/5
+  Dates: 6 days
+  Date Range: 2026-01-10 to 2026-01-05
+============================================================
+
+2025-12-30 21:11:59 | INFO     | [Worker_9224] Processing: TUU-ATZ
+2025-12-30 21:11:59 | INFO     |   Tier 0: Range 1, Chunk 4/5 (6 days)
+2025-12-30 21:11:59 | INFO     | ======================================================================
+2025-12-30 21:11:59 | INFO     | Load Factor Scraper Started - Route: TUU-ATZ
+2025-12-30 21:11:59 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_301225_at_21.07\logs\LF_TUU-ATZ_20251230_211159.log
+2025-12-30 21:11:59 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-30 21:11:59 | INFO     | ======================================================================
+[LF] Processing dates (override): ['10JAN', '09JAN', '08JAN', '07JAN', '06JAN', '05JAN']
+[LF] Attaching to Chrome for Altea access
+2025-12-30 21:11:59 | INFO     | Starting LF search for route: TUU-ATZ
+2025-12-30 21:11:59 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9224 (after 1 attempts)
+2025-12-30 21:12:00 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+2025-12-30 21:12:00 | INFO     | [DAY_START] Processing 10JAN
+[LF] Processing TUU-ATZ for 10JAN
+2025-12-30 21:12:00 | INFO     | [lf.day.start] Processing TUU-ATZ for 10JAN
+[LF] No direct flights on 10JAN for TUU-ATZ
+2025-12-30 21:12:01 | WARNING  | [lf.day.no_flights] No direct flights on 10JAN
+2025-12-30 21:12:01 | INFO     | [SUCCESS] Day 10JAN
+2025-12-30 21:12:01 | INFO     | [DAY_START] Processing 09JAN
+[LF] Processing TUU-ATZ for 09JAN
+2025-12-30 21:12:01 | INFO     | [lf.day.start] Processing TUU-ATZ for 09JAN
+[LF] 09JAN: found 1 direct flights
+2025-12-30 21:12:02 | INFO     | [lf.day.flights_found] Found 1 flights on 09JAN
+2025-12-30 21:12:04 | INFO     | [lf.flight.extracted] SM328 on 09JAN: BKG=37, LF=21.1%
+[LF] SM328 09JAN: BKG=37, GRP=0, CAP=175, LF%=21.1%, Brd-Off=TUU-ATZ, Classes: I:8, O:20, U:6, X:2, S:1
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM328 09JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=14, TODAY=2, YDAY=0
+2025-12-30 21:12:07 | INFO     | [SUCCESS] Day 09JAN
+2025-12-30 21:12:07 | INFO     | [DAY_START] Processing 08JAN
+[LF] Processing TUU-ATZ for 08JAN
+2025-12-30 21:12:07 | INFO     | [lf.day.start] Processing TUU-ATZ for 08JAN
+[LF] No direct flights on 08JAN for TUU-ATZ
+2025-12-30 21:12:08 | WARNING  | [lf.day.no_flights] No direct flights on 08JAN
+2025-12-30 21:12:09 | INFO     | [SUCCESS] Day 08JAN
+2025-12-30 21:12:09 | INFO     | [DAY_START] Processing 07JAN
+[LF] Processing TUU-ATZ for 07JAN
+2025-12-30 21:12:09 | INFO     | [lf.day.start] Processing TUU-ATZ for 07JAN
+[LF] No direct flights on 07JAN for TUU-ATZ
+2025-12-30 21:12:10 | WARNING  | [lf.day.no_flights] No direct flights on 07JAN
+2025-12-30 21:12:10 | INFO     | [SUCCESS] Day 07JAN
+2025-12-30 21:12:10 | INFO     | [DAY_START] Processing 06JAN
+[LF] Processing TUU-ATZ for 06JAN
+2025-12-30 21:12:10 | INFO     | [lf.day.start] Processing TUU-ATZ for 06JAN
+[LF] No direct flights on 06JAN for TUU-ATZ
+2025-12-30 21:12:11 | WARNING  | [lf.day.no_flights] No direct flights on 06JAN
+2025-12-30 21:12:11 | INFO     | [SUCCESS] Day 06JAN
+2025-12-30 21:12:11 | INFO     | [DAY_START] Processing 05JAN
+[LF] Processing TUU-ATZ for 05JAN
+2025-12-30 21:12:11 | INFO     | [lf.day.start] Processing TUU-ATZ for 05JAN
+[LF] No direct flights on 05JAN for TUU-ATZ
+2025-12-30 21:12:12 | WARNING  | [lf.day.no_flights] No direct flights on 05JAN
+2025-12-30 21:12:12 | INFO     | [SUCCESS] Day 05JAN
+[LF] Results summary:
+  2026-01-10: 0 flights
+  2026-01-09: 1 flights
+  2026-01-08: 0 flights
+  2026-01-07: 0 flights
+  2026-01-06: 0 flights
+  2026-01-05: 0 flights
+2025-12-30 21:12:12 | INFO     | [SUCCESS] LF Search Complete
+
+============================================================
+[Worker_9224] ✓ COMPLETED: TUU-ATZ
+  Results: 6 dates
+  Errors: 0 dates
+  Total Processed: 3 groups
+============================================================
+
+2025-12-30 21:12:14 | INFO     | [Worker_9224] Completed: TUU-ATZ - 6 results, 0 errors
+
+============================================================
+[Worker_9224] Processing: JED-CAI
+  Tier 0: Range 1, Chunk 5/5
+  Dates: 6 days
+  Date Range: 2026-01-04 to 2025-12-30
+============================================================
+
+2025-12-30 21:12:14 | INFO     | [Worker_9224] Processing: JED-CAI
+2025-12-30 21:12:14 | INFO     |   Tier 0: Range 1, Chunk 5/5 (6 days)
+2025-12-30 21:12:14 | INFO     | ======================================================================
+2025-12-30 21:12:14 | INFO     | Load Factor Scraper Started - Route: JED-CAI
+2025-12-30 21:12:14 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_301225_at_21.07\logs\LF_JED-CAI_20251230_211214.log
+2025-12-30 21:12:14 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-30 21:12:14 | INFO     | ======================================================================
+[LF] Processing dates (override): ['04JAN', '03JAN', '02JAN', '01JAN', '31DEC', '30DEC']
+[LF] Attaching to Chrome for Altea access
+2025-12-30 21:12:14 | INFO     | Starting LF search for route: JED-CAI
+2025-12-30 21:12:14 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9224 (after 1 attempts)
+2025-12-30 21:12:15 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+2025-12-30 21:12:15 | INFO     | [DAY_START] Processing 04JAN
+[LF] Processing JED-CAI for 04JAN
+2025-12-30 21:12:15 | INFO     | [lf.day.start] Processing JED-CAI for 04JAN
+[LF] 04JAN: found 5 direct flights
+2025-12-30 21:12:16 | INFO     | [lf.day.flights_found] Found 5 flights on 04JAN
+2025-12-30 21:12:18 | INFO     | [lf.flight.extracted] SM424 on 04JAN: BKG=168, LF=100.6%
+[LF] SM424 04JAN: BKG=168, GRP=160, CAP=167, LF%=100.6%, Brd-Off=JED-CAI, Classes: N:5, E:155, X:5, T:3
+[LPC] SM424 04JAN: Found 2 outbound flights with connecting passengers
+2025-12-30 21:12:31 | INFO     | [lf.flight.extracted] SM476 on 04JAN: BKG=102, LF=61.1%
+[LF] SM476 04JAN: BKG=102, GRP=27, CAP=167, LF%=61.1%, Brd-Off=JED-CAI, Classes: P:27, I:17, O:2, U:39, X:14, T:1, W:1, K:1
+2025-12-30 21:12:35 | INFO     | [lf.flight.extracted] SM432 on 04JAN: BKG=136, LF=77.7%
+[LF] SM432 04JAN: BKG=136, GRP=96, CAP=175, LF%=77.7%, Brd-Off=JED-CAI, Classes: P:96, U:25, X:13, T:1, K:1
+2025-12-30 21:12:39 | INFO     | [lf.flight.extracted] SM460 on 04JAN: BKG=165, LF=98.8%
+[LF] SM460 04JAN: BKG=165, GRP=97, CAP=167, LF%=98.8%, Brd-Off=JED-CAI, Classes: P:97, U:35, X:25, T:4, W:2, S:1, K:1
+2025-12-30 21:12:43 | INFO     | [lf.flight.extracted] SM478 on 04JAN: BKG=167, LF=100.0%
+[LF] SM478 04JAN: BKG=167, GRP=97, CAP=167, LF%=100.0%, Brd-Off=JED-CAI, Classes: P:97, I:1, U:34, X:31, W:2, S:2
+[LF] Getting WEEKLY/LASTSOLD data for 5 flights
+[LF] SM424 04JAN: LASTSOLD=2025-12-19 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+[LF] SM476 04JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=41, TODAY=5, YDAY=10
+[LF] SM432 04JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=27, TODAY=5, YDAY=13
+[LF] SM460 04JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=46, TODAY=12, YDAY=17
+[LF] SM478 04JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=44, TODAY=3, YDAY=21
+2025-12-30 21:13:08 | INFO     | [SUCCESS] Day 04JAN
+2025-12-30 21:13:08 | INFO     | [DAY_START] Processing 03JAN
+[LF] Processing JED-CAI for 03JAN
+2025-12-30 21:13:08 | INFO     | [lf.day.start] Processing JED-CAI for 03JAN
+[LF] 03JAN: found 3 direct flights
+2025-12-30 21:13:09 | INFO     | [lf.day.flights_found] Found 3 flights on 03JAN
+2025-12-30 21:13:11 | INFO     | [lf.flight.extracted] SM450 on 03JAN: BKG=163, LF=91.6%
+[LF] SM450 03JAN: BKG=163, GRP=141, CAP=178, LF%=91.6%, Brd-Off=JED-CAI, Classes: P:141, U:10, X:7, T:2, G:1, K:2
+[LPC] SM450 03JAN: Found 1 outbound flights with connecting passengers
+2025-12-30 21:13:16 | INFO     | [lf.flight.extracted] SM476 on 03JAN: BKG=166, LF=93.3%
+[LF] SM476 03JAN: BKG=166, GRP=131, CAP=178, LF%=93.3%, Brd-Off=JED-CAI, Classes: P:131, I:2, U:7, X:11, T:9, W:2, S:3, K:1
+2025-12-30 21:13:19 | INFO     | [lf.flight.extracted] SM478 on 03JAN: BKG=178, LF=100.0%
+[LF] SM478 03JAN: BKG=178, GRP=139, CAP=178, LF%=100.0%, Brd-Off=JED-CAI, Classes: P:139, I:5, U:15, X:8, T:3, W:6, S:2
+[LF] Getting WEEKLY/LASTSOLD data for 3 flights
+[LF] SM450 03JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=3, TODAY=1, YDAY=0
+[LF] SM476 03JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=10, TODAY=1, YDAY=4
+[LF] SM478 03JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=13, TODAY=3, YDAY=4
+2025-12-30 21:13:34 | INFO     | [SUCCESS] Day 03JAN
+2025-12-30 21:13:34 | INFO     | [DAY_START] Processing 02JAN
+[LF] Processing JED-CAI for 02JAN
+2025-12-30 21:13:34 | INFO     | [lf.day.start] Processing JED-CAI for 02JAN
+[LF] 02JAN: 3 cancelled flight(s) detected from SN
+[LF] 02JAN: found 4 direct flights
+2025-12-30 21:13:35 | INFO     | [lf.day.flights_found] Found 4 flights on 02JAN
+2025-12-30 21:13:38 | INFO     | [lf.flight.extracted] SM476 on 02JAN: BKG=164, LF=92.7%
+[LF] SM476 02JAN: BKG=164, GRP=93, CAP=177, LF%=92.7%, Brd-Off=JED-CAI, Classes: N:2, P:93, I:5, O:5, U:1, X:16, T:34, W:4, S:3, G:1
+[LPC] SM476 02JAN: Found 1 outbound flights with connecting passengers
+2025-12-30 21:13:42 | INFO     | [lf.flight.extracted] SM480 on 02JAN: BKG=168, LF=94.4%
+[LF] SM480 02JAN: BKG=168, GRP=135, CAP=178, LF%=94.4%, Brd-Off=JED-CAI, Classes: P:135, U:9, X:11, T:9, W:1, S:1, K:2
+[LPC] SM480 02JAN: Found 1 outbound flights with connecting passengers
+2025-12-30 21:13:47 | INFO     | [lf.flight.extracted] SM472 on 02JAN: BKG=166, LF=93.3%
+[LF] SM472 02JAN: BKG=166, GRP=90, CAP=178, LF%=93.3%, Brd-Off=JED-CAI, Classes: N:2, P:90, I:5, O:5, U:11, X:22, T:24, W:5, S:2
+2025-12-30 21:13:50 | INFO     | [lf.flight.extracted] SM460 on 02JAN: BKG=161, LF=90.5%
+[LF] SM460 02JAN: BKG=161, GRP=121, CAP=178, LF%=90.5%, Brd-Off=JED-CAI, Classes: P:121, U:8, X:12, T:17, W:2, K:1
+[LPC] SM460 02JAN: Found 0 outbound flights with connecting passengers
+[LF] Getting WEEKLY/LASTSOLD data for 4 flights
+[LF] SM476 02JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=98, TODAY=8, YDAY=78
+[LF] SM480 02JAN: LASTSOLD=2025-12-29 00:00:00, WEEKLY=6, TODAY=0, YDAY=2
+[LF] SM472 02JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=27, TODAY=2, YDAY=5
+[LF] SM460 02JAN: LASTSOLD=2025-12-29 00:00:00, WEEKLY=16, TODAY=0, YDAY=1
+2025-12-30 21:14:11 | INFO     | [SUCCESS] Day 02JAN
+2025-12-30 21:14:11 | INFO     | [DAY_START] Processing 01JAN
+[LF] Processing JED-CAI for 01JAN
+2025-12-30 21:14:11 | INFO     | [lf.day.start] Processing JED-CAI for 01JAN
+[LF] 01JAN: found 6 direct flights
+2025-12-30 21:14:13 | INFO     | [lf.day.flights_found] Found 6 flights on 01JAN
+2025-12-30 21:14:15 | INFO     | [lf.flight.extracted] SM424 on 01JAN: BKG=130, LF=73.0%
+[LF] SM424 01JAN: BKG=130, GRP=0, CAP=178, LF%=73.0%, Brd-Off=JED-CAI, Classes: I:36, O:41, U:36, X:17
+[LPC] SM424 01JAN: Found 2 outbound flights with connecting passengers
+2025-12-30 21:14:19 | INFO     | [lf.flight.extracted] SM472 on 01JAN: BKG=160, LF=93.0%
+[LF] SM472 01JAN: BKG=160, GRP=51, CAP=172, LF%=93.0%, Brd-Off=JED-CAI, Classes: P:51, I:18, O:18, U:38, X:23, T:3, S:9
+[LPC] SM472 01JAN: Found 2 outbound flights with connecting passengers
+2025-12-30 21:14:24 | INFO     | [lf.flight.extracted] SM450 on 01JAN: BKG=178, LF=100.0%
+[LF] SM450 01JAN: BKG=178, GRP=175, CAP=178, LF%=100.0%, Brd-Off=JED-CAI, Classes: N:5, P:46, E:125, U:2
+[LPC] SM450 01JAN: Found 1 outbound flights with connecting passengers
+2025-12-30 21:14:34 | INFO     | [lf.flight.extracted] SM476 on 01JAN: BKG=183, LF=102.8%
+[LF] SM476 01JAN: BKG=183, GRP=128, CAP=178, LF%=102.8%, Brd-Off=JED-CAI, Classes: P:88, E:40, I:5, O:5, U:27, X:13, W:1, S:3, K:1
+[LPC] SM476 01JAN: Found 3 outbound flights with connecting passengers
+2025-12-30 21:14:41 | INFO     | [lf.flight.extracted] SM478 on 01JAN: BKG=164, LF=92.1%
+[LF] SM478 01JAN: BKG=164, GRP=128, CAP=178, LF%=92.1%, Brd-Off=JED-CAI, Classes: P:128, X:10, T:9, W:11, S:6
+[LPC] SM478 01JAN: Found 0 outbound flights with connecting passengers
+2025-12-30 21:14:45 | INFO     | [lf.flight.extracted] SM480 on 01JAN: BKG=172, LF=100.0%
+[LF] SM480 01JAN: BKG=172, GRP=139, CAP=172, LF%=100.0%, Brd-Off=JED-CAI, Classes: N:6, P:139, X:8, T:6, W:1, S:3, K:9
+[LF] Getting WEEKLY/LASTSOLD data for 6 flights
+[LF] SM424 01JAN: WEEKLY=99 → LP/T MANDATORY
+[DEBUG] SM424 01JAN: Match #1: HK 29DEC | Line: 001  01ABDELRAHMAN/HAZEM          	7GTRI7 X  HK 29DEC LONSM07TP
+[DEBUG] SM424 01JAN: Match #2: HK 28DEC | Line: 002  01ALHARTHI/ATEYAH M          	733AUG X  HK 28DEC RUHAA28WH
+[DEBUG] SM424 01JAN: Match #3: HK 28DEC | Line: 003  02ALOUFI/NAIF MR             	75ABWK X  HK 28DEC JEDSM07TP
+[DEBUG] SM424 01JAN: Match #4: HK 28DEC | Line: 004  05ALY/MARIAM MRS             	78RCLY X  HK 28DEC JEDSM08AA
+[DEBUG] SM424 01JAN: Match #5: HK 28DEC | Line: 005  05ALY/MAWADA MISS            	78RCLY X  HK 28DEC JEDSM08AA
+[DEBUG] SM424 01JAN: Match #6: HK 28DEC | Line: 006  05ALY/MENNATALLAH M          	78RCLY X  HK 28DEC JEDSM08AA
+[DEBUG] SM424 01JAN: DUPLICATE #1: 001 HK 29DEC | Skipping
+[DEBUG] SM424 01JAN: DUPLICATE #2: 002 HK 28DEC | Skipping
+[DEBUG] SM424 01JAN: DUPLICATE #3: 003 HK 28DEC | Skipping
+[DEBUG] SM424 01JAN: DUPLICATE #4: 004 HK 28DEC | Skipping
+[DEBUG] SM424 01JAN: DUPLICATE #5: 005 HK 28DEC | Skipping
+[DEBUG] SM424 01JAN: DUPLICATE #6: 006 HK 28DEC | Skipping
+[DEBUG] SM424 01JAN: Match #7: HK 28DEC | Line: 007  05ALY/MOHAMMAD MSTR          	78RCLY X  HK 28DEC JEDSM08AA
+[DEBUG] SM424 01JAN: Match #8: HK 28DEC | Line: 008  02AYASH/SALEM MR             	75ABWK X  HK 28DEC JEDSM07TP
+[DEBUG] SM424 01JAN: Match #9: HK 30DEC | Line: 011  01ELKHATIB/NABWIA M          	CNIL3T X  HK 30DEC LAX1S24I8
+[DEBUG] SM424 01JAN: Match #10: HK 30DEC | Line: 013  01HAFEZ HRHESH/SOBH          	85EHB4 X  HK 30DEC JEDAK38AC
+[DEBUG] SM424 01JAN: Match #11: HK 28DEC | Line: 014  01MAREI/AHMED MR             	763H5A X  HK 28DEC JEDSM08AA
+[DEBUG] SM424 01JAN: Match #12: HK 28DEC | Line: 015  05SALEM/HUDA MRS             	78RCLY X  HK 28DEC JEDSM08AA
+[DEBUG] SM424 01JAN: Match #13: HK 29DEC | Line: 016  01SALLAM/EHAB MR             	7GX87R X  HK 29DEC ISTSM07TP
+[DEBUG] SM424 01JAN: Match #14: HK 30DEC | Line: 017  01ABDELDAYEM/LAILA           	XEXRKX U  HK 30DEC OSLSG34AA
+[DEBUG] SM424 01JAN: Match #15: HK 30DEC | Line: 020  01ABDELSADEK/MOHAME          	83DGOS U  HK 30DEC RUHAA28WH
+[DEBUG] SM424 01JAN: Match #16: HK 25DEC | Line: 021  02AHMED/SAWSAN MRS           	8CQTRG U  HK 25DEC JEDSM08AA
+[DEBUG] SM424 01JAN: Match #17: HK 30DEC | Line: 022  02AL KATHERI/YASER           	843YRW U  HK 30DEC JEDS22337
+[DEBUG] SM424 01JAN: Match #18: HK 30DEC | Line: 023  02AL SADI/ZAIN AHME          	843YRW U  HK 30DEC JEDS22337
+[DEBUG] SM424 01JAN: Match #19: HK 30DEC | Line: 024  01ALGHAMDI/ASMAHAN           	84ZMSE U  HK 30DEC RUHAA28WH
+[DEBUG] SM424 01JAN: Match #20: HK 24DEC | Line: 025  01ALHARBI/MOHAMMAD           	7WLEUC U  HK 24DEC RUHAA28WH
+[DEBUG] SM424 01JAN: Match #21: HK 30DEC | Line: 027  01ATTIA/EMAM MR              	7XYQK6 U  HK 30DEC PARSM07TP
+[DEBUG] SM424 01JAN: Match #22: HK 29DEC | Line: 028  01AWAD/BAYOUMI MR            	7O7CFN U  HK 29DEC PARSM07TP
+[DEBUG] SM424 01JAN: Match #23: HK 29DEC | Line: 030  01ELDESOUKY/AYMAN M          	7OFFKZ U  HK 29DEC LONSM07TP
+[DEBUG] SM424 01JAN: Match #24: HK 25DEC | Line: 031  01ELNAGGAR/HANEM MR          	9NBB9N U  HK 25DEC CAIEG28IW
+[DEBUG] SM424 01JAN: Match #25: HK 29DEC | Line: 033  01ELSERI/ISSAM               	7NOGFT U  HK 29DEC RUHS228YD
+[DEBUG] SM424 01JAN: Match #26: HK 30DEC | Line: 035  01HAMAD/ELSHIMA KHA          	84BBN6 U  HK 30DEC AQIS228A7
+[DEBUG] SM424 01JAN: Match #27: HK 26DEC | Line: 036  01HASSAN/MOHAMED             	8UBLI8 U  HK 26DEC RUHS228YD
+[DEBUG] SM424 01JAN: Match #28: HK 29DEC | Line: 038  01KHALIL/ABDELRAHMA          	7NP6FC U  HK 29DEC ISTT128AM
+[DEBUG] SM424 01JAN: Match #29: HK 30DEC | Line: 040  01MOHAMED/ABDELRAZE          	843PYE U  HK 30DEC ISTSM07TP
+[DEBUG] SM424 01JAN: Match #30: HK 24DEC | Line: 041  01MOHAMED/AMRO MR            	84WWH5 U  HK 24DEC YNBS228W2
+[DEBUG] SM424 01JAN: Match #31: HK 30DEC | Line: 043  01MOHAMED/MAHMOUD            	83TD3B U  HK 30DEC RUHS228YD
+[DEBUG] SM424 01JAN: Match #32: HK 29DEC | Line: 044  01MOHAMED HAMED IBR          	7NMQDZ U  HK 29DEC JEDAK38AC
+[DEBUG] SM424 01JAN: Match #33: HK 25DEC | Line: 046  01SALEH/TAREK                	8FSS8L U  HK 25DEC RUHS228YD
+[DEBUG] SM424 01JAN: Match #34: HK 24DEC | Line: 047  02SEWIDAN/ESLAM              	85TC2L U  HK 24DEC RUHS228YD
+[DEBUG] SM424 01JAN: Match #35: HK 30DEC | Line: 048  01SHAHIN/MOHAMED H           	84344S U  HK 30DEC RUHAA28WH
+[DEBUG] SM424 01JAN: Match #36: HK 25DEC | Line: 049  02SHEHAB/RAGAA MRS           	8CQTRG U  HK 25DEC JEDSM08AA
+[DEBUG] SM424 01JAN: Match #37: HK 25DEC | Line: 050  01SHMSELDEN/HASSAN           	8G2GFD U  HK 25DEC RUHS93120
+[DEBUG] SM424 01JAN: Match #38: HK 29DEC | Line: 051  01SHRIF/MOHAMED Y            	7NTTHT U  HK 29DEC RUHAA28WH
+[DEBUG] SM424 01JAN: Match #39: HK 24DEC | Line: 052  02YOUSSEF/NOURHAN            	85TC2L U  HK 24DEC RUHS228YD
+[DEBUG] SM424 01JAN: Match #40: HK 30DEC | Line: 053  01ABDELAZIZ/MOHAMED          	7ZULEN O  HK 30DEC JEDSM07TP
+[DEBUG] SM424 01JAN: Match #41: HK 29DEC | Line: 054  01ABDELBASET/MAGED           	7O3ZKY O  HK 29DEC RUHAA28WH
+[DEBUG] SM424 01JAN: Match #42: HK 29DEC | Line: 055  01ABDELLATIF MOHAME          	7LKPXF O  HK 29DEC JEDAK38AC
+[DEBUG] SM424 01JAN: Match #43: HK 29DEC | Line: 056  02ABDELSHAFI/SHADIA          	7POT6R O  HK 29DEC RUHAA28WH
+[DEBUG] SM424 01JAN: Match #44: HK 29DEC | Line: 057  01ABOUELHASSAN/MOHA          	7NPV9A O  HK 29DEC RUHS228YD
+[DEBUG] SM424 01JAN: Match #45: HK 30DEC | Line: 058  01ABOUSHAHDA/KHALED          	838YCG O  HK 30DEC RUHS228YD
+[DEBUG] SM424 01JAN: Match #46: HK 29DEC | Line: 059  01ABOUSHALBY/AHMED           	7MTU84 O  HK 29DEC TIFS22102
+[DEBUG] SM424 01JAN: Match #47: HK 30DEC | Line: 060  01ALI/HAMDY MR               	82ZPQB O  HK 30DEC JEDLW28FD
+[DEBUG] SM424 01JAN: Match #48: HK 29DEC | Line: 061  05ALI/MAHER                  	7LKOKU O  HK 29DEC RUHS228YD
+[DEBUG] SM424 01JAN: Match #49: HK 29DEC | Line: 062  01ALY/MAHMOUD MR             	7NAJPU O  HK 29DEC YNBS228W2
+[DEBUG] SM424 01JAN: Match #50: HK 29DEC | Line: 063  01ARID/IBRAHIM MOHA          	7NAL7L O  HK 29DEC JEDLW28FD
+[DEBUG] SM424 01JAN: Match #51: HK 30DEC | Line: 064  02ELBATANONI/AMRO A          	7YTG3S O  HK 30DEC RUHAA28WH
+[DEBUG] SM424 01JAN: Match #52: HK 29DEC | Line: 065  01ELBELTAGI/TAWAKL           	7ND5KR O  HK 29DEC RUHAA28WH
+[DEBUG] SM424 01JAN: Match #53: HK 30DEC | Line: 066  01ELHELALI/EMAD MR           	7YJAJ8 O  HK 30DEC RUHS228WF
+[DEBUG] SM424 01JAN: Match #54: HK 30DEC | Line: 067  03ELKHATIB/AEISHA            	7ZDDB3 O  HK 30DEC RUHS228YD
+[DEBUG] SM424 01JAN: Match #55: HK 30DEC | Line: 068  03ELKHATIB/AHMED             	7ZDDB3 O  HK 30DEC RUHS228YD
+[DEBUG] SM424 01JAN: Match #56: HK 30DEC | Line: 069  03ELSAYED/MOHAMED A          	7XDERE O  HK 30DEC JEDAK38AC
+[DEBUG] SM424 01JAN: Match #57: HK 30DEC | Line: 070  03ESHAK/ALI AHMED S          	7XDERE O  HK 30DEC JEDAK38AC
+[DEBUG] SM424 01JAN: Match #58: HK 30DEC | Line: 071  02FAHMY/ABDELRAHMAN          	7YUCYO O  HK 30DEC JEDSM07TP
+[DEBUG] SM424 01JAN: Match #59: HK 29DEC | Line: 072  01FARAHAT/ELSAID MO          	7OQLOY O  HK 29DEC RUHAA28WH
+[DEBUG] SM424 01JAN: Match #60: HK 30DEC | Line: 073  03FARGHAL/EMAD HAMD          	7XDERE O  HK 30DEC JEDAK38AC
+[DEBUG] SM424 01JAN: Match #61: HK 30DEC | Line: 074  02FARHAN/AYMAN MR            	7YUCYO O  HK 30DEC JEDSM07TP
+[DEBUG] SM424 01JAN: Match #62: HK 30DEC | Line: 075  01GAD/REDA GAD MR            	7YJQ4D O  HK 30DEC TIFS2222K
+[DEBUG] SM424 01JAN: Match #63: HK 30DEC | Line: 076  01HASSAN/MAHMOUD MR          	7X8UK8 O  HK 30DEC JEDAK38AC
+[DEBUG] SM424 01JAN: Match #64: HK 29DEC | Line: 077  05HASSAN/MOUSBAH             	7LKOKU O  HK 29DEC RUHS228YD
+[DEBUG] SM424 01JAN: Match #65: HK 30DEC | Line: 078  03HEGAZY/SHAIMAA             	7ZDDB3 O  HK 30DEC RUHS228YD
+[DEBUG] SM424 01JAN: Match #66: HK 30DEC | Line: 079  01HOSEN/MD MILON MR          	7YJEJ5 O  HK 30DEC LAXSM07NI
+[DEBUG] SM424 01JAN: Match #67: HK 29DEC | Line: 080  01HOZAIN/OMAR MOHAM          	7MTG7P O  HK 29DEC RUHSG38AA
+[DEBUG] SM424 01JAN: Match #68: HK 30DEC | Line: 081  01HUSSEIN/WAHID              	7XCU4A O  HK 30DEC RUHAA28WH
+[DEBUG] SM424 01JAN: Match #69: HK 30DEC | Line: 082  01MAHMOUD/ENAAM ISM          	7YRVTP O  HK 30DEC CAIEG3378
+[DEBUG] SM424 01JAN: Match #70: HK 30DEC | Line: 083  01MAKBOUL/MOHAMED E          	82AQ35 O  HK 30DEC QCAS22124
+[DEBUG] SM424 01JAN: Match #71: HK 30DEC | Line: 084  02MOHAMED/MIRNA M            	7YTG3S O  HK 30DEC RUHAA28WH
+[DEBUG] SM424 01JAN: Match #72: HK 29DEC | Line: 085  05MOHAMED/SHERIN             	7LKOKU O  HK 29DEC RUHS228YD
+[DEBUG] SM424 01JAN: Match #73: HK 29DEC | Line: 086  02MOUSTAFA/MOUSTAFA          	7POT6R O  HK 29DEC RUHAA28WH
+[DEBUG] SM424 01JAN: Match #74: HK 29DEC | Line: 087  05MOUSTAFA/SEHAM             	7LKOKU O  HK 29DEC RUHS228YD
+[DEBUG] SM424 01JAN: Match #75: HK 30DEC | Line: 088  01NADA/MAHMOUD MR            	7YQ4RV O  HK 30DEC JEDSM07TP
+[DEBUG] SM424 01JAN: Match #76: HK 29DEC | Line: 089  05NOUH/SAMIA                 	7LKOKU O  HK 29DEC RUHS228YD
+[DEBUG] SM424 01JAN: Match #77: HK 29DEC | Line: 090  01SAAD/METWALY MR            	7P68YR O  HK 29DEC JEDS228MR
+[DEBUG] SM424 01JAN: Match #78: HK 30DEC | Line: 091  01YAKOUB/SAID IBRAH          	8347J6 O  HK 30DEC JEDAK38AC
+[DEBUG] SM424 01JAN: Match #79: HK 29DEC | Line: 092  01ZARA/ADOUM BOUGAR          	7NITV6 O  HK 29DEC QCAS22144
+[DEBUG] SM424 01JAN: Match #80: HK 29DEC | Line: 093  01ABDALLA/MAHMOUD G          	7M7POT I  HK 29DEC RUHAA28WH
+[DEBUG] SM424 01JAN: Match #81: HK 29DEC | Line: 094  01ABDALLA/MOHAMED            	7LNFUY I  HK 29DEC RUHS2232V
+[DEBUG] SM424 01JAN: Match #82: HK 29DEC | Line: 095  01ABDELAZIZ/HOSSAM           	7KABWT I  HK 29DEC LAXSM07NI
+[DEBUG] SM424 01JAN: Match #83: HK 29DEC | Line: 096  01ABDELAZIZ MOHAMED          	7LKZPD I  HK 29DEC RUHSG38AA
+[DEBUG] SM424 01JAN: Match #84: HK 29DEC | Line: 097  01ABDELHAMID/AMMAR           	7IVXHA I  HK 29DEC RUHAA28WH
+[DEBUG] SM424 01JAN: Match #85: HK 29DEC | Line: 098  01ABDELNABI/GOMAA A          	7K3ERT I  HK 29DEC RUHAA28WH
+[DEBUG] SM424 01JAN: Match #86: HK 29DEC | Line: 099  01ABDELRAZEK/YASSER          	7LIKKN I  HK 29DEC JEDAK38AC
+[DEBUG] SM424 01JAN: Match #87: HK 29DEC | Line: 100  01AHMED/MOHAMED MR           	7K5GGW I  HK 29DEC JEDSM08MB
+[DEBUG] SM424 01JAN: Match #88: HK 29DEC | Line: 101  01ALI/KHALED MR              	7HXDHT I  HK 29DEC JEDSM07TP
+[DEBUG] SM424 01JAN: Match #89: HK 29DEC | Line: 102  01ALMATARAFE/HAMOD           	7KK8BG I  HK 29DEC RUHAA28WH
+[DEBUG] SM424 01JAN: Match #90: HK 29DEC | Line: 103  01ASHOUR/MOHAMED MR          	7JHXXO I  HK 29DEC QCAS22124
+[DEBUG] SM424 01JAN: Match #91: HK 29DEC | Line: 104  01AWWAD/AHMED MR             	7M6VP8 I  HK 29DEC JEDSM08MB
+[DEBUG] SM424 01JAN: Match #92: HK 29DEC | Line: 105  01BARAKAT/MAHMOUD M          	7KEJOA I  HK 29DEC YNBS228W2
+[DEBUG] SM424 01JAN: Match #93: HK 29DEC | Line: 106  01DARWISH/AMR                	7GYTA8 I  HK 29DEC RUHS228YD
+[DEBUG] SM424 01JAN: Match #94: HK 29DEC | Line: 107  01ELASKARY/ESLAM             	7IZZYY I  HK 29DEC RUHAA28WH
+[DEBUG] SM424 01JAN: Match #95: HK 29DEC | Line: 108  01ELFISHAWY/ZEINAB           	7H9IYL I  HK 29DEC JEDSM07TP
+[DEBUG] SM424 01JAN: Match #96: HK 29DEC | Line: 109  01ELSAYED/MOHAMED            	7JXL4Y I  HK 29DEC RUHS228YD
+[DEBUG] SM424 01JAN: Match #97: HK 29DEC | Line: 110  01ELSAYED/SHAABAN M          	7M6UBU I  HK 29DEC JEDAK38AC
+[DEBUG] SM424 01JAN: Match #98: HK 29DEC | Line: 111  01GAD/AHMED MR               	7M2NKQ I  HK 29DEC ISTT128AM
+[DEBUG] SM424 01JAN: Match #99: HK 29DEC | Line: 112  01GADELHAK/IBRAHIM           	7LE4QN I  HK 29DEC RUHS228YD
+[DEBUG] SM424 01JAN: Match #100: HK 29DEC | Line: 113  01GHONEIM/EMAN MS            	7IFFQM I  HK 29DEC RUHSG38AA
+[DEBUG] SM424 01JAN: Match #101: HK 29DEC | Line: 114  01HASSAN/MAHMOUD AH          	7LYHOF I  HK 29DEC JEDS22548
+[DEBUG] SM424 01JAN: Match #102: HK 29DEC | Line: 115  01HUSSEIN/KARAM MR           	7JBRPG I  HK 29DEC QCAS22124
+[DEBUG] SM424 01JAN: Match #103: HK 29DEC | Line: 116  01IBRAHIM/AHMED MR           	7M28YP I  HK 29DEC JEDSM07TP
+[DEBUG] SM424 01JAN: Match #104: HK 29DEC | Line: 117  01IBRAHIM/IBRAHIM I          	7HO3O8 I  HK 29DEC JEDS228D3
+[DEBUG] SM424 01JAN: Match #105: HK 29DEC | Line: 118  01MAHMOUD AHMED/ABD          	7I5SLG I  HK 29DEC RUHS228YD
+[DEBUG] SM424 01JAN: Match #106: HK 29DEC | Line: 119  01MASOUD/ESLAM               	7M9UCI I  HK 29DEC RUHS228YD
+[DEBUG] SM424 01JAN: Match #107: HK 29DEC | Line: 120  01MOHAMED/ABDELRAHM          	7LMHAS I  HK 29DEC RUHS228YD
+[DEBUG] SM424 01JAN: Match #108: HK 29DEC | Line: 121  01MOHAMED ABDELHAMI          	7HT73S I  HK 29DEC JEDAK38AC
+[DEBUG] SM424 01JAN: Match #109: HK 29DEC | Line: 122  01MOURSI/MOHAMED             	7ITPUD I  HK 29DEC RUHAA28WH
+[DEBUG] SM424 01JAN: Match #110: HK 29DEC | Line: 123  01NAZAROV/SOLEHBEK           	7I4CMQ I  HK 29DEC LAXSM08MB
+[DEBUG] SM424 01JAN: Match #111: HK 29DEC | Line: 124  01NOURELDIN/ALI MR           	7KJ2KV I  HK 29DEC QCAS22124
+[DEBUG] SM424 01JAN: Match #112: HK 29DEC | Line: 125  01SHALIL/SAAD BARAK          	7I5GHY I  HK 29DEC YNBS228B6
+[DEBUG] SM424 01JAN: Match #113: HK 29DEC | Line: 126  01SHALTOUT/KHALED S          	7K3TCY I  HK 29DEC CAIEG2466
+[DEBUG] SM424 01JAN: DUPLICATE #7: 122 HK 29DEC | Skipping
+[DEBUG] SM424 01JAN: DUPLICATE #8: 123 HK 29DEC | Skipping
+[DEBUG] SM424 01JAN: DUPLICATE #9: 124 HK 29DEC | Skipping
+[DEBUG] SM424 01JAN: DUPLICATE #10: 125 HK 29DEC | Skipping
+[DEBUG] SM424 01JAN: DUPLICATE #11: 126 HK 29DEC | Skipping
+[DEBUG] SM424 01JAN: Match #114: HK 29DEC | Line: 127  01SHEHATA/MOSTAFA F          	7ICNM8 I  HK 29DEC JEDSM07TP
+[DEBUG] SM424 01JAN: Match #115: HK 29DEC | Line: 128  01SOLIMAN/MOHAMED M          	7J6B9I I  HK 29DEC RUHS228WF
+[LF] SM424 01JAN: LP/T count complete. True WEEKLY: 115, TODAY: 34, YDAY: 62 | Removed 11 duplicates
+[LF] SM424 01JAN: LP/T result: WEEKLY=115, TODAY=34, YDAY=62
+[LF] SM424 01JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=115, TODAY=34, YDAY=62
+[LF] SM472 01JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=93, TODAY=26, YDAY=38
+[LF] SM450 01JAN: LASTSOLD=2025-12-21 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+[LF] SM476 01JAN: LASTSOLD=2025-12-29 00:00:00, WEEKLY=65, TODAY=0, YDAY=55
+[LF] SM478 01JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=17, TODAY=1, YDAY=2
+[LF] SM480 01JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=7, TODAY=1, YDAY=3
+2025-12-30 21:15:27 | INFO     | [SUCCESS] Day 01JAN
+2025-12-30 21:15:27 | INFO     | [DAY_START] Processing 31DEC
+[LF] Processing JED-CAI for 31DEC
+2025-12-30 21:15:27 | INFO     | [lf.day.start] Processing JED-CAI for 31DEC
+[LF] 31DEC: found 3 direct flights
+2025-12-30 21:15:28 | INFO     | [lf.day.flights_found] Found 3 flights on 31DEC
+2025-12-30 21:15:30 | INFO     | [lf.flight.extracted] SM476 on 31DEC: BKG=178, LF=100.0%
+[LF] SM476 31DEC: BKG=178, GRP=130, CAP=178, LF%=100.0%, Brd-Off=JED-CAI, Classes: P:130, I:10, O:10, U:21, X:2, S:5
+[LPC] SM476 31DEC: Found 1 outbound flights with connecting passengers
+2025-12-30 21:15:35 | INFO     | [lf.flight.extracted] SM460 on 31DEC: BKG=179, LF=100.0%
+[LF] SM460 31DEC: BKG=179, GRP=42, CAP=179, LF%=100.0%, Brd-Off=JED-CAI, Classes: P:42, I:10, O:20, U:40, X:40, T:15, W:3, S:9
+[LPC] SM460 31DEC: Found 4 outbound flights with connecting passengers
+2025-12-30 21:15:39 | INFO     | [lf.flight.extracted] SM478 on 31DEC: BKG=178, LF=100.0%
+[LF] SM478 31DEC: BKG=178, GRP=101, CAP=178, LF%=100.0%, Brd-Off=JED-CAI, Classes: P:102, I:10, O:10, U:21, X:17, T:12, S:6
+[LF] Getting WEEKLY/LASTSOLD data for 3 flights
+[LF] SM476 31DEC: LASTSOLD=2025-12-30 00:00:00, WEEKLY=15, TODAY=1, YDAY=4
+[LF] SM460 31DEC: LASTSOLD=2025-12-29 00:00:00, WEEKLY=76, TODAY=0, YDAY=13
+[LF] SM478 31DEC: LASTSOLD=2025-12-30 00:00:00, WEEKLY=21, TODAY=2, YDAY=11
+2025-12-30 21:15:55 | INFO     | [SUCCESS] Day 31DEC
+[LF] Skipping 30DEC (Today) - will be processed by supplement scan
+[LF] Results summary:
+  2026-01-04: 5 flights
+  2026-01-03: 3 flights
+  2026-01-02: 4 flights
+  2026-01-01: 6 flights
+  2025-12-31: 3 flights
+[LF] Cancelled flights found: 3
+  - SM424 02JAN (SN)
+  - SM952 02JAN (SN)
+  - SM478 02JAN (SN)
+2025-12-30 21:15:55 | INFO     | [SUCCESS] LF Search Complete
+[Worker_9224] Cancelled flights collected: 3
+
+============================================================
+[Worker_9224] ✓ COMPLETED: JED-CAI
+  Results: 5 dates
+  Errors: 0 dates
+  Total Processed: 4 groups
+============================================================
+
+2025-12-30 21:15:57 | INFO     | [Worker_9224] Completed: JED-CAI - 5 results, 0 errors
+[Worker_9224] Waiting for tasks...
+
+============================================================
+[Worker_9224] Shutdown signal received
+Exiting...
+============================================================
+2025-12-30 21:31:18 | INFO     | [Worker_9224] Shutdown signal received, exiting...
+
+============================================================
+[Worker_9224] FINISHED
+  Total Groups Processed: 4
+============================================================
+
+2025-12-30 21:31:18 | INFO     | [Worker_9224] Finished. Processed 4 groups.

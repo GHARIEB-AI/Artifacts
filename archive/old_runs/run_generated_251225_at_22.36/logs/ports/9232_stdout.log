@@ -1,0 +1,289 @@
+
+============================================================
+     LF WORKER - PORT 9232
+============================================================
+Worker: Worker_9232
+Status: READY
+Waiting for tasks...
+============================================================
+
+
+============================================================
+[Worker_9232] Processing: JED-HBE
+  Tier 0: Range 2, Chunk 1/2
+  Dates: 6 days
+  Date Range: 2026-01-16 to 2026-01-11
+============================================================
+
+2025-12-25 22:37:05 | INFO     | ======================================================================
+2025-12-25 22:37:05 | INFO     | Load Factor Scraper Started - Route: JED-HBE
+2025-12-25 22:37:05 | INFO     | Log file: D:\CODERED\OUTPUTS\logs\LF_JED-HBE_20251225_223705.log
+2025-12-25 22:37:05 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-25 22:37:05 | INFO     | ======================================================================
+[LF] Processing dates (override): ['16JAN', '15JAN', '14JAN', '13JAN', '12JAN', '11JAN']
+[LF] Attaching to Chrome for Altea access
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9232 (after 1 attempts)
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+[LF] Processing JED-HBE for 16JAN
+[LF][ERROR] Amadeus command error detected: UNKNOWN TRANSACTION
+[LF][ERROR] Command: SN16JANJEDHBE/ASM
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+============================================================
+[LF][RESYNC] Command 'SN16JANJEDHBE/ASM' failed: TECH_ERROR:UNKNOWN TRANSACTION
+[LF][RESYNC] Re-running entire day from SN command for JED-HBE 16JAN
+[LF][RESYNC] Attempt 1/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing JED-HBE for 16JAN
+[LF] 16JAN: found 1 direct flights
+[LF] SM452 16JAN: BKG=66, GRP=45, CAP=168, LF%=39.3%, Brd-Off=JED-HBE, Classes: P:45, X:17, T:1, V:3
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM452 16JAN: LASTSOLD=2025-12-22 00:00:00, WEEKLY=3, TODAY=0, YDAY=0
+[LF] Processing JED-HBE for 15JAN
+[LF] 15JAN: found 1 direct flights
+[LF] SM452 15JAN: BKG=59, GRP=45, CAP=168, LF%=35.1%, Brd-Off=JED-HBE, Classes: P:45, X:10, S:1, L:3
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM452 15JAN: LASTSOLD=2025-12-23 00:00:00, WEEKLY=3, TODAY=0, YDAY=0
+[LF] Processing JED-HBE for 14JAN
+[LF] 14JAN: found 3 direct flights
+[LF] SM452 14JAN: BKG=142, GRP=140, CAP=168, LF%=84.5%, Brd-Off=JED-HBE, Classes: P:140, X:1, L:1
+[LF] SM474 14JAN: BKG=132, GRP=130, CAP=168, LF%=78.6%, Brd-Off=JED-HBE, Classes: P:130, X:1, L:1
+[LF] SM458 14JAN: BKG=122, GRP=118, CAP=168, LF%=72.6%, Brd-Off=JED-HBE, Classes: P:118, X:4
+[LF] Getting WEEKLY/LASTSOLD data for 3 flights
+[LF] SM452 14JAN: LASTSOLD=2025-12-19 00:00:00, WEEKLY=1, TODAY=0, YDAY=0
+[LF] SM474 14JAN: LASTSOLD=2025-12-25 00:00:00, WEEKLY=2, TODAY=1, YDAY=0
+[LF] SM458 14JAN: LASTSOLD=2025-12-15 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+[LF] Processing JED-HBE for 13JAN
+[LF] 13JAN: found 1 direct flights
+[LF] SM452 13JAN: BKG=148, GRP=131, CAP=168, LF%=88.1%, Brd-Off=JED-HBE, Classes: N:1, P:130, I:2, X:15
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM452 13JAN: LASTSOLD=2025-12-15 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+[LF] Processing JED-HBE for 12JAN
+[LF] 12JAN: found 2 direct flights
+[LF] SM458 12JAN: BKG=155, GRP=149, CAP=168, LF%=92.3%, Brd-Off=JED-HBE, Classes: P:149, X:5, G:1
+[LF] SM452 12JAN: BKG=159, GRP=155, CAP=168, LF%=94.6%, Brd-Off=JED-HBE, Classes: P:155, X:3, K:1
+[LF] Getting WEEKLY/LASTSOLD data for 2 flights
+[LF] SM458 12JAN: LASTSOLD=2025-12-25 00:00:00, WEEKLY=2, TODAY=1, YDAY=0
+[LF] SM452 12JAN: LASTSOLD=2025-12-24 00:00:00, WEEKLY=1, TODAY=0, YDAY=1
+[LF] Processing JED-HBE for 11JAN
+[LF] 11JAN: found 2 direct flights
+[LF] SM458 11JAN: BKG=147, GRP=139, CAP=168, LF%=87.5%, Brd-Off=JED-HBE, Classes: P:139, X:4, W:3, K:1
+[LF] SM452 11JAN: BKG=152, GRP=140, CAP=168, LF%=90.5%, Brd-Off=JED-HBE, Classes: P:140, X:8, S:1, L:2, V:1
+[LF] Getting WEEKLY/LASTSOLD data for 2 flights
+[LF] SM458 11JAN: LASTSOLD=2025-12-24 00:00:00, WEEKLY=6, TODAY=0, YDAY=2
+[LF] SM452 11JAN: LASTSOLD=2025-12-25 00:00:00, WEEKLY=10, TODAY=2, YDAY=0
+[LF] Results summary:
+  2026-01-16: 1 flights
+  2026-01-15: 1 flights
+  2026-01-14: 3 flights
+  2026-01-13: 1 flights
+  2026-01-12: 2 flights
+  2026-01-11: 2 flights
+
+============================================================
+[Worker_9232] ✓ COMPLETED: JED-HBE
+  Results: 6 dates
+  Errors: 0 dates
+  Total Processed: 1 groups
+============================================================
+
+
+============================================================
+[Worker_9232] Processing: HBE-MED
+  Tier 0: Range 1, Chunk 1/2
+  Dates: 6 days
+  Date Range: 2026-01-05 to 2025-12-31
+============================================================
+
+2025-12-25 22:38:33 | INFO     | ======================================================================
+2025-12-25 22:38:33 | INFO     | Load Factor Scraper Started - Route: HBE-MED
+2025-12-25 22:38:33 | INFO     | Log file: D:\CODERED\OUTPUTS\logs\LF_HBE-MED_20251225_223833.log
+2025-12-25 22:38:33 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-25 22:38:33 | INFO     | ======================================================================
+[LF] Processing dates (override): ['05JAN', '04JAN', '03JAN', '02JAN', '01JAN', '31DEC']
+[LF] Attaching to Chrome for Altea access
+2025-12-25 22:38:33 | INFO     | Starting LF search for route: HBE-MED
+2025-12-25 22:38:33 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9232 (after 1 attempts)
+2025-12-25 22:38:34 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+2025-12-25 22:38:34 | INFO     | [DAY_START] Processing 05JAN
+[LF] Processing HBE-MED for 05JAN
+2025-12-25 22:38:34 | INFO     | [lf.day.start] Processing HBE-MED for 05JAN
+[LF] No direct flights on 05JAN for HBE-MED
+2025-12-25 22:38:35 | WARNING  | [lf.day.no_flights] No direct flights on 05JAN
+2025-12-25 22:38:35 | INFO     | [SUCCESS] Day 05JAN
+2025-12-25 22:38:35 | INFO     | [DAY_START] Processing 04JAN
+[LF] Processing HBE-MED for 04JAN
+2025-12-25 22:38:35 | INFO     | [lf.day.start] Processing HBE-MED for 04JAN
+[LF] 04JAN: found 1 direct flights
+2025-12-25 22:38:36 | INFO     | [lf.day.flights_found] Found 1 flights on 04JAN
+2025-12-25 22:38:38 | INFO     | [lf.flight.extracted] SM485 on 04JAN: BKG=113, LF=62.8%
+[LF] SM485 04JAN: BKG=113, GRP=94, CAP=180, LF%=62.8%, Brd-Off=HBE-MED, Classes: P:94, T:15, W:3, K:1
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM485 04JAN: LASTSOLD=2025-12-24 00:00:00, WEEKLY=12, TODAY=0, YDAY=2
+2025-12-25 22:38:43 | INFO     | [SUCCESS] Day 04JAN
+2025-12-25 22:38:43 | INFO     | [DAY_START] Processing 03JAN
+[LF] Processing HBE-MED for 03JAN
+2025-12-25 22:38:43 | INFO     | [lf.day.start] Processing HBE-MED for 03JAN
+[LF] No direct flights on 03JAN for HBE-MED
+2025-12-25 22:38:44 | WARNING  | [lf.day.no_flights] No direct flights on 03JAN
+2025-12-25 22:38:44 | INFO     | [SUCCESS] Day 03JAN
+2025-12-25 22:38:44 | INFO     | [DAY_START] Processing 02JAN
+[LF] Processing HBE-MED for 02JAN
+2025-12-25 22:38:44 | INFO     | [lf.day.start] Processing HBE-MED for 02JAN
+[LF] No direct flights on 02JAN for HBE-MED
+2025-12-25 22:38:45 | WARNING  | [lf.day.no_flights] No direct flights on 02JAN
+2025-12-25 22:38:45 | INFO     | [SUCCESS] Day 02JAN
+2025-12-25 22:38:45 | INFO     | [DAY_START] Processing 01JAN
+[LF] Processing HBE-MED for 01JAN
+2025-12-25 22:38:45 | INFO     | [lf.day.start] Processing HBE-MED for 01JAN
+[LF] 01JAN: found 1 direct flights
+2025-12-25 22:38:46 | INFO     | [lf.day.flights_found] Found 1 flights on 01JAN
+2025-12-25 22:38:48 | INFO     | [lf.flight.extracted] SM485 on 01JAN: BKG=99, LF=55.0%
+[LF] SM485 01JAN: BKG=99, GRP=90, CAP=180, LF%=55.0%, Brd-Off=HBE-MED, Classes: P:90, X:3, T:6
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM485 01JAN: LASTSOLD=2025-12-25 00:00:00, WEEKLY=3, TODAY=1, YDAY=0
+2025-12-25 22:38:51 | INFO     | [SUCCESS] Day 01JAN
+2025-12-25 22:38:51 | INFO     | [DAY_START] Processing 31DEC
+[LF] Processing HBE-MED for 31DEC
+2025-12-25 22:38:51 | INFO     | [lf.day.start] Processing HBE-MED for 31DEC
+[LF] 31DEC: found 1 direct flights
+2025-12-25 22:38:52 | INFO     | [lf.day.flights_found] Found 1 flights on 31DEC
+2025-12-25 22:38:54 | INFO     | [lf.flight.extracted] SM485 on 31DEC: BKG=154, LF=85.6%
+[LF] SM485 31DEC: BKG=154, GRP=140, CAP=180, LF%=85.6%, Brd-Off=HBE-MED, Classes: P:140, X:7, T:6, W:1
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM485 31DEC: LASTSOLD=2025-12-25 00:00:00, WEEKLY=11, TODAY=4, YDAY=1
+2025-12-25 22:38:58 | INFO     | [SUCCESS] Day 31DEC
+[LF] Results summary:
+  2026-01-05: 0 flights
+  2026-01-04: 1 flights
+  2026-01-03: 0 flights
+  2026-01-02: 0 flights
+  2026-01-01: 1 flights
+  2025-12-31: 1 flights
+2025-12-25 22:38:58 | INFO     | [SUCCESS] LF Search Complete
+
+============================================================
+[Worker_9232] ✓ COMPLETED: HBE-MED
+  Results: 6 dates
+  Errors: 0 dates
+  Total Processed: 2 groups
+============================================================
+
+2025-12-25 22:39:00 | INFO     | [Worker_9232] Completed: HBE-MED - 6 results, 0 errors
+
+============================================================
+[Worker_9232] Processing: JED-HBE
+  Tier 0: Range 1, Chunk 2/2
+  Dates: 5 days
+  Date Range: 2025-12-30 to 2025-12-26
+============================================================
+
+2025-12-25 22:39:00 | INFO     | [Worker_9232] Processing: JED-HBE
+2025-12-25 22:39:00 | INFO     |   Tier 0: Range 1, Chunk 2/2 (5 days)
+2025-12-25 22:39:00 | INFO     | ======================================================================
+2025-12-25 22:39:00 | INFO     | Load Factor Scraper Started - Route: JED-HBE
+2025-12-25 22:39:00 | INFO     | Log file: D:\CODERED\OUTPUTS\logs\LF_JED-HBE_20251225_223900.log
+2025-12-25 22:39:00 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-25 22:39:00 | INFO     | ======================================================================
+[LF] Processing dates (override): ['30DEC', '29DEC', '28DEC', '27DEC', '26DEC']
+[LF] Attaching to Chrome for Altea access
+2025-12-25 22:39:00 | INFO     | Starting LF search for route: JED-HBE
+2025-12-25 22:39:00 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9232 (after 1 attempts)
+2025-12-25 22:39:02 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+2025-12-25 22:39:02 | INFO     | [DAY_START] Processing 30DEC
+[LF] Processing JED-HBE for 30DEC
+2025-12-25 22:39:02 | INFO     | [lf.day.start] Processing JED-HBE for 30DEC
+[LF] 30DEC: found 1 direct flights
+2025-12-25 22:39:03 | INFO     | [lf.day.flights_found] Found 1 flights on 30DEC
+2025-12-25 22:39:05 | INFO     | [lf.flight.extracted] SM452 on 30DEC: BKG=168, LF=100.0%
+[LF] SM452 30DEC: BKG=168, GRP=129, CAP=168, LF%=100.0%, Brd-Off=JED-HBE, Classes: P:129, U:10, X:15, T:7, S:7
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM452 30DEC: LASTSOLD=2025-12-23 00:00:00, WEEKLY=10, TODAY=0, YDAY=0
+2025-12-25 22:39:10 | INFO     | [SUCCESS] Day 30DEC
+2025-12-25 22:39:10 | INFO     | [DAY_START] Processing 29DEC
+[LF] Processing JED-HBE for 29DEC
+2025-12-25 22:39:10 | INFO     | [lf.day.start] Processing JED-HBE for 29DEC
+[LF] 29DEC: found 2 direct flights
+2025-12-25 22:39:11 | INFO     | [lf.day.flights_found] Found 2 flights on 29DEC
+2025-12-25 22:39:13 | INFO     | [lf.flight.extracted] SM458 on 29DEC: BKG=158, LF=94.0%
+[LF] SM458 29DEC: BKG=158, GRP=125, CAP=168, LF%=94.0%, Brd-Off=JED-HBE, Classes: P:125, I:8, O:8, U:8, X:3, S:6
+2025-12-25 22:39:16 | INFO     | [lf.flight.extracted] SM452 on 29DEC: BKG=145, LF=86.3%
+[LF] SM452 29DEC: BKG=145, GRP=100, CAP=168, LF%=86.3%, Brd-Off=JED-HBE, Classes: P:100, U:25, X:11, T:6, S:3
+[LF] Getting WEEKLY/LASTSOLD data for 2 flights
+[LF] SM458 29DEC: LASTSOLD=2025-12-07 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+[LF] SM452 29DEC: LASTSOLD=2025-12-25 00:00:00, WEEKLY=21, TODAY=6, YDAY=6
+2025-12-25 22:39:27 | INFO     | [SUCCESS] Day 29DEC
+2025-12-25 22:39:27 | INFO     | [DAY_START] Processing 28DEC
+[LF] Processing JED-HBE for 28DEC
+2025-12-25 22:39:27 | INFO     | [lf.day.start] Processing JED-HBE for 28DEC
+[LF] 28DEC: found 2 direct flights
+2025-12-25 22:39:28 | INFO     | [lf.day.flights_found] Found 2 flights on 28DEC
+2025-12-25 22:39:30 | INFO     | [lf.flight.extracted] SM458 on 28DEC: BKG=130, LF=77.4%
+[LF] SM458 28DEC: BKG=130, GRP=87, CAP=168, LF%=77.4%, Brd-Off=JED-HBE, Classes: P:87, U:22, X:17, T:4
+2025-12-25 22:39:33 | INFO     | [lf.flight.extracted] SM452 on 28DEC: BKG=168, LF=93.8%
+[LF] SM452 28DEC: BKG=168, GRP=88, CAP=179, LF%=93.8%, Brd-Off=JED-HBE, Classes: P:88, I:35, O:20, U:12, S:13
+[LF] Getting WEEKLY/LASTSOLD data for 2 flights
+[LF] SM458 28DEC: LASTSOLD=2025-12-25 00:00:00, WEEKLY=27, TODAY=7, YDAY=0
+[LF] SM452 28DEC: LASTSOLD=2025-12-25 00:00:00, WEEKLY=6, TODAY=2, YDAY=0
+2025-12-25 22:39:44 | INFO     | [SUCCESS] Day 28DEC
+2025-12-25 22:39:44 | INFO     | [DAY_START] Processing 27DEC
+[LF] Processing JED-HBE for 27DEC
+2025-12-25 22:39:44 | INFO     | [lf.day.start] Processing JED-HBE for 27DEC
+[LF] 27DEC: found 2 direct flights
+2025-12-25 22:39:45 | INFO     | [lf.day.flights_found] Found 2 flights on 27DEC
+2025-12-25 22:39:47 | INFO     | [lf.flight.extracted] SM458 on 27DEC: BKG=171, LF=95.5%
+[LF] SM458 27DEC: BKG=171, GRP=128, CAP=179, LF%=95.5%, Brd-Off=JED-HBE, Classes: P:130, U:20, X:19, W:1, S:1
+2025-12-25 22:39:50 | INFO     | [lf.flight.extracted] SM452 on 27DEC: BKG=159, LF=88.8%
+[LF] SM452 27DEC: BKG=159, GRP=63, CAP=179, LF%=88.8%, Brd-Off=JED-HBE, Classes: P:63, I:17, U:13, X:50, S:15, G:1
+[LF] Getting WEEKLY/LASTSOLD data for 2 flights
+[LF] SM458 27DEC: LASTSOLD=2025-12-25 00:00:00, WEEKLY=25, TODAY=2, YDAY=7
+[LF] SM452 27DEC: LASTSOLD=2025-12-25 00:00:00, WEEKLY=40, TODAY=13, YDAY=21
+2025-12-25 22:40:01 | INFO     | [SUCCESS] Day 27DEC
+2025-12-25 22:40:01 | INFO     | [DAY_START] Processing 26DEC
+[LF] Processing JED-HBE for 26DEC
+2025-12-25 22:40:01 | INFO     | [lf.day.start] Processing JED-HBE for 26DEC
+[LF] 26DEC: found 1 direct flights
+2025-12-25 22:40:02 | INFO     | [lf.day.flights_found] Found 1 flights on 26DEC
+2025-12-25 22:40:04 | INFO     | [lf.flight.extracted] SM452 on 26DEC: BKG=159, LF=88.8%
+[LF] SM452 26DEC: BKG=159, GRP=68, CAP=179, LF%=88.8%, Brd-Off=JED-HBE, Classes: P:38, E:30, I:9, O:9, U:16, X:18, T:24, W:7, S:6, G:2
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM452 26DEC: LASTSOLD=2025-12-25 00:00:00, WEEKLY=32, TODAY=9, YDAY=6
+2025-12-25 22:40:10 | INFO     | [SUCCESS] Day 26DEC
+[LF] Results summary:
+  2025-12-30: 1 flights
+  2025-12-29: 2 flights
+  2025-12-28: 2 flights
+  2025-12-27: 2 flights
+  2025-12-26: 1 flights
+2025-12-25 22:40:10 | INFO     | [SUCCESS] LF Search Complete
+
+============================================================
+[Worker_9232] ✓ COMPLETED: JED-HBE
+  Results: 5 dates
+  Errors: 0 dates
+  Total Processed: 3 groups
+============================================================
+
+2025-12-25 22:40:12 | INFO     | [Worker_9232] Completed: JED-HBE - 5 results, 0 errors
+[Worker_9232] Waiting for tasks...
+
+============================================================
+[Worker_9232] Shutdown signal received
+Exiting...
+============================================================
+2025-12-25 22:41:22 | INFO     | [Worker_9232] Shutdown signal received, exiting...
+
+============================================================
+[Worker_9232] FINISHED
+  Total Groups Processed: 3
+============================================================
+
+2025-12-25 22:41:22 | INFO     | [Worker_9232] Finished. Processed 3 groups.

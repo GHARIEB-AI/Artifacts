@@ -1,0 +1,28 @@
+2025-12-29 07:28:20 | INFO     | ======================================================================
+2025-12-29 07:28:20 | INFO     | Load Factor Scraper Started - Route: CAI-RUH
+2025-12-29 07:28:20 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_291225_at_07.25\logs\LF_CAI-RUH_20251229_072820.log
+2025-12-29 07:28:20 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-29 07:28:20 | INFO     | ======================================================================
+2025-12-29 07:28:20 | INFO     | Starting LF search for route: CAI-RUH
+2025-12-29 07:28:20 | INFO     | [START] LF Search
+2025-12-29 07:28:22 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-29 07:28:22 | INFO     | [DAY_START] Processing 01JAN
+2025-12-29 07:28:22 | INFO     | [lf.day.start] Processing CAI-RUH for 01JAN
+2025-12-29 07:28:23 | INFO     | [lf.day.flights_found] Found 1 flights on 01JAN
+2025-12-29 07:28:25 | INFO     | [lf.flight.extracted] SM461 on 01JAN: BKG=136, LF=76.0%
+2025-12-29 07:28:31 | INFO     | [SUCCESS] Day 01JAN
+2025-12-29 07:28:31 | INFO     | [DAY_START] Processing 31DEC
+2025-12-29 07:28:31 | INFO     | [lf.day.start] Processing CAI-RUH for 31DEC
+2025-12-29 07:28:33 | INFO     | [lf.day.flights_found] Found 2 flights on 31DEC
+2025-12-29 07:28:35 | INFO     | [lf.flight.extracted] SM461 on 31DEC: BKG=92, LF=51.4%
+2025-12-29 07:28:38 | INFO     | [lf.flight.extracted] SM469 on 31DEC: BKG=100, LF=55.9%
+2025-12-29 07:28:51 | INFO     | [SUCCESS] Day 31DEC
+2025-12-29 07:28:51 | INFO     | [DAY_START] Processing 30DEC
+2025-12-29 07:28:51 | INFO     | [lf.day.start] Processing CAI-RUH for 30DEC
+2025-12-29 07:28:52 | INFO     | [lf.day.flights_found] Found 1 flights on 30DEC
+2025-12-29 07:28:54 | INFO     | [lf.flight.extracted] SM469 on 30DEC: BKG=94, LF=52.5%
+2025-12-29 07:29:00 | INFO     | [SUCCESS] Day 30DEC
+2025-12-29 07:29:00 | INFO     | [SUCCESS] LF Search Complete
+2025-12-29 07:29:02 | INFO     | [Worker_9233] Completed: CAI-RUH - 3 results, 0 errors
+2025-12-29 07:34:58 | INFO     | [Worker_9233] Shutdown signal received, exiting...
+2025-12-29 07:34:58 | INFO     | [Worker_9233] Finished. Processed 4 groups.

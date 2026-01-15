@@ -1,0 +1,34 @@
+2025-12-31 21:09:24 | INFO     | ======================================================================
+2025-12-31 21:09:24 | INFO     | Load Factor Scraper Started - Route: CAI-GIZ
+2025-12-31 21:09:24 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_20.48\logs\LF_CAI-GIZ_20251231_210924.log
+2025-12-31 21:09:24 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 21:09:24 | INFO     | ======================================================================
+2025-12-31 21:09:24 | INFO     | Starting LF search for route: CAI-GIZ
+2025-12-31 21:09:24 | INFO     | [START] LF Search
+2025-12-31 21:09:25 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 21:09:25 | INFO     | [DAY_START] Processing 05JAN
+2025-12-31 21:09:25 | INFO     | [lf.day.start] Processing CAI-GIZ for 05JAN
+2025-12-31 21:09:27 | WARNING  | [lf.day.no_flights] No direct flights on 05JAN
+2025-12-31 21:09:27 | INFO     | [SUCCESS] Day 05JAN
+2025-12-31 21:09:27 | INFO     | [DAY_START] Processing 04JAN
+2025-12-31 21:09:27 | INFO     | [lf.day.start] Processing CAI-GIZ for 04JAN
+2025-12-31 21:09:28 | WARNING  | [lf.day.no_flights] No direct flights on 04JAN
+2025-12-31 21:09:28 | INFO     | [SUCCESS] Day 04JAN
+2025-12-31 21:09:28 | INFO     | [DAY_START] Processing 03JAN
+2025-12-31 21:09:28 | INFO     | [lf.day.start] Processing CAI-GIZ for 03JAN
+2025-12-31 21:09:29 | INFO     | [lf.day.flights_found] Found 1 flights on 03JAN
+2025-12-31 21:09:32 | INFO     | [lf.flight.extracted] SM329 on 03JAN: BKG=154, LF=86.0%
+2025-12-31 21:09:38 | INFO     | [SUCCESS] Day 03JAN
+2025-12-31 21:09:38 | INFO     | [DAY_START] Processing 02JAN
+2025-12-31 21:09:38 | INFO     | [lf.day.start] Processing CAI-GIZ for 02JAN
+2025-12-31 21:09:39 | WARNING  | [lf.day.no_flights] No direct flights on 02JAN
+2025-12-31 21:09:40 | INFO     | [SUCCESS] Day 02JAN
+2025-12-31 21:09:40 | INFO     | [DAY_START] Processing 01JAN
+2025-12-31 21:09:40 | INFO     | [lf.day.start] Processing CAI-GIZ for 01JAN
+2025-12-31 21:09:41 | INFO     | [lf.day.flights_found] Found 1 flights on 01JAN
+2025-12-31 21:09:43 | INFO     | [lf.flight.extracted] SM329 on 01JAN: BKG=50, LF=45.9%
+2025-12-31 21:09:47 | INFO     | [SUCCESS] Day 01JAN
+2025-12-31 21:09:47 | INFO     | [SUCCESS] LF Search Complete
+2025-12-31 21:09:49 | INFO     | [Worker_9234] Completed: CAI-GIZ - 5 results, 0 errors
+2025-12-31 21:34:16 | INFO     | [Worker_9234] Shutdown signal received, exiting...
+2025-12-31 21:34:16 | INFO     | [Worker_9234] Finished. Processed 22 groups.

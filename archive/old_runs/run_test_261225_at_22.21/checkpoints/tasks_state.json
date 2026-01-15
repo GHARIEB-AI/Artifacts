@@ -1,0 +1,254 @@
+{
+  "JED-CAI_chunk1": {
+    "task_id": "JED-CAI_chunk1",
+    "route": "JED-CAI",
+    "origin": "JED",
+    "dest": "CAI",
+    "chunk_idx": 1,
+    "dates": [
+      "2025-12-30",
+      "2025-12-29",
+      "2025-12-28",
+      "2025-12-27",
+      "2025-12-26"
+    ],
+    "status": "PENDING",
+    "attempt_count": 0,
+    "assigned_worker": null,
+    "started_at": null,
+    "completed_at": null,
+    "failure_reason": null,
+    "queue_order": 12
+  },
+  "JED-HBE_chunk1": {
+    "task_id": "JED-HBE_chunk1",
+    "route": "JED-HBE",
+    "origin": "JED",
+    "dest": "HBE",
+    "chunk_idx": 1,
+    "dates": [
+      "2025-12-30",
+      "2025-12-29",
+      "2025-12-28",
+      "2025-12-27",
+      "2025-12-26"
+    ],
+    "status": "PENDING",
+    "attempt_count": 0,
+    "assigned_worker": null,
+    "started_at": null,
+    "completed_at": null,
+    "failure_reason": null,
+    "queue_order": 13
+  },
+  "JED-ATZ_chunk1": {
+    "task_id": "JED-ATZ_chunk1",
+    "route": "JED-ATZ",
+    "origin": "JED",
+    "dest": "ATZ",
+    "chunk_idx": 1,
+    "dates": [
+      "2025-12-30",
+      "2025-12-29",
+      "2025-12-28",
+      "2025-12-27",
+      "2025-12-26"
+    ],
+    "status": "PENDING",
+    "attempt_count": 0,
+    "assigned_worker": null,
+    "started_at": null,
+    "completed_at": null,
+    "failure_reason": null,
+    "queue_order": 14
+  },
+  "CAI-MED_chunk1": {
+    "task_id": "CAI-MED_chunk1",
+    "route": "CAI-MED",
+    "origin": "CAI",
+    "dest": "MED",
+    "chunk_idx": 1,
+    "dates": [
+      "2025-12-30",
+      "2025-12-29",
+      "2025-12-28",
+      "2025-12-27",
+      "2025-12-26"
+    ],
+    "status": "PENDING",
+    "attempt_count": 0,
+    "assigned_worker": null,
+    "started_at": null,
+    "completed_at": null,
+    "failure_reason": null,
+    "queue_order": 15
+  },
+  "ATZ-MED_chunk1": {
+    "task_id": "ATZ-MED_chunk1",
+    "route": "ATZ-MED",
+    "origin": "ATZ",
+    "dest": "MED",
+    "chunk_idx": 1,
+    "dates": [
+      "2025-12-30",
+      "2025-12-29",
+      "2025-12-28",
+      "2025-12-27",
+      "2025-12-26"
+    ],
+    "status": "PENDING",
+    "attempt_count": 0,
+    "assigned_worker": null,
+    "started_at": null,
+    "completed_at": null,
+    "failure_reason": null,
+    "queue_order": 16
+  },
+  "HBE-JED_chunk1": {
+    "task_id": "HBE-JED_chunk1",
+    "route": "HBE-JED",
+    "origin": "HBE",
+    "dest": "JED",
+    "chunk_idx": 1,
+    "dates": [
+      "2025-12-30",
+      "2025-12-29",
+      "2025-12-28",
+      "2025-12-27",
+      "2025-12-26"
+    ],
+    "status": "PENDING",
+    "attempt_count": 0,
+    "assigned_worker": null,
+    "started_at": null,
+    "completed_at": null,
+    "failure_reason": null,
+    "queue_order": 17
+  },
+  "JED-CAI_chunk0": {
+    "task_id": "JED-CAI_chunk0",
+    "route": "JED-CAI",
+    "origin": "JED",
+    "dest": "CAI",
+    "chunk_idx": 0,
+    "dates": [
+      "2026-01-04",
+      "2026-01-03",
+      "2026-01-02",
+      "2026-01-01",
+      "2025-12-31"
+    ],
+    "status": "PENDING",
+    "attempt_count": 0,
+    "assigned_worker": null,
+    "started_at": null,
+    "completed_at": null,
+    "failure_reason": null,
+    "queue_order": 18
+  },
+  "JED-HBE_chunk0": {
+    "task_id": "JED-HBE_chunk0",
+    "route": "JED-HBE",
+    "origin": "JED",
+    "dest": "HBE",
+    "chunk_idx": 0,
+    "dates": [
+      "2026-01-04",
+      "2026-01-03",
+      "2026-01-02",
+      "2026-01-01",
+      "2025-12-31"
+    ],
+    "status": "PENDING",
+    "attempt_count": 0,
+    "assigned_worker": null,
+    "started_at": null,
+    "completed_at": null,
+    "failure_reason": null,
+    "queue_order": 19
+  },
+  "JED-ATZ_chunk0": {
+    "task_id": "JED-ATZ_chunk0",
+    "route": "JED-ATZ",
+    "origin": "JED",
+    "dest": "ATZ",
+    "chunk_idx": 0,
+    "dates": [
+      "2026-01-04",
+      "2026-01-03",
+      "2026-01-02",
+      "2026-01-01",
+      "2025-12-31"
+    ],
+    "status": "PENDING",
+    "attempt_count": 0,
+    "assigned_worker": null,
+    "started_at": null,
+    "completed_at": null,
+    "failure_reason": null,
+    "queue_order": 20
+  },
+  "CAI-MED_chunk0": {
+    "task_id": "CAI-MED_chunk0",
+    "route": "CAI-MED",
+    "origin": "CAI",
+    "dest": "MED",
+    "chunk_idx": 0,
+    "dates": [
+      "2026-01-04",
+      "2026-01-03",
+      "2026-01-02",
+      "2026-01-01",
+      "2025-12-31"
+    ],
+    "status": "PENDING",
+    "attempt_count": 0,
+    "assigned_worker": null,
+    "started_at": null,
+    "completed_at": null,
+    "failure_reason": null,
+    "queue_order": 21
+  },
+  "ATZ-MED_chunk0": {
+    "task_id": "ATZ-MED_chunk0",
+    "route": "ATZ-MED",
+    "origin": "ATZ",
+    "dest": "MED",
+    "chunk_idx": 0,
+    "dates": [
+      "2026-01-04",
+      "2026-01-03",
+      "2026-01-02",
+      "2026-01-01",
+      "2025-12-31"
+    ],
+    "status": "PENDING",
+    "attempt_count": 0,
+    "assigned_worker": null,
+    "started_at": null,
+    "completed_at": null,
+    "failure_reason": null,
+    "queue_order": 22
+  },
+  "HBE-JED_chunk0": {
+    "task_id": "HBE-JED_chunk0",
+    "route": "HBE-JED",
+    "origin": "HBE",
+    "dest": "JED",
+    "chunk_idx": 0,
+    "dates": [
+      "2026-01-04",
+      "2026-01-03",
+      "2026-01-02",
+      "2026-01-01",
+      "2025-12-31"
+    ],
+    "status": "PENDING",
+    "attempt_count": 0,
+    "assigned_worker": null,
+    "started_at": null,
+    "completed_at": null,
+    "failure_reason": null,
+    "queue_order": 23
+  }
+}

@@ -1,0 +1,213 @@
+
+============================================================
+     LF WORKER - PORT 9226
+============================================================
+Worker: Worker_9226
+Status: READY
+Waiting for tasks...
+============================================================
+
+
+============================================================
+[Worker_9226] Processing: JED-CAI
+  Tier 0: Range 2, Chunk 2/3
+  Dates: 4 days
+  Date Range: 2026-01-17 to 2026-01-14
+============================================================
+
+2025-12-29 07:54:35 | INFO     | ======================================================================
+2025-12-29 07:54:35 | INFO     | Load Factor Scraper Started - Route: JED-CAI
+2025-12-29 07:54:35 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_291225_at_07.54\logs\LF_JED-CAI_20251229_075435.log
+2025-12-29 07:54:35 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-29 07:54:35 | INFO     | ======================================================================
+[LF] Processing dates (override): ['17JAN', '16JAN', '15JAN', '14JAN']
+[LF] Attaching to Chrome for Altea access
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9226 (after 1 attempts)
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+[LF] Processing JED-CAI for 17JAN
+[LF][ERROR] Amadeus command error detected: UNKNOWN TRANSACTION
+[LF][ERROR] Command: SN17JANJEDCAI/ASM
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+============================================================
+[LF][RESYNC] Command 'SN17JANJEDCAI/ASM' failed: TECH_ERROR:UNKNOWN TRANSACTION
+[LF][RESYNC] Re-running entire day from SN command for JED-CAI 17JAN
+[LF][RESYNC] Attempt 1/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing JED-CAI for 17JAN
+[LF] 17JAN: found 3 direct flights
+[LF] SM450 17JAN: BKG=5, GRP=0, CAP=167, LF%=3.0%, Brd-Off=JED-CAI, Classes: U:5
+[LF] SM476 17JAN: BKG=113, GRP=90, CAP=167, LF%=67.7%, Brd-Off=JED-CAI, Classes: P:90, O:3, U:10, X:10
+[LF] SM478 17JAN: BKG=125, GRP=87, CAP=168, LF%=74.4%, Brd-Off=JED-CAI, Classes: P:87, I:15, O:7, U:7, X:9
+[LF] Getting WEEKLY/LASTSOLD data for 3 flights
+[LF] SM450 17JAN: LASTSOLD=2025-12-06 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+[LF] SM476 17JAN: LASTSOLD=2025-12-28 00:00:00, WEEKLY=3, TODAY=0, YDAY=3
+[LF] SM478 17JAN: LASTSOLD=2025-12-29 00:00:00, WEEKLY=22, TODAY=1, YDAY=18
+[LF] Processing JED-CAI for 16JAN
+[LF] 16JAN: found 6 direct flights
+[LF] SM424 16JAN: BKG=4, GRP=0, CAP=167, LF%=2.4%, Brd-Off=JED-CAI, Classes: I:2, O:1, U:1
+[LF] SM476 16JAN: BKG=6, GRP=0, CAP=167, LF%=3.6%, Brd-Off=JED-CAI, Classes: O:2, U:4
+[LF] SM478 16JAN: BKG=0, GRP=0, CAP=167, LF%=0.0%, Brd-Off=JED-CAI
+[LF] SM480 16JAN: BKG=19, GRP=0, CAP=167, LF%=11.4%, Brd-Off=JED-CAI, Classes: O:7, U:7, G:1, K:4
+[LF] SM472 16JAN: BKG=76, GRP=49, CAP=167, LF%=45.5%, Brd-Off=JED-CAI, Classes: E:49, O:16, U:10, X:1
+[LF] SM460 16JAN: BKG=50, GRP=42, CAP=167, LF%=29.9%, Brd-Off=JED-CAI, Classes: P:42, O:2, U:5, G:1
+[LF] Getting WEEKLY/LASTSOLD data for 5 flights
+[LF] SM424 16JAN: LASTSOLD=2025-12-28 00:00:00, WEEKLY=3, TODAY=0, YDAY=2
+[LF] SM476 16JAN: LASTSOLD=2025-12-27 00:00:00, WEEKLY=2, TODAY=0, YDAY=0
+[LF] SM480 16JAN: LASTSOLD=2025-12-28 00:00:00, WEEKLY=11, TODAY=0, YDAY=1
+[LF] SM472 16JAN: LASTSOLD=2025-12-29 00:00:00, WEEKLY=16, TODAY=9, YDAY=4
+[LF] SM460 16JAN: LASTSOLD=2025-12-28 00:00:00, WEEKLY=46, TODAY=0, YDAY=45
+[LF] Processing JED-CAI for 15JAN
+[LF] 15JAN: found 6 direct flights
+[LF] SM472 15JAN: BKG=55, GRP=45, CAP=167, LF%=32.9%, Brd-Off=JED-CAI, Classes: P:45, U:9, X:1
+[LF] SM450 15JAN: BKG=1, GRP=0, CAP=167, LF%=0.6%, Brd-Off=JED-CAI, Classes: U:1
+[LF] SM476 15JAN: BKG=2, GRP=0, CAP=167, LF%=1.2%, Brd-Off=JED-CAI, Classes: I:2
+[LF] SM432 15JAN: BKG=0, GRP=0, CAP=164, LF%=0.0%, Brd-Off=JED-CAI
+[LF] SM478 15JAN: BKG=108, GRP=94, CAP=167, LF%=64.7%, Brd-Off=JED-CAI, Classes: P:94, I:5, U:9
+[LF] SM480 15JAN: BKG=106, GRP=92, CAP=167, LF%=63.5%, Brd-Off=JED-CAI, Classes: P:92, I:5, U:7, S:1, L:1
+[LF] Getting WEEKLY/LASTSOLD data for 5 flights
+[LF] SM472 15JAN: LASTSOLD=2025-12-15 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+[LF] SM450 15JAN: LASTSOLD=2025-11-03 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+[LF] SM476 15JAN: LASTSOLD=2025-12-28 00:00:00, WEEKLY=2, TODAY=0, YDAY=2
+[LF] SM478 15JAN: LASTSOLD=2025-12-29 00:00:00, WEEKLY=5, TODAY=1, YDAY=4
+[LF] SM480 15JAN: LASTSOLD=2025-12-28 00:00:00, WEEKLY=10, TODAY=0, YDAY=5
+[LF] Processing JED-CAI for 14JAN
+[LF] 14JAN: found 4 direct flights
+[LF] SM476 14JAN: BKG=58, GRP=47, CAP=167, LF%=34.7%, Brd-Off=JED-CAI, Classes: P:47, I:5, U:6
+[LF] SM478 14JAN: BKG=117, GRP=96, CAP=175, LF%=66.9%, Brd-Off=JED-CAI, Classes: P:51, E:45, I:6, U:13, X:2
+[LF] SM460 14JAN: BKG=143, GRP=135, CAP=167, LF%=85.6%, Brd-Off=JED-CAI, Classes: P:135, I:2, U:6
+[LF] SM424 14JAN: BKG=10, GRP=0, CAP=167, LF%=6.0%, Brd-Off=JED-CAI, Classes: I:6, U:3, G:1
+[LF] Getting WEEKLY/LASTSOLD data for 4 flights
+[LF] SM476 14JAN: LASTSOLD=2025-12-28 00:00:00, WEEKLY=8, TODAY=0, YDAY=5
+[LF] SM478 14JAN: LASTSOLD=2025-12-28 00:00:00, WEEKLY=16, TODAY=0, YDAY=16
+[LF] SM460 14JAN: LASTSOLD=2025-12-28 00:00:00, WEEKLY=2, TODAY=0, YDAY=2
+[LF] SM424 14JAN: LASTSOLD=2025-12-28 00:00:00, WEEKLY=3, TODAY=0, YDAY=2
+[LF] Results summary:
+  2026-01-17: 3 flights
+  2026-01-16: 6 flights
+  2026-01-15: 6 flights
+  2026-01-14: 4 flights
+
+============================================================
+[Worker_9226] ✓ COMPLETED: JED-CAI
+  Results: 4 dates
+  Errors: 0 dates
+  Total Processed: 1 groups
+============================================================
+
+
+============================================================
+[Worker_9226] Processing: JED-ATZ
+  Tier 0: Range 1, Chunk 3/3
+  Dates: 4 days
+  Date Range: 2025-12-31 to 2025-12-28
+============================================================
+
+2025-12-29 07:56:35 | INFO     | ======================================================================
+2025-12-29 07:56:35 | INFO     | Load Factor Scraper Started - Route: JED-ATZ
+2025-12-29 07:56:35 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_291225_at_07.54\logs\LF_JED-ATZ_20251229_075635.log
+2025-12-29 07:56:35 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-29 07:56:35 | INFO     | ======================================================================
+[LF] Processing dates (override): ['31DEC', '30DEC', '29DEC', '28DEC']
+[LF] Attaching to Chrome for Altea access
+2025-12-29 07:56:35 | INFO     | Starting LF search for route: JED-ATZ
+2025-12-29 07:56:35 | INFO     | [START] LF Search
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9226 (after 1 attempts)
+2025-12-29 07:56:36 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+2025-12-29 07:56:36 | INFO     | [DAY_START] Processing 31DEC
+[LF] Processing JED-ATZ for 31DEC
+2025-12-29 07:56:36 | INFO     | [lf.day.start] Processing JED-ATZ for 31DEC
+[LF] 31DEC: found 2 direct flights
+2025-12-29 07:56:37 | INFO     | [lf.day.flights_found] Found 2 flights on 31DEC
+2025-12-29 07:56:39 | INFO     | [lf.flight.extracted] SM454 on 31DEC: BKG=168, LF=94.4%
+[LF] SM454 31DEC: BKG=168, GRP=147, CAP=178, LF%=94.4%, Brd-Off=JED-ATZ, Classes: P:140, E:7, I:3, O:2, U:3, X:7, T:2, S:4
+2025-12-29 07:56:42 | INFO     | [lf.flight.extracted] SM492 on 31DEC: BKG=179, LF=107.2%
+[LF] SM492 31DEC: BKG=179, GRP=178, CAP=167, LF%=107.2%, Brd-Off=JED-ATZ, Classes: P:133, E:45, I:1
+[LF] Getting WEEKLY/LASTSOLD data for 2 flights
+Process Process-6:
+Traceback (most recent call last):
+  File "C:\Users\MANDO\AppData\Local\Programs\Python\Python313\Lib\multiprocessing\process.py", line 313, in _bootstrap
+    self.run()
+    ~~~~~~~~^^
+  File "C:\Users\MANDO\AppData\Local\Programs\Python\Python313\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CODERED\LAB\market_insights\orchestration\queue_worker_system.py", line 580, in lf_worker_process
+    results, errors = run_lf_search(
+                      ~~~~~~~~~~~~~^
+        origin=origin,
+        ^^^^^^^^^^^^^^
+    ...<3 lines>...
+        progress_callback=heartbeat_callback
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\CODERED\LAB\market_insights\lf\orchestration.py", line 771, in run_lf_search
+    dtok, rows, err = process_lf_day(drv, origin, dest, dtok, year_for_token)
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CODERED\LAB\market_insights\lf\orchestration.py", line 287, in process_lf_day
+    return handle_amadeus_error_with_resync(
+        drv, origin, dest, dtok, year,
+        _process_lf_day_once,
+        resync_wait_sec=RESYNC_WAIT_SEC
+    )
+  File "D:\CODERED\LAB\market_insights\lf\amadeus.py", line 186, in handle_amadeus_error_with_resync
+    result = process_func(drv, origin, dest, dtok, year)
+  File "D:\CODERED\LAB\market_insights\lf\orchestration.py", line 483, in _process_lf_day_once
+    last_sold, weekly_sold, sold_today, sold_yesterday = weekly_from_lpl_pages(drv, flight, dtok, year_)
+                                                         ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CODERED\LAB\market_insights\lf\parsers.py", line 889, in weekly_from_lpl_pages
+    more = send_and_wait(drv, "M", expect_tokens=[], timeout=SEND_TIMEOUT_SEC) or ""
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CODERED\LAB\market_insights\lf\amadeus.py", line 370, in send_and_wait
+    inp = focus_cmdline(drv)
+  File "D:\CODERED\LAB\market_insights\lf\amadeus.py", line 263, in focus_cmdline
+    time.sleep(0.15)
+    ~~~~~~~~~~^^^^^^
+KeyboardInterrupt
+Exception ignored in: <function Service.__del__ at 0x000001A3DFC38F40>
+Traceback (most recent call last):
+  File "C:\Users\MANDO\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\common\service.py", line 185, in __del__
+    self.stop()
+  File "C:\Users\MANDO\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\common\service.py", line 146, in stop
+    self.send_remote_shutdown_command()
+  File "C:\Users\MANDO\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\common\service.py", line 126, in send_remote_shutdown_command
+    request.urlopen(f"{self.service_url}/shutdown")
+  File "C:\Users\MANDO\AppData\Local\Programs\Python\Python313\Lib\urllib\request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\MANDO\AppData\Local\Programs\Python\Python313\Lib\urllib\request.py", line 489, in open
+    response = self._open(req, data)
+  File "C:\Users\MANDO\AppData\Local\Programs\Python\Python313\Lib\urllib\request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Users\MANDO\AppData\Local\Programs\Python\Python313\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Users\MANDO\AppData\Local\Programs\Python\Python313\Lib\urllib\request.py", line 1348, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\MANDO\AppData\Local\Programs\Python\Python313\Lib\urllib\request.py", line 1319, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Users\MANDO\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 1338, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\MANDO\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 1384, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\MANDO\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 1333, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\MANDO\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 1093, in _send_output
+    self.send(msg)
+  File "C:\Users\MANDO\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 1037, in send
+    self.connect()
+  File "C:\Users\MANDO\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 1003, in connect
+    self.sock = self._create_connection(
+  File "C:\Users\MANDO\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 856, in create_connection
+    exceptions.clear()  # raise only the last error
+KeyboardInterrupt: 
+Exception ignored in atexit callback <bound method BufferedTraceWriter.shutdown of <market_insights.observability.tracing.tracer.BufferedTraceWriter object at 0x000001A3DFCF7B60>>:
+Traceback (most recent call last):
+  File "D:\CODERED\LAB\market_insights\observability\tracing\tracer.py", line 322, in shutdown
+    self._writer_thread.join(timeout=5.0)
+  File "C:\Users\MANDO\AppData\Local\Programs\Python\Python313\Lib\threading.py", line 1094, in join
+    self._handle.join(timeout)
+KeyboardInterrupt: 

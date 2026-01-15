@@ -1,0 +1,113 @@
+
+============================================================
+     LF WORKER - PORT 9233
+============================================================
+Worker: Worker_9233
+Status: READY
+Waiting for tasks...
+============================================================
+
+
+============================================================
+[Worker_9233] Processing: CAI-DMM
+  Tier 0: Range 1, Chunk 1/2
+  Dates: 11 days
+  Date Range: 2026-01-31 to 2026-01-21
+============================================================
+
+2026-01-10 07:43:01 | INFO     | ======================================================================
+2026-01-10 07:43:01 | INFO     | Load Factor Scraper Started - Route: CAI-DMM
+2026-01-10 07:43:01 | INFO     | Log file: D:\CODERED\LAB\Artifacts\run_generated_100126_at_07.42\logs\LF_CAI-DMM_20260110_074301.log
+2026-01-10 07:43:01 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-10 07:43:01 | INFO     | ======================================================================
+[LF] Processing dates (override): ['31JAN', '30JAN', '29JAN', '28JAN', '27JAN', '26JAN', '25JAN', '24JAN', '23JAN', '22JAN', '21JAN']
+[LF] Attaching to Chrome for Altea access
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9233 (after 1 attempts)
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+[LF] Processing CAI-DMM for 31JAN
+[LF][ERROR] Amadeus command error detected: UNKNOWN TRANSACTION
+[LF][ERROR] Command: SN31JANCAIDMM/ASM
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+============================================================
+[LF][RESYNC] Command 'SN31JANCAIDMM/ASM' failed: TECH_ERROR:UNKNOWN TRANSACTION
+[LF][RESYNC] Re-running entire day from SN command for CAI-DMM 31JAN
+[LF][RESYNC] Attempt 1/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing CAI-DMM for 31JAN
+[LF] 31JAN: found 1 direct flights
+[LF] SM433 31JAN: BKG=46, GRP=0, CAP=179, LF%=25.7%, Brd-Off=CAI-DMM, Classes: O:3, U:7, X:4, T:14, W:15, S:2, G:1
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM433 31JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=4, TODAY=0, YDAY=1
+[LF] Processing CAI-DMM for 30JAN
+[LF] 30JAN: found 1 direct flights
+[LF] SM433 30JAN: BKG=56, GRP=0, CAP=179, LF%=31.3%, Brd-Off=CAI-DMM, Classes: O:12, U:32, X:12
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM433 30JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=33, TODAY=0, YDAY=2
+[LF] Processing CAI-DMM for 29JAN
+[LF] 29JAN: found 1 direct flights
+[LF] SM433 29JAN: BKG=70, GRP=0, CAP=179, LF%=39.1%, Brd-Off=CAI-DMM, Classes: O:14, U:23, X:26, T:3, S:4
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM433 29JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=38, TODAY=0, YDAY=2
+[LF] Processing CAI-DMM for 28JAN
+[LF] No direct flights on 28JAN for CAI-DMM
+[LF] Processing CAI-DMM for 27JAN
+[LF] 27JAN: found 1 direct flights
+[LF] SM433 27JAN: BKG=55, GRP=0, CAP=179, LF%=30.7%, Brd-Off=CAI-DMM, Classes: I:10, O:10, U:10, X:18, W:2, S:4, G:1
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM433 27JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=26, TODAY=0, YDAY=3
+[LF] Processing CAI-DMM for 26JAN
+[LF] No direct flights on 26JAN for CAI-DMM
+[LF] Processing CAI-DMM for 25JAN
+[LF] No direct flights on 25JAN for CAI-DMM
+[LF] Processing CAI-DMM for 24JAN
+[LF] 24JAN: found 1 direct flights
+[LF] SM433 24JAN: BKG=89, GRP=0, CAP=179, LF%=49.7%, Brd-Off=CAI-DMM, Classes: W:14, S:34, G:36, L:5
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM433 24JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=60, TODAY=0, YDAY=25
+[LF] Processing CAI-DMM for 23JAN
+[LF] 23JAN: found 1 direct flights
+[LF] SM433 23JAN: BKG=65, GRP=0, CAP=179, LF%=36.3%, Brd-Off=CAI-DMM, Classes: S:18, G:17, L:28, V:2
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM433 23JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=19, TODAY=0, YDAY=7
+[LF] Processing CAI-DMM for 22JAN
+[LF] 22JAN: found 1 direct flights
+[LF] SM433 22JAN: BKG=92, GRP=0, CAP=179, LF%=51.4%, Brd-Off=CAI-DMM, Classes: W:6, S:6, G:49, L:27, V:4
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM433 22JAN: LASTSOLD=2026-01-09 00:00:00, WEEKLY=51, TODAY=0, YDAY=3
+[LF] Processing CAI-DMM for 21JAN
+[LF] No direct flights on 21JAN for CAI-DMM
+[LF] Results summary:
+  2026-01-31: 1 flights
+  2026-01-30: 1 flights
+  2026-01-29: 1 flights
+  2026-01-28: 0 flights
+  2026-01-27: 1 flights
+  2026-01-26: 0 flights
+  2026-01-25: 0 flights
+  2026-01-24: 1 flights
+  2026-01-23: 1 flights
+  2026-01-22: 1 flights
+  2026-01-21: 0 flights
+
+============================================================
+[Worker_9233] ✓ COMPLETED: CAI-DMM
+  Results: 11 dates
+  Errors: 0 dates
+  Total Processed: 1 groups
+============================================================
+
+[Worker_9233] Waiting for tasks...
+
+============================================================
+[Worker_9233] Shutdown signal received
+Exiting...
+============================================================
+
+============================================================
+[Worker_9233] FINISHED
+  Total Groups Processed: 1
+============================================================
+

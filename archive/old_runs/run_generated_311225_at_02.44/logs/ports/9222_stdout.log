@@ -1,0 +1,91 @@
+
+============================================================
+     LF WORKER - PORT 9222
+============================================================
+Worker: Worker_9222
+Status: READY
+Waiting for tasks...
+============================================================
+
+
+============================================================
+[Worker_9222] Processing: JED-CAI
+  Tier 0: Range 1, Chunk 1/10
+  Dates: 2 days
+  Date Range: 2026-01-10 to 2026-01-09
+============================================================
+
+2025-12-31 02:44:51 | INFO     | ======================================================================
+2025-12-31 02:44:51 | INFO     | Load Factor Scraper Started - Route: JED-CAI
+2025-12-31 02:44:51 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_02.44\logs\LF_JED-CAI_20251231_024451.log
+2025-12-31 02:44:51 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 02:44:51 | INFO     | ======================================================================
+[LF] Processing dates (override): ['10JAN', '09JAN']
+[LF] Attaching to Chrome for Altea access
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9222 (after 1 attempts)
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+[LF] Processing JED-CAI for 10JAN
+[LF][ERROR] Amadeus command error detected: UNKNOWN TRANSACTION
+[LF][ERROR] Command: SN10JANJEDCAI/ASM
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+============================================================
+[LF][RESYNC] Command 'SN10JANJEDCAI/ASM' failed: TECH_ERROR:UNKNOWN TRANSACTION
+[LF][RESYNC] Re-running entire day from SN command for JED-CAI 10JAN
+[LF][RESYNC] Attempt 1/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing JED-CAI for 10JAN
+[LF] 10JAN: found 3 direct flights
+[LF] SM450 10JAN: BKG=159, GRP=79, CAP=167, LF%=95.2%, Brd-Off=JED-CAI, Classes: P:79, U:10, X:12, T:5, W:8, S:4, G:7, L:13, V:18, K:3
+[LPC] SM450 10JAN: Found 2 outbound flights with connecting passengers
+[LF] SM476 10JAN: BKG=146, GRP=87, CAP=167, LF%=87.4%, Brd-Off=JED-CAI, Classes: P:87, U:10, X:12, T:12, W:1, G:13, L:11
+[LPC] SM476 10JAN: Found 0 outbound flights with connecting passengers
+[LF] SM478 10JAN: BKG=168, GRP=123, CAP=175, LF%=96.0%, Brd-Off=JED-CAI, Classes: P:123, U:10, X:13, T:17, W:2, K:3
+[LF] Getting WEEKLY/LASTSOLD data for 3 flights
+[LF] SM450 10JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=13, TODAY=0, YDAY=2
+[LF] SM476 10JAN: LASTSOLD=2025-12-29 00:00:00, WEEKLY=19, TODAY=0, YDAY=0
+[LF] SM478 10JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=13, TODAY=0, YDAY=4
+[LF] Processing JED-CAI for 09JAN
+[LF] 09JAN: found 6 direct flights
+[LF] SM424 09JAN: BKG=108, GRP=1, CAP=175, LF%=61.7%, Brd-Off=JED-CAI, Classes: P:1, U:10, X:12, T:7, W:11, S:8, G:5, L:27, V:27
+[LPC] SM424 09JAN: Found 2 outbound flights with connecting passengers
+[LF] SM476 09JAN: BKG=167, GRP=58, CAP=167, LF%=100.0%, Brd-Off=JED-CAI, Classes: P:58, U:10, X:12, T:10, W:8, S:29, G:14, L:15, V:11
+[LPC] SM476 09JAN: Found 1 outbound flights with connecting passengers
+[LF] SM478 09JAN: BKG=128, GRP=0, CAP=167, LF%=76.6%, Brd-Off=JED-CAI, Classes: U:10, X:12, T:12, W:12, S:11, G:11, L:27, V:14, K:19
+[LPC] SM478 09JAN: Found 2 outbound flights with connecting passengers
+[LF] SM480 09JAN: BKG=150, GRP=45, CAP=175, LF%=85.7%, Brd-Off=JED-CAI, Classes: P:45, U:10, X:12, T:12, W:10, S:14, G:21, L:10, V:14, K:2
+[LF] SM472 09JAN: BKG=140, GRP=54, CAP=175, LF%=80.0%, Brd-Off=JED-CAI, Classes: P:54, U:10, X:12, T:12, W:12, S:11, G:7, L:13, V:6, K:3
+[LPC] SM472 09JAN: Found 0 outbound flights with connecting passengers
+[LF] SM460 09JAN: BKG=165, GRP=135, CAP=175, LF%=94.3%, Brd-Off=JED-CAI, Classes: P:135, U:10, X:12, T:8
+[LF] Getting WEEKLY/LASTSOLD data for 6 flights
+[LF] SM424 09JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=35, TODAY=0, YDAY=9
+[LF] SM476 09JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=24, TODAY=0, YDAY=2
+[LF] SM478 09JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=34, TODAY=0, YDAY=1
+[LF] SM480 09JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=16, TODAY=0, YDAY=2
+[LF] SM472 09JAN: LASTSOLD=2025-12-30 00:00:00, WEEKLY=24, TODAY=0, YDAY=14
+[LF] SM460 09JAN: LASTSOLD=2025-12-15 00:00:00, WEEKLY=0, TODAY=0, YDAY=0
+[LF] Results summary:
+  2026-01-10: 3 flights
+  2026-01-09: 6 flights
+
+============================================================
+[Worker_9222] ✓ COMPLETED: JED-CAI
+  Results: 2 dates
+  Errors: 0 dates
+  Total Processed: 1 groups
+============================================================
+
+[Worker_9222] Waiting for tasks...
+
+============================================================
+[Worker_9222] Shutdown signal received
+Exiting...
+============================================================
+
+============================================================
+[Worker_9222] FINISHED
+  Total Groups Processed: 1
+============================================================
+

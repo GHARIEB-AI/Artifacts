@@ -1,0 +1,38 @@
+2026-01-01 08:42:24 | INFO     | ======================================================================
+2026-01-01 08:42:24 | INFO     | Load Factor Scraper Started - Route: ATZ-ELQ
+2026-01-01 08:42:24 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_010126_at_08.01\logs\LF_ATZ-ELQ_20260101_084224.log
+2026-01-01 08:42:24 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-01 08:42:24 | INFO     | ======================================================================
+2026-01-01 08:42:24 | INFO     | Starting LF search for route: ATZ-ELQ
+2026-01-01 08:42:24 | INFO     | [START] LF Search
+2026-01-01 08:42:25 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-01 08:42:25 | INFO     | [DAY_START] Processing 18JAN
+2026-01-01 08:42:25 | INFO     | [lf.day.start] Processing ATZ-ELQ for 18JAN
+2026-01-01 08:42:26 | WARNING  | [lf.day.no_flights] No direct flights on 18JAN
+2026-01-01 08:42:26 | INFO     | [SUCCESS] Day 18JAN
+2026-01-01 08:42:26 | INFO     | [DAY_START] Processing 17JAN
+2026-01-01 08:42:26 | INFO     | [lf.day.start] Processing ATZ-ELQ for 17JAN
+2026-01-01 08:42:28 | INFO     | [lf.day.flights_found] Found 1 flights on 17JAN
+2026-01-01 08:42:30 | INFO     | [lf.flight.extracted] SM435 on 17JAN: BKG=51, LF=28.5%
+2026-01-01 08:42:34 | INFO     | [SUCCESS] Day 17JAN
+2026-01-01 08:42:34 | INFO     | [DAY_START] Processing 16JAN
+2026-01-01 08:42:34 | INFO     | [lf.day.start] Processing ATZ-ELQ for 16JAN
+2026-01-01 08:42:35 | WARNING  | [lf.day.no_flights] No direct flights on 16JAN
+2026-01-01 08:42:35 | INFO     | [SUCCESS] Day 16JAN
+2026-01-01 08:42:35 | INFO     | [DAY_START] Processing 15JAN
+2026-01-01 08:42:35 | INFO     | [lf.day.start] Processing ATZ-ELQ for 15JAN
+2026-01-01 08:42:36 | WARNING  | [lf.day.no_flights] No direct flights on 15JAN
+2026-01-01 08:42:36 | INFO     | [SUCCESS] Day 15JAN
+2026-01-01 08:42:36 | INFO     | [DAY_START] Processing 14JAN
+2026-01-01 08:42:36 | INFO     | [lf.day.start] Processing ATZ-ELQ for 14JAN
+2026-01-01 08:42:37 | WARNING  | [lf.day.no_flights] No direct flights on 14JAN
+2026-01-01 08:42:38 | INFO     | [SUCCESS] Day 14JAN
+2026-01-01 08:42:38 | INFO     | [DAY_START] Processing 13JAN
+2026-01-01 08:42:38 | INFO     | [lf.day.start] Processing ATZ-ELQ for 13JAN
+2026-01-01 08:42:39 | INFO     | [lf.day.flights_found] Found 1 flights on 13JAN
+2026-01-01 08:42:41 | INFO     | [lf.flight.extracted] SM435 on 13JAN: BKG=41, LF=22.9%
+2026-01-01 08:42:45 | INFO     | [SUCCESS] Day 13JAN
+2026-01-01 08:42:45 | INFO     | [SUCCESS] LF Search Complete
+2026-01-01 08:42:47 | INFO     | [Worker_9225] Completed: ATZ-ELQ - 6 results, 0 errors
+2026-01-01 08:42:47 | INFO     | [Worker_9225] Processing: JED-CAI
+2026-01-01 08:42:47 | INFO     |   Tier 0: Range 1, Chunk 4/5 (6 days)

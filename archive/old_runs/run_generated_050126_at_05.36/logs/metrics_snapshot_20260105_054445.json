@@ -1,0 +1,122 @@
+{
+  "timestamp": "2026-01-05T05:44:45.679854",
+  "service": "market-insights",
+  "counters": {
+    "oal_requests_total": {
+      "description": "Total OAL API requests",
+      "values": []
+    },
+    "lf_requests_total": {
+      "description": "Total LF requests",
+      "values": [
+        {
+          "labels": {
+            "destination": "HBE",
+            "origin": "JED",
+            "status": "success"
+          },
+          "value": 9.0
+        },
+        {
+          "labels": {
+            "destination": "ATZ",
+            "origin": "JED",
+            "status": "success"
+          },
+          "value": 9.0
+        },
+        {
+          "labels": {
+            "destination": "ATZ",
+            "origin": "RUH",
+            "status": "success"
+          },
+          "value": 8.0
+        }
+      ]
+    },
+    "errors_total": {
+      "description": "Total errors",
+      "values": []
+    }
+  },
+  "gauges": {
+    "routes_in_progress": {
+      "description": "Routes currently being processed",
+      "values": [
+        {
+          "labels": {},
+          "value": 0.0
+        }
+      ]
+    },
+    "flights_analyzed": {
+      "description": "Total flights analyzed in session",
+      "values": [
+        {
+          "labels": {
+            "direction": "lf"
+          },
+          "value": 46.0
+        }
+      ]
+    },
+    "circuit_breaker_state": {
+      "description": "Circuit breaker state (0=closed, 1=open)",
+      "values": []
+    }
+  },
+  "histograms": {
+    "request_duration_seconds": {
+      "description": "Request duration in seconds",
+      "data": {}
+    },
+    "route_processing_seconds": {
+      "description": "Route processing duration",
+      "data": {
+        "{'route': 'JED-HBE'}": {
+          "sum": 149.61565300000004,
+          "count": 9,
+          "buckets": {
+            "30.0": 8,
+            "60.0": 9,
+            "120.0": 9,
+            "300.0": 9,
+            "10.0": 3
+          },
+          "p50": 13.75,
+          "p95": 23.875,
+          "p99": 24.775
+        },
+        "{'route': 'JED-ATZ'}": {
+          "sum": 242.466447,
+          "count": 9,
+          "buckets": {
+            "60.0": 9,
+            "120.0": 9,
+            "300.0": 9,
+            "30.0": 5
+          },
+          "p50": 28.0,
+          "p95": 41.833333333333336,
+          "p99": 43.03333333333333
+        },
+        "{'route': 'RUH-ATZ'}": {
+          "sum": 41.457538,
+          "count": 8,
+          "buckets": {
+            "10.0": 7,
+            "30.0": 8,
+            "60.0": 8,
+            "120.0": 8,
+            "300.0": 8,
+            "5.0": 4
+          },
+          "p50": 5.0,
+          "p95": 7.571428571428571,
+          "p99": 7.800000000000001
+        }
+      }
+    }
+  }
+}

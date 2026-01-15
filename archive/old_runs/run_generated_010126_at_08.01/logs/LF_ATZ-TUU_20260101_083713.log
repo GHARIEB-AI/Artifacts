@@ -1,0 +1,37 @@
+2026-01-01 08:37:13 | INFO     | ======================================================================
+2026-01-01 08:37:13 | INFO     | Load Factor Scraper Started - Route: ATZ-TUU
+2026-01-01 08:37:13 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_010126_at_08.01\logs\LF_ATZ-TUU_20260101_083713.log
+2026-01-01 08:37:13 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-01 08:37:13 | INFO     | ======================================================================
+2026-01-01 08:37:13 | INFO     | Starting LF search for route: ATZ-TUU
+2026-01-01 08:37:14 | INFO     | [START] LF Search
+2026-01-01 08:37:16 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-01 08:37:16 | INFO     | [DAY_START] Processing 24JAN
+2026-01-01 08:37:16 | INFO     | [lf.day.start] Processing ATZ-TUU for 24JAN
+2026-01-01 08:37:17 | WARNING  | [lf.day.no_flights] No direct flights on 24JAN
+2026-01-01 08:37:17 | INFO     | [SUCCESS] Day 24JAN
+2026-01-01 08:37:17 | INFO     | [DAY_START] Processing 23JAN
+2026-01-01 08:37:17 | INFO     | [lf.day.start] Processing ATZ-TUU for 23JAN
+2026-01-01 08:37:18 | INFO     | [lf.day.flights_found] Found 1 flights on 23JAN
+2026-01-01 08:37:21 | INFO     | [lf.flight.extracted] SM327 on 23JAN: BKG=7, LF=3.9%
+2026-01-01 08:37:24 | INFO     | [SUCCESS] Day 23JAN
+2026-01-01 08:37:24 | INFO     | [DAY_START] Processing 22JAN
+2026-01-01 08:37:24 | INFO     | [lf.day.start] Processing ATZ-TUU for 22JAN
+2026-01-01 08:37:25 | WARNING  | [lf.day.no_flights] No direct flights on 22JAN
+2026-01-01 08:37:25 | INFO     | [SUCCESS] Day 22JAN
+2026-01-01 08:37:25 | INFO     | [DAY_START] Processing 21JAN
+2026-01-01 08:37:25 | INFO     | [lf.day.start] Processing ATZ-TUU for 21JAN
+2026-01-01 08:37:26 | WARNING  | [lf.day.no_flights] No direct flights on 21JAN
+2026-01-01 08:37:26 | INFO     | [SUCCESS] Day 21JAN
+2026-01-01 08:37:26 | INFO     | [DAY_START] Processing 20JAN
+2026-01-01 08:37:26 | INFO     | [lf.day.start] Processing ATZ-TUU for 20JAN
+2026-01-01 08:37:27 | WARNING  | [lf.day.no_flights] No direct flights on 20JAN
+2026-01-01 08:37:27 | INFO     | [SUCCESS] Day 20JAN
+2026-01-01 08:37:27 | INFO     | [DAY_START] Processing 19JAN
+2026-01-01 08:37:27 | INFO     | [lf.day.start] Processing ATZ-TUU for 19JAN
+2026-01-01 08:37:28 | WARNING  | [lf.day.no_flights] No direct flights on 19JAN
+2026-01-01 08:37:28 | INFO     | [SUCCESS] Day 19JAN
+2026-01-01 08:37:28 | INFO     | [SUCCESS] LF Search Complete
+2026-01-01 08:37:30 | INFO     | [Worker_9233] Completed: ATZ-TUU - 6 results, 0 errors
+2026-01-01 08:37:30 | INFO     | [Worker_9233] Processing: CAI-YNB
+2026-01-01 08:37:30 | INFO     |   Tier 0: Range 1, Chunk 2/5 (6 days)

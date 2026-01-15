@@ -1,0 +1,39 @@
+2025-12-31 21:03:23 | INFO     | ======================================================================
+2025-12-31 21:03:23 | INFO     | Load Factor Scraper Started - Route: ELQ-CAI
+2025-12-31 21:03:23 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_20.48\logs\LF_ELQ-CAI_20251231_210323.log
+2025-12-31 21:03:23 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 21:03:23 | INFO     | ======================================================================
+2025-12-31 21:03:23 | INFO     | Starting LF search for route: ELQ-CAI
+2025-12-31 21:03:23 | INFO     | [START] LF Search
+2025-12-31 21:03:25 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 21:03:25 | INFO     | [DAY_START] Processing 11JAN
+2025-12-31 21:03:25 | INFO     | [lf.day.start] Processing ELQ-CAI for 11JAN
+2025-12-31 21:03:27 | INFO     | [lf.day.flights_found] Found 1 flights on 11JAN
+2025-12-31 21:03:31 | INFO     | [lf.flight.extracted] SM428 on 11JAN: BKG=45, LF=27.0%
+2025-12-31 21:03:39 | INFO     | [SUCCESS] Day 11JAN
+2025-12-31 21:03:39 | INFO     | [DAY_START] Processing 10JAN
+2025-12-31 21:03:39 | INFO     | [lf.day.start] Processing ELQ-CAI for 10JAN
+2025-12-31 21:03:40 | INFO     | [lf.day.flights_found] Found 1 flights on 10JAN
+2025-12-31 21:03:43 | INFO     | [lf.flight.extracted] SM428 on 10JAN: BKG=50, LF=29.9%
+2025-12-31 21:03:48 | INFO     | [SUCCESS] Day 10JAN
+2025-12-31 21:03:48 | INFO     | [DAY_START] Processing 09JAN
+2025-12-31 21:03:48 | INFO     | [lf.day.start] Processing ELQ-CAI for 09JAN
+2025-12-31 21:03:49 | WARNING  | [lf.day.no_flights] No direct flights on 09JAN
+2025-12-31 21:03:49 | INFO     | [SUCCESS] Day 09JAN
+2025-12-31 21:03:49 | INFO     | [DAY_START] Processing 08JAN
+2025-12-31 21:03:49 | INFO     | [lf.day.start] Processing ELQ-CAI for 08JAN
+2025-12-31 21:03:50 | INFO     | [lf.day.flights_found] Found 1 flights on 08JAN
+2025-12-31 21:03:52 | INFO     | [lf.flight.extracted] SM428 on 08JAN: BKG=85, LF=48.6%
+2025-12-31 21:03:58 | INFO     | [SUCCESS] Day 08JAN
+2025-12-31 21:03:58 | INFO     | [DAY_START] Processing 07JAN
+2025-12-31 21:03:58 | INFO     | [lf.day.start] Processing ELQ-CAI for 07JAN
+2025-12-31 21:03:59 | WARNING  | [lf.day.no_flights] No direct flights on 07JAN
+2025-12-31 21:03:59 | INFO     | [SUCCESS] Day 07JAN
+2025-12-31 21:03:59 | INFO     | [DAY_START] Processing 06JAN
+2025-12-31 21:03:59 | INFO     | [lf.day.start] Processing ELQ-CAI for 06JAN
+2025-12-31 21:04:00 | WARNING  | [lf.day.no_flights] No direct flights on 06JAN
+2025-12-31 21:04:01 | INFO     | [SUCCESS] Day 06JAN
+2025-12-31 21:04:01 | INFO     | [SUCCESS] LF Search Complete
+2025-12-31 21:04:03 | INFO     | [Worker_9234] Completed: ELQ-CAI - 6 results, 0 errors
+2025-12-31 21:04:03 | INFO     | [Worker_9234] Processing: HBE-MED
+2025-12-31 21:04:03 | INFO     |   Tier 0: Range 1, Chunk 4/5 (6 days)

@@ -1,0 +1,1621 @@
+{
+  "task_id": "JED-CAI_chunk1",
+  "saved_at": "2025-12-27T17:43:50.342788",
+  "lf_results": {
+    "2026-01-03": [
+      {
+        "Date": "Saturday, January 03, 2026",
+        "Flight": "SM450",
+        "DEP": "05:40",
+        "SOLD": 162,
+        "FULL CAPACITY": 167,
+        "LF%": 0.9701,
+        "LowestAvail": "T5",
+        "LASTSOLD": "2025-12-24 00:00:00",
+        "WEEKLY PROGRESS": 2,
+        "RBD": {
+          "N": 0,
+          "P": 141,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 0,
+          "U": 10,
+          "X": 7,
+          "T": 2,
+          "W": 0,
+          "S": 0,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 2,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 141,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM450",
+          "sm_route": "JED-CAI",
+          "sm_dep": "0540",
+          "sm_arr": "0650",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "SM0805",
+              "outbound_route": "CAI-MXP",
+              "outbound_dep": "1000",
+              "passengers": [
+                {
+                  "iata": "AMSN228TP"
+                },
+                {
+                  "iata": "AMSN228TP"
+                },
+                {
+                  "iata": "AMSN228TP"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Date": "Saturday, January 03, 2026",
+        "Flight": "SM476",
+        "DEP": "08:00",
+        "SOLD": 162,
+        "FULL CAPACITY": 178,
+        "LF%": 0.9101,
+        "LowestAvail": "S9",
+        "LASTSOLD": "2025-12-26 00:00:00",
+        "WEEKLY PROGRESS": 5,
+        "RBD": {
+          "N": 0,
+          "P": 131,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 0,
+          "U": 7,
+          "X": 12,
+          "T": 9,
+          "W": 0,
+          "S": 3,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 131,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 3,
+        "CONNECTING_PASSENGERS": null
+      },
+      {
+        "Date": "Saturday, January 03, 2026",
+        "Flight": "SM478",
+        "DEP": "16:20",
+        "SOLD": 165,
+        "FULL CAPACITY": 175,
+        "LF%": 0.9429,
+        "LowestAvail": "S9",
+        "LASTSOLD": "2025-12-22 00:00:00",
+        "WEEKLY PROGRESS": 12,
+        "RBD": {
+          "N": 0,
+          "P": 139,
+          "A": 0,
+          "E": 0,
+          "I": 5,
+          "O": 0,
+          "U": 15,
+          "X": 0,
+          "T": 0,
+          "W": 6,
+          "S": 0,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 139,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": null
+      }
+    ],
+    "2026-01-02": [
+      {
+        "Date": "Friday, January 02, 2026",
+        "Flight": "SM424",
+        "DEP": "02:45",
+        "SOLD": 68,
+        "FULL CAPACITY": 167,
+        "LF%": 0.4072,
+        "LowestAvail": "T1",
+        "LASTSOLD": "2025-12-27 00:00:00",
+        "WEEKLY PROGRESS": 13,
+        "RBD": {
+          "N": 0,
+          "P": 45,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 0,
+          "U": 0,
+          "X": 6,
+          "T": 12,
+          "W": 2,
+          "S": 3,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 45,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 1,
+        "SOLD YDAY": 4,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM424",
+          "sm_route": "JED-CAI",
+          "sm_dep": "0245",
+          "sm_arr": "0400",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "SM0137",
+              "outbound_route": "CAI-ASW",
+              "outbound_dep": "0600",
+              "passengers": [
+                {
+                  "iata": "YNBS228W2"
+                },
+                {
+                  "iata": "YNBS228W2"
+                },
+                {
+                  "iata": "YNBS228W2"
+                }
+              ]
+            },
+            {
+              "outbound_flight": "SM0020",
+              "outbound_route": "CAI-HRG",
+              "outbound_dep": "0610",
+              "passengers": [
+                {
+                  "iata": "RUHAA28WH"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Date": "Friday, January 02, 2026",
+        "Flight": "SM476",
+        "DEP": "07:40",
+        "SOLD": 73,
+        "FULL CAPACITY": 167,
+        "LF%": 0.4371,
+        "LowestAvail": "T5",
+        "LASTSOLD": "2025-12-24 00:00:00",
+        "WEEKLY PROGRESS": 5,
+        "RBD": {
+          "N": 0,
+          "P": 48,
+          "A": 0,
+          "E": 0,
+          "I": 5,
+          "O": 5,
+          "U": 1,
+          "X": 10,
+          "T": 4,
+          "W": 0,
+          "S": 0,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 48,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": null
+      },
+      {
+        "Date": "Friday, January 02, 2026",
+        "Flight": "SM480",
+        "DEP": "14:45",
+        "SOLD": 163,
+        "FULL CAPACITY": 167,
+        "LF%": 0.976,
+        "LowestAvail": "T4",
+        "LASTSOLD": "2025-12-26 00:00:00",
+        "WEEKLY PROGRESS": 2,
+        "RBD": {
+          "N": 0,
+          "P": 135,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 0,
+          "U": 9,
+          "X": 11,
+          "T": 5,
+          "W": 1,
+          "S": 0,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 2,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 135,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 1,
+        "CONNECTING_PASSENGERS": null
+      },
+      {
+        "Date": "Friday, January 02, 2026",
+        "Flight": "SM472",
+        "DEP": "17:40",
+        "SOLD": 160,
+        "FULL CAPACITY": 167,
+        "LF%": 0.9581,
+        "LowestAvail": "G6",
+        "LASTSOLD": "2025-12-27 00:00:00",
+        "WEEKLY PROGRESS": 20,
+        "RBD": {
+          "N": 0,
+          "P": 90,
+          "A": 0,
+          "E": 0,
+          "I": 5,
+          "O": 5,
+          "U": 12,
+          "X": 22,
+          "T": 24,
+          "W": 0,
+          "S": 2,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 90,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 4,
+        "SOLD YDAY": 2,
+        "CONNECTING_PASSENGERS": null
+      },
+      {
+        "Date": "Friday, January 02, 2026",
+        "Flight": "SM460",
+        "DEP": "22:30",
+        "SOLD": 156,
+        "FULL CAPACITY": 167,
+        "LF%": 0.9341,
+        "LowestAvail": "T2",
+        "LASTSOLD": "2025-12-27 00:00:00",
+        "WEEKLY PROGRESS": 22,
+        "RBD": {
+          "N": 0,
+          "P": 118,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 0,
+          "U": 8,
+          "X": 12,
+          "T": 16,
+          "W": 1,
+          "S": 0,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 1,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 118,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 3,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM460",
+          "sm_route": "JED-CAI",
+          "sm_dep": "2230",
+          "sm_arr": "2345",
+          "connecting_passengers": []
+        }
+      }
+    ],
+    "2026-01-01": [
+      {
+        "Date": "Thursday, January 01, 2026",
+        "Flight": "SM424",
+        "DEP": "01:10",
+        "SOLD": 23,
+        "FULL CAPACITY": 167,
+        "LF%": 0.1377,
+        "LowestAvail": "S9",
+        "LASTSOLD": "2025-12-26 00:00:00",
+        "WEEKLY PROGRESS": 10,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 0,
+          "U": 20,
+          "X": 3,
+          "T": 0,
+          "W": 0,
+          "S": 0,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 1,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM424",
+          "sm_route": "JED-CAI",
+          "sm_dep": "0110",
+          "sm_arr": "0225",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "MS0759",
+              "outbound_route": "CAI-CPH",
+              "outbound_dep": "1030",
+              "passengers": [
+                {
+                  "iata": "BTSSG38SR"
+                },
+                {
+                  "iata": "BTSSG38SR"
+                },
+                {
+                  "iata": "BTSSG38SR"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Date": "Thursday, January 01, 2026",
+        "Flight": "SM472",
+        "DEP": "02:45",
+        "SOLD": 87,
+        "FULL CAPACITY": 164,
+        "LF%": 0.5305,
+        "LowestAvail": "X6",
+        "LASTSOLD": "2025-12-27 00:00:00",
+        "WEEKLY PROGRESS": 21,
+        "RBD": {
+          "N": 0,
+          "P": 51,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 0,
+          "U": 20,
+          "X": 9,
+          "T": 1,
+          "W": 0,
+          "S": 6,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 51,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 3,
+        "SOLD YDAY": 7,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM472",
+          "sm_route": "JED-CAI",
+          "sm_dep": "0245",
+          "sm_arr": "0355",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "SM0601",
+              "outbound_route": "CAI-CGN",
+              "outbound_dep": "1000",
+              "passengers": [
+                {
+                  "iata": "CPHSG34AA"
+                },
+                {
+                  "iata": "CPHSG34AA"
+                },
+                {
+                  "iata": "CPHSG34AA"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Date": "Thursday, January 01, 2026",
+        "Flight": "SM450",
+        "DEP": "06:05",
+        "SOLD": 179,
+        "FULL CAPACITY": 167,
+        "LF%": 1.0719,
+        "LowestAvail": "CLOSED",
+        "LASTSOLD": "2025-12-21 00:00:00",
+        "WEEKLY PROGRESS": 46,
+        "RBD": {
+          "N": 5,
+          "P": 46,
+          "A": 0,
+          "E": 125,
+          "I": 0,
+          "O": 0,
+          "U": 3,
+          "X": 0,
+          "T": 0,
+          "W": 0,
+          "S": 0,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 175,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM450",
+          "sm_route": "JED-CAI",
+          "sm_dep": "0605",
+          "sm_arr": "0720",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "SM0601",
+              "outbound_route": "CAI-CGN",
+              "outbound_dep": "1000",
+              "passengers": [
+                {
+                  "iata": "DUSSM0100"
+                },
+                {
+                  "iata": "DUSSM0100"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Date": "Thursday, January 01, 2026",
+        "Flight": "SM476",
+        "DEP": "08:00",
+        "SOLD": 168,
+        "FULL CAPACITY": 174,
+        "LF%": 0.9655,
+        "LowestAvail": "S6",
+        "LASTSOLD": "2025-12-23 00:00:00",
+        "WEEKLY PROGRESS": 28,
+        "RBD": {
+          "N": 0,
+          "P": 88,
+          "A": 0,
+          "E": 40,
+          "I": 5,
+          "O": 5,
+          "U": 18,
+          "X": 8,
+          "T": 0,
+          "W": 1,
+          "S": 3,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 128,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM476",
+          "sm_route": "JED-CAI",
+          "sm_dep": "0800",
+          "sm_arr": "0910",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "SM0601",
+              "outbound_route": "CAI-CGN",
+              "outbound_dep": "1000",
+              "passengers": [
+                {
+                  "iata": "DUSSM0100"
+                }
+              ]
+            },
+            {
+              "outbound_flight": "SM0022",
+              "outbound_route": "CAI-HRG",
+              "outbound_dep": "1115",
+              "passengers": [
+                {
+                  "iata": "RUHAA28WH"
+                },
+                {
+                  "iata": "RUHAA28WH"
+                }
+              ]
+            },
+            {
+              "outbound_flight": "SM0803",
+              "outbound_route": "CAI-MXP",
+              "outbound_dep": "1400",
+              "passengers": [
+                {
+                  "iata": "RUHAA2267"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Date": "Thursday, January 01, 2026",
+        "Flight": "SM432",
+        "DEP": "08:45",
+        "SOLD": 0,
+        "FULL CAPACITY": 167,
+        "LF%": 0.0,
+        "LowestAvail": "N9",
+        "LASTSOLD": "NIL",
+        "WEEKLY PROGRESS": 0,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 0,
+          "U": 0,
+          "X": 0,
+          "T": 0,
+          "W": 0,
+          "S": 0,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "JED-ATZ",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": null
+      },
+      {
+        "Date": "Thursday, January 01, 2026",
+        "Flight": "SM478",
+        "DEP": "14:00",
+        "SOLD": 159,
+        "FULL CAPACITY": 164,
+        "LF%": 0.9695,
+        "LowestAvail": "W4",
+        "LASTSOLD": "2025-12-26 00:00:00",
+        "WEEKLY PROGRESS": 22,
+        "RBD": {
+          "N": 0,
+          "P": 128,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 0,
+          "U": 0,
+          "X": 10,
+          "T": 5,
+          "W": 10,
+          "S": 6,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 128,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 1,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM478",
+          "sm_route": "JED-CAI",
+          "sm_dep": "1400",
+          "sm_arr": "1510",
+          "connecting_passengers": []
+        }
+      },
+      {
+        "Date": "Thursday, January 01, 2026",
+        "Flight": "SM480",
+        "DEP": "17:45",
+        "SOLD": 168,
+        "FULL CAPACITY": 178,
+        "LF%": 0.9438,
+        "LowestAvail": "G5",
+        "LASTSOLD": "2025-12-26 00:00:00",
+        "WEEKLY PROGRESS": 3,
+        "RBD": {
+          "N": 6,
+          "P": 139,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 0,
+          "U": 0,
+          "X": 8,
+          "T": 2,
+          "W": 1,
+          "S": 3,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 9,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 139,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 1,
+        "CONNECTING_PASSENGERS": null
+      }
+    ],
+    "2025-12-31": [
+      {
+        "Date": "Wednesday, December 31, 2025",
+        "Flight": "SM476",
+        "DEP": "11:30",
+        "SOLD": 176,
+        "FULL CAPACITY": 178,
+        "LF%": 0.9888,
+        "LowestAvail": "L1",
+        "LASTSOLD": "2025-12-27 00:00:00",
+        "WEEKLY PROGRESS": 11,
+        "RBD": {
+          "N": 0,
+          "P": 132,
+          "A": 0,
+          "E": 0,
+          "I": 10,
+          "O": 10,
+          "U": 21,
+          "X": 2,
+          "T": 0,
+          "W": 0,
+          "S": 0,
+          "G": 0,
+          "L": 1,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 132,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 1,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": null
+      },
+      {
+        "Date": "Wednesday, December 31, 2025",
+        "Flight": "SM460",
+        "DEP": "12:30",
+        "SOLD": 120,
+        "FULL CAPACITY": 178,
+        "LF%": 0.6742,
+        "LowestAvail": "W6",
+        "LASTSOLD": "2025-12-27 00:00:00",
+        "WEEKLY PROGRESS": 20,
+        "RBD": {
+          "N": 0,
+          "P": 42,
+          "A": 0,
+          "E": 0,
+          "I": 10,
+          "O": 10,
+          "U": 21,
+          "X": 24,
+          "T": 3,
+          "W": 2,
+          "S": 8,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 42,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 1,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM460",
+          "sm_route": "JED-CAI",
+          "sm_dep": "1230",
+          "sm_arr": "1340",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "SM0096",
+              "outbound_route": "CAI-ASW",
+              "outbound_dep": "1540",
+              "passengers": [
+                {
+                  "iata": "RUHAA28WH"
+                }
+              ]
+            },
+            {
+              "outbound_flight": "SM0006",
+              "outbound_route": "CAI-SSH",
+              "outbound_dep": "1600",
+              "passengers": [
+                {
+                  "iata": "OSLSG34AA"
+                }
+              ]
+            },
+            {
+              "outbound_flight": "SM0094",
+              "outbound_route": "CAI-ASW",
+              "outbound_dep": "1640",
+              "passengers": [
+                {
+                  "iata": "DXBSM07TP"
+                }
+              ]
+            },
+            {
+              "outbound_flight": "SM0113",
+              "outbound_route": "CAI-LXR",
+              "outbound_dep": "1730",
+              "passengers": [
+                {
+                  "iata": "YNBS228W2"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Date": "Wednesday, December 31, 2025",
+        "Flight": "SM478",
+        "DEP": "14:45",
+        "SOLD": 165,
+        "FULL CAPACITY": 178,
+        "LF%": 0.927,
+        "LowestAvail": "CLOSED",
+        "LASTSOLD": "2025-12-27 00:00:00",
+        "WEEKLY PROGRESS": 16,
+        "RBD": {
+          "N": 0,
+          "P": 100,
+          "A": 0,
+          "E": 0,
+          "I": 10,
+          "O": 10,
+          "U": 21,
+          "X": 18,
+          "T": 0,
+          "W": 0,
+          "S": 6,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 100,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 1,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": null
+      }
+    ],
+    "2025-12-30": [
+      {
+        "Date": "Tuesday, December 30, 2025",
+        "Flight": "SM472",
+        "DEP": "05:30",
+        "SOLD": 160,
+        "FULL CAPACITY": 178,
+        "LF%": 0.8989,
+        "LowestAvail": "W9",
+        "LASTSOLD": "2025-12-27 00:00:00",
+        "WEEKLY PROGRESS": 17,
+        "RBD": {
+          "N": 0,
+          "P": 89,
+          "A": 0,
+          "E": 0,
+          "I": 20,
+          "O": 10,
+          "U": 11,
+          "X": 8,
+          "T": 21,
+          "W": 0,
+          "S": 0,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 1,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 89,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 2,
+        "SOLD YDAY": 1,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM472",
+          "sm_route": "JED-CAI",
+          "sm_dep": "0530",
+          "sm_arr": "0645",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "MS0757",
+              "outbound_route": "CAI-AMS",
+              "outbound_dep": "1000",
+              "passengers": [
+                {
+                  "iata": "YVREX38AA"
+                },
+                {
+                  "iata": "YVREX38AA"
+                },
+                {
+                  "iata": "YVREX38AA"
+                }
+              ]
+            },
+            {
+              "outbound_flight": "SM8789",
+              "outbound_route": "CAI-PRG",
+              "outbound_dep": "1130",
+              "passengers": [
+                {
+                  "iata": "CPHSG34AA"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Date": "Tuesday, December 30, 2025",
+        "Flight": "SM480",
+        "DEP": "13:55",
+        "SOLD": 175,
+        "FULL CAPACITY": 178,
+        "LF%": 0.9831,
+        "LowestAvail": "CLOSED",
+        "LASTSOLD": "2025-12-24 00:00:00",
+        "WEEKLY PROGRESS": 8,
+        "RBD": {
+          "N": 0,
+          "P": 141,
+          "A": 0,
+          "E": 0,
+          "I": 17,
+          "O": 11,
+          "U": 6,
+          "X": 0,
+          "T": 0,
+          "W": 0,
+          "S": 0,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 141,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": null
+      },
+      {
+        "Date": "Tuesday, December 30, 2025",
+        "Flight": "SM478",
+        "DEP": "14:45",
+        "SOLD": 170,
+        "FULL CAPACITY": 178,
+        "LF%": 0.9551,
+        "LowestAvail": "G3",
+        "LASTSOLD": "2025-12-24 00:00:00",
+        "WEEKLY PROGRESS": 10,
+        "RBD": {
+          "N": 0,
+          "P": 78,
+          "A": 0,
+          "E": 45,
+          "I": 21,
+          "O": 10,
+          "U": 11,
+          "X": 4,
+          "T": 0,
+          "W": 0,
+          "S": 1,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 123,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM478",
+          "sm_route": "JED-CAI",
+          "sm_dep": "1445",
+          "sm_arr": "1555",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "MS0266",
+              "outbound_route": "CAI-LXR",
+              "outbound_dep": "2115",
+              "passengers": [
+                {
+                  "iata": "CAIEG23E5"
+                },
+                {
+                  "iata": "CAIEG23E5"
+                },
+                {
+                  "iata": "CAIEG23E5"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Date": "Tuesday, December 30, 2025",
+        "Flight": "SM460",
+        "DEP": "17:30",
+        "SOLD": 168,
+        "FULL CAPACITY": 175,
+        "LF%": 0.96,
+        "LowestAvail": "CLOSED",
+        "LASTSOLD": "2025-12-27 00:00:00",
+        "WEEKLY PROGRESS": 19,
+        "RBD": {
+          "N": 1,
+          "P": 94,
+          "A": 0,
+          "E": 0,
+          "I": 20,
+          "O": 10,
+          "U": 11,
+          "X": 20,
+          "T": 4,
+          "W": 2,
+          "S": 6,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 94,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 3,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": null
+      },
+      {
+        "Date": "Tuesday, December 30, 2025",
+        "Flight": "SM424",
+        "DEP": "22:25",
+        "SOLD": 174,
+        "FULL CAPACITY": 178,
+        "LF%": 0.9775,
+        "LowestAvail": "V3",
+        "LASTSOLD": "2025-12-24 00:00:00",
+        "WEEKLY PROGRESS": 10,
+        "RBD": {
+          "N": 0,
+          "P": 88,
+          "A": 0,
+          "E": 45,
+          "I": 20,
+          "O": 10,
+          "U": 10,
+          "X": 0,
+          "T": 0,
+          "W": 0,
+          "S": 0,
+          "G": 0,
+          "L": 0,
+          "V": 1,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 133,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": null
+      },
+      {
+        "Date": "Tuesday, December 30, 2025",
+        "Flight": "SM476",
+        "DEP": "23:55",
+        "SOLD": 173,
+        "FULL CAPACITY": 175,
+        "LF%": 0.9886,
+        "LowestAvail": "W2",
+        "LASTSOLD": "2025-12-27 00:00:00",
+        "WEEKLY PROGRESS": 16,
+        "RBD": {
+          "N": 0,
+          "P": 101,
+          "A": 0,
+          "E": 0,
+          "I": 20,
+          "O": 9,
+          "U": 11,
+          "X": 25,
+          "T": 2,
+          "W": 2,
+          "S": 3,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 100,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 1,
+        "SOLD YDAY": 1,
+        "CONNECTING_PASSENGERS": null
+      }
+    ],
+    "2025-12-29": [
+      {
+        "Date": "Monday, December 29, 2025",
+        "Flight": "SM480",
+        "DEP": "00:10",
+        "SOLD": 106,
+        "FULL CAPACITY": 178,
+        "LF%": 0.5955,
+        "LowestAvail": "T9",
+        "LASTSOLD": "2025-12-27 00:00:00",
+        "WEEKLY PROGRESS": 43,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 35,
+          "O": 38,
+          "U": 16,
+          "X": 14,
+          "T": 0,
+          "W": 0,
+          "S": 2,
+          "G": 0,
+          "L": 1,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 5,
+        "SOLD YDAY": 3,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM480",
+          "sm_route": "JED-CAI",
+          "sm_dep": "0010",
+          "sm_arr": "0125",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "SM2827",
+              "outbound_route": "CAI-FCO",
+              "outbound_dep": "0500",
+              "passengers": [
+                {
+                  "iata": "OSLSG34AA"
+                },
+                {
+                  "iata": "OSLSG34AA"
+                },
+                {
+                  "iata": "OSLSG34AA"
+                }
+              ]
+            },
+            {
+              "outbound_flight": "SM0139",
+              "outbound_route": "CAI-ASW",
+              "outbound_dep": "0545",
+              "passengers": [
+                {
+                  "iata": "DXBAD38TJ"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Date": "Monday, December 29, 2025",
+        "Flight": "SM476",
+        "DEP": "10:10",
+        "SOLD": 171,
+        "FULL CAPACITY": 178,
+        "LF%": 0.9607,
+        "LowestAvail": "V2",
+        "LASTSOLD": "2025-12-23 00:00:00",
+        "WEEKLY PROGRESS": 10,
+        "RBD": {
+          "N": 0,
+          "P": 138,
+          "A": 0,
+          "E": 0,
+          "I": 20,
+          "O": 10,
+          "U": 0,
+          "X": 0,
+          "T": 0,
+          "W": 0,
+          "S": 2,
+          "G": 1,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 138,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": null
+      },
+      {
+        "Date": "Monday, December 29, 2025",
+        "Flight": "SM478",
+        "DEP": "14:45",
+        "SOLD": 176,
+        "FULL CAPACITY": 175,
+        "LF%": 1.0057,
+        "LowestAvail": "CLOSED",
+        "LASTSOLD": "2025-12-22 00:00:00",
+        "WEEKLY PROGRESS": 8,
+        "RBD": {
+          "N": 0,
+          "P": 129,
+          "A": 0,
+          "E": 0,
+          "I": 17,
+          "O": 10,
+          "U": 11,
+          "X": 1,
+          "T": 7,
+          "W": 0,
+          "S": 1,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 129,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": null
+      },
+      {
+        "Date": "Monday, December 29, 2025",
+        "Flight": "SM460",
+        "DEP": "23:30",
+        "SOLD": 177,
+        "FULL CAPACITY": 175,
+        "LF%": 1.0114,
+        "LowestAvail": "CLOSED",
+        "LASTSOLD": "2025-12-25 00:00:00",
+        "WEEKLY PROGRESS": 11,
+        "RBD": {
+          "N": 0,
+          "P": 131,
+          "A": 0,
+          "E": 0,
+          "I": 16,
+          "O": 1,
+          "U": 0,
+          "X": 1,
+          "T": 0,
+          "W": 3,
+          "S": 22,
+          "G": 3,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 131,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM460",
+          "sm_route": "JED-CAI",
+          "sm_dep": "2330",
+          "sm_arr": "0045",
+          "connecting_passengers": []
+        }
+      }
+    ],
+    "2025-12-28": [
+      {
+        "Date": "Sunday, December 28, 2025",
+        "Flight": "SM424",
+        "DEP": "02:00",
+        "SOLD": 177,
+        "FULL CAPACITY": 175,
+        "LF%": 1.0114,
+        "LowestAvail": "CLOSED",
+        "LASTSOLD": "2025-12-24 00:00:00",
+        "WEEKLY PROGRESS": 18,
+        "RBD": {
+          "N": 2,
+          "P": 27,
+          "A": 0,
+          "E": 100,
+          "I": 25,
+          "O": 14,
+          "U": 5,
+          "X": 1,
+          "T": 0,
+          "W": 0,
+          "S": 3,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 129,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM424",
+          "sm_route": "JED-CAI",
+          "sm_dep": "0200",
+          "sm_arr": "0315",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "SM0601",
+              "outbound_route": "CAI-CGN",
+              "outbound_dep": "0700",
+              "passengers": [
+                {
+                  "iata": "RUHS228WF"
+                },
+                {
+                  "iata": "RUHS228WF"
+                }
+              ]
+            },
+            {
+              "outbound_flight": "SM0180",
+              "outbound_route": "CAI-SSH",
+              "outbound_dep": "0740",
+              "passengers": [
+                {
+                  "iata": "CAIEG28P2"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Date": "Sunday, December 28, 2025",
+        "Flight": "SM476",
+        "DEP": "07:40",
+        "SOLD": 177,
+        "FULL CAPACITY": 178,
+        "LF%": 0.9944,
+        "LowestAvail": "T1",
+        "LASTSOLD": "2025-12-26 00:00:00",
+        "WEEKLY PROGRESS": 11,
+        "RBD": {
+          "N": 0,
+          "P": 96,
+          "A": 0,
+          "E": 50,
+          "I": 19,
+          "O": 10,
+          "U": 0,
+          "X": 0,
+          "T": 1,
+          "W": 1,
+          "S": 0,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 145,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 1,
+        "CONNECTING_PASSENGERS": null
+      },
+      {
+        "Date": "Sunday, December 28, 2025",
+        "Flight": "SM460",
+        "DEP": "12:15",
+        "SOLD": 177,
+        "FULL CAPACITY": 172,
+        "LF%": 1.0291,
+        "LowestAvail": "CLOSED",
+        "LASTSOLD": "2025-12-23 00:00:00",
+        "WEEKLY PROGRESS": 12,
+        "RBD": {
+          "N": 0,
+          "P": 130,
+          "A": 0,
+          "E": 0,
+          "I": 18,
+          "O": 10,
+          "U": 9,
+          "X": 1,
+          "T": 0,
+          "W": 0,
+          "S": 9,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 130,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM460",
+          "sm_route": "JED-CAI",
+          "sm_dep": "1215",
+          "sm_arr": "1325",
+          "connecting_passengers": []
+        }
+      },
+      {
+        "Date": "Sunday, December 28, 2025",
+        "Flight": "SM478",
+        "DEP": "15:10",
+        "SOLD": 173,
+        "FULL CAPACITY": 178,
+        "LF%": 0.9719,
+        "LowestAvail": "X5",
+        "LASTSOLD": "2025-12-27 00:00:00",
+        "WEEKLY PROGRESS": 17,
+        "RBD": {
+          "N": 0,
+          "P": 130,
+          "A": 0,
+          "E": 0,
+          "I": 20,
+          "O": 9,
+          "U": 4,
+          "X": 7,
+          "T": 0,
+          "W": 0,
+          "S": 2,
+          "G": 0,
+          "L": 1,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 130,
+        "EQP": "320",
+        "Brd-Off": "JED-CAI",
+        "SOLD TODAY": 3,
+        "SOLD YDAY": 4,
+        "CONNECTING_PASSENGERS": null
+      }
+    ]
+  },
+  "lf_errors": {}
+}

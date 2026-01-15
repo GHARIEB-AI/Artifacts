@@ -1,0 +1,23 @@
+2026-01-05 16:32:01 | INFO     | ======================================================================
+2026-01-05 16:32:01 | INFO     | Load Factor Scraper Started - Route: HBE-JED
+2026-01-05 16:32:01 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_050126_at_16.15\logs\LF_HBE-JED_20260105_163201.log
+2026-01-05 16:32:01 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-05 16:32:01 | INFO     | ======================================================================
+2026-01-05 16:32:01 | INFO     | Starting LF search for route: HBE-JED
+2026-01-05 16:32:01 | INFO     | [START] LF Search
+2026-01-05 16:32:02 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-05 16:32:02 | INFO     | [DAY_START] Processing 28FEB
+2026-01-05 16:32:02 | INFO     | [lf.day.start] Processing HBE-JED for 28FEB
+2026-01-05 16:32:03 | INFO     | [lf.day.flights_found] Found 2 flights on 28FEB
+2026-01-05 16:32:05 | INFO     | [lf.flight.extracted] SM457 on 28FEB: BKG=82, LF=45.8%
+2026-01-05 16:32:08 | INFO     | [lf.flight.extracted] SM451 on 28FEB: BKG=84, LF=46.9%
+2026-01-05 16:32:11 | INFO     | [SUCCESS] Day 28FEB
+2026-01-05 16:32:11 | INFO     | [DAY_START] Processing 27FEB
+2026-01-05 16:32:11 | INFO     | [lf.day.start] Processing HBE-JED for 27FEB
+2026-01-05 16:32:12 | INFO     | [lf.day.flights_found] Found 1 flights on 27FEB
+2026-01-05 16:32:14 | INFO     | [lf.flight.extracted] SM451 on 27FEB: BKG=165, LF=92.2%
+2026-01-05 16:32:17 | INFO     | [SUCCESS] Day 27FEB
+2026-01-05 16:32:17 | INFO     | [DAY_START] Processing 26FEB
+2026-01-05 16:32:17 | INFO     | [lf.day.start] Processing HBE-JED for 26FEB
+2026-01-05 16:32:18 | INFO     | [lf.day.flights_found] Found 1 flights on 26FEB
+2026-01-05 16:32:20 | INFO     | [lf.flight.extracted] SM451 on 26FEB: BKG=178, LF=99.4%

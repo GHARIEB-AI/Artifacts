@@ -1,0 +1,157 @@
+{
+  "task_id": "AHB-CAI_r0_chunk1",
+  "saved_at": "2025-12-31T20:54:58.456290",
+  "lf_results": {
+    "2026-01-24": [],
+    "2026-01-23": [
+      {
+        "Date": "Friday, January 23, 2026",
+        "Flight": "SM444",
+        "DEP": "00:05",
+        "SOLD": 22,
+        "FULL CAPACITY": 175,
+        "LF%": 0.1257,
+        "LowestAvail": "X9",
+        "LASTSOLD": "2025-12-23 00:00:00",
+        "WEEKLY PROGRESS": 0,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 5,
+          "U": 8,
+          "X": 9,
+          "T": 0,
+          "W": 0,
+          "S": 0,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "AHB-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": null
+      }
+    ],
+    "2026-01-22": [
+      {
+        "Date": "Thursday, January 22, 2026",
+        "Flight": "SM448",
+        "DEP": "01:05",
+        "SOLD": 29,
+        "FULL CAPACITY": 172,
+        "LF%": 0.1686,
+        "LowestAvail": "T9",
+        "LASTSOLD": "2025-12-28 00:00:00",
+        "WEEKLY PROGRESS": 1,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 6,
+          "U": 7,
+          "X": 8,
+          "T": 7,
+          "W": 0,
+          "S": 1,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "AHB-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM448",
+          "sm_route": "AHB-CAI",
+          "sm_dep": "0105",
+          "sm_arr": "0305",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "SM0050",
+              "outbound_route": "CAI-LXR",
+              "outbound_dep": "0600",
+              "passengers": [
+                {
+                  "iata": "AHBS22314"
+                },
+                {
+                  "iata": "AHBS22314"
+                },
+                {
+                  "iata": "AHBS22314"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "2026-01-21": [],
+    "2026-01-20": [],
+    "2026-01-19": [],
+    "2026-01-18": [
+      {
+        "Date": "Sunday, January 18, 2026",
+        "Flight": "SM444",
+        "DEP": "00:05",
+        "SOLD": 27,
+        "FULL CAPACITY": 175,
+        "LF%": 0.1543,
+        "LowestAvail": "X9",
+        "LASTSOLD": "2025-12-30 00:00:00",
+        "WEEKLY PROGRESS": 4,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 6,
+          "U": 9,
+          "X": 6,
+          "T": 6,
+          "W": 0,
+          "S": 0,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "AHB-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 1,
+        "CONNECTING_PASSENGERS": null
+      }
+    ]
+  },
+  "lf_errors": {}
+}

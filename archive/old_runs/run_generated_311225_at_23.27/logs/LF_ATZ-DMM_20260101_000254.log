@@ -1,0 +1,37 @@
+2026-01-01 00:02:54 | INFO     | ======================================================================
+2026-01-01 00:02:54 | INFO     | Load Factor Scraper Started - Route: ATZ-DMM
+2026-01-01 00:02:54 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_23.27\logs\LF_ATZ-DMM_20260101_000254.log
+2026-01-01 00:02:54 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-01 00:02:54 | INFO     | ======================================================================
+2026-01-01 00:02:54 | INFO     | Starting LF search for route: ATZ-DMM
+2026-01-01 00:02:54 | INFO     | [START] LF Search
+2026-01-01 00:02:55 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-01 00:02:55 | INFO     | [DAY_START] Processing 18JAN
+2026-01-01 00:02:55 | INFO     | [lf.day.start] Processing ATZ-DMM for 18JAN
+2026-01-01 00:02:56 | WARNING  | [lf.day.no_flights] No direct flights on 18JAN
+2026-01-01 00:02:56 | INFO     | [SUCCESS] Day 18JAN
+2026-01-01 00:02:56 | INFO     | [DAY_START] Processing 17JAN
+2026-01-01 00:02:56 | INFO     | [lf.day.start] Processing ATZ-DMM for 17JAN
+2026-01-01 00:02:57 | WARNING  | [lf.day.no_flights] No direct flights on 17JAN
+2026-01-01 00:02:58 | INFO     | [SUCCESS] Day 17JAN
+2026-01-01 00:02:58 | INFO     | [DAY_START] Processing 16JAN
+2026-01-01 00:02:58 | INFO     | [lf.day.start] Processing ATZ-DMM for 16JAN
+2026-01-01 00:02:59 | INFO     | [lf.day.flights_found] Found 1 flights on 16JAN
+2026-01-01 00:03:01 | INFO     | [lf.flight.extracted] SM437 on 16JAN: BKG=64, LF=35.8%
+2026-01-01 00:03:06 | INFO     | [SUCCESS] Day 16JAN
+2026-01-01 00:03:06 | INFO     | [DAY_START] Processing 15JAN
+2026-01-01 00:03:06 | INFO     | [lf.day.start] Processing ATZ-DMM for 15JAN
+2026-01-01 00:03:07 | WARNING  | [lf.day.no_flights] No direct flights on 15JAN
+2026-01-01 00:03:07 | INFO     | [SUCCESS] Day 15JAN
+2026-01-01 00:03:07 | INFO     | [DAY_START] Processing 14JAN
+2026-01-01 00:03:07 | INFO     | [lf.day.start] Processing ATZ-DMM for 14JAN
+2026-01-01 00:03:08 | WARNING  | [lf.day.no_flights] No direct flights on 14JAN
+2026-01-01 00:03:08 | INFO     | [SUCCESS] Day 14JAN
+2026-01-01 00:03:08 | INFO     | [DAY_START] Processing 13JAN
+2026-01-01 00:03:08 | INFO     | [lf.day.start] Processing ATZ-DMM for 13JAN
+2026-01-01 00:03:09 | WARNING  | [lf.day.no_flights] No direct flights on 13JAN
+2026-01-01 00:03:10 | INFO     | [SUCCESS] Day 13JAN
+2026-01-01 00:03:10 | INFO     | [SUCCESS] LF Search Complete
+2026-01-01 00:03:12 | INFO     | [Worker_9234] Completed: ATZ-DMM - 6 results, 0 errors
+2026-01-01 00:03:12 | INFO     | [Worker_9234] Processing: ATZ-TUU
+2026-01-01 00:03:12 | INFO     |   Tier 0: Range 2, Chunk 3/5 (6 days)

@@ -1,0 +1,85 @@
+
+============================================================
+     LF WORKER - PORT 9225
+============================================================
+Worker: Worker_9225
+Status: READY
+Waiting for tasks...
+============================================================
+
+
+============================================================
+[Worker_9225] Processing: CAI-RUH
+  Tier 0: Range 1, Chunk 2/3
+  Dates: 4 days
+  Date Range: 2026-01-01 to 2025-12-29
+============================================================
+
+2025-12-25 10:34:41 | INFO     | ======================================================================
+2025-12-25 10:34:41 | INFO     | Load Factor Scraper Started - Route: CAI-RUH
+2025-12-25 10:34:41 | INFO     | Log file: D:\CODERED\OUTPUTS\logs\LF_CAI-RUH_20251225_103441.log
+2025-12-25 10:34:41 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-25 10:34:41 | INFO     | ======================================================================
+[LF] Processing dates (override): ['01JAN', '31DEC', '30DEC', '29DEC']
+[LF] Attaching to Chrome for Altea access
+[LF][[OK] SUCCESS] Connected to Chrome on 127.0.0.1:9225 (after 1 attempts)
+[LF][[OK] SUCCESS] Found Amadeus Altea window: Altéa Reservation Desktop
+[LF][[INFO] INFO] URL: https://tc212.resdesktop.altea.amadeus.com/app_ard/apf/init/login?SITE=ESMPESMP&LANGUAGE=GB&MARKETS=ARDW_PROD_WBP&ACTION=clpLogin
+[LF] Processing CAI-RUH for 01JAN
+[LF][ERROR] Amadeus command error detected: UNKNOWN TRANSACTION
+[LF][ERROR] Command: SN01JANCAIRUH/ASM
+[LF][RESYNC] Triggering immediate resync to last successful SN command
+============================================================
+[LF][RESYNC] Command 'SN01JANCAIRUH/ASM' failed: TECH_ERROR:UNKNOWN TRANSACTION
+[LF][RESYNC] Re-running entire day from SN command for CAI-RUH 01JAN
+[LF][RESYNC] Attempt 1/50 (waiting 1.0s before retry...)
+============================================================
+[LF][RESYNC] Sending IG to clear session state...
+[LF][RESYNC] Session cleared with IG
+[LF] Processing CAI-RUH for 01JAN
+[LF] 01JAN: found 1 direct flights
+[LF] SM461 01JAN: BKG=102, GRP=0, CAP=179, LF%=57.0%, Brd-Off=CAI-RUH, Classes: I:30, O:20, U:20, X:27, T:4, S:1
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM461 01JAN: LASTSOLD=2025-12-25 00:00:00, WEEKLY=38, TODAY=2, YDAY=7
+[LF] Processing CAI-RUH for 31DEC
+[LF] 31DEC: found 2 direct flights
+[LF] SM461 31DEC: BKG=65, GRP=0, CAP=179, LF%=36.3%, Brd-Off=CAI-RUH, Classes: I:20, O:10, U:15, X:20
+[LF] SM469 31DEC: BKG=66, GRP=0, CAP=179, LF%=36.9%, Brd-Off=CAI-RUH, Classes: I:20, O:18, U:1, X:19, T:2, W:3, S:3
+[LF] Getting WEEKLY/LASTSOLD data for 2 flights
+[LF] SM461 31DEC: LASTSOLD=2025-12-25 00:00:00, WEEKLY=31, TODAY=3, YDAY=8
+[LF] SM469 31DEC: LASTSOLD=2025-12-25 00:00:00, WEEKLY=23, TODAY=2, YDAY=5
+[LF] Processing CAI-RUH for 30DEC
+[LF] 30DEC: found 1 direct flights
+[LF] SM469 30DEC: BKG=80, GRP=0, CAP=179, LF%=44.7%, Brd-Off=CAI-RUH, Classes: I:25, O:15, U:10, X:19, T:10, S:1
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM469 30DEC: LASTSOLD=2025-12-25 00:00:00, WEEKLY=29, TODAY=2, YDAY=5
+[LF] Processing CAI-RUH for 29DEC
+[LF] 29DEC: found 1 direct flights
+[LF] SM469 29DEC: BKG=94, GRP=0, CAP=176, LF%=53.4%, Brd-Off=CAI-RUH, Classes: I:14, O:15, U:16, X:20, T:14, S:14, G:1
+[LF] Getting WEEKLY/LASTSOLD data for 1 flights
+[LF] SM469 29DEC: LASTSOLD=2025-12-24 00:00:00, WEEKLY=49, TODAY=0, YDAY=11
+[LF] Results summary:
+  2026-01-01: 1 flights
+  2025-12-31: 2 flights
+  2025-12-30: 1 flights
+  2025-12-29: 1 flights
+
+============================================================
+[Worker_9225] ✓ COMPLETED: CAI-RUH
+  Results: 4 dates
+  Errors: 0 dates
+  Total Processed: 1 groups
+============================================================
+
+[Worker_9225] Waiting for tasks...
+
+============================================================
+[Worker_9225] Shutdown signal received
+Exiting...
+============================================================
+
+============================================================
+[Worker_9225] FINISHED
+  Total Groups Processed: 1
+============================================================
+

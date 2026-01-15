@@ -1,0 +1,27 @@
+2025-12-29 07:26:46 | INFO     | ======================================================================
+2025-12-29 07:26:46 | INFO     | Load Factor Scraper Started - Route: CAI-RUH
+2025-12-29 07:26:46 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_291225_at_07.25\logs\LF_CAI-RUH_20251229_072646.log
+2025-12-29 07:26:46 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-29 07:26:46 | INFO     | ======================================================================
+2025-12-29 07:26:46 | INFO     | Starting LF search for route: CAI-RUH
+2025-12-29 07:26:46 | INFO     | [START] LF Search
+2025-12-29 07:26:48 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-29 07:26:48 | INFO     | [DAY_START] Processing 13JAN
+2025-12-29 07:26:48 | INFO     | [lf.day.start] Processing CAI-RUH for 13JAN
+2025-12-29 07:26:49 | INFO     | [lf.day.flights_found] Found 1 flights on 13JAN
+2025-12-29 07:26:51 | INFO     | [lf.flight.extracted] SM469 on 13JAN: BKG=63, LF=35.2%
+2025-12-29 07:26:55 | INFO     | [SUCCESS] Day 13JAN
+2025-12-29 07:26:55 | INFO     | [DAY_START] Processing 12JAN
+2025-12-29 07:26:55 | INFO     | [lf.day.start] Processing CAI-RUH for 12JAN
+2025-12-29 07:26:56 | INFO     | [lf.day.flights_found] Found 1 flights on 12JAN
+2025-12-29 07:26:58 | INFO     | [lf.flight.extracted] SM469 on 12JAN: BKG=67, LF=37.4%
+2025-12-29 07:27:03 | INFO     | [SUCCESS] Day 12JAN
+2025-12-29 07:27:03 | INFO     | [DAY_START] Processing 11JAN
+2025-12-29 07:27:03 | INFO     | [lf.day.start] Processing CAI-RUH for 11JAN
+2025-12-29 07:27:04 | INFO     | [lf.day.flights_found] Found 1 flights on 11JAN
+2025-12-29 07:27:06 | INFO     | [lf.flight.extracted] SM461 on 11JAN: BKG=57, LF=31.8%
+2025-12-29 07:27:10 | INFO     | [SUCCESS] Day 11JAN
+2025-12-29 07:27:10 | INFO     | [SUCCESS] LF Search Complete
+2025-12-29 07:27:12 | INFO     | [Worker_9232] Completed: CAI-RUH - 3 results, 0 errors
+2025-12-29 07:27:12 | INFO     | [Worker_9232] Processing: JED-ATZ
+2025-12-29 07:27:12 | INFO     |   Tier 0: Range 1, Chunk 1/3 (5 days)

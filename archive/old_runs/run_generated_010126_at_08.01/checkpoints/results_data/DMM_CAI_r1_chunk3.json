@@ -1,0 +1,197 @@
+{
+  "task_id": "DMM-CAI_r1_chunk3",
+  "saved_at": "2026-01-01T08:28:46.979043",
+  "lf_results": {
+    "2026-02-07": [
+      {
+        "Date": "Saturday, February 07, 2026",
+        "Flight": "SM434",
+        "DEP": "22:10",
+        "SOLD": 10,
+        "FULL CAPACITY": 168,
+        "LF%": 0.0595,
+        "LowestAvail": "G9",
+        "LASTSOLD": "2025-12-14 00:00:00",
+        "WEEKLY PROGRESS": 0,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 0,
+          "U": 0,
+          "X": 0,
+          "T": 0,
+          "W": 0,
+          "S": 0,
+          "G": 9,
+          "L": 0,
+          "V": 0,
+          "K": 1,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "DMM-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": null
+      }
+    ],
+    "2026-02-06": [
+      {
+        "Date": "Friday, February 06, 2026",
+        "Flight": "SM434",
+        "DEP": "13:55",
+        "SOLD": 25,
+        "FULL CAPACITY": 175,
+        "LF%": 0.1429,
+        "LowestAvail": "G1",
+        "LASTSOLD": "2025-12-29 00:00:00",
+        "WEEKLY PROGRESS": 1,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 0,
+          "U": 6,
+          "X": 3,
+          "T": 1,
+          "W": 0,
+          "S": 0,
+          "G": 10,
+          "L": 5,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "DMM-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM434",
+          "sm_route": "DMM-CAI",
+          "sm_dep": "1355",
+          "sm_arr": "1610",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "SM0050",
+              "outbound_route": "CAI-LXR",
+              "outbound_dep": "2100",
+              "passengers": [
+                {
+                  "iata": "CAIEG28WT"
+                },
+                {
+                  "iata": "CAIEG28WT"
+                },
+                {
+                  "iata": "CAIEG28WT"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "2026-02-05": [
+      {
+        "Date": "Thursday, February 05, 2026",
+        "Flight": "SM434",
+        "DEP": "22:10",
+        "SOLD": 5,
+        "FULL CAPACITY": 175,
+        "LF%": 0.0286,
+        "LowestAvail": "G9",
+        "LASTSOLD": "2025-12-08 00:00:00",
+        "WEEKLY PROGRESS": 0,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 2,
+          "U": 2,
+          "X": 0,
+          "T": 0,
+          "W": 0,
+          "S": 0,
+          "G": 1,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "DMM-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": null
+      }
+    ],
+    "2026-02-04": [],
+    "2026-02-03": [
+      {
+        "Date": "Tuesday, February 03, 2026",
+        "Flight": "SM434",
+        "DEP": "06:30",
+        "SOLD": 11,
+        "FULL CAPACITY": 175,
+        "LF%": 0.0629,
+        "LowestAvail": "G9",
+        "LASTSOLD": "2025-12-14 00:00:00",
+        "WEEKLY PROGRESS": 0,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 0,
+          "U": 0,
+          "X": 0,
+          "T": 0,
+          "W": 0,
+          "S": 0,
+          "G": 11,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "DMM-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": null
+      }
+    ],
+    "2026-02-02": [],
+    "2026-02-01": []
+  },
+  "lf_errors": {}
+}

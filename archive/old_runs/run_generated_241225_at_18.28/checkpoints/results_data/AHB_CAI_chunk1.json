@@ -1,0 +1,189 @@
+{
+  "task_id": "AHB-CAI_chunk1",
+  "saved_at": "2025-12-24T18:33:02.276413",
+  "lf_results": {
+    "2026-01-04": [
+      {
+        "Date": "Sunday, January 04, 2026",
+        "Flight": "SM444",
+        "DEP": "00:05",
+        "SOLD": 50,
+        "FULL CAPACITY": 165,
+        "LF%": 0.303,
+        "LowestAvail": "X3",
+        "LASTSOLD": "2025-12-24 00:00:00",
+        "WEEKLY PROGRESS": 13,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 3,
+          "U": 7,
+          "X": 14,
+          "T": 6,
+          "W": 17,
+          "S": 3,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "AHB-CAI",
+        "SOLD TODAY": 3,
+        "SOLD YDAY": 1,
+        "CONNECTING_PASSENGERS": null
+      }
+    ],
+    "2026-01-03": [],
+    "2026-01-02": [
+      {
+        "Date": "Friday, January 02, 2026",
+        "Flight": "SM444",
+        "DEP": "00:05",
+        "SOLD": 44,
+        "FULL CAPACITY": 165,
+        "LF%": 0.2667,
+        "LowestAvail": "X4",
+        "LASTSOLD": "2025-12-23 00:00:00",
+        "WEEKLY PROGRESS": 10,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 4,
+          "U": 6,
+          "X": 7,
+          "T": 14,
+          "W": 9,
+          "S": 4,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "AHB-CAI",
+        "SOLD TODAY": 0,
+        "SOLD YDAY": 1,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM444",
+          "sm_route": "AHB-CAI",
+          "sm_dep": "0005",
+          "sm_arr": "0205",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "SM0129",
+              "outbound_route": "CAI-ASW",
+              "outbound_dep": "0500",
+              "passengers": [
+                {
+                  "iata": "RUHAA28WH"
+                },
+                {
+                  "iata": "RUHAA28WH"
+                },
+                {
+                  "iata": "RUHAA28WH"
+                }
+              ]
+            },
+            {
+              "outbound_flight": "SM0137",
+              "outbound_route": "CAI-ASW",
+              "outbound_dep": "0600",
+              "passengers": [
+                {
+                  "iata": "JEDSM08AA"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "2026-01-01": [
+      {
+        "Date": "Thursday, January 01, 2026",
+        "Flight": "SM448",
+        "DEP": "01:05",
+        "SOLD": 52,
+        "FULL CAPACITY": 168,
+        "LF%": 0.3095,
+        "LowestAvail": "X2",
+        "LASTSOLD": "2025-12-24 00:00:00",
+        "WEEKLY PROGRESS": 7,
+        "RBD": {
+          "N": 0,
+          "P": 0,
+          "A": 0,
+          "E": 0,
+          "I": 0,
+          "O": 3,
+          "U": 7,
+          "X": 8,
+          "T": 8,
+          "W": 20,
+          "S": 6,
+          "G": 0,
+          "L": 0,
+          "V": 0,
+          "K": 0,
+          "Q": 0,
+          "H": 0,
+          "M": 0,
+          "B": 0,
+          "Y": 0
+        },
+        "GRP": 0,
+        "EQP": "320",
+        "Brd-Off": "AHB-CAI",
+        "SOLD TODAY": 3,
+        "SOLD YDAY": 0,
+        "CONNECTING_PASSENGERS": {
+          "sm_flight": "SM448",
+          "sm_route": "AHB-CAI",
+          "sm_dep": "0105",
+          "sm_arr": "0305",
+          "connecting_passengers": [
+            {
+              "outbound_flight": "SM0050",
+              "outbound_route": "CAI-LXR",
+              "outbound_dep": "0600",
+              "passengers": [
+                {
+                  "iata": "JEDSM07TP"
+                },
+                {
+                  "iata": "JEDSM07TP"
+                },
+                {
+                  "iata": "JEDSM07TP"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "2025-12-31": [],
+    "2025-12-30": []
+  },
+  "lf_errors": {}
+}

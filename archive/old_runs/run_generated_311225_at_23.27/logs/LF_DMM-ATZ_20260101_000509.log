@@ -1,0 +1,38 @@
+2026-01-01 00:05:09 | INFO     | ======================================================================
+2026-01-01 00:05:09 | INFO     | Load Factor Scraper Started - Route: DMM-ATZ
+2026-01-01 00:05:09 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_23.27\logs\LF_DMM-ATZ_20260101_000509.log
+2026-01-01 00:05:09 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-01 00:05:09 | INFO     | ======================================================================
+2026-01-01 00:05:09 | INFO     | Starting LF search for route: DMM-ATZ
+2026-01-01 00:05:09 | INFO     | [START] LF Search
+2026-01-01 00:05:10 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-01 00:05:10 | INFO     | [DAY_START] Processing 17JAN
+2026-01-01 00:05:10 | INFO     | [lf.day.start] Processing DMM-ATZ for 17JAN
+2026-01-01 00:05:12 | WARNING  | [lf.day.no_flights] No direct flights on 17JAN
+2026-01-01 00:05:12 | INFO     | [SUCCESS] Day 17JAN
+2026-01-01 00:05:12 | INFO     | [DAY_START] Processing 16JAN
+2026-01-01 00:05:12 | INFO     | [lf.day.start] Processing DMM-ATZ for 16JAN
+2026-01-01 00:05:13 | INFO     | [lf.day.flights_found] Found 1 flights on 16JAN
+2026-01-01 00:05:15 | INFO     | [lf.flight.extracted] SM438 on 16JAN: BKG=69, LF=39.4%
+2026-01-01 00:05:21 | INFO     | [SUCCESS] Day 16JAN
+2026-01-01 00:05:21 | INFO     | [DAY_START] Processing 15JAN
+2026-01-01 00:05:21 | INFO     | [lf.day.start] Processing DMM-ATZ for 15JAN
+2026-01-01 00:05:22 | WARNING  | [lf.day.no_flights] No direct flights on 15JAN
+2026-01-01 00:05:22 | INFO     | [SUCCESS] Day 15JAN
+2026-01-01 00:05:22 | INFO     | [DAY_START] Processing 14JAN
+2026-01-01 00:05:22 | INFO     | [lf.day.start] Processing DMM-ATZ for 14JAN
+2026-01-01 00:05:23 | WARNING  | [lf.day.no_flights] No direct flights on 14JAN
+2026-01-01 00:05:24 | INFO     | [SUCCESS] Day 14JAN
+2026-01-01 00:05:24 | INFO     | [DAY_START] Processing 13JAN
+2026-01-01 00:05:24 | INFO     | [lf.day.start] Processing DMM-ATZ for 13JAN
+2026-01-01 00:05:25 | WARNING  | [lf.day.no_flights] No direct flights on 13JAN
+2026-01-01 00:05:25 | INFO     | [SUCCESS] Day 13JAN
+2026-01-01 00:05:25 | INFO     | [DAY_START] Processing 12JAN
+2026-01-01 00:05:25 | INFO     | [lf.day.start] Processing DMM-ATZ for 12JAN
+2026-01-01 00:05:26 | INFO     | [lf.day.flights_found] Found 1 flights on 12JAN
+2026-01-01 00:05:28 | INFO     | [lf.flight.extracted] SM438 on 12JAN: BKG=48, LF=27.4%
+2026-01-01 00:05:32 | INFO     | [SUCCESS] Day 12JAN
+2026-01-01 00:05:32 | INFO     | [SUCCESS] LF Search Complete
+2026-01-01 00:05:34 | INFO     | [Worker_9227] Completed: DMM-ATZ - 6 results, 0 errors
+2026-01-01 00:05:34 | INFO     | [Worker_9227] Processing: AJF-CAI
+2026-01-01 00:05:34 | INFO     |   Tier 0: Range 1, Chunk 3/5 (6 days)

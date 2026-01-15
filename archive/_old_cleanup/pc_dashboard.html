@@ -1,0 +1,2531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Air Cairo - Market Insights Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', 'Consolas', monospace;
+            background: linear-gradient(135deg, #462B73 0%, #2d1a4a 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 15px;
+        }
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 25px;
+            background: rgba(70, 43, 115, 0.6);
+            border-radius: 15px;
+            border: 1px solid rgba(247, 148, 29, 0.3);
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .header h1 {
+            font-size: 24px;
+            color: #F7941D;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .logo-img {
+            height: 50px;
+            width: auto;
+        }
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .header-info {
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: right;
+        }
+        .logo-text {
+            font-size: 42px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+        .logo-text .orange {
+            color: #F7941D;
+        }
+        .subtitle {
+            text-align: center;
+            margin-top: 5px;
+        }
+        .subtitle h2 {
+            color: #F7941D;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .subtitle p {
+            color: #aaa;
+            font-size: 12px;
+        }
+        .live-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(74, 222, 128, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            border: 1px solid rgba(74, 222, 128, 0.3);
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-left: 15px;
+        }
+        .status-badge.running { background: rgba(74, 222, 128, 0.2); color: #4ade80; border: 1px solid #4ade80; }
+        .status-badge.idle { background: rgba(251, 191, 36, 0.2); color: #fbbf24; border: 1px solid #fbbf24; }
+        .status-badge.completed { background: rgba(96, 165, 250, 0.2); color: #60a5fa; border: 1px solid #60a5fa; }
+        .status-badge.no_data { background: rgba(156, 163, 175, 0.2); color: #9ca3af; border: 1px solid #9ca3af; }
+        .view-report-btn {
+            display: inline-block !important;  /* ALWAYS visible */
+            padding: 10px 25px;
+            background: linear-gradient(135deg, #F7941D 0%, #ff6b00 100%);
+            color: #fff !important;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-left: 20px;
+            animation: pulse-glow 2s infinite;
+            box-shadow: 0 4px 15px rgba(247, 148, 29, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .view-report-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(247, 148, 29, 0.6);
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 4px 15px rgba(247, 148, 29, 0.4); }
+            50% { box-shadow: 0 4px 25px rgba(247, 148, 29, 0.8); }
+        }
+        .live-dot {
+            width: 10px; height: 10px;
+            background: #4ade80;
+            border-radius: 50%;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+        .timestamp { color: #aaa; font-size: 12px; margin-top: 5px; }
+        .run-info { color: #F7941D; font-size: 11px; margin-top: 3px; }
+
+        /* Progress Section */
+        .progress-section {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .progress-card {
+            background: rgba(70, 43, 115, 0.5);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgba(247, 148, 29, 0.2);
+        }
+        .progress-card h3 {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #aaa;
+            margin-bottom: 10px;
+        }
+        .progress-value {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .progress-value.lf { color: #4ade80; }
+        .progress-value.oal { color: #60a5fa; }
+        .progress-value.excel { color: #F7941D; }
+        .progress-value.overall { color: #a78bfa; }
+        .progress-bar {
+            height: 8px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+        .progress-fill.lf { background: linear-gradient(90deg, #22c55e, #4ade80); }
+        .progress-fill.oal { background: linear-gradient(90deg, #3b82f6, #60a5fa); }
+        .progress-fill.excel { background: linear-gradient(90deg, #d97706, #F7941D); }
+        .progress-fill.overall { background: linear-gradient(90deg, #7c3aed, #a78bfa); }
+
+        /* Stats Row */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .stat-card {
+            background: rgba(70, 43, 115, 0.4);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .stat-label { font-size: 11px; color: #888; text-transform: uppercase; }
+        .stat-value { font-size: 24px; font-weight: bold; margin-top: 5px; }
+        .stat-value.success { color: #4ade80; }
+        .stat-value.warning { color: #F7941D; }
+        .stat-value.error { color: #f87171; }
+
+        /* Main Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .card {
+            background: rgba(70, 43, 115, 0.5);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(247, 148, 29, 0.2);
+        }
+        .card h2 {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #F7941D;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(247, 148, 29, 0.2);
+        }
+
+        /* Workers Grid */
+        .workers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .worker-card {
+            background: rgba(0,0,0,0.3);
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+        .worker-card.working {
+            border-color: #F7941D;
+            background: rgba(247, 148, 29, 0.15);
+        }
+        .worker-card.idle {
+            border-color: #fbbf24;
+            background: rgba(251, 191, 36, 0.1);
+        }
+        .worker-card.inactive {
+            border-color: #666;
+            opacity: 0.5;
+        }
+        .worker-port {
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .worker-route {
+            font-size: 11px;
+            color: #F7941D;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+        .worker-status {
+            font-size: 10px;
+            color: #888;
+            margin-top: 3px;
+            text-transform: uppercase;
+        }
+
+        /* Route Performance */
+        .route-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .route-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 12px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 6px;
+            margin-bottom: 6px;
+        }
+        .route-name { font-weight: bold; color: #60a5fa; }
+        .route-stats { font-size: 12px; color: #888; }
+        .route-stats span { margin-left: 10px; }
+        .route-badge {
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+        .route-badge.done { background: rgba(74, 222, 128, 0.2); color: #4ade80; }
+        .route-badge.pending { background: rgba(251, 191, 36, 0.2); color: #fbbf24; }
+
+        /* Config Section */
+        .config-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .config-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+        .config-label { color: #888; }
+        .config-value { color: #fff; font-weight: bold; }
+
+        /* Excel Files */
+        .excel-list {
+            max-height: 150px;
+            overflow-y: auto;
+            font-size: 11px;
+        }
+        .excel-item {
+            padding: 5px 8px;
+            background: rgba(247, 148, 29, 0.1);
+            border-radius: 4px;
+            margin-bottom: 4px;
+            color: #F7941D;
+        }
+
+        /* Running Tasks */
+        .running-tasks {
+            margin-top: 20px;
+        }
+        .running-task {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+            background: rgba(247, 148, 29, 0.1);
+            border: 1px solid rgba(247, 148, 29, 0.3);
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        .running-task-route {
+            font-weight: bold;
+            color: #F7941D;
+            font-size: 16px;
+        }
+        .running-task-info {
+            font-size: 11px;
+            color: #aaa;
+        }
+        .running-task-worker {
+            background: rgba(74, 222, 128, 0.2);
+            color: #4ade80;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 11px;
+        }
+
+        /* Pending Routes Section */
+        .pending-section {
+            margin-top: 20px;
+        }
+        .pending-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .pending-card {
+            background: rgba(0,0,0,0.3);
+            border-radius: 8px;
+            padding: 12px;
+            border-left: 3px solid #f87171;
+        }
+        .pending-card.completed {
+            border-left-color: #4ade80;
+            opacity: 0.7;
+        }
+        .pending-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .pending-route {
+            font-weight: bold;
+            color: #60a5fa;
+            font-size: 14px;
+        }
+        .pending-count {
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            background: rgba(248, 113, 113, 0.2);
+            color: #fca5a5;
+        }
+        .pending-count.done {
+            background: rgba(74, 222, 128, 0.2);
+            color: #4ade80;
+        }
+        .pending-dates {
+            font-size: 10px;
+            color: #888;
+            max-height: 100px;
+            overflow-y: auto;
+        }
+        .pending-progress {
+            height: 4px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 2px;
+            margin-top: 8px;
+            overflow: hidden;
+        }
+        .pending-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4ade80, #22c55e);
+            transition: width 0.5s;
+        }
+
+        /* ===== NEW LIVE SECTIONS ===== */
+
+        /* Live Log Stream */
+        .log-stream {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 8px;
+            padding: 10px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 11px;
+            max-height: 250px;
+            overflow-y: auto;
+            line-height: 1.5;
+        }
+        .log-line {
+            padding: 2px 5px;
+            border-radius: 3px;
+            margin-bottom: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .log-line.error { background: rgba(248, 113, 113, 0.2); color: #fca5a5; }
+        .log-line.warning { background: rgba(251, 191, 36, 0.2); color: #fbbf24; }
+        .log-line.success { background: rgba(74, 222, 128, 0.15); color: #86efac; }
+        .log-line.info { color: #94a3b8; }
+        .log-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .log-file-badge {
+            font-size: 10px;
+            background: rgba(96, 165, 250, 0.2);
+            color: #93c5fd;
+            padding: 3px 8px;
+            border-radius: 10px;
+        }
+
+        /* OAL Details Card */
+        .oal-details-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        .oal-detail-item {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+        }
+        .oal-detail-label {
+            font-size: 10px;
+            color: #888;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .oal-detail-value {
+            font-size: 20px;
+            font-weight: bold;
+            color: #60a5fa;
+        }
+        .oal-detail-value.pass { color: #a78bfa; }
+        .oal-detail-value.eta { color: #4ade80; }
+        .oal-pass-progress {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .pass-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        .pass-dot.completed { background: #4ade80; border-color: #4ade80; }
+        .pass-dot.current { background: #60a5fa; border-color: #60a5fa; animation: pulse 1s infinite; }
+        @keyframes pulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.2);} }
+
+        /* Speed & Metrics Card */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .metric-item {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+        .metric-icon {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        .metric-value {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .metric-value.speed { color: #4ade80; }
+        .metric-value.errors { color: #f87171; }
+        .metric-value.eta { color: #60a5fa; }
+        .metric-label {
+            font-size: 10px;
+            color: #888;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+        .metric-sub {
+            font-size: 11px;
+            color: #666;
+            margin-top: 3px;
+        }
+
+        /* ETA Section in Progress Cards */
+        .eta-badge {
+            font-size: 10px;
+            background: rgba(74, 222, 128, 0.15);
+            color: #86efac;
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-left: 10px;
+        }
+
+        /* ===== FUTURISTIC AI CHART VISUALIZATION ===== */
+
+        /* Main AI Scene Container */
+        #ai-scene {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #0a1628 0%, #162a4a 50%, #0d1f3c 100%);
+        }
+
+        /* Left Video - 60% width, fade on right edge */
+        #bg-video-left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            z-index: 0;
+            opacity: 0.95;
+            mask-image: linear-gradient(to right, black 0%, black 70%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to right, black 0%, black 70%, transparent 100%);
+            will-change: transform;
+            transform: translateZ(0);
+        }
+
+        /* Right Video - 65% width, fade on left edge only (keep right edge solid) */
+        #bg-video-right {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 65%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center right;
+            z-index: 0;
+            opacity: 0.95;
+            mask-image: linear-gradient(to right, transparent 0%, black 35%, black 100%);
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 35%, black 100%);
+            will-change: transform;
+            transform: translateZ(0);
+        }
+
+        /* Center Blend - very subtle */
+        #video-blend {
+            position: absolute;
+            top: 0;
+            left: 40%;
+            width: 20%;
+            height: 100%;
+            background: linear-gradient(90deg,
+                transparent 0%,
+                rgba(10, 22, 40, 0.1) 50%,
+                transparent 100%
+            );
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Blur box over AIR CAIRO text - TOP RIGHT where it actually appears */
+        #aircairo-cover {
+            position: absolute;
+            top: -2px;
+            right: 24%;
+            width: 165px;
+            height: 50px;
+            z-index: 8;
+            pointer-events: none;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            background: linear-gradient(135deg,
+                rgba(20, 45, 75, 0.4) 0%,
+                rgba(15, 35, 60, 0.35) 50%,
+                rgba(25, 50, 80, 0.4) 100%
+            );
+            border-radius: 4px;
+            box-shadow: 0 0 20px rgba(15, 35, 60, 0.3);
+        }
+
+        /* MARKET INSIGHTS - small, NO background, NO border - on top of AIR CAIRO */
+        #title-overlay {
+            position: absolute;
+            top: 10px;
+            right: 25%;
+            z-index: 9;
+            display: flex;
+            gap: 2px;
+            pointer-events: none;
+            background: none !important;
+            border: none !important;
+        }
+
+        .title-letter {
+            font-size: 9px;
+            font-weight: 500;
+            color: rgba(180, 200, 220, 0.7);
+            display: inline-block;
+            animation: letterSpin 3s ease-in-out infinite;
+            animation-delay: var(--delay);
+        }
+
+        .title-space {
+            width: 4px;
+        }
+
+        @keyframes letterSpin {
+            0%, 100% {
+                transform: rotateY(0deg) translateY(0) scale(1);
+                font-weight: 500;
+                opacity: 0.7;
+            }
+            25% {
+                transform: rotateY(90deg) translateY(-1px) scale(1.05);
+                font-weight: 600;
+                opacity: 0.85;
+            }
+            50% {
+                transform: rotateY(180deg) translateY(-2px) scale(1.1);
+                font-weight: 700;
+                opacity: 1;
+            }
+            75% {
+                transform: rotateY(270deg) translateY(-1px) scale(1.05);
+                font-weight: 600;
+                opacity: 0.85;
+            }
+        }
+
+        /* Floating Data Stream - LEFT → RIGHT */
+        #data-stream {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 15;
+        }
+
+        /* Floating Data - Multiple Random Styles */
+        #data-stream .data-item {
+            position: absolute;
+            font-family: 'Consolas', 'Courier New', monospace;
+            white-space: nowrap;
+            left: -400px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        /* Style 1: Cyan Compact */
+        .data-item.s1 {
+            font-size: 11px;
+            color: rgba(100, 220, 255, 0.95);
+            text-shadow: 0 0 10px rgba(100, 220, 255, 0.6);
+            animation: drift1 linear forwards;
+        }
+
+        /* Style 2: Green Price */
+        .data-item.s2 {
+            font-size: 13px;
+            color: #4ade80;
+            font-weight: bold;
+            text-shadow: 0 0 15px rgba(74, 222, 128, 0.7);
+            animation: drift2 linear forwards;
+        }
+
+        /* Style 3: Orange Airline */
+        .data-item.s3 {
+            font-size: 12px;
+            color: #f7941d;
+            font-weight: bold;
+            text-shadow: 0 0 12px rgba(247, 148, 29, 0.6);
+            animation: drift3 linear forwards;
+        }
+
+        /* Style 4: Cyan Light (was White - too prominent) */
+        .data-item.s4 {
+            font-size: 10px;
+            color: rgba(100, 200, 230, 0.65);
+            letter-spacing: 1px;
+            text-shadow: 0 0 8px rgba(100, 200, 230, 0.4);
+            animation: drift4 linear forwards;
+        }
+
+        /* Style 5: Purple Glow */
+        .data-item.s5 {
+            font-size: 11px;
+            color: rgba(180, 130, 255, 0.9);
+            text-shadow: 0 0 12px rgba(180, 130, 255, 0.5);
+            animation: drift5 linear forwards;
+        }
+
+        /* Animation 1: Smooth */
+        @keyframes drift1 {
+            0% { left: -400px; opacity: 0; }
+            5% { opacity: 1; }
+            95% { opacity: 1; }
+            100% { left: 105%; opacity: 0; }
+        }
+
+        /* Animation 2: Wave */
+        @keyframes drift2 {
+            0% { left: -350px; opacity: 0; transform: translateY(0); }
+            5% { opacity: 1; }
+            30% { transform: translateY(-12px); }
+            60% { transform: translateY(12px); }
+            95% { opacity: 1; }
+            100% { left: 105%; opacity: 0; transform: translateY(-5px); }
+        }
+
+        /* Animation 3: Bounce Start */
+        @keyframes drift3 {
+            0% { left: -350px; opacity: 0; transform: scale(0.8); }
+            5% { opacity: 1; transform: scale(1.15); }
+            10% { transform: scale(1); }
+            95% { opacity: 1; }
+            100% { left: 105%; opacity: 0; }
+        }
+
+        /* Animation 4: Drift Up/Down */
+        @keyframes drift4 {
+            0% { left: -350px; opacity: 0; transform: translateY(20px); }
+            10% { opacity: 0.8; transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            90% { opacity: 0.8; }
+            100% { left: 105%; opacity: 0; transform: translateY(10px); }
+        }
+
+        /* Animation 5: Pulse */
+        @keyframes drift5 {
+            0% { left: -350px; opacity: 0; }
+            5% { opacity: 1; }
+            25% { opacity: 0.6; }
+            50% { opacity: 1; }
+            75% { opacity: 0.6; }
+            95% { opacity: 1; }
+            100% { left: 105%; opacity: 0; }
+        }
+
+        /* Chart Canvas Container */
+        #chart-container {
+            position: absolute;
+            top: 60px;
+            left: 50px;
+            right: 20px;
+            bottom: 50px;
+            z-index: 10;
+        }
+
+        /* Y-Axis Label */
+        #y-axis-label {
+            position: absolute;
+            left: 8px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-90deg);
+            font-size: 11px;
+            color: rgba(100, 220, 255, 0.7);
+            letter-spacing: 2px;
+            white-space: nowrap;
+            z-index: 15;
+        }
+
+        /* X-Axis Label */
+        #x-axis-label {
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 11px;
+            color: rgba(100, 220, 255, 0.7);
+            letter-spacing: 2px;
+            z-index: 15;
+        }
+
+        /* Data Info Boxes Container */
+        #data-boxes-layer {
+            position: absolute;
+            inset: 0;
+            z-index: 25;
+            pointer-events: none;
+        }
+
+        /* Individual Data Box - SMALLER & MORE TRANSPARENT */
+        .chart-data-box {
+            position: absolute;
+            background: rgba(0, 15, 40, 0.75);
+            border: 1px solid rgba(100, 220, 255, 0.4);
+            border-radius: 6px;
+            padding: 8px 10px;
+            min-width: 140px;
+            max-width: 160px;
+            font-size: 10px;
+            box-shadow: 0 0 12px rgba(100, 220, 255, 0.15);
+            backdrop-filter: blur(8px);
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+            pointer-events: auto;
+            animation: slideInFromLeft 8s linear forwards;
+        }
+        @keyframes slideInFromLeft {
+            0% { transform: translateX(-50px); opacity: 0; }
+            10% { transform: translateX(0); opacity: 0.9; }
+            80% { transform: translateX(0); opacity: 0.9; }
+            100% { transform: translateX(50px); opacity: 0; }
+        }
+        .chart-data-box.visible {
+            opacity: 0.9;
+            transform: translateX(0);
+        }
+        .chart-data-box .box-header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(100, 220, 255, 0.3);
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+        }
+        .chart-data-box .box-flight {
+            color: #6df3ff;
+            font-weight: 700;
+            font-size: 11px;
+            text-shadow: 0 0 6px rgba(100, 220, 255, 0.4);
+        }
+        .chart-data-box .box-route {
+            color: rgba(100, 220, 255, 0.8);
+            font-size: 10px;
+            font-weight: 600;
+        }
+        .chart-data-box .box-date {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 9px;
+            margin-bottom: 5px;
+        }
+        .chart-data-box .box-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3px;
+        }
+        .chart-data-box .metric-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1px 0;
+        }
+        .chart-data-box .metric-label {
+            color: rgba(157, 233, 255, 0.8);
+            font-size: 9px;
+            font-weight: 500;
+        }
+        .chart-data-box .metric-value {
+            color: #fff;
+            font-weight: 600;
+            font-family: 'Consolas', monospace;
+            font-size: 10px;
+        }
+        .chart-data-box .metric-value.cyan {
+            color: #6df3ff;
+            text-shadow: 0 0 4px rgba(100, 220, 255, 0.3);
+        }
+        .chart-data-box .metric-value.green {
+            color: #4ade80;
+            text-shadow: 0 0 4px rgba(74, 222, 128, 0.3);
+        }
+        .chart-data-box .metric-value.yellow {
+            color: #fbbf24;
+            text-shadow: 0 0 4px rgba(251, 191, 36, 0.3);
+        }
+
+        /* Connection Line from box to chart point */
+        .box-connector {
+            position: absolute;
+            width: 2px;
+            background: linear-gradient(to bottom, rgba(100, 220, 255, 0.6), rgba(100, 220, 255, 0.1));
+            z-index: 24;
+        }
+
+        /* Glowing scan line */
+        #scan-line {
+            position: absolute;
+            top: 60px;
+            bottom: 50px;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, rgba(100, 220, 255, 0.8), transparent);
+            box-shadow: 0 0 10px rgba(100, 220, 255, 0.5);
+            z-index: 30;
+            opacity: 0;
+        }
+        #scan-line.animating {
+            animation: scanMove 9s linear forwards;
+            opacity: 1;
+        }
+        @keyframes scanMove {
+            from { left: 50px; }
+            to { left: calc(100% - 20px); }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); border-radius: 3px; }
+        ::-webkit-scrollbar-thumb { background: #F7941D; border-radius: 3px; }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .progress-section { grid-template-columns: repeat(2, 1fr); }
+            .stats-row { grid-template-columns: repeat(3, 1fr); }
+            .main-grid { grid-template-columns: 1fr; }
+            .metrics-grid { grid-template-columns: repeat(3, 1fr); }
+            .oal-details-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .header {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+                padding: 15px;
+            }
+            .header-info {
+                position: static;
+                transform: none;
+                text-align: center;
+                width: 100%;
+            }
+            .logo-img { height: 40px; }
+            .logo-text { font-size: 28px; }
+            .subtitle h2 { font-size: 14px; }
+            .subtitle p { font-size: 10px; }
+            .progress-section { grid-template-columns: 1fr 1fr; gap: 10px; }
+            .progress-card { padding: 12px; }
+            .progress-card h3 { font-size: 10px; margin-bottom: 5px; }
+            .progress-value { font-size: 24px; margin-bottom: 8px; }
+            .stats-row {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 8px;
+            }
+            .stat-card { padding: 10px; }
+            .stat-label { font-size: 9px; }
+            .stat-value { font-size: 18px; }
+            .card { padding: 15px; }
+            .card h2 { font-size: 12px; margin-bottom: 10px; }
+            .workers-grid { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+            .worker-card { padding: 8px; }
+            .worker-port { font-size: 12px; }
+            .worker-route { font-size: 9px; }
+            .worker-status { font-size: 8px; }
+            .config-grid { grid-template-columns: 1fr; gap: 6px; }
+            .config-item { padding: 6px 8px; font-size: 11px; }
+            .running-task { padding: 8px 10px; flex-direction: column; gap: 8px; align-items: flex-start; }
+            .running-task-route { font-size: 14px; }
+            .running-task-info { font-size: 10px; }
+            .pending-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .pending-card { padding: 10px; }
+            .pending-route { font-size: 12px; }
+            .pending-count { font-size: 9px; padding: 2px 6px; }
+            .pending-dates { font-size: 9px; }
+            .status-badge { font-size: 11px; padding: 4px 10px; margin-left: 0; margin-bottom: 5px; }
+            .live-indicator { font-size: 10px; padding: 4px 10px; }
+            .timestamp { font-size: 10px; }
+            .run-info { font-size: 9px; }
+            /* NEW sections mobile */
+            .metrics-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+            .metric-item { padding: 10px 5px; }
+            .metric-value { font-size: 18px; }
+            .metric-label { font-size: 8px; }
+            .metric-sub { font-size: 9px; }
+            .oal-details-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+            .oal-detail-item { padding: 10px; }
+            .oal-detail-value { font-size: 16px; }
+            .oal-detail-label { font-size: 9px; }
+            .log-stream { max-height: 180px; font-size: 10px; }
+            .log-line { padding: 2px 4px; }
+            .log-header { font-size: 10px; }
+            .log-file-badge { font-size: 9px; padding: 2px 6px; }
+            .pass-dot { width: 10px; height: 10px; }
+        }
+        @media (max-width: 480px) {
+            body { padding: 8px; }
+            .header { padding: 12px; margin-bottom: 12px; }
+            .logo-img { height: 35px; }
+            .logo-text { font-size: 22px; }
+            .subtitle h2 { font-size: 12px; }
+            .progress-section { grid-template-columns: 1fr 1fr; gap: 8px; }
+            .progress-card { padding: 10px; border-radius: 8px; }
+            .progress-card h3 { font-size: 9px; }
+            .progress-value { font-size: 20px; }
+            .progress-bar { height: 6px; }
+            .stats-row {
+                grid-template-columns: repeat(5, 1fr);
+                gap: 5px;
+            }
+            .stat-card { padding: 8px 4px; border-radius: 6px; }
+            .stat-label { font-size: 7px; }
+            .stat-value { font-size: 14px; }
+            .workers-grid { grid-template-columns: repeat(3, 1fr); gap: 4px; }
+            .worker-card { padding: 6px; border-radius: 6px; border-width: 1px; }
+            .worker-port { font-size: 11px; }
+            .worker-route { font-size: 8px; margin-top: 3px; }
+            .worker-status { font-size: 7px; margin-top: 2px; }
+            .card { padding: 12px; margin-bottom: 10px; }
+            .card h2 { font-size: 11px; margin-bottom: 8px; padding-bottom: 8px; }
+            .running-tasks, .pending-section { margin-top: 10px; }
+            .running-task { border-radius: 6px; margin-bottom: 6px; }
+            .pending-grid { grid-template-columns: 1fr 1fr; gap: 8px; max-height: 300px; }
+            .pending-card { padding: 8px; border-radius: 6px; }
+            .pending-route { font-size: 11px; }
+            .pending-header { margin-bottom: 5px; }
+            .pending-progress { height: 3px; margin-top: 6px; }
+            .main-grid { gap: 10px; }
+            .excel-list { max-height: 100px; }
+            .excel-item { padding: 4px 6px; font-size: 10px; }
+            .route-list { max-height: 200px; }
+            /* NEW sections - small phones */
+            .metrics-grid { grid-template-columns: repeat(3, 1fr); gap: 5px; }
+            .metric-item { padding: 8px 4px; border-radius: 6px; }
+            .metric-value { font-size: 16px; }
+            .metric-label { font-size: 7px; }
+            .metric-sub { font-size: 8px; }
+            .oal-details-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+            .oal-detail-item { padding: 8px; border-radius: 6px; }
+            .oal-detail-value { font-size: 14px; }
+            .oal-detail-label { font-size: 8px; }
+            .log-stream { max-height: 150px; font-size: 9px; padding: 8px; }
+            .log-line { font-size: 9px; }
+            .log-header { margin-bottom: 6px; }
+            .pass-dot { width: 8px; height: 8px; }
+            .oal-pass-progress { gap: 5px; margin-top: 8px; }
+        }
+        @media (max-width: 360px) {
+            .progress-section { grid-template-columns: 1fr; gap: 6px; }
+            .progress-card { padding: 8px; }
+            .progress-value { font-size: 18px; }
+            .stats-row { grid-template-columns: repeat(3, 1fr); }
+            .stat-card { padding: 6px 3px; }
+            .stat-value { font-size: 12px; }
+            .workers-grid { grid-template-columns: repeat(3, 1fr); gap: 3px; }
+            .pending-grid { grid-template-columns: 1fr; }
+            /* NEW sections - very small phones */
+            .metrics-grid { grid-template-columns: 1fr 1fr 1fr; gap: 4px; }
+            .metric-item { padding: 6px 3px; }
+            .metric-value { font-size: 14px; }
+            .metric-label { font-size: 6px; }
+            .metric-sub { font-size: 7px; }
+            .oal-details-grid { grid-template-columns: 1fr 1fr; gap: 4px; }
+            .oal-detail-item { padding: 6px; }
+            .oal-detail-value { font-size: 12px; }
+            .oal-detail-label { font-size: 7px; }
+            .log-stream { max-height: 120px; font-size: 8px; }
+            .pass-dot { width: 6px; height: 6px; }
+        }
+
+        /* ===== AI SCENE MOBILE STYLES ===== */
+        @media (max-width: 768px) {
+            #ai-scene { height: 300px; }
+            #bg-video-left, #bg-video-right { width: 65%; }
+            #aircairo-cover {
+                top: 0;
+                right: 18%;
+                width: 120px;
+                height: 35px;
+            }
+            #title-overlay {
+                top: 8px;
+                right: 19%;
+            }
+            .title-letter { font-size: 7px; }
+            #chart-container { bottom: 30px; height: 120px; }
+            .data-box {
+                padding: 6px 8px !important;
+                font-size: 9px !important;
+            }
+            .data-box strong { font-size: 11px !important; }
+            .data-item { font-size: 9px !important; }
+        }
+
+        @media (max-width: 480px) {
+            #ai-scene { height: 250px; }
+            #bg-video-left { width: 55%; }
+            #bg-video-right { width: 55%; }
+            #aircairo-cover {
+                top: 0;
+                right: 15%;
+                width: 100px;
+                height: 30px;
+                backdrop-filter: blur(8px);
+            }
+            #title-overlay {
+                top: 6px;
+                right: 16%;
+            }
+            .title-letter { font-size: 6px; }
+            .title-space { width: 2px; }
+            #chart-container {
+                bottom: 20px;
+                height: 100px;
+                left: 5%;
+                right: 5%;
+            }
+            .data-box {
+                padding: 4px 6px !important;
+                font-size: 8px !important;
+                border-radius: 4px !important;
+            }
+            .data-box strong { font-size: 10px !important; }
+            #data-stream { display: none; }
+        }
+
+        @media (max-width: 360px) {
+            #ai-scene { height: 200px; }
+            #bg-video-left { width: 50%; }
+            #bg-video-right { width: 55%; }
+            #aircairo-cover {
+                right: 12%;
+                width: 80px;
+                height: 25px;
+            }
+            #title-overlay {
+                top: 5px;
+                right: 13%;
+            }
+            .title-letter { font-size: 5px; }
+            #chart-container {
+                bottom: 15px;
+                height: 80px;
+            }
+            #data-boxes-layer { display: none; }
+        }
+
+        /* ===== PAGES NAVIGATION BAR ===== */
+        .pages-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 12px 20px;
+            background: rgba(70, 43, 115, 0.4);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .pages-nav a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 25px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .pages-nav a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+        .pages-nav a.active {
+            background: linear-gradient(135deg, #F7941D 0%, #ff6b00 100%);
+            border-color: transparent;
+        }
+        .pages-nav .nav-icon {
+            font-size: 16px;
+        }
+        @media (max-width: 768px) {
+            .pages-nav {
+                flex-wrap: wrap;
+                gap: 8px;
+                padding: 10px;
+            }
+            .pages-nav a {
+                padding: 8px 15px;
+                font-size: 12px;
+            }
+        }
+
+        /* ===== VALIDATION WARNINGS SECTION ===== */
+        .warnings-section {
+            display: none;
+            margin-bottom: 20px;
+        }
+        .warnings-section.has-warnings {
+            display: block;
+        }
+        .warnings-card {
+            background: rgba(248, 113, 113, 0.15);
+            border: 2px solid #f87171;
+            border-radius: 12px;
+            padding: 20px;
+            animation: warningPulse 2s infinite;
+        }
+        @keyframes warningPulse {
+            0%, 100% { border-color: #f87171; box-shadow: 0 0 10px rgba(248, 113, 113, 0.3); }
+            50% { border-color: #fca5a5; box-shadow: 0 0 20px rgba(248, 113, 113, 0.5); }
+        }
+        .warnings-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+        .warnings-icon {
+            font-size: 28px;
+            animation: shake 0.5s infinite;
+        }
+        @keyframes shake {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+        }
+        .warnings-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #fca5a5;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .warnings-subtitle {
+            font-size: 12px;
+            color: #fbbf24;
+            margin-top: 3px;
+        }
+        .warnings-list {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .warning-item {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 8px;
+            border-left: 4px solid #f87171;
+        }
+        .warning-route {
+            font-size: 16px;
+            font-weight: bold;
+            color: #60a5fa;
+        }
+        .warning-details {
+            font-size: 12px;
+            color: #aaa;
+            margin-top: 5px;
+        }
+        .warning-details span {
+            margin-right: 15px;
+        }
+        .warning-missing {
+            font-size: 11px;
+            color: #f87171;
+            margin-top: 8px;
+            padding: 8px;
+            background: rgba(248, 113, 113, 0.1);
+            border-radius: 5px;
+        }
+        .warning-missing-label {
+            color: #fca5a5;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .warnings-action {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(248, 113, 113, 0.3);
+            font-size: 13px;
+            color: #fbbf24;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <img src="logo_white.svg" alt="Air Cairo" class="logo-img">
+            <div class="subtitle">
+                <h2>MARKET INSIGHTS</h2>
+                <p>Real-time monitoring dashboard</p>
+            </div>
+        </div>
+        <div class="header-info">
+            <span class="status-badge" id="status-badge">LOADING</span>
+            <div class="live-indicator">
+                <div class="live-dot"></div>
+                <span>LIVE</span>
+            </div>
+            <div class="timestamp" id="timestamp">Loading...</div>
+            <div class="run-info" id="run-info"></div>
+            <div class="range-info" id="range-info" style="font-size: 12px; color: #aaa; margin-top: 5px;">
+                Range: Loading...
+            </div>
+        </div>
+    </div>
+
+    <!-- Pages Navigation - ALL Links (PC + Mobile) -->
+    <div class="pages-nav">
+        <!-- PC Pages -->
+        <a href="https://gharieb-ai.github.io/AirCairo/" target="_blank" style="background: rgba(70, 43, 115, 0.8);">
+            <span class="nav-icon">🖥️</span>
+            <span>PC Dashboard</span>
+        </a>
+        <a href="https://gharieb-ai.github.io/AirCairo/online_pc_report.html" target="_blank" style="background: rgba(70, 43, 115, 0.8);">
+            <span class="nav-icon">📊</span>
+            <span>PC Report</span>
+        </a>
+        <!-- Mobile Pages -->
+        <a href="https://gharieb-ai.github.io/AirCairo/online_mobile_dashboard.html" target="_blank" style="background: rgba(247, 148, 29, 0.3);">
+            <span class="nav-icon">📱</span>
+            <span>Mobile Dashboard</span>
+        </a>
+        <a href="https://gharieb-ai.github.io/AirCairo/online_mob_report.html" target="_blank" style="background: rgba(247, 148, 29, 0.3);">
+            <span class="nav-icon">📱</span>
+            <span>Mobile Report</span>
+        </a>
+        <!-- Archive -->
+        <a href="https://gharieb-ai.github.io/AirCairo/archive/" target="_blank">
+            <span class="nav-icon">📁</span>
+            <span>Archive</span>
+        </a>
+    </div>
+
+    <!-- Validation Warnings Section (hidden by default) -->
+    <div class="warnings-section" id="warnings-section">
+        <div class="warnings-card">
+            <div class="warnings-header">
+                <span class="warnings-icon">&#9888;</span>
+                <div>
+                    <div class="warnings-title">Critical: Load Factor Data Missing</div>
+                    <div class="warnings-subtitle">Some dates could not be extracted</div>
+                </div>
+            </div>
+            <div class="warnings-list" id="warnings-list">
+                <!-- Filled by JS -->
+            </div>
+            <div class="warnings-action">
+                <span>&#9888;</span>
+                <span>ACTION REQUIRED: Re-run extraction to get missing dates</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Progress Bars -->
+    <div class="progress-section">
+        <div class="progress-card">
+            <h3>Load Factor</h3>
+            <div class="progress-value lf" id="lf-pct">0%</div>
+            <div class="progress-bar"><div class="progress-fill lf" id="lf-bar" style="width: 0%"></div></div>
+        </div>
+        <div class="progress-card">
+            <h3>OAL Data</h3>
+            <div class="progress-value oal" id="oal-pct">0%</div>
+            <div class="progress-bar"><div class="progress-fill oal" id="oal-bar" style="width: 0%"></div></div>
+        </div>
+        <div class="progress-card">
+            <h3>Excel Output</h3>
+            <div class="progress-value excel" id="excel-pct">0%</div>
+            <div class="progress-bar"><div class="progress-fill excel" id="excel-bar" style="width: 0%"></div></div>
+        </div>
+        <div class="progress-card">
+            <h3>Overall Progress</h3>
+            <div class="progress-value overall" id="overall-pct">0%</div>
+            <div class="progress-bar"><div class="progress-fill overall" id="overall-bar" style="width: 0%"></div></div>
+        </div>
+    </div>
+
+    <!-- Stats Row -->
+    <div class="stats-row">
+        <div class="stat-card">
+            <div class="stat-label">Tasks Done</div>
+            <div class="stat-value success" id="tasks-done">0</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Total Tasks</div>
+            <div class="stat-value" id="tasks-total">0</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Running</div>
+            <div class="stat-value warning" id="tasks-running">0</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Excel Files</div>
+            <div class="stat-value warning" id="excel-count">0</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Failed</div>
+            <div class="stat-value" id="tasks-failed">0</div>
+        </div>
+    </div>
+
+    <!-- Main Grid -->
+    <div class="main-grid">
+        <!-- Workers Status -->
+        <div class="card">
+            <h2>Worker Ports - Live Status</h2>
+            <div class="workers-grid" id="workers-grid">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+
+        <!-- Live Log Stream (Terminal) for Load Factor -->
+        <div class="card">
+            <h2>Live Log Stream - Load Factor</h2>
+            <div class="log-header">
+                <span>Real-time extraction logs</span>
+                <span class="log-file-badge" id="log-file-name">No logs</span>
+            </div>
+            <div class="log-stream" id="log-stream">
+                <div class="log-line info">Waiting for log data...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Excel Files Row -->
+    <div class="card" style="margin-top: 20px;">
+        <h2>Excel Files Generated</h2>
+        <div class="excel-list" id="excel-list" style="max-height: 120px;">
+            <!-- Filled by JS -->
+        </div>
+    </div>
+
+    <!-- NEW: Speed & Metrics + OAL Details Row -->
+    <div class="main-grid" style="margin-top: 20px;">
+        <!-- Speed & Performance Metrics -->
+        <div class="card">
+            <h2>Speed & Performance Metrics</h2>
+            <div class="metrics-grid" id="metrics-grid">
+                <div class="metric-item">
+                    <div class="metric-value speed" id="speed-per-min">0</div>
+                    <div class="metric-label">Tasks/Min</div>
+                    <div class="metric-sub" id="speed-per-hour">0/hour</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-value errors" id="recent-errors">0</div>
+                    <div class="metric-label">Recent Errors</div>
+                    <div class="metric-sub">Last 5 min</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-value eta" id="total-eta">--</div>
+                    <div class="metric-label">ETA Total</div>
+                    <div class="metric-sub" id="lf-eta">LF: --</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- OAL Pass Details -->
+        <div class="card">
+            <h2>OAL Pass Details</h2>
+            <div class="oal-details-grid" id="oal-details-grid">
+                <div class="oal-detail-item">
+                    <div class="oal-detail-label">Current Pass</div>
+                    <div class="oal-detail-value pass" id="oal-current-pass">-</div>
+                </div>
+                <div class="oal-detail-item">
+                    <div class="oal-detail-label">Routes in Pass</div>
+                    <div class="oal-detail-value" id="oal-routes-in-pass">-/-</div>
+                </div>
+                <div class="oal-detail-item">
+                    <div class="oal-detail-label">Status</div>
+                    <div class="oal-detail-value" id="oal-status-detail">-</div>
+                </div>
+                <div class="oal-detail-item">
+                    <div class="oal-detail-label">OAL ETA</div>
+                    <div class="oal-detail-value eta" id="oal-eta">-</div>
+                </div>
+            </div>
+            <div class="oal-pass-progress" id="oal-pass-dots">
+                <!-- Pass dots filled by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Futuristic AI Chart - OAL Data Visualization -->
+    <div class="oal-chart-section" style="margin-top: 20px;">
+        <div class="card" style="padding: 0; overflow: hidden;">
+            <div id="ai-scene">
+                <!-- Left Video - Data/Charts Background -->
+                <video id="bg-video-left" autoplay muted loop playsinline preload="auto" disablePictureInPicture>
+                    <source src="https://github.com/GHARIEB-AI/AirCairo/releases/download/v1-dashboard-assets/html_vid.mp4" type="video/mp4">
+                </video>
+
+                <!-- Right Video - Robot -->
+                <video id="bg-video-right" autoplay muted loop playsinline preload="auto" disablePictureInPicture>
+                    <source src="https://github.com/GHARIEB-AI/AirCairo/releases/download/v1-dashboard-assets/Image_to_Video_Generation.mp4" type="video/mp4">
+                </video>
+
+                <!-- Center Blend Overlay -->
+                <div id="video-blend"></div>
+
+                <!-- Blur cover over AIR CAIRO -->
+                <div id="aircairo-cover"></div>
+
+                <!-- MARKET INSIGHTS - NO background, NO border -->
+                <div id="title-overlay">
+                    <span class="title-letter" style="--delay: 0s;">M</span>
+                    <span class="title-letter" style="--delay: 0.15s;">A</span>
+                    <span class="title-letter" style="--delay: 0.3s;">R</span>
+                    <span class="title-letter" style="--delay: 0.45s;">K</span>
+                    <span class="title-letter" style="--delay: 0.6s;">E</span>
+                    <span class="title-letter" style="--delay: 0.75s;">T</span>
+                    <span class="title-space"></span>
+                    <span class="title-letter" style="--delay: 0.9s;">I</span>
+                    <span class="title-letter" style="--delay: 1.05s;">N</span>
+                    <span class="title-letter" style="--delay: 1.2s;">S</span>
+                    <span class="title-letter" style="--delay: 1.35s;">I</span>
+                    <span class="title-letter" style="--delay: 1.5s;">G</span>
+                    <span class="title-letter" style="--delay: 1.65s;">H</span>
+                    <span class="title-letter" style="--delay: 1.8s;">T</span>
+                    <span class="title-letter" style="--delay: 1.95s;">S</span>
+                </div>
+
+                <!-- Floating Data Stream -->
+                <div id="data-stream"></div>
+
+                <!-- Chart -->
+                <div id="chart-container">
+                    <canvas id="bookingChart"></canvas>
+                </div>
+
+                <!-- Data Boxes -->
+                <div id="data-boxes-layer"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Running Tasks -->
+    <div class="running-tasks">
+        <div class="card">
+            <h2>Currently Running Tasks</h2>
+            <div id="running-tasks-list">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Pending Routes Section -->
+    <div class="pending-section">
+        <div class="card">
+            <h2>Routes Progress</h2>
+            <div class="pending-grid" id="pending-grid">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let lastData = null;
+        let lastRunData = null;  // Cached data from last run (for offline mode)
+        let isOnline = false;    // Track if API is available
+
+        // Base URL for API calls:
+        // - Local server: falls back to window.location.origin
+        // - GitHub Pages: injected at runtime into the template placeholder
+        const API_BASE_OVERRIDE = '__API_BASE__';
+        const API_BASE = (() => {
+            try {
+                if (API_BASE_OVERRIDE && !API_BASE_OVERRIDE.startsWith('__')) {
+                    return API_BASE_OVERRIDE.replace(/\/$/, '');
+                }
+
+                const params = new URLSearchParams(window.location.search);
+                const override = params.get('api');
+                if (override) return override.replace(/\/$/, '');
+            } catch (e) {
+                // Ignore parsing errors and fall back to location-based base URL.
+            }
+
+            const loc = window.location;
+            if (loc.protocol === 'file:' || !loc.origin || loc.origin === 'null') {
+                return 'http://localhost:8081';
+            }
+            return loc.origin;
+        })();
+
+        // ========== LIVE DATA STREAM - REAL DATA ==========
+
+        let realFlights = [];  // Will be populated from API
+        let recentShown = [];
+
+        // Format LST-SOLD from "2025-12-18 00:00:00" to "18DEC25"
+        function formatLstSold(lstSold) {
+            if (!lstSold || lstSold === 'NIL' || lstSold === 'N/A') return lstSold;
+
+            // Check if already in DDMMMYY format (e.g., "18DEC25")
+            if (/^\d{1,2}[A-Z]{3}\d{2}$/i.test(lstSold)) return lstSold.toUpperCase();
+
+            // Try parsing datetime format "2025-12-18 00:00:00" or "2025-12-18"
+            const match = lstSold.match(/^(\d{4})-(\d{2})-(\d{2})/);
+            if (match) {
+                const months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+                const day = parseInt(match[3], 10);
+                const monthIdx = parseInt(match[2], 10) - 1;
+                const year = match[1].slice(-2);
+                return day + months[monthIdx] + year;
+            }
+
+            // Return as-is if can't parse
+            return lstSold;
+        }
+
+        // Format real flight data in different patterns
+        function formatRealData(flight) {
+            if (!flight || typeof flight !== 'object') return null;
+
+            const formats = [
+                // Format 1: "SM455/20DEC LST:18DEC25"
+                () => (flight.flight && flight.date ? (flight.flight + '/' + flight.date + (flight.lst_sold ? (' LST:' + formatLstSold(flight.lst_sold)) : '')) : null),
+
+                // Format 2: "SM455 | JED-CAI | 23DEC"
+                () => (flight.flight && flight.route && flight.date ? `${flight.flight} | ${flight.route} | ${flight.date}` : null),
+
+                // Format 3: "JED→CAI LST:18DEC25 TD:5"
+                () => (flight.route ? `${flight.route} LST:${formatLstSold(flight.lst_sold) || '-'} TD:${typeof flight.to_day === 'number' ? flight.to_day : '-'}` : null),
+
+                // Format 4: "SM455 WEEKLY:88"
+                () => (flight.flight && typeof flight.weekly === 'number' ? `${flight.flight} WEEKLY:${flight.weekly}` : null),
+
+                // Format 5: Route with availability
+                () => (flight.route && (flight.lowest_avail || flight.avail) ? `${flight.route} AVAIL:${flight.lowest_avail || flight.avail}` : null),
+
+                // Format 6: Compact "SM455/JED LST:18DEC25"
+                () => (flight.flight && flight.route ? (flight.flight + '/' + flight.route.split('-')[0] + (flight.lst_sold ? (' LST:' + formatLstSold(flight.lst_sold)) : '')) : null),
+
+                // Format 7: Date focus "20DEC JED-CAI"
+                () => (flight.date && flight.route ? `${flight.date} ${flight.route}` : null),
+
+                // Format 8: Y-Day comparison
+                () => (flight.flight ? `${flight.flight} YDAY:${typeof flight.y_day === 'number' ? flight.y_day : '-'} TD:${typeof flight.to_day === 'number' ? flight.to_day : '-'}` : null),
+
+                // Format 9: LF Percent "SM455 LF:97.2%"
+                () => (flight.flight && typeof flight.lf_percent === 'number' ? `${flight.flight} LF:${flight.lf_percent.toFixed(1)}%` : null),
+
+                // Format 10: Capacity "SM455 CAP:178 BKD:173"
+                () => (flight.flight && flight.capacity ? `${flight.flight} CAP:${flight.capacity} BKD:${flight.booked || 0}` : null),
+
+                // Format 11: Route + LF "JED-CAI LF:97.2%"
+                () => (flight.route && typeof flight.lf_percent === 'number' ? `${flight.route} LF:${flight.lf_percent.toFixed(1)}%` : null),
+
+                // Format 12: Full info "SM455 JED-CAI BKD:173/178"
+                () => (flight.flight && flight.route && flight.capacity ? `${flight.flight} ${flight.route} BKD:${flight.booked || 0}/${flight.capacity}` : null),
+
+                // Format 13: Availability status
+                () => (flight.flight && flight.lowest_avail ? `${flight.flight} ${flight.lowest_avail === 'CLOSED' ? '🔴 CLOSED' : '🟢 ' + flight.lowest_avail}` : null),
+
+                // Format 14: Short date format
+                () => {
+                    if (!flight.date) return null;
+                    const shortDate = flight.date.replace(/^[A-Za-z]+, /, '').replace(/,?\s*\d{4}$/, '');
+                    return flight.flight ? `${flight.flight} ${shortDate}` : null;
+                },
+
+                // Format 15: Route arrow format
+                () => (flight.route ? `✈️ ${flight.route.replace('-', '→')} ${flight.lowest_avail || ''}` : null),
+            ];
+
+            return formats[Math.floor(Math.random() * formats.length)]();
+        }
+
+        // Generate operational metrics
+        function generateMetric() {
+            if (!lastData) return null;
+
+            const tasks = lastData.tasks || {};
+            const progress = lastData.progress || {};
+            const status = lastData.status || 'IDLE';
+            const config = lastData.config || {};
+            const oalDetails = lastData.oal_details || {};
+            const speedMetrics = lastData.speed_metrics || {};
+
+            const metrics = [
+                () => `📊 LF: ${(progress.lf || 0).toFixed(0)}%`,
+                () => `📊 OAL: ${(progress.oal || 0).toFixed(0)}%`,
+                () => `📋 TASKS: ${tasks.done || 0}/${tasks.total || 0}`,
+                () => `🔄 RUNNING: ${tasks.running || 0}`,
+                () => `📑 EXCEL: ${(progress.excel || 0).toFixed(0)}%`,
+                () => progress.lf >= 100 ? '✅ LF COMPLETE' : `⏳ LF PROGRESS ${(progress.lf || 0).toFixed(0)}%`,
+                () => `👥 WORKERS: ${lastData.active_workers || 0}`,
+                () => `📡 STATUS: ${status.toUpperCase()}`,
+                () => `🎯 OVERALL: ${(progress.overall || 0).toFixed(0)}%`,
+                () => config.run_id ? `🏷️ RUN: ${config.run_id.slice(-8)}` : null,
+                () => tasks.pending ? `⏳ PENDING: ${tasks.pending}` : null,
+                () => `⚡ MARKET INSIGHTS LIVE`,
+                () => `🛫 AIR CAIRO MONITORING`,
+                () => progress.oal >= 100 ? '✅ OAL COMPLETE' : null,
+                () => progress.excel >= 100 ? '✅ EXCEL COMPLETE' : null,
+                // Additional metrics
+                () => config.routes_count ? `🛫 ROUTES: ${config.routes_count}` : null,
+                () => config.dates_count ? `📅 DATES: ${config.dates_count}` : null,
+                () => config.chunks_count ? `📦 CHUNKS: ${config.chunks_count}` : null,
+                () => config.ports_count ? `🔌 PORTS: ${config.ports_count}` : null,
+                () => oalDetails.current_pass ? `🔄 OAL PASS: ${oalDetails.current_pass}/${oalDetails.total_passes || 2}` : null,
+                () => oalDetails.routes_completed_in_pass ? `📊 OAL ROUTES: ${oalDetails.routes_completed_in_pass}/${oalDetails.routes_total_per_pass || 0}` : null,
+                () => speedMetrics.speed_per_minute ? `⚡ SPEED: ${speedMetrics.speed_per_minute}/min` : null,
+                () => lastData.excel_count ? `📑 EXCEL FILES: ${lastData.excel_count}` : null,
+                () => config.date_range ? `📅 ${config.date_range}` : null,
+                () => tasks.failed > 0 ? `❌ FAILED: ${tasks.failed}` : null,
+                () => config.mode ? `🔧 MODE: ${config.mode}` : null,
+                // Route-specific metrics from config
+                () => config.routes && config.routes.length > 0 ? `✈️ ${config.routes[Math.floor(Math.random() * config.routes.length)]}` : null,
+            ];
+
+            const validMetrics = metrics.map(m => m()).filter(m => m);
+            return validMetrics[Math.floor(Math.random() * validMetrics.length)];
+        }
+
+        function createRealDataItem() {
+            const stream = document.getElementById('data-stream');
+            if (!stream) return;
+
+            let text = null;
+
+            // 70% real flight data, 30% metrics
+            if (realFlights.length > 0 && Math.random() < 0.7) {
+                const flight = realFlights[Math.floor(Math.random() * realFlights.length)];
+                text = formatRealData(flight);
+            } else {
+                text = generateMetric();
+            }
+
+            // Fallback if no real data - show info based on last run data
+            if (!text) {
+                const now = new Date();
+                const timeStr = now.toLocaleTimeString('en-US', { hour12: false });
+
+                // If we have last run data, show meaningful info from it
+                if (lastData) {
+                    const config = lastData.config || {};
+                    const tasks = lastData.tasks || {};
+                    const progress = lastData.progress || {};
+
+                    const fallbacks = [
+                        `🕐 ${timeStr}`,
+                        `📊 LAST RUN: ${config.run_id || 'N/A'}`,
+                        `🛫 ROUTES: ${config.routes_count || 0}`,
+                        `📅 DATES: ${config.dates_count || 0}`,
+                        `📋 TASKS: ${tasks.done || 0}/${tasks.total || 0}`,
+                        `🎯 LF: ${(progress.lf || 0).toFixed(0)}%`,
+                        `📊 OAL: ${(progress.oal || 0).toFixed(0)}%`,
+                        config.date_range ? `📅 ${config.date_range}` : '📊 MARKET INSIGHTS',
+                        `⚡ AIR CAIRO MONITORING`,
+                        `📡 ${isOnline ? 'LIVE' : 'LAST RUN DATA'}`,
+                    ];
+                    text = fallbacks[Math.floor(Math.random() * fallbacks.length)];
+                } else {
+                    const fallbacks = [
+                        `🕐 ${timeStr}`,
+                        '📡 AWAITING DATA...',
+                        '🔄 CONNECTING TO SERVER...',
+                        '⏳ LOADING FLIGHT DATA...',
+                        '🛫 AIR CAIRO SYSTEM',
+                        '📊 MARKET INSIGHTS v2.0',
+                    ];
+                    text = fallbacks[Math.floor(Math.random() * fallbacks.length)];
+                }
+            }
+
+            // Avoid immediate repeat
+            if (recentShown.includes(text)) {
+                return; // Skip this one
+            }
+            recentShown.push(text);
+            if (recentShown.length > 20) recentShown.shift();
+
+            // Create element
+            const el = document.createElement('div');
+            const styleNum = Math.floor(Math.random() * 5) + 1;
+            el.className = `data-item s${styleNum}`;
+            el.textContent = text;
+
+            // Random position (10% - 90%)
+            el.style.top = `${10 + Math.random() * 80}%`;
+
+            // Random duration (10-18s)
+            const duration = 10 + Math.random() * 8;
+            el.style.animationDuration = `${duration}s`;
+
+            stream.appendChild(el);
+            setTimeout(() => el.remove(), duration * 1000 + 500);
+        }
+
+        // Update real flights from dashboard data
+        function updateRealFlights() {
+            if (lastData && lastData.flight_booking_data && lastData.flight_booking_data.flights) {
+                realFlights = lastData.flight_booking_data.flights;
+            }
+        }
+
+        // Start live stream
+        async function startLiveStream() {
+            // First try to load cached data so we have something to show immediately
+            try {
+                const response = await fetch('dashboard_status.json?t=' + Date.now(), {
+                    cache: 'no-store'
+                });
+                if (response.ok) {
+                    const cachedData = await response.json();
+                    lastRunData = cachedData;
+                    lastData = cachedData;
+                    updateRealFlights();
+                    console.log('[DataStream] Loaded cached data for streaming');
+                }
+            } catch (e) {
+                console.log('[DataStream] No cached data for initial stream');
+            }
+
+            // Initial burst - more items
+            for (let i = 0; i < 12; i++) {
+                setTimeout(createRealDataItem, i * 250);
+            }
+            // Continuous - faster (every 400ms for more data flow)
+            setInterval(createRealDataItem, 400);
+            // Update real flights periodically
+            setInterval(updateRealFlights, 2000);
+        }
+
+        document.addEventListener('DOMContentLoaded', startLiveStream);
+        // ================================================
+
+        function updateDashboard(data) {
+            lastData = data;
+
+            // Status badge - show "LAST RUN" when IDLE but we have run data
+            const statusBadge = document.getElementById('status-badge');
+            const hasRunData = data.config && data.config.run_id;
+            if (data.status === 'IDLE' && hasRunData) {
+                statusBadge.textContent = 'LAST RUN';
+                statusBadge.className = 'status-badge completed';
+            } else {
+                statusBadge.textContent = data.status || 'UNKNOWN';
+                statusBadge.className = 'status-badge ' + (data.status || 'no_data').toLowerCase();
+            }
+
+            // View Report button is ALWAYS visible via CSS (no toggling needed)
+
+            // Timestamp
+            document.getElementById('timestamp').textContent =
+                'Last Update: ' + new Date(data.timestamp).toLocaleTimeString();
+
+            // Run info
+            const config = data.config || {};
+            document.getElementById('run-info').textContent =
+                `Run: ${config.run_id || 'N/A'} | ${config.routes_count || 0} routes | ${config.dates_count || 0} dates`;
+
+            // Range info
+            const rangeEl = document.getElementById('range-info');
+            if (rangeEl && config.date_range) {
+                rangeEl.textContent = `Range: ${config.date_range}`;
+            } else if (rangeEl && config.start_date && config.end_date) {
+                rangeEl.textContent = `Range: ${config.start_date} → ${config.end_date}`;
+            }
+
+            // Progress bars
+            const progress = data.progress || {};
+            document.getElementById('lf-pct').textContent = (progress.lf || 0).toFixed(1) + '%';
+            document.getElementById('lf-bar').style.width = (progress.lf || 0) + '%';
+
+            document.getElementById('oal-pct').textContent = (progress.oal || 0).toFixed(1) + '%';
+            document.getElementById('oal-bar').style.width = (progress.oal || 0) + '%';
+
+            document.getElementById('excel-pct').textContent = (progress.excel || 0).toFixed(1) + '%';
+            document.getElementById('excel-bar').style.width = (progress.excel || 0) + '%';
+
+            document.getElementById('overall-pct').textContent = (progress.overall || 0).toFixed(1) + '%';
+            document.getElementById('overall-bar').style.width = (progress.overall || 0) + '%';
+
+            // Stats
+            const tasks = data.tasks || {};
+            document.getElementById('tasks-done').textContent = tasks.done || 0;
+            document.getElementById('tasks-total').textContent = tasks.total || 0;
+            document.getElementById('tasks-running').textContent = tasks.running || 0;
+            document.getElementById('excel-count').textContent = data.excel_count || 0;
+
+            const failedEl = document.getElementById('tasks-failed');
+            failedEl.textContent = tasks.failed || 0;
+            // Failed: red if > 0, neutral/white if 0 (not green - that would be confusing)
+            failedEl.className = 'stat-value ' + ((tasks.failed || 0) > 0 ? 'error' : '');
+
+            // Workers
+            const workers = data.workers || {};
+            const ports = config.ports || [];
+            let workersHtml = '';
+
+            ports.forEach(port => {
+                const worker = workers[port] || workers[String(port)] || {status: 'inactive', active_route: null};
+                workersHtml += `
+                    <div class="worker-card ${worker.status}">
+                        <div class="worker-port">${port}</div>
+                        <div class="worker-route">${worker.active_route || '-'}</div>
+                        <div class="worker-status">${worker.status}</div>
+                    </div>
+                `;
+            });
+            document.getElementById('workers-grid').innerHTML = workersHtml || '<div style="color:#888">No workers configured</div>';
+
+            // Config (moved to AI Chart visualization)
+
+            // Excel Files
+            let excelHtml = '';
+            (data.excel_files || []).forEach(f => {
+                excelHtml += `<div class="excel-item">${f}</div>`;
+            });
+            document.getElementById('excel-list').innerHTML = excelHtml || '<div style="color:#666">No files yet</div>';
+
+            // Running Tasks
+            const runningTasks = data.running_tasks || [];
+            let runningHtml = '';
+            if (runningTasks.length === 0) {
+                runningHtml = '<div style="color:#888;text-align:center;padding:20px">No tasks currently running</div>';
+            } else {
+                runningTasks.forEach(task => {
+                    runningHtml += `
+                        <div class="running-task">
+                            <div>
+                                <div class="running-task-route">${task.route} (Chunk ${task.chunk})</div>
+                                <div class="running-task-info">${task.dates_count} dates | Started: ${new Date(task.started_at).toLocaleTimeString()}</div>
+                            </div>
+                            <div class="running-task-worker">${task.worker}</div>
+                        </div>
+                    `;
+                });
+            }
+            document.getElementById('running-tasks-list').innerHTML = runningHtml;
+
+            // Pending Routes
+            const pendingRoutes = data.pending_routes || {};
+            let pendingHtml = '';
+
+            Object.entries(pendingRoutes).forEach(([route, info]) => {
+                const totalTasks = info.total_tasks || 0;
+                const doneTasks = info.done_tasks || 0;
+                const progressPct = totalTasks > 0 ? (doneTasks / totalTasks * 100) : 0;
+                const isCompleted = doneTasks === totalTasks;
+                const pendingDates = info.pending_dates || [];
+
+                pendingHtml += `
+                    <div class="pending-card ${isCompleted ? 'completed' : ''}">
+                        <div class="pending-header">
+                            <span class="pending-route">${route}</span>
+                            <span class="pending-count ${isCompleted ? 'done' : ''}">${isCompleted ? 'DONE' : `${totalTasks - doneTasks} left`}</span>
+                        </div>
+                        <div style="font-size:11px;color:#aaa;margin-bottom:5px">${doneTasks}/${totalTasks} chunks (${progressPct.toFixed(0)}%)</div>
+                        ${!isCompleted && pendingDates.length > 0 ? `
+                            <div class="pending-dates">
+                                ${pendingDates.slice(0, 10).join(', ')}
+                                ${pendingDates.length > 10 ? `<br>+${pendingDates.length - 10} more` : ''}
+                            </div>
+                        ` : ''}
+                        <div class="pending-progress">
+                            <div class="pending-progress-fill" style="width: ${progressPct}%"></div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            if (Object.keys(pendingRoutes).length === 0) {
+                pendingHtml = '<div style="color:#888;text-align:center;padding:30px">No route data available</div>';
+            }
+
+            document.getElementById('pending-grid').innerHTML = pendingHtml;
+
+            // ===== Update AI Chart with Real Data =====
+            updateChartWithRealData(data);
+
+            // ===== NEW: Update Speed & Metrics =====
+            const speedMetrics = data.speed_metrics || {};
+            document.getElementById('speed-per-min').textContent = speedMetrics.speed_per_minute || 0;
+            document.getElementById('speed-per-hour').textContent = `${speedMetrics.speed_per_hour || 0}/hour`;
+            document.getElementById('recent-errors').textContent = speedMetrics.recent_errors || 0;
+
+            // Update errors color based on count
+            const errorsEl = document.getElementById('recent-errors');
+            errorsEl.className = 'metric-value ' + ((speedMetrics.recent_errors || 0) > 0 ? 'errors' : 'speed');
+
+            // ===== NEW: Update ETA =====
+            const eta = data.eta || {};
+            document.getElementById('total-eta').textContent = eta.total_eta_formatted || '--';
+            document.getElementById('lf-eta').textContent = `LF: ${eta.lf_eta_formatted || '--'}`;
+            document.getElementById('oal-eta').textContent = eta.oal_eta_formatted || '--';
+
+            // ===== NEW: Update OAL Details =====
+            const oalDetails = data.oal_details || {};
+            const oalCurrentPass = oalDetails.current_pass || 0;
+            const oalTotalPasses = oalDetails.total_passes || 2;
+            const oalRoutesCompleted = oalDetails.routes_completed_in_pass || 0;
+            const oalRoutesTotal = oalDetails.routes_total_per_pass || 0;
+            const oalStatus = oalDetails.status || 'unknown';
+
+            document.getElementById('oal-current-pass').textContent =
+                oalStatus === 'disabled' ? 'N/A' : `${oalCurrentPass}/${oalTotalPasses}`;
+            document.getElementById('oal-routes-in-pass').textContent =
+                oalStatus === 'disabled' ? 'N/A' : `${oalRoutesCompleted}/${oalRoutesTotal}`;
+
+            // Format OAL status nicely
+            let statusDisplay = oalStatus.toUpperCase();
+            if (oalStatus === 'running') statusDisplay = 'RUNNING';
+            else if (oalStatus === 'completed') statusDisplay = 'DONE';
+            else if (oalStatus === 'disabled') statusDisplay = 'DISABLED';
+            document.getElementById('oal-status-detail').textContent = statusDisplay;
+
+            // Update pass dots
+            let dotsHtml = '';
+            if (oalStatus !== 'disabled' && oalTotalPasses > 0) {
+                for (let i = 1; i <= oalTotalPasses; i++) {
+                    let dotClass = '';
+                    if (i < oalCurrentPass) dotClass = 'completed';
+                    else if (i === oalCurrentPass) dotClass = 'current';
+                    dotsHtml += `<div class="pass-dot ${dotClass}" title="Pass ${i}"></div>`;
+                }
+            }
+            document.getElementById('oal-pass-dots').innerHTML = dotsHtml;
+
+            // ===== NEW: Update Live Log Stream =====
+            const liveLogs = data.live_logs || {};
+            const logLines = liveLogs.lines || [];
+            const logFile = liveLogs.file || 'No logs';
+
+            document.getElementById('log-file-name').textContent = logFile;
+
+            if (logLines.length > 0) {
+                let logHtml = '';
+                logLines.forEach(line => {
+                    // Determine line type for coloring
+                    let lineClass = 'info';
+                    const lineLower = line.toLowerCase();
+                    if (lineLower.includes('error') || lineLower.includes('exception') || lineLower.includes('failed')) {
+                        lineClass = 'error';
+                    } else if (lineLower.includes('warning') || lineLower.includes('warn')) {
+                        lineClass = 'warning';
+                    } else if (lineLower.includes('completed') || lineLower.includes('success') || lineLower.includes('done')) {
+                        lineClass = 'success';
+                    }
+                    logHtml += `<div class="log-line ${lineClass}">${escapeHtml(line)}</div>`;
+                });
+                document.getElementById('log-stream').innerHTML = logHtml;
+
+                // Auto-scroll to bottom
+                const logStream = document.getElementById('log-stream');
+                logStream.scrollTop = logStream.scrollHeight;
+            }
+
+            // ===== NEW: Update Validation Warnings =====
+            const validation = data.validation || {};
+            const warningsSection = document.getElementById('warnings-section');
+            const warningsList = document.getElementById('warnings-list');
+
+            if (validation.warnings && validation.warnings.length > 0) {
+                // Show warnings section
+                warningsSection.classList.add('has-warnings');
+
+                let warningsHtml = '';
+                validation.warnings.forEach(warning => {
+                    const missingDates = warning.missing_dates || [];
+                    const displayDates = missingDates.slice(0, 5);
+                    const moreDates = missingDates.length > 5 ? missingDates.length - 5 : 0;
+
+                    warningsHtml += `
+                        <div class="warning-item">
+                            <div class="warning-route">${escapeHtml(warning.route || 'Unknown Route')}</div>
+                            <div class="warning-details">
+                                <span>Extracted: ${warning.extracted || 0}/${warning.expected || 0} dates</span>
+                                <span>Missing: ${missingDates.length} dates</span>
+                            </div>
+                            <div class="warning-missing">
+                                <div class="warning-missing-label">Missing Dates:</div>
+                                ${displayDates.join(', ')}
+                                ${moreDates > 0 ? `<br>... and ${moreDates} more` : ''}
+                            </div>
+                        </div>
+                    `;
+                });
+
+                warningsList.innerHTML = warningsHtml;
+            } else {
+                // Hide warnings section
+                warningsSection.classList.remove('has-warnings');
+                warningsList.innerHTML = '';
+            }
+        }
+
+        // Helper function to escape HTML
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // ===== FUTURISTIC AI CHART VISUALIZATION =====
+
+        // NOTE: Old floating word animation removed - using real data stream instead
+
+        // Chart.js instance
+        let bookingChart = null;
+        let chartDataPoints = [];
+        let currentAnimationProgress = 0;
+        let chartAnimationInterval = null;
+
+        // Initialize the Chart
+        function initBookingChart() {
+            const ctx = document.getElementById('bookingChart');
+            if (!ctx) return;
+
+            // Start empty; real data arrives via /status during the run.
+            chartDataPoints = [];
+
+            const labels = chartDataPoints.map(d => `${d.flight}`);
+            const salesData = chartDataPoints.map(d => d.lstSold);
+
+            bookingChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Sales',
+                        data: salesData,
+                        borderColor: 'rgba(100, 220, 255, 1)',
+                        backgroundColor: 'rgba(100, 220, 255, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.3,
+                        pointRadius: 6,
+                        pointBackgroundColor: 'rgba(100, 220, 255, 1)',
+                        pointBorderColor: '#fff',
+                        pointBorderWidth: 2,
+                        pointHoverRadius: 10,
+                        pointHoverBackgroundColor: '#6df3ff',
+                        pointHoverBorderColor: '#fff',
+                        pointHoverBorderWidth: 3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    animation: {
+                        duration: 9000,
+                        easing: 'linear',
+                        onProgress: function(animation) {
+                            currentAnimationProgress = animation.currentStep / animation.numSteps;
+                            updateDataBoxesOnProgress(currentAnimationProgress);
+                        },
+                        onComplete: function() {
+                            showAllDataBoxes();
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { enabled: false }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                color: 'rgba(100, 220, 255, 0.1)',
+                                lineWidth: 1
+                            },
+                            ticks: {
+                                color: 'rgba(100, 220, 255, 0.6)',
+                                font: { size: 10 }
+                            }
+                        },
+                        y: {
+                            min: 0,
+                            max: 120,
+                            grid: {
+                                color: 'rgba(100, 220, 255, 0.1)',
+                                lineWidth: 1
+                            },
+                            ticks: {
+                                color: 'rgba(100, 220, 255, 0.6)',
+                                font: { size: 10 },
+                                stepSize: 20
+                            }
+                        }
+                    },
+                    interaction: {
+                        intersect: false,
+                        mode: 'index'
+                    }
+                }
+            });
+
+            // Start scan line animation
+            const scanLine = document.getElementById('scan-line');
+            if (scanLine) {
+                scanLine.classList.add('animating');
+            }
+        }
+
+        // Update data boxes based on animation progress
+        function updateDataBoxesOnProgress(progress) {
+            const boxesContainer = document.getElementById('data-boxes-layer');
+            if (!boxesContainer || !bookingChart) return;
+
+            const totalPoints = chartDataPoints.length;
+            const visiblePoints = Math.floor(progress * totalPoints);
+
+            // Show boxes for visible points
+            for (let i = 0; i < totalPoints; i++) {
+                const boxId = `data-box-${i}`;
+                let box = document.getElementById(boxId);
+
+                if (i < visiblePoints) {
+                    if (!box) {
+                        // Create new box
+                        box = createDataBox(i);
+                        boxesContainer.appendChild(box);
+                    }
+                    // Position the box
+                    positionDataBox(box, i);
+                    setTimeout(() => box.classList.add('visible'), 50);
+                }
+            }
+        }
+
+        // Create a data box element
+        function createDataBox(index) {
+            const data = chartDataPoints[index];
+            const box = document.createElement('div');
+            box.id = `data-box-${index}`;
+            box.className = 'chart-data-box';
+
+            box.innerHTML = `
+                <div class="box-header">
+                    <span class="box-flight">${data.flight}</span>
+                    <span class="box-route">${data.route}</span>
+                </div>
+                <div class="box-date">${data.date}</div>
+                <div class="box-metrics">
+                    <div class="metric-item">
+                        <span class="metric-label">LST-SOLD</span>
+                        <span class="metric-value cyan">${data.lstSold}</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">TO-DAY</span>
+                        <span class="metric-value ${data.toDay > 8 ? 'green' : ''}">${data.toDay}</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Y-DAY</span>
+                        <span class="metric-value">${data.yDay}</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">WEEKLY</span>
+                        <span class="metric-value ${data.weekly > 60 ? 'cyan' : 'yellow'}">${data.weekly}</span>
+                    </div>
+                    <div class="metric-item" style="grid-column: span 2;">
+                        <span class="metric-label">LOWEST AVAIL</span>
+                        <span class="metric-value ${data.lowestAvail < 20 ? 'yellow' : 'green'}">${data.lowestAvail}</span>
+                    </div>
+                </div>
+            `;
+
+            return box;
+        }
+
+        // Position data box near chart point
+        function positionDataBox(box, index) {
+            if (!bookingChart) return;
+
+            const chartArea = bookingChart.chartArea;
+            const meta = bookingChart.getDatasetMeta(0);
+            const point = meta.data[index];
+
+            if (!point) return;
+
+            const x = point.x;
+            const y = point.y;
+
+            // Alternate above and below the line
+            const isAbove = index % 2 === 0;
+            const offsetY = isAbove ? -130 : 30;
+
+            // Adjust x to keep within container
+            let adjustedX = x - 70; // Half of min-width
+            if (adjustedX < 60) adjustedX = 60;
+            if (adjustedX > chartArea.right - 150) adjustedX = chartArea.right - 150;
+
+            box.style.left = adjustedX + 'px';
+            box.style.top = (y + offsetY + 60) + 'px'; // +60 for chart container offset
+        }
+
+        // Show all data boxes
+        function showAllDataBoxes() {
+            const boxes = document.querySelectorAll('.chart-data-box');
+            boxes.forEach(box => box.classList.add('visible'));
+        }
+
+        // Update chart with REAL flight booking data from dashboard
+        function updateChartWithRealData(data) {
+            // Get real flight booking data from checkpoint
+            const flightBookingData = data.flight_booking_data || {};
+            const flights = flightBookingData.flights || [];
+
+            // If we have real extracted flight data, use it
+            if (flights.length > 0) {
+                // Convert real flight data to chart format (take last 7 flights)
+                let newDataPoints = flights.slice(0, 7).map(f => ({
+                    flight: f.flight || 'N/A',
+                    route: f.route || 'N/A',
+                    date: f.date || 'N/A',
+                    lstSold: formatLstSold(f.lst_sold) || 'NIL',
+                    toDay: f.to_day || 0,
+                    yDay: f.y_day || 0,
+                    weekly: f.weekly || 0,
+                    lowestAvail: f.lowest_avail || 'N/A',
+                    lfPercent: f.lf_percent || 0,
+                    capacity: f.capacity || 0,
+                    booked: f.booked || 0
+                }));
+
+                if (newDataPoints.length > 0) {
+                    chartDataPoints = newDataPoints;
+                    // Update chart labels and data
+                    if (bookingChart) {
+                        bookingChart.data.labels = chartDataPoints.map(d => d.flight);
+                        // Use booked count for Y-axis (more meaningful than lstSold which is a date)
+                        bookingChart.data.datasets[0].data = chartDataPoints.map(d => d.booked || d.weekly || 0);
+                        // Don't re-animate, just update
+                        bookingChart.update('none');
+                    }
+
+                    // Update data boxes with real data
+                    updateDataBoxesWithRealData();
+                }
+            }
+        }
+
+        // Update data boxes to show real extracted data
+        function updateDataBoxesWithRealData() {
+            const boxesContainer = document.getElementById('data-boxes-layer');
+            if (!boxesContainer || chartDataPoints.length === 0) return;
+
+            // Clear and rebuild boxes with real data
+            boxesContainer.innerHTML = '';
+
+            chartDataPoints.forEach((data, index) => {
+                if (index >= 7) return; // Max 7 boxes
+
+                const box = document.createElement('div');
+                box.id = `data-box-${index}`;
+                box.className = 'chart-data-box visible';
+
+                box.innerHTML = `
+                    <div class="box-header">
+                        <span class="box-flight">${data.flight}</span>
+                        <span class="box-route">${data.route}</span>
+                    </div>
+                    <div class="box-date">${data.date}</div>
+                    <div class="box-metrics">
+                        <div class="metric-item">
+                            <span class="metric-label">LST-SOLD</span>
+                            <span class="metric-value cyan">${data.lstSold}</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">TO-DAY</span>
+                            <span class="metric-value ${data.toDay > 5 ? 'green' : ''}">${data.toDay}</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Y-DAY</span>
+                            <span class="metric-value">${data.yDay}</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">WEEKLY</span>
+                            <span class="metric-value ${data.weekly > 30 ? 'cyan' : 'yellow'}">${data.weekly}</span>
+                        </div>
+                        <div class="metric-item" style="grid-column: span 2;">
+                            <span class="metric-label">LOWEST AVAIL</span>
+                            <span class="metric-value ${data.lowestAvail === 'CLOSED' ? 'yellow' : 'green'}">${data.lowestAvail}</span>
+                        </div>
+                    </div>
+                `;
+
+                // Position the box
+                if (bookingChart) {
+                    const chartArea = bookingChart.chartArea;
+                    const meta = bookingChart.getDatasetMeta(0);
+                    const point = meta.data[index];
+
+                    if (point && chartArea) {
+                        const x = point.x;
+                        const y = point.y;
+                        const isAbove = index % 2 === 0;
+                        const offsetY = isAbove ? -130 : 30;
+
+                        let adjustedX = x - 70;
+                        if (adjustedX < 60) adjustedX = 60;
+                        if (adjustedX > chartArea.right - 150) adjustedX = chartArea.right - 150;
+
+                        box.style.left = adjustedX + 'px';
+                        box.style.top = (y + offsetY + 60) + 'px';
+                    }
+                }
+
+                boxesContainer.appendChild(box);
+            });
+        }
+
+        // Restart chart animation
+        function restartChartAnimation() {
+            // Clear existing boxes
+            const boxesContainer = document.getElementById('data-boxes-layer');
+            if (boxesContainer) boxesContainer.innerHTML = '';
+
+            // Reset scan line
+            const scanLine = document.getElementById('scan-line');
+            if (scanLine) {
+                scanLine.classList.remove('animating');
+                void scanLine.offsetWidth; // Trigger reflow
+                scanLine.classList.add('animating');
+            }
+
+            // Reinitialize chart
+            if (bookingChart) {
+                bookingChart.destroy();
+                bookingChart = null;
+            }
+            initBookingChart();
+        }
+
+        // Initialize chart on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(initBookingChart, 500);
+            // Restart animation every 30 seconds
+            setInterval(restartChartAnimation, 30000);
+        });
+
+        // Load cached data from last run (dashboard_status.json)
+        async function loadCachedData() {
+            try {
+                // Try to load from dashboard_status.json (same directory)
+                const response = await fetch('dashboard_status.json?t=' + Date.now(), {
+                    cache: 'no-store'
+                });
+                if (response.ok) {
+                    lastRunData = await response.json();
+                    console.log('[Dashboard] Loaded cached data from last run');
+
+                    // If we're offline and have cached data, use it
+                    if (!isOnline && lastRunData) {
+                        lastData = lastRunData;
+                        updateDashboard(lastRunData);
+                        updateRealFlights();
+
+                        // Update status badge to show it's from cached data
+                        const statusBadge = document.getElementById('status-badge');
+                        if (statusBadge) {
+                            statusBadge.textContent = 'LAST RUN';
+                            statusBadge.className = 'status-badge completed';
+                        }
+                    }
+                }
+            } catch (e) {
+                console.log('[Dashboard] No cached data available');
+            }
+        }
+
+        async function fetchStatus() {
+            try {
+                // Use AbortController for 5-second timeout to fail fast when tunnel is dead
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 5000);
+
+                const response = await fetch(API_BASE + '/status?t=' + Date.now(), {
+                    cache: 'no-store',
+                    signal: controller.signal
+                });
+                clearTimeout(timeoutId);
+
+                const data = await response.json();
+                isOnline = true;
+                lastData = data;
+                updateDashboard(data);
+                updateRealFlights();  // Update data stream with live data
+            } catch (e) {
+                console.error('Fetch error:', e);
+                isOnline = false;
+
+                // If we have cached data from last run, use it
+                if (lastRunData) {
+                    lastData = lastRunData;
+                    updateDashboard(lastRunData);
+                    updateRealFlights();
+
+                    // Show it's from cached/last run data
+                    document.getElementById('status-badge').textContent = 'LAST RUN';
+                    document.getElementById('status-badge').className = 'status-badge completed';
+                } else {
+                    document.getElementById('status-badge').textContent = 'OFFLINE';
+                    document.getElementById('status-badge').className = 'status-badge no_data';
+                }
+            }
+        }
+
+        // Initial load: First load cached data, then try live API
+        loadCachedData().then(() => {
+            fetchStatus();
+        });
+        setInterval(fetchStatus, 3000);  // Update every 3 seconds
+    </script>
+</body>
+</html>

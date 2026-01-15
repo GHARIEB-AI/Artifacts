@@ -1,0 +1,57 @@
+2026-01-10 08:37:09 | INFO     | ======================================================================
+2026-01-10 08:37:09 | INFO     | Load Factor Scraper Started - Route: DMM-CAI
+2026-01-10 08:37:09 | INFO     | Log file: D:\CODERED\LAB\Artifacts\run_generated_100126_at_08.36\logs\LF_DMM-CAI_20260110_083709.log
+2026-01-10 08:37:09 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-10 08:37:09 | INFO     | ======================================================================
+2026-01-10 08:37:09 | INFO     | Starting LF search for route: DMM-CAI
+2026-01-10 08:37:09 | INFO     | [START] LF Search
+2026-01-10 08:37:10 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-10 08:37:10 | INFO     | [DAY_START] Processing 20JAN
+2026-01-10 08:37:10 | INFO     | [lf.day.start] Processing DMM-CAI for 20JAN
+2026-01-10 08:37:11 | INFO     | [lf.day.flights_found] Found 1 flights on 20JAN
+2026-01-10 08:37:13 | INFO     | [lf.flight.extracted] SM434 on 20JAN: BKG=42, LF=24.0%
+2026-01-10 08:37:17 | INFO     | [SUCCESS] Day 20JAN
+2026-01-10 08:37:17 | INFO     | [DAY_START] Processing 19JAN
+2026-01-10 08:37:17 | INFO     | [lf.day.start] Processing DMM-CAI for 19JAN
+2026-01-10 08:37:17 | WARNING  | [lf.day.no_flights] No direct flights on 19JAN
+2026-01-10 08:37:18 | INFO     | [SUCCESS] Day 19JAN
+2026-01-10 08:37:18 | INFO     | [DAY_START] Processing 18JAN
+2026-01-10 08:37:18 | INFO     | [lf.day.start] Processing DMM-CAI for 18JAN
+2026-01-10 08:37:19 | WARNING  | [lf.day.no_flights] No direct flights on 18JAN
+2026-01-10 08:37:19 | INFO     | [SUCCESS] Day 18JAN
+2026-01-10 08:37:19 | INFO     | [DAY_START] Processing 17JAN
+2026-01-10 08:37:19 | INFO     | [lf.day.start] Processing DMM-CAI for 17JAN
+2026-01-10 08:37:20 | INFO     | [lf.day.flights_found] Found 1 flights on 17JAN
+2026-01-10 08:37:22 | INFO     | [lf.flight.extracted] SM434 on 17JAN: BKG=23, LF=13.1%
+2026-01-10 08:37:26 | INFO     | [SUCCESS] Day 17JAN
+2026-01-10 08:37:26 | INFO     | [DAY_START] Processing 16JAN
+2026-01-10 08:37:26 | INFO     | [lf.day.start] Processing DMM-CAI for 16JAN
+2026-01-10 08:37:27 | INFO     | [lf.day.flights_found] Found 1 flights on 16JAN
+2026-01-10 08:37:29 | INFO     | [lf.flight.extracted] SM434 on 16JAN: BKG=65, LF=38.7%
+2026-01-10 08:37:34 | INFO     | [SUCCESS] Day 16JAN
+2026-01-10 08:37:34 | INFO     | [DAY_START] Processing 15JAN
+2026-01-10 08:37:34 | INFO     | [lf.day.start] Processing DMM-CAI for 15JAN
+2026-01-10 08:37:35 | INFO     | [lf.day.flights_found] Found 1 flights on 15JAN
+2026-01-10 08:37:37 | INFO     | [lf.flight.extracted] SM434 on 15JAN: BKG=52, LF=29.7%
+2026-01-10 08:37:41 | INFO     | [SUCCESS] Day 15JAN
+2026-01-10 08:37:41 | INFO     | [DAY_START] Processing 14JAN
+2026-01-10 08:37:41 | INFO     | [lf.day.start] Processing DMM-CAI for 14JAN
+2026-01-10 08:37:42 | WARNING  | [lf.day.no_flights] No direct flights on 14JAN
+2026-01-10 08:37:43 | INFO     | [SUCCESS] Day 14JAN
+2026-01-10 08:37:43 | INFO     | [DAY_START] Processing 13JAN
+2026-01-10 08:37:43 | INFO     | [lf.day.start] Processing DMM-CAI for 13JAN
+2026-01-10 08:37:44 | INFO     | [lf.day.flights_found] Found 1 flights on 13JAN
+2026-01-10 08:37:46 | INFO     | [lf.flight.extracted] SM434 on 13JAN: BKG=37, LF=21.1%
+2026-01-10 08:37:49 | INFO     | [SUCCESS] Day 13JAN
+2026-01-10 08:37:49 | INFO     | [DAY_START] Processing 12JAN
+2026-01-10 08:37:49 | INFO     | [lf.day.start] Processing DMM-CAI for 12JAN
+2026-01-10 08:37:50 | WARNING  | [lf.day.no_flights] No direct flights on 12JAN
+2026-01-10 08:37:51 | INFO     | [SUCCESS] Day 12JAN
+2026-01-10 08:37:51 | INFO     | [DAY_START] Processing 11JAN
+2026-01-10 08:37:51 | INFO     | [lf.day.start] Processing DMM-CAI for 11JAN
+2026-01-10 08:37:52 | WARNING  | [lf.day.no_flights] No direct flights on 11JAN
+2026-01-10 08:37:52 | INFO     | [SUCCESS] Day 11JAN
+2026-01-10 08:37:52 | INFO     | [SUCCESS] LF Search Complete
+2026-01-10 08:37:54 | INFO     | [Worker_9233] Completed: DMM-CAI - 10 results, 0 errors
+2026-01-10 08:37:54 | INFO     | [Worker_9233] Processing: HBE-JED
+2026-01-10 08:37:54 | INFO     |   Tier 0: Range 1, Chunk 2/2 (11 days)

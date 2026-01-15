@@ -1,0 +1,45 @@
+2026-01-01 08:27:48 | INFO     | ======================================================================
+2026-01-01 08:27:48 | INFO     | Load Factor Scraper Started - Route: JED-LXR
+2026-01-01 08:27:48 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_010126_at_08.01\logs\LF_JED-LXR_20260101_082748.log
+2026-01-01 08:27:48 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2026-01-01 08:27:48 | INFO     | ======================================================================
+2026-01-01 08:27:48 | INFO     | Starting LF search for route: JED-LXR
+2026-01-01 08:27:48 | INFO     | [START] LF Search
+2026-01-01 08:27:50 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2026-01-01 08:27:50 | INFO     | [DAY_START] Processing 07FEB
+2026-01-01 08:27:50 | INFO     | [lf.day.start] Processing JED-LXR for 07FEB
+2026-01-01 08:27:51 | WARNING  | [lf.day.no_flights] No direct flights on 07FEB
+2026-01-01 08:27:52 | INFO     | [SUCCESS] Day 07FEB
+2026-01-01 08:27:52 | INFO     | [DAY_START] Processing 06FEB
+2026-01-01 08:27:52 | INFO     | [lf.day.start] Processing JED-LXR for 06FEB
+2026-01-01 08:27:53 | WARNING  | [lf.day.no_flights] No direct flights on 06FEB
+2026-01-01 08:27:53 | INFO     | [SUCCESS] Day 06FEB
+2026-01-01 08:27:53 | INFO     | [DAY_START] Processing 05FEB
+2026-01-01 08:27:53 | INFO     | [lf.day.start] Processing JED-LXR for 05FEB
+2026-01-01 08:27:54 | WARNING  | [lf.day.no_flights] No direct flights on 05FEB
+2026-01-01 08:27:54 | INFO     | [SUCCESS] Day 05FEB
+2026-01-01 08:27:54 | INFO     | [DAY_START] Processing 04FEB
+2026-01-01 08:27:54 | INFO     | [lf.day.start] Processing JED-LXR for 04FEB
+2026-01-01 08:27:55 | INFO     | [lf.day.flights_found] Found 1 flights on 04FEB
+2026-01-01 08:27:57 | INFO     | [lf.flight.extracted] SM984 on 04FEB: BKG=0, LF=0.0%
+2026-01-01 08:27:58 | INFO     | [SUCCESS] Day 04FEB
+2026-01-01 08:27:58 | INFO     | [DAY_START] Processing 03FEB
+2026-01-01 08:27:58 | INFO     | [lf.day.start] Processing JED-LXR for 03FEB
+2026-01-01 08:27:59 | INFO     | [lf.day.flights_found] Found 4 flights on 03FEB
+2026-01-01 08:28:02 | INFO     | [lf.flight.extracted] SM482 on 03FEB: BKG=0, LF=0.0%
+2026-01-01 08:28:05 | INFO     | [lf.flight.extracted] SM430 on 03FEB: BKG=0, LF=0.0%
+2026-01-01 08:28:09 | INFO     | [lf.flight.extracted] SM982 on 03FEB: BKG=0, LF=0.0%
+2026-01-01 08:28:12 | INFO     | [lf.flight.extracted] SM484 on 03FEB: BKG=0, LF=0.0%
+2026-01-01 08:28:13 | INFO     | [SUCCESS] Day 03FEB
+2026-01-01 08:28:13 | INFO     | [DAY_START] Processing 02FEB
+2026-01-01 08:28:13 | INFO     | [lf.day.start] Processing JED-LXR for 02FEB
+2026-01-01 08:28:14 | WARNING  | [lf.day.no_flights] No direct flights on 02FEB
+2026-01-01 08:28:14 | INFO     | [SUCCESS] Day 02FEB
+2026-01-01 08:28:14 | INFO     | [DAY_START] Processing 01FEB
+2026-01-01 08:28:14 | INFO     | [lf.day.start] Processing JED-LXR for 01FEB
+2026-01-01 08:28:15 | WARNING  | [lf.day.no_flights] No direct flights on 01FEB
+2026-01-01 08:28:15 | INFO     | [SUCCESS] Day 01FEB
+2026-01-01 08:28:15 | INFO     | [SUCCESS] LF Search Complete
+2026-01-01 08:28:17 | INFO     | [Worker_9223] Completed: JED-LXR - 7 results, 0 errors
+2026-01-01 08:28:17 | INFO     | [Worker_9223] Processing: DMM-ATZ
+2026-01-01 08:28:17 | INFO     |   Tier 0: Range 2, Chunk 4/4 (7 days)

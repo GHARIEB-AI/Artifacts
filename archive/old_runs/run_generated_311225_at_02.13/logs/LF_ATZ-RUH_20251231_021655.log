@@ -1,0 +1,37 @@
+2025-12-31 02:16:55 | INFO     | ======================================================================
+2025-12-31 02:16:55 | INFO     | Load Factor Scraper Started - Route: ATZ-RUH
+2025-12-31 02:16:55 | INFO     | Log file: D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_02.13\logs\LF_ATZ-RUH_20251231_021655.log
+2025-12-31 02:16:55 | INFO     | Enhanced logging: Capturing both logging.info() and print()
+2025-12-31 02:16:55 | INFO     | ======================================================================
+2025-12-31 02:16:55 | INFO     | Starting LF search for route: ATZ-RUH
+2025-12-31 02:16:55 | INFO     | [START] LF Search
+2025-12-31 02:16:58 | INFO     | [HEALTH CHECK] [OK] Chrome connection is healthy
+2025-12-31 02:16:58 | INFO     | [DAY_START] Processing 28FEB
+2025-12-31 02:16:58 | INFO     | [lf.day.start] Processing ATZ-RUH for 28FEB
+2025-12-31 02:17:00 | WARNING  | [lf.day.no_flights] No direct flights on 28FEB
+2025-12-31 02:17:00 | INFO     | [SUCCESS] Day 28FEB
+2025-12-31 02:17:00 | INFO     | [DAY_START] Processing 27FEB
+2025-12-31 02:17:00 | INFO     | [lf.day.start] Processing ATZ-RUH for 27FEB
+2025-12-31 02:17:02 | WARNING  | [lf.day.no_flights] No direct flights on 27FEB
+2025-12-31 02:17:02 | INFO     | [SUCCESS] Day 27FEB
+2025-12-31 02:17:02 | INFO     | [DAY_START] Processing 26FEB
+2025-12-31 02:17:02 | INFO     | [lf.day.start] Processing ATZ-RUH for 26FEB
+2025-12-31 02:17:05 | WARNING  | [lf.day.no_flights] No direct flights on 26FEB
+2025-12-31 02:17:05 | INFO     | [SUCCESS] Day 26FEB
+2025-12-31 02:17:05 | INFO     | [DAY_START] Processing 25FEB
+2025-12-31 02:17:05 | INFO     | [lf.day.start] Processing ATZ-RUH for 25FEB
+2025-12-31 02:17:12 | INFO     | [lf.day.flights_found] Found 1 flights on 25FEB
+2025-12-31 02:17:17 | INFO     | [lf.flight.extracted] SM465 on 25FEB: BKG=5, LF=2.8%
+2025-12-31 02:17:25 | ERROR    | Atomic write failed for D:\CODERED\LAB\market_insights\outputs\run_generated_311225_at_02.13\checkpoints\flight_booking_data.json: [WinError 32] The process cannot access the file because it is being used by another process: 'D:\\CODERED\\LAB\\market_insights\\outputs\\run_generated_311225_at_02.13\\checkpoints\\flight_booking_data.tmp' -> 'D:\\CODERED\\LAB\\market_insights\\outputs\\run_generated_311225_at_02.13\\checkpoints\\flight_booking_data.json'
+2025-12-31 02:17:25 | INFO     | [SUCCESS] Day 25FEB
+2025-12-31 02:17:25 | INFO     | [DAY_START] Processing 24FEB
+2025-12-31 02:17:25 | INFO     | [lf.day.start] Processing ATZ-RUH for 24FEB
+2025-12-31 02:17:27 | INFO     | [lf.day.flights_found] Found 1 flights on 24FEB
+2025-12-31 02:17:29 | INFO     | [lf.flight.extracted] SM463 on 24FEB: BKG=2, LF=1.1%
+2025-12-31 02:17:34 | INFO     | [SUCCESS] Day 24FEB
+2025-12-31 02:17:34 | INFO     | [DAY_START] Processing 23FEB
+2025-12-31 02:17:34 | INFO     | [lf.day.start] Processing ATZ-RUH for 23FEB
+2025-12-31 02:17:36 | WARNING  | [lf.day.no_flights] No direct flights on 23FEB
+2025-12-31 02:17:36 | INFO     | [SUCCESS] Day 23FEB
+2025-12-31 02:17:36 | INFO     | [DAY_START] Processing 22FEB
+2025-12-31 02:17:36 | INFO     | [lf.day.start] Processing ATZ-RUH for 22FEB
