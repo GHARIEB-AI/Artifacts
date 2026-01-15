@@ -1403,7 +1403,7 @@
     <div class="header">
         <!-- THE GATE - Far Left -->
         <a href="https://gharieb-ai.github.io/AirCairo/" target="_blank" class="gate-btn">
-            <img src="web_purple.png" alt="Gate">
+            <img src="/web_purple.png" alt="Gate">
         </a>
         <div class="logo-container">
             <img src="logo_white.svg" alt="Air Cairo" class="logo-img">
@@ -1657,7 +1657,7 @@
         // Base URL for API calls:
         // - Local server: falls back to window.location.origin
         // - GitHub Pages: injected at runtime into the template placeholder
-        const API_BASE_OVERRIDE = '';
+        const API_BASE_OVERRIDE = '__API_BASE__';
         const API_BASE = (() => {
             try {
                 if (API_BASE_OVERRIDE && !API_BASE_OVERRIDE.startsWith('__')) {
@@ -2558,8 +2558,41 @@
         }
 
         async function fetchStatus() {
+            // On GitHub Pages: Always use dashboard_status.json (no live API)
+            const isGitHubPages = window.location.hostname.includes('github.io');
+            
+            if (isGitHubPages) {
+                // GitHub Pages mode: Read from local JSON file
+                try {
+                    const response = await fetch('dashboard_status.json?t=' + Date.now(), {
+                        cache: 'no-store'
+                    });
+                    if (response.ok) {
+                        const data = await response.json();
+                        lastData = data;
+                        updateDashboard(data);
+                        updateRealFlights();
+                        
+                        // Show status based on data
+                        const statusBadge = document.getElementById('status-badge');
+                        if (data.status === 'RUNNING') {
+                            statusBadge.textContent = 'LAST RUN';
+                            statusBadge.className = 'status-badge completed';
+                        } else {
+                            statusBadge.textContent = data.status || 'LAST RUN';
+                            statusBadge.className = 'status-badge completed';
+                        }
+                    }
+                } catch (e) {
+                    console.error('Failed to load dashboard_status.json:', e);
+                    document.getElementById('status-badge').textContent = 'OFFLINE';
+                    document.getElementById('status-badge').className = 'status-badge no_data';
+                }
+                return;
+            }
+            
+            // Local mode: Try live API
             try {
-                // Use AbortController for 5-second timeout to fail fast when tunnel is dead
                 const controller = new AbortController();
                 const timeoutId = setTimeout(() => controller.abort(), 5000);
 
@@ -2573,18 +2606,15 @@
                 isOnline = true;
                 lastData = data;
                 updateDashboard(data);
-                updateRealFlights();  // Update data stream with live data
+                updateRealFlights();
             } catch (e) {
                 console.error('Fetch error:', e);
                 isOnline = false;
 
-                // If we have cached data from last run, use it
                 if (lastRunData) {
                     lastData = lastRunData;
                     updateDashboard(lastRunData);
                     updateRealFlights();
-
-                    // Show it's from cached/last run data
                     document.getElementById('status-badge').textContent = 'LAST RUN';
                     document.getElementById('status-badge').className = 'status-badge completed';
                 } else {
