@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-15T09:08:52.737494",
+  "timestamp": "2026-01-15T10:02:50.516178",
   "status": "COMPLETED",
   "running": false,
   "active_workers": 0,
@@ -80,16 +80,16 @@
   },
   "progress": {
     "lf": 100.0,
-    "oal": 90.5,
+    "oal": 100,
     "oal_is_estimated": false,
-    "oal_status": "running",
+    "oal_status": "completed",
     "oal_current_pass": 2,
     "oal_total_passes": 2,
     "oal_routes_completed": 44,
     "oal_routes_total": 44,
-    "excel": 0.0,
-    "overall": 81.7,
-    "run_completed": false
+    "excel": 100.0,
+    "overall": 100.0,
+    "run_completed": true
   },
   "tasks": {
     "total": 220,
@@ -412,14 +412,18 @@
     }
   },
   "running_tasks": [],
-  "excel_files": [],
-  "excel_count": 0,
+  "excel_files": [
+    "EGY_TO_KSA_15JAN26_TO_28FEB26_generated_at_15jan_10.00.xlsx",
+    "KSA_TO_EGY_15JAN26_TO_28FEB26_generated_at_15jan_09.59.xlsx",
+    "LOAD_FACTOR_SUMMARY_15-01-26_TO_15-JAN-26_generated_at_15jan_10.02.xlsx"
+  ],
+  "excel_count": 3,
   "speed_metrics": {
     "speed_per_minute": 0.0,
     "speed_per_hour": 0.0,
     "recent_errors": 0,
     "error_rate": 0,
-    "data_points": 30
+    "data_points": 28
   },
   "eta": {
     "lf_eta": null,
@@ -435,31 +439,33 @@
     "routes_completed_in_pass": 44,
     "routes_total_per_pass": 44,
     "is_estimated": false,
-    "status": "running"
+    "status": "completed"
   },
   "live_logs": {
     "lines": [
-      "[LF] Skipping 15JAN (Today) - will be processed by supplement scan",
-      "[LF] Results summary:",
-      "2026-01-22: 7 flights",
-      "2026-01-21: 5 flights",
-      "2026-01-20: 7 flights",
-      "2026-01-19: 3 flights",
-      "2026-01-18: 5 flights",
-      "2026-01-17: 4 flights",
-      "2026-01-16: 5 flights",
-      "2026-01-15 09:01:39 | INFO     | [SUCCESS] LF Search Complete",
-      "============================================================",
-      "[Worker_9225] ✓ COMPLETED: CAI-JED",
-      "Results: 7 dates",
-      "Errors: 0 dates",
-      "Total Processed: 16 groups",
-      "============================================================",
-      "2026-01-15 09:01:41 | INFO     | [Worker_9225] Completed: CAI-JED - 7 results, 0 errors",
-      "[Worker_9225] Waiting for tasks..."
+      "2026-01-15 08:58:46 | WARNING  | [lf.day.no_flights] No direct flights on 19JAN",
+      "2026-01-15 08:58:46 | INFO     | [SUCCESS] Day 19JAN",
+      "2026-01-15 08:58:46 | INFO     | [DAY_START] Processing 18JAN",
+      "2026-01-15 08:58:46 | INFO     | [lf.day.start] Processing ATZ-ELQ for 18JAN",
+      "2026-01-15 08:58:48 | WARNING  | [lf.day.no_flights] No direct flights on 18JAN",
+      "2026-01-15 08:58:48 | INFO     | [SUCCESS] Day 18JAN",
+      "2026-01-15 08:58:48 | INFO     | [DAY_START] Processing 17JAN",
+      "2026-01-15 08:58:48 | INFO     | [lf.day.start] Processing ATZ-ELQ for 17JAN",
+      "2026-01-15 08:58:49 | INFO     | [lf.day.flights_found] Found 1 flights on 17JAN",
+      "2026-01-15 08:58:52 | INFO     | [lf.flight.extracted] SM435 on 17JAN: BKG=131, LF=73.2%",
+      "2026-01-15 08:59:06 | INFO     | [SUCCESS] Day 17JAN",
+      "2026-01-15 08:59:06 | INFO     | [DAY_START] Processing 16JAN",
+      "2026-01-15 08:59:06 | INFO     | [lf.day.start] Processing ATZ-ELQ for 16JAN",
+      "2026-01-15 08:59:09 | INFO     | [lf.day.start] Processing ATZ-ELQ for 16JAN",
+      "2026-01-15 08:59:10 | WARNING  | [lf.day.no_flights] No direct flights on 16JAN",
+      "2026-01-15 08:59:11 | INFO     | [SUCCESS] Day 16JAN",
+      "2026-01-15 08:59:11 | INFO     | [SUCCESS] LF Search Complete",
+      "2026-01-15 08:59:13 | INFO     | [Worker_9222] Completed: ATZ-ELQ - 7 results, 0 errors",
+      "2026-01-15 09:59:58 | INFO     | [Worker_9222] Shutdown signal received, exiting...",
+      "2026-01-15 09:59:58 | INFO     | [Worker_9222] Finished. Processed 27 groups."
     ],
-    "file": "9225_stdout.log",
-    "total_lines": 2442
+    "file": "LF_ATZ-ELQ_20260115_085659.log",
+    "total_lines": 52
   },
   "flight_booking_data": {
     "flights": [

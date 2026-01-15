@@ -687,7 +687,7 @@
     </div>
 
     <script>
-        const API_BASE = '';
+        const API_BASE = '__API_BASE__';
         let lastData = null;
         let lastRunData = null;
         let isOnline = false;
@@ -874,29 +874,13 @@
             });
         });
 
-        // Initial load: GitHub Pages uses static JSON
-        if (window.location.hostname.includes('github.io')) {
-            function loadData() {
-                fetch('dashboard_status.json?t=' + Date.now())
-                    .then(r => r.json())
-                    .then(data => {
-                        lastData = data;
-                        updateDashboard(data);
-                        const statusBadge = document.getElementById('status-badge');
-                        const status = data.status || 'UNKNOWN';
-                        statusBadge.textContent = status;
-                        statusBadge.className = 'status-badge ' + status.toLowerCase();
-                    })
-                    .catch(e => {
-                        document.getElementById('status-badge').textContent = 'OFFLINE';
-                    });
-            }
-            loadData();
-            setInterval(loadData, 5000);
-        } else {
-            loadCachedData().then(() => { fetchStatus(); });
-            setInterval(fetchStatus, 5000);
-        }
+        // Initial load
+        loadCachedData().then(() => {
+            fetchStatus();
+        });
+
+        // Auto refresh every 5 seconds (slightly longer for mobile battery)
+        setInterval(fetchStatus, 5000);
     </script>
 
     <!-- UNIFIED PAGE LOADER SCRIPT -->
