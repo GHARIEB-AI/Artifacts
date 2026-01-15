@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-15T09:04:25.313683",
+  "timestamp": "2026-01-15T09:08:52.737494",
   "status": "COMPLETED",
   "running": false,
   "active_workers": 0,
@@ -80,15 +80,15 @@
   },
   "progress": {
     "lf": 100.0,
-    "oal": 90.4,
+    "oal": 90.5,
     "oal_is_estimated": false,
     "oal_status": "running",
     "oal_current_pass": 2,
     "oal_total_passes": 2,
-    "oal_routes_completed": 36,
+    "oal_routes_completed": 44,
     "oal_routes_total": 44,
     "excel": 0.0,
-    "overall": 81.6,
+    "overall": 81.7,
     "run_completed": false
   },
   "tasks": {
@@ -432,7 +432,7 @@
   "oal_details": {
     "current_pass": 2,
     "total_passes": 2,
-    "routes_completed_in_pass": 36,
+    "routes_completed_in_pass": 44,
     "routes_total_per_pass": 44,
     "is_estimated": false,
     "status": "running"
