@@ -98,34 +98,33 @@
             margin-left: 10px;
         }
 
-        /* GATE Button - Fixed Top Corner (Final Fix) */
+        /* GATE Button - Inside Header (No Floating) */
         .gate-btn {
-            position: fixed !important;
-            top: 20px !important;
-            right: 20px !important;
-            width: 50px !important;
-            height: 50px !important;
-            border-radius: 50% !important;
-            background-color: #462B73 !important;
-            background-image: url('web_purple.png') !important;
-            background-size: 100% 100% !important;
-            background-position: center !important;
-            background-repeat: no-repeat !important;
-            border: none !important;
-            padding: 0 !important;
-            margin: 0 !important;
-            display: block !important;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4) !important;
-            outline: none !important;
-            text-decoration: none !important;
-            -webkit-tap-highlight-color: transparent !important;
-            z-index: 999999 !important;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #462B73;
+            background-image: url('web_purple.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border: none;
+            padding: 0;
+            margin: 0;
+            display: block;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            outline: none;
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
             cursor: pointer;
         }
 
         body.en .gate-btn {
-            right: auto !important;
-            left: 20px !important;
+            right: auto;
+            left: 10px;
         }
 
         /* Stats Title */
@@ -603,10 +602,9 @@
         <div class="loader-dots"><span></span><span></span><span></span></div>
     </div>
 
-    <!-- GATE Button - Fixed Top Corner -->
-    <a href="index.html" class="gate-btn" title="GATE" aria-label="GATE"></a>
-
     <header class="header">
+        <!-- GATE Button - Inside Header -->
+        <a href="index.html" class="gate-btn" title="GATE" aria-label="GATE"></a>
         <div class="header-text">
             <h1><span class="ar-text">رصد حركة الاسعار ✈️</span><span class="en-text">Threat Alert Report ✈️</span></h1>
             <div class="header-meta">
