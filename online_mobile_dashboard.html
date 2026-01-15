@@ -901,9 +901,27 @@
         });
 
         // Initial load
-        loadCachedData().then(() => {
-            fetchStatus();
-        });
+        if (window.location.hostname.includes('github.io')) {
+            // GitHub Pages: Direct load from JSON
+            fetch('dashboard_status.json?t=' + Date.now())
+                .then(r => r.json())
+                .then(data => {
+                    console.log('[Mobile GitHub Pages] Data loaded');
+                    lastData = data;
+                    lastRunData = data;
+                    updateDashboard(data);
+                    document.getElementById('status-badge').textContent = 'LAST RUN';
+                    document.getElementById('status-badge').className = 'status-badge completed';
+                })
+                .catch(e => {
+                    console.error('[Mobile] Failed:', e);
+                    document.getElementById('status-badge').textContent = 'OFFLINE';
+                });
+        } else {
+            loadCachedData().then(() => {
+                fetchStatus();
+            });
+        }
 
         // Auto refresh every 5 seconds (slightly longer for mobile battery)
         setInterval(fetchStatus, 5000);

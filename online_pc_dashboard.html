@@ -1403,7 +1403,7 @@
     <div class="header">
         <!-- THE GATE - Far Left -->
         <a href="https://gharieb-ai.github.io/AirCairo/" target="_blank" class="gate-btn">
-            <img src="/web_purple.png" alt="Gate">
+            <img src="web_purple.png" alt="Gate">
         </a>
         <div class="logo-container">
             <img src="logo_white.svg" alt="Air Cairo" class="logo-img">
@@ -2625,10 +2625,40 @@
         }
 
         // Initial load: First load cached data, then try live API
-        loadCachedData().then(() => {
-            fetchStatus();
-        });
-        setInterval(fetchStatus, 3000);  // Update every 3 seconds
+        // On GitHub Pages: Load data immediately
+        if (window.location.hostname.includes('github.io')) {
+            // Direct load from JSON file
+            fetch('dashboard_status.json?t=' + Date.now())
+                .then(r => r.json())
+                .then(data => {
+                    console.log('[GitHub Pages] Data loaded:', data.status);
+                    lastData = data;
+                    lastRunData = data;
+                    updateDashboard(data);
+                    updateRealFlights();
+                    document.getElementById('status-badge').textContent = 'LAST RUN';
+                    document.getElementById('status-badge').className = 'status-badge completed';
+                })
+                .catch(e => {
+                    console.error('[GitHub Pages] Failed to load:', e);
+                    document.getElementById('status-badge').textContent = 'OFFLINE';
+                });
+            // Refresh every 30 seconds (not 3, since it's static)
+            setInterval(() => {
+                fetch('dashboard_status.json?t=' + Date.now())
+                    .then(r => r.json())
+                    .then(data => {
+                        lastData = data;
+                        updateDashboard(data);
+                    });
+            }, 30000);
+        } else {
+            // Local mode
+            loadCachedData().then(() => {
+                fetchStatus();
+            });
+            setInterval(fetchStatus, 3000);
+        }
     </script>
 
     <!-- UNIFIED PAGE LOADER SCRIPT -->
