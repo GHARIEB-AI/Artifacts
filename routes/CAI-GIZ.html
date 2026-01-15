@@ -1771,20 +1771,19 @@
                 </button>
             </div>
             <div class="filter-modal-body" id="dateFilterBody">
-                <div class="filter-tree">
-<div class="filter-tree-node" data-level="year"><div class="filter-tree-header" onclick="toggleTreeNode(this)"><span class="filter-tree-toggle">▼</span><div class="filter-tree-checkbox checked" onclick="event.stopPropagation(); toggleYearMonth(this, 'year')">✓</div><span class="filter-tree-label">2026</span></div><div class="filter-tree-children">
-<div class="filter-tree-node" data-level="month"><div class="filter-tree-header" onclick="toggleTreeNode(this)"><span class="filter-tree-toggle">▼</span><div class="filter-tree-checkbox checked" onclick="event.stopPropagation(); toggleYearMonth(this, 'month')">✓</div><span class="filter-tree-label">January</span></div><div class="filter-tree-children">
-<div class="filter-tree-day" data-date="2026-01-15" onclick="toggleDay(this)"><div class="filter-tree-checkbox checked">✓</div><span class="filter-tree-label">15</span></div>
-<div class="filter-tree-day" data-date="2026-01-17" onclick="toggleDay(this)"><div class="filter-tree-checkbox checked">✓</div><span class="filter-tree-label">17</span></div>
-<div class="filter-tree-day" data-date="2026-01-29" onclick="toggleDay(this)"><div class="filter-tree-checkbox checked">✓</div><span class="filter-tree-label">29</span></div>
-<div class="filter-tree-day" data-date="2026-01-31" onclick="toggleDay(this)"><div class="filter-tree-checkbox checked">✓</div><span class="filter-tree-label">31</span></div>
-</div></div>
-<div class="filter-tree-node" data-level="month"><div class="filter-tree-header" onclick="toggleTreeNode(this)"><span class="filter-tree-toggle">▼</span><div class="filter-tree-checkbox checked" onclick="event.stopPropagation(); toggleYearMonth(this, 'month')">✓</div><span class="filter-tree-label">February</span></div><div class="filter-tree-children">
-<div class="filter-tree-day" data-date="2026-02-05" onclick="toggleDay(this)"><div class="filter-tree-checkbox checked">✓</div><span class="filter-tree-label">05</span></div>
-<div class="filter-tree-day" data-date="2026-02-07" onclick="toggleDay(this)"><div class="filter-tree-checkbox checked">✓</div><span class="filter-tree-label">07</span></div>
-<div class="filter-tree-day" data-date="2026-02-12" onclick="toggleDay(this)"><div class="filter-tree-checkbox checked">✓</div><span class="filter-tree-label">12</span></div>
-</div></div>
-</div></div>
+                <div class="filter-year-header">2026</div>
+<div class="filter-month-header">January</div>
+<div class="filter-dates-grid">
+<label class="filter-date-item"><input type="checkbox" data-date="2026-01-15" checked><span>15 Jan</span></label>
+<label class="filter-date-item"><input type="checkbox" data-date="2026-01-17" checked><span>17 Jan</span></label>
+<label class="filter-date-item"><input type="checkbox" data-date="2026-01-29" checked><span>29 Jan</span></label>
+<label class="filter-date-item"><input type="checkbox" data-date="2026-01-31" checked><span>31 Jan</span></label>
+</div>
+<div class="filter-month-header">February</div>
+<div class="filter-dates-grid">
+<label class="filter-date-item"><input type="checkbox" data-date="2026-02-05" checked><span>05 Feb</span></label>
+<label class="filter-date-item"><input type="checkbox" data-date="2026-02-07" checked><span>07 Feb</span></label>
+<label class="filter-date-item"><input type="checkbox" data-date="2026-02-12" checked><span>12 Feb</span></label>
 </div>
             </div>
         </div>

@@ -1189,15 +1189,14 @@
                 </button>
             </div>
             <div class="filter-modal-body" id="dateFilterBody">
-                <div class="filter-tree">
-<div class="filter-tree-node" data-level="year"><div class="filter-tree-header" onclick="toggleTreeNode(this)"><span class="filter-tree-toggle">▼</span><div class="filter-tree-checkbox checked" onclick="event.stopPropagation(); toggleYearMonth(this, 'year')">✓</div><span class="filter-tree-label">2026</span></div><div class="filter-tree-children">
-<div class="filter-tree-node" data-level="month"><div class="filter-tree-header" onclick="toggleTreeNode(this)"><span class="filter-tree-toggle">▼</span><div class="filter-tree-checkbox checked" onclick="event.stopPropagation(); toggleYearMonth(this, 'month')">✓</div><span class="filter-tree-label">January</span></div><div class="filter-tree-children">
-<div class="filter-tree-day" data-date="2026-01-22" onclick="toggleDay(this)"><div class="filter-tree-checkbox checked">✓</div><span class="filter-tree-label">22</span></div>
-</div></div>
-<div class="filter-tree-node" data-level="month"><div class="filter-tree-header" onclick="toggleTreeNode(this)"><span class="filter-tree-toggle">▼</span><div class="filter-tree-checkbox checked" onclick="event.stopPropagation(); toggleYearMonth(this, 'month')">✓</div><span class="filter-tree-label">February</span></div><div class="filter-tree-children">
-<div class="filter-tree-day" data-date="2026-02-19" onclick="toggleDay(this)"><div class="filter-tree-checkbox checked">✓</div><span class="filter-tree-label">19</span></div>
-</div></div>
-</div></div>
+                <div class="filter-year-header">2026</div>
+<div class="filter-month-header">January</div>
+<div class="filter-dates-grid">
+<label class="filter-date-item"><input type="checkbox" data-date="2026-01-22" checked><span>22 Jan</span></label>
+</div>
+<div class="filter-month-header">February</div>
+<div class="filter-dates-grid">
+<label class="filter-date-item"><input type="checkbox" data-date="2026-02-19" checked><span>19 Feb</span></label>
 </div>
             </div>
         </div>
