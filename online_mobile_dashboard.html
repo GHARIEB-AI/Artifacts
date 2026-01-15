@@ -687,7 +687,7 @@
     </div>
 
     <script>
-        const API_BASE = '';
+        const API_BASE = '__API_BASE__';
         let lastData = null;
         let lastRunData = null;
         let isOnline = false;
@@ -836,6 +836,32 @@
         }
 
         async function fetchStatus() {
+            // On GitHub Pages: Always use dashboard_status.json (no live API)
+            const isGitHubPages = window.location.hostname.includes('github.io');
+            
+            if (isGitHubPages) {
+                try {
+                    const response = await fetch('dashboard_status.json?t=' + Date.now(), {
+                        cache: 'no-store'
+                    });
+                    if (response.ok) {
+                        const data = await response.json();
+                        lastData = data;
+                        updateDashboard(data);
+                        
+                        const statusBadge = document.getElementById('status-badge');
+                        statusBadge.textContent = 'LAST RUN';
+                        statusBadge.className = 'status-badge completed';
+                    }
+                } catch (e) {
+                    console.error('Failed to load dashboard_status.json:', e);
+                    document.getElementById('status-badge').textContent = 'OFFLINE';
+                    document.getElementById('status-badge').className = 'status-badge no_data';
+                }
+                return;
+            }
+            
+            // Local mode: Try live API
             try {
                 const controller = new AbortController();
                 const timeoutId = setTimeout(() => controller.abort(), 5000);
