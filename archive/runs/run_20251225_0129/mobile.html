@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Threat Alert Report - Mobile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #ecf0f1;
+            min-height: 100vh;
+            padding-bottom: 80px;
+        }
+
+        body.en {
+            direction: ltr;
+        }
+
+        .ar-text { display: inline; }
+        .en-text { display: none; }
+        body.en .ar-text { display: none; }
+        body.en .en-text { display: inline; }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            padding: 20px 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .header h1 {
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+
+        .header .subtitle {
+            font-size: 0.85em;
+            opacity: 0.8;
+        }
+
+        /* Language Toggle */
+        .lang-toggle {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            cursor: pointer;
+        }
+
+        body.en .lang-toggle {
+            left: auto;
+            right: 15px;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 10px;
+            background: rgba(0,0,0,0.2);
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            min-width: 80px;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .stat-item:active {
+            transform: scale(0.95);
+        }
+
+        .stat-item.active {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .stat-item.high { border-bottom: 3px solid #e74c3c; }
+        .stat-item.medium { border-bottom: 3px solid #f39c12; }
+        .stat-item.low { border-bottom: 3px solid #27ae60; }
+
+        .stat-count {
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 0.75em;
+            opacity: 0.8;
+            margin-top: 3px;
+        }
+
+        /* Filter Pills */
+        .filter-section {
+            padding: 15px;
+            background: rgba(0,0,0,0.1);
+        }
+
+        .filter-row {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 10px;
+        }
+
+        .filter-select {
+            flex: 1;
+            padding: 12px 15px;
+            border-radius: 25px;
+            border: none;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 0.95em;
+            appearance: none;
+            text-align: center;
+        }
+
+        .filter-select option {
+            background: #2c3e50;
+            color: white;
+        }
+
+        /* Content Area */
+        .content {
+            padding: 15px;
+        }
+
+        /* Flight Card */
+        .flight-card {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            border-radius: 15px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .flight-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: rgba(0,0,0,0.2);
+        }
+
+        .flight-name {
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+
+        .lf-badge {
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9em;
+        }
+
+        .lf-high { background: linear-gradient(135deg, #27ae60, #2ecc71); }
+        .lf-medium { background: linear-gradient(135deg, #f39c12, #e67e22); }
+        .lf-low { background: linear-gradient(135deg, #e74c3c, #c0392b); }
+
+        /* LF Details Grid */
+        .lf-details {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            padding: 12px;
+            background: rgba(0,0,0,0.15);
+        }
+
+        .lf-item {
+            text-align: center;
+            padding: 8px 5px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+        }
+
+        .lf-item-label {
+            font-size: 0.65em;
+            opacity: 0.7;
+            text-transform: uppercase;
+        }
+
+        .lf-item-value {
+            font-size: 0.95em;
+            font-weight: 600;
+            margin-top: 3px;
+        }
+
+        /* Threat Cards */
+        .threats-container {
+            padding: 10px;
+        }
+
+        .threat-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-right: 4px solid;
+        }
+
+        .threat-card.high { border-color: #e74c3c; }
+        .threat-card.medium { border-color: #f39c12; }
+        .threat-card.low { border-color: #27ae60; }
+
+        body.en .threat-card {
+            border-right: none;
+            border-left: 4px solid;
+        }
+        body.en .threat-card.high { border-color: #e74c3c; }
+        body.en .threat-card.medium { border-color: #f39c12; }
+        body.en .threat-card.low { border-color: #27ae60; }
+
+        /* Alternative route styles */
+        .threat-card.alternative {
+            background: rgba(108, 92, 231, 0.08);
+        }
+
+        .alt-badge {
+            display: inline-block;
+            background: #6c5ce7;
+            color: white;
+            font-size: 0.65em;
+            font-weight: 700;
+            padding: 2px 5px;
+            border-radius: 3px;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+
+        .threat-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .competitor-name {
+            font-weight: 700;
+            font-size: 1.05em;
+        }
+
+        .threat-level {
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.75em;
+            font-weight: 700;
+        }
+
+        .threat-level.high { background: #e74c3c; }
+        .threat-level.medium { background: #f39c12; }
+        .threat-level.low { background: #27ae60; }
+
+        .threat-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .detail-box {
+            background: rgba(0,0,0,0.2);
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .detail-label {
+            font-size: 0.7em;
+            opacity: 0.7;
+            margin-bottom: 5px;
+        }
+
+        .detail-value {
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        .detail-value.positive { color: #e74c3c; }
+        .detail-value.negative { color: #27ae60; }
+
+        /* Date Header */
+        .date-header {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            padding: 12px 15px;
+            border-radius: 10px;
+            margin: 15px 0 10px 0;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* Route Header */
+        .route-header {
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .route-name {
+            font-size: 1.3em;
+            font-weight: 700;
+        }
+
+        .route-flights {
+            font-size: 0.85em;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        /* Bottom Navigation */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0 20px 0;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+            z-index: 100;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 10px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .nav-item.active {
+            color: white;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .nav-icon {
+            font-size: 1.3em;
+            margin-bottom: 3px;
+        }
+
+        .nav-label {
+            font-size: 0.7em;
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 50px 20px;
+            opacity: 0.7;
+        }
+
+        .empty-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .flight-card, .threat-card {
+            animation: fadeIn 0.3s ease;
+        }
+
+        /* Hide sections based on filter */
+        .flight-card.hidden,
+        .threat-card.hidden,
+        [data-route].hidden,
+        [data-date].hidden {
+            display: none;
+        }
+
+        /* Desktop link */
+        .desktop-link {
+            display: block;
+            text-align: center;
+            padding: 15px;
+            color: #ffffff;
+            font-size: 0.85em;
+            text-decoration: none;
+        }
+
+        .desktop-link:hover {
+            color: white;
+        }
+    
+        /* Threat Level Color Overlay */
+        .threat-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .threat-overlay.active {
+            opacity: 1;
+        }
+        .threat-overlay.high {
+            background: radial-gradient(ellipse at center, rgba(220, 53, 69, 0.15) 0%, rgba(220, 53, 69, 0.05) 70%, transparent 100%);
+        }
+        .threat-overlay.medium {
+            background: radial-gradient(ellipse at center, rgba(255, 193, 7, 0.15) 0%, rgba(255, 193, 7, 0.05) 70%, transparent 100%);
+        }
+        .threat-overlay.low {
+            background: radial-gradient(ellipse at center, rgba(40, 167, 69, 0.15) 0%, rgba(40, 167, 69, 0.05) 70%, transparent 100%);
+        }
+
+    </style>
+</head>
+<body class="ar">
+    <div id="threatOverlay" class="threat-overlay"></div>
+    <!-- Header -->
+    <header class="header">
+        <button class="lang-toggle" onclick="toggleLanguage()">EN</button>
+        <h1>
+            <span class="ar-text">رصد حركة الاسعار</span>
+            <span class="en-text">Threat Alert Report</span>
+        </h1>
+        <div class="subtitle"><span class="ar-text">التاريخ: 25DEC25</span><span class="en-text">Date: 25DEC25</span></div>
+    </header>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="stat-item high" onclick="filterByLevel('high')" data-level="high">
+            <div class="stat-count" id="high-count">1</div>
+            <div class="stat-label">
+                <span class="ar-text">عالي</span>
+                <span class="en-text">HIGH</span>
+            </div>
+        </div>
+        <div class="stat-item medium" onclick="filterByLevel('medium')" data-level="medium">
+            <div class="stat-count" id="medium-count">0</div>
+            <div class="stat-label">
+                <span class="ar-text">متوسط</span>
+                <span class="en-text">MEDIUM</span>
+            </div>
+        </div>
+        <div class="stat-item low" onclick="filterByLevel('low')" data-level="low">
+            <div class="stat-count" id="low-count">0</div>
+            <div class="stat-label">
+                <span class="ar-text">منخفض</span>
+                <span class="en-text">LOW</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="filter-section">
+        <div class="filter-row">
+            <select class="filter-select" id="routeFilter" onchange="filterContent()">
+                <option value="all">
+                    كل الخطوط / All Routes
+                </option>
+                <option value="JED-CAI">JED-CAI</option>
+            </select>
+            <select class="filter-select" id="dateFilter" onchange="filterContent()">
+                <option value="all">
+                    كل التواريخ / All Dates
+                </option>
+                <option value="2025-12-25">25 DECEMBER 2025 THURSDAY</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content" id="mainContent">
+        <div data-route="JED-CAI">
+    <div class="route-header" data-route="JED-CAI">
+        <div class="route-name">JED-CAI</div>
+        <div class="route-flights">SM478</div>
+    </div>
+    <div data-date="2025-12-25">
+    <div class="date-header" data-date="2025-12-25">
+        25 DECEMBER 2025 THURSDAY
+    </div>
+    
+    <div class="flight-card">
+        <div class="flight-header">
+            <span class="flight-name">SM478</span>
+            <span class="lf-badge lf-medium">LF: 75%</span>
+        </div>
+        <div class="lf-details"><div class="lf-item"><div class="lf-item-label">SOLD</div><div class="lf-item-value">120</div></div><div class="lf-item"><div class="lf-item-label">CAP</div><div class="lf-item-value">160</div></div></div>
+        <div class="threats-container">
+            
+    <div class="threat-card high">
+        <div class="threat-header">
+            <span class="competitor-name">Saudia SV335 </span>
+            <span class="threat-level high">
+                <span class="ar-text">تهديد عالي</span>
+                <span class="en-text">HIGH THREAT</span>
+            </span>
+        </div>
+        <div class="threat-details">
+            <div class="detail-box">
+                <div class="detail-label">
+                    <span class="ar-text">سعرهم</span>
+                    <span class="en-text">Their Fare</span>
+                </div>
+                <div class="detail-value">1250 SAR</div>
+            </div>
+            <div class="detail-box">
+                <div class="detail-label">
+                    <span class="ar-text">سعرنا</span>
+                    <span class="en-text">Our Fare</span>
+                </div>
+                <div class="detail-value">1200 SAR</div>
+            </div>
+            <div class="detail-box">
+                <div class="detail-label">
+                    <span class="ar-text">فرق السعر</span>
+                    <span class="en-text">Fare Diff</span>
+                </div>
+                <div class="detail-value positive">+50</div>
+            </div>
+            <div class="detail-box">
+                <div class="detail-label">
+                    <span class="ar-text">فرق الأمتعة</span>
+                    <span class="en-text">Bag Diff</span>
+                </div>
+                <div class="detail-value positive">+6 kg</div>
+            </div>
+        </div>
+    </div>
+    
+        </div>
+    </div>
+    </div></div>
+    </div>
+
+    <!-- Desktop Link -->
+    <a href="report_2025-12-25_01-29.html" class="desktop-link">
+        <span class="ar-text">عرض نسخة سطح المكتب</span>
+        <span class="en-text">View Desktop Version</span>
+    </a>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <div class="nav-item active" onclick="showAll()">
+            <span class="nav-icon">📊</span>
+            <span class="nav-label">
+                <span class="ar-text">الكل</span>
+                <span class="en-text">All</span>
+            </span>
+        </div>
+        <div class="nav-item" onclick="filterByLevel('high')">
+            <span class="nav-icon">🔴</span>
+            <span class="nav-label">
+                <span class="ar-text">عالي</span>
+                <span class="en-text">High</span>
+            </span>
+        </div>
+        <div class="nav-item" onclick="filterByLevel('medium')">
+            <span class="nav-icon">🟡</span>
+            <span class="nav-label">
+                <span class="ar-text">متوسط</span>
+                <span class="en-text">Medium</span>
+            </span>
+        </div>
+        <div class="nav-item" onclick="filterByLevel('low')">
+            <span class="nav-icon">🟢</span>
+            <span class="nav-label">
+                <span class="ar-text">منخفض</span>
+                <span class="en-text">Low</span>
+            </span>
+        </div>
+    </nav>
+
+    <script>
+    // Threat Level Color Overlay
+    function setThreatOverlay(level) {
+        let overlay = document.getElementById('threatOverlay');
+        if (!overlay) {
+            overlay = document.createElement('div');
+            overlay.id = 'threatOverlay';
+            overlay.className = 'threat-overlay';
+            document.body.insertBefore(overlay, document.body.firstChild);
+        }
+        overlay.className = 'threat-overlay';
+        if (level && level !== 'all') {
+            overlay.classList.add(level.toLowerCase());
+            overlay.classList.add('active');
+        }
+    }
+
+        // Language Toggle
+        function toggleLanguage() {
+            const body = document.body;
+            const btn = document.querySelector('.lang-toggle');
+            if (body.classList.contains('ar')) {
+                body.classList.remove('ar');
+                body.classList.add('en');
+                btn.textContent = 'AR';
+            } else {
+                body.classList.remove('en');
+                body.classList.add('ar');
+                btn.textContent = 'EN';
+            }
+        }
+
+        // Filter by threat level
+        let activeLevel = null;
+        function filterByLevel(level) {
+        setThreatOverlay(level);
+            const navItems = document.querySelectorAll('.nav-item');
+            const statItems = document.querySelectorAll('.stat-item');
+            const threatCards = document.querySelectorAll('.threat-card');
+
+            // Toggle if same level clicked
+            if (activeLevel === level) {
+                activeLevel = null;
+                // Show all
+                threatCards.forEach(card => card.classList.remove('hidden'));
+                navItems.forEach(item => item.classList.remove('active'));
+                navItems[0].classList.add('active');
+                statItems.forEach(item => item.classList.remove('active'));
+                return;
+            }
+
+            activeLevel = level;
+
+            // Update nav
+            navItems.forEach(item => item.classList.remove('active'));
+            const navIndex = level === 'high' ? 1 : (level === 'medium' ? 2 : 3);
+            navItems[navIndex].classList.add('active');
+
+            // Update stats
+            statItems.forEach(item => {
+                item.classList.toggle('active', item.dataset.level === level);
+            });
+
+            // Filter cards
+            threatCards.forEach(card => {
+                card.classList.toggle('hidden', !card.classList.contains(level));
+            });
+        }
+
+        // Show all
+        function showAll() {
+            activeLevel = null;
+            setThreatOverlay(null);
+            document.querySelectorAll('.threat-card').forEach(card => card.classList.remove('hidden'));
+            document.querySelectorAll('.nav-item').forEach((item, i) => {
+                item.classList.toggle('active', i === 0);
+            });
+            document.querySelectorAll('.stat-item').forEach(item => item.classList.remove('active'));
+            document.getElementById('routeFilter').value = 'all';
+            document.getElementById('dateFilter').value = 'all';
+            filterContent();
+        }
+
+        // Filter by route/date
+        function filterContent() {
+            const routeFilter = document.getElementById('routeFilter').value;
+            const dateFilter = document.getElementById('dateFilter').value;
+
+            // Filter route sections
+            document.querySelectorAll('[data-route]').forEach(section => {
+                const route = section.dataset.route;
+                const showRoute = routeFilter === 'all' || route === routeFilter;
+                section.classList.toggle('hidden', !showRoute);
+            });
+
+            // Filter date sections
+            document.querySelectorAll('[data-date]').forEach(section => {
+                const date = section.dataset.date;
+                const showDate = dateFilter === 'all' || date === dateFilter;
+                section.classList.toggle('hidden', !showDate);
+            });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            showAll();
+        });
+    </script>
+</body>
+</html>
