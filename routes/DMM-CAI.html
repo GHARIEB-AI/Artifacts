@@ -10449,35 +10449,24 @@
     <script>
     (function() {
         var loader = document.getElementById('page-loader');
-        var showTimeout = null;
-        var DELAY_MS = 250; // Show loader only if navigation takes > 250ms
 
         function showLoader() {
             if (loader) {
-                showTimeout = setTimeout(function() {
-                    loader.classList.add('show');
-                }, DELAY_MS);
+                loader.classList.add('show');
             }
         }
 
         function hideLoader() {
-            if (showTimeout) {
-                clearTimeout(showTimeout);
-                showTimeout = null;
-            }
             if (loader) {
                 loader.classList.remove('show');
             }
         }
 
-        // Hide loader when page fully loaded
         window.addEventListener('load', hideLoader);
-
-        // Show loader on navigation (only if > 250ms)
+        window.addEventListener('pageshow', hideLoader);
         window.addEventListener('beforeunload', showLoader);
         window.addEventListener('pagehide', showLoader);
 
-        // Show loader on ALL link clicks
         document.addEventListener('click', function(e) {
             var link = e.target.closest('a');
             if (link && link.href && !link.href.startsWith('javascript:') && !link.href.startsWith('#')) {
@@ -10485,13 +10474,11 @@
             }
         });
 
-        // Show loader on route selector change
         var routeSelector = document.getElementById('routeSelector');
         if (routeSelector) {
             routeSelector.addEventListener('change', showLoader);
         }
 
-        // Show loader on filter changes that navigate
         document.querySelectorAll('.filter-item a, .route-link, .home-btn-fixed').forEach(function(el) {
             el.addEventListener('click', showLoader);
         });
