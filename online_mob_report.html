@@ -99,23 +99,18 @@
         }
 
         /* GATE Button - Fixed Top Corner */
-        .gate-btn,
-        .gate-btn:link,
-        .gate-btn:visited,
-        .gate-btn:hover,
-        .gate-btn:active,
-        .gate-btn:focus {
+        .gate-btn {
             position: fixed !important;
-            top: 8px;
-            right: 10px;
-            width: 38px !important;
-            height: 38px !important;
-            line-height: 38px;
+            top: 10px !important;
+            right: 10px !important;
+            width: 36px !important;
+            height: 36px !important;
             border-radius: 50% !important;
-            overflow: hidden !important;
-            background: transparent !important;
+            background-image: url('web_purple.png') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
             background-color: transparent !important;
-            background-image: none !important;
             border: none !important;
             padding: 0 !important;
             margin: 0 !important;
@@ -123,28 +118,12 @@
             box-shadow: none !important;
             outline: none !important;
             text-decoration: none !important;
-            -webkit-appearance: none !important;
-            -moz-appearance: none !important;
-            appearance: none !important;
             -webkit-tap-highlight-color: transparent !important;
-            z-index: 9999 !important;
+            z-index: 99999 !important;
+            cursor: pointer;
         }
 
-        .gate-btn img {
-            width: 38px !important;
-            height: 38px !important;
-            border-radius: 50% !important;
-            object-fit: cover !important;
-            display: block !important;
-            border: none !important;
-            background: transparent !important;
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-
-        body.en .gate-btn,
-        body.en .gate-btn:link,
-        body.en .gate-btn:visited {
+        body.en .gate-btn {
             right: auto !important;
             left: 10px !important;
         }
@@ -625,9 +604,7 @@
     </div>
 
     <!-- GATE Button - Fixed Top Corner -->
-    <a href="index.html" class="gate-btn" title="GATE">
-        <img src="web_purple.png" alt="GATE">
-    </a>
+    <a href="index.html" class="gate-btn" title="GATE" aria-label="GATE"></a>
 
     <header class="header">
         <div class="header-text">
