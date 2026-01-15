@@ -1657,7 +1657,7 @@
         // Base URL for API calls:
         // - Local server: falls back to window.location.origin
         // - GitHub Pages: injected at runtime into the template placeholder
-        const API_BASE_OVERRIDE = 'https://cancel-bring-equation-desirable.trycloudflare.com';
+        const API_BASE_OVERRIDE = '';
         const API_BASE = (() => {
             try {
                 if (API_BASE_OVERRIDE && !API_BASE_OVERRIDE.startsWith('__')) {
@@ -2594,9 +2594,30 @@
             }
         }
 
-        // Initial load: Use API_BASE for live data via Cloudflare Tunnel
-        loadCachedData().then(() => { fetchStatus(); });
-        setInterval(fetchStatus, 3000);
+        // Initial load: GitHub Pages uses static JSON, local uses API
+        if (window.location.hostname.includes('github.io')) {
+            function loadData() {
+                fetch('dashboard_status.json?t=' + Date.now())
+                    .then(r => r.json())
+                    .then(data => {
+                        lastData = data;
+                        updateDashboard(data);
+                        updateRealFlights();
+                        const statusBadge = document.getElementById('status-badge');
+                        const status = data.status || 'UNKNOWN';
+                        statusBadge.textContent = status;
+                        statusBadge.className = 'status-badge ' + status.toLowerCase();
+                    })
+                    .catch(e => {
+                        document.getElementById('status-badge').textContent = 'OFFLINE';
+                    });
+            }
+            loadData();
+            setInterval(loadData, 5000);
+        } else {
+            loadCachedData().then(() => { fetchStatus(); });
+            setInterval(fetchStatus, 3000);
+        }
     </script>
 
     <!-- UNIFIED PAGE LOADER SCRIPT -->
