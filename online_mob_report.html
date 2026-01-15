@@ -99,53 +99,54 @@
         }
 
         /* GATE Button - Fixed Top Corner */
-        .gate-btn {
+        .gate-btn,
+        .gate-btn:link,
+        .gate-btn:visited,
+        .gate-btn:hover,
+        .gate-btn:active,
+        .gate-btn:focus {
             position: fixed !important;
             top: 8px;
             right: 10px;
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            overflow: visible;
+            width: 38px !important;
+            height: 38px !important;
+            line-height: 38px;
+            border-radius: 50% !important;
+            overflow: hidden !important;
             background: transparent !important;
             background-color: transparent !important;
             background-image: none !important;
             border: none !important;
             padding: 0 !important;
             margin: 0 !important;
-            display: block;
+            display: block !important;
             box-shadow: none !important;
             outline: none !important;
+            text-decoration: none !important;
             -webkit-appearance: none !important;
             -moz-appearance: none !important;
             appearance: none !important;
             -webkit-tap-highlight-color: transparent !important;
-            z-index: 9999;
-        }
-
-        .gate-btn:hover,
-        .gate-btn:active,
-        .gate-btn:focus,
-        .gate-btn:visited {
-            background: transparent !important;
-            background-color: transparent !important;
-            box-shadow: none !important;
-            outline: none !important;
+            z-index: 9999 !important;
         }
 
         .gate-btn img {
-            width: 38px;
-            height: 38px;
-            object-fit: contain;
-            display: block;
+            width: 38px !important;
+            height: 38px !important;
+            border-radius: 50% !important;
+            object-fit: cover !important;
+            display: block !important;
             border: none !important;
             background: transparent !important;
-            border-radius: 0;
+            margin: 0 !important;
+            padding: 0 !important;
         }
 
-        body.en .gate-btn {
-            right: auto;
-            left: 10px;
+        body.en .gate-btn,
+        body.en .gate-btn:link,
+        body.en .gate-btn:visited {
+            right: auto !important;
+            left: 10px !important;
         }
 
         /* Stats Title */
