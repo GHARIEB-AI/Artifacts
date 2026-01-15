@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -664,7 +664,7 @@
             }
         }
 
-        /* Floating Data Stream - LEFT → RIGHT */
+        /* Floating Data Stream - LEFT â†’ RIGHT */
         #data-stream {
             position: absolute;
             inset: 0;
@@ -1367,7 +1367,7 @@
     <div class="header">
         <!-- THE GATE - Far Left -->
         <a href="https://gharieb-ai.github.io/AirCairo/" target="_blank" style="text-decoration: none; position: absolute; left: 20px;">
-            <img src="/web_gate.png" alt="Gate" style="width: 80px; height: 80px; border-radius: 50%; box-shadow: 0 5px 25px rgba(0,0,0,0.5); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="web_gate.png" alt="Gate" style="width: 80px; height: 80px; border-radius: 50%; box-shadow: 0 5px 25px rgba(0,0,0,0.5); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
         </a>
         <div class="logo-container">
             <img src="logo_white.svg" alt="Air Cairo" class="logo-img">
@@ -1679,7 +1679,7 @@
                 // Format 2: "SM455 | JED-CAI | 23DEC"
                 () => (flight.flight && flight.route && flight.date ? `${flight.flight} | ${flight.route} | ${flight.date}` : null),
 
-                // Format 3: "JED→CAI LST:18DEC25 TD:5"
+                // Format 3: "JEDâ†’CAI LST:18DEC25 TD:5"
                 () => (flight.route ? `${flight.route} LST:${formatLstSold(flight.lst_sold) || '-'} TD:${typeof flight.to_day === 'number' ? flight.to_day : '-'}` : null),
 
                 // Format 4: "SM455 WEEKLY:88"
@@ -1710,7 +1710,7 @@
                 () => (flight.flight && flight.route && flight.capacity ? `${flight.flight} ${flight.route} BKD:${flight.booked || 0}/${flight.capacity}` : null),
 
                 // Format 13: Availability status
-                () => (flight.flight && flight.lowest_avail ? `${flight.flight} ${flight.lowest_avail === 'CLOSED' ? '🔴 CLOSED' : '🟢 ' + flight.lowest_avail}` : null),
+                () => (flight.flight && flight.lowest_avail ? `${flight.flight} ${flight.lowest_avail === 'CLOSED' ? 'ðŸ”´ CLOSED' : 'ðŸŸ¢ ' + flight.lowest_avail}` : null),
 
                 // Format 14: Short date format
                 () => {
@@ -1720,7 +1720,7 @@
                 },
 
                 // Format 15: Route arrow format
-                () => (flight.route ? `✈️ ${flight.route.replace('-', '→')} ${flight.lowest_avail || ''}` : null),
+                () => (flight.route ? `âœˆï¸ ${flight.route.replace('-', 'â†’')} ${flight.lowest_avail || ''}` : null),
             ];
 
             return formats[Math.floor(Math.random() * formats.length)]();
@@ -1738,35 +1738,35 @@
             const speedMetrics = lastData.speed_metrics || {};
 
             const metrics = [
-                () => `📊 LF: ${(progress.lf || 0).toFixed(0)}%`,
-                () => `📊 OAL: ${(progress.oal || 0).toFixed(0)}%`,
-                () => `📋 TASKS: ${tasks.done || 0}/${tasks.total || 0}`,
-                () => `🔄 RUNNING: ${tasks.running || 0}`,
-                () => `📑 EXCEL: ${(progress.excel || 0).toFixed(0)}%`,
-                () => progress.lf >= 100 ? '✅ LF COMPLETE' : `⏳ LF PROGRESS ${(progress.lf || 0).toFixed(0)}%`,
-                () => `👥 WORKERS: ${lastData.active_workers || 0}`,
-                () => `📡 STATUS: ${status.toUpperCase()}`,
-                () => `🎯 OVERALL: ${(progress.overall || 0).toFixed(0)}%`,
-                () => config.run_id ? `🏷️ RUN: ${config.run_id.slice(-8)}` : null,
-                () => tasks.pending ? `⏳ PENDING: ${tasks.pending}` : null,
-                () => `⚡ MARKET INSIGHTS LIVE`,
-                () => `🛫 AIR CAIRO MONITORING`,
-                () => progress.oal >= 100 ? '✅ OAL COMPLETE' : null,
-                () => progress.excel >= 100 ? '✅ EXCEL COMPLETE' : null,
+                () => `ðŸ“Š LF: ${(progress.lf || 0).toFixed(0)}%`,
+                () => `ðŸ“Š OAL: ${(progress.oal || 0).toFixed(0)}%`,
+                () => `ðŸ“‹ TASKS: ${tasks.done || 0}/${tasks.total || 0}`,
+                () => `ðŸ”„ RUNNING: ${tasks.running || 0}`,
+                () => `ðŸ“‘ EXCEL: ${(progress.excel || 0).toFixed(0)}%`,
+                () => progress.lf >= 100 ? 'âœ… LF COMPLETE' : `â³ LF PROGRESS ${(progress.lf || 0).toFixed(0)}%`,
+                () => `ðŸ‘¥ WORKERS: ${lastData.active_workers || 0}`,
+                () => `ðŸ“¡ STATUS: ${status.toUpperCase()}`,
+                () => `ðŸŽ¯ OVERALL: ${(progress.overall || 0).toFixed(0)}%`,
+                () => config.run_id ? `ðŸ·ï¸ RUN: ${config.run_id.slice(-8)}` : null,
+                () => tasks.pending ? `â³ PENDING: ${tasks.pending}` : null,
+                () => `âš¡ MARKET INSIGHTS LIVE`,
+                () => `ðŸ›« AIR CAIRO MONITORING`,
+                () => progress.oal >= 100 ? 'âœ… OAL COMPLETE' : null,
+                () => progress.excel >= 100 ? 'âœ… EXCEL COMPLETE' : null,
                 // Additional metrics
-                () => config.routes_count ? `🛫 ROUTES: ${config.routes_count}` : null,
-                () => config.dates_count ? `📅 DATES: ${config.dates_count}` : null,
-                () => config.chunks_count ? `📦 CHUNKS: ${config.chunks_count}` : null,
-                () => config.ports_count ? `🔌 PORTS: ${config.ports_count}` : null,
-                () => oalDetails.current_pass ? `🔄 OAL PASS: ${oalDetails.current_pass}/${oalDetails.total_passes || 2}` : null,
-                () => oalDetails.routes_completed_in_pass ? `📊 OAL ROUTES: ${oalDetails.routes_completed_in_pass}/${oalDetails.routes_total_per_pass || 0}` : null,
-                () => speedMetrics.speed_per_minute ? `⚡ SPEED: ${speedMetrics.speed_per_minute}/min` : null,
-                () => lastData.excel_count ? `📑 EXCEL FILES: ${lastData.excel_count}` : null,
-                () => config.date_range ? `📅 ${config.date_range}` : null,
-                () => tasks.failed > 0 ? `❌ FAILED: ${tasks.failed}` : null,
-                () => config.mode ? `🔧 MODE: ${config.mode}` : null,
+                () => config.routes_count ? `ðŸ›« ROUTES: ${config.routes_count}` : null,
+                () => config.dates_count ? `ðŸ“… DATES: ${config.dates_count}` : null,
+                () => config.chunks_count ? `ðŸ“¦ CHUNKS: ${config.chunks_count}` : null,
+                () => config.ports_count ? `ðŸ”Œ PORTS: ${config.ports_count}` : null,
+                () => oalDetails.current_pass ? `ðŸ”„ OAL PASS: ${oalDetails.current_pass}/${oalDetails.total_passes || 2}` : null,
+                () => oalDetails.routes_completed_in_pass ? `ðŸ“Š OAL ROUTES: ${oalDetails.routes_completed_in_pass}/${oalDetails.routes_total_per_pass || 0}` : null,
+                () => speedMetrics.speed_per_minute ? `âš¡ SPEED: ${speedMetrics.speed_per_minute}/min` : null,
+                () => lastData.excel_count ? `ðŸ“‘ EXCEL FILES: ${lastData.excel_count}` : null,
+                () => config.date_range ? `ðŸ“… ${config.date_range}` : null,
+                () => tasks.failed > 0 ? `âŒ FAILED: ${tasks.failed}` : null,
+                () => config.mode ? `ðŸ”§ MODE: ${config.mode}` : null,
                 // Route-specific metrics from config
-                () => config.routes && config.routes.length > 0 ? `✈️ ${config.routes[Math.floor(Math.random() * config.routes.length)]}` : null,
+                () => config.routes && config.routes.length > 0 ? `âœˆï¸ ${config.routes[Math.floor(Math.random() * config.routes.length)]}` : null,
             ];
 
             const validMetrics = metrics.map(m => m()).filter(m => m);
@@ -1799,26 +1799,26 @@
                     const progress = lastData.progress || {};
 
                     const fallbacks = [
-                        `🕐 ${timeStr}`,
-                        `📊 LAST RUN: ${config.run_id || 'N/A'}`,
-                        `🛫 ROUTES: ${config.routes_count || 0}`,
-                        `📅 DATES: ${config.dates_count || 0}`,
-                        `📋 TASKS: ${tasks.done || 0}/${tasks.total || 0}`,
-                        `🎯 LF: ${(progress.lf || 0).toFixed(0)}%`,
-                        `📊 OAL: ${(progress.oal || 0).toFixed(0)}%`,
-                        config.date_range ? `📅 ${config.date_range}` : '📊 MARKET INSIGHTS',
-                        `⚡ AIR CAIRO MONITORING`,
-                        `📡 ${isOnline ? 'LIVE' : 'LAST RUN DATA'}`,
+                        `ðŸ• ${timeStr}`,
+                        `ðŸ“Š LAST RUN: ${config.run_id || 'N/A'}`,
+                        `ðŸ›« ROUTES: ${config.routes_count || 0}`,
+                        `ðŸ“… DATES: ${config.dates_count || 0}`,
+                        `ðŸ“‹ TASKS: ${tasks.done || 0}/${tasks.total || 0}`,
+                        `ðŸŽ¯ LF: ${(progress.lf || 0).toFixed(0)}%`,
+                        `ðŸ“Š OAL: ${(progress.oal || 0).toFixed(0)}%`,
+                        config.date_range ? `ðŸ“… ${config.date_range}` : 'ðŸ“Š MARKET INSIGHTS',
+                        `âš¡ AIR CAIRO MONITORING`,
+                        `ðŸ“¡ ${isOnline ? 'LIVE' : 'LAST RUN DATA'}`,
                     ];
                     text = fallbacks[Math.floor(Math.random() * fallbacks.length)];
                 } else {
                     const fallbacks = [
-                        `🕐 ${timeStr}`,
-                        '📡 AWAITING DATA...',
-                        '🔄 CONNECTING TO SERVER...',
-                        '⏳ LOADING FLIGHT DATA...',
-                        '🛫 AIR CAIRO SYSTEM',
-                        '📊 MARKET INSIGHTS v2.0',
+                        `ðŸ• ${timeStr}`,
+                        'ðŸ“¡ AWAITING DATA...',
+                        'ðŸ”„ CONNECTING TO SERVER...',
+                        'â³ LOADING FLIGHT DATA...',
+                        'ðŸ›« AIR CAIRO SYSTEM',
+                        'ðŸ“Š MARKET INSIGHTS v2.0',
                     ];
                     text = fallbacks[Math.floor(Math.random() * fallbacks.length)];
                 }
@@ -1916,7 +1916,7 @@
             if (rangeEl && config.date_range) {
                 rangeEl.textContent = `Range: ${config.date_range}`;
             } else if (rangeEl && config.start_date && config.end_date) {
-                rangeEl.textContent = `Range: ${config.start_date} → ${config.end_date}`;
+                rangeEl.textContent = `Range: ${config.start_date} â†’ ${config.end_date}`;
             }
 
             // Progress bars
@@ -2604,3 +2604,4 @@
     </script>
 </body>
 </html>
+
