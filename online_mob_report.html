@@ -417,8 +417,25 @@
         }
 
         .plane-icon {
-            color: #3498db;
-            font-size: 1em;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .plane-icon img,
+        .aircraft-icon {
+            width: 1.2em;
+            height: 1.2em;
+            object-fit: contain;
+            vertical-align: middle;
+        }
+
+        .header-aircraft {
+            width: 1em;
+            height: 1em;
+            object-fit: contain;
+            vertical-align: middle;
+            margin-right: 4px;
         }
 
         /* Mini Spheres for route stats - matching top sphere design */
@@ -618,7 +635,7 @@
         <!-- GATE Button - Inside Header -->
         <a href="index.html" class="gate-btn" title="GATE" aria-label="GATE"></a>
         <div class="header-text">
-            <h1><span class="ar-text">رصد حركة الاسعار ✈️</span><span class="en-text">Threat Alert Report ✈️</span></h1>
+            <h1><span class="ar-text">رصد حركة الاسعار <img src="aircairo_aircraft.png" class="header-aircraft" alt=""></span><span class="en-text">Threat Alert Report <img src="aircairo_aircraft.png" class="header-aircraft" alt=""></span></h1>
             <div class="header-meta">
                 <div class="subtitle"><span class="ar-text">الفترة: 15JAN26 - 28FEB26</span><span class="en-text">Range: 15JAN26 - 28FEB26</span></div>
                 <div class="generated">
@@ -673,7 +690,7 @@
         
     <a href="routes/AHB-CAI.html" class="route-card" data-route="AHB-CAI" data-threat="LOW" data-direction="KSA_EGY" data-high="0" data-medium="0" data-low="6">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">AHB-CAI</span>
         </div>
         <div class="route-stats-row">
@@ -699,7 +716,7 @@
     
     <a href="routes/AJF-CAI.html" class="route-card" data-route="AJF-CAI" data-threat="LOW" data-direction="KSA_EGY" data-high="0" data-medium="0" data-low="1">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">AJF-CAI</span>
         </div>
         <div class="route-stats-row">
@@ -725,7 +742,7 @@
     
     <a href="routes/ATZ-JED.html" class="route-card" data-route="ATZ-JED" data-threat="LOW" data-direction="EGY_KSA" data-high="0" data-medium="0" data-low="1">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">ATZ-JED</span>
         </div>
         <div class="route-stats-row">
@@ -751,7 +768,7 @@
     
     <a href="routes/ATZ-RUH.html" class="route-card" data-route="ATZ-RUH" data-threat="LOW" data-direction="EGY_KSA" data-high="0" data-medium="0" data-low="4">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">ATZ-RUH</span>
         </div>
         <div class="route-stats-row">
@@ -777,7 +794,7 @@
     
     <a href="routes/CAI-AHB.html" class="route-card" data-route="CAI-AHB" data-threat="MEDIUM" data-direction="EGY_KSA" data-high="0" data-medium="1" data-low="10">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">CAI-AHB</span>
         </div>
         <div class="route-stats-row">
@@ -803,7 +820,7 @@
     
     <a href="routes/CAI-AJF.html" class="route-card" data-route="CAI-AJF" data-threat="LOW" data-direction="EGY_KSA" data-high="0" data-medium="0" data-low="2">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">CAI-AJF</span>
         </div>
         <div class="route-stats-row">
@@ -829,7 +846,7 @@
     
     <a href="routes/CAI-DMM.html" class="route-card" data-route="CAI-DMM" data-threat="MEDIUM" data-direction="EGY_KSA" data-high="0" data-medium="7" data-low="51">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">CAI-DMM</span>
         </div>
         <div class="route-stats-row">
@@ -855,7 +872,7 @@
     
     <a href="routes/CAI-ELQ.html" class="route-card" data-route="CAI-ELQ" data-threat="LOW" data-direction="EGY_KSA" data-high="0" data-medium="0" data-low="20">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">CAI-ELQ</span>
         </div>
         <div class="route-stats-row">
@@ -881,7 +898,7 @@
     
     <a href="routes/CAI-GIZ.html" class="route-card" data-route="CAI-GIZ" data-threat="HIGH" data-direction="EGY_KSA" data-high="1" data-medium="0" data-low="7">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">CAI-GIZ</span>
         </div>
         <div class="route-stats-row">
@@ -907,7 +924,7 @@
     
     <a href="routes/CAI-JED.html" class="route-card" data-route="CAI-JED" data-threat="HIGH" data-direction="EGY_KSA" data-high="537" data-medium="69" data-low="197">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">CAI-JED</span>
         </div>
         <div class="route-stats-row">
@@ -933,7 +950,7 @@
     
     <a href="routes/CAI-MED.html" class="route-card" data-route="CAI-MED" data-threat="HIGH" data-direction="EGY_KSA" data-high="13" data-medium="1" data-low="24">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">CAI-MED</span>
         </div>
         <div class="route-stats-row">
@@ -959,7 +976,7 @@
     
     <a href="routes/CAI-RUH.html" class="route-card" data-route="CAI-RUH" data-threat="LOW" data-direction="EGY_KSA" data-high="0" data-medium="0" data-low="225">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">CAI-RUH</span>
         </div>
         <div class="route-stats-row">
@@ -985,7 +1002,7 @@
     
     <a href="routes/CAI-TUU.html" class="route-card" data-route="CAI-TUU" data-threat="MEDIUM" data-direction="EGY_KSA" data-high="0" data-medium="13" data-low="26">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">CAI-TUU</span>
         </div>
         <div class="route-stats-row">
@@ -1011,7 +1028,7 @@
     
     <a href="routes/CAI-YNB.html" class="route-card" data-route="CAI-YNB" data-threat="MEDIUM" data-direction="EGY_KSA" data-high="0" data-medium="3" data-low="6">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">CAI-YNB</span>
         </div>
         <div class="route-stats-row">
@@ -1037,7 +1054,7 @@
     
     <a href="routes/DMM-CAI.html" class="route-card" data-route="DMM-CAI" data-threat="HIGH" data-direction="KSA_EGY" data-high="1" data-medium="14" data-low="78">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">DMM-CAI</span>
         </div>
         <div class="route-stats-row">
@@ -1063,7 +1080,7 @@
     
     <a href="routes/ELQ-CAI.html" class="route-card" data-route="ELQ-CAI" data-threat="LOW" data-direction="KSA_EGY" data-high="0" data-medium="0" data-low="5">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">ELQ-CAI</span>
         </div>
         <div class="route-stats-row">
@@ -1089,7 +1106,7 @@
     
     <a href="routes/GIZ-CAI.html" class="route-card" data-route="GIZ-CAI" data-threat="LOW" data-direction="KSA_EGY" data-high="0" data-medium="0" data-low="2">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">GIZ-CAI</span>
         </div>
         <div class="route-stats-row">
@@ -1115,7 +1132,7 @@
     
     <a href="routes/HBE-JED.html" class="route-card" data-route="HBE-JED" data-threat="HIGH" data-direction="EGY_KSA" data-high="19" data-medium="4" data-low="8">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">HBE-JED</span>
         </div>
         <div class="route-stats-row">
@@ -1141,7 +1158,7 @@
     
     <a href="routes/JED-ATZ.html" class="route-card" data-route="JED-ATZ" data-threat="HIGH" data-direction="KSA_EGY" data-high="12" data-medium="1" data-low="9">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">JED-ATZ</span>
         </div>
         <div class="route-stats-row">
@@ -1167,7 +1184,7 @@
     
     <a href="routes/JED-CAI.html" class="route-card" data-route="JED-CAI" data-threat="HIGH" data-direction="KSA_EGY" data-high="523" data-medium="68" data-low="327">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">JED-CAI</span>
         </div>
         <div class="route-stats-row">
@@ -1193,7 +1210,7 @@
     
     <a href="routes/JED-HBE.html" class="route-card" data-route="JED-HBE" data-threat="HIGH" data-direction="KSA_EGY" data-high="31" data-medium="7" data-low="7">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">JED-HBE</span>
         </div>
         <div class="route-stats-row">
@@ -1219,7 +1236,7 @@
     
     <a href="routes/MED-CAI.html" class="route-card" data-route="MED-CAI" data-threat="HIGH" data-direction="KSA_EGY" data-high="23" data-medium="10" data-low="33">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">MED-CAI</span>
         </div>
         <div class="route-stats-row">
@@ -1245,7 +1262,7 @@
     
     <a href="routes/MED-HBE.html" class="route-card" data-route="MED-HBE" data-threat="HIGH" data-direction="KSA_EGY" data-high="1" data-medium="2" data-low="1">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">MED-HBE</span>
         </div>
         <div class="route-stats-row">
@@ -1271,7 +1288,7 @@
     
     <a href="routes/RUH-CAI.html" class="route-card" data-route="RUH-CAI" data-threat="MEDIUM" data-direction="KSA_EGY" data-high="0" data-medium="17" data-low="216">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">RUH-CAI</span>
         </div>
         <div class="route-stats-row">
@@ -1297,7 +1314,7 @@
     
     <a href="routes/TUU-CAI.html" class="route-card" data-route="TUU-CAI" data-threat="MEDIUM" data-direction="KSA_EGY" data-high="0" data-medium="6" data-low="25">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">TUU-CAI</span>
         </div>
         <div class="route-stats-row">
@@ -1323,7 +1340,7 @@
     
     <a href="routes/YNB-CAI.html" class="route-card" data-route="YNB-CAI" data-threat="HIGH" data-direction="KSA_EGY" data-high="21" data-medium="1" data-low="34">
         <div class="route-card-header">
-            <span class="plane-icon">✈️</span>
+            <span class="plane-icon"><img src="aircairo_aircraft.png" alt=""></span>
             <span class="route-card-name">YNB-CAI</span>
         </div>
         <div class="route-stats-row">
