@@ -100,19 +100,22 @@
 
         /* GATE Button - Fixed Top Corner */
         .gate-btn {
-            position: fixed;
+            position: fixed !important;
             top: 8px;
             right: 10px;
             width: 38px;
             height: 38px;
             border-radius: 50%;
             overflow: hidden;
-            background: transparent;
-            border: none;
+            background: none !important;
+            background-color: transparent !important;
+            border: none !important;
             padding: 0;
+            margin: 0;
             display: block;
-            transition: transform 0.2s;
-            z-index: 1000;
+            box-shadow: none !important;
+            outline: none !important;
+            z-index: 9999;
         }
 
         .gate-btn img {
@@ -120,10 +123,7 @@
             height: 100%;
             object-fit: cover;
             display: block;
-        }
-
-        .gate-btn:hover {
-            transform: scale(1.1);
+            border-radius: 50%;
         }
 
         body.en .gate-btn {
