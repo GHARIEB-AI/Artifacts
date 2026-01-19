@@ -46,29 +46,63 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
         .logo-img {
             height: 140px;
             width: auto;
         }
+        /* Last Run Info Block */
+        .last-run-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            margin-top: 8px;
+        }
+        .last-run-label {
+            font-size: 10px;
+            font-weight: 600;
+            color: #F7941D;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .last-run-date {
+            font-size: 11px;
+            color: #ddd;
+            font-weight: 500;
+        }
+        .last-run-time {
+            font-size: 11px;
+            color: #aaa;
+            font-family: 'Consolas', 'Courier New', monospace;
+        }
+        /* Run Status */
+        .run-status {
+            font-size: 10px;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 10px;
+            margin-top: 6px;
+        }
+        .run-status.active {
+            background: rgba(74, 222, 128, 0.2);
+            color: #4ade80;
+            border: 1px solid #4ade80;
+        }
+        .run-status.inactive {
+            background: rgba(156, 163, 175, 0.15);
+            color: #9ca3af;
+            border: 1px solid rgba(156, 163, 175, 0.3);
+        }
+        /* Logo Text - First letter colored */
         .logo-text {
             font-size: 14px;
             font-weight: 700;
             color: #fff;
+            margin-top: 8px;
         }
-        .logo-text .orange { color: #F7941D; }
-        .status-badge {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-weight: bold;
-            font-size: 11px;
-        }
-        .status-badge.running { background: rgba(74, 222, 128, 0.2); color: #4ade80; border: 1px solid #4ade80; }
-        .status-badge.idle { background: rgba(251, 191, 36, 0.2); color: #fbbf24; border: 1px solid #fbbf24; }
-        .status-badge.completed { background: rgba(96, 165, 250, 0.2); color: #60a5fa; border: 1px solid #60a5fa; }
-        .status-badge.no_data { background: rgba(156, 163, 175, 0.2); color: #9ca3af; border: 1px solid #9ca3af; }
+        .logo-text .first-letter { color: #F7941D; }
         .live-dot {
             display: inline-block;
             width: 8px;
@@ -78,11 +112,6 @@
             animation: blink 1s infinite;
         }
         @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
-        .timestamp {
-            font-size: 10px;
-            color: #aaa;
-            margin-top: 8px;
-        }
 
         /* Overall Progress Card - BIG and prominent */
         .overall-card {
@@ -555,13 +584,22 @@
 
         <div class="logo-section">
             <img src="logo_white.png" alt="Air Cairo" class="logo-img">
-            <span class="status-badge" id="status-badge">LOADING</span>
+
+            <!-- Last Run Info -->
+            <div class="last-run-info">
+                <span class="last-run-label">LAST RUN</span>
+                <span class="last-run-date" id="last-run-date">--</span>
+                <span class="last-run-time" id="last-run-time">--:--:--</span>
+            </div>
+
+            <!-- Run Status -->
+            <span class="run-status inactive" id="run-status">No Active Run</span>
+
+            <!-- MARKET INSIGHTS - First letters colored -->
             <div class="logo-text">
-                <span class="orange">MARKET</span> INSIGHTS
+                <span class="first-letter">M</span>ARKET <span class="first-letter">I</span>NSIGHTS
             </div>
         </div>
-
-        <div class="timestamp" id="timestamp">Updated: Loading...</div>
     </div>
 
     <!-- Overall Progress - Main Focus -->
@@ -719,14 +757,29 @@
         function updateDashboard(data) {
             lastData = data;
 
-            // Status badge
-            const statusBadge = document.getElementById('status-badge');
-            statusBadge.textContent = data.status || 'UNKNOWN';
-            statusBadge.className = 'status-badge ' + (data.status || 'no_data').toLowerCase();
+            // Last Run Date & Time
+            const timestamp = data.timestamp ? new Date(data.timestamp) : new Date();
+            const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+            const day = String(timestamp.getDate()).padStart(2, '0');
+            const month = months[timestamp.getMonth()];
+            const year = String(timestamp.getFullYear()).slice(-2);
+            const hours = String(timestamp.getHours()).padStart(2, '0');
+            const mins = String(timestamp.getMinutes()).padStart(2, '0');
+            const secs = String(timestamp.getSeconds()).padStart(2, '0');
 
-            // Timestamp
-            document.getElementById('timestamp').textContent =
-                'Updated: ' + new Date(data.timestamp).toLocaleTimeString();
+            document.getElementById('last-run-date').textContent = day + month + year;
+            document.getElementById('last-run-time').textContent = hours + ':' + mins + ':' + secs;
+
+            // Run Status
+            const runStatus = document.getElementById('run-status');
+            const status = (data.status || '').toLowerCase();
+            if (status === 'running' || status === 'active') {
+                runStatus.textContent = 'Run In Progress';
+                runStatus.className = 'run-status active';
+            } else {
+                runStatus.textContent = 'No Active Run';
+                runStatus.className = 'run-status inactive';
+            }
 
             // Progress bars
             const progress = data.progress || {};
@@ -868,11 +921,10 @@
                 if (lastRunData) {
                     lastData = lastRunData;
                     updateDashboard(lastRunData);
-                    document.getElementById('status-badge').textContent = 'LAST RUN';
-                    document.getElementById('status-badge').className = 'status-badge completed';
+                    // Already shows "No Active Run" from updateDashboard
                 } else {
-                    document.getElementById('status-badge').textContent = 'OFFLINE';
-                    document.getElementById('status-badge').className = 'status-badge no_data';
+                    document.getElementById('run-status').textContent = 'Offline';
+                    document.getElementById('run-status').className = 'run-status inactive';
                 }
             }
         }
