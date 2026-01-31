@@ -1433,28 +1433,28 @@
             text-align: center;
             padding: 40px 20px;
             margin-top: 30px;
+            overflow: hidden;
         }
         .bottom-airplane {
             display: inline-block;
             cursor: pointer;
-            transition: transform 0.3s ease;
         }
         .bottom-airplane img {
             width: 300px;
             height: 350px;
             object-fit: contain;
             filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));
-            animation: float 3s ease-in-out infinite;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-        .bottom-airplane:hover {
-            transform: scale(1.08);
+            transform: rotate(90deg);
         }
         .bottom-airplane:hover img {
-            animation-play-state: paused;
+            filter: drop-shadow(0 15px 40px rgba(247,148,29,0.5));
+        }
+        .bottom-airplane.takeoff img {
+            animation: flyRight 1.5s ease-in forwards;
+        }
+        @keyframes flyRight {
+            0% { transform: rotate(90deg) translateY(0) scale(1); opacity: 1; }
+            100% { transform: rotate(90deg) translateY(-1000px) scale(0.8); opacity: 0; }
         }
         /* ===== END BOTTOM AIRPLANE ===== */
     </style>
@@ -1722,12 +1722,22 @@
 
     <!-- Bottom Airplane - GATE link -->
     <div class="bottom-airplane-section">
-        <a href="./" class="bottom-airplane">
+        <a href="./" class="bottom-airplane" id="airplane-link">
             <img src="plane_transparent.png" alt="Air Cairo">
         </a>
     </div>
 
     <script>
+        // Airplane takeoff - straight line to the right
+        document.getElementById('airplane-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            var link = this;
+            link.classList.add('takeoff');
+            setTimeout(function() {
+                window.location.href = link.href;
+            }, 1600);
+        });
+
         let lastData = null;
         let lastRunData = null;  // Cached data from last run (for offline mode)
         let isOnline = false;    // Track if API is available
