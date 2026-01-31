@@ -512,36 +512,39 @@
             50% { opacity: 1; text-shadow: 0 0 30px rgba(100, 220, 255, 0.9); }
         }
 
-        /* ===== SIDE AIRPLANE ===== */
-        .side-airplane {
-            position: fixed;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1000;
-            width: 350px;
-            height: 400px;
+        /* ===== BOTTOM AIRPLANE ===== */
+        .bottom-airplane-section {
+            text-align: center;
+            padding: 30px 20px;
+            margin-bottom: 20px;
+        }
+        .bottom-airplane {
+            display: inline-block;
             cursor: pointer;
-            transition: left 1.2s ease;
-            overflow: visible;
-            left: -150px;
+            transition: transform 0.3s ease;
         }
-        .side-airplane:hover {
-            left: -50px;
-        }
-        .side-airplane img {
-            width: 100%;
-            height: 100%;
+        .bottom-airplane img {
+            width: 280px;
+            height: 320px;
             object-fit: contain;
+            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));
         }
-        .side-airplane.takeoff {
-            animation: sideplaneTakeoff 1.5s ease-in-out forwards;
+        .bottom-airplane:hover {
+            transform: scale(1.05);
         }
-        @keyframes sideplaneTakeoff {
-            0% { left: -150px; opacity: 1; }
-            30% { left: 50px; opacity: 1; }
-            100% { left: 120%; top: -50%; opacity: 0; }
+        .bottom-airplane:active {
+            transform: scale(0.98);
         }
-        /* ===== END SIDE AIRPLANE ===== */
+        .bottom-airplane.takeoff {
+            animation: bottomPlaneTakeoff 1.8s ease-in-out forwards;
+        }
+        @keyframes bottomPlaneTakeoff {
+            0% { transform: translate(0, 0) scale(1); opacity: 1; }
+            25% { transform: translate(50px, 0) scale(1.1); opacity: 1; }
+            50% { transform: translate(80px, -50px) scale(1.2) rotate(-15deg); opacity: 1; }
+            100% { transform: translate(300px, -400px) scale(0.5) rotate(-30deg); opacity: 0; }
+        }
+        /* ===== END BOTTOM AIRPLANE ===== */
 
         /* ===== UNIFIED PAGE LOADER ===== */
         #page-loader {
@@ -762,10 +765,12 @@
         </div>
     </div>
 
-    <!-- Side Airplane - GATE link -->
-    <a href="./" class="side-airplane" onclick="airplaneTakeoff(event, this)">
-        <img src="x3.PNG" alt="Air Cairo">
-    </a>
+    <!-- Bottom Airplane - GATE link -->
+    <div class="bottom-airplane-section">
+        <a href="./" class="bottom-airplane" onclick="airplaneTakeoff(event, this)">
+            <img src="x3.PNG" alt="Air Cairo">
+        </a>
+    </div>
 
     <script>
         // Side Airplane Takeoff Animation
