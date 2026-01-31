@@ -528,7 +528,7 @@
             height: 320px;
             object-fit: contain;
             filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));
-            transform: rotate(45deg);
+            transform: rotate(-90deg);
         }
         .bottom-airplane:hover {
             transform: scale(1.05);
@@ -540,10 +540,10 @@
             animation: bottomPlaneTakeoff 1.8s ease-in-out forwards;
         }
         @keyframes bottomPlaneTakeoff {
-            0% { transform: rotate(45deg) translate(0, 0) scale(1); opacity: 1; }
-            25% { transform: rotate(45deg) translate(50px, -30px) scale(1.1); opacity: 1; }
-            50% { transform: rotate(40deg) translate(120px, -100px) scale(1.2); opacity: 1; }
-            100% { transform: rotate(35deg) translate(400px, -350px) scale(0.5); opacity: 0; }
+            0% { transform: rotate(-90deg) translate(0, 0) scale(1); opacity: 1; }
+            25% { transform: rotate(-70deg) translate(80px, -20px) scale(1.1); opacity: 1; }
+            50% { transform: rotate(-50deg) translate(200px, -80px) scale(1.2); opacity: 1; }
+            100% { transform: rotate(-30deg) translate(500px, -300px) scale(0.5); opacity: 0; }
         }
         /* ===== END BOTTOM AIRPLANE ===== */
 
@@ -780,7 +780,7 @@
             link.classList.add('takeoff');
             setTimeout(() => {
                 window.location.href = link.href;
-            }, 1200);
+            }, 1900);
         }
 
         const API_BASE = 'https://dashboard.ghariebel3ageb.com';
