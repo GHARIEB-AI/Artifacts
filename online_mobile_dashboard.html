@@ -518,15 +518,15 @@
             top: 50%;
             transform: translateY(-50%);
             z-index: 1000;
-            width: 200px;
-            height: 220px;
+            width: 350px;
+            height: 400px;
             cursor: pointer;
             transition: left 1.2s ease;
             overflow: visible;
-            left: -100px;
+            left: -150px;
         }
         .side-airplane:hover {
-            left: -30px;
+            left: -50px;
         }
         .side-airplane img {
             width: 100%;
@@ -537,7 +537,7 @@
             animation: sideplaneTakeoff 1.5s ease-in-out forwards;
         }
         @keyframes sideplaneTakeoff {
-            0% { left: -100px; opacity: 1; }
+            0% { left: -150px; opacity: 1; }
             30% { left: 50px; opacity: 1; }
             100% { left: 120%; top: -50%; opacity: 0; }
         }
