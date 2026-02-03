@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,6 +6,8 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Air Cairo - Market Insights Dashboard</title>
+    <!-- Preload loader GIF for instant display -->
+    <link rel="preload" href="assets/img/aircairo-loader.gif" as="image">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -60,6 +62,14 @@
         .logo-img {
             height: 70px;
             width: auto;
+        }
+        .logo-link {
+            display: inline-block;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+        .logo-link:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
         }
         .logo-container {
             display: flex;
@@ -1427,36 +1437,6 @@
             40% { transform: scale(1.2); opacity: 1; }
         }
         /* ===== END PAGE LOADER ===== */
-
-        /* ===== BOTTOM AIRPLANE ===== */
-        .bottom-airplane-section {
-            text-align: center;
-            padding: 40px 20px;
-            margin-top: 30px;
-            overflow: hidden;
-        }
-        .bottom-airplane {
-            display: inline-block;
-            cursor: pointer;
-        }
-        .bottom-airplane img {
-            width: 300px;
-            height: 350px;
-            object-fit: contain;
-            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));
-            transform: rotate(90deg);
-        }
-        .bottom-airplane:hover img {
-            filter: drop-shadow(0 15px 40px rgba(247,148,29,0.5));
-        }
-        .bottom-airplane.takeoff img {
-            animation: flyRight 1.5s ease-in forwards;
-        }
-        @keyframes flyRight {
-            0% { transform: rotate(90deg) translateY(0) scale(1); opacity: 1; }
-            100% { transform: rotate(90deg) translateY(-1000px) scale(0.8); opacity: 0; }
-        }
-        /* ===== END BOTTOM AIRPLANE ===== */
     </style>
 </head>
 <body>
@@ -1469,7 +1449,9 @@
 
     <div class="header">
         <div class="logo-container">
-            <img src="logo_white.png" alt="Air Cairo" class="logo-img">
+            <a href="index.html" class="logo-link">
+                <img src="logo_white.png" alt="Air Cairo" class="logo-img">
+            </a>
 
             <!-- Last Run Info -->
             <div class="last-run-info">
@@ -1720,24 +1702,7 @@
         </div>
     </div>
 
-    <!-- Bottom Airplane - GATE link -->
-    <div class="bottom-airplane-section">
-        <a href="./" class="bottom-airplane" id="airplane-link">
-            <img src="plane_transparent.png" alt="Air Cairo">
-        </a>
-    </div>
-
     <script>
-        // Airplane takeoff - straight line to the right
-        document.getElementById('airplane-link').addEventListener('click', function(e) {
-            e.preventDefault();
-            var link = this;
-            link.classList.add('takeoff');
-            setTimeout(function() {
-                window.location.href = link.href;
-            }, 1600);
-        });
-
         let lastData = null;
         let lastRunData = null;  // Cached data from last run (for offline mode)
         let isOnline = false;    // Track if API is available
@@ -1745,7 +1710,7 @@
         // Base URL for API calls:
         // - Local server: falls back to window.location.origin
         // - GitHub Pages: injected at runtime into the template placeholder
-        const API_BASE_OVERRIDE = 'https://dashboard.ghariebel3ageb.com';
+        const API_BASE_OVERRIDE = '__API_BASE__';
         const API_BASE = (() => {
             try {
                 if (API_BASE_OVERRIDE && !API_BASE_OVERRIDE.startsWith('__')) {

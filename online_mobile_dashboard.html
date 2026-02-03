@@ -7,6 +7,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Air Cairo - Mobile Dashboard</title>
+    <!-- Preload loader GIF for instant display -->
+    <link rel="preload" href="assets/img/aircairo-loader.gif" as="image">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -794,7 +796,7 @@
             }, 1500);
         }
 
-        const API_BASE = 'https://roland-assessing-moving-cod.trycloudflare.com';
+        const API_BASE = '__API_BASE__';
         let lastData = null;
         let lastRunData = null;
         let isOnline = false;
