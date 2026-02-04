@@ -555,58 +555,54 @@
 
         /* ===== GATE PLANE SECTION ===== */
         .gate-plane-section {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
             text-align: center;
-            z-index: 100;
+            padding: 30px 15px;
+            margin-top: 20px;
         }
         .gate-label {
-            font-size: 10px;
+            font-size: 14px;
             font-weight: 700;
             color: #F7941D;
-            letter-spacing: 2px;
-            margin-bottom: 5px;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
         .gate-plane-btn {
             display: inline-block;
             transition: transform 0.3s ease;
         }
         .gate-plane-btn:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
         .flying-plane {
-            width: 80px;
+            width: 250px;
+            max-width: 80vw;
             height: auto;
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
-            transition: transform 0.5s ease;
+            filter: drop-shadow(0 8px 20px rgba(0,0,0,0.4));
+            transition: transform 0.3s ease;
         }
         .flying-plane.takeoff {
-            animation: planeFlyAway 2.5s ease-out forwards;
+            animation: planeFlyAway 2s ease-in-out forwards;
         }
         @keyframes planeFlyAway {
-            0% { transform: translateY(0) scale(1); opacity: 1; }
-            30% { transform: translateY(-50px) scale(1.2); opacity: 1; }
-            60% { transform: translateY(-200px) scale(1.1); opacity: 1; }
-            100% { transform: translateY(-600px) scale(0.5); opacity: 0; }
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-400px); opacity: 0; }
         }
         .gate-hint {
-            font-size: 9px;
-            color: rgba(255,255,255,0.5);
-            margin-top: 3px;
+            font-size: 11px;
+            color: rgba(255,255,255,0.6);
+            margin-top: 10px;
         }
         /* Mobile adjustments for gate plane */
         @media (max-width: 480px) {
             .gate-plane-section {
-                bottom: 15px;
+                padding: 20px 10px;
             }
             .flying-plane {
-                width: 60px;
+                width: 200px;
             }
             .gate-label {
-                font-size: 8px;
+                font-size: 12px;
             }
         }
         /* ===== END GATE PLANE SECTION ===== */
@@ -848,10 +844,10 @@
             const plane = link.querySelector('.flying-plane');
             plane.classList.add('takeoff');
 
-            // Delay navigation to let user see the full animation
+            // Delay navigation to let user see the animation
             setTimeout(() => {
                 window.location.href = link.href;
-            }, 2500);
+            }, 2000);
         }
 
         const API_BASE = '__API_BASE__';
