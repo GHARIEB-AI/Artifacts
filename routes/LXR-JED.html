@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="report-generated" content="2026-02-03T07:49:00">
-    <meta name="report-version" content="20260203074900">
+    <meta name="report-generated" content="2026-02-05T20:26:00">
+    <meta name="report-version" content="20260205202600">
     <title>LXR-JED - Threat Report</title>
+    <!-- Preload loader GIF for instant display -->
+    <link rel="preload" href="../assets/img/aircairo-loader.gif" as="image">
     <style>
         * {
             margin: 0;
@@ -1080,10 +1082,10 @@
         <div class="filter-section">
             <div class="filter-row">
                 <select class="route-selector" id="routeSelector" onchange="navigateToRoute(this.value)">
-                    <option value="AHB-ATZ">AHB-ATZ</option>
-<option value="AHB-CAI">AHB-CAI</option>
+                    <option value="AHB-CAI">AHB-CAI</option>
+<option value="AHB-CCE">AHB-CCE</option>
 <option value="AJF-CAI">AJF-CAI</option>
-<option value="ATZ-JED">ATZ-JED</option>
+<option value="AJF-CCE">AJF-CCE</option>
 <option value="ATZ-MED">ATZ-MED</option>
 <option value="ATZ-RUH">ATZ-RUH</option>
 <option value="CAI-AHB">CAI-AHB</option>
@@ -1096,24 +1098,43 @@
 <option value="CAI-RUH">CAI-RUH</option>
 <option value="CAI-TUU">CAI-TUU</option>
 <option value="CAI-YNB">CAI-YNB</option>
+<option value="CCE-AHB">CCE-AHB</option>
+<option value="CCE-AJF">CCE-AJF</option>
+<option value="CCE-DMM">CCE-DMM</option>
+<option value="CCE-ELQ">CCE-ELQ</option>
+<option value="CCE-GIZ">CCE-GIZ</option>
+<option value="CCE-JED">CCE-JED</option>
+<option value="CCE-MED">CCE-MED</option>
+<option value="CCE-RUH">CCE-RUH</option>
+<option value="CCE-TUU">CCE-TUU</option>
+<option value="CCE-YNB">CCE-YNB</option>
 <option value="DMM-ATZ">DMM-ATZ</option>
 <option value="DMM-CAI">DMM-CAI</option>
+<option value="DMM-CCE">DMM-CCE</option>
 <option value="ELQ-ATZ">ELQ-ATZ</option>
 <option value="ELQ-CAI">ELQ-CAI</option>
+<option value="ELQ-CCE">ELQ-CCE</option>
 <option value="GIZ-CAI">GIZ-CAI</option>
+<option value="GIZ-CCE">GIZ-CCE</option>
 <option value="HBE-JED">HBE-JED</option>
 <option value="HBE-MED">HBE-MED</option>
 <option value="JED-ATZ">JED-ATZ</option>
 <option value="JED-CAI">JED-CAI</option>
+<option value="JED-CCE">JED-CCE</option>
 <option value="JED-HBE">JED-HBE</option>
 <option value="LXR-JED" selected>LXR-JED</option>
 <option value="MED-ATZ">MED-ATZ</option>
 <option value="MED-CAI">MED-CAI</option>
+<option value="MED-CCE">MED-CCE</option>
+<option value="MED-HBE">MED-HBE</option>
 <option value="RUH-ATZ">RUH-ATZ</option>
 <option value="RUH-CAI">RUH-CAI</option>
+<option value="RUH-CCE">RUH-CCE</option>
 <option value="TUU-ATZ">TUU-ATZ</option>
 <option value="TUU-CAI">TUU-CAI</option>
+<option value="TUU-CCE">TUU-CCE</option>
 <option value="YNB-CAI">YNB-CAI</option>
+<option value="YNB-CCE">YNB-CCE</option>
                 </select>
                 <button class="filter-btn" id="dateFilterBtn" onclick="openFilterModal('date')">
                     <span class="ar-text">📅 التواريخ</span>
@@ -1127,7 +1148,7 @@
     <div class="stats-bar">
         <div class="stat-item high" data-level="high" onclick="filterByLevel('high')">
             <div class="stat-sphere"><img src="../web_red.png" alt="High"></div>
-            <div class="stat-count">0</div>
+            <div class="stat-count">3</div>
             <div class="stat-label">
                 <span class="ar-text">تهديد عالي</span>
                 <span class="en-text">HIGH THREAT</span>
@@ -1135,7 +1156,7 @@
         </div>
         <div class="stat-item medium" data-level="medium" onclick="filterByLevel('medium')">
             <div class="stat-sphere"><img src="../web_yello.png" alt="Medium"></div>
-            <div class="stat-count">1</div>
+            <div class="stat-count">0</div>
             <div class="stat-label">
                 <span class="ar-text">تهديد متوسط</span>
                 <span class="en-text">MEDIUM THREAT</span>
@@ -1143,7 +1164,7 @@
         </div>
         <div class="stat-item low" data-level="low" onclick="filterByLevel('low')">
             <div class="stat-sphere"><img src="../web_blue.png" alt="Low"></div>
-            <div class="stat-count">2</div>
+            <div class="stat-count">0</div>
             <div class="stat-label">
                 <span class="ar-text">تهديد منخفض</span>
                 <span class="en-text">LOW THREAT</span>
@@ -1159,26 +1180,26 @@
 
     <div class="content">
         
-    <div class="threat-card low" data-level="low" data-date="2026-02-04">
+    <div class="threat-card high" data-level="high" data-date="2026-02-19">
         <div class="card-date-header">
-            <span class="date-route">04FEB26 &nbsp;-&nbsp; LXR-JED</span>
+            <span class="date-route">19FEB26 &nbsp;-&nbsp; LXR-JED</span>
         </div>
 
         <div class="blocks-wrapper">
             <div class="flight-block our-flight">
                 <div class="flight-block-header">
-                    <span class="flight-number">SM-983</span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 20:40</span>
+                    <span class="flight-number">SM-2467</span>
+                    <span class="flight-time"><span class="time-label">DEP</span> 01:00</span>
                 </div>
 
                 <div class="lf-unified-section">
-                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">69</span></div>
-                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">02Feb</span></div>
-                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">11</span></div>
+                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">0</span></div>
+                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">--</span></div>
+                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">0</span></div>
                     <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">3</span></div>
-                    <div class="lf-indicator lf-percent lf-low"><span class="lf-label">LF</span><span class="lf-value">39%</span></div>
-                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">X9</span></div>
+                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">0</span></div>
+                    <div class="lf-indicator lf-percent lf-low"><span class="lf-label">LF</span><span class="lf-value">0%</span></div>
+                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">P9</span></div>
                 </div>
                 <div class="flight-block-details">
                     <div class="flight-detail-col">
@@ -1187,8 +1208,8 @@
                             <span class="en-text">FARE</span>
                         </div>
                         <div class="flight-detail-value">
-                            <span class="ar-text">6650 جنيه مصري</span>
-                            <span class="en-text">6650 EGP</span>
+                            <span class="ar-text">31702 جنيه مصري</span>
+                            <span class="en-text">31702 EGP</span>
                         </div>
                     </div>
                     <div class="flight-detail-separator"></div>
@@ -1208,8 +1229,8 @@
 
             <div class="recommendation-section">
                 <div class="recommendation-title">
-                    <span class="ar-text">سعر نسما للطيران أقل بـ 578 جنيه مصري</span>
-                    <span class="en-text">Nesma Airlines price lower by 578 EGP</span>
+                    <span class="ar-text">سعر نسما للطيران أقل بـ 14697 جنيه مصري</span>
+                    <span class="en-text">Nesma Airlines price lower by 14697 EGP</span>
                 </div>
                 <div class="recommendation-details">
                     <span class="ar-text">الأفضل تنافسياً: نسما للطيران 💡</span>
@@ -1220,10 +1241,10 @@
             <div class="flight-block comp-flight">
                 <div class="flight-block-header">
                     <span class="flight-number">
-                        <span class="ar-text">Nesma Airlines-NE-675</span>
-                        <span class="en-text">Nesma Airlines-NE-675</span>
+                        <span class="ar-text">Nesma Airlines-NE-673</span>
+                        <span class="en-text">Nesma Airlines-NE-673</span>
                     </span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 10:15</span>
+                    <span class="flight-time"><span class="time-label">DEP</span> 03:20</span>
                 </div>
                 <div class="flight-block-details">
                     <div class="flight-detail-col">
@@ -1232,8 +1253,8 @@
                             <span class="en-text">FARE</span>
                         </div>
                         <div class="flight-detail-value">
-                            <span class="ar-text">6072 جنيه مصري</span>
-                            <span class="en-text">6072 EGP</span>
+                            <span class="ar-text">17005 جنيه مصري</span>
+                            <span class="en-text">17005 EGP</span>
                         </div>
                     </div>
                     <div class="flight-detail-separator"></div>
@@ -1251,34 +1272,34 @@
             </div>
         </div>
 
-        <div class="alert-banner low">
+        <div class="alert-banner high">
             <div class="alert-text">
-                <span class="ar-text">تهديد منخفض</span>
-                <span class="en-text">LOW THREAT</span>
+                <span class="ar-text">تهديد عالي</span>
+                <span class="en-text">HIGH THREAT</span>
             </div>
         </div>
     </div>
     
-    <div class="threat-card low" data-level="low" data-date="2026-02-03">
+    <div class="threat-card high" data-level="high" data-date="2026-02-12">
         <div class="card-date-header">
-            <span class="date-route">03FEB26 &nbsp;-&nbsp; LXR-JED</span>
+            <span class="date-route">12FEB26 &nbsp;-&nbsp; LXR-JED</span>
         </div>
 
         <div class="blocks-wrapper">
             <div class="flight-block our-flight">
                 <div class="flight-block-header">
-                    <span class="flight-number">SM-483</span>
+                    <span class="flight-number">SM-2451</span>
                     <span class="flight-time"><span class="time-label">DEP</span> 15:20</span>
                 </div>
 
                 <div class="lf-unified-section">
-                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">134</span></div>
-                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">02Feb</span></div>
-                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">121</span></div>
+                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">0</span></div>
+                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">--</span></div>
+                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">0</span></div>
                     <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">89</span></div>
-                    <div class="lf-indicator lf-percent lf-medium"><span class="lf-label">LF</span><span class="lf-value">75%</span></div>
-                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">T9</span></div>
+                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">0</span></div>
+                    <div class="lf-indicator lf-percent lf-low"><span class="lf-label">LF</span><span class="lf-value">0%</span></div>
+                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">P9</span></div>
                 </div>
                 <div class="flight-block-details">
                     <div class="flight-detail-col">
@@ -1287,8 +1308,8 @@
                             <span class="en-text">FARE</span>
                         </div>
                         <div class="flight-detail-value">
-                            <span class="ar-text">7342 جنيه مصري</span>
-                            <span class="en-text">7342 EGP</span>
+                            <span class="ar-text">31702 جنيه مصري</span>
+                            <span class="en-text">31702 EGP</span>
                         </div>
                     </div>
                     <div class="flight-detail-separator"></div>
@@ -1308,8 +1329,8 @@
 
             <div class="recommendation-section">
                 <div class="recommendation-title">
-                    <span class="ar-text">سعر نسما للطيران أقل بـ 2389 جنيه مصري</span>
-                    <span class="en-text">Nesma Airlines price lower by 2389 EGP</span>
+                    <span class="ar-text">سعر نسما للطيران أقل بـ 18261 جنيه مصري</span>
+                    <span class="en-text">Nesma Airlines price lower by 18261 EGP</span>
                 </div>
                 <div class="recommendation-details">
                     <span class="ar-text">الأفضل تنافسياً: نسما للطيران 💡</span>
@@ -1320,10 +1341,10 @@
             <div class="flight-block comp-flight">
                 <div class="flight-block-header">
                     <span class="flight-number">
-                        <span class="ar-text">Nesma Airlines-NE-675</span>
-                        <span class="en-text">Nesma Airlines-NE-675</span>
+                        <span class="ar-text">Nesma Airlines-NE-677</span>
+                        <span class="en-text">Nesma Airlines-NE-677</span>
                     </span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 14:10</span>
+                    <span class="flight-time"><span class="time-label">DEP</span> 06:30</span>
                 </div>
                 <div class="flight-block-details">
                     <div class="flight-detail-col">
@@ -1332,8 +1353,8 @@
                             <span class="en-text">FARE</span>
                         </div>
                         <div class="flight-detail-value">
-                            <span class="ar-text">4953 جنيه مصري</span>
-                            <span class="en-text">4953 EGP</span>
+                            <span class="ar-text">13441 جنيه مصري</span>
+                            <span class="en-text">13441 EGP</span>
                         </div>
                     </div>
                     <div class="flight-detail-separator"></div>
@@ -1351,34 +1372,34 @@
             </div>
         </div>
 
-        <div class="alert-banner low">
+        <div class="alert-banner high">
             <div class="alert-text">
-                <span class="ar-text">تهديد منخفض</span>
-                <span class="en-text">LOW THREAT</span>
+                <span class="ar-text">تهديد عالي</span>
+                <span class="en-text">HIGH THREAT</span>
             </div>
         </div>
     </div>
     
-    <div class="threat-card medium" data-level="medium" data-date="2026-02-03">
+    <div class="threat-card high" data-level="high" data-date="2026-02-09">
         <div class="card-date-header">
-            <span class="date-route">03FEB26 &nbsp;-&nbsp; LXR-JED</span>
+            <span class="date-route">09FEB26 &nbsp;-&nbsp; LXR-JED</span>
         </div>
 
         <div class="blocks-wrapper">
             <div class="flight-block our-flight">
                 <div class="flight-block-header">
-                    <span class="flight-number">SM-981</span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 19:00</span>
+                    <span class="flight-number">SM-2441</span>
+                    <span class="flight-time"><span class="time-label">DEP</span> 05:30</span>
                 </div>
 
                 <div class="lf-unified-section">
-                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">116</span></div>
-                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">02Feb</span></div>
-                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">75</span></div>
+                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">0</span></div>
+                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">--</span></div>
+                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">0</span></div>
                     <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">68</span></div>
-                    <div class="lf-indicator lf-percent lf-medium"><span class="lf-label">LF</span><span class="lf-value">65%</span></div>
-                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">S4</span></div>
+                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">0</span></div>
+                    <div class="lf-indicator lf-percent lf-low"><span class="lf-label">LF</span><span class="lf-value">0%</span></div>
+                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">P9</span></div>
                 </div>
                 <div class="flight-block-details">
                     <div class="flight-detail-col">
@@ -1387,8 +1408,8 @@
                             <span class="en-text">FARE</span>
                         </div>
                         <div class="flight-detail-value">
-                            <span class="ar-text">8813 جنيه مصري</span>
-                            <span class="en-text">8813 EGP</span>
+                            <span class="ar-text">31702 جنيه مصري</span>
+                            <span class="en-text">31702 EGP</span>
                         </div>
                     </div>
                     <div class="flight-detail-separator"></div>
@@ -1408,8 +1429,8 @@
 
             <div class="recommendation-section">
                 <div class="recommendation-title">
-                    <span class="ar-text">سعر نسما للطيران أقل بـ 3860 جنيه مصري</span>
-                    <span class="en-text">Nesma Airlines price lower by 3860 EGP</span>
+                    <span class="ar-text">سعر نسما للطيران أقل بـ 25628 جنيه مصري</span>
+                    <span class="en-text">Nesma Airlines price lower by 25628 EGP</span>
                 </div>
                 <div class="recommendation-details">
                     <span class="ar-text">الأفضل تنافسياً: نسما للطيران 💡</span>
@@ -1420,10 +1441,10 @@
             <div class="flight-block comp-flight">
                 <div class="flight-block-header">
                     <span class="flight-number">
-                        <span class="ar-text">Nesma Airlines-NE-675</span>
-                        <span class="en-text">Nesma Airlines-NE-675</span>
+                        <span class="ar-text">Nesma Airlines-NE-677</span>
+                        <span class="en-text">Nesma Airlines-NE-677</span>
                     </span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 14:10</span>
+                    <span class="flight-time"><span class="time-label">DEP</span> 03:40</span>
                 </div>
                 <div class="flight-block-details">
                     <div class="flight-detail-col">
@@ -1432,8 +1453,8 @@
                             <span class="en-text">FARE</span>
                         </div>
                         <div class="flight-detail-value">
-                            <span class="ar-text">4953 جنيه مصري</span>
-                            <span class="en-text">4953 EGP</span>
+                            <span class="ar-text">6074 جنيه مصري</span>
+                            <span class="en-text">6074 EGP</span>
                         </div>
                     </div>
                     <div class="flight-detail-separator"></div>
@@ -1451,10 +1472,10 @@
             </div>
         </div>
 
-        <div class="alert-banner medium">
+        <div class="alert-banner high">
             <div class="alert-text">
-                <span class="ar-text">تهديد متوسط</span>
-                <span class="en-text">MEDIUM THREAT</span>
+                <span class="ar-text">تهديد عالي</span>
+                <span class="en-text">HIGH THREAT</span>
             </div>
         </div>
     </div>
@@ -1495,8 +1516,9 @@
                 <div class="filter-year-header">2026</div>
 <label class="filter-month-header"><input type="checkbox" data-month="2026-02" checked><span>February</span></label>
 <div class="filter-dates-grid">
-<label class="filter-date-item"><input type="checkbox" data-date="2026-02-03" checked><span>03 Feb</span></label>
-<label class="filter-date-item"><input type="checkbox" data-date="2026-02-04" checked><span>04 Feb</span></label>
+<label class="filter-date-item"><input type="checkbox" data-date="2026-02-09" checked><span>09 Feb</span></label>
+<label class="filter-date-item"><input type="checkbox" data-date="2026-02-12" checked><span>12 Feb</span></label>
+<label class="filter-date-item"><input type="checkbox" data-date="2026-02-19" checked><span>19 Feb</span></label>
 </div>
             </div>
         </div>

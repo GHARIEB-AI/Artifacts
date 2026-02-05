@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="report-generated" content="2026-01-30T06:29:00">
-    <meta name="report-version" content="20260130062900">
+    <meta name="report-generated" content="2026-02-05T20:26:00">
+    <meta name="report-version" content="20260205202600">
     <title>CAI-AJF - Threat Report</title>
+    <!-- Preload loader GIF for instant display -->
+    <link rel="preload" href="../assets/img/aircairo-loader.gif" as="image">
     <style>
         * {
             margin: 0;
@@ -1080,11 +1082,10 @@
         <div class="filter-section">
             <div class="filter-row">
                 <select class="route-selector" id="routeSelector" onchange="navigateToRoute(this.value)">
-                    <option value="AHB-ATZ">AHB-ATZ</option>
-<option value="AHB-CAI">AHB-CAI</option>
-<option value="AJF-ATZ">AJF-ATZ</option>
+                    <option value="AHB-CAI">AHB-CAI</option>
+<option value="AHB-CCE">AHB-CCE</option>
 <option value="AJF-CAI">AJF-CAI</option>
-<option value="ATZ-JED">ATZ-JED</option>
+<option value="AJF-CCE">AJF-CCE</option>
 <option value="ATZ-MED">ATZ-MED</option>
 <option value="ATZ-RUH">ATZ-RUH</option>
 <option value="CAI-AHB">CAI-AHB</option>
@@ -1097,24 +1098,43 @@
 <option value="CAI-RUH">CAI-RUH</option>
 <option value="CAI-TUU">CAI-TUU</option>
 <option value="CAI-YNB">CAI-YNB</option>
+<option value="CCE-AHB">CCE-AHB</option>
+<option value="CCE-AJF">CCE-AJF</option>
+<option value="CCE-DMM">CCE-DMM</option>
+<option value="CCE-ELQ">CCE-ELQ</option>
+<option value="CCE-GIZ">CCE-GIZ</option>
+<option value="CCE-JED">CCE-JED</option>
+<option value="CCE-MED">CCE-MED</option>
+<option value="CCE-RUH">CCE-RUH</option>
+<option value="CCE-TUU">CCE-TUU</option>
+<option value="CCE-YNB">CCE-YNB</option>
 <option value="DMM-ATZ">DMM-ATZ</option>
 <option value="DMM-CAI">DMM-CAI</option>
+<option value="DMM-CCE">DMM-CCE</option>
 <option value="ELQ-ATZ">ELQ-ATZ</option>
 <option value="ELQ-CAI">ELQ-CAI</option>
+<option value="ELQ-CCE">ELQ-CCE</option>
 <option value="GIZ-CAI">GIZ-CAI</option>
+<option value="GIZ-CCE">GIZ-CCE</option>
 <option value="HBE-JED">HBE-JED</option>
 <option value="HBE-MED">HBE-MED</option>
 <option value="JED-ATZ">JED-ATZ</option>
 <option value="JED-CAI">JED-CAI</option>
+<option value="JED-CCE">JED-CCE</option>
 <option value="JED-HBE">JED-HBE</option>
+<option value="LXR-JED">LXR-JED</option>
 <option value="MED-ATZ">MED-ATZ</option>
 <option value="MED-CAI">MED-CAI</option>
+<option value="MED-CCE">MED-CCE</option>
 <option value="MED-HBE">MED-HBE</option>
 <option value="RUH-ATZ">RUH-ATZ</option>
 <option value="RUH-CAI">RUH-CAI</option>
+<option value="RUH-CCE">RUH-CCE</option>
 <option value="TUU-ATZ">TUU-ATZ</option>
 <option value="TUU-CAI">TUU-CAI</option>
+<option value="TUU-CCE">TUU-CCE</option>
 <option value="YNB-CAI">YNB-CAI</option>
+<option value="YNB-CCE">YNB-CCE</option>
                 </select>
                 <button class="filter-btn" id="dateFilterBtn" onclick="openFilterModal('date')">
                     <span class="ar-text">📅 التواريخ</span>
@@ -1144,7 +1164,7 @@
         </div>
         <div class="stat-item low" data-level="low" onclick="filterByLevel('low')">
             <div class="stat-sphere"><img src="../web_blue.png" alt="Low"></div>
-            <div class="stat-count">0</div>
+            <div class="stat-count">1</div>
             <div class="stat-label">
                 <span class="ar-text">تهديد منخفض</span>
                 <span class="en-text">LOW THREAT</span>
@@ -1188,8 +1208,8 @@
                             <span class="en-text">FARE</span>
                         </div>
                         <div class="flight-detail-value">
-                            <span class="ar-text">12041 جنيه مصري</span>
-                            <span class="en-text">12041 EGP</span>
+                            <span class="ar-text">12035 جنيه مصري</span>
+                            <span class="en-text">12035 EGP</span>
                         </div>
                     </div>
                     <div class="flight-detail-separator"></div>
@@ -1209,8 +1229,8 @@
 
             <div class="recommendation-section">
                 <div class="recommendation-title">
-                    <span class="ar-text">سعر طيران النيل أقل بـ 3938 جنيه مصري</span>
-                    <span class="en-text">Nile Air price lower by 3938 EGP</span>
+                    <span class="ar-text">سعر طيران النيل أقل بـ 3928 جنيه مصري</span>
+                    <span class="en-text">Nile Air price lower by 3928 EGP</span>
                 </div>
                 <div class="recommendation-details">
                     <span class="ar-text">الأفضل تنافسياً: طيران النيل 💡</span>
@@ -1233,8 +1253,8 @@
                             <span class="en-text">FARE</span>
                         </div>
                         <div class="flight-detail-value">
-                            <span class="ar-text">8103 جنيه مصري</span>
-                            <span class="en-text">8103 EGP</span>
+                            <span class="ar-text">8107 جنيه مصري</span>
+                            <span class="en-text">8107 EGP</span>
                         </div>
                     </div>
                     <div class="flight-detail-separator"></div>
@@ -1256,6 +1276,106 @@
             <div class="alert-text">
                 <span class="ar-text">تهديد متوسط</span>
                 <span class="en-text">MEDIUM THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card low" data-level="low" data-date="2026-03-26">
+        <div class="card-date-header">
+            <span class="date-route">26MAR26 &nbsp;-&nbsp; CAI-AJF</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block our-flight">
+                <div class="flight-block-header">
+                    <span class="flight-number">SM-321</span>
+                    <span class="flight-time"><span class="time-label">DEP</span> 18:25</span>
+                </div>
+
+                <div class="lf-unified-section">
+                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">49</span></div>
+                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">05Feb</span></div>
+                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">4</span></div>
+                    <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">1</span></div>
+                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">1</span></div>
+                    <div class="lf-indicator lf-percent lf-low"><span class="lf-label">LF</span><span class="lf-value">27%</span></div>
+                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">M9</span></div>
+                </div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">15700 جنيه مصري</span>
+                            <span class="en-text">15700 EGP</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="recommendation-section">
+                <div class="recommendation-title">
+                    <span class="ar-text">سعر طيران النيل أقل بـ 1744 جنيه مصري</span>
+                    <span class="en-text">Nile Air price lower by 1744 EGP</span>
+                </div>
+                <div class="recommendation-details">
+                    <span class="ar-text">الأفضل تنافسياً: طيران النيل 💡</span>
+                    <span class="en-text">Market Leader: Nile Air 💡</span>
+                </div>
+            </div>
+
+            <div class="flight-block comp-flight">
+                <div class="flight-block-header">
+                    <span class="flight-number">
+                        <span class="ar-text">Nile Air-NP-119</span>
+                        <span class="en-text">Nile Air-NP-119</span>
+                    </span>
+                    <span class="flight-time"><span class="time-label">DEP</span> 16:50</span>
+                </div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">13956 جنيه مصري</span>
+                            <span class="en-text">13956 EGP</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
             </div>
         </div>
     </div>
@@ -1294,6 +1414,10 @@
             </div>
             <div class="filter-modal-body" id="dateFilterBody">
                 <div class="filter-year-header">2026</div>
+<label class="filter-month-header"><input type="checkbox" data-month="2026-03" checked><span>March</span></label>
+<div class="filter-dates-grid">
+<label class="filter-date-item"><input type="checkbox" data-date="2026-03-26" checked><span>26 Mar</span></label>
+</div>
 <label class="filter-month-header"><input type="checkbox" data-month="2026-05" checked><span>May</span></label>
 <div class="filter-dates-grid">
 <label class="filter-date-item"><input type="checkbox" data-date="2026-05-28" checked><span>28 May</span></label>
