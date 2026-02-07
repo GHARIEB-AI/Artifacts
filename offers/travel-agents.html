@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!-- Default language is English. Redirect unless user explicitly chose Arabic. -->
+<script>if(!sessionStorage.getItem('lang_ar'))location.replace('travel-agents-en.html');</script>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -1047,7 +1049,7 @@
 
     <!-- Header -->
     <div class="header">
-        <a href="travel-agents-en.html" class="lang-toggle">
+        <a href="travel-agents-en.html" class="lang-toggle" onclick="sessionStorage.removeItem('lang_ar')">
             <img src="lang-toggle.png" alt="Air Cairo">
             <span>EN</span>
         </a>
