@@ -796,7 +796,22 @@
             }, 1500);
         }
 
-        const API_BASE = '__API_BASE__';
+        const API_BASE_OVERRIDE = '__API_BASE__';
+        const API_BASE = (() => {
+            try {
+                if (API_BASE_OVERRIDE && !API_BASE_OVERRIDE.startsWith('__')) {
+                    return API_BASE_OVERRIDE.replace(/\/$/, '');
+                }
+                const params = new URLSearchParams(window.location.search);
+                const override = params.get('api');
+                if (override) return override.replace(/\/$/, '');
+            } catch (e) {}
+            const loc = window.location;
+            if (loc.protocol === 'file:' || !loc.origin || loc.origin === 'null') {
+                return 'http://localhost:8081';
+            }
+            return loc.origin;
+        })();
         let lastData = null;
         let lastRunData = null;
         let isOnline = false;
