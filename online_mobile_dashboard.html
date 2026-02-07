@@ -820,6 +820,8 @@
         let lastData = null;
         let lastRunData = null;
         let isOnline = false;
+        let failCount = 0;
+        let pollInterval = null;
 
         // Try to load cached data from last run
         async function loadCachedData() {
@@ -992,12 +994,17 @@
 
                 const data = await response.json();
                 isOnline = true;
+                failCount = 0;
                 lastData = data;
                 updateDashboard(data);
                 // Clear cached mode indicator when live API responds
                 document.getElementById('run-status').classList.remove('cached');
+                // Restart polling if it was stopped
+                if (!pollInterval) {
+                    pollInterval = setInterval(fetchStatus, 5000);
+                }
             } catch (e) {
-                console.error('Fetch error:', e);
+                failCount++;
                 isOnline = false;
 
                 if (lastRunData) {
@@ -1010,6 +1017,12 @@
                 } else {
                     document.getElementById('run-status').textContent = 'Offline';
                     document.getElementById('run-status').className = 'run-status inactive';
+                }
+                // Stop auto-polling after 3 consecutive failures (static hosting)
+                // User can still manually refresh by tapping the header
+                if (failCount >= 3 && pollInterval) {
+                    clearInterval(pollInterval);
+                    pollInterval = null;
                 }
             }
         }
@@ -1027,8 +1040,8 @@
             fetchStatus();
         });
 
-        // Auto refresh every 5 seconds (slightly longer for mobile battery)
-        setInterval(fetchStatus, 5000);
+        // Auto refresh every 5 seconds (stops after 3 consecutive failures on static hosting)
+        pollInterval = setInterval(fetchStatus, 5000);
     </script>
 
     <!-- UNIFIED PAGE LOADER SCRIPT -->
