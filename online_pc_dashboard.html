@@ -1445,13 +1445,6 @@
             margin-top: 20px;
             overflow: hidden;
         }
-        .gate-label {
-            font-size: 14px;
-            font-weight: 700;
-            color: #F7941D;
-            letter-spacing: 3px;
-            margin-bottom: 15px;
-        }
         .gate-plane-btn {
             display: inline-block;
         }
@@ -1467,11 +1460,6 @@
         @keyframes planeFlyAway {
             0% { transform: translateX(0); opacity: 1; }
             100% { transform: translateX(-500px); opacity: 0; }
-        }
-        .gate-hint {
-            font-size: 11px;
-            color: rgba(255,255,255,0.6);
-            margin-top: 10px;
         }
         /* ===== END GATE PLANE SECTION ===== */
     </style>
@@ -1741,11 +1729,9 @@
 
     <!-- THE GATE - Flying Plane Button -->
     <div class="gate-plane-section">
-        <div class="gate-label">GO TO GATE</div>
         <a href="./" class="gate-plane-btn" onclick="planeTakeoff(event, this)">
             <img src="contact-btn.png" alt="Air Cairo" class="flying-plane">
         </a>
-        <div class="gate-hint">Click to fly</div>
     </div>
 
     <script>
