@@ -1736,6 +1736,10 @@
         const NAMED_TUNNEL_URL = '';
         let _apiFallbackActive = false;
         let _apiFailCount = 0;
+        // Consecutive failed polls tolerated before showing the cached banner.
+        // At a 3s poll interval this is ~9s of continuous failure, so a lone
+        // slow/dropped poll under extraction load never flips the UI.
+        const FAILS_BEFORE_OFFLINE = 3;
 
         const API_BASE = (() => {
             try {
@@ -2644,6 +2648,15 @@
                 });
                 clearTimeout(timeoutId);
 
+                // FLICKER FIX 1: a transient 5xx (e.g. Cloudflare 502/504 while
+                // the origin is momentarily blocked under extraction load) must
+                // be treated as a failure, not parsed as JSON. Without this the
+                // HTML error body makes response.json() throw and looks like a
+                // full outage.
+                if (!response.ok) {
+                    throw new Error('HTTP ' + response.status);
+                }
+
                 const data = await response.json();
                 isOnline = true;
                 _apiFailCount = 0;
@@ -2662,6 +2675,15 @@
                     _apiFailCount = 0;
                     console.log('[Dashboard] Switching to named tunnel fallback: ' + NAMED_TUNNEL_URL);
                     return fetchStatus();
+                }
+
+                // FLICKER FIX 2: tolerate transient hiccups. A single slow or
+                // dropped poll (common while the extraction pegs the CPU) must
+                // NOT flip the UI to the "cached data" banner. Keep showing the
+                // last live data and only fall back after several consecutive
+                // failures (~FAILS_BEFORE_OFFLINE * 3s).
+                if (_apiFailCount < FAILS_BEFORE_OFFLINE) {
+                    return;  // keep last live view; do not show the banner
                 }
 
                 isOnline = false;

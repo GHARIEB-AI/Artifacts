@@ -800,6 +800,9 @@
         let isOnline = false;
         let failCount = 0;
         let pollInterval = null;
+        // Consecutive failed polls tolerated before showing the cached banner,
+        // so a lone slow/dropped poll under extraction load never flips the UI.
+        const FAILS_BEFORE_OFFLINE = 3;
 
         // Try to load cached data from last run
         async function loadCachedData() {
@@ -971,6 +974,13 @@
                 });
                 clearTimeout(timeoutId);
 
+                // FLICKER FIX 1: treat a transient 5xx (Cloudflare 502/504 while
+                // the origin is momentarily blocked) as a failure instead of
+                // parsing its HTML error body as JSON.
+                if (!response.ok) {
+                    throw new Error('HTTP ' + response.status);
+                }
+
                 const data = await response.json();
                 isOnline = true;
                 failCount = 0;
@@ -992,6 +1002,13 @@
                     failCount = 0;
                     console.log('[Dashboard] Switching to named tunnel fallback: ' + NAMED_TUNNEL_URL);
                     return fetchStatus();
+                }
+
+                // FLICKER FIX 2: tolerate transient hiccups. Do not flip to the
+                // cached banner on a single slow/dropped poll; keep showing the
+                // last live data until several consecutive polls have failed.
+                if (failCount < FAILS_BEFORE_OFFLINE) {
+                    return;  // keep last live view; do not show the banner
                 }
 
                 if (lastRunData) {
