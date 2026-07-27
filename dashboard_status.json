@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-07-26T17:29:49.861973",
+  "timestamp": "2026-07-27T14:08:29.751770",
   "status": "COMPLETED",
   "running": false,
   "active_workers": 0,
   "paths": {
     "outputs_root": "D:\\CODERED\\LAB\\Artifacts",
-    "active_output_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_260726_at_14.46",
-    "active_checkpoint_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_260726_at_14.46\\checkpoints",
-    "active_logs_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_260726_at_14.46\\logs",
+    "active_output_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_270726_at_12.25",
+    "active_checkpoint_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_270726_at_12.25\\checkpoints",
+    "active_logs_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_270726_at_12.25\\logs",
     "backend": "sqlite"
   },
   "config": {
-    "run_id": "20260726_144715",
+    "run_id": "20260727_122533",
     "mode": "LF_OAL",
-    "started_at": "2026-07-26T14:47:15.197918",
+    "started_at": "2026-07-27T12:25:33.444751",
     "routes": [
       "JED-CAI",
       "JED-HBE",
@@ -67,7 +67,7 @@
       "CAI-GIZ"
     ],
     "routes_count": 50,
-    "dates_count": 159,
+    "dates_count": 158,
     "chunks_count": 16,
     "ports": [
       9222,
@@ -82,7 +82,7 @@
     ],
     "ports_count": 9,
     "oal_workers": 10,
-    "date_range": "2026-07-26 to 2026-12-31"
+    "date_range": "2026-07-27 to 2026-12-31"
   },
   "progress": {
     "lf": 100.0,
@@ -455,9 +455,9 @@
   },
   "running_tasks": [],
   "excel_files": [
-    "EGY_TO_KSA_26JUL26_TO_31DEC26_generated_at_26jul_15.56.xlsx",
-    "KSA_TO_EGY_26JUL26_TO_31DEC26_generated_at_26jul_15.59.xlsx",
-    "LOAD_FACTOR_SUMMARY_26-07-26_TO_26-JUL-26_generated_at_26jul_16.05.xlsx"
+    "EGY_TO_KSA_27JUL26_TO_31DEC26_generated_at_27jul_13.42.xlsx",
+    "KSA_TO_EGY_27JUL26_TO_31DEC26_generated_at_27jul_13.39.xlsx",
+    "LOAD_FACTOR_SUMMARY_27-07-26_TO_27-JUL-26_generated_at_27jul_13.47.xlsx"
   ],
   "excel_count": 3,
   "speed_metrics": {
@@ -485,269 +485,199 @@
   },
   "live_logs": {
     "lines": [
-      "2026-07-26 15:50:14 | INFO     | [lf.day.start] Processing HMB-ELQ for 30JUL",
-      "2026-07-26 15:50:15 | WARNING  | [lf.day.no_flights] No direct flights on 30JUL",
-      "2026-07-26 15:50:15 | INFO     | [SUCCESS] Day 30JUL",
-      "2026-07-26 15:50:15 | INFO     | [DAY_START] Processing 29JUL",
-      "2026-07-26 15:50:15 | INFO     | [lf.day.start] Processing HMB-ELQ for 29JUL",
-      "2026-07-26 15:50:16 | INFO     | [lf.day.flights_found] Found 1 flights on 29JUL",
-      "2026-07-26 15:50:19 | INFO     | [lf.flight.extracted] SM435 on 29JUL: BKG=170, LF=95.0%",
-      "2026-07-26 15:50:25 | INFO     | [SUCCESS] Day 29JUL",
-      "2026-07-26 15:50:25 | INFO     | [DAY_START] Processing 28JUL",
-      "2026-07-26 15:50:25 | INFO     | [lf.day.start] Processing HMB-ELQ for 28JUL",
-      "2026-07-26 15:50:26 | WARNING  | [lf.day.no_flights] No direct flights on 28JUL",
-      "2026-07-26 15:50:26 | INFO     | [SUCCESS] Day 28JUL",
-      "2026-07-26 15:50:26 | INFO     | [DAY_START] Processing 27JUL",
-      "2026-07-26 15:50:26 | INFO     | [lf.day.start] Processing HMB-ELQ for 27JUL",
-      "2026-07-26 15:50:28 | WARNING  | [lf.day.no_flights] No direct flights on 27JUL",
-      "2026-07-26 15:50:28 | INFO     | [SUCCESS] Day 27JUL",
-      "2026-07-26 15:50:28 | INFO     | [SUCCESS] LF Search Complete",
-      "2026-07-26 15:50:28 | INFO     | [Worker_9234] Completed: HMB-ELQ - 9 results, 0 errors",
-      "2026-07-26 15:56:33 | INFO     | [Worker_9234] Shutdown signal received, exiting...",
-      "2026-07-26 15:56:33 | INFO     | [Worker_9234] Finished. Processed 86 groups."
+      "2026-07-27 13:32:11 | INFO     | [lf.day.start] Processing HMB-ELQ for 31JUL",
+      "2026-07-27 13:32:12 | WARNING  | [lf.day.no_flights] No direct flights on 31JUL",
+      "2026-07-27 13:32:12 | INFO     | [SUCCESS] Day 31JUL",
+      "2026-07-27 13:32:12 | INFO     | [DAY_START] Processing 30JUL",
+      "2026-07-27 13:32:12 | INFO     | [lf.day.start] Processing HMB-ELQ for 30JUL",
+      "2026-07-27 13:32:13 | WARNING  | [lf.day.no_flights] No direct flights on 30JUL",
+      "2026-07-27 13:32:13 | INFO     | [SUCCESS] Day 30JUL",
+      "2026-07-27 13:32:13 | INFO     | [DAY_START] Processing 29JUL",
+      "2026-07-27 13:32:13 | INFO     | [lf.day.start] Processing HMB-ELQ for 29JUL",
+      "2026-07-27 13:32:14 | INFO     | [lf.day.flights_found] Found 1 flights on 29JUL",
+      "2026-07-27 13:32:17 | INFO     | [lf.flight.extracted] SM435 on 29JUL: BKG=172, LF=96.1%",
+      "2026-07-27 13:32:24 | INFO     | [SUCCESS] Day 29JUL",
+      "2026-07-27 13:32:24 | INFO     | [DAY_START] Processing 28JUL",
+      "2026-07-27 13:32:24 | INFO     | [lf.day.start] Processing HMB-ELQ for 28JUL",
+      "2026-07-27 13:32:26 | WARNING  | [lf.day.no_flights] No direct flights on 28JUL",
+      "2026-07-27 13:32:26 | INFO     | [SUCCESS] Day 28JUL",
+      "2026-07-27 13:32:26 | INFO     | [SUCCESS] LF Search Complete",
+      "2026-07-27 13:32:26 | INFO     | [Worker_9234] Completed: HMB-ELQ - 8 results, 0 errors",
+      "2026-07-27 13:39:56 | INFO     | [Worker_9234] Shutdown signal received, exiting...",
+      "2026-07-27 13:39:56 | INFO     | [Worker_9234] Finished. Processed 87 groups."
     ],
-    "file": "LF_HMB-ELQ_20260726_154959.log",
-    "total_lines": 50
+    "file": "LF_HMB-ELQ_20260727_133153.log",
+    "total_lines": 46
   },
   "flight_booking_data": {
     "flights": [
-      {
-        "flight": "SM479",
-        "route": "CAI-JED",
-        "date": "Monday, July 27, 2026",
-        "lst_sold": "2026-07-26 00:00:00",
-        "to_day": 3,
-        "y_day": 1,
-        "weekly": 52,
-        "lowest_avail": "CLOSED",
-        "lf_percent": 101.7,
-        "capacity": 179,
-        "booked": 182,
-        "extracted_at": "2026-07-26T15:51:36.706260"
-      },
-      {
-        "flight": "SM475",
-        "route": "CAI-JED",
-        "date": "Monday, July 27, 2026",
-        "lst_sold": "2026-07-26 00:00:00",
-        "to_day": 7,
-        "y_day": 4,
-        "weekly": 87,
-        "lowest_avail": "CLOSED",
-        "lf_percent": 100.0,
-        "capacity": 179,
-        "booked": 179,
-        "extracted_at": "2026-07-26T15:51:31.888833"
-      },
-      {
-        "flight": "SM477",
-        "route": "CAI-JED",
-        "date": "Monday, July 27, 2026",
-        "lst_sold": "2026-07-26 00:00:00",
-        "to_day": 5,
-        "y_day": 6,
-        "weekly": 98,
-        "lowest_avail": "CLOSED",
-        "lf_percent": 100.0,
-        "capacity": 179,
-        "booked": 179,
-        "extracted_at": "2026-07-26T15:51:27.200510"
-      },
-      {
-        "flight": "SM441",
-        "route": "CAI-YNB",
-        "date": "Monday, July 27, 2026",
-        "lst_sold": "2026-07-26 00:00:00",
-        "to_day": 4,
-        "y_day": 3,
-        "weekly": 60,
-        "lowest_avail": "L3",
-        "lf_percent": 89.4,
-        "capacity": 179,
-        "booked": 160,
-        "extracted_at": "2026-07-26T15:51:10.494734"
-      },
       {
         "flight": "SM983",
         "route": "CAI-JED",
         "date": "Tuesday, July 28, 2026",
         "lst_sold": "2026-07-26 00:00:00",
-        "to_day": 1,
-        "y_day": 2,
+        "to_day": 0,
+        "y_day": 1,
         "weekly": 3,
         "lowest_avail": "CLOSED",
         "lf_percent": 82.7,
         "capacity": 179,
         "booked": 148,
-        "extracted_at": "2026-07-26T15:51:09.789681"
+        "extracted_at": "2026-07-27T13:33:17.791187"
       },
       {
         "flight": "SM479",
         "route": "CAI-JED",
         "date": "Tuesday, July 28, 2026",
-        "lst_sold": "2026-07-26 00:00:00",
-        "to_day": 3,
-        "y_day": 3,
-        "weekly": 90,
+        "lst_sold": "2026-07-27 00:00:00",
+        "to_day": 5,
+        "y_day": 4,
+        "weekly": 91,
         "lowest_avail": "CLOSED",
-        "lf_percent": 96.2,
-        "capacity": 186,
-        "booked": 179,
-        "extracted_at": "2026-07-26T15:51:08.531614"
-      },
-      {
-        "flight": "SM469",
-        "route": "CAI-RUH",
-        "date": "Monday, July 27, 2026",
-        "lst_sold": "2026-07-26 00:00:00",
-        "to_day": 10,
-        "y_day": 6,
-        "weekly": 107,
-        "lowest_avail": "M2",
-        "lf_percent": 101.1,
+        "lf_percent": 100.0,
         "capacity": 179,
-        "booked": 181,
-        "extracted_at": "2026-07-26T15:51:05.289195"
+        "booked": 179,
+        "extracted_at": "2026-07-27T13:33:16.500599"
       },
       {
         "flight": "SM475",
         "route": "CAI-JED",
         "date": "Tuesday, July 28, 2026",
-        "lst_sold": "2026-07-23 00:00:00",
-        "to_day": 0,
-        "y_day": 0,
-        "weekly": 35,
+        "lst_sold": "2026-07-27 00:00:00",
+        "to_day": 6,
+        "y_day": 2,
+        "weekly": 39,
         "lowest_avail": "CLOSED",
-        "lf_percent": 101.1,
+        "lf_percent": 100.0,
         "capacity": 179,
-        "booked": 181,
-        "extracted_at": "2026-07-26T15:51:03.902206"
-      },
-      {
-        "flight": "SM443",
-        "route": "CAI-AHB",
-        "date": "Wednesday, July 29, 2026",
-        "lst_sold": "2026-07-26 00:00:00",
-        "to_day": 4,
-        "y_day": 16,
-        "weekly": 90,
-        "lowest_avail": "Y3",
-        "lf_percent": 98.3,
-        "capacity": 179,
-        "booked": 176,
-        "extracted_at": "2026-07-26T15:50:59.579048"
+        "booked": 179,
+        "extracted_at": "2026-07-27T13:33:11.269344"
       },
       {
         "flight": "SM477",
         "route": "CAI-JED",
         "date": "Tuesday, July 28, 2026",
-        "lst_sold": "2026-07-25 00:00:00",
+        "lst_sold": "2026-07-26 00:00:00",
         "to_day": 0,
         "y_day": 6,
-        "weekly": 69,
+        "weekly": 66,
         "lowest_avail": "CLOSED",
         "lf_percent": 100.0,
         "capacity": 179,
         "booked": 179,
-        "extracted_at": "2026-07-26T15:50:59.265371"
-      },
-      {
-        "flight": "SM427",
-        "route": "CAI-ELQ",
-        "date": "Tuesday, July 28, 2026",
-        "lst_sold": "2026-07-26 00:00:00",
-        "to_day": 5,
-        "y_day": 22,
-        "weekly": 94,
-        "lowest_avail": "CLOSED",
-        "lf_percent": 102.2,
-        "capacity": 179,
-        "booked": 183,
-        "extracted_at": "2026-07-26T15:50:56.130756"
-      },
-      {
-        "flight": "SM443",
-        "route": "CAI-AHB",
-        "date": "Thursday, July 30, 2026",
-        "lst_sold": "2026-07-26 00:00:00",
-        "to_day": 5,
-        "y_day": 8,
-        "weekly": 70,
-        "lowest_avail": "B2",
-        "lf_percent": 87.7,
-        "capacity": 179,
-        "booked": 157,
-        "extracted_at": "2026-07-26T15:50:50.437453"
-      },
-      {
-        "flight": "SM441",
-        "route": "CAI-YNB",
-        "date": "Tuesday, July 28, 2026",
-        "lst_sold": "2026-07-26 00:00:00",
-        "to_day": 1,
-        "y_day": 2,
-        "weekly": 52,
-        "lowest_avail": "V2",
-        "lf_percent": 93.8,
-        "capacity": 179,
-        "booked": 168,
-        "extracted_at": "2026-07-26T15:50:49.267648"
-      },
-      {
-        "flight": "SM427",
-        "route": "CAI-ELQ",
-        "date": "Wednesday, July 29, 2026",
-        "lst_sold": "2026-07-25 00:00:00",
-        "to_day": 0,
-        "y_day": 15,
-        "weekly": 81,
-        "lowest_avail": "B9",
-        "lf_percent": 93.3,
-        "capacity": 179,
-        "booked": 167,
-        "extracted_at": "2026-07-26T15:50:46.576498"
+        "extracted_at": "2026-07-27T13:33:06.111094"
       },
       {
         "flight": "SM469",
         "route": "CAI-RUH",
         "date": "Tuesday, July 28, 2026",
-        "lst_sold": "2026-07-26 00:00:00",
+        "lst_sold": "2026-07-27 00:00:00",
         "to_day": 3,
-        "y_day": 7,
-        "weekly": 89,
-        "lowest_avail": "H1",
-        "lf_percent": 94.4,
+        "y_day": 11,
+        "weekly": 95,
+        "lowest_avail": "M3",
+        "lf_percent": 98.3,
         "capacity": 179,
-        "booked": 169,
-        "extracted_at": "2026-07-26T15:50:40.357428"
+        "booked": 176,
+        "extracted_at": "2026-07-27T13:32:50.028658"
+      },
+      {
+        "flight": "SM427",
+        "route": "CAI-ELQ",
+        "date": "Tuesday, July 28, 2026",
+        "lst_sold": "2026-07-27 00:00:00",
+        "to_day": 3,
+        "y_day": 11,
+        "weekly": 89,
+        "lowest_avail": "CLOSED",
+        "lf_percent": 102.2,
+        "capacity": 179,
+        "booked": 183,
+        "extracted_at": "2026-07-27T13:32:48.574420"
       },
       {
         "flight": "SM443",
         "route": "CAI-AHB",
-        "date": "Saturday, August 01, 2026",
-        "lst_sold": "2026-07-25 00:00:00",
-        "to_day": 0,
-        "y_day": 121,
-        "weekly": 134,
-        "lowest_avail": "CLOSED",
-        "lf_percent": 110.6,
+        "date": "Wednesday, July 29, 2026",
+        "lst_sold": "2026-07-27 00:00:00",
+        "to_day": 1,
+        "y_day": 5,
+        "weekly": 87,
+        "lowest_avail": "Y2",
+        "lf_percent": 98.9,
         "capacity": 179,
-        "booked": 198,
-        "extracted_at": "2026-07-26T15:50:40.200455"
+        "booked": 177,
+        "extracted_at": "2026-07-27T13:32:46.851359"
+      },
+      {
+        "flight": "SM977",
+        "route": "CAI-JED",
+        "date": "Wednesday, July 29, 2026",
+        "lst_sold": "2026-07-26 00:00:00",
+        "to_day": 0,
+        "y_day": 2,
+        "weekly": 2,
+        "lowest_avail": "CLOSED",
+        "lf_percent": 100.6,
+        "capacity": 179,
+        "booked": 180,
+        "extracted_at": "2026-07-27T13:32:41.769938"
+      },
+      {
+        "flight": "SM981",
+        "route": "CAI-JED",
+        "date": "Wednesday, July 29, 2026",
+        "lst_sold": "2026-07-26 00:00:00",
+        "to_day": 0,
+        "y_day": 3,
+        "weekly": 3,
+        "lowest_avail": "CLOSED",
+        "lf_percent": 100.6,
+        "capacity": 179,
+        "booked": 180,
+        "extracted_at": "2026-07-27T13:32:40.556429"
       },
       {
         "flight": "SM441",
         "route": "CAI-YNB",
+        "date": "Tuesday, July 28, 2026",
+        "lst_sold": "2026-07-27 00:00:00",
+        "to_day": 6,
+        "y_day": 10,
+        "weekly": 65,
+        "lowest_avail": "CLOSED",
+        "lf_percent": 100.0,
+        "capacity": 179,
+        "booked": 179,
+        "extracted_at": "2026-07-27T13:32:40.275757"
+      },
+      {
+        "flight": "SM469",
+        "route": "CAI-RUH",
+        "date": "Wednesday, July 29, 2026",
+        "lst_sold": "2026-07-27 00:00:00",
+        "to_day": 5,
+        "y_day": 8,
+        "weekly": 89,
+        "lowest_avail": "M9",
+        "lf_percent": 93.3,
+        "capacity": 179,
+        "booked": 167,
+        "extracted_at": "2026-07-27T13:32:39.708734"
+      },
+      {
+        "flight": "SM973",
+        "route": "CAI-JED",
         "date": "Wednesday, July 29, 2026",
         "lst_sold": "2026-07-26 00:00:00",
-        "to_day": 11,
-        "y_day": 9,
-        "weekly": 45,
-        "lowest_avail": "V6",
-        "lf_percent": 79.9,
+        "to_day": 0,
+        "y_day": 7,
+        "weekly": 7,
+        "lowest_avail": "CLOSED",
+        "lf_percent": 99.4,
         "capacity": 179,
-        "booked": 143,
-        "extracted_at": "2026-07-26T15:50:40.084120"
+        "booked": 178,
+        "extracted_at": "2026-07-27T13:32:39.267513"
       },
       {
         "flight": "SM475",
@@ -755,3970 +685,297 @@
         "date": "Wednesday, July 29, 2026",
         "lst_sold": "2026-07-25 00:00:00",
         "to_day": 0,
-        "y_day": 1,
-        "weekly": 43,
+        "y_day": 0,
+        "weekly": 37,
         "lowest_avail": "CLOSED",
         "lf_percent": 100.0,
         "capacity": 179,
         "booked": 179,
-        "extracted_at": "2026-07-26T15:50:39.218276"
+        "extracted_at": "2026-07-27T13:32:37.948946"
+      },
+      {
+        "flight": "SM427",
+        "route": "CAI-ELQ",
+        "date": "Wednesday, July 29, 2026",
+        "lst_sold": "2026-07-27 00:00:00",
+        "to_day": 6,
+        "y_day": 0,
+        "weekly": 73,
+        "lowest_avail": "B4",
+        "lf_percent": 97.2,
+        "capacity": 179,
+        "booked": 174,
+        "extracted_at": "2026-07-27T13:32:37.421953"
+      },
+      {
+        "flight": "SM443",
+        "route": "CAI-AHB",
+        "date": "Thursday, July 30, 2026",
+        "lst_sold": "2026-07-27 00:00:00",
+        "to_day": 1,
+        "y_day": 11,
+        "weekly": 75,
+        "lowest_avail": "Y9",
+        "lf_percent": 91.1,
+        "capacity": 179,
+        "booked": 163,
+        "extracted_at": "2026-07-27T13:32:36.211201"
       },
       {
         "flight": "SM329",
         "route": "CAI-GIZ",
         "date": "Wednesday, July 29, 2026",
         "lst_sold": "2026-07-26 00:00:00",
-        "to_day": 4,
-        "y_day": 2,
-        "weekly": 63,
-        "lowest_avail": "G8",
-        "lf_percent": 65.4,
+        "to_day": 0,
+        "y_day": 9,
+        "weekly": 64,
+        "lowest_avail": "G6",
+        "lf_percent": 65.9,
         "capacity": 179,
-        "booked": 117,
-        "extracted_at": "2026-07-26T15:50:37.786279"
+        "booked": 118,
+        "extracted_at": "2026-07-27T13:32:35.009220"
+      },
+      {
+        "flight": "SM477",
+        "route": "CAI-JED",
+        "date": "Wednesday, July 29, 2026",
+        "lst_sold": "2026-07-25 00:00:00",
+        "to_day": 0,
+        "y_day": 0,
+        "weekly": 44,
+        "lowest_avail": "CLOSED",
+        "lf_percent": 100.0,
+        "capacity": 179,
+        "booked": 179,
+        "extracted_at": "2026-07-27T13:32:31.529308"
+      },
+      {
+        "flight": "SM469",
+        "route": "CAI-RUH",
+        "date": "Thursday, July 30, 2026",
+        "lst_sold": "2026-07-27 00:00:00",
+        "to_day": 1,
+        "y_day": 11,
+        "weekly": 100,
+        "lowest_avail": "H2",
+        "lf_percent": 87.2,
+        "capacity": 179,
+        "booked": 156,
+        "extracted_at": "2026-07-27T13:32:29.900089"
+      },
+      {
+        "flight": "SM441",
+        "route": "CAI-YNB",
+        "date": "Wednesday, July 29, 2026",
+        "lst_sold": "2026-07-27 00:00:00",
+        "to_day": 13,
+        "y_day": 15,
+        "weekly": 62,
+        "lowest_avail": "H2",
+        "lf_percent": 89.4,
+        "capacity": 179,
+        "booked": 160,
+        "extracted_at": "2026-07-27T13:32:29.557192"
       },
       {
         "flight": "SM427",
         "route": "CAI-ELQ",
         "date": "Friday, July 31, 2026",
         "lst_sold": "2026-07-26 00:00:00",
-        "to_day": 1,
-        "y_day": 0,
-        "weekly": 110,
-        "lowest_avail": "B4",
-        "lf_percent": 100.0,
+        "to_day": 0,
+        "y_day": 1,
+        "weekly": 106,
+        "lowest_avail": "B6",
+        "lf_percent": 98.9,
         "capacity": 179,
-        "booked": 179,
-        "extracted_at": "2026-07-26T15:50:36.182434"
+        "booked": 177,
+        "extracted_at": "2026-07-27T13:32:25.826720"
       }
     ],
-    "updated_at": "2026-07-26T15:51:36.706264",
-    "total_extracted": 372
+    "updated_at": "2026-07-27T13:33:17.791191",
+    "total_extracted": 618
   },
   "validation": {
-    "timestamp": "2026-07-26T16:05:22.907096",
-    "passed": false,
+    "timestamp": "2026-07-27T13:47:52.155807",
+    "passed": true,
     "routes_checked": 50,
-    "dates_expected": 159,
-    "required_missing_count": 138,
-    "required_route_date_count": 122,
-    "intentional_exclusion_count": 33,
+    "dates_expected": 158,
+    "required_missing_count": 0,
+    "required_route_date_count": 0,
+    "intentional_exclusion_count": 31,
     "lf": {
       "status": "success",
       "required_missing_count": 0,
       "required_missing": [],
-      "valid_empty_no_service_count": 4427,
-      "intentional_exclusion_count": 33,
+      "valid_empty_no_service_count": 4395,
+      "intentional_exclusion_count": 31,
       "intentional_exclusions": [
         {
           "route": "AHB-CAI",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
           "route": "AHB-HMB",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
           "route": "AJF-CAI",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
           "route": "AJF-HMB",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
           "route": "ASW-JED",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
+          "reason": "today_supplement_no_scheduled_flight"
+        },
+        {
+          "route": "ATZ-MED",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
           "route": "ATZ-RUH",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
           "route": "CAI-AHB",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
           "route": "CAI-AJF",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
           "route": "CAI-ELQ",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
           "route": "CAI-GIZ",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
+          "reason": "today_supplement_no_scheduled_flight"
+        },
+        {
+          "route": "CAI-MED",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
           "route": "CAI-TUU",
-          "date": "2026-07-26",
-          "reason": "today_supplement_no_scheduled_flight"
-        },
-        {
-          "route": "DMM-HMB",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
           "route": "ELQ-CAI",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
+          "reason": "today_supplement_no_scheduled_flight"
+        },
+        {
+          "route": "ELQ-HMB",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
           "route": "GIZ-CAI",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
           "route": "HBE-MED",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
           "route": "HMB-AHB",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
           "route": "HMB-AJF",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
-          "route": "HMB-DMM",
-          "date": "2026-07-26",
-          "reason": "today_supplement_no_scheduled_flight"
-        },
-        {
-          "route": "HMB-JED",
-          "date": "2026-07-26",
+          "route": "HMB-ELQ",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
           "route": "HMB-MED",
-          "date": "2026-07-26",
-          "reason": "today_supplement_no_scheduled_flight"
-        },
-        {
-          "route": "HMB-RUH",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
           "route": "HMB-TUU",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
           "route": "JED-ASW",
-          "date": "2026-07-26",
-          "reason": "today_supplement_no_scheduled_flight"
-        },
-        {
-          "route": "JED-HMB",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
           "route": "JED-LXR",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
           "route": "LXR-JED",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
-          "route": "MED-CAI",
-          "date": "2026-07-26",
+          "route": "MED-ATZ",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
           "route": "MED-HBE",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
           "route": "MED-HMB",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
           "route": "RUH-ATZ",
-          "date": "2026-07-26",
-          "reason": "today_supplement_no_scheduled_flight"
-        },
-        {
-          "route": "RUH-HMB",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
           "route": "TUU-CAI",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
           "route": "TUU-HMB",
-          "date": "2026-07-26",
+          "date": "2026-07-27",
           "reason": "today_supplement_no_scheduled_flight"
         }
       ]
     },
     "oal": {
-      "status": "incomplete",
+      "status": "success",
       "stage_failed": false,
-      "unresolved_operation_count": 138,
-      "affected_route_date_count": 122,
-      "affected_routes": [
-        "AHB-CAI",
-        "AHB-HMB",
-        "ASW-JED",
-        "ATZ-RUH",
-        "CAI-AHB",
-        "CAI-RUH",
-        "GIZ-CAI",
-        "HBE-JED",
-        "HBE-MED",
-        "HMB-JED",
-        "HMB-MED",
-        "HMB-RUH",
-        "JED-ATZ",
-        "MED-ATZ",
-        "MED-HBE",
-        "MED-HMB",
-        "RUH-ATZ",
-        "RUH-CAI",
-        "RUH-HMB",
-        "TUU-CAI",
-        "YNB-CAI"
-      ],
-      "required_missing": [
-        {
-          "route": "AHB-CAI",
-          "date": "2026-07-26",
-          "passes": [
-            1,
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "AHB-HMB",
-          "date": "2026-07-26",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "AHB-HMB",
-          "date": "2026-07-27",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "AHB-HMB",
-          "date": "2026-07-28",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "AHB-HMB",
-          "date": "2026-07-29",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "AHB-HMB",
-          "date": "2026-07-30",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "AHB-HMB",
-          "date": "2026-07-31",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "AHB-HMB",
-          "date": "2026-08-01",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "AHB-HMB",
-          "date": "2026-08-02",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "AHB-HMB",
-          "date": "2026-08-03",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "AHB-HMB",
-          "date": "2026-08-04",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "AHB-HMB",
-          "date": "2026-08-05",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "AHB-HMB",
-          "date": "2026-08-06",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "AHB-HMB",
-          "date": "2026-08-07",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "AHB-HMB",
-          "date": "2026-08-08",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "AHB-HMB",
-          "date": "2026-08-10",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "AHB-HMB",
-          "date": "2026-08-11",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "AHB-HMB",
-          "date": "2026-08-12",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "AHB-HMB",
-          "date": "2026-08-13",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "AHB-HMB",
-          "date": "2026-08-14",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "ASW-JED",
-          "date": "2026-07-26",
-          "passes": [
-            1,
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "ATZ-RUH",
-          "date": "2026-07-26",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "ATZ-RUH",
-          "date": "2026-07-27",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "ATZ-RUH",
-          "date": "2026-07-28",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "ATZ-RUH",
-          "date": "2026-07-30",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "ATZ-RUH",
-          "date": "2026-07-31",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "ATZ-RUH",
-          "date": "2026-08-02",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "ATZ-RUH",
-          "date": "2026-08-03",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "ATZ-RUH",
-          "date": "2026-08-06",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "ATZ-RUH",
-          "date": "2026-08-07",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "ATZ-RUH",
-          "date": "2026-08-09",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "ATZ-RUH",
-          "date": "2026-08-10",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "ATZ-RUH",
-          "date": "2026-08-13",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "ATZ-RUH",
-          "date": "2026-08-14",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "CAI-AHB",
-          "date": "2026-07-26",
-          "passes": [
-            1,
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "CAI-AHB",
-          "date": "2026-07-27",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "CAI-RUH",
-          "date": "2026-08-31",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "CAI-RUH",
-          "date": "2026-09-02",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "GIZ-CAI",
-          "date": "2026-07-28",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "GIZ-CAI",
-          "date": "2026-08-08",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HBE-JED",
-          "date": "2026-07-26",
-          "passes": [
-            1,
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HBE-JED",
-          "date": "2026-08-10",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HBE-MED",
-          "date": "2026-07-26",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-JED",
-          "date": "2026-07-26",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-JED",
-          "date": "2026-07-27",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-JED",
-          "date": "2026-07-29",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-JED",
-          "date": "2026-07-30",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-JED",
-          "date": "2026-08-03",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-JED",
-          "date": "2026-08-04",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-JED",
-          "date": "2026-08-06",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-JED",
-          "date": "2026-08-09",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-JED",
-          "date": "2026-08-10",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-JED",
-          "date": "2026-08-19",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-JED",
-          "date": "2026-08-23",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-MED",
-          "date": "2026-07-26",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-MED",
-          "date": "2026-07-27",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-MED",
-          "date": "2026-07-28",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-MED",
-          "date": "2026-07-29",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-MED",
-          "date": "2026-07-31",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-MED",
-          "date": "2026-08-02",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-MED",
-          "date": "2026-08-03",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-MED",
-          "date": "2026-08-04",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-MED",
-          "date": "2026-08-05",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-MED",
-          "date": "2026-08-06",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-MED",
-          "date": "2026-08-07",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-MED",
-          "date": "2026-08-09",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-MED",
-          "date": "2026-08-10",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-MED",
-          "date": "2026-08-11",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-MED",
-          "date": "2026-08-12",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-MED",
-          "date": "2026-08-13",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-MED",
-          "date": "2026-08-14",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-RUH",
-          "date": "2026-07-26",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-RUH",
-          "date": "2026-07-28",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-RUH",
-          "date": "2026-07-29",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-RUH",
-          "date": "2026-07-31",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-RUH",
-          "date": "2026-08-02",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-RUH",
-          "date": "2026-08-04",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-RUH",
-          "date": "2026-08-05",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-RUH",
-          "date": "2026-08-07",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-RUH",
-          "date": "2026-08-09",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-RUH",
-          "date": "2026-08-11",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-RUH",
-          "date": "2026-08-12",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "HMB-RUH",
-          "date": "2026-08-14",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "JED-ATZ",
-          "date": "2026-07-26",
-          "passes": [
-            1,
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "JED-ATZ",
-          "date": "2026-08-17",
-          "passes": [
-            1,
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "JED-ATZ",
-          "date": "2026-08-24",
-          "passes": [
-            1,
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "JED-ATZ",
-          "date": "2026-08-31",
-          "passes": [
-            1,
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "JED-ATZ",
-          "date": "2026-09-07",
-          "passes": [
-            1,
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "MED-ATZ",
-          "date": "2026-07-26",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "MED-ATZ",
-          "date": "2026-07-27",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "MED-ATZ",
-          "date": "2026-07-28",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "MED-ATZ",
-          "date": "2026-07-29",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "MED-ATZ",
-          "date": "2026-07-30",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "MED-ATZ",
-          "date": "2026-07-31",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "MED-ATZ",
-          "date": "2026-08-01",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "MED-ATZ",
-          "date": "2026-08-03",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "MED-ATZ",
-          "date": "2026-08-04",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "MED-ATZ",
-          "date": "2026-08-16",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "MED-ATZ",
-          "date": "2026-08-23",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "MED-HBE",
-          "date": "2026-07-26",
-          "passes": [
-            1,
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "MED-HMB",
-          "date": "2026-07-26",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "MED-HMB",
-          "date": "2026-07-27",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "MED-HMB",
-          "date": "2026-07-28",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "MED-HMB",
-          "date": "2026-07-29",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "MED-HMB",
-          "date": "2026-08-02",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "MED-HMB",
-          "date": "2026-08-03",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "MED-HMB",
-          "date": "2026-08-04",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "RUH-ATZ",
-          "date": "2026-07-26",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "RUH-ATZ",
-          "date": "2026-07-27",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "RUH-ATZ",
-          "date": "2026-07-30",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "RUH-ATZ",
-          "date": "2026-07-31",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "RUH-ATZ",
-          "date": "2026-08-01",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "RUH-ATZ",
-          "date": "2026-08-02",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "RUH-ATZ",
-          "date": "2026-08-03",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "RUH-CAI",
-          "date": "2026-12-05",
-          "passes": [
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "RUH-HMB",
-          "date": "2026-07-26",
-          "passes": [
-            1,
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "RUH-HMB",
-          "date": "2026-07-28",
-          "passes": [
-            1,
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "RUH-HMB",
-          "date": "2026-07-29",
-          "passes": [
-            1,
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "RUH-HMB",
-          "date": "2026-08-02",
-          "passes": [
-            1,
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "RUH-HMB",
-          "date": "2026-08-04",
-          "passes": [
-            1,
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "TUU-CAI",
-          "date": "2026-12-26",
-          "passes": [
-            1
-          ],
-          "reason": "oal_recovery_unresolved"
-        },
-        {
-          "route": "YNB-CAI",
-          "date": "2026-07-26",
-          "passes": [
-            1,
-            2
-          ],
-          "reason": "oal_recovery_unresolved"
-        }
-      ]
+      "unresolved_operation_count": 0,
+      "affected_route_date_count": 0,
+      "affected_routes": [],
+      "required_missing": []
     },
-    "targeted_retry": [
-      {
-        "route": "AHB-CAI",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "route": "AHB-HMB",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "AHB-HMB",
-        "date": "2026-07-27",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "AHB-HMB",
-        "date": "2026-07-28",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "AHB-HMB",
-        "date": "2026-07-29",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "AHB-HMB",
-        "date": "2026-07-30",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "AHB-HMB",
-        "date": "2026-07-31",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "AHB-HMB",
-        "date": "2026-08-01",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "AHB-HMB",
-        "date": "2026-08-02",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "AHB-HMB",
-        "date": "2026-08-03",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "AHB-HMB",
-        "date": "2026-08-04",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "AHB-HMB",
-        "date": "2026-08-05",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "AHB-HMB",
-        "date": "2026-08-06",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "AHB-HMB",
-        "date": "2026-08-07",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "AHB-HMB",
-        "date": "2026-08-08",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "AHB-HMB",
-        "date": "2026-08-10",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "AHB-HMB",
-        "date": "2026-08-11",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "AHB-HMB",
-        "date": "2026-08-12",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "AHB-HMB",
-        "date": "2026-08-13",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "AHB-HMB",
-        "date": "2026-08-14",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "ASW-JED",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "route": "ATZ-RUH",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "ATZ-RUH",
-        "date": "2026-07-27",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "ATZ-RUH",
-        "date": "2026-07-28",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "ATZ-RUH",
-        "date": "2026-07-30",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "ATZ-RUH",
-        "date": "2026-07-31",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "ATZ-RUH",
-        "date": "2026-08-02",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "ATZ-RUH",
-        "date": "2026-08-03",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "ATZ-RUH",
-        "date": "2026-08-06",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "ATZ-RUH",
-        "date": "2026-08-07",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "ATZ-RUH",
-        "date": "2026-08-09",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "ATZ-RUH",
-        "date": "2026-08-10",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "ATZ-RUH",
-        "date": "2026-08-13",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "ATZ-RUH",
-        "date": "2026-08-14",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "CAI-AHB",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "route": "CAI-AHB",
-        "date": "2026-07-27",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "CAI-RUH",
-        "date": "2026-08-31",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "CAI-RUH",
-        "date": "2026-09-02",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "GIZ-CAI",
-        "date": "2026-07-28",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "GIZ-CAI",
-        "date": "2026-08-08",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "HBE-JED",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "route": "HBE-JED",
-        "date": "2026-08-10",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "HBE-MED",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-JED",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-JED",
-        "date": "2026-07-27",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-JED",
-        "date": "2026-07-29",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-JED",
-        "date": "2026-07-30",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-JED",
-        "date": "2026-08-03",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-JED",
-        "date": "2026-08-04",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-JED",
-        "date": "2026-08-06",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-JED",
-        "date": "2026-08-09",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-JED",
-        "date": "2026-08-10",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-JED",
-        "date": "2026-08-19",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-JED",
-        "date": "2026-08-23",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-MED",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-MED",
-        "date": "2026-07-27",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-MED",
-        "date": "2026-07-28",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-MED",
-        "date": "2026-07-29",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-MED",
-        "date": "2026-07-31",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-MED",
-        "date": "2026-08-02",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-MED",
-        "date": "2026-08-03",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-MED",
-        "date": "2026-08-04",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-MED",
-        "date": "2026-08-05",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-MED",
-        "date": "2026-08-06",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-MED",
-        "date": "2026-08-07",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-MED",
-        "date": "2026-08-09",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-MED",
-        "date": "2026-08-10",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-MED",
-        "date": "2026-08-11",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-MED",
-        "date": "2026-08-12",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-MED",
-        "date": "2026-08-13",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-MED",
-        "date": "2026-08-14",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "HMB-RUH",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "HMB-RUH",
-        "date": "2026-07-28",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "HMB-RUH",
-        "date": "2026-07-29",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "HMB-RUH",
-        "date": "2026-07-31",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "HMB-RUH",
-        "date": "2026-08-02",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "HMB-RUH",
-        "date": "2026-08-04",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "HMB-RUH",
-        "date": "2026-08-05",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "HMB-RUH",
-        "date": "2026-08-07",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "HMB-RUH",
-        "date": "2026-08-09",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "HMB-RUH",
-        "date": "2026-08-11",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "HMB-RUH",
-        "date": "2026-08-12",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "HMB-RUH",
-        "date": "2026-08-14",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "JED-ATZ",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "route": "JED-ATZ",
-        "date": "2026-08-17",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "route": "JED-ATZ",
-        "date": "2026-08-24",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "route": "JED-ATZ",
-        "date": "2026-08-31",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "route": "JED-ATZ",
-        "date": "2026-09-07",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "route": "MED-ATZ",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "MED-ATZ",
-        "date": "2026-07-27",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "MED-ATZ",
-        "date": "2026-07-28",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "MED-ATZ",
-        "date": "2026-07-29",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "MED-ATZ",
-        "date": "2026-07-30",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "MED-ATZ",
-        "date": "2026-07-31",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "MED-ATZ",
-        "date": "2026-08-01",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "MED-ATZ",
-        "date": "2026-08-03",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "MED-ATZ",
-        "date": "2026-08-04",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "MED-ATZ",
-        "date": "2026-08-16",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "MED-ATZ",
-        "date": "2026-08-23",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "MED-HBE",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "route": "MED-HMB",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "MED-HMB",
-        "date": "2026-07-27",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "MED-HMB",
-        "date": "2026-07-28",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "MED-HMB",
-        "date": "2026-07-29",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "MED-HMB",
-        "date": "2026-08-02",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "MED-HMB",
-        "date": "2026-08-03",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "MED-HMB",
-        "date": "2026-08-04",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "RUH-ATZ",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "RUH-ATZ",
-        "date": "2026-07-27",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "RUH-ATZ",
-        "date": "2026-07-30",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "RUH-ATZ",
-        "date": "2026-07-31",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "RUH-ATZ",
-        "date": "2026-08-01",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "RUH-ATZ",
-        "date": "2026-08-02",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "RUH-ATZ",
-        "date": "2026-08-03",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "RUH-CAI",
-        "date": "2026-12-05",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "route": "RUH-HMB",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "route": "RUH-HMB",
-        "date": "2026-07-28",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "route": "RUH-HMB",
-        "date": "2026-07-29",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "route": "RUH-HMB",
-        "date": "2026-08-02",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "route": "RUH-HMB",
-        "date": "2026-08-04",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "route": "TUU-CAI",
-        "date": "2026-12-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "route": "YNB-CAI",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      }
-    ],
-    "warnings": [
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "AHB-CAI",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "AHB-HMB",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "AHB-HMB",
-        "date": "2026-07-27",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "AHB-HMB",
-        "date": "2026-07-28",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "AHB-HMB",
-        "date": "2026-07-29",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "AHB-HMB",
-        "date": "2026-07-30",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "AHB-HMB",
-        "date": "2026-07-31",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "AHB-HMB",
-        "date": "2026-08-01",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "AHB-HMB",
-        "date": "2026-08-02",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "AHB-HMB",
-        "date": "2026-08-03",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "AHB-HMB",
-        "date": "2026-08-04",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "AHB-HMB",
-        "date": "2026-08-05",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "AHB-HMB",
-        "date": "2026-08-06",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "AHB-HMB",
-        "date": "2026-08-07",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "AHB-HMB",
-        "date": "2026-08-08",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "AHB-HMB",
-        "date": "2026-08-10",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "AHB-HMB",
-        "date": "2026-08-11",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "AHB-HMB",
-        "date": "2026-08-12",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "AHB-HMB",
-        "date": "2026-08-13",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "AHB-HMB",
-        "date": "2026-08-14",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "ASW-JED",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "ATZ-RUH",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "ATZ-RUH",
-        "date": "2026-07-27",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "ATZ-RUH",
-        "date": "2026-07-28",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "ATZ-RUH",
-        "date": "2026-07-30",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "ATZ-RUH",
-        "date": "2026-07-31",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "ATZ-RUH",
-        "date": "2026-08-02",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "ATZ-RUH",
-        "date": "2026-08-03",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "ATZ-RUH",
-        "date": "2026-08-06",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "ATZ-RUH",
-        "date": "2026-08-07",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "ATZ-RUH",
-        "date": "2026-08-09",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "ATZ-RUH",
-        "date": "2026-08-10",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "ATZ-RUH",
-        "date": "2026-08-13",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "ATZ-RUH",
-        "date": "2026-08-14",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "CAI-AHB",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "CAI-AHB",
-        "date": "2026-07-27",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "CAI-RUH",
-        "date": "2026-08-31",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "CAI-RUH",
-        "date": "2026-09-02",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "GIZ-CAI",
-        "date": "2026-07-28",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "GIZ-CAI",
-        "date": "2026-08-08",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HBE-JED",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HBE-JED",
-        "date": "2026-08-10",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HBE-MED",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-JED",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-JED",
-        "date": "2026-07-27",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-JED",
-        "date": "2026-07-29",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-JED",
-        "date": "2026-07-30",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-JED",
-        "date": "2026-08-03",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-JED",
-        "date": "2026-08-04",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-JED",
-        "date": "2026-08-06",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-JED",
-        "date": "2026-08-09",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-JED",
-        "date": "2026-08-10",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-JED",
-        "date": "2026-08-19",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-JED",
-        "date": "2026-08-23",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-MED",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-MED",
-        "date": "2026-07-27",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-MED",
-        "date": "2026-07-28",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-MED",
-        "date": "2026-07-29",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-MED",
-        "date": "2026-07-31",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-MED",
-        "date": "2026-08-02",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-MED",
-        "date": "2026-08-03",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-MED",
-        "date": "2026-08-04",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-MED",
-        "date": "2026-08-05",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-MED",
-        "date": "2026-08-06",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-MED",
-        "date": "2026-08-07",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-MED",
-        "date": "2026-08-09",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-MED",
-        "date": "2026-08-10",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-MED",
-        "date": "2026-08-11",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-MED",
-        "date": "2026-08-12",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-MED",
-        "date": "2026-08-13",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-MED",
-        "date": "2026-08-14",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-RUH",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-RUH",
-        "date": "2026-07-28",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-RUH",
-        "date": "2026-07-29",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-RUH",
-        "date": "2026-07-31",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-RUH",
-        "date": "2026-08-02",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-RUH",
-        "date": "2026-08-04",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-RUH",
-        "date": "2026-08-05",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-RUH",
-        "date": "2026-08-07",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-RUH",
-        "date": "2026-08-09",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-RUH",
-        "date": "2026-08-11",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-RUH",
-        "date": "2026-08-12",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "HMB-RUH",
-        "date": "2026-08-14",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "JED-ATZ",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "JED-ATZ",
-        "date": "2026-08-17",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "JED-ATZ",
-        "date": "2026-08-24",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "JED-ATZ",
-        "date": "2026-08-31",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "JED-ATZ",
-        "date": "2026-09-07",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "MED-ATZ",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "MED-ATZ",
-        "date": "2026-07-27",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "MED-ATZ",
-        "date": "2026-07-28",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "MED-ATZ",
-        "date": "2026-07-29",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "MED-ATZ",
-        "date": "2026-07-30",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "MED-ATZ",
-        "date": "2026-07-31",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "MED-ATZ",
-        "date": "2026-08-01",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "MED-ATZ",
-        "date": "2026-08-03",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "MED-ATZ",
-        "date": "2026-08-04",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "MED-ATZ",
-        "date": "2026-08-16",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "MED-ATZ",
-        "date": "2026-08-23",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "MED-HBE",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "MED-HMB",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "MED-HMB",
-        "date": "2026-07-27",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "MED-HMB",
-        "date": "2026-07-28",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "MED-HMB",
-        "date": "2026-07-29",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "MED-HMB",
-        "date": "2026-08-02",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "MED-HMB",
-        "date": "2026-08-03",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "MED-HMB",
-        "date": "2026-08-04",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "RUH-ATZ",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "RUH-ATZ",
-        "date": "2026-07-27",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "RUH-ATZ",
-        "date": "2026-07-30",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "RUH-ATZ",
-        "date": "2026-07-31",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "RUH-ATZ",
-        "date": "2026-08-01",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "RUH-ATZ",
-        "date": "2026-08-02",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "RUH-ATZ",
-        "date": "2026-08-03",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "RUH-CAI",
-        "date": "2026-12-05",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "RUH-HMB",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "RUH-HMB",
-        "date": "2026-07-28",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "RUH-HMB",
-        "date": "2026-07-29",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "RUH-HMB",
-        "date": "2026-08-02",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "RUH-HMB",
-        "date": "2026-08-04",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "TUU-CAI",
-        "date": "2026-12-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1
-        ]
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "YNB-CAI",
-        "date": "2026-07-26",
-        "sources": [
-          "OAL"
-        ],
-        "oal_passes": [
-          1,
-          2
-        ]
-      }
-    ]
+    "targeted_retry": [],
+    "warnings": []
   }
 }
