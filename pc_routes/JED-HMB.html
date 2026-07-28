@@ -7,8 +7,8 @@
     <link rel="apple-touch-icon" href="../favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="report-generated" content="2026-07-27T13:48:00">
-    <meta name="report-version" content="20260727134800">
+    <meta name="report-generated" content="2026-07-28T09:27:00">
+    <meta name="report-version" content="20260728092700">
     <title>Air Cairo | Threat Alert Report</title>
     <!-- Preload loader GIF for instant display -->
     <link rel="preload" href="../assets/img/aircairo-loader.gif" as="image">
@@ -128,31 +128,6 @@
             min-width: 200px;
             background: white;
             color: #333;
-        }
-
-        .download-btn {
-            padding: 10px 25px;
-            border: none;
-            background: linear-gradient(135deg, #F7941D 0%, #e8850a 100%);
-            color: white;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 1em;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(247, 148, 29, 0.3);
-        }
-
-        .download-btn:hover {
-            background: linear-gradient(135deg, #e8850a 0%, #d4750a 100%);
-            box-shadow: 0 6px 20px rgba(247, 148, 29, 0.4);
-            transform: translateY(-2px);
-        }
-
-        .download-btn:disabled {
-            background: #95a5a6;
-            cursor: not-allowed;
-            box-shadow: none;
         }
 
         .onedrive-btn {
@@ -1115,7 +1090,7 @@
                 border-radius: 0 !important;
                 max-width: 100% !important;
             }
-            .print-btn, .controls, .pdf-btn, .download-btn, .lang-btn, .route-select, .ticker-wrapper {
+            .print-btn, .controls, .pdf-btn, .lang-btn, .route-select, .ticker-wrapper {
                 display: none !important;
             }
             .header {
@@ -1184,7 +1159,7 @@
                 gap: 30px;
             }
 
-            .lang-btn, .route-select, .download-btn, .pdf-btn, .onedrive-btn, .dashboard-btn, .archive-btn {
+            .lang-btn, .route-select, .pdf-btn, .onedrive-btn, .dashboard-btn, .archive-btn {
                 width: 100%;
                 text-align: center;
                 justify-content: center;
@@ -1647,198 +1622,6 @@
             box-shadow: 0 4px 12px rgba(70, 43, 115, 0.3);
         }
 
-        /* Download Modal Styles */
-        .download-modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 10000;
-        }
-
-        .download-modal {
-            background: white;
-            border-radius: 16px;
-            width: 90%;
-            max-width: 600px;
-            max-height: 80vh;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        }
-
-        .download-modal-header {
-            background: linear-gradient(135deg, #F7941D 0%, #e8850a 100%);
-            color: white;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .download-modal-header h3 {
-            margin: 0;
-            font-size: 1.3em;
-        }
-
-        .download-modal-close {
-            background: rgba(255,255,255,0.2);
-            border: none;
-            color: white;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.5em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .download-modal-actions {
-            padding: 15px 20px;
-            background: #f8f9fa;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        .download-action-btn {
-            padding: 8px 16px;
-            border: 1px solid #ddd;
-            background: white;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 0.9em;
-            transition: all 0.2s;
-        }
-
-        .download-action-btn:hover {
-            background: #462B73;
-            color: white;
-            border-color: #462B73;
-        }
-
-        .download-action-btn.primary {
-            background: linear-gradient(135deg, #462B73 0%, #6b4d8a 100%);
-            color: white;
-            border: none;
-        }
-
-        .download-action-btn.primary:hover {
-            background: linear-gradient(135deg, #5a3d8a 0%, #7d5fa0 100%);
-        }
-
-        .download-action-btn.zip-btn {
-            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
-            color: white;
-            border: none;
-        }
-
-        .download-action-btn.zip-btn:hover {
-            background: linear-gradient(135deg, #219a52 0%, #27ae60 100%);
-        }
-
-        .download-modal-list {
-            max-height: 400px;
-            overflow-y: auto;
-            padding: 10px 0;
-        }
-
-        .download-file-group {
-            padding: 10px 20px;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .download-file-group-title {
-            font-weight: 600;
-            color: #462B73;
-            margin-bottom: 8px;
-            font-size: 0.95em;
-        }
-
-        .download-file-item {
-            display: flex;
-            align-items: center;
-            padding: 10px 15px;
-            margin: 5px 0;
-            background: #f8f9fa;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .download-file-item:hover {
-            background: #e9ecef;
-        }
-
-        .download-file-item.selected {
-            background: linear-gradient(135deg, rgba(70, 43, 115, 0.1) 0%, rgba(107, 77, 138, 0.1) 100%);
-            border: 1px solid rgba(70, 43, 115, 0.3);
-        }
-
-        .download-file-checkbox {
-            width: 20px;
-            height: 20px;
-            border: 2px solid #ccc;
-            border-radius: 4px;
-            margin-right: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s;
-        }
-
-        .download-file-item.selected .download-file-checkbox {
-            background: #462B73;
-            border-color: #462B73;
-        }
-
-        .download-file-item.selected .download-file-checkbox::after {
-            content: '✓';
-            color: white;
-            font-size: 14px;
-        }
-
-        .download-file-icon {
-            font-size: 1.5em;
-            margin-right: 12px;
-        }
-
-        .download-file-info {
-            flex: 1;
-        }
-
-        .download-file-name {
-            font-weight: 500;
-            color: #333;
-        }
-
-        .download-file-desc {
-            font-size: 0.85em;
-            color: #666;
-            margin-top: 2px;
-        }
-
-        .download-file-link {
-            padding: 6px 12px;
-            background: #F7941D;
-            color: white;
-            border-radius: 15px;
-            text-decoration: none;
-            font-size: 0.85em;
-            transition: all 0.2s;
-        }
-
-        .download-file-link:hover {
-            background: #e8850a;
-        }
-
         .filter-group {
             border-bottom: 1px solid rgba(70, 43, 115, 0.1);
         }
@@ -2091,14 +1874,6 @@
             border-left: none;
             border-right: 4px solid var(--ac-orange);
         }
-        .download-btn {
-            background: linear-gradient(135deg, var(--ac-orange) 0%, var(--ac-orange-dark) 100%);
-            box-shadow: 0 4px 15px rgba(245, 166, 35, 0.35);
-        }
-        .download-btn:hover {
-            background: linear-gradient(135deg, var(--ac-orange-dark) 0%, var(--ac-orange-deep) 100%);
-            box-shadow: 0 6px 20px rgba(245, 166, 35, 0.45);
-        }
         .dashboard-btn {
             background: linear-gradient(135deg, var(--ac-purple) 0%, var(--ac-purple-dark) 100%);
             box-shadow: 0 4px 15px rgba(92, 44, 126, 0.35);
@@ -2331,20 +2106,9 @@
         }
 
         /* ===== 1:1 alignment with the approved preview =====
-           Hide hero controls that don't exist in the preview, and force the
-           per-route Excel download button to always render in the branded
-           orange (it was greying out via :disabled before any route was
-           loaded). LF details are rendered inline inside the flight header. */
+           Hide hero controls that don't exist in the preview. LF details are
+           rendered inline inside the flight header. */
         .onedrive-btn { display: none !important; }
-        .download-btn,
-        .download-btn:disabled,
-        .download-btn[disabled] {
-            background: linear-gradient(135deg, var(--ac-orange) 0%, var(--ac-orange-dark) 100%) !important;
-            color: white !important;
-            cursor: pointer !important;
-            box-shadow: 0 4px 15px rgba(245, 166, 35, 0.35) !important;
-            opacity: 1 !important;
-        }
         /* ===== Day-card layout per user's edited mock =====
            Date header is a 3-column strip (route chip | date centered | flights chip).
            Each flight inside the day shows ONE horizontal LF strip with all metrics
@@ -2560,8 +2324,7 @@
             max-width: 62% !important;
         }
         .header .controls .lang-btn,
-        .header .controls .route-select,
-        .header .controls .download-btn {
+        .header .controls .route-select {
             white-space: nowrap !important;
             padding: 9px 16px !important;
             font-size: 0.92em !important;
@@ -2805,8 +2568,7 @@
             margin-top: 18px !important;
         }
         .header .controls .lang-btn,
-        .header .controls .route-select,
-        .header .controls .download-btn {
+        .header .controls .route-select {
             padding: 9px 18px !important;
             border-radius: 999px !important;
             font-size: 0.95em !important;
@@ -3168,7 +2930,7 @@
             <span class="ar-text">
                 📊 رصد حركة الاسعار
                 <span class="ticker-separator">|</span>
-                <span class="ticker-generated">🕐 تم الإنشاء: 27JUL26 01:48 PM</span>
+                <span class="ticker-generated">🕐 تم الإنشاء: 28JUL26 09:27 AM</span>
                 <span class="ticker-separator">|</span>
                 📅 الفترة: <span class="ar-text">خط السير: JED-HMB | الفترة: 28JUL26 - 28DEC26</span><span class="en-text">Route: JED-HMB | Range: 28JUL26 - 28DEC26</span>
                 <span class="ticker-separator">|</span>
@@ -3184,7 +2946,7 @@
             <span class="en-text">
                 📊 Threat Alert Report
                 <span class="ticker-separator">|</span>
-                <span class="ticker-generated">🕐 Generated: 27JUL26 01:48 PM</span>
+                <span class="ticker-generated">🕐 Generated: 28JUL26 09:27 AM</span>
                 <span class="ticker-separator">|</span>
                 📅 <span class="ar-text">خط السير: JED-HMB | الفترة: 28JUL26 - 28DEC26</span><span class="en-text">Route: JED-HMB | Range: 28JUL26 - 28DEC26</span>
                 <span class="ticker-separator">|</span>
@@ -3263,10 +3025,6 @@
                         <span class="ar-text">جميع التواريخ</span>
                         <span class="en-text">All Dates</span>
                         <span class="filter-arrow">▼</span>
-                    </button>
-                    <button class="download-btn" id="download-btn" onclick="downloadRouteExcel()">
-                        <span class="ar-text">تحميل Excel للخط</span>
-                        <span class="en-text">Download Route Excel</span>
                     </button>
                     <a href="https://flyaircairo-my.sharepoint.com/personal/dammam_to_aircairo_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fdammam%5Fto%5Faircairo%5Fcom%2FDocuments%2Fmarket%20insights&ga=1" target="_blank" class="onedrive-btn">
                         <span class="ar-text">📥 تحميل</span>
@@ -3425,70 +3183,17 @@
             </div>
         </div>
 
-        <!-- Download Reports Modal -->
-        <div class="download-modal-overlay" id="downloadModalOverlay" onclick="closeDownloadModal()">
-            <div class="download-modal" onclick="event.stopPropagation()">
-                <div class="download-modal-header">
-                    <h3>
-                        <span class="ar-text">تنزيل التقارير</span>
-                        <span class="en-text">Download Reports</span>
-                    </h3>
-                    <button class="download-modal-close" onclick="closeDownloadModal()">✕</button>
-                </div>
-                <div class="download-modal-actions">
-                    <button class="download-action-btn" onclick="selectAllDownloads()">
-                        <span class="ar-text">اختر الكل</span>
-                        <span class="en-text">Select All</span>
-                    </button>
-                    <button class="download-action-btn" onclick="clearAllDownloads()">
-                        <span class="ar-text">إلغاء الكل</span>
-                        <span class="en-text">Clear All</span>
-                    </button>
-                    <button class="download-action-btn primary" onclick="downloadSelectedFiles()">
-                        <span class="ar-text">تنزيل المحدد</span>
-                        <span class="en-text">Download Selected</span>
-                    </button>
-                    <button class="download-action-btn zip-btn" onclick="downloadAllAsZip()">
-                        <span class="ar-text">📦 تنزيل الكل ZIP</span>
-                        <span class="en-text">📦 Download All ZIP</span>
-                    </button>
-                </div>
-                <div class="download-modal-list" id="downloadFileList">
-                    
-            <div class="download-file-group">
-                <div class="download-file-group-title">
-                    <span class="ar-text">ملف خط السير</span>
-                    <span class="en-text">Route File</span>
-                </div>
-                <div class="download-file-item selected" data-href="../excel_routes/route_JED_HMB_threats.xlsx" onclick="toggleDownloadItem(this)">
-                    <div class="download-file-checkbox"></div>
-                    <span class="download-file-icon">📈</span>
-                    <div class="download-file-info">
-                        <div class="download-file-name">JED-HMB</div>
-                        <div class="download-file-desc">route_JED_HMB_threats.xlsx</div>
-                    </div>
-                    <a class="download-file-link" href="../excel_routes/route_JED_HMB_threats.xlsx" onclick="downloadSingleFile('../excel_routes/route_JED_HMB_threats.xlsx', event)">
-                        <span class="ar-text">تنزيل</span>
-                        <span class="en-text">Download</span>
-                    </a>
-                </div>
-            </div>
-        
-                </div>
-            </div>
-        </div>
-
         <div class="content">
             <!-- LAST UPDATED - PROMINENT BANNER -->
             <div class="last-updated-banner">
                 <span class="ar-text">
                     <span class="update-icon">🕐</span>
-                    آخر تحديث: <span class="update-time">2026-07-27 13:48</span>
+                    آخر تحديث: <span class="update-time">2026-07-28 09:27</span>
                     <span class="banner-route"><span class="ar-text">خط السير: JED-HMB | الفترة: 28JUL26 - 28DEC26</span><span class="en-text">Route: JED-HMB | Range: 28JUL26 - 28DEC26</span></span>
                 </span>
                 <span class="en-text">
                     <span class="update-icon">🕐</span>
-                    Last Updated: <span class="update-time">2026-07-27 13:48</span>
+                    Last Updated: <span class="update-time">2026-07-28 09:27</span>
                     <span class="banner-route"><span class="ar-text">خط السير: JED-HMB | الفترة: 28JUL26 - 28DEC26</span><span class="en-text">Route: JED-HMB | Range: 28JUL26 - 28DEC26</span></span>
                 </span>
             </div>
@@ -13587,183 +13292,12 @@
 
             updateRouteButtonText();
             updateStatsForSelection();
-            updateDownloadButton();
         }
 
         // Apply route filter and close modal
         function applyRouteFilterAndClose() {
             applyRouteFilter();
             closeRouteFilterModal();
-        }
-
-        // ============================================
-        // Download Modal Functions
-        // ============================================
-
-        function openDownloadModal() {
-            const overlay = document.getElementById('downloadModalOverlay');
-            if (overlay) {
-                overlay.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        function closeDownloadModal() {
-            const overlay = document.getElementById('downloadModalOverlay');
-            if (overlay) {
-                overlay.style.display = 'none';
-                document.body.style.overflow = '';
-            }
-        }
-
-        function toggleDownloadItem(element) {
-            element.classList.toggle('selected');
-        }
-
-        function selectAllDownloads() {
-            const items = document.querySelectorAll('#downloadFileList .download-file-item');
-            items.forEach(item => item.classList.add('selected'));
-        }
-
-        function clearAllDownloads() {
-            const items = document.querySelectorAll('#downloadFileList .download-file-item');
-            items.forEach(item => item.classList.remove('selected'));
-        }
-
-        function downloadSelectedFiles() {
-            const selectedItems = document.querySelectorAll('#downloadFileList .download-file-item.selected');
-            if (selectedItems.length === 0) {
-                const isArabic = document.body.classList.contains('ar');
-                alert(isArabic ? 'يرجى اختيار ملف واحد على الأقل' : 'Please select at least one file');
-                return;
-            }
-
-            // Download each selected file
-            selectedItems.forEach((item, index) => {
-                const link = item.dataset.href;
-                if (link) {
-                    setTimeout(() => {
-                        const a = document.createElement('a');
-                        a.href = link;
-                        a.download = '';
-                        a.target = '_blank';
-                        document.body.appendChild(a);
-                        a.click();
-                        document.body.removeChild(a);
-                    }, index * 500); // Delay between downloads
-                }
-            });
-
-            closeDownloadModal();
-        }
-
-        function downloadSingleFile(href, event) {
-            event.stopPropagation();
-            const a = document.createElement('a');
-            a.href = href;
-            a.download = '';
-            a.target = '_blank';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        }
-
-        // Download all files as ZIP
-        async function downloadAllAsZip() {
-            const isArabic = document.body.classList.contains('ar');
-            const statusText = isArabic ? 'جاري تحميل الملفات...' : 'Loading files...';
-
-            // Get all file items
-            const allItems = document.querySelectorAll('#downloadFileList .download-file-item');
-            if (allItems.length === 0) {
-                alert(isArabic ? 'لا توجد ملفات للتنزيل' : 'No files to download');
-                return;
-            }
-
-            // Show loading state
-            const zipBtn = document.querySelector('.zip-btn');
-            const originalText = zipBtn.innerHTML;
-            zipBtn.innerHTML = '<span>' + statusText + '</span>';
-            zipBtn.disabled = true;
-
-            try {
-                // Load JSZip dynamically
-                if (typeof JSZip === 'undefined') {
-                    await loadScript('https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js');
-                }
-
-                const zip = new JSZip();
-                const folder = zip.folder('AirCairo_Reports');
-
-                // Collect all file URLs
-                const filePromises = [];
-                allItems.forEach(item => {
-                    const href = item.dataset.href;
-                    if (href) {
-                        const filename = href.split('/').pop();
-                        filePromises.push(
-                            fetch(href)
-                                .then(response => {
-                                    if (!response.ok) throw new Error('Failed to fetch ' + filename);
-                                    return response.blob();
-                                })
-                                .then(blob => ({ filename, blob }))
-                                .catch(err => {
-                                    console.warn('Could not fetch:', filename, err);
-                                    return null;
-                                })
-                        );
-                    }
-                });
-
-                // Wait for all files
-                const files = await Promise.all(filePromises);
-
-                // Add files to zip
-                let addedCount = 0;
-                files.forEach(file => {
-                    if (file && file.blob) {
-                        folder.file(file.filename, file.blob);
-                        addedCount++;
-                    }
-                });
-
-                if (addedCount === 0) {
-                    throw new Error('No files could be loaded');
-                }
-
-                // Generate and download zip
-                const zipBlob = await zip.generateAsync({ type: 'blob' });
-                const timestamp = new Date().toISOString().slice(0, 10);
-                const zipFilename = 'AirCairo_Reports_' + timestamp + '.zip';
-
-                const a = document.createElement('a');
-                a.href = URL.createObjectURL(zipBlob);
-                a.download = zipFilename;
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(a.href);
-
-                closeDownloadModal();
-            } catch (error) {
-                console.error('ZIP creation failed:', error);
-                alert(isArabic ? 'فشل في إنشاء الملف المضغوط' : 'Failed to create ZIP file');
-            } finally {
-                zipBtn.innerHTML = originalText;
-                zipBtn.disabled = false;
-            }
-        }
-
-        // Helper function to load scripts dynamically
-        function loadScript(src) {
-            return new Promise((resolve, reject) => {
-                const script = document.createElement('script');
-                script.src = src;
-                script.onload = resolve;
-                script.onerror = reject;
-                document.head.appendChild(script);
-            });
         }
 
         // ============================================
@@ -14061,67 +13595,7 @@
             initializeDateFilter();  // Initialize date filter
             initializeRouteFilter();  // Initialize route filter
             showRoute('all');
-            updateDownloadButton();
         });
-
-        // Excel files mapping (populated by report builder)
-        const routeExcelFiles = {"JED-HMB": "../excel_routes/route_JED_HMB_threats.xlsx"};
-
-        function updateDownloadButton() {
-            const downloadBtn = document.getElementById('download-btn');
-            // Guard: exit if button doesn't exist (removed from current design)
-            if (!downloadBtn) return;
-
-            const allRouteItems = document.querySelectorAll('#routeFilterList .filter-item');
-            const totalRoutes = allRouteItems.length;
-
-            // Download is enabled only if exactly 1 route is selected
-            if (selectedRoutes.size === 1) {
-                downloadBtn.disabled = false;
-                downloadBtn.title = '';
-            } else {
-                downloadBtn.disabled = true;
-                downloadBtn.title = document.body.className === 'ar'
-                    ? 'اختر خط سير واحد فقط للتنزيل'
-                    : 'Select exactly one route to download';
-            }
-        }
-
-        // Override showRoute to update download button
-        const originalShowRoute = showRoute;
-        showRoute = function(routeId) {
-            originalShowRoute(routeId);
-            updateDownloadButton();
-        };
-
-        function downloadRouteExcel() {
-            if (selectedRoutes.size !== 1) {
-                const msg = document.body.className === 'ar'
-                    ? 'الرجاء اختيار خط سير واحد فقط للتنزيل'
-                    : 'Please select exactly one route to download';
-                alert(msg);
-                return;
-            }
-
-            const selectedRoute = Array.from(selectedRoutes)[0];
-
-            // Check if Excel file exists for this route
-            const excelFile = routeExcelFiles[selectedRoute];
-            if (excelFile) {
-                // Create download link
-                const link = document.createElement('a');
-                link.href = excelFile;
-                link.download = excelFile.split('/').pop();
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            } else {
-                const msg = document.body.className === 'ar'
-                    ? 'ملف Excel غير متوفر لهذا المسار. يرجى تشغيل التقرير الكامل أولاً.'
-                    : 'Excel file not available for this route. Please run the full report first.';
-                alert(msg);
-            }
-        }
 
         // PDF Download function
         function downloadPDF() {
