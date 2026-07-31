@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="report-generated" content="2026-07-28T12:48:00">
-    <meta name="report-version" content="20260728124800">
+    <meta name="report-generated" content="2026-07-31T10:45:00">
+    <meta name="report-version" content="20260731104500">
     <title>CAI-YNB - Threat Report</title>
     <!-- Preload loader GIF for instant display -->
     <link rel="preload" href="../assets/img/aircairo-loader.gif" as="image">
@@ -1139,36 +1139,13 @@
         <div class="filter-section">
             <div class="filter-row">
                 <select class="route-selector" id="routeSelector" onchange="navigateToRoute(this.value)">
-                    <option value="CAI-JED">CAI-JED</option>
-<option value="HBE-JED">HBE-JED</option>
-<option value="HMB-JED">HMB-JED</option>
-<option value="ATZ-JED">ATZ-JED</option>
-<option value="LXR-JED">LXR-JED</option>
-<option value="CAI-MED">CAI-MED</option>
-<option value="ATZ-MED">ATZ-MED</option>
-<option value="HMB-MED">HMB-MED</option>
-<option value="CAI-RUH">CAI-RUH</option>
-<option value="ATZ-RUH">ATZ-RUH</option>
-<option value="HMB-RUH">HMB-RUH</option>
-<option value="CAI-DMM">CAI-DMM</option>
-<option value="HMB-DMM">HMB-DMM</option>
-<option value="CAI-TUU">CAI-TUU</option>
-<option value="HMB-TUU">HMB-TUU</option>
-<option value="CAI-AJF">CAI-AJF</option>
-<option value="CAI-YNB" selected>CAI-YNB</option>
-<option value="CAI-AHB">CAI-AHB</option>
-<option value="CAI-ELQ">CAI-ELQ</option>
-<option value="HMB-ELQ">HMB-ELQ</option>
-<option value="CAI-GIZ">CAI-GIZ</option>
-<option value="JED-CAI">JED-CAI</option>
+                    <option value="JED-CAI">JED-CAI</option>
 <option value="JED-HBE">JED-HBE</option>
 <option value="JED-HMB">JED-HMB</option>
 <option value="JED-ATZ">JED-ATZ</option>
 <option value="JED-LXR">JED-LXR</option>
 <option value="MED-CAI">MED-CAI</option>
 <option value="MED-HBE">MED-HBE</option>
-<option value="MED-ATZ">MED-ATZ</option>
-<option value="MED-HMB">MED-HMB</option>
 <option value="RUH-CAI">RUH-CAI</option>
 <option value="RUH-ATZ">RUH-ATZ</option>
 <option value="RUH-HMB">RUH-HMB</option>
@@ -1182,6 +1159,26 @@
 <option value="ELQ-CAI">ELQ-CAI</option>
 <option value="ELQ-HMB">ELQ-HMB</option>
 <option value="GIZ-CAI">GIZ-CAI</option>
+<option value="CAI-JED">CAI-JED</option>
+<option value="HBE-JED">HBE-JED</option>
+<option value="HMB-JED">HMB-JED</option>
+<option value="ATZ-JED">ATZ-JED</option>
+<option value="LXR-JED">LXR-JED</option>
+<option value="CAI-MED">CAI-MED</option>
+<option value="ATZ-MED">ATZ-MED</option>
+<option value="HMB-MED">HMB-MED</option>
+<option value="CAI-RUH">CAI-RUH</option>
+<option value="ATZ-RUH">ATZ-RUH</option>
+<option value="HMB-RUH">HMB-RUH</option>
+<option value="CAI-DMM">CAI-DMM</option>
+<option value="HMB-DMM">HMB-DMM</option>
+<option value="CAI-TUU">CAI-TUU</option>
+<option value="CAI-AJF">CAI-AJF</option>
+<option value="CAI-YNB" selected>CAI-YNB</option>
+<option value="CAI-AHB">CAI-AHB</option>
+<option value="CAI-ELQ">CAI-ELQ</option>
+<option value="HMB-ELQ">HMB-ELQ</option>
+<option value="CAI-GIZ">CAI-GIZ</option>
                 </select>
                 <button class="filter-btn" id="dateFilterBtn" onclick="openFilterModal('date')">
                     <span class="ar-text">📅 التواريخ</span>
@@ -1195,7 +1192,7 @@
     <div class="stats-bar">
         <div class="stat-item high" data-level="high" onclick="filterByLevel('high')">
             <div class="stat-sphere"><img src="../web_red.png" alt="High"></div>
-            <div class="stat-count">10</div>
+            <div class="stat-count">3</div>
             <div class="stat-label">
                 <span class="ar-text">تهديد عالي</span>
                 <span class="en-text">HIGH THREAT</span>
@@ -1203,7 +1200,7 @@
         </div>
         <div class="stat-item medium" data-level="medium" onclick="filterByLevel('medium')">
             <div class="stat-sphere"><img src="../web_yello.png" alt="Medium"></div>
-            <div class="stat-count">3</div>
+            <div class="stat-count">2</div>
             <div class="stat-label">
                 <span class="ar-text">تهديد متوسط</span>
                 <span class="en-text">MEDIUM THREAT</span>
@@ -1211,7 +1208,7 @@
         </div>
         <div class="stat-item low" data-level="low" onclick="filterByLevel('low')">
             <div class="stat-sphere"><img src="../web_blue.png" alt="Low"></div>
-            <div class="stat-count">7</div>
+            <div class="stat-count">3</div>
             <div class="stat-label">
                 <span class="ar-text">تهديد منخفض</span>
                 <span class="en-text">LOW THREAT</span>
@@ -1227,7 +1224,7 @@
 
     <div class="content">
         
-    <div class="threat-card medium" data-level="medium" data-date="2026-08-08">
+    <div class="threat-card high" data-level="high" data-date="2026-08-08">
         <div class="card-date-header">
             <span class="date-route">08AUG26 &nbsp;-&nbsp; CAI-YNB</span>
         </div>
@@ -1240,13 +1237,13 @@
                 </div>
 
                 <div class="lf-unified-section">
-                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">175</span></div>
-                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">26Jul</span></div>
-                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">10</span></div>
+                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">178</span></div>
+                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">30Jul</span></div>
+                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">12</span></div>
                     <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator lf-percent lf-high"><span class="lf-label">LF</span><span class="lf-value">98%</span></div>
-                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">H4</span></div>
+                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">2</span></div>
+                    <div class="lf-indicator lf-percent lf-high"><span class="lf-label">LF</span><span class="lf-value">99%</span></div>
+                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">Y1</span></div>
                 </div>
                 <div class="flight-block-details">
                     <div class="flight-detail-col">
@@ -1255,8 +1252,8 @@
                             <span class="en-text">FARE</span>
                         </div>
                         <div class="flight-detail-value">
-                            <span class="ar-text">18211 جنيه مصري</span>
-                            <span class="en-text">18211 EGP</span>
+                            <span class="ar-text">24838 جنيه مصري</span>
+                            <span class="en-text">24838 EGP</span>
                         </div>
                     </div>
                     <div class="flight-detail-separator"></div>
@@ -1276,8 +1273,8 @@
 
             <div class="recommendation-section">
                 <div class="recommendation-title">
-                    <span class="ar-text">سعر طيران النيل أقل بـ 3877 جنيه مصري</span>
-                    <span class="en-text">Nile Air price lower by 3877 EGP</span>
+                    <span class="ar-text">سعر طيران النيل أقل بـ 8667 جنيه مصري</span>
+                    <span class="en-text">Nile Air price lower by 8667 EGP</span>
                 </div>
                 <div class="recommendation-details">
                     <span class="ar-text">الأفضل تنافسياً: طيران النيل 💡</span>
@@ -1300,8 +1297,8 @@
                             <span class="en-text">FARE</span>
                         </div>
                         <div class="flight-detail-value">
-                            <span class="ar-text">14334 جنيه مصري</span>
-                            <span class="en-text">14334 EGP</span>
+                            <span class="ar-text">16171 جنيه مصري</span>
+                            <span class="en-text">16171 EGP</span>
                         </div>
                     </div>
                     <div class="flight-detail-separator"></div>
@@ -1319,15 +1316,115 @@
             </div>
         </div>
 
-        <div class="alert-banner medium">
+        <div class="alert-banner high">
             <div class="alert-text">
-                <span class="ar-text">تهديد متوسط</span>
-                <span class="en-text">MEDIUM THREAT</span>
+                <span class="ar-text">تهديد عالي</span>
+                <span class="en-text">HIGH THREAT</span>
             </div>
         </div>
     </div>
     
-    <div class="threat-card medium" data-level="medium" data-date="2026-08-11">
+    <div class="threat-card high" data-level="high" data-date="2026-08-09">
+        <div class="card-date-header">
+            <span class="date-route">09AUG26 &nbsp;-&nbsp; CAI-YNB</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block our-flight">
+                <div class="flight-block-header">
+                    <span class="flight-number">SM-441</span>
+                    <span class="flight-time"><span class="time-label">DEP</span> 14:10</span>
+                </div>
+
+                <div class="lf-unified-section">
+                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">177</span></div>
+                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">29Jul</span></div>
+                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">4</span></div>
+                    <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
+                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">0</span></div>
+                    <div class="lf-indicator lf-percent lf-high"><span class="lf-label">LF</span><span class="lf-value">99%</span></div>
+                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">Y2</span></div>
+                </div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">24838 جنيه مصري</span>
+                            <span class="en-text">24838 EGP</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="recommendation-section">
+                <div class="recommendation-title">
+                    <span class="ar-text">سعر طيران النيل أقل بـ 8667 جنيه مصري</span>
+                    <span class="en-text">Nile Air price lower by 8667 EGP</span>
+                </div>
+                <div class="recommendation-details">
+                    <span class="ar-text">الأفضل تنافسياً: طيران النيل 💡</span>
+                    <span class="en-text">Market Leader: Nile Air 💡</span>
+                </div>
+            </div>
+
+            <div class="flight-block comp-flight">
+                <div class="flight-block-header">
+                    <span class="flight-number">
+                        <span class="ar-text">Nile Air-NP-103</span>
+                        <span class="en-text">Nile Air-NP-103</span>
+                    </span>
+                    <span class="flight-time"><span class="time-label">DEP</span> 06:35</span>
+                </div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">16171 جنيه مصري</span>
+                            <span class="en-text">16171 EGP</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert-banner high">
+            <div class="alert-text">
+                <span class="ar-text">تهديد عالي</span>
+                <span class="en-text">HIGH THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card high" data-level="high" data-date="2026-08-11">
         <div class="card-date-header">
             <span class="date-route">11AUG26 &nbsp;-&nbsp; CAI-YNB</span>
         </div>
@@ -1340,13 +1437,13 @@
                 </div>
 
                 <div class="lf-unified-section">
-                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">172</span></div>
-                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">14Jul</span></div>
-                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">0</span></div>
+                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">173</span></div>
+                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">29Jul</span></div>
+                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">1</span></div>
                     <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
                     <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator lf-percent lf-high"><span class="lf-label">LF</span><span class="lf-value">96%</span></div>
-                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">Q7</span></div>
+                    <div class="lf-indicator lf-percent lf-high"><span class="lf-label">LF</span><span class="lf-value">97%</span></div>
+                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">Y6</span></div>
                 </div>
                 <div class="flight-block-details">
                     <div class="flight-detail-col">
@@ -1355,8 +1452,8 @@
                             <span class="en-text">FARE</span>
                         </div>
                         <div class="flight-detail-value">
-                            <span class="ar-text">16600 جنيه مصري</span>
-                            <span class="en-text">16600 EGP</span>
+                            <span class="ar-text">24838 جنيه مصري</span>
+                            <span class="en-text">24838 EGP</span>
                         </div>
                     </div>
                     <div class="flight-detail-separator"></div>
@@ -1376,8 +1473,8 @@
 
             <div class="recommendation-section">
                 <div class="recommendation-title">
-                    <span class="ar-text">سعر طيران النيل أقل بـ 3945 جنيه مصري</span>
-                    <span class="en-text">Nile Air price lower by 3945 EGP</span>
+                    <span class="ar-text">سعر طيران النيل أقل بـ 8667 جنيه مصري</span>
+                    <span class="en-text">Nile Air price lower by 8667 EGP</span>
                 </div>
                 <div class="recommendation-details">
                     <span class="ar-text">الأفضل تنافسياً: طيران النيل 💡</span>
@@ -1400,8 +1497,108 @@
                             <span class="en-text">FARE</span>
                         </div>
                         <div class="flight-detail-value">
-                            <span class="ar-text">12655 جنيه مصري</span>
-                            <span class="en-text">12655 EGP</span>
+                            <span class="ar-text">16171 جنيه مصري</span>
+                            <span class="en-text">16171 EGP</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert-banner high">
+            <div class="alert-text">
+                <span class="ar-text">تهديد عالي</span>
+                <span class="en-text">HIGH THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card medium" data-level="medium" data-date="2026-08-12">
+        <div class="card-date-header">
+            <span class="date-route">12AUG26 &nbsp;-&nbsp; CAI-YNB</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block our-flight">
+                <div class="flight-block-header">
+                    <span class="flight-number">SM-441</span>
+                    <span class="flight-time"><span class="time-label">DEP</span> 22:00</span>
+                </div>
+
+                <div class="lf-unified-section">
+                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">178</span></div>
+                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">30Jul</span></div>
+                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">2</span></div>
+                    <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
+                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">2</span></div>
+                    <div class="lf-indicator lf-percent lf-high"><span class="lf-label">LF</span><span class="lf-value">99%</span></div>
+                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">B1</span></div>
+                </div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">22242 جنيه مصري</span>
+                            <span class="en-text">22242 EGP</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="recommendation-section">
+                <div class="recommendation-title">
+                    <span class="ar-text">سعر طيران النيل أقل بـ 3542 جنيه مصري</span>
+                    <span class="en-text">Nile Air price lower by 3542 EGP</span>
+                </div>
+                <div class="recommendation-details">
+                    <span class="ar-text">الأفضل تنافسياً: طيران النيل 💡</span>
+                    <span class="en-text">Market Leader: Nile Air 💡</span>
+                </div>
+            </div>
+
+            <div class="flight-block comp-flight">
+                <div class="flight-block-header">
+                    <span class="flight-number">
+                        <span class="ar-text">Nile Air-NP-113</span>
+                        <span class="en-text">Nile Air-NP-113</span>
+                    </span>
+                    <span class="flight-time"><span class="time-label">DEP</span> 01:40</span>
+                </div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">18700 جنيه مصري</span>
+                            <span class="en-text">18700 EGP</span>
                         </div>
                     </div>
                     <div class="flight-detail-separator"></div>
@@ -1427,7 +1624,7 @@
         </div>
     </div>
     
-    <div class="threat-card low" data-level="low" data-date="2026-08-15">
+    <div class="threat-card medium" data-level="medium" data-date="2026-08-15">
         <div class="card-date-header">
             <span class="date-route">15AUG26 &nbsp;-&nbsp; CAI-YNB</span>
         </div>
@@ -1440,13 +1637,13 @@
                 </div>
 
                 <div class="lf-unified-section">
-                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">165</span></div>
-                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">26Jul</span></div>
-                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">10</span></div>
+                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">170</span></div>
+                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">30Jul</span></div>
+                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">12</span></div>
                     <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator lf-percent lf-high"><span class="lf-label">LF</span><span class="lf-value">92%</span></div>
-                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">K9</span></div>
+                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">2</span></div>
+                    <div class="lf-indicator lf-percent lf-high"><span class="lf-label">LF</span><span class="lf-value">95%</span></div>
+                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">H2</span></div>
                 </div>
                 <div class="flight-block-details">
                     <div class="flight-detail-col">
@@ -1455,8 +1652,8 @@
                             <span class="en-text">FARE</span>
                         </div>
                         <div class="flight-detail-value">
-                            <span class="ar-text">15085 جنيه مصري</span>
-                            <span class="en-text">15085 EGP</span>
+                            <span class="ar-text">17969 جنيه مصري</span>
+                            <span class="en-text">17969 EGP</span>
                         </div>
                     </div>
                     <div class="flight-detail-separator"></div>
@@ -1476,8 +1673,8 @@
 
             <div class="recommendation-section">
                 <div class="recommendation-title">
-                    <span class="ar-text">سعر طيران النيل أقل بـ 751 جنيه مصري</span>
-                    <span class="en-text">Nile Air price lower by 751 EGP</span>
+                    <span class="ar-text">سعر طيران النيل أقل بـ 3826 جنيه مصري</span>
+                    <span class="en-text">Nile Air price lower by 3826 EGP</span>
                 </div>
                 <div class="recommendation-details">
                     <span class="ar-text">الأفضل تنافسياً: طيران النيل 💡</span>
@@ -1488,10 +1685,10 @@
             <div class="flight-block comp-flight">
                 <div class="flight-block-header">
                     <span class="flight-number">
-                        <span class="ar-text">Nile Air-NP-103</span>
-                        <span class="en-text">Nile Air-NP-103</span>
+                        <span class="ar-text">Nile Air-NP-113</span>
+                        <span class="en-text">Nile Air-NP-113</span>
                     </span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 00:30</span>
+                    <span class="flight-time"><span class="time-label">DEP</span> 21:00</span>
                 </div>
                 <div class="flight-block-details">
                     <div class="flight-detail-col">
@@ -1500,208 +1697,8 @@
                             <span class="en-text">FARE</span>
                         </div>
                         <div class="flight-detail-value">
-                            <span class="ar-text">14334 جنيه مصري</span>
-                            <span class="en-text">14334 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="alert-banner low">
-            <div class="alert-text">
-                <span class="ar-text">تهديد منخفض</span>
-                <span class="en-text">LOW THREAT</span>
-            </div>
-        </div>
-    </div>
-    
-    <div class="threat-card low" data-level="low" data-date="2026-08-18">
-        <div class="card-date-header">
-            <span class="date-route">18AUG26 &nbsp;-&nbsp; CAI-YNB</span>
-        </div>
-
-        <div class="blocks-wrapper">
-            <div class="flight-block our-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">SM-441</span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 05:10</span>
-                </div>
-
-                <div class="lf-unified-section">
-                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">156</span></div>
-                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">20Jul</span></div>
-                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator lf-percent lf-high"><span class="lf-label">LF</span><span class="lf-value">87%</span></div>
-                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">K9</span></div>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">15085 جنيه مصري</span>
-                            <span class="en-text">15085 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="recommendation-section">
-                <div class="recommendation-title">
-                    <span class="ar-text">سعر طيران النيل أقل بـ 2430 جنيه مصري</span>
-                    <span class="en-text">Nile Air price lower by 2430 EGP</span>
-                </div>
-                <div class="recommendation-details">
-                    <span class="ar-text">الأفضل تنافسياً: طيران النيل 💡</span>
-                    <span class="en-text">Market Leader: Nile Air 💡</span>
-                </div>
-            </div>
-
-            <div class="flight-block comp-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">
-                        <span class="ar-text">Nile Air-NP-103</span>
-                        <span class="en-text">Nile Air-NP-103</span>
-                    </span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 19:15</span>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">12655 جنيه مصري</span>
-                            <span class="en-text">12655 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="alert-banner low">
-            <div class="alert-text">
-                <span class="ar-text">تهديد منخفض</span>
-                <span class="en-text">LOW THREAT</span>
-            </div>
-        </div>
-    </div>
-    
-    <div class="threat-card medium" data-level="medium" data-date="2026-08-22">
-        <div class="card-date-header">
-            <span class="date-route">22AUG26 &nbsp;-&nbsp; CAI-YNB</span>
-        </div>
-
-        <div class="blocks-wrapper">
-            <div class="flight-block our-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">SM-447</span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 05:05</span>
-                </div>
-
-                <div class="lf-unified-section">
-                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">176</span></div>
-                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">27Jul</span></div>
-                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">4</span></div>
-                    <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">1</span></div>
-                    <div class="lf-indicator lf-percent lf-high"><span class="lf-label">LF</span><span class="lf-value">98%</span></div>
-                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">H3</span></div>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">18211 جنيه مصري</span>
-                            <span class="en-text">18211 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="recommendation-section">
-                <div class="recommendation-title">
-                    <span class="ar-text">سعر طيران النيل أقل بـ 3877 جنيه مصري</span>
-                    <span class="en-text">Nile Air price lower by 3877 EGP</span>
-                </div>
-                <div class="recommendation-details">
-                    <span class="ar-text">الأفضل تنافسياً: طيران النيل 💡</span>
-                    <span class="en-text">Market Leader: Nile Air 💡</span>
-                </div>
-            </div>
-
-            <div class="flight-block comp-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">
-                        <span class="ar-text">Nile Air-NP-103</span>
-                        <span class="en-text">Nile Air-NP-103</span>
-                    </span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 00:30</span>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">14334 جنيه مصري</span>
-                            <span class="en-text">14334 EGP</span>
+                            <span class="ar-text">14143 جنيه مصري</span>
+                            <span class="en-text">14143 EGP</span>
                         </div>
                     </div>
                     <div class="flight-detail-separator"></div>
@@ -1723,6 +1720,106 @@
             <div class="alert-text">
                 <span class="ar-text">تهديد متوسط</span>
                 <span class="en-text">MEDIUM THREAT</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="threat-card low" data-level="low" data-date="2026-08-22">
+        <div class="card-date-header">
+            <span class="date-route">22AUG26 &nbsp;-&nbsp; CAI-YNB</span>
+        </div>
+
+        <div class="blocks-wrapper">
+            <div class="flight-block our-flight">
+                <div class="flight-block-header">
+                    <span class="flight-number">SM-447</span>
+                    <span class="flight-time"><span class="time-label">DEP</span> 05:05</span>
+                </div>
+
+                <div class="lf-unified-section">
+                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">177</span></div>
+                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">29Jul</span></div>
+                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">3</span></div>
+                    <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
+                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">0</span></div>
+                    <div class="lf-indicator lf-percent lf-high"><span class="lf-label">LF</span><span class="lf-value">99%</span></div>
+                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">H2</span></div>
+                </div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">17969 جنيه مصري</span>
+                            <span class="en-text">17969 EGP</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="recommendation-section">
+                <div class="recommendation-title">
+                    <span class="ar-text">سعر طيران النيل أقل بـ 1798 جنيه مصري</span>
+                    <span class="en-text">Nile Air price lower by 1798 EGP</span>
+                </div>
+                <div class="recommendation-details">
+                    <span class="ar-text">الأفضل تنافسياً: طيران النيل 💡</span>
+                    <span class="en-text">Market Leader: Nile Air 💡</span>
+                </div>
+            </div>
+
+            <div class="flight-block comp-flight">
+                <div class="flight-block-header">
+                    <span class="flight-number">
+                        <span class="ar-text">Nile Air-NP-103</span>
+                        <span class="en-text">Nile Air-NP-103</span>
+                    </span>
+                    <span class="flight-time"><span class="time-label">DEP</span> 00:30</span>
+                </div>
+                <div class="flight-block-details">
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">السعر</span>
+                            <span class="en-text">FARE</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">16171 جنيه مصري</span>
+                            <span class="en-text">16171 EGP</span>
+                        </div>
+                    </div>
+                    <div class="flight-detail-separator"></div>
+                    <div class="flight-detail-col">
+                        <div class="flight-detail-label">
+                            <span class="ar-text">الوزن</span>
+                            <span class="en-text">BAG</span>
+                        </div>
+                        <div class="flight-detail-value">
+                            <span class="ar-text">30 كجم</span>
+                            <span class="en-text">30K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert-banner low">
+            <div class="alert-text">
+                <span class="ar-text">تهديد منخفض</span>
+                <span class="en-text">LOW THREAT</span>
             </div>
         </div>
     </div>
@@ -1740,13 +1837,13 @@
                 </div>
 
                 <div class="lf-unified-section">
-                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">166</span></div>
-                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">22Jul</span></div>
-                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">4</span></div>
+                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">167</span></div>
+                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">30Jul</span></div>
+                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">1</span></div>
                     <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">0</span></div>
+                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">1</span></div>
                     <div class="lf-indicator lf-percent lf-high"><span class="lf-label">LF</span><span class="lf-value">93%</span></div>
-                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">L9</span></div>
+                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">Q3</span></div>
                 </div>
                 <div class="flight-block-details">
                     <div class="flight-detail-col">
@@ -1755,8 +1852,8 @@
                             <span class="en-text">FARE</span>
                         </div>
                         <div class="flight-detail-value">
-                            <span class="ar-text">12355 جنيه مصري</span>
-                            <span class="en-text">12355 EGP</span>
+                            <span class="ar-text">16387 جنيه مصري</span>
+                            <span class="en-text">16387 EGP</span>
                         </div>
                     </div>
                     <div class="flight-detail-separator"></div>
@@ -1776,8 +1873,8 @@
 
             <div class="recommendation-section">
                 <div class="recommendation-title">
-                    <span class="ar-text">سعر طيران النيل أقل بـ 847 جنيه مصري</span>
-                    <span class="en-text">Nile Air price lower by 847 EGP</span>
+                    <span class="ar-text">سعر طيران النيل أقل بـ 2244 جنيه مصري</span>
+                    <span class="en-text">Nile Air price lower by 2244 EGP</span>
                 </div>
                 <div class="recommendation-details">
                     <span class="ar-text">الأفضل تنافسياً: طيران النيل 💡</span>
@@ -1800,8 +1897,8 @@
                             <span class="en-text">FARE</span>
                         </div>
                         <div class="flight-detail-value">
-                            <span class="ar-text">11508 جنيه مصري</span>
-                            <span class="en-text">11508 EGP</span>
+                            <span class="ar-text">14143 جنيه مصري</span>
+                            <span class="en-text">14143 EGP</span>
                         </div>
                     </div>
                     <div class="flight-detail-separator"></div>
@@ -1840,13 +1937,13 @@
                 </div>
 
                 <div class="lf-unified-section">
-                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">166</span></div>
-                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">27Jul</span></div>
+                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">167</span></div>
+                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">28Jul</span></div>
                     <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">2</span></div>
                     <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">1</span></div>
+                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">0</span></div>
                     <div class="lf-indicator lf-percent lf-high"><span class="lf-label">LF</span><span class="lf-value">93%</span></div>
-                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">L5</span></div>
+                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">Q8</span></div>
                 </div>
                 <div class="flight-block-details">
                     <div class="flight-detail-col">
@@ -1855,8 +1952,8 @@
                             <span class="en-text">FARE</span>
                         </div>
                         <div class="flight-detail-value">
-                            <span class="ar-text">12355 جنيه مصري</span>
-                            <span class="en-text">12355 EGP</span>
+                            <span class="ar-text">16387 جنيه مصري</span>
+                            <span class="en-text">16387 EGP</span>
                         </div>
                     </div>
                     <div class="flight-detail-separator"></div>
@@ -1876,8 +1973,8 @@
 
             <div class="recommendation-section">
                 <div class="recommendation-title">
-                    <span class="ar-text">سعر طيران النيل أقل بـ 847 جنيه مصري</span>
-                    <span class="en-text">Nile Air price lower by 847 EGP</span>
+                    <span class="ar-text">سعر طيران النيل أقل بـ 2244 جنيه مصري</span>
+                    <span class="en-text">Nile Air price lower by 2244 EGP</span>
                 </div>
                 <div class="recommendation-details">
                     <span class="ar-text">الأفضل تنافسياً: طيران النيل 💡</span>
@@ -1900,8 +1997,8 @@
                             <span class="en-text">FARE</span>
                         </div>
                         <div class="flight-detail-value">
-                            <span class="ar-text">11508 جنيه مصري</span>
-                            <span class="en-text">11508 EGP</span>
+                            <span class="ar-text">14143 جنيه مصري</span>
+                            <span class="en-text">14143 EGP</span>
                         </div>
                     </div>
                     <div class="flight-detail-separator"></div>
@@ -1923,1306 +2020,6 @@
             <div class="alert-text">
                 <span class="ar-text">تهديد منخفض</span>
                 <span class="en-text">LOW THREAT</span>
-            </div>
-        </div>
-    </div>
-    
-    <div class="threat-card low" data-level="low" data-date="2026-09-01">
-        <div class="card-date-header">
-            <span class="date-route">01SEP26 &nbsp;-&nbsp; CAI-YNB</span>
-        </div>
-
-        <div class="blocks-wrapper">
-            <div class="flight-block our-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">SM-441</span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 05:10</span>
-                </div>
-
-                <div class="lf-unified-section">
-                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">152</span></div>
-                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">27Jul</span></div>
-                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">5</span></div>
-                    <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">1</span></div>
-                    <div class="lf-indicator lf-percent lf-high"><span class="lf-label">LF</span><span class="lf-value">85%</span></div>
-                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">G1</span></div>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">12355 جنيه مصري</span>
-                            <span class="en-text">12355 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="recommendation-section">
-                <div class="recommendation-title">
-                    <span class="ar-text">سعر طيران النيل أقل بـ 847 جنيه مصري</span>
-                    <span class="en-text">Nile Air price lower by 847 EGP</span>
-                </div>
-                <div class="recommendation-details">
-                    <span class="ar-text">الأفضل تنافسياً: طيران النيل 💡</span>
-                    <span class="en-text">Market Leader: Nile Air 💡</span>
-                </div>
-            </div>
-
-            <div class="flight-block comp-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">
-                        <span class="ar-text">Nile Air-NP-103</span>
-                        <span class="en-text">Nile Air-NP-103</span>
-                    </span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 19:15</span>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">11508 جنيه مصري</span>
-                            <span class="en-text">11508 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="alert-banner low">
-            <div class="alert-text">
-                <span class="ar-text">تهديد منخفض</span>
-                <span class="en-text">LOW THREAT</span>
-            </div>
-        </div>
-    </div>
-    
-    <div class="threat-card low" data-level="low" data-date="2026-09-05">
-        <div class="card-date-header">
-            <span class="date-route">05SEP26 &nbsp;-&nbsp; CAI-YNB</span>
-        </div>
-
-        <div class="blocks-wrapper">
-            <div class="flight-block our-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">SM-447</span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 05:05</span>
-                </div>
-
-                <div class="lf-unified-section">
-                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">148</span></div>
-                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">27Jul</span></div>
-                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">7</span></div>
-                    <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">2</span></div>
-                    <div class="lf-indicator lf-percent lf-high"><span class="lf-label">LF</span><span class="lf-value">83%</span></div>
-                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">G5</span></div>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">11153 جنيه مصري</span>
-                            <span class="en-text">11153 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="recommendation-section">
-                <div class="recommendation-title">
-                    <span class="ar-text">سعر طيران النيل أقل بـ 437 جنيه مصري</span>
-                    <span class="en-text">Nile Air price lower by 437 EGP</span>
-                </div>
-                <div class="recommendation-details">
-                    <span class="ar-text">الأفضل تنافسياً: طيران النيل 💡</span>
-                    <span class="en-text">Market Leader: Nile Air 💡</span>
-                </div>
-            </div>
-
-            <div class="flight-block comp-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">
-                        <span class="ar-text">Nile Air-NP-103</span>
-                        <span class="en-text">Nile Air-NP-103</span>
-                    </span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 00:30</span>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">10716 جنيه مصري</span>
-                            <span class="en-text">10716 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="alert-banner low">
-            <div class="alert-text">
-                <span class="ar-text">تهديد منخفض</span>
-                <span class="en-text">LOW THREAT</span>
-            </div>
-        </div>
-    </div>
-    
-    <div class="threat-card low" data-level="low" data-date="2026-09-08">
-        <div class="card-date-header">
-            <span class="date-route">08SEP26 &nbsp;-&nbsp; CAI-YNB</span>
-        </div>
-
-        <div class="blocks-wrapper">
-            <div class="flight-block our-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">SM-441</span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 05:10</span>
-                </div>
-
-                <div class="lf-unified-section">
-                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">177</span></div>
-                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">27Jul</span></div>
-                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">2</span></div>
-                    <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">1</span></div>
-                    <div class="lf-indicator lf-percent lf-high"><span class="lf-label">LF</span><span class="lf-value">99%</span></div>
-                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">G2</span></div>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">11153 جنيه مصري</span>
-                            <span class="en-text">11153 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="recommendation-section">
-                <div class="recommendation-title">
-                    <span class="ar-text">سعر طيران النيل أقل بـ 1147 جنيه مصري</span>
-                    <span class="en-text">Nile Air price lower by 1147 EGP</span>
-                </div>
-                <div class="recommendation-details">
-                    <span class="ar-text">الأفضل تنافسياً: طيران النيل 💡</span>
-                    <span class="en-text">Market Leader: Nile Air 💡</span>
-                </div>
-            </div>
-
-            <div class="flight-block comp-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">
-                        <span class="ar-text">Nile Air-NP-103</span>
-                        <span class="en-text">Nile Air-NP-103</span>
-                    </span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 19:15</span>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">10006 جنيه مصري</span>
-                            <span class="en-text">10006 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="alert-banner low">
-            <div class="alert-text">
-                <span class="ar-text">تهديد منخفض</span>
-                <span class="en-text">LOW THREAT</span>
-            </div>
-        </div>
-    </div>
-    
-    <div class="threat-card high" data-level="high" data-date="2026-10-29">
-        <div class="card-date-header">
-            <span class="date-route">29OCT26 &nbsp;-&nbsp; CAI-YNB</span>
-        </div>
-
-        <div class="blocks-wrapper">
-            <div class="flight-block our-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">SM-441</span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 15:25</span>
-                </div>
-
-                <div class="lf-unified-section">
-                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">NIL</span></div>
-                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator lf-percent lf-low"><span class="lf-label">LF</span><span class="lf-value">0%</span></div>
-                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">Y9</span></div>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">25174 جنيه مصري</span>
-                            <span class="en-text">25174 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="recommendation-section">
-                <div class="recommendation-title">
-                    <span class="ar-text">سعر طيران النيل أقل بـ 8792 جنيه مصري</span>
-                    <span class="en-text">Nile Air price lower by 8792 EGP</span>
-                </div>
-                <div class="recommendation-details">
-                    <span class="ar-text">الأفضل تنافسياً: طيران النيل 💡</span>
-                    <span class="en-text">Market Leader: Nile Air 💡</span>
-                </div>
-            </div>
-
-            <div class="flight-block comp-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">
-                        <span class="ar-text">Nile Air-NP-103</span>
-                        <span class="en-text">Nile Air-NP-103</span>
-                    </span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 20:50</span>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">16382 جنيه مصري</span>
-                            <span class="en-text">16382 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="alert-banner high">
-            <div class="alert-text">
-                <span class="ar-text">تهديد عالي</span>
-                <span class="en-text">HIGH THREAT</span>
-            </div>
-        </div>
-    </div>
-    
-    <div class="threat-card high" data-level="high" data-date="2026-11-05">
-        <div class="card-date-header">
-            <span class="date-route">05NOV26 &nbsp;-&nbsp; CAI-YNB</span>
-        </div>
-
-        <div class="blocks-wrapper">
-            <div class="flight-block our-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">SM-441</span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 14:25</span>
-                </div>
-
-                <div class="lf-unified-section">
-                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">NIL</span></div>
-                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator lf-percent lf-low"><span class="lf-label">LF</span><span class="lf-value">0%</span></div>
-                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">Y9</span></div>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">25174 جنيه مصري</span>
-                            <span class="en-text">25174 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="recommendation-section">
-                <div class="recommendation-title">
-                    <span class="ar-text">سعر طيران النيل أقل بـ 8792 جنيه مصري</span>
-                    <span class="en-text">Nile Air price lower by 8792 EGP</span>
-                </div>
-                <div class="recommendation-details">
-                    <span class="ar-text">الأفضل تنافسياً: طيران النيل 💡</span>
-                    <span class="en-text">Market Leader: Nile Air 💡</span>
-                </div>
-            </div>
-
-            <div class="flight-block comp-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">
-                        <span class="ar-text">Nile Air-NP-103</span>
-                        <span class="en-text">Nile Air-NP-103</span>
-                    </span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 19:50</span>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">16382 جنيه مصري</span>
-                            <span class="en-text">16382 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="alert-banner high">
-            <div class="alert-text">
-                <span class="ar-text">تهديد عالي</span>
-                <span class="en-text">HIGH THREAT</span>
-            </div>
-        </div>
-    </div>
-    
-    <div class="threat-card high" data-level="high" data-date="2026-11-12">
-        <div class="card-date-header">
-            <span class="date-route">12NOV26 &nbsp;-&nbsp; CAI-YNB</span>
-        </div>
-
-        <div class="blocks-wrapper">
-            <div class="flight-block our-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">SM-441</span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 14:25</span>
-                </div>
-
-                <div class="lf-unified-section">
-                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">NIL</span></div>
-                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator lf-percent lf-low"><span class="lf-label">LF</span><span class="lf-value">0%</span></div>
-                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">Y9</span></div>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">25174 جنيه مصري</span>
-                            <span class="en-text">25174 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="recommendation-section">
-                <div class="recommendation-title">
-                    <span class="ar-text">سعر طيران النيل أقل بـ 8792 جنيه مصري</span>
-                    <span class="en-text">Nile Air price lower by 8792 EGP</span>
-                </div>
-                <div class="recommendation-details">
-                    <span class="ar-text">الأفضل تنافسياً: طيران النيل 💡</span>
-                    <span class="en-text">Market Leader: Nile Air 💡</span>
-                </div>
-            </div>
-
-            <div class="flight-block comp-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">
-                        <span class="ar-text">Nile Air-NP-103</span>
-                        <span class="en-text">Nile Air-NP-103</span>
-                    </span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 19:50</span>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">16382 جنيه مصري</span>
-                            <span class="en-text">16382 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="alert-banner high">
-            <div class="alert-text">
-                <span class="ar-text">تهديد عالي</span>
-                <span class="en-text">HIGH THREAT</span>
-            </div>
-        </div>
-    </div>
-    
-    <div class="threat-card high" data-level="high" data-date="2026-11-19">
-        <div class="card-date-header">
-            <span class="date-route">19NOV26 &nbsp;-&nbsp; CAI-YNB</span>
-        </div>
-
-        <div class="blocks-wrapper">
-            <div class="flight-block our-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">SM-441</span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 14:25</span>
-                </div>
-
-                <div class="lf-unified-section">
-                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">NIL</span></div>
-                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator lf-percent lf-low"><span class="lf-label">LF</span><span class="lf-value">0%</span></div>
-                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">Y9</span></div>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">25174 جنيه مصري</span>
-                            <span class="en-text">25174 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="recommendation-section">
-                <div class="recommendation-title">
-                    <span class="ar-text">سعر طيران النيل أقل بـ 8792 جنيه مصري</span>
-                    <span class="en-text">Nile Air price lower by 8792 EGP</span>
-                </div>
-                <div class="recommendation-details">
-                    <span class="ar-text">الأفضل تنافسياً: طيران النيل 💡</span>
-                    <span class="en-text">Market Leader: Nile Air 💡</span>
-                </div>
-            </div>
-
-            <div class="flight-block comp-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">
-                        <span class="ar-text">Nile Air-NP-103</span>
-                        <span class="en-text">Nile Air-NP-103</span>
-                    </span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 19:50</span>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">16382 جنيه مصري</span>
-                            <span class="en-text">16382 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="alert-banner high">
-            <div class="alert-text">
-                <span class="ar-text">تهديد عالي</span>
-                <span class="en-text">HIGH THREAT</span>
-            </div>
-        </div>
-    </div>
-    
-    <div class="threat-card high" data-level="high" data-date="2026-11-26">
-        <div class="card-date-header">
-            <span class="date-route">26NOV26 &nbsp;-&nbsp; CAI-YNB</span>
-        </div>
-
-        <div class="blocks-wrapper">
-            <div class="flight-block our-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">SM-441</span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 14:25</span>
-                </div>
-
-                <div class="lf-unified-section">
-                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">NIL</span></div>
-                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator lf-percent lf-low"><span class="lf-label">LF</span><span class="lf-value">0%</span></div>
-                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">Y9</span></div>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">25174 جنيه مصري</span>
-                            <span class="en-text">25174 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="recommendation-section">
-                <div class="recommendation-title">
-                    <span class="ar-text">سعر طيران النيل أقل بـ 8792 جنيه مصري</span>
-                    <span class="en-text">Nile Air price lower by 8792 EGP</span>
-                </div>
-                <div class="recommendation-details">
-                    <span class="ar-text">الأفضل تنافسياً: طيران النيل 💡</span>
-                    <span class="en-text">Market Leader: Nile Air 💡</span>
-                </div>
-            </div>
-
-            <div class="flight-block comp-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">
-                        <span class="ar-text">Nile Air-NP-103</span>
-                        <span class="en-text">Nile Air-NP-103</span>
-                    </span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 19:50</span>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">16382 جنيه مصري</span>
-                            <span class="en-text">16382 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="alert-banner high">
-            <div class="alert-text">
-                <span class="ar-text">تهديد عالي</span>
-                <span class="en-text">HIGH THREAT</span>
-            </div>
-        </div>
-    </div>
-    
-    <div class="threat-card high" data-level="high" data-date="2026-12-03">
-        <div class="card-date-header">
-            <span class="date-route">03DEC26 &nbsp;-&nbsp; CAI-YNB</span>
-        </div>
-
-        <div class="blocks-wrapper">
-            <div class="flight-block our-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">SM-441</span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 14:25</span>
-                </div>
-
-                <div class="lf-unified-section">
-                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">NIL</span></div>
-                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator lf-percent lf-low"><span class="lf-label">LF</span><span class="lf-value">0%</span></div>
-                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">Y9</span></div>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">25174 جنيه مصري</span>
-                            <span class="en-text">25174 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="recommendation-section">
-                <div class="recommendation-title">
-                    <span class="ar-text">سعر طيران النيل أقل بـ 8792 جنيه مصري</span>
-                    <span class="en-text">Nile Air price lower by 8792 EGP</span>
-                </div>
-                <div class="recommendation-details">
-                    <span class="ar-text">الأفضل تنافسياً: طيران النيل 💡</span>
-                    <span class="en-text">Market Leader: Nile Air 💡</span>
-                </div>
-            </div>
-
-            <div class="flight-block comp-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">
-                        <span class="ar-text">Nile Air-NP-103</span>
-                        <span class="en-text">Nile Air-NP-103</span>
-                    </span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 19:50</span>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">16382 جنيه مصري</span>
-                            <span class="en-text">16382 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="alert-banner high">
-            <div class="alert-text">
-                <span class="ar-text">تهديد عالي</span>
-                <span class="en-text">HIGH THREAT</span>
-            </div>
-        </div>
-    </div>
-    
-    <div class="threat-card high" data-level="high" data-date="2026-12-10">
-        <div class="card-date-header">
-            <span class="date-route">10DEC26 &nbsp;-&nbsp; CAI-YNB</span>
-        </div>
-
-        <div class="blocks-wrapper">
-            <div class="flight-block our-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">SM-441</span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 14:25</span>
-                </div>
-
-                <div class="lf-unified-section">
-                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">NIL</span></div>
-                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator lf-percent lf-low"><span class="lf-label">LF</span><span class="lf-value">0%</span></div>
-                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">Y9</span></div>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">25174 جنيه مصري</span>
-                            <span class="en-text">25174 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="recommendation-section">
-                <div class="recommendation-title">
-                    <span class="ar-text">سعر طيران النيل أقل بـ 8792 جنيه مصري</span>
-                    <span class="en-text">Nile Air price lower by 8792 EGP</span>
-                </div>
-                <div class="recommendation-details">
-                    <span class="ar-text">الأفضل تنافسياً: طيران النيل 💡</span>
-                    <span class="en-text">Market Leader: Nile Air 💡</span>
-                </div>
-            </div>
-
-            <div class="flight-block comp-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">
-                        <span class="ar-text">Nile Air-NP-103</span>
-                        <span class="en-text">Nile Air-NP-103</span>
-                    </span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 19:50</span>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">16382 جنيه مصري</span>
-                            <span class="en-text">16382 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="alert-banner high">
-            <div class="alert-text">
-                <span class="ar-text">تهديد عالي</span>
-                <span class="en-text">HIGH THREAT</span>
-            </div>
-        </div>
-    </div>
-    
-    <div class="threat-card high" data-level="high" data-date="2026-12-17">
-        <div class="card-date-header">
-            <span class="date-route">17DEC26 &nbsp;-&nbsp; CAI-YNB</span>
-        </div>
-
-        <div class="blocks-wrapper">
-            <div class="flight-block our-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">SM-441</span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 14:25</span>
-                </div>
-
-                <div class="lf-unified-section">
-                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">NIL</span></div>
-                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator lf-percent lf-low"><span class="lf-label">LF</span><span class="lf-value">0%</span></div>
-                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">Y9</span></div>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">25174 جنيه مصري</span>
-                            <span class="en-text">25174 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="recommendation-section">
-                <div class="recommendation-title">
-                    <span class="ar-text">سعر طيران النيل أقل بـ 8792 جنيه مصري</span>
-                    <span class="en-text">Nile Air price lower by 8792 EGP</span>
-                </div>
-                <div class="recommendation-details">
-                    <span class="ar-text">الأفضل تنافسياً: طيران النيل 💡</span>
-                    <span class="en-text">Market Leader: Nile Air 💡</span>
-                </div>
-            </div>
-
-            <div class="flight-block comp-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">
-                        <span class="ar-text">Nile Air-NP-103</span>
-                        <span class="en-text">Nile Air-NP-103</span>
-                    </span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 19:50</span>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">16382 جنيه مصري</span>
-                            <span class="en-text">16382 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="alert-banner high">
-            <div class="alert-text">
-                <span class="ar-text">تهديد عالي</span>
-                <span class="en-text">HIGH THREAT</span>
-            </div>
-        </div>
-    </div>
-    
-    <div class="threat-card high" data-level="high" data-date="2026-12-24">
-        <div class="card-date-header">
-            <span class="date-route">24DEC26 &nbsp;-&nbsp; CAI-YNB</span>
-        </div>
-
-        <div class="blocks-wrapper">
-            <div class="flight-block our-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">SM-441</span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 14:25</span>
-                </div>
-
-                <div class="lf-unified-section">
-                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">NIL</span></div>
-                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator lf-percent lf-low"><span class="lf-label">LF</span><span class="lf-value">0%</span></div>
-                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">Y9</span></div>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">25174 جنيه مصري</span>
-                            <span class="en-text">25174 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="recommendation-section">
-                <div class="recommendation-title">
-                    <span class="ar-text">سعر طيران النيل أقل بـ 8792 جنيه مصري</span>
-                    <span class="en-text">Nile Air price lower by 8792 EGP</span>
-                </div>
-                <div class="recommendation-details">
-                    <span class="ar-text">الأفضل تنافسياً: طيران النيل 💡</span>
-                    <span class="en-text">Market Leader: Nile Air 💡</span>
-                </div>
-            </div>
-
-            <div class="flight-block comp-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">
-                        <span class="ar-text">Nile Air-NP-103</span>
-                        <span class="en-text">Nile Air-NP-103</span>
-                    </span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 19:50</span>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">16382 جنيه مصري</span>
-                            <span class="en-text">16382 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="alert-banner high">
-            <div class="alert-text">
-                <span class="ar-text">تهديد عالي</span>
-                <span class="en-text">HIGH THREAT</span>
-            </div>
-        </div>
-    </div>
-    
-    <div class="threat-card high" data-level="high" data-date="2026-12-31">
-        <div class="card-date-header">
-            <span class="date-route">31DEC26 &nbsp;-&nbsp; CAI-YNB</span>
-        </div>
-
-        <div class="blocks-wrapper">
-            <div class="flight-block our-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">SM-441</span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 14:25</span>
-                </div>
-
-                <div class="lf-unified-section">
-                    <div class="lf-indicator"><span class="lf-label">SOLD</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">LST-SOLD</span><span class="lf-value">NIL</span></div>
-                    <div class="lf-indicator"><span class="lf-label">WEEKLY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">TO-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator"><span class="lf-label">Y-DAY</span><span class="lf-value">0</span></div>
-                    <div class="lf-indicator lf-percent lf-low"><span class="lf-label">LF</span><span class="lf-value">0%</span></div>
-                    <div class="lf-indicator lf-wide"><span class="lf-label">LOWEST AVAIL</span><span class="lf-value">Y9</span></div>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">25174 جنيه مصري</span>
-                            <span class="en-text">25174 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="recommendation-section">
-                <div class="recommendation-title">
-                    <span class="ar-text">سعر طيران النيل أقل بـ 8792 جنيه مصري</span>
-                    <span class="en-text">Nile Air price lower by 8792 EGP</span>
-                </div>
-                <div class="recommendation-details">
-                    <span class="ar-text">الأفضل تنافسياً: طيران النيل 💡</span>
-                    <span class="en-text">Market Leader: Nile Air 💡</span>
-                </div>
-            </div>
-
-            <div class="flight-block comp-flight">
-                <div class="flight-block-header">
-                    <span class="flight-number">
-                        <span class="ar-text">Nile Air-NP-103</span>
-                        <span class="en-text">Nile Air-NP-103</span>
-                    </span>
-                    <span class="flight-time"><span class="time-label">DEP</span> 19:50</span>
-                </div>
-                <div class="flight-block-details">
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">السعر</span>
-                            <span class="en-text">FARE</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">16382 جنيه مصري</span>
-                            <span class="en-text">16382 EGP</span>
-                        </div>
-                    </div>
-                    <div class="flight-detail-separator"></div>
-                    <div class="flight-detail-col">
-                        <div class="flight-detail-label">
-                            <span class="ar-text">الوزن</span>
-                            <span class="en-text">BAG</span>
-                        </div>
-                        <div class="flight-detail-value">
-                            <span class="ar-text">30 كجم</span>
-                            <span class="en-text">30K</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="alert-banner high">
-            <div class="alert-text">
-                <span class="ar-text">تهديد عالي</span>
-                <span class="en-text">HIGH THREAT</span>
             </div>
         </div>
     </div>
@@ -3264,37 +2061,13 @@
 <label class="filter-month-header"><input type="checkbox" data-month="2026-08" checked><span>August</span></label>
 <div class="filter-dates-grid">
 <label class="filter-date-item"><input type="checkbox" data-date="2026-08-08" checked><span>08 Aug</span></label>
+<label class="filter-date-item"><input type="checkbox" data-date="2026-08-09" checked><span>09 Aug</span></label>
 <label class="filter-date-item"><input type="checkbox" data-date="2026-08-11" checked><span>11 Aug</span></label>
+<label class="filter-date-item"><input type="checkbox" data-date="2026-08-12" checked><span>12 Aug</span></label>
 <label class="filter-date-item"><input type="checkbox" data-date="2026-08-15" checked><span>15 Aug</span></label>
-<label class="filter-date-item"><input type="checkbox" data-date="2026-08-18" checked><span>18 Aug</span></label>
 <label class="filter-date-item"><input type="checkbox" data-date="2026-08-22" checked><span>22 Aug</span></label>
 <label class="filter-date-item"><input type="checkbox" data-date="2026-08-25" checked><span>25 Aug</span></label>
 <label class="filter-date-item"><input type="checkbox" data-date="2026-08-29" checked><span>29 Aug</span></label>
-</div>
-<label class="filter-month-header"><input type="checkbox" data-month="2026-09" checked><span>September</span></label>
-<div class="filter-dates-grid">
-<label class="filter-date-item"><input type="checkbox" data-date="2026-09-01" checked><span>01 Sep</span></label>
-<label class="filter-date-item"><input type="checkbox" data-date="2026-09-05" checked><span>05 Sep</span></label>
-<label class="filter-date-item"><input type="checkbox" data-date="2026-09-08" checked><span>08 Sep</span></label>
-</div>
-<label class="filter-month-header"><input type="checkbox" data-month="2026-10" checked><span>October</span></label>
-<div class="filter-dates-grid">
-<label class="filter-date-item"><input type="checkbox" data-date="2026-10-29" checked><span>29 Oct</span></label>
-</div>
-<label class="filter-month-header"><input type="checkbox" data-month="2026-11" checked><span>November</span></label>
-<div class="filter-dates-grid">
-<label class="filter-date-item"><input type="checkbox" data-date="2026-11-05" checked><span>05 Nov</span></label>
-<label class="filter-date-item"><input type="checkbox" data-date="2026-11-12" checked><span>12 Nov</span></label>
-<label class="filter-date-item"><input type="checkbox" data-date="2026-11-19" checked><span>19 Nov</span></label>
-<label class="filter-date-item"><input type="checkbox" data-date="2026-11-26" checked><span>26 Nov</span></label>
-</div>
-<label class="filter-month-header"><input type="checkbox" data-month="2026-12" checked><span>December</span></label>
-<div class="filter-dates-grid">
-<label class="filter-date-item"><input type="checkbox" data-date="2026-12-03" checked><span>03 Dec</span></label>
-<label class="filter-date-item"><input type="checkbox" data-date="2026-12-10" checked><span>10 Dec</span></label>
-<label class="filter-date-item"><input type="checkbox" data-date="2026-12-17" checked><span>17 Dec</span></label>
-<label class="filter-date-item"><input type="checkbox" data-date="2026-12-24" checked><span>24 Dec</span></label>
-<label class="filter-date-item"><input type="checkbox" data-date="2026-12-31" checked><span>31 Dec</span></label>
 </div>
             </div>
         </div>
