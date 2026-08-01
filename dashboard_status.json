@@ -1,9 +1,17 @@
 {
-  "timestamp": "2026-08-01T16:52:54.528320",
+  "timestamp": "2026-08-01T17:30:42.777863",
   "status": "COMPLETED",
   "phase": "COMPLETED",
   "running": false,
   "active_workers": 0,
+  "active_workers_known": true,
+  "active_lf_workers": 0,
+  "active_oal_workers": 0,
+  "configured_oal_workers": 10,
+  "stalled": false,
+  "stall_age_seconds": 0.0,
+  "stall_threshold_seconds": null,
+  "last_activity_at": null,
   "paths": {
     "outputs_root": "D:\\CODERED\\LAB\\Artifacts",
     "active_output_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_010826_at_16.03",
@@ -478,16 +486,15 @@
   "excel_files": [
     "EGY_TO_KSA_01AUG26_TO_31AUG26_generated_at_01aug_16.30.xlsx",
     "KSA_TO_EGY_01AUG26_TO_31AUG26_generated_at_01aug_16.31.xlsx",
-    "LOAD_FACTOR_SUMMARY_01-08-26_TO_01-AUG-26_generated_at_01aug_16.34.xlsx",
-    "~$LOAD_FACTOR_SUMMARY_01-08-26_TO_01-AUG-26_generated_at_01aug_16.34.xlsx"
+    "LOAD_FACTOR_SUMMARY_01-08-26_TO_01-AUG-26_generated_at_01aug_16.34.xlsx"
   ],
-  "excel_count": 4,
+  "excel_count": 3,
   "speed_metrics": {
     "speed_per_minute": 0.0,
     "speed_per_hour": 0.0,
     "recent_errors": 0,
     "error_rate": 0,
-    "data_points": 12
+    "data_points": 6
   },
   "eta": {
     "lf_eta": null,

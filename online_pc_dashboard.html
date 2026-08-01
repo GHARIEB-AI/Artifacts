@@ -2028,11 +2028,21 @@
             // Run Status
             const runStatus = document.getElementById('run-status');
             const status = (data.status || '').toLowerCase();
+            const phase = (data.phase || (data.progress || {}).phase || '').toLowerCase();
+            const phaseLabels = {
+                'running_lf': 'Running Load Factor',
+                'running_oal': 'Running OAL Search',
+                'writing_excel': 'Writing Excel Files',
+                'building_reports': 'Building Reports',
+                'generating_docx': 'Generating Word Report',
+                'publishing': 'Publishing Reports',
+                'finalizing': 'Finalizing Outputs'
+            };
             if (status === 'running' || status === 'active') {
-                runStatus.textContent = 'Run In Progress';
+                runStatus.textContent = phaseLabels[phase] || 'Run In Progress';
                 runStatus.className = 'run-status active';
             } else if (status === 'finalizing') {
-                runStatus.textContent = 'Finalizing Outputs';
+                runStatus.textContent = phaseLabels[phase] || 'Finalizing Outputs';
                 runStatus.className = 'run-status active';
             } else if (status === 'completed') {
                 runStatus.textContent = 'Run Completed';
@@ -2042,6 +2052,9 @@
                 runStatus.className = 'run-status inactive';
             } else if (status === 'stopped') {
                 runStatus.textContent = 'Run Stopped';
+                runStatus.className = 'run-status inactive';
+            } else if (status === 'stalled') {
+                runStatus.textContent = 'Run Stalled';
                 runStatus.className = 'run-status inactive';
             } else {
                 runStatus.textContent = 'No Active Run';
