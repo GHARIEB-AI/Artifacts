@@ -1,6 +1,7 @@
 {
-  "timestamp": "2026-08-01T16:36:44.653411",
+  "timestamp": "2026-08-01T16:49:00.699953",
   "status": "COMPLETED",
+  "phase": "COMPLETED",
   "running": false,
   "active_workers": 0,
   "paths": {
@@ -95,9 +96,15 @@
     "oal_total_passes": 2,
     "oal_routes_completed": 52,
     "oal_routes_total": 52,
-    "excel": 75.0,
+    "excel": 100.0,
     "overall": 100.0,
-    "run_completed": false
+    "run_completed": true,
+    "finalizing": false,
+    "phase": "COMPLETED",
+    "local_build_state": "LOCAL_BUILD_SUCCEEDED",
+    "docx_state": "DOCX_SUCCEEDED",
+    "archive_state": "ARCHIVE_SUCCEEDED",
+    "main_publish_state": "MAIN_PUBLISH_SUCCEEDED"
   },
   "tasks": {
     "total": 312,
@@ -479,7 +486,7 @@
     "speed_per_hour": 0.0,
     "recent_errors": 0,
     "error_rate": 0,
-    "data_points": 12
+    "data_points": 1
   },
   "eta": {
     "lf_eta": null,
