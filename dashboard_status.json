@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-08-01T10:40:43.347724",
+  "timestamp": "2026-08-01T16:36:44.653411",
   "status": "COMPLETED",
   "running": false,
   "active_workers": 0,
   "paths": {
     "outputs_root": "D:\\CODERED\\LAB\\Artifacts",
-    "active_output_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_010826_at_10.04",
-    "active_checkpoint_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_010826_at_10.04\\checkpoints",
-    "active_logs_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_010826_at_10.04\\logs",
+    "active_output_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_010826_at_16.03",
+    "active_checkpoint_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_010826_at_16.03\\checkpoints",
+    "active_logs_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_010826_at_16.03\\logs",
     "backend": "sqlite"
   },
   "config": {
-    "run_id": "20260801_100502",
+    "run_id": "20260801_160347",
     "mode": "LF_OAL",
-    "started_at": "2026-08-01T10:05:02.975294",
+    "started_at": "2026-08-01T16:03:47.465795",
     "routes": [
       "JED-CAI",
       "JED-HBE",
@@ -469,9 +469,9 @@
   },
   "running_tasks": [],
   "excel_files": [
-    "EGY_TO_KSA_01AUG26_TO_31AUG26_generated_at_01aug_10.36.xlsx",
-    "KSA_TO_EGY_01AUG26_TO_31AUG26_generated_at_01aug_10.33.xlsx",
-    "LOAD_FACTOR_SUMMARY_01-08-26_TO_01-AUG-26_generated_at_01aug_10.38.xlsx"
+    "EGY_TO_KSA_01AUG26_TO_31AUG26_generated_at_01aug_16.30.xlsx",
+    "KSA_TO_EGY_01AUG26_TO_31AUG26_generated_at_01aug_16.31.xlsx",
+    "LOAD_FACTOR_SUMMARY_01-08-26_TO_01-AUG-26_generated_at_01aug_16.34.xlsx"
   ],
   "excel_count": 3,
   "speed_metrics": {
@@ -499,29 +499,29 @@
   },
   "live_logs": {
     "lines": [
-      "2026-08-01 10:24:45 | INFO     | [lf.day.start] Processing CAI-JED for 03AUG",
-      "2026-08-01 10:24:47 | INFO     | [lf.day.flights_found] Found 6 flights on 03AUG",
-      "2026-08-01 10:24:49 | INFO     | [lf.flight.extracted] SM477 on 03AUG: BKG=179, LF=100.0%",
-      "2026-08-01 10:24:53 | INFO     | [lf.flight.extracted] SM959 on 03AUG: BKG=179, LF=100.0%",
-      "2026-08-01 10:24:57 | INFO     | [lf.flight.extracted] SM981 on 03AUG: BKG=180, LF=100.6%",
-      "2026-08-01 10:25:00 | INFO     | [lf.flight.extracted] SM475 on 03AUG: BKG=179, LF=100.0%",
-      "2026-08-01 10:25:05 | INFO     | [lf.flight.extracted] SM985 on 03AUG: BKG=180, LF=100.6%",
-      "2026-08-01 10:25:09 | INFO     | [lf.flight.extracted] SM479 on 03AUG: BKG=179, LF=100.0%",
-      "2026-08-01 10:25:40 | INFO     | [SUCCESS] Day 03AUG",
-      "2026-08-01 10:25:40 | INFO     | [DAY_START] Processing 02AUG",
-      "2026-08-01 10:25:40 | INFO     | [lf.day.start] Processing CAI-JED for 02AUG",
-      "2026-08-01 10:25:42 | INFO     | [lf.day.flights_found] Found 3 flights on 02AUG",
-      "2026-08-01 10:25:44 | INFO     | [lf.flight.extracted] SM477 on 02AUG: BKG=179, LF=100.0%",
-      "2026-08-01 10:25:48 | INFO     | [lf.flight.extracted] SM475 on 02AUG: BKG=179, LF=100.0%",
-      "2026-08-01 10:25:51 | INFO     | [lf.flight.extracted] SM459 on 02AUG: BKG=179, LF=100.0%",
-      "2026-08-01 10:26:09 | INFO     | [SUCCESS] Day 02AUG",
-      "2026-08-01 10:26:09 | INFO     | [SUCCESS] LF Search Complete",
-      "2026-08-01 10:26:11 | INFO     | [Worker_9224] Completed: CAI-JED - 4 results, 0 errors",
-      "2026-08-01 10:33:57 | INFO     | [Worker_9224] Shutdown signal received, exiting...",
-      "2026-08-01 10:33:57 | INFO     | [Worker_9224] Finished. Processed 39 groups."
+      "2026-08-01 16:21:07 | INFO     | [lf.day.flights_found] Found 1 flights on 04AUG",
+      "2026-08-01 16:21:10 | INFO     | [lf.flight.extracted] SM973 on 04AUG: BKG=179, LF=100.0%",
+      "2026-08-01 16:21:15 | INFO     | [SUCCESS] Day 04AUG",
+      "2026-08-01 16:21:15 | INFO     | [DAY_START] Processing 03AUG",
+      "2026-08-01 16:21:15 | INFO     | [lf.day.start] Processing HBE-JED for 03AUG",
+      "2026-08-01 16:21:17 | INFO     | [lf.day.flights_found] Found 4 flights on 03AUG",
+      "2026-08-01 16:21:19 | INFO     | [lf.flight.extracted] SM451 on 03AUG: BKG=179, LF=100.0%",
+      "2026-08-01 16:21:23 | INFO     | [lf.flight.extracted] SM949 on 03AUG: BKG=182, LF=101.7%",
+      "2026-08-01 16:21:27 | INFO     | [lf.flight.extracted] SM952 on 03AUG: BKG=179, LF=100.0%",
+      "2026-08-01 16:21:30 | INFO     | [lf.flight.extracted] SM971 on 03AUG: BKG=179, LF=100.0%",
+      "2026-08-01 16:22:02 | INFO     | [SUCCESS] Day 03AUG",
+      "2026-08-01 16:22:02 | INFO     | [DAY_START] Processing 02AUG",
+      "2026-08-01 16:22:02 | INFO     | [lf.day.start] Processing HBE-JED for 02AUG",
+      "2026-08-01 16:22:03 | INFO     | [lf.day.flights_found] Found 1 flights on 02AUG",
+      "2026-08-01 16:22:06 | INFO     | [lf.flight.extracted] SM451 on 02AUG: BKG=179, LF=100.0%",
+      "2026-08-01 16:22:11 | INFO     | [SUCCESS] Day 02AUG",
+      "2026-08-01 16:22:11 | INFO     | [SUCCESS] LF Search Complete",
+      "2026-08-01 16:22:13 | INFO     | [Worker_9234] Completed: HBE-JED - 4 results, 0 errors",
+      "2026-08-01 16:30:04 | INFO     | [Worker_9234] Shutdown signal received, exiting...",
+      "2026-08-01 16:30:04 | INFO     | [Worker_9234] Finished. Processed 32 groups."
     ],
-    "file": "LF_CAI-JED_20260801_102335.log",
-    "total_lines": 46
+    "file": "LF_HBE-JED_20260801_162018.log",
+    "total_lines": 40
   },
   "flight_booking_data": {
     "flights": [
@@ -533,11 +533,11 @@
         "to_day": 0,
         "y_day": 7,
         "weekly": 114,
-        "lowest_avail": "Y1",
+        "lowest_avail": "Y4",
         "lf_percent": 99.4,
         "capacity": 179,
         "booked": 178,
-        "extracted_at": "2026-08-01T10:26:22.854669"
+        "extracted_at": "2026-08-01T16:22:43.219129"
       },
       {
         "flight": "SM427",
@@ -551,21 +551,21 @@
         "lf_percent": 92.7,
         "capacity": 179,
         "booked": 166,
-        "extracted_at": "2026-08-01T10:26:11.142581"
+        "extracted_at": "2026-08-01T16:22:32.150300"
       },
       {
         "flight": "SM435",
         "route": "HMB-ELQ",
         "date": "Sunday, August 02, 2026",
         "lst_sold": "2026-08-01 00:00:00",
-        "to_day": 8,
+        "to_day": 6,
         "y_day": 2,
-        "weekly": 76,
+        "weekly": 74,
         "lowest_avail": "CLOSED",
         "lf_percent": 100.0,
         "capacity": 179,
         "booked": 179,
-        "extracted_at": "2026-08-01T10:26:11.025380"
+        "extracted_at": "2026-08-01T16:22:30.214602"
       },
       {
         "flight": "SM459",
@@ -579,7 +579,7 @@
         "lf_percent": 100.0,
         "capacity": 179,
         "booked": 179,
-        "extracted_at": "2026-08-01T10:26:09.180803"
+        "extracted_at": "2026-08-01T16:22:28.898069"
       },
       {
         "flight": "SM475",
@@ -593,21 +593,21 @@
         "lf_percent": 100.0,
         "capacity": 179,
         "booked": 179,
-        "extracted_at": "2026-08-01T10:26:03.697406"
+        "extracted_at": "2026-08-01T16:22:24.206300"
       },
       {
         "flight": "SM477",
         "route": "CAI-JED",
         "date": "Sunday, August 02, 2026",
-        "lst_sold": "2026-07-26 00:00:00",
-        "to_day": 0,
+        "lst_sold": "2026-08-01 00:00:00",
+        "to_day": 1,
         "y_day": 0,
-        "weekly": 18,
+        "weekly": 19,
         "lowest_avail": "CLOSED",
-        "lf_percent": 100.0,
+        "lf_percent": 100.6,
         "capacity": 179,
-        "booked": 179,
-        "extracted_at": "2026-08-01T10:25:58.659783"
+        "booked": 180,
+        "extracted_at": "2026-08-01T16:22:19.964001"
       },
       {
         "flight": "SM435",
@@ -617,39 +617,39 @@
         "to_day": 0,
         "y_day": 2,
         "weekly": 101,
-        "lowest_avail": "CLOSED",
-        "lf_percent": 100.0,
+        "lowest_avail": "Y1",
+        "lf_percent": 99.4,
         "capacity": 179,
-        "booked": 179,
-        "extracted_at": "2026-08-01T10:25:57.069757"
+        "booked": 178,
+        "extracted_at": "2026-08-01T16:22:18.581579"
       },
       {
         "flight": "SM469",
         "route": "CAI-RUH",
         "date": "Monday, August 03, 2026",
-        "lst_sold": "2026-07-30 00:00:00",
-        "to_day": 0,
+        "lst_sold": "2026-08-01 00:00:00",
+        "to_day": 3,
         "y_day": 0,
-        "weekly": 125,
-        "lowest_avail": "B2",
-        "lf_percent": 93.3,
+        "weekly": 128,
+        "lowest_avail": "Y9",
+        "lf_percent": 95.0,
         "capacity": 179,
-        "booked": 167,
-        "extracted_at": "2026-08-01T10:25:54.724017"
+        "booked": 170,
+        "extracted_at": "2026-08-01T16:22:18.476817"
       },
       {
         "flight": "SM443",
         "route": "CAI-AHB",
         "date": "Sunday, August 02, 2026",
         "lst_sold": "2026-08-01 00:00:00",
-        "to_day": 0,
-        "y_day": 178,
-        "weekly": 178,
+        "to_day": 3,
+        "y_day": 176,
+        "weekly": 179,
         "lowest_avail": "CLOSED",
         "lf_percent": 100.0,
         "capacity": 179,
         "booked": 179,
-        "extracted_at": "2026-08-01T10:25:53.696546"
+        "extracted_at": "2026-08-01T16:22:17.757800"
       },
       {
         "flight": "SM451",
@@ -663,35 +663,35 @@
         "lf_percent": 100.0,
         "capacity": 179,
         "booked": 179,
-        "extracted_at": "2026-08-01T10:25:47.511477"
+        "extracted_at": "2026-08-01T16:22:11.555820"
       },
       {
         "flight": "SM427",
         "route": "CAI-ELQ",
         "date": "Wednesday, August 05, 2026",
-        "lst_sold": "2026-07-31 00:00:00",
-        "to_day": 0,
+        "lst_sold": "2026-08-01 00:00:00",
+        "to_day": 6,
         "y_day": 24,
-        "weekly": 120,
-        "lowest_avail": "B3",
-        "lf_percent": 92.7,
+        "weekly": 126,
+        "lowest_avail": "Y7",
+        "lf_percent": 96.1,
         "capacity": 179,
-        "booked": 166,
-        "extracted_at": "2026-08-01T10:25:44.380617"
+        "booked": 172,
+        "extracted_at": "2026-08-01T16:22:08.815327"
       },
       {
         "flight": "SM441",
         "route": "CAI-YNB",
         "date": "Sunday, August 02, 2026",
-        "lst_sold": "2026-07-25 00:00:00",
-        "to_day": 0,
+        "lst_sold": "2026-08-01 00:00:00",
+        "to_day": 1,
         "y_day": 0,
-        "weekly": 1,
+        "weekly": 2,
         "lowest_avail": "CLOSED",
         "lf_percent": 100.0,
         "capacity": 179,
         "booked": 179,
-        "extracted_at": "2026-08-01T10:25:42.416216"
+        "extracted_at": "2026-08-01T16:22:03.941885"
       },
       {
         "flight": "SM479",
@@ -705,21 +705,7 @@
         "lf_percent": 100.0,
         "capacity": 179,
         "booked": 179,
-        "extracted_at": "2026-08-01T10:25:40.727514"
-      },
-      {
-        "flight": "SM329",
-        "route": "CAI-GIZ",
-        "date": "Wednesday, August 05, 2026",
-        "lst_sold": "2026-08-01 00:00:00",
-        "to_day": 1,
-        "y_day": 15,
-        "weekly": 28,
-        "lowest_avail": "G3",
-        "lf_percent": 50.3,
-        "capacity": 179,
-        "booked": 90,
-        "extracted_at": "2026-08-01T10:25:38.480566"
+        "extracted_at": "2026-08-01T16:22:03.614960"
       },
       {
         "flight": "SM971",
@@ -733,7 +719,21 @@
         "lf_percent": 100.0,
         "capacity": 179,
         "booked": 179,
-        "extracted_at": "2026-08-01T10:25:37.725818"
+        "extracted_at": "2026-08-01T16:22:02.492176"
+      },
+      {
+        "flight": "SM329",
+        "route": "CAI-GIZ",
+        "date": "Wednesday, August 05, 2026",
+        "lst_sold": "2026-08-01 00:00:00",
+        "to_day": 12,
+        "y_day": 13,
+        "weekly": 37,
+        "lowest_avail": "S1",
+        "lf_percent": 54.2,
+        "capacity": 179,
+        "booked": 97,
+        "extracted_at": "2026-08-01T16:22:02.354722"
       },
       {
         "flight": "SM985",
@@ -747,21 +747,7 @@
         "lf_percent": 100.6,
         "capacity": 179,
         "booked": 180,
-        "extracted_at": "2026-08-01T10:25:35.400554"
-      },
-      {
-        "flight": "SM475",
-        "route": "CAI-JED",
-        "date": "Monday, August 03, 2026",
-        "lst_sold": "2026-07-28 00:00:00",
-        "to_day": 0,
-        "y_day": 0,
-        "weekly": 14,
-        "lowest_avail": "CLOSED",
-        "lf_percent": 100.0,
-        "capacity": 179,
-        "booked": 179,
-        "extracted_at": "2026-08-01T10:25:33.837063"
+        "extracted_at": "2026-08-01T16:21:59.111211"
       },
       {
         "flight": "SM952",
@@ -775,42 +761,56 @@
         "lf_percent": 100.0,
         "capacity": 179,
         "booked": 179,
-        "extracted_at": "2026-08-01T10:25:32.146794"
+        "extracted_at": "2026-08-01T16:21:57.897224"
+      },
+      {
+        "flight": "SM475",
+        "route": "CAI-JED",
+        "date": "Monday, August 03, 2026",
+        "lst_sold": "2026-07-28 00:00:00",
+        "to_day": 0,
+        "y_day": 0,
+        "weekly": 14,
+        "lowest_avail": "CLOSED",
+        "lf_percent": 100.0,
+        "capacity": 179,
+        "booked": 179,
+        "extracted_at": "2026-08-01T16:21:57.836341"
       },
       {
         "flight": "SM441",
         "route": "CAI-YNB",
         "date": "Monday, August 03, 2026",
-        "lst_sold": "2026-07-31 00:00:00",
-        "to_day": 0,
+        "lst_sold": "2026-08-01 00:00:00",
+        "to_day": 1,
         "y_day": 1,
-        "weekly": 4,
-        "lowest_avail": "Y1",
-        "lf_percent": 99.4,
+        "weekly": 5,
+        "lowest_avail": "CLOSED",
+        "lf_percent": 100.0,
         "capacity": 179,
-        "booked": 178,
-        "extracted_at": "2026-08-01T10:25:32.041677"
+        "booked": 179,
+        "extracted_at": "2026-08-01T16:21:54.999214"
       },
       {
-        "flight": "SM981",
-        "route": "CAI-JED",
+        "flight": "SM443",
+        "route": "CAI-AHB",
         "date": "Monday, August 03, 2026",
-        "lst_sold": "2026-07-30 00:00:00",
+        "lst_sold": "2026-07-26 00:00:00",
         "to_day": 0,
         "y_day": 0,
-        "weekly": 93,
+        "weekly": 92,
         "lowest_avail": "CLOSED",
-        "lf_percent": 100.6,
+        "lf_percent": 102.2,
         "capacity": 179,
-        "booked": 180,
-        "extracted_at": "2026-08-01T10:25:29.444791"
+        "booked": 183,
+        "extracted_at": "2026-08-01T16:21:54.773219"
       }
     ],
-    "updated_at": "2026-08-01T10:26:22.854676",
-    "total_extracted": 998
+    "updated_at": "2026-08-01T16:22:43.219133",
+    "total_extracted": 994
   },
   "validation": {
-    "timestamp": "2026-08-01T10:38:59.036501",
+    "timestamp": "2026-08-01T16:34:35.479348",
     "passed": true,
     "routes_checked": 52,
     "dates_expected": 31,
