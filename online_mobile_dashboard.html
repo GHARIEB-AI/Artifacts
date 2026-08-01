@@ -839,6 +839,18 @@
             if (status === 'running' || status === 'active') {
                 runStatus.textContent = 'Run In Progress';
                 runStatus.className = 'run-status active';
+            } else if (status === 'finalizing') {
+                runStatus.textContent = 'Finalizing Outputs';
+                runStatus.className = 'run-status active';
+            } else if (status === 'completed') {
+                runStatus.textContent = 'Run Completed';
+                runStatus.className = 'run-status inactive';
+            } else if (status === 'failed') {
+                runStatus.textContent = 'Run Failed';
+                runStatus.className = 'run-status inactive';
+            } else if (status === 'stopped') {
+                runStatus.textContent = 'Run Stopped';
+                runStatus.className = 'run-status inactive';
             } else {
                 runStatus.textContent = 'No Active Run';
                 runStatus.className = 'run-status inactive';
