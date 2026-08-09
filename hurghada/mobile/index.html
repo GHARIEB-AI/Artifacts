@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#3D1063">
+<title>Air Cairo | Hurghada Mobile Campaign</title>
+<style>
+@font-face{font-family:Poppins;src:url('assets/fonts/Poppins-400.ttf') format('truetype');font-weight:400}
+@font-face{font-family:Poppins;src:url('assets/fonts/Poppins-600.ttf') format('truetype');font-weight:600}
+:root{--purple:#3D1063;--orange:#F58220;--ink:#fff;--glass:rgba(20,8,31,.68)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#100817;color:var(--ink);font-family:Poppins,Arial,sans-serif}
+body{touch-action:pan-y}
+.app{position:fixed;inset:0;display:grid;grid-template-rows:auto 1fr auto;background:radial-gradient(circle at 50% 0,#3D1063 0,#190d24 42%,#0d0812 100%)}
+.top{z-index:5;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:calc(10px + env(safe-area-inset-top)) 12px 8px;background:linear-gradient(180deg,rgba(13,8,18,.92),rgba(13,8,18,.22),transparent)}
+.brand{font-size:12px;font-weight:600;letter-spacing:.08em;white-space:nowrap}.brand b{color:var(--orange)}
+.actions{display:flex;gap:8px}.btn{border:1px solid rgba(255,255,255,.22);background:var(--glass);color:#fff;border-radius:999px;padding:8px 11px;font:600 11px Poppins;backdrop-filter:blur(12px);cursor:pointer}.btn.primary{background:var(--orange);border-color:var(--orange);color:#24100a}
+.stage{position:relative;min-height:0;display:flex;align-items:center;justify-content:center;padding:0 8px}
+.frame{position:relative;height:100%;max-height:calc(100dvh - 118px);aspect-ratio:9/16;max-width:100%;border-radius:22px;overflow:hidden;background:#1a1120;box-shadow:0 18px 60px rgba(0,0,0,.45)}
+.frame::before{content:"";position:absolute;inset:-18px;background-image:var(--bg);background-size:cover;background-position:center;filter:blur(24px) brightness(.48);transform:scale(1.08)}
+.slide{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transform:scale(.985);transition:opacity .35s ease,transform .35s ease;user-select:none;-webkit-user-drag:none}.slide.active{opacity:1;transform:scale(1)}
+.nav{position:absolute;inset:0;pointer-events:none}.nav button{pointer-events:auto;position:absolute;top:50%;transform:translateY(-50%);width:44px;height:58px;border:0;color:#fff;background:rgba(20,8,31,.42);backdrop-filter:blur(10px);font-size:26px}.prev{left:0;border-radius:0 18px 18px 0}.next{right:0;border-radius:18px 0 0 18px}
+.bottom{z-index:5;padding:8px 14px calc(10px + env(safe-area-inset-bottom));background:linear-gradient(0deg,rgba(13,8,18,.96),rgba(13,8,18,.62),transparent)}
+.meta{display:flex;align-items:center;justify-content:space-between;font-size:11px;margin-bottom:7px;color:rgba(255,255,255,.78)}
+.dots{display:flex;justify-content:center;gap:7px}.dot{width:7px;height:7px;border-radius:999px;border:0;padding:0;background:rgba(255,255,255,.34)}.dot.active{width:24px;background:var(--orange)}
+.progress{height:2px;background:rgba(255,255,255,.18);margin-top:9px;overflow:hidden}.progress span{display:block;height:100%;width:12.5%;background:var(--orange);transition:width .25s ease}
+.modal{position:fixed;inset:0;z-index:20;display:none;align-items:center;justify-content:center;background:rgba(7,3,10,.94);padding:calc(14px + env(safe-area-inset-top)) 14px calc(14px + env(safe-area-inset-bottom))}.modal.open{display:flex}.modal video{height:min(88dvh,920px);max-width:100%;aspect-ratio:9/16;background:#000;border-radius:18px}.close{position:absolute;top:calc(10px + env(safe-area-inset-top));right:12px;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(20,8,31,.75);color:#fff;font-size:22px}
+@media (orientation:landscape) and (max-height:600px){.top{padding-top:6px}.frame{max-height:calc(100dvh - 92px);border-radius:12px}.bottom{padding-bottom:6px}.brand{font-size:10px}}
+</style>
+</head>
+<body>
+<main class="app" id="app">
+<header class="top"><div class="brand">AIR CAIRO <b>·</b> HURGHADA</div><div class="actions"><button class="btn" id="autoBtn">Auto: Off</button><button class="btn primary" id="reelBtn">Watch Reel</button></div></header>
+<section class="stage" id="stage"><div class="frame" id="frame"></div><div class="nav"><button class="prev" id="prev" aria-label="Previous">‹</button><button class="next" id="next" aria-label="Next">›</button></div></section>
+<footer class="bottom"><div class="meta"><span id="counter">1 / 8</span><span>Swipe · Tap · Auto</span></div><div class="dots" id="dots"></div><div class="progress"><span id="bar"></span></div></footer>
+</main>
+<div class="modal" id="modal"><button class="close" id="closeBtn" aria-label="Close">×</button><video id="reel" controls playsinline preload="metadata"><source src="assets/media/AirCairo_Hurghada_Reel_1080x1920.mp4" type="video/mp4"></video></div>
+<script>
+const files=[
+'01_Hurghada_Gateway_1080x1920.png','02_Discover_Red_Sea_1080x1920.png','03_HRG_Airport_1080x1920.png','04_KSA_to_World_1080x1920.png','05_New_Experience_1080x1920.png','06_KSA_Europe_Africa_1080x1920.png','07_Destinations_1080x1920.png','08_Smart_Connection_1080x1920.png'];
+const frame=document.getElementById('frame'),dots=document.getElementById('dots'),counter=document.getElementById('counter'),bar=document.getElementById('bar'),autoBtn=document.getElementById('autoBtn');
+let i=0,timer=null,touchX=0;
+files.forEach((f,n)=>{const img=new Image();img.src='assets/mobile/'+f;img.className='slide'+(n===0?' active':'');img.alt='Hurghada campaign creative '+(n+1);frame.appendChild(img);const d=document.createElement('button');d.className='dot'+(n===0?' active':'');d.ariaLabel='Go to '+(n+1);d.onclick=()=>show(n);dots.appendChild(d)});
+function show(n){i=(n+files.length)%files.length;[...frame.children].forEach((el,k)=>el.classList.toggle('active',k===i));[...dots.children].forEach((el,k)=>el.classList.toggle('active',k===i));counter.textContent=(i+1)+' / '+files.length;bar.style.width=((i+1)/files.length*100)+'%';frame.style.setProperty('--bg',`url("assets/mobile/${files[i]}")`)}
+function next(){show(i+1)} function prev(){show(i-1)}
+document.getElementById('next').onclick=next;document.getElementById('prev').onclick=prev;
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')next();if(e.key==='ArrowLeft')prev();if(e.key===' '){e.preventDefault();toggleAuto()}});
+document.getElementById('stage').addEventListener('touchstart',e=>touchX=e.changedTouches[0].clientX,{passive:true});document.getElementById('stage').addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-touchX;if(Math.abs(dx)>45)(dx<0?next:prev)()},{passive:true});
+function toggleAuto(){if(timer){clearInterval(timer);timer=null;autoBtn.textContent='Auto: Off'}else{timer=setInterval(next,4500);autoBtn.textContent='Auto: On'}}autoBtn.onclick=toggleAuto;
+const modal=document.getElementById('modal'),reel=document.getElementById('reel');document.getElementById('reelBtn').onclick=()=>{modal.classList.add('open');reel.play().catch(()=>{})};document.getElementById('closeBtn').onclick=()=>{reel.pause();modal.classList.remove('open')};modal.addEventListener('click',e=>{if(e.target===modal)document.getElementById('closeBtn').click()});
+show(0);
+</script>
+</body>
+</html>
