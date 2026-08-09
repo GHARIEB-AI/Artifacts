@@ -27,16 +27,16 @@ body{touch-action:pan-y}
 .progress{height:2px;background:rgba(255,255,255,.18);margin-top:9px;overflow:hidden}.progress span{display:block;height:100%;width:12.5%;background:var(--orange);transition:width .25s ease}
 .modal{position:fixed;inset:0;z-index:20;display:none;align-items:center;justify-content:center;background:rgba(7,3,10,.94);padding:calc(14px + env(safe-area-inset-top)) 14px calc(14px + env(safe-area-inset-bottom))}.modal.open{display:flex}.modal video{height:min(88dvh,920px);max-width:100%;aspect-ratio:9/16;background:#000;border-radius:18px}.close{position:absolute;top:calc(10px + env(safe-area-inset-top));right:12px;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(20,8,31,.75);color:#fff;font-size:22px}
 @media (orientation:landscape) and (max-height:600px){.top{padding-top:6px}.frame{max-height:calc(100dvh - 92px);border-radius:12px}.bottom{padding-bottom:6px}.brand{font-size:10px}}
-</style>
+.fs-gate{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:24px;background:radial-gradient(circle at 50% 24%,rgba(92,42,157,.96),rgba(17,9,26,.985) 58%,#09050d 100%);text-align:center}.fs-gate.hidden{display:none}.fs-card{width:min(430px,92vw);padding:28px 22px;border:1px solid rgba(255,255,255,.18);border-radius:26px;background:rgba(20,8,31,.76);box-shadow:0 30px 90px rgba(0,0,0,.45);backdrop-filter:blur(16px)}.fs-kicker{font-size:11px;font-weight:600;letter-spacing:.12em;color:#F58220}.fs-card h1{margin:10px 0 6px;font-size:clamp(24px,8vw,36px);line-height:1.08}.fs-card p{margin:0 0 20px;font-size:12px;color:rgba(255,255,255,.75)}.fs-start{border:0;border-radius:999px;padding:12px 20px;background:#F58220;color:#24100a;font:600 13px Poppins,Arial,sans-serif;cursor:pointer}.fs-start:active{transform:scale(.98)}</style>
 </head>
-<body>
+<body><div class="fs-gate" id="fsGate"><div class="fs-card"><div class="fs-kicker">AIR CAIRO · HURGHADA</div><h1>Full Screen Experience</h1><p>Tap once to enter full screen and start the campaign.</p><button class="fs-start" id="fsStart">Enter Full Screen</button></div></div>
 <main class="app" id="app">
-<header class="top"><div class="brand">AIR CAIRO <b>·</b> HURGHADA</div><div class="actions"><button class="btn" id="autoBtn">Auto: Off</button><button class="btn primary" id="reelBtn">Watch Reel</button></div></header>
+<header class="top"><div class="brand">AIR CAIRO <b>·</b> HURGHADA</div><div class="actions"><button class="btn" id="fsBtn" title="Full Screen" aria-label="Full Screen">⛶</button><button class="btn" id="autoBtn">Auto: Off</button><button class="btn primary" id="reelBtn">Watch Reel</button></div></header>
 <section class="stage" id="stage"><div class="frame" id="frame"></div><div class="nav"><button class="prev" id="prev" aria-label="Previous">‹</button><button class="next" id="next" aria-label="Next">›</button></div></section>
 <footer class="bottom"><div class="meta"><span id="counter">1 / 8</span><span>Swipe · Tap · Auto</span></div><div class="dots" id="dots"></div><div class="progress"><span id="bar"></span></div></footer>
 </main>
 <div class="modal" id="modal"><button class="close" id="closeBtn" aria-label="Close">×</button><video id="reel" controls playsinline preload="metadata"><source src="assets/media/AirCairo_Hurghada_Reel_1080x1920.mp4" type="video/mp4"></video></div>
-<script>
+<script>const fsGate=document.getElementById('fsGate'),fsStart=document.getElementById('fsStart'),fsBtn=document.getElementById('fsBtn');async function enterFullScreen(){try{if(!document.fullscreenElement&&document.documentElement.requestFullscreen){await document.documentElement.requestFullscreen({navigationUI:'hide'})}}catch(e){}finally{if(fsGate)fsGate.classList.add('hidden')}}if(fsStart)fsStart.addEventListener('click',enterFullScreen);if(fsBtn)fsBtn.addEventListener('click',enterFullScreen);
 const files=[
 '01_Hurghada_Gateway_1080x1920.png','02_Discover_Red_Sea_1080x1920.png','03_HRG_Airport_1080x1920.png','04_KSA_to_World_1080x1920.png','05_New_Experience_1080x1920.png','06_KSA_Europe_Africa_1080x1920.png','07_Destinations_1080x1920.png','08_Smart_Connection_1080x1920.png'];
 const frame=document.getElementById('frame'),dots=document.getElementById('dots'),counter=document.getElementById('counter'),bar=document.getElementById('bar'),autoBtn=document.getElementById('autoBtn');
@@ -48,8 +48,9 @@ document.getElementById('next').onclick=next;document.getElementById('prev').onc
 document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')next();if(e.key==='ArrowLeft')prev();if(e.key===' '){e.preventDefault();toggleAuto()}});
 document.getElementById('stage').addEventListener('touchstart',e=>touchX=e.changedTouches[0].clientX,{passive:true});document.getElementById('stage').addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-touchX;if(Math.abs(dx)>45)(dx<0?next:prev)()},{passive:true});
 function toggleAuto(){if(timer){clearInterval(timer);timer=null;autoBtn.textContent='Auto: Off'}else{timer=setInterval(next,4500);autoBtn.textContent='Auto: On'}}autoBtn.onclick=toggleAuto;
-const modal=document.getElementById('modal'),reel=document.getElementById('reel');document.getElementById('reelBtn').onclick=()=>{modal.classList.add('open');reel.play().catch(()=>{})};document.getElementById('closeBtn').onclick=()=>{reel.pause();modal.classList.remove('open')};modal.addEventListener('click',e=>{if(e.target===modal)document.getElementById('closeBtn').click()});
+const modal=document.getElementById('modal'),reel=document.getElementById('reel');document.getElementById('reelBtn').onclick=()=>{modal.classList.add('open');reel.volume=.72;reel.play().catch(()=>{})};document.getElementById('closeBtn').onclick=()=>{reel.pause();modal.classList.remove('open')};modal.addEventListener('click',e=>{if(e.target===modal)document.getElementById('closeBtn').click()});
 show(0);
 </script>
 </body>
 </html>
+
