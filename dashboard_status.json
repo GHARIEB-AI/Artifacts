@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-30T09:48:56.693738",
-  "status": "FINALIZING",
-  "phase": "PUBLISHING",
-  "running": true,
+  "timestamp": "2026-08-30T09:49:07.956073",
+  "status": "COMPLETED",
+  "phase": "COMPLETED",
+  "running": false,
   "active_workers": 0,
   "active_workers_known": true,
   "active_lf_workers": 0,
   "active_oal_workers": 0,
   "configured_oal_workers": 10,
   "stalled": false,
-  "stall_age_seconds": 9.3,
-  "stall_threshold_seconds": 1800,
-  "last_activity_at": "2026-08-30T09:48:47.395769",
+  "stall_age_seconds": 0.0,
+  "stall_threshold_seconds": null,
+  "last_activity_at": null,
   "paths": {
     "outputs_root": "D:\\CODERED\\LAB\\Artifacts",
     "active_output_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_300826_at_09.45",
@@ -56,15 +56,15 @@
     "oal_total_passes": 2,
     "oal_routes_completed": 4,
     "oal_routes_total": 4,
-    "excel": 75.0,
-    "overall": 87.5,
-    "run_completed": false,
-    "finalizing": true,
-    "phase": "PUBLISHING",
+    "excel": 100.0,
+    "overall": 100.0,
+    "run_completed": true,
+    "finalizing": false,
+    "phase": "COMPLETED",
     "local_build_state": "LOCAL_BUILD_SUCCEEDED",
     "docx_state": "DOCX_SUCCEEDED",
-    "archive_state": "ARCHIVE_PENDING",
-    "main_publish_state": "MAIN_PUBLISH_PENDING"
+    "archive_state": "ARCHIVE_SUCCEEDED",
+    "main_publish_state": "MAIN_PUBLISH_SUCCEEDED"
   },
   "tasks": {
     "total": 12,
@@ -158,7 +158,7 @@
     "speed_per_hour": 0.0,
     "recent_errors": 0,
     "error_rate": 0,
-    "data_points": 12
+    "data_points": 1
   },
   "eta": {
     "lf_eta": null,
