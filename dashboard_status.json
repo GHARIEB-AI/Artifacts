@@ -1,28 +1,28 @@
 {
-  "timestamp": "2026-08-30T09:49:07.956073",
-  "status": "COMPLETED",
-  "phase": "COMPLETED",
-  "running": false,
+  "timestamp": "2026-08-30T14:23:39.046636",
+  "status": "FINALIZING",
+  "phase": "PUBLISHING",
+  "running": true,
   "active_workers": 0,
   "active_workers_known": true,
   "active_lf_workers": 0,
   "active_oal_workers": 0,
   "configured_oal_workers": 10,
   "stalled": false,
-  "stall_age_seconds": 0.0,
-  "stall_threshold_seconds": null,
-  "last_activity_at": null,
+  "stall_age_seconds": 2.3,
+  "stall_threshold_seconds": 1800,
+  "last_activity_at": "2026-08-30T14:23:36.757944",
   "paths": {
     "outputs_root": "D:\\CODERED\\LAB\\Artifacts",
-    "active_output_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_300826_at_09.45",
-    "active_checkpoint_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_300826_at_09.45\\checkpoints",
-    "active_logs_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_300826_at_09.45\\logs",
+    "active_output_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_300826_at_14.18",
+    "active_checkpoint_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_300826_at_14.18\\checkpoints",
+    "active_logs_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_300826_at_14.18\\logs",
     "backend": "sqlite"
   },
   "config": {
-    "run_id": "20260830_094607",
+    "run_id": "20260830_141918",
     "mode": "LF_OAL",
-    "started_at": "2026-08-30T09:46:07.782304",
+    "started_at": "2026-08-30T14:19:18.403323",
     "routes": [
       "DMM-CAI",
       "DMM-HMB",
@@ -30,8 +30,8 @@
       "HMB-DMM"
     ],
     "routes_count": 4,
-    "dates_count": 31,
-    "chunks_count": 3,
+    "dates_count": 62,
+    "chunks_count": 6,
     "ports": [
       9222,
       9223,
@@ -45,7 +45,7 @@
     ],
     "ports_count": 9,
     "oal_workers": 10,
-    "date_range": "2026-08-31 to 2026-09-30"
+    "date_range": "2026-08-31 to 2026-10-31"
   },
   "progress": {
     "lf": 100.0,
@@ -56,19 +56,19 @@
     "oal_total_passes": 2,
     "oal_routes_completed": 4,
     "oal_routes_total": 4,
-    "excel": 100.0,
-    "overall": 100.0,
-    "run_completed": true,
-    "finalizing": false,
-    "phase": "COMPLETED",
+    "excel": 75.0,
+    "overall": 87.5,
+    "run_completed": false,
+    "finalizing": true,
+    "phase": "PUBLISHING",
     "local_build_state": "LOCAL_BUILD_SUCCEEDED",
     "docx_state": "DOCX_SUCCEEDED",
-    "archive_state": "ARCHIVE_SUCCEEDED",
-    "main_publish_state": "MAIN_PUBLISH_SUCCEEDED"
+    "archive_state": "ARCHIVE_PENDING",
+    "main_publish_state": "MAIN_PUBLISH_PENDING"
   },
   "tasks": {
-    "total": 12,
-    "done": 12,
+    "total": 24,
+    "done": 24,
     "running": 0,
     "pending": 0,
     "failed": 0
@@ -122,35 +122,35 @@
   },
   "pending_routes": {
     "DMM-CAI": {
-      "total_tasks": 3,
-      "done_tasks": 3,
+      "total_tasks": 6,
+      "done_tasks": 6,
       "pending_dates": [],
       "done_dates": []
     },
     "DMM-HMB": {
-      "total_tasks": 3,
-      "done_tasks": 3,
+      "total_tasks": 6,
+      "done_tasks": 6,
       "pending_dates": [],
       "done_dates": []
     },
     "CAI-DMM": {
-      "total_tasks": 3,
-      "done_tasks": 3,
+      "total_tasks": 6,
+      "done_tasks": 6,
       "pending_dates": [],
       "done_dates": []
     },
     "HMB-DMM": {
-      "total_tasks": 3,
-      "done_tasks": 3,
+      "total_tasks": 6,
+      "done_tasks": 6,
       "pending_dates": [],
       "done_dates": []
     }
   },
   "running_tasks": [],
   "excel_files": [
-    "EGY_TO_KSA_31AUG26_TO_30SEP26_generated_at_30aug_09.46.xlsx",
-    "KSA_TO_EGY_31AUG26_TO_30SEP26_generated_at_30aug_09.46.xlsx",
-    "LOAD_FACTOR_SUMMARY_30-08-26_TO_30-AUG-26_generated_at_30aug_09.48.xlsx"
+    "EGY_TO_KSA_31AUG26_TO_31OCT26_generated_at_30aug_14.19.xlsx",
+    "KSA_TO_EGY_31AUG26_TO_31OCT26_generated_at_30aug_14.19.xlsx",
+    "LOAD_FACTOR_SUMMARY_30-08-26_TO_30-AUG-26_generated_at_30aug_14.23.xlsx"
   ],
   "excel_count": 3,
   "speed_metrics": {
@@ -158,7 +158,7 @@
     "speed_per_hour": 0.0,
     "recent_errors": 0,
     "error_rate": 0,
-    "data_points": 1
+    "data_points": 12
   },
   "eta": {
     "lf_eta": null,
@@ -178,15 +178,60 @@
   },
   "live_logs": {
     "lines": [
-      "2026-08-30 09:47:25,162 | INFO     | [Worker_9222] Completed: CAI-DMM - 11 results, 0 errors",
-      "2026-08-30 09:47:55,238 | INFO     | [Worker_9222] Shutdown signal received, exiting...",
-      "2026-08-30 09:47:55,239 | INFO     | [Worker_9222] Finished. Processed 1 groups."
+      "2026-08-30 14:21:16 | INFO     | [lf.day.flights_found] Found 1 flights on 02SEP",
+      "2026-08-30 14:21:17 | INFO     | [lf.flight.extracted] SM434 on 02SEP: BKG=40, LF=22.9%",
+      "2026-08-30 14:21:19 | WARNING  | [LF][PAGINATION-WARN] context=LP/L flight=SM434 date=02SEP reason=missing_terminal_marker pages_retained=1 day_resync=false data_complete=false",
+      "2026-08-30 14:21:19 | INFO     | [SUCCESS] Day 02SEP",
+      "2026-08-30 14:21:19 | INFO     | [DAY_START] Processing 01SEP",
+      "2026-08-30 14:21:19 | INFO     | [lf.day.start] Processing DMM-CAI for 01SEP",
+      "2026-08-30 14:21:20 | INFO     | [lf.day.flights_found] Found 1 flights on 01SEP",
+      "2026-08-30 14:21:22 | INFO     | [lf.flight.extracted] SM434 on 01SEP: BKG=84, LF=48.0%",
+      "2026-08-30 14:21:24 | WARNING  | [LF][PAGINATION-WARN] context=LP/L flight=SM434 date=01SEP reason=missing_terminal_marker pages_retained=1 day_resync=false data_complete=false",
+      "2026-08-30 14:21:24 | INFO     | [SUCCESS] Day 01SEP",
+      "2026-08-30 14:21:24 | INFO     | [DAY_START] Processing 31AUG",
+      "2026-08-30 14:21:24 | INFO     | [lf.day.start] Processing DMM-CAI for 31AUG",
+      "2026-08-30 14:21:26 | INFO     | [lf.day.flights_found] Found 2 flights on 31AUG",
+      "2026-08-30 14:21:27 | INFO     | [lf.flight.extracted] SM440 on 31AUG: BKG=105, LF=60.0%",
+      "2026-08-30 14:21:31 | INFO     | [lf.flight.extracted] SM434 on 31AUG: BKG=129, LF=73.7%",
+      "2026-08-30 14:21:42 | INFO     | [SUCCESS] Day 31AUG",
+      "2026-08-30 14:21:42 | INFO     | [SUCCESS] LF Search Complete",
+      "2026-08-30 14:21:44 | INFO     | [Worker_9222] Completed: DMM-CAI - 10 results, 0 errors",
+      "2026-08-30 14:22:39 | INFO     | [Worker_9222] Shutdown signal received, exiting...",
+      "2026-08-30 14:22:39 | INFO     | [Worker_9222] Finished. Processed 3 groups."
     ],
-    "file": "9222.log",
-    "total_lines": 3
+    "file": "LF_DMM-CAI_20260830_142029.log",
+    "total_lines": 68
   },
   "flight_booking_data": {
     "flights": [
+      {
+        "flight": "SM434",
+        "route": "DMM-CAI",
+        "date": "Monday, August 31, 2026",
+        "lst_sold": "2026-08-29 00:00:00",
+        "to_day": 0,
+        "y_day": 4,
+        "weekly": 16,
+        "lowest_avail": "O9",
+        "lf_percent": 73.7,
+        "capacity": 175,
+        "booked": 129,
+        "extracted_at": "2026-08-30T14:21:41.950435"
+      },
+      {
+        "flight": "SM440",
+        "route": "DMM-CAI",
+        "date": "Monday, August 31, 2026",
+        "lst_sold": "2026-08-30 00:00:00",
+        "to_day": 3,
+        "y_day": 5,
+        "weekly": 18,
+        "lowest_avail": "I9",
+        "lf_percent": 60.0,
+        "capacity": 175,
+        "booked": 105,
+        "extracted_at": "2026-08-30T14:21:37.533079"
+      },
       {
         "flight": "SM433",
         "route": "CAI-DMM",
@@ -195,25 +240,11 @@
         "to_day": 0,
         "y_day": 0,
         "weekly": 0,
-        "lowest_avail": "H9",
-        "lf_percent": 89.9,
+        "lowest_avail": "H8",
+        "lf_percent": 91.1,
         "capacity": 179,
-        "booked": 161,
-        "extracted_at": "2026-08-30T09:47:47.412619"
-      },
-      {
-        "flight": "SM434",
-        "route": "DMM-CAI",
-        "date": "Sunday, September 20, 2026",
-        "lst_sold": "NIL",
-        "to_day": 0,
-        "y_day": 0,
-        "weekly": 0,
-        "lowest_avail": "O5",
-        "lf_percent": 24.0,
-        "capacity": 175,
-        "booked": 42,
-        "extracted_at": "2026-08-30T09:47:45.480523"
+        "booked": 163,
+        "extracted_at": "2026-08-30T14:21:34.222003"
       },
       {
         "flight": "SM433",
@@ -227,49 +258,21 @@
         "lf_percent": 62.0,
         "capacity": 179,
         "booked": 111,
-        "extracted_at": "2026-08-30T09:47:41.484458"
+        "extracted_at": "2026-08-30T14:21:28.762300"
       },
       {
         "flight": "SM434",
         "route": "DMM-CAI",
-        "date": "Monday, September 21, 2026",
-        "lst_sold": "2026-08-30 00:00:00",
-        "to_day": 3,
-        "y_day": 1,
-        "weekly": 6,
-        "lowest_avail": "O6",
-        "lf_percent": 22.3,
-        "capacity": 175,
-        "booked": 39,
-        "extracted_at": "2026-08-30T09:47:40.879359"
-      },
-      {
-        "flight": "SM434",
-        "route": "DMM-CAI",
-        "date": "Monday, August 31, 2026",
-        "lst_sold": "2026-08-29 00:00:00",
-        "to_day": 0,
-        "y_day": 4,
-        "weekly": 16,
-        "lowest_avail": "O9",
-        "lf_percent": 73.7,
-        "capacity": 175,
-        "booked": 129,
-        "extracted_at": "2026-08-30T09:47:39.205486"
-      },
-      {
-        "flight": "SM440",
-        "route": "DMM-CAI",
-        "date": "Monday, September 21, 2026",
-        "lst_sold": "2026-08-28 00:00:00",
+        "date": "Tuesday, September 01, 2026",
+        "lst_sold": "NIL",
         "to_day": 0,
         "y_day": 0,
-        "weekly": 11,
-        "lowest_avail": "O9",
-        "lf_percent": 19.4,
+        "weekly": 0,
+        "lowest_avail": "I9",
+        "lf_percent": 48.0,
         "capacity": 175,
-        "booked": 34,
-        "extracted_at": "2026-08-30T09:47:38.381337"
+        "booked": 84,
+        "extracted_at": "2026-08-30T14:21:24.336701"
       },
       {
         "flight": "SM433",
@@ -279,25 +282,25 @@
         "to_day": 0,
         "y_day": 0,
         "weekly": 0,
-        "lowest_avail": "K1",
-        "lf_percent": 46.9,
+        "lowest_avail": "Q9",
+        "lf_percent": 47.5,
         "capacity": 179,
-        "booked": 84,
-        "extracted_at": "2026-08-30T09:47:36.072496"
+        "booked": 85,
+        "extracted_at": "2026-08-30T14:21:23.753365"
       },
       {
-        "flight": "SM440",
+        "flight": "SM434",
         "route": "DMM-CAI",
-        "date": "Monday, August 31, 2026",
-        "lst_sold": "2026-08-29 00:00:00",
+        "date": "Wednesday, September 02, 2026",
+        "lst_sold": "NIL",
         "to_day": 0,
-        "y_day": 5,
-        "weekly": 15,
+        "y_day": 0,
+        "weekly": 0,
         "lowest_avail": "I9",
-        "lf_percent": 58.3,
+        "lf_percent": 22.9,
         "capacity": 175,
-        "booked": 102,
-        "extracted_at": "2026-08-30T09:47:34.842997"
+        "booked": 40,
+        "extracted_at": "2026-08-30T14:21:19.412745"
       },
       {
         "flight": "SM433",
@@ -307,11 +310,11 @@
         "to_day": 0,
         "y_day": 0,
         "weekly": 0,
-        "lowest_avail": "Q5",
-        "lf_percent": 43.6,
+        "lowest_avail": "Q3",
+        "lf_percent": 44.7,
         "capacity": 179,
-        "booked": 78,
-        "extracted_at": "2026-08-30T09:47:30.856086"
+        "booked": 80,
+        "extracted_at": "2026-08-30T14:21:18.780670"
       },
       {
         "flight": "SM440",
@@ -325,35 +328,7 @@
         "lf_percent": 37.7,
         "capacity": 175,
         "booked": 66,
-        "extracted_at": "2026-08-30T09:47:29.482731"
-      },
-      {
-        "flight": "SM434",
-        "route": "DMM-CAI",
-        "date": "Tuesday, September 22, 2026",
-        "lst_sold": "2026-08-29 00:00:00",
-        "to_day": 0,
-        "y_day": 2,
-        "weekly": 23,
-        "lowest_avail": "W3",
-        "lf_percent": 42.3,
-        "capacity": 175,
-        "booked": 74,
-        "extracted_at": "2026-08-30T09:47:28.335982"
-      },
-      {
-        "flight": "SM434",
-        "route": "DMM-CAI",
-        "date": "Friday, September 11, 2026",
-        "lst_sold": "2026-08-25 00:00:00",
-        "to_day": 0,
-        "y_day": 0,
-        "weekly": 4,
-        "lowest_avail": "U9",
-        "lf_percent": 18.9,
-        "capacity": 175,
-        "booked": 33,
-        "extracted_at": "2026-08-30T09:47:25.881227"
+        "extracted_at": "2026-08-30T14:21:17.592012"
       },
       {
         "flight": "SM439",
@@ -367,91 +342,63 @@
         "lf_percent": 38.0,
         "capacity": 179,
         "booked": 68,
-        "extracted_at": "2026-08-30T09:47:25.842914"
+        "extracted_at": "2026-08-30T14:21:13.985324"
       },
       {
-        "flight": "SM439",
-        "route": "CAI-DMM",
+        "flight": "SM434",
+        "route": "DMM-CAI",
+        "date": "Friday, September 11, 2026",
+        "lst_sold": "2026-08-25 00:00:00",
+        "to_day": 0,
+        "y_day": 0,
+        "weekly": 4,
+        "lowest_avail": "U9",
+        "lf_percent": 18.9,
+        "capacity": 175,
+        "booked": 33,
+        "extracted_at": "2026-08-30T14:21:13.880900"
+      },
+      {
+        "flight": "SM440",
+        "route": "DMM-CAI",
+        "date": "Friday, September 04, 2026",
+        "lst_sold": "2026-08-28 00:00:00",
+        "to_day": 0,
+        "y_day": 0,
+        "weekly": 20,
+        "lowest_avail": "O9",
+        "lf_percent": 40.6,
+        "capacity": 175,
+        "booked": 71,
+        "extracted_at": "2026-08-30T14:21:13.761267"
+      },
+      {
+        "flight": "SM434",
+        "route": "DMM-CAI",
         "date": "Sunday, September 20, 2026",
         "lst_sold": "NIL",
         "to_day": 0,
         "y_day": 0,
         "weekly": 0,
-        "lowest_avail": "S9",
-        "lf_percent": 22.9,
-        "capacity": 179,
-        "booked": 41,
-        "extracted_at": "2026-08-30T09:47:22.759235"
-      },
-      {
-        "flight": "SM434",
-        "route": "DMM-CAI",
-        "date": "Tuesday, September 01, 2026",
-        "lst_sold": "NIL",
-        "to_day": 0,
-        "y_day": 0,
-        "weekly": 0,
-        "lowest_avail": "U9",
-        "lf_percent": 48.0,
+        "lowest_avail": "O5",
+        "lf_percent": 24.0,
         "capacity": 175,
-        "booked": 84,
-        "extracted_at": "2026-08-30T09:47:21.814411"
-      },
-      {
-        "flight": "SM437",
-        "route": "HMB-DMM",
-        "date": "Monday, August 31, 2026",
-        "lst_sold": "NIL",
-        "to_day": 0,
-        "y_day": 0,
-        "weekly": 0,
-        "lowest_avail": "B3",
-        "lf_percent": 86.7,
-        "capacity": 180,
-        "booked": 156,
-        "extracted_at": "2026-08-30T09:47:21.082914"
-      },
-      {
-        "flight": "SM433",
-        "route": "CAI-DMM",
-        "date": "Saturday, September 05, 2026",
-        "lst_sold": "NIL",
-        "to_day": 0,
-        "y_day": 0,
-        "weekly": 0,
-        "lowest_avail": "H9",
-        "lf_percent": 44.1,
-        "capacity": 179,
-        "booked": 79,
-        "extracted_at": "2026-08-30T09:47:20.679430"
+        "booked": 42,
+        "extracted_at": "2026-08-30T14:21:12.405253"
       },
       {
         "flight": "SM434",
         "route": "DMM-CAI",
-        "date": "Wednesday, September 23, 2026",
+        "date": "Friday, September 04, 2026",
         "lst_sold": "2026-08-30 00:00:00",
-        "to_day": 6,
-        "y_day": 1,
-        "weekly": 24,
-        "lowest_avail": "X2",
-        "lf_percent": 41.1,
-        "capacity": 175,
-        "booked": 72,
-        "extracted_at": "2026-08-30T09:47:18.155574"
-      },
-      {
-        "flight": "SM433",
-        "route": "CAI-DMM",
-        "date": "Monday, September 21, 2026",
-        "lst_sold": "NIL",
-        "to_day": 0,
+        "to_day": 1,
         "y_day": 0,
-        "weekly": 0,
-        "lowest_avail": "S6",
-        "lf_percent": 21.8,
-        "capacity": 179,
-        "booked": 39,
-        "extracted_at": "2026-08-30T09:47:17.863669"
+        "weekly": 12,
+        "lowest_avail": "U4",
+        "lf_percent": 37.7,
+        "capacity": 175,
+        "booked": 66,
+        "extracted_at": "2026-08-30T14:21:10.055204"
       },
       {
         "flight": "SM433",
@@ -465,17 +412,87 @@
         "lf_percent": 35.2,
         "capacity": 179,
         "booked": 63,
-        "extracted_at": "2026-08-30T09:47:16.990114"
+        "extracted_at": "2026-08-30T14:21:09.426673"
+      },
+      {
+        "flight": "SM433",
+        "route": "CAI-DMM",
+        "date": "Saturday, September 05, 2026",
+        "lst_sold": "NIL",
+        "to_day": 0,
+        "y_day": 0,
+        "weekly": 0,
+        "lowest_avail": "H9",
+        "lf_percent": 44.7,
+        "capacity": 179,
+        "booked": 80,
+        "extracted_at": "2026-08-30T14:21:09.055235"
+      },
+      {
+        "flight": "SM437",
+        "route": "HMB-DMM",
+        "date": "Monday, August 31, 2026",
+        "lst_sold": "NIL",
+        "to_day": 0,
+        "y_day": 0,
+        "weekly": 0,
+        "lowest_avail": "B3",
+        "lf_percent": 86.7,
+        "capacity": 180,
+        "booked": 156,
+        "extracted_at": "2026-08-30T14:21:08.742846"
+      },
+      {
+        "flight": "SM434",
+        "route": "DMM-CAI",
+        "date": "Monday, September 21, 2026",
+        "lst_sold": "2026-08-30 00:00:00",
+        "to_day": 2,
+        "y_day": 1,
+        "weekly": 5,
+        "lowest_avail": "O7",
+        "lf_percent": 21.7,
+        "capacity": 175,
+        "booked": 38,
+        "extracted_at": "2026-08-30T14:21:07.669689"
+      },
+      {
+        "flight": "SM439",
+        "route": "CAI-DMM",
+        "date": "Sunday, September 20, 2026",
+        "lst_sold": "NIL",
+        "to_day": 0,
+        "y_day": 0,
+        "weekly": 0,
+        "lowest_avail": "S9",
+        "lf_percent": 22.9,
+        "capacity": 179,
+        "booked": 41,
+        "extracted_at": "2026-08-30T14:21:05.942737"
+      },
+      {
+        "flight": "SM438",
+        "route": "DMM-HMB",
+        "date": "Monday, August 31, 2026",
+        "lst_sold": "NIL",
+        "to_day": 0,
+        "y_day": 0,
+        "weekly": 0,
+        "lowest_avail": "O9",
+        "lf_percent": 92.6,
+        "capacity": 175,
+        "booked": 162,
+        "extracted_at": "2026-08-30T14:21:05.891327"
       }
     ],
-    "updated_at": "2026-08-30T09:47:47.412627",
-    "total_extracted": 81
+    "updated_at": "2026-08-30T14:21:41.950445",
+    "total_extracted": 148
   },
   "validation": {
-    "timestamp": "2026-08-30T09:48:30.451199",
+    "timestamp": "2026-08-30T14:23:16.810499",
     "passed": true,
     "routes_checked": 4,
-    "dates_expected": 31,
+    "dates_expected": 62,
     "required_missing_count": 0,
     "required_route_date_count": 0,
     "intentional_exclusion_count": 0,
@@ -483,7 +500,7 @@
       "status": "success",
       "required_missing_count": 0,
       "required_missing": [],
-      "valid_empty_no_service_count": 52,
+      "valid_empty_no_service_count": 109,
       "intentional_exclusion_count": 0,
       "intentional_exclusions": []
     },
