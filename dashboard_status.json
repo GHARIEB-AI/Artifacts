@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-08-30T14:23:54.221249",
-  "status": "COMPLETED",
-  "phase": "COMPLETED",
+  "timestamp": "2026-08-31T10:56:04.969495",
+  "status": "FAILED",
+  "phase": "FAILED",
   "running": false,
   "active_workers": 0,
   "active_workers_known": true,
@@ -14,15 +14,15 @@
   "last_activity_at": null,
   "paths": {
     "outputs_root": "D:\\CODERED\\LAB\\Artifacts",
-    "active_output_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_300826_at_14.18",
-    "active_checkpoint_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_300826_at_14.18\\checkpoints",
-    "active_logs_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_300826_at_14.18\\logs",
+    "active_output_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_310826_at_10.48",
+    "active_checkpoint_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_310826_at_10.48\\checkpoints",
+    "active_logs_dir": "D:\\CODERED\\LAB\\Artifacts\\outputs\\run_generated_310826_at_10.48\\logs",
     "backend": "sqlite"
   },
   "config": {
-    "run_id": "20260830_141918",
+    "run_id": "20260831_104841",
     "mode": "LF_OAL",
-    "started_at": "2026-08-30T14:19:18.403323",
+    "started_at": "2026-08-31T10:48:41.461118",
     "routes": [
       "DMM-CAI",
       "DMM-HMB",
@@ -56,15 +56,15 @@
     "oal_total_passes": 2,
     "oal_routes_completed": 4,
     "oal_routes_total": 4,
-    "excel": 100.0,
-    "overall": 100.0,
-    "run_completed": true,
+    "excel": 75.0,
+    "overall": 87.5,
+    "run_completed": false,
     "finalizing": false,
-    "phase": "COMPLETED",
+    "phase": "FAILED",
     "local_build_state": "LOCAL_BUILD_SUCCEEDED",
     "docx_state": "DOCX_SUCCEEDED",
-    "archive_state": "ARCHIVE_SUCCEEDED",
-    "main_publish_state": "MAIN_PUBLISH_SUCCEEDED"
+    "archive_state": "ARCHIVE_PENDING",
+    "main_publish_state": "MAIN_PUBLISH_PENDING"
   },
   "tasks": {
     "total": 24,
@@ -148,9 +148,9 @@
   },
   "running_tasks": [],
   "excel_files": [
-    "EGY_TO_KSA_31AUG26_TO_31OCT26_generated_at_30aug_14.19.xlsx",
-    "KSA_TO_EGY_31AUG26_TO_31OCT26_generated_at_30aug_14.19.xlsx",
-    "LOAD_FACTOR_SUMMARY_30-08-26_TO_30-AUG-26_generated_at_30aug_14.23.xlsx"
+    "EGY_TO_KSA_31AUG26_TO_31OCT26_generated_at_31aug_10.48.xlsx",
+    "KSA_TO_EGY_31AUG26_TO_31OCT26_generated_at_31aug_10.48.xlsx",
+    "LOAD_FACTOR_SUMMARY_31-08-26_TO_31-AUG-26_generated_at_31aug_10.55.xlsx"
   ],
   "excel_count": 3,
   "speed_metrics": {
@@ -178,129 +178,87 @@
   },
   "live_logs": {
     "lines": [
-      "2026-08-30 14:21:16 | INFO     | [lf.day.flights_found] Found 1 flights on 02SEP",
-      "2026-08-30 14:21:17 | INFO     | [lf.flight.extracted] SM434 on 02SEP: BKG=40, LF=22.9%",
-      "2026-08-30 14:21:19 | WARNING  | [LF][PAGINATION-WARN] context=LP/L flight=SM434 date=02SEP reason=missing_terminal_marker pages_retained=1 day_resync=false data_complete=false",
-      "2026-08-30 14:21:19 | INFO     | [SUCCESS] Day 02SEP",
-      "2026-08-30 14:21:19 | INFO     | [DAY_START] Processing 01SEP",
-      "2026-08-30 14:21:19 | INFO     | [lf.day.start] Processing DMM-CAI for 01SEP",
-      "2026-08-30 14:21:20 | INFO     | [lf.day.flights_found] Found 1 flights on 01SEP",
-      "2026-08-30 14:21:22 | INFO     | [lf.flight.extracted] SM434 on 01SEP: BKG=84, LF=48.0%",
-      "2026-08-30 14:21:24 | WARNING  | [LF][PAGINATION-WARN] context=LP/L flight=SM434 date=01SEP reason=missing_terminal_marker pages_retained=1 day_resync=false data_complete=false",
-      "2026-08-30 14:21:24 | INFO     | [SUCCESS] Day 01SEP",
-      "2026-08-30 14:21:24 | INFO     | [DAY_START] Processing 31AUG",
-      "2026-08-30 14:21:24 | INFO     | [lf.day.start] Processing DMM-CAI for 31AUG",
-      "2026-08-30 14:21:26 | INFO     | [lf.day.flights_found] Found 2 flights on 31AUG",
-      "2026-08-30 14:21:27 | INFO     | [lf.flight.extracted] SM440 on 31AUG: BKG=105, LF=60.0%",
-      "2026-08-30 14:21:31 | INFO     | [lf.flight.extracted] SM434 on 31AUG: BKG=129, LF=73.7%",
-      "2026-08-30 14:21:42 | INFO     | [SUCCESS] Day 31AUG",
-      "2026-08-30 14:21:42 | INFO     | [SUCCESS] LF Search Complete",
-      "2026-08-30 14:21:44 | INFO     | [Worker_9222] Completed: DMM-CAI - 10 results, 0 errors",
-      "2026-08-30 14:22:39 | INFO     | [Worker_9222] Shutdown signal received, exiting...",
-      "2026-08-30 14:22:39 | INFO     | [Worker_9222] Finished. Processed 3 groups."
+      "2026-08-31 10:50:34 | WARNING  | [LF][PAGINATION-WARN] context=LP/L flight=SM433 date=12SEP reason=missing_terminal_marker pages_retained=1 day_resync=false data_complete=false",
+      "2026-08-31 10:50:34 | INFO     | [SUCCESS] Day 12SEP",
+      "2026-08-31 10:50:34 | INFO     | [DAY_START] Processing 11SEP",
+      "2026-08-31 10:50:34 | INFO     | [lf.day.start] Processing CAI-DMM for 11SEP",
+      "2026-08-31 10:50:36 | INFO     | [lf.day.flights_found] Found 1 flights on 11SEP",
+      "2026-08-31 10:50:38 | WARNING  | [LF][RBD-INTEGRITY] context=LL/I flight=SM439 date=11SEP section_present=true bkg=52 page1_class_sum=0 page2_requested=true page2_received=true union_class_sum=0 classes_status=incomplete reason=class_total_mismatch_after_pagination",
+      "2026-08-31 10:50:38 | INFO     | [lf.flight.extracted] SM439 on 11SEP: BKG=52, LF=29.0%",
+      "2026-08-31 10:50:40 | WARNING  | [LF][PAGINATION-WARN] context=LP/L flight=SM439 date=11SEP reason=missing_terminal_marker pages_retained=1 day_resync=false data_complete=false",
+      "2026-08-31 10:50:40 | INFO     | [SUCCESS] Day 11SEP",
+      "2026-08-31 10:50:40 | INFO     | [DAY_START] Processing 10SEP",
+      "2026-08-31 10:50:40 | INFO     | [lf.day.start] Processing CAI-DMM for 10SEP",
+      "2026-08-31 10:50:42 | INFO     | [lf.day.flights_found] Found 1 flights on 10SEP",
+      "2026-08-31 10:50:43 | WARNING  | [LF][RBD-INTEGRITY] context=LL/I flight=SM433 date=10SEP section_present=true bkg=62 page1_class_sum=0 page2_requested=true page2_received=true union_class_sum=0 classes_status=incomplete reason=class_total_mismatch_after_pagination",
+      "2026-08-31 10:50:43 | INFO     | [lf.flight.extracted] SM433 on 10SEP: BKG=62, LF=34.6%",
+      "2026-08-31 10:50:45 | WARNING  | [LF][PAGINATION-WARN] context=LP/L flight=SM433 date=10SEP reason=missing_terminal_marker pages_retained=1 day_resync=false data_complete=false",
+      "2026-08-31 10:50:46 | INFO     | [SUCCESS] Day 10SEP",
+      "2026-08-31 10:50:46 | INFO     | [SUCCESS] LF Search Complete",
+      "2026-08-31 10:50:48 | INFO     | [Worker_9232] Completed: CAI-DMM - 10 results, 0 errors",
+      "2026-08-31 10:55:08 | INFO     | [Worker_9232] Shutdown signal received, exiting...",
+      "2026-08-31 10:55:08 | INFO     | [Worker_9232] Finished. Processed 2 groups."
     ],
-    "file": "LF_DMM-CAI_20260830_142029.log",
-    "total_lines": 68
+    "file": "LF_CAI-DMM_20260831_104948.log",
+    "total_lines": 82
   },
   "flight_booking_data": {
     "flights": [
       {
+        "flight": "SM433",
+        "route": "CAI-DMM",
+        "date": "Tuesday, September 01, 2026",
+        "lst_sold": "NIL",
+        "to_day": 0,
+        "y_day": 0,
+        "weekly": 0,
+        "lowest_avail": "K4",
+        "lf_percent": 72.1,
+        "capacity": 179,
+        "booked": 129,
+        "extracted_at": "2026-08-31T10:51:05.567255"
+      },
+      {
+        "flight": "SM433",
+        "route": "CAI-DMM",
+        "date": "Wednesday, September 02, 2026",
+        "lst_sold": "NIL",
+        "to_day": 0,
+        "y_day": 0,
+        "weekly": 0,
+        "lowest_avail": "K9",
+        "lf_percent": 48.0,
+        "capacity": 179,
+        "booked": 86,
+        "extracted_at": "2026-08-31T10:51:00.276373"
+      },
+      {
         "flight": "SM434",
         "route": "DMM-CAI",
-        "date": "Monday, August 31, 2026",
-        "lst_sold": "2026-08-29 00:00:00",
+        "date": "Tuesday, September 01, 2026",
+        "lst_sold": "NIL",
         "to_day": 0,
-        "y_day": 4,
-        "weekly": 16,
-        "lowest_avail": "O9",
-        "lf_percent": 73.7,
+        "y_day": 0,
+        "weekly": 0,
+        "lowest_avail": "I9",
+        "lf_percent": 48.6,
         "capacity": 175,
-        "booked": 129,
-        "extracted_at": "2026-08-30T14:21:41.950435"
+        "booked": 85,
+        "extracted_at": "2026-08-31T10:50:58.467571"
       },
       {
         "flight": "SM440",
         "route": "DMM-CAI",
-        "date": "Monday, August 31, 2026",
-        "lst_sold": "2026-08-30 00:00:00",
-        "to_day": 3,
-        "y_day": 5,
-        "weekly": 18,
-        "lowest_avail": "I9",
-        "lf_percent": 60.0,
+        "date": "Friday, September 11, 2026",
+        "lst_sold": "2026-08-29 00:00:00",
+        "to_day": 0,
+        "y_day": 0,
+        "weekly": 1,
+        "lowest_avail": "T9",
+        "lf_percent": 37.7,
         "capacity": 175,
-        "booked": 105,
-        "extracted_at": "2026-08-30T14:21:37.533079"
-      },
-      {
-        "flight": "SM433",
-        "route": "CAI-DMM",
-        "date": "Monday, August 31, 2026",
-        "lst_sold": "NIL",
-        "to_day": 0,
-        "y_day": 0,
-        "weekly": 0,
-        "lowest_avail": "H8",
-        "lf_percent": 91.1,
-        "capacity": 179,
-        "booked": 163,
-        "extracted_at": "2026-08-30T14:21:34.222003"
-      },
-      {
-        "flight": "SM433",
-        "route": "CAI-DMM",
-        "date": "Tuesday, September 01, 2026",
-        "lst_sold": "NIL",
-        "to_day": 0,
-        "y_day": 0,
-        "weekly": 0,
-        "lowest_avail": "H9",
-        "lf_percent": 62.0,
-        "capacity": 179,
-        "booked": 111,
-        "extracted_at": "2026-08-30T14:21:28.762300"
-      },
-      {
-        "flight": "SM434",
-        "route": "DMM-CAI",
-        "date": "Tuesday, September 01, 2026",
-        "lst_sold": "NIL",
-        "to_day": 0,
-        "y_day": 0,
-        "weekly": 0,
-        "lowest_avail": "I9",
-        "lf_percent": 48.0,
-        "capacity": 175,
-        "booked": 84,
-        "extracted_at": "2026-08-30T14:21:24.336701"
-      },
-      {
-        "flight": "SM433",
-        "route": "CAI-DMM",
-        "date": "Wednesday, September 02, 2026",
-        "lst_sold": "NIL",
-        "to_day": 0,
-        "y_day": 0,
-        "weekly": 0,
-        "lowest_avail": "Q9",
-        "lf_percent": 47.5,
-        "capacity": 179,
-        "booked": 85,
-        "extracted_at": "2026-08-30T14:21:23.753365"
-      },
-      {
-        "flight": "SM434",
-        "route": "DMM-CAI",
-        "date": "Wednesday, September 02, 2026",
-        "lst_sold": "NIL",
-        "to_day": 0,
-        "y_day": 0,
-        "weekly": 0,
-        "lowest_avail": "I9",
-        "lf_percent": 22.9,
-        "capacity": 175,
-        "booked": 40,
-        "extracted_at": "2026-08-30T14:21:19.412745"
+        "booked": 66,
+        "extracted_at": "2026-08-31T10:50:58.153574"
       },
       {
         "flight": "SM433",
@@ -310,67 +268,25 @@
         "to_day": 0,
         "y_day": 0,
         "weekly": 0,
-        "lowest_avail": "Q3",
-        "lf_percent": 44.7,
+        "lowest_avail": "K9",
+        "lf_percent": 46.4,
         "capacity": 179,
-        "booked": 80,
-        "extracted_at": "2026-08-30T14:21:18.780670"
-      },
-      {
-        "flight": "SM440",
-        "route": "DMM-CAI",
-        "date": "Friday, September 11, 2026",
-        "lst_sold": "2026-08-29 00:00:00",
-        "to_day": 0,
-        "y_day": 1,
-        "weekly": 1,
-        "lowest_avail": "T9",
-        "lf_percent": 37.7,
-        "capacity": 175,
-        "booked": 66,
-        "extracted_at": "2026-08-30T14:21:17.592012"
-      },
-      {
-        "flight": "SM439",
-        "route": "CAI-DMM",
-        "date": "Friday, September 04, 2026",
-        "lst_sold": "NIL",
-        "to_day": 0,
-        "y_day": 0,
-        "weekly": 0,
-        "lowest_avail": "Q2",
-        "lf_percent": 38.0,
-        "capacity": 179,
-        "booked": 68,
-        "extracted_at": "2026-08-30T14:21:13.985324"
+        "booked": 83,
+        "extracted_at": "2026-08-31T10:50:55.050000"
       },
       {
         "flight": "SM434",
         "route": "DMM-CAI",
         "date": "Friday, September 11, 2026",
-        "lst_sold": "2026-08-25 00:00:00",
-        "to_day": 0,
-        "y_day": 0,
-        "weekly": 4,
-        "lowest_avail": "U9",
-        "lf_percent": 18.9,
+        "lst_sold": "2026-08-31 00:00:00",
+        "to_day": 4,
+        "y_day": 5,
+        "weekly": 12,
+        "lowest_avail": "U2",
+        "lf_percent": 24.0,
         "capacity": 175,
-        "booked": 33,
-        "extracted_at": "2026-08-30T14:21:13.880900"
-      },
-      {
-        "flight": "SM440",
-        "route": "DMM-CAI",
-        "date": "Friday, September 04, 2026",
-        "lst_sold": "2026-08-28 00:00:00",
-        "to_day": 0,
-        "y_day": 0,
-        "weekly": 20,
-        "lowest_avail": "O9",
-        "lf_percent": 40.6,
-        "capacity": 175,
-        "booked": 71,
-        "extracted_at": "2026-08-30T14:21:13.761267"
+        "booked": 42,
+        "extracted_at": "2026-08-31T10:50:54.240664"
       },
       {
         "flight": "SM434",
@@ -384,21 +300,63 @@
         "lf_percent": 24.0,
         "capacity": 175,
         "booked": 42,
-        "extracted_at": "2026-08-30T14:21:12.405253"
+        "extracted_at": "2026-08-31T10:50:53.572458"
       },
       {
         "flight": "SM434",
         "route": "DMM-CAI",
-        "date": "Friday, September 04, 2026",
-        "lst_sold": "2026-08-30 00:00:00",
-        "to_day": 1,
+        "date": "Wednesday, September 02, 2026",
+        "lst_sold": "NIL",
+        "to_day": 0,
         "y_day": 0,
-        "weekly": 12,
-        "lowest_avail": "U4",
-        "lf_percent": 37.7,
+        "weekly": 0,
+        "lowest_avail": "I9",
+        "lf_percent": 24.6,
         "capacity": 175,
-        "booked": 66,
-        "extracted_at": "2026-08-30T14:21:10.055204"
+        "booked": 43,
+        "extracted_at": "2026-08-31T10:50:52.999293"
+      },
+      {
+        "flight": "SM439",
+        "route": "CAI-DMM",
+        "date": "Friday, September 04, 2026",
+        "lst_sold": "NIL",
+        "to_day": 0,
+        "y_day": 0,
+        "weekly": 0,
+        "lowest_avail": "Q2",
+        "lf_percent": 38.0,
+        "capacity": 179,
+        "booked": 68,
+        "extracted_at": "2026-08-31T10:50:49.769581"
+      },
+      {
+        "flight": "SM434",
+        "route": "DMM-CAI",
+        "date": "Monday, September 21, 2026",
+        "lst_sold": "2026-08-30 00:00:00",
+        "to_day": 0,
+        "y_day": 3,
+        "weekly": 6,
+        "lowest_avail": "O6",
+        "lf_percent": 22.3,
+        "capacity": 175,
+        "booked": 39,
+        "extracted_at": "2026-08-31T10:50:47.544682"
+      },
+      {
+        "flight": "SM440",
+        "route": "DMM-CAI",
+        "date": "Friday, September 04, 2026",
+        "lst_sold": "2026-08-31 00:00:00",
+        "to_day": 2,
+        "y_day": 11,
+        "weekly": 23,
+        "lowest_avail": "O9",
+        "lf_percent": 48.0,
+        "capacity": 175,
+        "booked": 84,
+        "extracted_at": "2026-08-31T10:50:46.350344"
       },
       {
         "flight": "SM433",
@@ -408,11 +366,25 @@
         "to_day": 0,
         "y_day": 0,
         "weekly": 0,
-        "lowest_avail": "K9",
-        "lf_percent": 35.2,
+        "lowest_avail": "V1",
+        "lf_percent": 34.6,
         "capacity": 179,
-        "booked": 63,
-        "extracted_at": "2026-08-30T14:21:09.426673"
+        "booked": 62,
+        "extracted_at": "2026-08-31T10:50:45.982001"
+      },
+      {
+        "flight": "SM440",
+        "route": "DMM-CAI",
+        "date": "Monday, September 21, 2026",
+        "lst_sold": "2026-08-30 00:00:00",
+        "to_day": 0,
+        "y_day": 2,
+        "weekly": 12,
+        "lowest_avail": "O9",
+        "lf_percent": 20.6,
+        "capacity": 175,
+        "booked": 36,
+        "extracted_at": "2026-08-31T10:50:44.753537"
       },
       {
         "flight": "SM433",
@@ -426,35 +398,49 @@
         "lf_percent": 44.7,
         "capacity": 179,
         "booked": 80,
-        "extracted_at": "2026-08-30T14:21:09.055235"
-      },
-      {
-        "flight": "SM437",
-        "route": "HMB-DMM",
-        "date": "Monday, August 31, 2026",
-        "lst_sold": "NIL",
-        "to_day": 0,
-        "y_day": 0,
-        "weekly": 0,
-        "lowest_avail": "B3",
-        "lf_percent": 86.7,
-        "capacity": 180,
-        "booked": 156,
-        "extracted_at": "2026-08-30T14:21:08.742846"
+        "extracted_at": "2026-08-31T10:50:44.407463"
       },
       {
         "flight": "SM434",
         "route": "DMM-CAI",
-        "date": "Monday, September 21, 2026",
+        "date": "Friday, September 04, 2026",
         "lst_sold": "2026-08-30 00:00:00",
-        "to_day": 2,
+        "to_day": 0,
         "y_day": 1,
-        "weekly": 5,
-        "lowest_avail": "O7",
-        "lf_percent": 21.7,
+        "weekly": 11,
+        "lowest_avail": "U4",
+        "lf_percent": 37.7,
         "capacity": 175,
-        "booked": 38,
-        "extracted_at": "2026-08-30T14:21:07.669689"
+        "booked": 66,
+        "extracted_at": "2026-08-31T10:50:42.207538"
+      },
+      {
+        "flight": "SM434",
+        "route": "DMM-CAI",
+        "date": "Sunday, September 13, 2026",
+        "lst_sold": "NIL",
+        "to_day": 0,
+        "y_day": 0,
+        "weekly": 0,
+        "lowest_avail": "O9",
+        "lf_percent": 17.7,
+        "capacity": 175,
+        "booked": 31,
+        "extracted_at": "2026-08-31T10:50:40.753550"
+      },
+      {
+        "flight": "SM439",
+        "route": "CAI-DMM",
+        "date": "Friday, September 11, 2026",
+        "lst_sold": "NIL",
+        "to_day": 0,
+        "y_day": 0,
+        "weekly": 0,
+        "lowest_avail": "K8",
+        "lf_percent": 29.0,
+        "capacity": 179,
+        "booked": 52,
+        "extracted_at": "2026-08-31T10:50:40.642476"
       },
       {
         "flight": "SM439",
@@ -465,42 +451,1419 @@
         "y_day": 0,
         "weekly": 0,
         "lowest_avail": "S9",
-        "lf_percent": 22.9,
+        "lf_percent": 23.5,
         "capacity": 179,
-        "booked": 41,
-        "extracted_at": "2026-08-30T14:21:05.942737"
+        "booked": 42,
+        "extracted_at": "2026-08-31T10:50:39.804406"
       },
       {
-        "flight": "SM438",
-        "route": "DMM-HMB",
-        "date": "Monday, August 31, 2026",
+        "flight": "SM439",
+        "route": "CAI-DMM",
+        "date": "Sunday, September 06, 2026",
         "lst_sold": "NIL",
         "to_day": 0,
         "y_day": 0,
         "weekly": 0,
-        "lowest_avail": "O9",
-        "lf_percent": 92.6,
-        "capacity": 175,
-        "booked": 162,
-        "extracted_at": "2026-08-30T14:21:05.891327"
+        "lowest_avail": "V9",
+        "lf_percent": 46.9,
+        "capacity": 179,
+        "booked": 84,
+        "extracted_at": "2026-08-31T10:50:39.057657"
+      },
+      {
+        "flight": "SM434",
+        "route": "DMM-CAI",
+        "date": "Monday, September 14, 2026",
+        "lst_sold": "2026-08-27 00:00:00",
+        "to_day": 0,
+        "y_day": 0,
+        "weekly": 7,
+        "lowest_avail": "U9",
+        "lf_percent": 23.9,
+        "capacity": 167,
+        "booked": 40,
+        "extracted_at": "2026-08-31T10:50:34.988931"
       }
     ],
-    "updated_at": "2026-08-30T14:21:41.950445",
-    "total_extracted": 148
+    "updated_at": "2026-08-31T10:51:05.567263",
+    "total_extracted": 145
   },
   "validation": {
-    "timestamp": "2026-08-30T14:23:16.810499",
-    "passed": true,
+    "timestamp": "2026-08-31T10:55:59.518458",
+    "passed": false,
     "routes_checked": 4,
     "dates_expected": 62,
-    "required_missing_count": 0,
-    "required_route_date_count": 0,
+    "required_missing_count": 151,
+    "required_route_date_count": 136,
     "intentional_exclusion_count": 0,
     "lf": {
-      "status": "success",
-      "required_missing_count": 0,
-      "required_missing": [],
+      "status": "incomplete",
+      "required_missing_count": 151,
+      "required_missing": [
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-31",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 31,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-30",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 24,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-29",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 15,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-27",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 19,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-24",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 30,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-23",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM439",
+          "sold": 16,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-22",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 15,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-21",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 14,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-20",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 17,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-19",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 14,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-18",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM439",
+          "sold": 16,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-17",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 23,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-16",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM439",
+          "sold": 18,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-15",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 23,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-14",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 18,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-13",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 21,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-12",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 19,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-11",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM439",
+          "sold": 29,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-10",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 41,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-09",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM439",
+          "sold": 27,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-08",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 30,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-07",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 25,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-06",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 29,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-05",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 35,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-04",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM439",
+          "sold": 33,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-03",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 36,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-02",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM439",
+          "sold": 39,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-10-01",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 49,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-30",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 39,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-29",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 32,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-28",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 40,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-27",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM439",
+          "sold": 42,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-26",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 99,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-25",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM439",
+          "sold": 31,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-24",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 66,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-23",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 35,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-22",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 46,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-21",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 40,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-20",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM439",
+          "sold": 42,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-18",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM439",
+          "sold": 46,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-16",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 47,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-19",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 46,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-17",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 51,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-15",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 49,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-14",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 54,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-12",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 82,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-11",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM439",
+          "sold": 52,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-13",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM439",
+          "sold": 58,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-09",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 77,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-08",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 69,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-10",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 62,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-05",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 80,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-07",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 72,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-06",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM439",
+          "sold": 84,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-04",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM439",
+          "sold": 68,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-03",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 83,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-08-31",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 157,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-02",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 86,
+          "rbd_sum": 0
+        },
+        {
+          "route": "CAI-DMM",
+          "date": "2026-09-01",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM433",
+          "sold": 129,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-10-30",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 6,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-10-29",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 1,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-10-27",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 6,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-10-25",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 3,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-10-09",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 13,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-10-09",
+          "reason": "rbd_total_mismatch",
+          "row_index": 1,
+          "flight": "SM440",
+          "sold": 9,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-10-07",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 7,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-10-06",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 8,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-10-05",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM440",
+          "sold": 5,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-10-05",
+          "reason": "rbd_total_mismatch",
+          "row_index": 1,
+          "flight": "SM434",
+          "sold": 5,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-10-04",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 8,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-10-02",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 31,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-10-02",
+          "reason": "rbd_total_mismatch",
+          "row_index": 1,
+          "flight": "SM440",
+          "sold": 23,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-10-20",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 4,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-10-19",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM440",
+          "sold": 2,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-10-19",
+          "reason": "rbd_total_mismatch",
+          "row_index": 1,
+          "flight": "SM434",
+          "sold": 5,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-10-18",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 1,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-10-16",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 7,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-10-16",
+          "reason": "rbd_total_mismatch",
+          "row_index": 1,
+          "flight": "SM440",
+          "sold": 14,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-10-14",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 5,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-10-13",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 5,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-10-12",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM440",
+          "sold": 1,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-10-12",
+          "reason": "rbd_total_mismatch",
+          "row_index": 1,
+          "flight": "SM434",
+          "sold": 6,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-10-11",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 5,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-30",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 34,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-29",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 23,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-28",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM440",
+          "sold": 12,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-28",
+          "reason": "rbd_total_mismatch",
+          "row_index": 1,
+          "flight": "SM434",
+          "sold": 13,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-27",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 23,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-25",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 30,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-25",
+          "reason": "rbd_total_mismatch",
+          "row_index": 1,
+          "flight": "SM440",
+          "sold": 55,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-23",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 71,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-22",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 83,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-21",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM440",
+          "sold": 36,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-21",
+          "reason": "rbd_total_mismatch",
+          "row_index": 1,
+          "flight": "SM434",
+          "sold": 39,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-20",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 42,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-18",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 47,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-18",
+          "reason": "rbd_total_mismatch",
+          "row_index": 1,
+          "flight": "SM440",
+          "sold": 71,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-16",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 38,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-14",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM440",
+          "sold": 47,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-14",
+          "reason": "rbd_total_mismatch",
+          "row_index": 1,
+          "flight": "SM434",
+          "sold": 40,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-13",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 31,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-15",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 37,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-11",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 42,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-11",
+          "reason": "rbd_total_mismatch",
+          "row_index": 1,
+          "flight": "SM440",
+          "sold": 66,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-09",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 46,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-08",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 46,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-07",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM440",
+          "sold": 42,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-07",
+          "reason": "rbd_total_mismatch",
+          "row_index": 1,
+          "flight": "SM434",
+          "sold": 40,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-06",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 33,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-04",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 66,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-04",
+          "reason": "rbd_total_mismatch",
+          "row_index": 1,
+          "flight": "SM440",
+          "sold": 84,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-08-31",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 143,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-08-31",
+          "reason": "rbd_total_mismatch",
+          "row_index": 1,
+          "flight": "SM440",
+          "sold": 103,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-02",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 43,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-01",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM434",
+          "sold": 85,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-HMB",
+          "date": "2026-10-19",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM438",
+          "sold": 6,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-HMB",
+          "date": "2026-10-16",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM438",
+          "sold": 7,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-HMB",
+          "date": "2026-10-12",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM438",
+          "sold": 7,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-HMB",
+          "date": "2026-10-30",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM438",
+          "sold": 6,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-HMB",
+          "date": "2026-10-26",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM438",
+          "sold": 1,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-HMB",
+          "date": "2026-10-23",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM438",
+          "sold": 2,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-HMB",
+          "date": "2026-10-09",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM438",
+          "sold": 15,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-HMB",
+          "date": "2026-10-05",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM438",
+          "sold": 20,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-HMB",
+          "date": "2026-10-02",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM438",
+          "sold": 34,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-HMB",
+          "date": "2026-09-28",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM438",
+          "sold": 11,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-HMB",
+          "date": "2026-09-25",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM438",
+          "sold": 16,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-HMB",
+          "date": "2026-09-21",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM438",
+          "sold": 37,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-HMB",
+          "date": "2026-09-18",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM438",
+          "sold": 15,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-HMB",
+          "date": "2026-09-14",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM438",
+          "sold": 18,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-HMB",
+          "date": "2026-09-11",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM438",
+          "sold": 29,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-HMB",
+          "date": "2026-09-07",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM438",
+          "sold": 20,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-HMB",
+          "date": "2026-09-04",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM438",
+          "sold": 36,
+          "rbd_sum": 0
+        },
+        {
+          "route": "DMM-HMB",
+          "date": "2026-08-31",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM438",
+          "sold": 169,
+          "rbd_sum": 0
+        },
+        {
+          "route": "HMB-DMM",
+          "date": "2026-10-30",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM437",
+          "sold": 16,
+          "rbd_sum": 0
+        },
+        {
+          "route": "HMB-DMM",
+          "date": "2026-10-26",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM437",
+          "sold": 13,
+          "rbd_sum": 0
+        },
+        {
+          "route": "HMB-DMM",
+          "date": "2026-10-23",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM437",
+          "sold": 15,
+          "rbd_sum": 0
+        },
+        {
+          "route": "HMB-DMM",
+          "date": "2026-10-19",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM437",
+          "sold": 10,
+          "rbd_sum": 0
+        },
+        {
+          "route": "HMB-DMM",
+          "date": "2026-10-16",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM437",
+          "sold": 16,
+          "rbd_sum": 0
+        },
+        {
+          "route": "HMB-DMM",
+          "date": "2026-10-12",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM437",
+          "sold": 13,
+          "rbd_sum": 0
+        },
+        {
+          "route": "HMB-DMM",
+          "date": "2026-10-09",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM437",
+          "sold": 27,
+          "rbd_sum": 0
+        },
+        {
+          "route": "HMB-DMM",
+          "date": "2026-10-05",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM437",
+          "sold": 49,
+          "rbd_sum": 0
+        },
+        {
+          "route": "HMB-DMM",
+          "date": "2026-10-02",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM437",
+          "sold": 71,
+          "rbd_sum": 0
+        },
+        {
+          "route": "HMB-DMM",
+          "date": "2026-09-28",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM437",
+          "sold": 72,
+          "rbd_sum": 0
+        },
+        {
+          "route": "HMB-DMM",
+          "date": "2026-09-25",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM437",
+          "sold": 77,
+          "rbd_sum": 0
+        },
+        {
+          "route": "HMB-DMM",
+          "date": "2026-09-21",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM437",
+          "sold": 82,
+          "rbd_sum": 0
+        },
+        {
+          "route": "HMB-DMM",
+          "date": "2026-09-18",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM437",
+          "sold": 72,
+          "rbd_sum": 0
+        },
+        {
+          "route": "HMB-DMM",
+          "date": "2026-09-14",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM437",
+          "sold": 79,
+          "rbd_sum": 0
+        },
+        {
+          "route": "HMB-DMM",
+          "date": "2026-09-11",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM437",
+          "sold": 121,
+          "rbd_sum": 0
+        },
+        {
+          "route": "HMB-DMM",
+          "date": "2026-09-07",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM437",
+          "sold": 95,
+          "rbd_sum": 0
+        },
+        {
+          "route": "HMB-DMM",
+          "date": "2026-09-04",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM437",
+          "sold": 105,
+          "rbd_sum": 0
+        },
+        {
+          "route": "HMB-DMM",
+          "date": "2026-08-31",
+          "reason": "rbd_total_mismatch",
+          "row_index": 0,
+          "flight": "SM437",
+          "sold": 158,
+          "rbd_sum": 0
+        }
+      ],
       "valid_empty_no_service_count": 109,
+      "rbd_candidate_rows": 155,
+      "rbd_mismatch_count": 151,
+      "rbd_unevaluable_payload_count": 0,
       "intentional_exclusion_count": 0,
       "intentional_exclusions": []
     },
@@ -512,7 +1875,2457 @@
       "affected_routes": [],
       "required_missing": []
     },
-    "targeted_retry": [],
-    "warnings": []
+    "targeted_retry": [
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-31",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-30",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-29",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-27",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-24",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-23",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-22",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-21",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-20",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-19",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-18",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-17",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-16",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-15",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-14",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-13",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-12",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-11",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-10",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-09",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-08",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-07",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-06",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-05",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-04",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-03",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-02",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-10-01",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-30",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-29",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-28",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-27",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-26",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-25",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-24",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-23",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-22",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-21",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-20",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-18",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-16",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-19",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-17",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-15",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-14",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-12",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-11",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-13",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-09",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-08",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-10",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-05",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-07",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-06",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-04",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-03",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-08-31",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-02",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "CAI-DMM",
+        "date": "2026-09-01",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-10-30",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-10-29",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-10-27",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-10-25",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-10-09",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-10-07",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-10-06",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-10-05",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-10-04",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-10-02",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-10-20",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-10-19",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-10-18",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-10-16",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-10-14",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-10-13",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-10-12",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-10-11",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-09-30",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-09-29",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-09-28",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-09-27",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-09-25",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-09-23",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-09-22",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-09-21",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-09-20",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-09-18",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-09-16",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-09-14",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-09-13",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-09-15",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-09-11",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-09-09",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-09-08",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-09-07",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-09-06",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-09-04",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-08-31",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-09-02",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-CAI",
+        "date": "2026-09-01",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-HMB",
+        "date": "2026-10-19",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-HMB",
+        "date": "2026-10-16",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-HMB",
+        "date": "2026-10-12",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-HMB",
+        "date": "2026-10-30",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-HMB",
+        "date": "2026-10-26",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-HMB",
+        "date": "2026-10-23",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-HMB",
+        "date": "2026-10-09",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-HMB",
+        "date": "2026-10-05",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-HMB",
+        "date": "2026-10-02",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-HMB",
+        "date": "2026-09-28",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-HMB",
+        "date": "2026-09-25",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-HMB",
+        "date": "2026-09-21",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-HMB",
+        "date": "2026-09-18",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-HMB",
+        "date": "2026-09-14",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-HMB",
+        "date": "2026-09-11",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-HMB",
+        "date": "2026-09-07",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-HMB",
+        "date": "2026-09-04",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "DMM-HMB",
+        "date": "2026-08-31",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "HMB-DMM",
+        "date": "2026-10-30",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "HMB-DMM",
+        "date": "2026-10-26",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "HMB-DMM",
+        "date": "2026-10-23",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "HMB-DMM",
+        "date": "2026-10-19",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "HMB-DMM",
+        "date": "2026-10-16",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "HMB-DMM",
+        "date": "2026-10-12",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "HMB-DMM",
+        "date": "2026-10-09",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "HMB-DMM",
+        "date": "2026-10-05",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "HMB-DMM",
+        "date": "2026-10-02",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "HMB-DMM",
+        "date": "2026-09-28",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "HMB-DMM",
+        "date": "2026-09-25",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "HMB-DMM",
+        "date": "2026-09-21",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "HMB-DMM",
+        "date": "2026-09-18",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "HMB-DMM",
+        "date": "2026-09-14",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "HMB-DMM",
+        "date": "2026-09-11",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "HMB-DMM",
+        "date": "2026-09-07",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "HMB-DMM",
+        "date": "2026-09-04",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "route": "HMB-DMM",
+        "date": "2026-08-31",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      }
+    ],
+    "warnings": [
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-31",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-30",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-29",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-27",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-24",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-23",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-22",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-21",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-20",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-19",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-18",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-17",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-16",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-15",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-14",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-13",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-12",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-11",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-10",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-09",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-08",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-07",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-06",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-05",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-04",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-03",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-02",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-10-01",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-30",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-29",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-28",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-27",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-26",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-25",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-24",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-23",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-22",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-21",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-20",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-18",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-16",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-19",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-17",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-15",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-14",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-12",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-11",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-13",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-09",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-08",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-10",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-05",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-07",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-06",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-04",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-03",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-08-31",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-02",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "CAI-DMM",
+        "date": "2026-09-01",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-10-30",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-10-29",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-10-27",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-10-25",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-10-09",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-10-07",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-10-06",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-10-05",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-10-04",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-10-02",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-10-20",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-10-19",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-10-18",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-10-16",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-10-14",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-10-13",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-10-12",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-10-11",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-09-30",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-09-29",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-09-28",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-09-27",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-09-25",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-09-23",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-09-22",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-09-21",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-09-20",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-09-18",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-09-16",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-09-14",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-09-13",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-09-15",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-09-11",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-09-09",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-09-08",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-09-07",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-09-06",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-09-04",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-08-31",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-09-02",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-CAI",
+        "date": "2026-09-01",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-HMB",
+        "date": "2026-10-19",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-HMB",
+        "date": "2026-10-16",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-HMB",
+        "date": "2026-10-12",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-HMB",
+        "date": "2026-10-30",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-HMB",
+        "date": "2026-10-26",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-HMB",
+        "date": "2026-10-23",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-HMB",
+        "date": "2026-10-09",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-HMB",
+        "date": "2026-10-05",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-HMB",
+        "date": "2026-10-02",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-HMB",
+        "date": "2026-09-28",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-HMB",
+        "date": "2026-09-25",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-HMB",
+        "date": "2026-09-21",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-HMB",
+        "date": "2026-09-18",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-HMB",
+        "date": "2026-09-14",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-HMB",
+        "date": "2026-09-11",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-HMB",
+        "date": "2026-09-07",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-HMB",
+        "date": "2026-09-04",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "DMM-HMB",
+        "date": "2026-08-31",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "HMB-DMM",
+        "date": "2026-10-30",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "HMB-DMM",
+        "date": "2026-10-26",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "HMB-DMM",
+        "date": "2026-10-23",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "HMB-DMM",
+        "date": "2026-10-19",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "HMB-DMM",
+        "date": "2026-10-16",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "HMB-DMM",
+        "date": "2026-10-12",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "HMB-DMM",
+        "date": "2026-10-09",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "HMB-DMM",
+        "date": "2026-10-05",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "HMB-DMM",
+        "date": "2026-10-02",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "HMB-DMM",
+        "date": "2026-09-28",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "HMB-DMM",
+        "date": "2026-09-25",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "HMB-DMM",
+        "date": "2026-09-21",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "HMB-DMM",
+        "date": "2026-09-18",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "HMB-DMM",
+        "date": "2026-09-14",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "HMB-DMM",
+        "date": "2026-09-11",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "HMB-DMM",
+        "date": "2026-09-07",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "HMB-DMM",
+        "date": "2026-09-04",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      },
+      {
+        "type": "REQUIRED_DATA_MISSING",
+        "severity": "CRITICAL",
+        "route": "HMB-DMM",
+        "date": "2026-08-31",
+        "sources": [
+          "LF"
+        ],
+        "oal_passes": []
+      }
+    ]
   }
 }
