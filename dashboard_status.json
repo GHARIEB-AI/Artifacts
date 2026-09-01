@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-01T00:17:35.087975",
+  "timestamp": "2026-09-01T04:57:31.924474",
   "status": "FAILED",
   "phase": "FAILED",
   "running": false,
@@ -522,7 +522,7 @@
     "speed_per_hour": 0.0,
     "recent_errors": 0,
     "error_rate": 0,
-    "data_points": 1
+    "data_points": 12
   },
   "eta": {
     "lf_eta": null,
@@ -893,44 +893,23 @@
     "total_extracted": 2071
   },
   "validation": {
-    "timestamp": "2026-09-01T00:14:42.954369",
-    "passed": false,
+    "timestamp": "2026-09-01T04:56:13.287709",
+    "passed": true,
     "routes_checked": 56,
     "dates_expected": 61,
-    "required_missing_count": 2,
-    "required_route_date_count": 2,
-    "intentional_exclusion_count": 25,
+    "required_missing_count": 0,
+    "required_route_date_count": 0,
+    "intentional_exclusion_count": 46,
     "lf": {
-      "status": "incomplete",
-      "required_missing_count": 2,
-      "required_missing": [
-        {
-          "route": "CAI-JED",
-          "date": "2026-09-14",
-          "reason": "rbd_not_acquired",
-          "row_index": 4,
-          "flight": "SM479",
-          "sold": 169,
-          "rbd_status": "incomplete",
-          "rbd_reason": "Booking-class page unavailable; page-one BKG/CAP/GRP retained (TIMEOUT: No response after 1 attempts)."
-        },
-        {
-          "route": "CAI-YNB",
-          "date": "2026-10-18",
-          "reason": "rbd_not_acquired",
-          "row_index": 0,
-          "flight": "SM441",
-          "sold": 139,
-          "rbd_status": "incomplete",
-          "rbd_reason": "Booking-class page unavailable; page-one BKG/CAP/GRP retained (TIMEOUT: No response after 1 attempts)."
-        }
-      ],
+      "status": "success",
+      "required_missing_count": 0,
+      "required_missing": [],
       "valid_empty_no_service_count": 1935,
-      "rbd_candidate_rows": 2260,
+      "rbd_candidate_rows": 2223,
       "rbd_mismatch_count": 0,
-      "rbd_not_acquired_count": 2,
+      "rbd_not_acquired_count": 0,
       "rbd_unevaluable_payload_count": 0,
-      "intentional_exclusion_count": 25,
+      "intentional_exclusion_count": 46,
       "intentional_exclusions": [
         {
           "route": "AHB-CAI",
@@ -958,7 +937,17 @@
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
+          "route": "ATZ-JED",
+          "date": "2026-09-01",
+          "reason": "today_supplement_no_scheduled_flight"
+        },
+        {
           "route": "ATZ-MED",
+          "date": "2026-09-01",
+          "reason": "today_supplement_no_scheduled_flight"
+        },
+        {
+          "route": "ATZ-RUH",
           "date": "2026-09-01",
           "reason": "today_supplement_no_scheduled_flight"
         },
@@ -973,12 +962,57 @@
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
+          "route": "CAI-DMM",
+          "date": "2026-09-01",
+          "reason": "today_supplement_no_scheduled_flight"
+        },
+        {
+          "route": "CAI-ELQ",
+          "date": "2026-09-01",
+          "reason": "today_supplement_no_scheduled_flight"
+        },
+        {
           "route": "CAI-GIZ",
           "date": "2026-09-01",
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
+          "route": "CAI-JED",
+          "date": "2026-09-01",
+          "reason": "today_supplement_no_scheduled_flight"
+        },
+        {
+          "route": "CAI-MED",
+          "date": "2026-09-01",
+          "reason": "today_supplement_no_scheduled_flight"
+        },
+        {
+          "route": "CAI-RUH",
+          "date": "2026-09-01",
+          "reason": "today_supplement_no_scheduled_flight"
+        },
+        {
+          "route": "CAI-TUU",
+          "date": "2026-09-01",
+          "reason": "today_supplement_no_scheduled_flight"
+        },
+        {
+          "route": "CAI-YNB",
+          "date": "2026-09-01",
+          "reason": "today_supplement_no_scheduled_flight"
+        },
+        {
+          "route": "DMM-CAI",
+          "date": "2026-09-01",
+          "reason": "today_supplement_no_scheduled_flight"
+        },
+        {
           "route": "DMM-HMB",
+          "date": "2026-09-01",
+          "reason": "today_supplement_no_scheduled_flight"
+        },
+        {
+          "route": "ELQ-CAI",
           "date": "2026-09-01",
           "reason": "today_supplement_no_scheduled_flight"
         },
@@ -989,6 +1023,16 @@
         },
         {
           "route": "GIZ-CAI",
+          "date": "2026-09-01",
+          "reason": "today_supplement_no_scheduled_flight"
+        },
+        {
+          "route": "HBE-JED",
+          "date": "2026-09-01",
+          "reason": "today_supplement_no_scheduled_flight"
+        },
+        {
+          "route": "HBE-MED",
           "date": "2026-09-01",
           "reason": "today_supplement_no_scheduled_flight"
         },
@@ -1018,6 +1062,11 @@
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
+          "route": "HMB-JED",
+          "date": "2026-09-01",
+          "reason": "today_supplement_no_scheduled_flight"
+        },
+        {
           "route": "HMB-MED",
           "date": "2026-09-01",
           "reason": "today_supplement_no_scheduled_flight"
@@ -1038,6 +1087,31 @@
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
+          "route": "JED-CAI",
+          "date": "2026-09-01",
+          "reason": "today_supplement_no_scheduled_flight"
+        },
+        {
+          "route": "JED-HBE",
+          "date": "2026-09-01",
+          "reason": "today_supplement_no_scheduled_flight"
+        },
+        {
+          "route": "LXR-JED",
+          "date": "2026-09-01",
+          "reason": "today_supplement_no_scheduled_flight"
+        },
+        {
+          "route": "RUH-ATZ",
+          "date": "2026-09-01",
+          "reason": "today_supplement_no_scheduled_flight"
+        },
+        {
+          "route": "RUH-CAI",
+          "date": "2026-09-01",
+          "reason": "today_supplement_no_scheduled_flight"
+        },
+        {
           "route": "RUH-HBE",
           "date": "2026-09-01",
           "reason": "today_supplement_no_scheduled_flight"
@@ -1053,7 +1127,17 @@
           "reason": "today_supplement_no_scheduled_flight"
         },
         {
+          "route": "TUU-CAI",
+          "date": "2026-09-01",
+          "reason": "today_supplement_no_scheduled_flight"
+        },
+        {
           "route": "TUU-HMB",
+          "date": "2026-09-01",
+          "reason": "today_supplement_no_scheduled_flight"
+        },
+        {
+          "route": "YNB-CAI",
           "date": "2026-09-01",
           "reason": "today_supplement_no_scheduled_flight"
         }
@@ -1067,45 +1151,7 @@
       "affected_routes": [],
       "required_missing": []
     },
-    "targeted_retry": [
-      {
-        "route": "CAI-JED",
-        "date": "2026-09-14",
-        "sources": [
-          "LF"
-        ],
-        "oal_passes": []
-      },
-      {
-        "route": "CAI-YNB",
-        "date": "2026-10-18",
-        "sources": [
-          "LF"
-        ],
-        "oal_passes": []
-      }
-    ],
-    "warnings": [
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "CAI-JED",
-        "date": "2026-09-14",
-        "sources": [
-          "LF"
-        ],
-        "oal_passes": []
-      },
-      {
-        "type": "REQUIRED_DATA_MISSING",
-        "severity": "CRITICAL",
-        "route": "CAI-YNB",
-        "date": "2026-10-18",
-        "sources": [
-          "LF"
-        ],
-        "oal_passes": []
-      }
-    ]
+    "targeted_retry": [],
+    "warnings": []
   }
 }
